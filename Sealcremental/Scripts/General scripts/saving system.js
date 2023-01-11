@@ -93,11 +93,9 @@ function autosave(pageload) {
 		console.log("Autosave successful.");
 	}
 }
-if (document.cookie.match(/SealcrementalAutosave=/) === null) {
-	document.getElementById("MainBody").onload = function(){
+if (document.cookie.match(/SealcrementalAutosave=/) !== null) {
 		autosave(true);
 		saveString = document.cookie.match(/SealcrementalAutosave=.+/)[0].replace(/SealcrementalAutosave=/, "").replace(/EndOfSaveFile.+/, "EndOfSaveFile");
 		importSave(true);
-		}
 }
 const autosaveInterval = setInterval(autosave, 10000);
