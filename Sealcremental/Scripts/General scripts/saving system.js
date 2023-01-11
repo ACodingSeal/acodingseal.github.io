@@ -88,8 +88,10 @@ function autosave(pageload) {
 	exportSave(true);
 	if (pageload !== true) {
 		document.cookie = "SealcrementalAutosave=" + saveString;
+		console.log("Autosave successful.");
+	} else {
+		console.log("Successfully loaded save from cookie.");
 	}
-	console.log("Autosave successful.");
 }
 if (document.cookie.match(/SealcrementalAutosave=/) !== null) {
 		autosave(true);
