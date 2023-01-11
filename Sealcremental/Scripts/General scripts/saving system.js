@@ -84,14 +84,18 @@ exportButton.addEventListener("click", exportSave);
 importButton.addEventListener("click", importSave);
 
 // Auto save.
-function autosave() {
+function autosave(pageload) {
 	exportSave(true);
 	document.cookie = "SealcrementalAutosave=" + saveString;
-	console.log("Autosave successful.");
+	if (pageload === true) {
+		console.log("Successfully loaded save from cookie.";
+	} else {
+		console.log("Autosave successful.");
+	}
 }
-if (document.cookie.match(/SealcrementalAutosave=/) !== null) {
+if (document.cookie.match(/SealcrementalAutosave=/) === null) {
 	document.getElementById("MainBody").onload = function(){
-		autosave();
+		autosave(true);
 		saveString = document.cookie.match(/SealcrementalAutosave=.+/)[0].replace(/SealcrementalAutosave=/, "").replace(/EndOfSaveFile.+/, "EndOfSaveFile");
 		importSave(true);
 		}
