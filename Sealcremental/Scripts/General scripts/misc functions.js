@@ -2,7 +2,7 @@
 document.getElementById('EndgameCredits').addEventListener("click", currentEndgameSpoiler);
 function currentEndgameSpoiler() {
 	if (document.getElementById('EndgameCredits').getAttribute('class') === 'SpoilerText') {
-	document.getElementById('EndgameCredits').setAttribute('class', '');
+	document.getElementById('EndgameCredits').setAttribute('class', 'SpoilerTextReveal');
 	} else {
 		document.getElementById('EndgameCredits').setAttribute('class', 'SpoilerText')
 	}
