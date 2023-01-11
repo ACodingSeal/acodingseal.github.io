@@ -7,5 +7,5 @@ function currentEndgameSpoiler() {
 		document.getElementById('EndgameCredits').setAttribute('class', 'SpoilerText')
 	}
 }
-// Set the seal background.
-document.getElementById("MainBody").setAttribute("style", "color:#FFF;background-image:url('./Sealcremental/Assets/sealbackground1.jpg');background-position:50% 70%");
+// Set the seal background. Temporarily disabled due to poor graphical design.
+// document.getElementById("MainBody").setAttribute("style", "color:#FFF;background-image:url('./Sealcremental/Assets/sealbackground1.jpg');background-position:50% 70%");

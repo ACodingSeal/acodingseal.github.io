@@ -4,7 +4,7 @@ function exportSave(automatic) {
 	const d = new Date();
 	const year = d.getFullYear();
 	const month = d.getMonth() + 1;
-	const day = d.getUTCDate();
+	const day = d.getDate();
 	const hour = d.getHours();
 	const minute = d.getMinutes();
 	const second = d.getSeconds();
