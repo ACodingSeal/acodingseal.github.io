@@ -28,7 +28,7 @@ statisticsContainerItems.appendChild(stat5);
 statisticsContainerItems.appendChild(stat6);
 statisticsContainerItems.appendChild(stat7);
 var sealAmountHeader = document.createElement("p");
-sealAmountHeader.innerHTML = "<br><span style='font-weight:bold'>Seals:</span><br><img src='./Assets/Seal.png' width='25'/><span id='SealAmount'></span>";
+sealAmountHeader.innerHTML = "<br><span style='font-weight:bold'>Seals:</span><br><img src='./Sealcremental/Assets/Seal.png' width='25'/><span id='SealAmount'></span>";
 var sealButtonContainer = document.createElement("p");
 sealButtonContainer.innerHTML = "<button id='SealButton'></button>";
 
