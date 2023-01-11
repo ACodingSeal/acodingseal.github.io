@@ -86,12 +86,10 @@ importButton.addEventListener("click", importSave);
 // Auto save.
 function autosave(pageload) {
 	exportSave(true);
-	document.cookie = "SealcrementalAutosave=" + saveString;
-	if (pageload === true) {
-		console.log("Successfully loaded save from cookie.");
-	} else {
-		console.log("Autosave successful.");
+	if (pageload !== true) {
+		document.cookie = "SealcrementalAutosave=" + saveString;
 	}
+	console.log("Autosave successful.");
 }
 if (document.cookie.match(/SealcrementalAutosave=/) !== null) {
 		autosave(true);
