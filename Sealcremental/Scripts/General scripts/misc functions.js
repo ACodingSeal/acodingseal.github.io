@@ -8,4 +8,4 @@ function currentEndgameSpoiler() {
 	}
 }
 // Set the seal background.
-document.getElementById("MainBody").setAttribute("style", "color:#FFF;background-image:url('./Assets/sealbackground1.jpg');background-position:50% 70%");
+document.getElementById("MainBody").setAttribute("style", "color:#FFF;background-image:url('./Sealcremental/Assets/sealbackground1.jpg');background-position:50% 70%");
