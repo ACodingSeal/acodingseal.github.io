@@ -117,8 +117,9 @@ function addSolarianStageCalculator() {
 				document.getElementById("EnemyDefenceOutput").innerHTML = "<span style='color:#FFFF00'>" + notateInt(enemyDefence) + "</span>";
 				document.getElementById("EnemyOffenceOutput").innerHTML = "<span style='color:#FFFF00'>" + notateInt(enemyOffence) + "</span>";
 			}
-			if (enemyOffence.greaterThan(playerCurrentHealth.add(playerDefence))) {
+			if (enemyOffence.greaterThanOrEqualTo(playerCurrentHealth.add(playerDefence))) {
 				document.getElementById("EnemyOffenceOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(enemyOffence) + "</span>";
+				document.getElementById("EnemyDefenceOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(enemyDefence) + "</span>";
 			} else if (enemyOffence.lessThan(playerDefence)) {
 				document.getElementById("EnemyOffenceOutput").innerHTML = "<span style='color:#FF0000'>" + notateInt(enemyOffence) + "</span>";
 			} else {
@@ -127,6 +128,7 @@ function addSolarianStageCalculator() {
 			if (enemyDefence.greaterThan(playerOffence)) {
 				document.getElementById("EnemyDefenceOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(enemyDefence) + "</span>";
 			} else if (playerOffence.greaterThanOrEqualTo(enemyCurrentHealth.add(enemyDefence))) {
+				document.getElementById("EnemyOffenceOutput").innerHTML = "<span style='color:#FF0000'>" + notateInt(enemyOffence) + "</span>";
 				document.getElementById("EnemyDefenceOutput").innerHTML = "<span style='color:#FF0000'>" + notateInt(enemyDefence) + "</span>";
 			} else {
 				document.getElementById("EnemyDefenceOutput").innerHTML = "<span style='color:#FFFF00'>" + notateInt(enemyDefence) + "</span>";
