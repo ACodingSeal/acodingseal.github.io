@@ -17,10 +17,22 @@ function addSolarianStageCalculator() {
 	var enemyHealthScaling = new Decimal(10.3);
 	var result;
 	var suffixStatus = false;
+	var extraZeroes;
 	const suffixes = ["", "", "M", "B", "T", "Qa", "Qt", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "DDc", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg", "UVg", "DVg", "TVg", "QaVg", "QtVg", "SxVg", "SpVg", "OVg", "NVg", "Tg", "UTg", "DTg", "TTg", "QaTg", "QtTg", "SxTg", "SpTg", "OTg", "NTg", "Qd", "UQd", "DQd", "TQd", "QaQd", "QtQd", "SxQd", "SpQd", "OQd", "NQd", "Qi", "UQi", "DQi", "TQi", "QaQi", "QtQi", "SxQi", "SpQi", "OQi", "NQi", "He", "UHe", "DHe", "THe", "QaHe", "QtHe", "SxHe", "SpHe", "OHe", "NHe", "St", "USt", "DSt", "TSt", "QaSt", "QtSt", "SxSt", "SpSt", "OSt", "NSt", "Og", "UOg", "DOg", "TOg", "QaOg", "QtOg", "SxOg", "SpOg", "OOg", "NOg", "Nn", "UNn", "DNn", "TNn", "QaNn", "QtNn", "SxNn", "SpNn", "ONn", "NNn"];
 	const suffixesLC = ["", "", "m", "b", "t", "qa", "qt", "sx", "sp", "oc", "no", "dc", "ud", "ddc", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qtvg", "sxvg", "spvg", "ovg", "nvg", "tg", "utg", "dtg", "ttg", "qatg", "qttg", "sxtg", "sptg", "otg", "ntg", "qd", "uqd", "dqd", "tqd", "qaqd", "qtqd", "sxqd", "spqd", "oqd", "nqd", "qi", "uqi", "dqi", "tqi", "qaqi", "qtqi", "sxqi", "spqi", "oqi", "nqi", "he", "uhe", "dhe", "the", "qahe", "qthe", "sxhe", "sphe", "ohe", "nhe", "st", "ust", "dst", "tst", "qast", "qtst", "sxst", "spst", "ost", "nst", "og", "uog", "dog", "tog", "qaog", "qtog", "sxog", "spog", "oog", "nog", "nn", "unn", "dnn", "tnn", "qann", "qtnn", "sxnn", "spnn", "onn", "nnn"];
+	function toScientific(e) {
+		if (e.match(/[a-z]+/gi) !== null && suffixes[suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase())] !== undefined) {
+			var mantissa = e.match(/\d+[.]?\d?/g);
+			extraZeroes = Math.floor(Math.log10(Number(mantissa)));
+			mantissa = mantissa / (10 ** extraZeroes);
+			var exponent = suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase()) * 3 + extraZeroes;
+			result = new Decimal(mantissa + "e" + exponent);
+		} else {
+			result = new Decimal(e);
+		}
+		return result;
+	}
 	function notateInt(e) {
-		var extraZeroes;
 		if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
 			result = Number(e).toLocaleString();
 			} else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e303) && suffixStatus === true) {
@@ -78,30 +90,30 @@ function addSolarianStageCalculator() {
 		if (document.getElementById("CurrentStageInput").value === '' || new Decimal(document.getElementById("CurrentStageInput").value).lessThan(1)) {
 			currentStage = new Decimal(1);
 		} else {
-			currentStage = new Decimal(document.getElementById("CurrentStageInput").value);
+			currentStage = toScientific(document.getElementById("CurrentStageInput").value);
 		}
 		enemyMaxHealth = new Decimal(3e3).times(enemyHealthScaling.pow(currentStage.sub(1)));
 		if (document.getElementById("PlayerOffenceInput").value === '' || new Decimal(document.getElementById("PlayerOffenceInput").value).lessThan(0)) {
 			playerOffence = new Decimal(1);
 		} else {
-			playerOffence = new Decimal(document.getElementById("PlayerOffenceInput").value);
+			playerOffence = toScientific(document.getElementById("PlayerOffenceInput").value);
 		}
 		if (document.getElementById("PlayerDefenceInput").value === '' || new Decimal(document.getElementById("PlayerDefenceInput").value).lessThan(0)) {
 			playerDefence = new Decimal(0);
 			playerMaxHealth = new Decimal(0);
 		} else {
-			playerDefence = new Decimal(document.getElementById("PlayerDefenceInput").value);
+			playerDefence = toScientific(document.getElementById("PlayerDefenceInput").value);
 			playerMaxHealth = playerDefence.times(100);
 		}
 		if (document.getElementById("PlayerCurrentHealthInput").value === '' || new Decimal(document.getElementById("PlayerCurrentHealthInput").value).lessThan(0) || new Decimal(document.getElementById("PlayerCurrentHealthInput").value).greaterThan(playerMaxHealth)) {
 			playerCurrentHealth = playerMaxHealth;
 		} else {
-			playerCurrentHealth = new Decimal(document.getElementById("PlayerCurrentHealthInput").value);
+			playerCurrentHealth = toScientific(document.getElementById("PlayerCurrentHealthInput").value);
 		}
 		if (document.getElementById("EnemyCurrentHealthInput").value === '' || new Decimal(document.getElementById("EnemyCurrentHealthInput").value).lessThan(0) || new Decimal(document.getElementById("EnemyCurrentHealthInput").value).greaterThan(enemyMaxHealth)) {
 			enemyCurrentHealth = enemyMaxHealth;
 		} else {
-			enemyCurrentHealth = new Decimal(document.getElementById("EnemyCurrentHealthInput").value);
+			enemyCurrentHealth = toScientific(document.getElementById("EnemyCurrentHealthInput").value);
 		}
 		enemyOffence = new Decimal(10).times(enemyStatScaling.pow(currentStage.sub(1)));
 		enemyDefence = new Decimal(10).times(enemyStatScaling.pow(currentStage.sub(1)));
