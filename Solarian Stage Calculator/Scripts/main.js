@@ -15,12 +15,12 @@ function addSolarianStageCalculator() {
 	var challenge = false;
 	var enemyStatScaling = new Decimal(10);
 	var enemyHealthScaling = new Decimal(10.3);
-	var result;
 	var suffixStatus = false;
 	var extraZeroes;
 	const suffixes = ["", "", "M", "B", "T", "Qa", "Qt", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "DDc", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg", "UVg", "DVg", "TVg", "QaVg", "QtVg", "SxVg", "SpVg", "OVg", "NVg", "Tg", "UTg", "DTg", "TTg", "QaTg", "QtTg", "SxTg", "SpTg", "OTg", "NTg", "Qd", "UQd", "DQd", "TQd", "QaQd", "QtQd", "SxQd", "SpQd", "OQd", "NQd", "Qi", "UQi", "DQi", "TQi", "QaQi", "QtQi", "SxQi", "SpQi", "OQi", "NQi", "He", "UHe", "DHe", "THe", "QaHe", "QtHe", "SxHe", "SpHe", "OHe", "NHe", "St", "USt", "DSt", "TSt", "QaSt", "QtSt", "SxSt", "SpSt", "OSt", "NSt", "Og", "UOg", "DOg", "TOg", "QaOg", "QtOg", "SxOg", "SpOg", "OOg", "NOg", "Nn", "UNn", "DNn", "TNn", "QaNn", "QtNn", "SxNn", "SpNn", "ONn", "NNn"];
 	const suffixesLC = ["", "", "m", "b", "t", "qa", "qt", "sx", "sp", "oc", "no", "dc", "ud", "ddc", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qtvg", "sxvg", "spvg", "ovg", "nvg", "tg", "utg", "dtg", "ttg", "qatg", "qttg", "sxtg", "sptg", "otg", "ntg", "qd", "uqd", "dqd", "tqd", "qaqd", "qtqd", "sxqd", "spqd", "oqd", "nqd", "qi", "uqi", "dqi", "tqi", "qaqi", "qtqi", "sxqi", "spqi", "oqi", "nqi", "he", "uhe", "dhe", "the", "qahe", "qthe", "sxhe", "sphe", "ohe", "nhe", "st", "ust", "dst", "tst", "qast", "qtst", "sxst", "spst", "ost", "nst", "og", "uog", "dog", "tog", "qaog", "qtog", "sxog", "spog", "oog", "nog", "nn", "unn", "dnn", "tnn", "qann", "qtnn", "sxnn", "spnn", "onn", "nnn"];
 	function toScientific(e) {
+		var result;
 		if (e.match(/[a-z]+/gi) !== null && suffixes[suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase())] !== undefined) {
 			var mantissa = e.match(/\d+[.]?\d?/g);
 			extraZeroes = Math.floor(Math.log10(Number(mantissa)));
@@ -33,6 +33,7 @@ function addSolarianStageCalculator() {
 		return result;
 	}
 	function notateInt(e) {
+		var result;
 		if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
 			result = Number(e).toLocaleString();
 			} else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e303) && suffixStatus === true) {
@@ -55,6 +56,7 @@ function addSolarianStageCalculator() {
 					return result;
 	}
 	function updateChallenge() {
+		var result;
 		switch(document.getElementById("ChallengeInput").value) {
 			case "0":
 			challenge = false;
@@ -76,6 +78,7 @@ function addSolarianStageCalculator() {
 		}
 	}
 	function decimalMinMax(e, x) {
+		var result;
 		var e = new Decimal(e);
 		var x = new Decimal(x);
 		if (e.greaterThanOrEqualTo(x)) {
@@ -86,6 +89,7 @@ function addSolarianStageCalculator() {
 		return result;
 	}
 	function updateResults() {
+		var result;
 		updateChallenge();
 		if (document.getElementById("CurrentStageInput").value === '' || new Decimal(document.getElementById("CurrentStageInput").value).lessThan(1)) {
 			currentStage = new Decimal(1);
@@ -119,6 +123,7 @@ function addSolarianStageCalculator() {
 		enemyDefence = new Decimal(10).times(enemyStatScaling.pow(currentStage.sub(1)));
 		
 		function soulBonusCalc(e) {
+			var result;
 			var baseEffect = new Decimal(1.5);
 			if (e.greaterThanOrEqualTo(10)) {
 				if ((e.sub(10)).dividedBy(5).floor().greaterThanOrEqualTo(1)) {
@@ -133,6 +138,7 @@ function addSolarianStageCalculator() {
 		}
 		
 		function calcMaxHits() {
+			var result;
 			var playerMaxHits = playerCurrentHealth.add(playerDefence).sub(enemyOffence);
 			var enemyMaxHits = enemyCurrentHealth.add(enemyDefence).sub(playerOffence);
 			if (playerMaxHits.greaterThan(enemyMaxHits)) {
