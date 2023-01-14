@@ -166,6 +166,7 @@ function addSolarianStageCalculator() {
 		document.getElementById("StageBonusSolarShardsNextOutput").innerHTML = notateInt(new Decimal(3).pow(decimalMinMax(0, currentStage.sub(8))));
 		document.getElementById("StageBonusSoulsCurrentOutput").innerHTML = notateInt(soulBonusCalc(currentStage));
 		document.getElementById("StageBonusSoulsNextOutput").innerHTML = notateInt(soulBonusCalc(currentStage.add(1)));
+		document.getElementById("CurrentStageOutput").innerHTML = notateInt(currentStage);
 	}
 	document.getElementById("ChallengeInput").addEventListener("input", updateChallenge);
 	document.getElementById("SSCCalculateButton").addEventListener("click", updateResults);
