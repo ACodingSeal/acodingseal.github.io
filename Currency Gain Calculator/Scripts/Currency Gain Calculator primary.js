@@ -63,11 +63,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 						if (e.greaterThan(new Decimal("1e" + (suffixes.length * 3)))) {
 							extraZeroes = 0;
 						}
-                        if (e.exponent < 1e6) {
-                            result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(e.exponent); // If the input is at least 1e1e3, less than 1e6 and suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
-                        } else {
-                            result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(new Decimal(e.exponent)); // Modification of the above: Maximum number is now 1e1e16 instead of 1e6. Returns the exponent ran through the 'notateInt' function.
-                        }
+                        result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(e.exponent); // If suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
                         break;
                     default:
                         if (e.greaterThanOrEqualTo("1e1e6")) {
