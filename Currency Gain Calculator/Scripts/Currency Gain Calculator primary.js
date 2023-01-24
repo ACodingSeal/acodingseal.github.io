@@ -66,6 +66,9 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                             case "0.7":
                                 extraZeroes = 2;
                         }
+						if (e.greaterThan(new Decimal("1e" + (suffixes.length * 3)))) {
+							extraZeroes = 0;
+						}
                         if (e.exponent < 1e6) {
                             result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(e.exponent); // If the input is at least 1e1e3, less than 1e6 and suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
                         } else {
