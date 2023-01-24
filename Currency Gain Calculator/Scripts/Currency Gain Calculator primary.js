@@ -5,8 +5,8 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 		// Create the calculator's user interface.
         const calculatorHTMLCurrencySelectionContainer = "<tr><td><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Currency Selection</div><p style='text-align:center'>Selected: <b><span id='CGCSelectedCurrency'>?</span></b></p><p style='text-align:center'><img id='CGCPPSelection' src='./Currency Gain Calculator/Assets/Prestige.png' width='50'/><img id='CGCCrystalSelection' src='./Currency Gain Calculator/Assets/Crystal.png' width='50'/><img id='CGCSteelSelection' src='./Currency Gain Calculator/Assets/Steel2.png' width='50'/><img id='CGCAPSelection' src='./Currency Gain Calculator/Assets/Anonymity.png' width='50'/><img id='CGCOilSelection' src='./Currency Gain Calculator/Assets/Oil.png' width='50'/><img id='CGCMomentumSelection' src='./Currency Gain Calculator/Assets/Momentum.png' width='50'/><img id='CGCDMSelection' src='./Currency Gain Calculator/Assets/DarkMatter.png' width='50'/><img id='CGCNPSelection' src='./Currency Gain Calculator/Assets/Normality.png' width='50'/><img id='CGCCloudSelection' src='./Currency Gain Calculator/Assets/Cloud.png' width='50'/><img id='CGCRingSelection' src='./Currency Gain Calculator/Assets/Ring.png' width='50'/><img id='CGCAstroSelection' src='./Currency Gain Calculator/Assets/Astrolabe New.png' width='50'/><img id='CGCMeasureSelection' src='./Currency Gain Calculator/Assets/Measure.png' width='50'/><img id='CGCLunarPowerSelection' src='./Currency Gain Calculator/Assets/Lunar.png' width='50'/><img id='CGCPlanetSelection' src='./Currency Gain Calculator/Assets/Planet.png' width='50'/><img id='CGCStardustSelection' src='./Currency Gain Calculator/Assets/Stardust.png' width='50'/><img id='CGCSolarShardSelection' src='./Currency Gain Calculator/Assets/SolarShard.png' width='50'/><img id='CGCSolarRaySelection' src='./Currency Gain Calculator/Assets/XP3.png' width='50'/><img id='CGCSunstoneSelection' src='./Currency Gain Calculator/Assets/Sunstone.png' width='50'/></p></td></tr>";
         const calculatorHTMLInputsContainer = "<tr><td id='CGCInputsOuterContainer' style='display:none'><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Inputs</div><p id='CGCInputsInnerContainer'></p></td></tr>";
-        const calculatorHTMLResultsContainer = "<tr><td id='CGCResultsOuterContainer' style='display:none'><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Result</div><center><br><button id='CGCCalculateButton'>Calculate</button><br>Formula used: <span id='CGCFormulaUsed'>?</span><br><br><div id='CGCResultsInnerContainer'></div></center></td></tr>";
-        document.getElementById("CurrencyGainCalculator").innerHTML = "<div id='CurrencyGainCalculatorContainer' class='templatedesktop' style='padding:1em;background:#4D4D4D;text-align:center;width:80%;margin:auto'><div style='text-align:initial;width:10%;padding:1em;background:initial' class='templatedesktop'>Toggle Suffixes<button style='background:#FF0000' id='CGCSuffixButton'>Disabled</button></div><div style='text-align:center;font-weight:bold;font-size:20px'><img src='./Currency Gain Calculator/Assets/Prestige.png' width='75'/> Currency Gain Calculator <img src='./Currency Gain Calculator/Assets/DarkMatter.png' width='75'/></div><table class='templatedesktop' style='margin:auto;width:100%;border:0;border-radius:initial;background:#3D3D3D;padding:0.5em'>" + calculatorHTMLCurrencySelectionContainer + calculatorHTMLInputsContainer + calculatorHTMLResultsContainer + "</table></div>";
+        const calculatorHTMLResultsContainer = "<tr><td id='CGCResultsOuterContainer' style='display:none'><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Result</div><center><br><button id='CGCCalculateButton'>Calculate</button><br>Formula: <span id='CGCFormulaUsed'>?</span><br><br><div id='CGCResultsInnerContainer'></div></center></td></tr>";
+        document.getElementById("CurrencyGainCalculator").innerHTML = "<div id='CurrencyGainCalculatorContainer' class='templatedesktop' style='padding:1em;background:#4D4D4D;text-align:center;width:80%;margin:auto'><div style='text-align:initial;width:20%;padding:1em;background:initial;overflow:auto' class='templatedesktop'>Toggle Suffixes<button style='background:#FF0000' id='CGCSuffixButton'>Disabled</button></div><div style='text-align:center;font-weight:bold;font-size:20px'><img src='./Currency Gain Calculator/Assets/Prestige.png' width='75'/> Currency Gain Calculator <img src='./Currency Gain Calculator/Assets/DarkMatter.png' width='75'/></div><table class='templatedesktop' style='margin:auto;width:100%;border:0;border-radius:initial;background:#3D3D3D;padding:0.5em'>" + calculatorHTMLCurrencySelectionContainer + calculatorHTMLInputsContainer + calculatorHTMLResultsContainer + "</table></div>";
 		
 		// Variable and constant declarations.
         var suffixStatus = false; // Determines whether suffix notation output is enabled or disabled.
@@ -108,7 +108,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCPPSelection").setAttribute("class", "SelectedCurr");
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Prestige Point</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
-				document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 x (1.4 ^ floor(Normal Level / 10)) x (1.15 ^ OoMs of Grass gained since last Prestige)</code>";
+				document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 x (1.4 ^ floor(max(0, Normal Level - 30) / 10)) x (1.15 ^ OoMs of Grass gained since last Prestige)</code>";
 				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base <span style='color:#00FFFF;font-weight:bold'>Prestige Point</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "crystal":
@@ -165,7 +165,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCNPSelection").setAttribute("class", "SelectedCurr");
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Normality Point</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Unnatural Level: <input id='CGCUnnaturalLevelInput' style='width:10%'/></p><p>Astral: <input id='CGCAstralInput' style='width:10%'/></p>";
-				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 x (5 ^ floor((Unnatural Level - 51) / 10)) x (1.25 ^ floor(Astral / 10))</code>";
+				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 x (5 ^ floor(max(0, (Unnatural Level - 51)) / 10)) x (1.25 ^ floor(Astral / 10))</code>";
 				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Unnatural Level <span id='CGCUnnaturalLevelOutput'>?</span> and Astral <span id='CGCAstralOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Normality Point</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "cloud":
@@ -176,22 +176,22 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				unknownFormula(true);
 				break;
 				case "ring":
-				selectedCurr = "";
+				selectedCurr = "ring";
 				console.log("Selected currency: Ring");
 				document.getElementById("CGCRingSelection").setAttribute("class", "SelectedCurr");
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Ring</span>";
-				// document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-				// document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Ring gain is: <span id='CGCResultOutput'>?</span>";
-				unknownFormula(true);
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
+				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 x (1.03 ^ max(0, (Planetoid Level - 5)))</code>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Ring gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "astro":
-				selectedCurr = "";
+				selectedCurr = "astro";
 				console.log("Selected currency: Astro");
 				document.getElementById("CGCAstroSelection").setAttribute("class", "SelectedCurr");
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Astro</span>";
-				// document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-				// document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Astro gain is: <span id='CGCResultOutput'>?</span>";
-				unknownFormula(true);
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
+				document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 x (1.03 ^ max(0, (Planetoid Level - 31)))</code> (Unconfirmed formula)";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Astro gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "measure":
 				selectedCurr = "measure";
@@ -373,8 +373,32 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				}
 				break;
 				case "ring":
+				var planetoidLevel;
+				if (document.getElementById("CGCPlanetoidLevelInput").value === '' || new Decimal(document.getElementById("CGCPlanetoidLevelInput").value).lessThan(1)) {
+					planetoidLevel = new Decimal(1);
+				} else {
+					planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
+				}
+				document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
+				if (planetoidLevel.lessThan(5)) {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
+				} else {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(1.03).pow(planetoidLevel.sub(5))));
+				}
 				break;
 				case "astro":
+				var planetoidLevel;
+				if (document.getElementById("CGCPlanetoidLevelInput").value === '' || new Decimal(document.getElementById("CGCPlanetoidLevelInput").value).lessThan(1)) {
+					planetoidLevel = new Decimal(1);
+				} else {
+					planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
+				}
+				document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
+				if (planetoidLevel.lessThan(31)) {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
+				} else {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.03).pow(planetoidLevel.sub(31))));
+				}
 				break;
 				case "measure":
 				var planetoidLevel;
@@ -517,7 +541,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCResultsInnerContainer").innerHTML = "";
 			}
 		}
-		// Currencies that still need to be implemented into the calculator: Steel, AP, Oil, Cloud, Ring, Astro.
+		// Currencies that still need to be implemented into the calculator: Steel, AP, Oil, Cloud.
 		
 		// Add click event listeners to the currency selection options.
 		document.getElementById("CGCPPSelection").addEventListener("click", function() {
