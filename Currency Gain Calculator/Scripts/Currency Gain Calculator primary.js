@@ -34,34 +34,17 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
             if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
                 result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e6, return the input with comma-separated numbers.
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(new Decimal("1e" + suffixes.length * 3)) && suffixStatus === true) {
-                switch (((e.exponent / 3) - Math.floor(e.exponent / 3)).toFixed(1)) {
-                    case "0.0":
-                        extraZeroes = 0; // x * 10 ^ 0
-                        break;
-                    case "0.3":
-                        extraZeroes = 1; // x * 10 ^ 1
-                        break;
-                    case "0.7":
-                        extraZeroes = 2; // x * 10 ^ 2
-                }
+                extraZeroes = e.exponent % 3;
                 result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6 and is less than the length of the suffixes array's zero count times 3 and suffix notation is enabled, return the input converted to suffix notation.
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e21)) {
                 result = Number(e).toExponential(decimals).replace(/[+]/g, ""); // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
             } else if (e.greaterThanOrEqualTo("1e1e3") && e.lessThan("1e1e16")) {
                 switch (suffixStatus) {
                     case true:
-                        switch (((e.exponent / 3) - Math.floor(e.exponent / 3)).toFixed(1)) {
-                            case "0.0":
-                                extraZeroes = 0;
-                                break;
-                            case "0.3":
-                                extraZeroes = 1;
-                                break;
-                            case "0.7":
-                                extraZeroes = 2;
-                        }
 						if (e.greaterThan(new Decimal("1e" + (suffixes.length * 3)))) {
 							extraZeroes = 0;
+						} else {
+							extraZeroes = e.exponent % 3;
 						}
                         result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(e.exponent); // If suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
                         break;
