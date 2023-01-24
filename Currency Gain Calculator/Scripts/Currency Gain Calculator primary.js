@@ -1,0 +1,383 @@
+function addCurrencyGainCalculator() { // Function for ensuring all the calculator's variables and functions stay within.
+    if (document.getElementById("CurrencyGainCalculator") !== null && document.getElementById("CurrencyGainCalculatorContainer") === null) {
+        console.log("[Currency Gain Calculator] [LOG]: ID located. Running script.");
+		
+		// Create the calculator's user interface.
+        const calculatorHTMLCurrencySelectionContainer = "<tr><td><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Currency Selection</div><p style='text-align:center'>Selected: <b><span id='CGCSelectedCurrency'>?</span></b></p><p style='text-align:center'><img id='CGCPPSelection' src='./Currency Gain Calculator/Assets/Prestige.png' width='50'/><img id='CGCCrystalSelection' src='./Currency Gain Calculator/Assets/Crystal.png' width='50'/><img id='CGCSteelSelection' src='./Currency Gain Calculator/Assets/Steel2.png' width='50'/><img id='CGCAPSelection' src='./Currency Gain Calculator/Assets/Anonymity.png' width='50'/><img id='CGCOilSelection' src='./Currency Gain Calculator/Assets/Oil.png' width='50'/><img id='CGCDMSelection' src='./Currency Gain Calculator/Assets/DarkMatter.png' width='50'/><img id='CGCNPSelection' src='./Currency Gain Calculator/Assets/Normality.png' width='50'/><img id='CGCCloudSelection' src='./Currency Gain Calculator/Assets/Cloud.png' width='50'/><img id='CGCRingSelection' src='./Currency Gain Calculator/Assets/Ring.png' width='50'/><img id='CGCAstroSelection' src='./Currency Gain Calculator/Assets/Astrolabe New.png' width='50'/><img id='CGCMeasureSelection' src='./Currency Gain Calculator/Assets/Measure.png' width='50'/><img id='CGCLunarPowerSelection' src='./Currency Gain Calculator/Assets/Lunar.png' width='50'/><img id='CGCPlanetSelection' src='./Currency Gain Calculator/Assets/Planet.png' width='50'/><img id='CGCStardustSelection' src='./Currency Gain Calculator/Assets/Stardust.png' width='50'/><img id='CGCSolarShardSelection' src='./Currency Gain Calculator/Assets/SolarShard.png' width='50'/></p></td></tr>";
+        const calculatorHTMLInputsContainer = "<tr><td id='CGCInputsOuterContainer' style='display:none'><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Inputs</div><p id='CGCInputsInnerContainer'></p></td></tr>";
+        const calculatorHTMLResultsContainer = "<tr><td id='CGCResultsOuterContainer' style='display:none'><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Result</div><center><br><button id='CGCCalculateButton'>Calculate</button><br><br><div id='CGCResultsInnerContainer'></div></center></td></tr>";
+        document.getElementById("CurrencyGainCalculator").innerHTML = "<div id='CurrencyGainCalculatorContainer' class='templatedesktop' style='padding:1em;background:#4D4D4D;text-align:center;width:80%;margin:auto'><div style='text-align:initial;width:10%;padding:1em;background:initial' class='templatedesktop'>Toggle Suffixes<button style='background:#FF0000' id='CGCSuffixButton'>Disabled</button></div><div style='text-align:center;font-weight:bold;font-size:20px'><img src='./Currency Gain Calculator/Assets/Prestige.png' width='75'/> Currency Gain Calculator <img src='./Currency Gain Calculator/Assets/DarkMatter.png' width='75'/></div><table class='templatedesktop' style='margin:auto;width:100%;border:0;border-radius:initial;background:#3D3D3D;padding:0.5em'>" + calculatorHTMLCurrencySelectionContainer + calculatorHTMLInputsContainer + calculatorHTMLResultsContainer + "</table></div>";
+		
+		// Variable and constant declarations.
+        var suffixStatus = false; // Determines whether suffix notation output is enabled or disabled.
+        var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
+        var result; // Used for functions to avoid multiple return statements.
+        var extraZeroes; // Used to determine the powers of 10 for scientific to suffix notation conversion, particularly for the functions 'toScientific' and 'notateInt'.
+		var selectedCurr; // Determines the selected currency from the updateInputs() function, used for the updateResult() function.
+        const suffixes = ["", "", "M", "B", "T", "Qa", "Qt", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "DDc", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg", "UVg", "DVg", "TVg", "QaVg", "QtVg", "SxVg", "SpVg", "OVg", "NVg", "Tg", "UTg", "DTg", "TTg", "QaTg", "QtTg", "SxTg", "SpTg", "OTg", "NTg", "Qd", "UQd", "DQd", "TQd", "QaQd", "QtQd", "SxQd", "SpQd", "OQd", "NQd", "Qi", "UQi", "DQi", "TQi", "QaQi", "QtQi", "SxQi", "SpQi", "OQi", "NQi", "He", "UHe", "DHe", "THe", "QaHe", "QtHe", "SxHe", "SpHe", "OHe", "NHe", "St", "USt", "DSt", "TSt", "QaSt", "QtSt", "SxSt", "SpSt", "OSt", "NSt", "Og", "UOg", "DOg", "TOg", "QaOg", "QtOg", "SxOg", "SpOg", "OOg", "NOg", "Nn", "UNn", "DNn", "TNn", "QaNn", "QtNn", "SxNn", "SpNn", "ONn", "NNn"]; // Suffixes between e0 and e300, according to the game's suffixes.
+        const suffixesLC = ["", "", "m", "b", "t", "qa", "qt", "sx", "sp", "oc", "no", "dc", "ud", "ddc", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qtvg", "sxvg", "spvg", "ovg", "nvg", "tg", "utg", "dtg", "ttg", "qatg", "qttg", "sxtg", "sptg", "otg", "ntg", "qd", "uqd", "dqd", "tqd", "qaqd", "qtqd", "sxqd", "spqd", "oqd", "nqd", "qi", "uqi", "dqi", "tqi", "qaqi", "qtqi", "sxqi", "spqi", "oqi", "nqi", "he", "uhe", "dhe", "the", "qahe", "qthe", "sxhe", "sphe", "ohe", "nhe", "st", "ust", "dst", "tst", "qast", "qtst", "sxst", "spst", "ost", "nst", "og", "uog", "dog", "tog", "qaog", "qtog", "sxog", "spog", "oog", "nog", "nn", "unn", "dnn", "tnn", "qann", "qtnn", "sxnn", "spnn", "onn", "nnn"]; // An all-lowercase version of the above suffixes array, used for the 'toScientific' function.
+        const errorText = "<span class='rainbow' style='font-weight:bold;font-size:20px'>Error!</span>"; // Text string used for HTML outputs in the event of an error.
+		
+		// Check for negative number, returning a 0 Decimal if true.
+		function checkNegative(e) {
+			if (e.lessThan(0)) {
+				result = new Decimal(0);
+			} else {
+				result = e;
+			}
+			return result;
+		}
+		
+		function toScientific(e) { // Ensure a user-inputted value is a scientific notation Decimal number.
+            if (e.match(/[a-z]+/gi) !== null && suffixes[suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase())] !== undefined) {
+                var mantissa = e.match(/\d+[.]?\d*/g);
+                extraZeroes = Math.floor(Math.log10(Number(mantissa)));
+                mantissa = mantissa / (10 ** extraZeroes);
+                var exponent = suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase()) * 3 + extraZeroes;
+                result = mantissa + "e" + exponent;
+            } else {
+                result = e;
+            }
+            return new Decimal(result);
+        }
+
+        function notateInt(e) { // Convert a Decimal number to a string and notate it using either locale string (comma-separated numbers), scientific notation with a fixed number of decimals or suffix notation.
+            e = new Decimal(e);
+            if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
+                result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e6, return the input with comma-separated numbers.
+            } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e303) && suffixStatus === true) {
+                switch (((e.exponent / 3) - Math.floor(e.exponent / 3)).toFixed(1)) {
+                    case "0.0":
+                        extraZeroes = 0; // x * 10 ^ 0
+                        break;
+                    case "0.3":
+                        extraZeroes = 1; // x * 10 ^ 1
+                        break;
+                    case "0.7":
+                        extraZeroes = 2; // x * 10 ^ 2
+                }
+                result = (e.mantissa * (10 ** extraZeroes)).toFixed(3) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6, less than 1e303 and suffix notation is enabled, return the input converted to suffix notation.
+            } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e21)) {
+                result = Number(e).toExponential(decimals).replace(/[+]/g, ""); // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+            } else if (e.greaterThanOrEqualTo("1e1e3") && e.lessThan("1e1e16")) {
+                switch (suffixStatus) {
+                    case true:
+                        switch (((e.exponent / 3) - Math.floor(e.exponent / 3)).toFixed(1)) {
+                            case "0.0":
+                                extraZeroes = 0;
+                                break;
+                            case "0.3":
+                                extraZeroes = 1;
+                                break;
+                            case "0.7":
+                                extraZeroes = 2;
+                        }
+                        if (e.exponent < 1e6) {
+                            result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(e.exponent); // If the input is at least 1e1e3, less than 1e6 and suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
+                        } else {
+                            result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(new Decimal(e.exponent)); // Modification of the above: Maximum number is now 1e1e16 instead of 1e6. Returns the exponent ran through the 'notateInt' function.
+                        }
+                        break;
+                    default:
+                        if (e.greaterThanOrEqualTo("1e1e6")) {
+                            result = (e.mantissa).toFixed(decimals) + "e" + (e.exponent).toExponential(decimals).replace(/[+]/, ""); // Modification of the above: If suffix notation is not enabled, return the input's mantissa with a fixed decimal length and the input's exponent converted to scientific notation with a fixed decimal length.
+                        } else {
+                            result = (e.mantissa).toFixed(decimals) + "e" + notateInt(e.exponent); // Modification of the above: If the exponent is less than 1e6, return the mantissa with a fixed decimal length plus the exponent with comma-separated numbers.
+                        }
+                }
+            } else {
+                result = e.toStringWithDecimalPlaces(decimals); // If none of the above apply, return the input with a fixed decimal length.
+            }
+            return result;
+        }
+		
+		// Update the inputs according to the selected currency.
+		function updateInputs(e) {
+			function unknownFormula(status) {
+				if (status === true) {
+					document.getElementById("CGCInputsInnerContainer").innerHTML = "<div class='rainbow' style='text-align:center;font-weight:bold'>Error: Selected currency's formula is unknown. Inputs and results unavailable.</div>";
+					document.getElementById("CGCResultsOuterContainer").setAttribute("style", "display:none");
+				} else {
+					document.getElementById("CGCResultsOuterContainer").setAttribute("style", "display:initial");
+				}
+			}
+			unknownFormula();
+			if (document.getElementsByClassName("SelectedCurr")[0] !== undefined) {
+				document.getElementById(document.getElementsByClassName("SelectedCurr")[0].getAttribute("id")).setAttribute("class", "");
+			} else {
+				document.getElementById("CGCInputsOuterContainer").setAttribute("style", "display:initial");
+				document.getElementById("CGCResultsOuterContainer").setAttribute("style", "display:initial");
+			}
+			document.getElementById("CGCInputsInnerContainer").innerHTML = "";
+			document.getElementById("CGCResultsInnerContainer").innerHTML = "";
+			switch(e) {
+				case "pp":
+				selectedCurr = "pp";
+				console.log("Selected currency: Prestige Point");
+				document.getElementById("CGCPPSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Prestige Point</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:5%'/></p><p>Grass gained since last Prestige: <input id='CGCGrassGainedInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base Prestige Point gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "crystal":
+				selectedCurr = "crystal";
+				console.log("Selected currency: Crystal");
+				document.getElementById("CGCCrystalSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FF00FF'>Crystal</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Tier: <input id='CGCTierInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Tier <span id='CGCTierOutput'>?</span>, the base Crystal gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "steel":
+				selectedCurr = "";
+				console.log("Selected currency: Steel");
+				document.getElementById("CGCSteelSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DBDBDB'>Steel</span>";
+				unknownFormula(true);
+				break;
+				case "ap":
+				selectedCurr = "";
+				console.log("Selected currency: Anonymity Point");
+				document.getElementById("CGCAPSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DC143C'>Anonymity Point</span>";
+				unknownFormula(true);
+				break;
+				case "oil":
+				selectedCurr = "";
+				console.log("Selected currency: Oil");
+				document.getElementById("CGCOilSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#6F6F6F'>Oil</span>";
+				unknownFormula(true);
+				break;
+				case "dm":
+				selectedCurr = "dm";
+				console.log("Selected currency: Dark Matter");
+				document.getElementById("CGCDMSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Dark Matter</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Stars: <input id='CGCCurrentStarsInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "With currently <span id='CGCCurrentStarsOutput'>?</span> Stars, the base Dark Matter gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "np":
+				selectedCurr = "np";
+				console.log("Selected currency: Normality Point");
+				document.getElementById("CGCNPSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Normality Point</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Unnatural Level: <input id='CGCUnnaturalLevelInput' style='width:5%'/></p><p>Astral: <input id='CGCAstralInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Unnatural Level <span id='CGCUnnaturalLevelOutput'>?</span> and Astral <span id='CGCAstralOutput'>?</span>, the base Normality Point gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "cloud":
+				selectedCurr = "";
+				console.log("Selected currency: Cloud");
+				document.getElementById("CGCCloudSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#CFF3F2'>Cloud</span>";
+				unknownFormula(true);
+				break;
+				case "ring":
+				selectedCurr = "";
+				console.log("Selected currency: Ring");
+				document.getElementById("CGCRingSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Ring</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Ring gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "astro":
+				selectedCurr = "";
+				console.log("Selected currency: Astro");
+				document.getElementById("CGCAstroSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Astro</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Astro gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "measure":
+				selectedCurr = "";
+				console.log("Selected currency: Measure");
+				document.getElementById("CGCMeasureSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFF'>Measure</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Measure gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "planet":
+				selectedCurr = "";
+				console.log("Selected currency: Planet");
+				document.getElementById("CGCPlanetSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#008000'>Planet</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Planet gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "lunarpower":
+				selectedCurr = "";
+				console.log("Selected currency: Lunar Power");
+				document.getElementById("CGCLunarPowerSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#8BBFFF'>Lunar Power</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Moonstone: <input id='CGCCurrentMoonstoneInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "With currently <span id='CGCCurrentMoonstoneOutput'>?</span> Moonstone, the base Lunar Power rate is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "stardust":
+				selectedCurr = "";
+				console.log("Selected currency: Stardust");
+				document.getElementById("CGCStardustSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Stardust</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the Planetoid Level-based bonus to Stardust gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+				case "solarshard":
+				selectedCurr = "";
+				console.log("Selected currency: Solar Shard");
+				document.getElementById("CGCSolarShardSelection").setAttribute("class", "SelectedCurr");
+				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Solar Shard</span>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Star Tier: <input id='CGCStarTierInput' style='width:5%'/></p><p>Star Growth: <input id='CGCStarGrowthInput' style='width:5%'/></p>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Star Tier <span id='CGCStarTierOutput'>?</span> and a Star Growth of <span id='CGCStarGrowthOutput'>?</span>, the base Solar Shard gain is: <span id='CGCResultOutput'>?</span>";
+				break;
+			}
+		}
+		
+		// Update the HTML outputs.
+		function updateResults() {
+			switch(selectedCurr) {
+				case "pp":
+				var normalLevel;
+				var grassGained;
+				if (document.getElementById("CGCNormalLevelInput").value === '' || new Decimal(document.getElementById("CGCNormalLevelInput").value).lessThan(1)) {
+					normalLevel = new Decimal(1);
+				} else {
+					normalLevel = toScientific(document.getElementById("CGCNormalLevelInput").value);
+				}
+				if (document.getElementById("CGCGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCGrassGainedInput").value).lessThan(1)) {
+					grassGained = new Decimal(1);
+				} else {
+					grassGained = toScientific(document.getElementById("CGCGrassGainedInput").value);
+				}
+				document.getElementById("CGCNormalLevelOutput").innerHTML = notateInt(normalLevel);
+				document.getElementById("CGCGrassGainedOutput").innerHTML = notateInt(grassGained);
+				document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow(normalLevel.dividedBy(10).floor())).times(new Decimal(1.15).pow(grassGained.log10().floor())));
+				break;
+				case "crystal":
+				var tier;
+				if (document.getElementById("CGCTierInput").value === '' || new Decimal(document.getElementById("CGCTierInput").value).lessThan(1)) {
+					tier = new Decimal(1);
+				} else {
+					tier = toScientific(document.getElementById("CGCTierInput").value);
+				}
+				document.getElementById("CGCTierOutput").innerHTML = notateInt(tier);
+				document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(4).times(tier).times(new Decimal(1.1).pow(tier)));
+				break;
+				case "dm":
+				var stars;
+				if (document.getElementById("CGCCurrentStarsInput").value === '' || new Decimal(document.getElementById("CGCCurrentStarsInput").value).lessThan(0)) {
+					stars = new Decimal(0);
+				} else {
+					stars = toScientific(document.getElementById("CGCCurrentStarsInput").value);
+				}
+				document.getElementById("CGCCurrentStarsOutput").innerHTML = notateInt(stars);
+				if (stars.lessThan(1e9)) {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(0));
+				} else {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt((stars.log10().dividedBy(Math.log10(1.05)).sub(420)).times(new Decimal(1.5).pow(stars.dividedBy(1e9).log10())));
+				}
+				break;
+				case "np":
+				var unnaturalLevel;
+				var astral;
+				if (document.getElementById("CGCUnnaturalLevelInput").value === '' || new Decimal(document.getElementById("CGCUnnaturalLevelInput").value).lessThan(1)) {
+					unnaturalLevel = new Decimal(1);
+				} else {
+					unnaturalLevel = toScientific(document.getElementById("CGCUnnaturalLevelInput").value);
+				}
+				if (document.getElementById("CGCAstralInput").value === '' || new Decimal(document.getElementById("CGCAstralInput").value).lessThan(1)) {
+					astral = new Decimal(1);
+				} else {
+					astral = toScientific(document.getElementById("CGCAstralInput").value);
+				}
+				document.getElementById("CGCUnnaturalLevelOutput").innerHTML = notateInt(unnaturalLevel);
+				document.getElementById("CGCAstralOutput").innerHTML = notateInt(astral);
+				if (unnaturalLevel.lessThan(51)) {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(0));
+				} else {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(5).pow((unnaturalLevel.sub(50)).dividedBy(10).floor())).times(new Decimal(1.25).pow(astral.dividedBy(10).floor())));
+				}
+				break;
+				case "ring":
+				break;
+				case "astro":
+				break;
+				case "measure":
+				break;
+				case "planet":
+				break;
+				case "lunarpower":
+				break;
+				case "stardust":
+				break;
+				case "solarshard":
+				break;
+				default:
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "";
+			}
+		}
+		
+		// Add event listeners to the currency selection options.
+		document.getElementById("CGCPPSelection").addEventListener("click", function() {
+			updateInputs("pp");
+		});
+		document.getElementById("CGCCrystalSelection").addEventListener("click", function() {
+			updateInputs("crystal");
+		});
+		document.getElementById("CGCSteelSelection").addEventListener("click", function() {
+			updateInputs("steel");
+		});
+		document.getElementById("CGCAPSelection").addEventListener("click", function() {
+			updateInputs("ap");
+		});
+		document.getElementById("CGCOilSelection").addEventListener("click", function() {
+			updateInputs("oil");
+		});
+		document.getElementById("CGCDMSelection").addEventListener("click", function() {
+			updateInputs("dm");
+		});
+		document.getElementById("CGCNPSelection").addEventListener("click", function() {
+			updateInputs("np");
+		});
+		document.getElementById("CGCCloudSelection").addEventListener("click", function() {
+			updateInputs("cloud");
+		});
+		document.getElementById("CGCRingSelection").addEventListener("click", function() {
+			updateInputs("ring");
+		});
+		document.getElementById("CGCAstroSelection").addEventListener("click", function() {
+			updateInputs("astro");
+		});
+		document.getElementById("CGCMeasureSelection").addEventListener("click", function() {
+			updateInputs("measure");
+		});
+		document.getElementById("CGCLunarPowerSelection").addEventListener("click", function() {
+			updateInputs("lunarpower");
+		});
+		document.getElementById("CGCPlanetSelection").addEventListener("click", function() {
+			updateInputs("planet");
+		});
+		document.getElementById("CGCStardustSelection").addEventListener("click", function() {
+			updateInputs("stardust");
+		});
+		document.getElementById("CGCSolarShardSelection").addEventListener("click", function() {
+			updateInputs("solarshard");
+		});
+		
+		// Add click event listeners to the calculate and suffix toggle buttons.
+        document.getElementById("CGCCalculateButton").addEventListener("click", updateResults);
+        document.getElementById("CGCSuffixButton").addEventListener("click", function() {
+            if (suffixStatus === false) {
+                suffixStatus = true;
+                document.getElementById("CGCSuffixButton").innerHTML = "Enabled";
+                document.getElementById("CGCSuffixButton").setAttribute("style", "background:#00FF00");
+                updateResults();
+            } else {
+                suffixStatus = false;
+                document.getElementById("CGCSuffixButton").innerHTML = "Disabled";
+                document.getElementById("CGCSuffixButton").setAttribute("style", "background:#FF0000");
+                updateResults();
+            }
+        });
+	} else {
+		console.log("[Currency Gain Calculator] [LOG]: Failed to locate ID or calculator already exists. Cancelling script.");
+	}
+}
+addCurrencyGainCalculator()
