@@ -442,13 +442,17 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				var eclipse;
 				if (document.getElementById("CGCEclipseInput").value === '' || new Decimal(document.getElementById("CGCEclipseInput").value).lessThan(1)) {
 					eclipse = new Decimal(1);
-				} else if (new Decimal(document.getElementById("CGCEclipseInput").value).greaterThan(300)) {
+				} else if (new Decimal(document.getElementById("CGCEclipseInput").value).greaterThanOrEqualTo(300)) {
 					eclipse = new Decimal(300);
 				} else {
 					eclipse = toScientific(document.getElementById("CGCEclipseInput").value);
 				}
 				document.getElementById("CGCEclipseOutput").innerHTML = notateInt(eclipse);
-				document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(8).times(new Decimal(1.02).pow(eclipse.sub(1))));
+				if (eclipse.greaterThanOrEqualTo(300)) {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(8).times(new Decimal(1.02).pow(eclipse.sub(1)))) + " <sup>(softcapped)</sup>";
+				} else {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(8).times(new Decimal(1.02).pow(eclipse.sub(1))));
+				}
 				break;
 				default:
 				document.getElementById("CGCResultsInnerContainer").innerHTML = "";
