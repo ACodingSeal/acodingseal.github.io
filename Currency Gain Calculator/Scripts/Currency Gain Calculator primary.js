@@ -107,9 +107,9 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				console.log("Selected currency: Prestige Point");
 				document.getElementById("CGCPPSelection").setAttribute("class", "SelectedCurr");
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Prestige Point</span>";
-				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained since last Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
+				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 x (1.4 ^ floor(Normal Level / 10)) x (1.15 ^ OoMs of Grass gained since last Prestige)</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base Prestige Point gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base <span style='color:#00FFFF;font-weight:bold'>Prestige Point</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "crystal":
 				selectedCurr = "crystal";
@@ -118,7 +118,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FF00FF'>Crystal</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Tier: <input id='CGCTierInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>4 x Tier x (1.1 ^ Tier)</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Tier <span id='CGCTierOutput'>?</span>, the base Crystal gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Tier <span id='CGCTierOutput'>?</span>, the base <span style='color:#FF00FF;font-weight:bold'>Crystal</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "steel":
 				selectedCurr = "";
@@ -148,7 +148,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFA500'>Momentum</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Rocket Parts created: <input id='CGCRocketPartInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 x 10 ^ (min(99, max(0, floor(Rocket Part - 1))))</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "With <span id='CGCRocketPartOutput'>?</span> <span id='CGCRocketPartPluralCheckOutput'>Rocket Parts</span> created, assuming AGH Milestone 0GH + 24GS has been reached, the base Momentum gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "With <span id='CGCRocketPartOutput'>?</span> <span id='CGCRocketPartPluralCheckOutput'>Rocket Parts</span> created, assuming AGH Milestone 0GH + 24GS has been reached, the base <span style='color:#FFA500;font-weight:bold'>Momentum</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "dm":
 				selectedCurr = "dm";
@@ -157,7 +157,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Dark Matter</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Stars: <input id='CGCCurrentStarsInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>(log1.05(Stars) - 420) x 1.5 ^ log10(Stars / 1e9)</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "With currently <span id='CGCCurrentStarsOutput'>?</span> Stars, the base Dark Matter gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "With currently <span id='CGCCurrentStarsOutput'>?</span> Stars, the base <span style='color:#DD00FF;font-weight:bold'>Dark Matter</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "np":
 				selectedCurr = "np";
@@ -166,7 +166,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Normality Point</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Unnatural Level: <input id='CGCUnnaturalLevelInput' style='width:10%'/></p><p>Astral: <input id='CGCAstralInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 x (5 ^ floor((Unnatural Level - 51) / 10)) x (1.25 ^ floor(Astral / 10))</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Unnatural Level <span id='CGCUnnaturalLevelOutput'>?</span> and Astral <span id='CGCAstralOutput'>?</span>, the base Normality Point gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Unnatural Level <span id='CGCUnnaturalLevelOutput'>?</span> and Astral <span id='CGCAstralOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Normality Point</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "cloud":
 				selectedCurr = "";
@@ -200,7 +200,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#F5F2F7'>Measure</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 x (1.03 ^ max(0, (Planetoid Level - 101)))</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Measure gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base <span style='color:#F5F2F7;font-weight:bold'>Measure</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "planet":
 				selectedCurr = "planet";
@@ -209,7 +209,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#008000'>Planet</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 x (1.03 ^ max(0, (Planetoid Level - 191)))</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Planet gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base <span style='color:#008000;font-weight:bold'>Planet</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "lunarpower":
 				selectedCurr = "lunarpower";
@@ -218,7 +218,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#8BBFFF'>Lunar Power</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Moonstone: <input id='CGCCurrentMoonstoneInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1.5 ^ log10(Moonstone) / 100</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "With currently <span id='CGCCurrentMoonstoneOutput'>?</span> Moonstone, the base Lunar Power rate is: <span id='CGCResultOutput'>?</span>/sec";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "With currently <span id='CGCCurrentMoonstoneOutput'>?</span> Moonstone, the base <span style='color:#8BBFFF;font-weight:bold'>Lunar Power</span> rate is: <span id='CGCResultOutput'>?</span>/sec";
 				break;
 				case "stardust":
 				selectedCurr = "stardust";
@@ -227,7 +227,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Stardust</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1.01 ^ max(0, (Planetoid Level - 450))</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the Planetoid Level-based bonus to Stardust gain is: <span id='CGCResultOutput'>?</span>x";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the Planetoid Level-based bonus to <span style='color:#DD00FF;font-weight:bold'>Stardust</span> gain is: <span id='CGCResultOutput'>?</span>x";
 				break;
 				case "solarshard":
 				selectedCurr = "solarshard";
@@ -236,7 +236,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Solar Shard</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Star Tier: <input id='CGCStarTierInput' style='width:10%'/></p><p>Star Growth: <input id='CGCStarGrowthInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(5 ^ (Current Star Tier - 1)) x max(1, (10 + (floor(log10(Current Star Growth) - floor(log10(Next Star Tier Growth Requirement)))))) x 2</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Star Tier <span id='CGCStarTierOutput'>?</span> with a Star Growth of <span id='CGCStarGrowthOutput'>?</span>, the base Solar Shard gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Star Tier <span id='CGCStarTierOutput'>?</span> with a Star Growth of <span id='CGCStarGrowthOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Solar Shard</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "solarray":
 				selectedCurr = "solarray";
@@ -245,7 +245,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Solar Ray</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Star Growth: <input id='CGCStarGrowthInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>10 x 1.15 ^ floor(log10(Star Growth))</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "With a Star Growth of <span id='CGCStarGrowthOutput'>?</span>, the base Solar Ray gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "With a Star Growth of <span id='CGCStarGrowthOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Solar Ray</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "sunstone":
 				selectedCurr = "sunstone";
@@ -254,7 +254,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Sunstone</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Eclipse: <input id='CGCEclipseInput' style='width:10%'/></p>";
 				document.getElementById("CGCFormulaUsed").innerHTML = "<code>8 x 1.02 ^ (min(300, Eclipse) - 1)</code>";
-				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Eclipse <span id='CGCEclipseOutput'>?</span>, the base Sunstone gain is: <span id='CGCResultOutput'>?</span>";
+				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Eclipse <span id='CGCEclipseOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Sunstone</span> gain is: <span id='CGCResultOutput'>?</span>";
 			}
 		}
 		
@@ -594,7 +594,9 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 		});
 		
 		// Add click event listeners to the calculate and suffix toggle buttons.
-        document.getElementById("CGCCalculateButton").addEventListener("click", updateResults);
+        document.getElementById("CGCCalculateButton").addEventListener("click", function() {
+			updateResults();
+		});
         document.getElementById("CGCSuffixButton").addEventListener("click", function() {
             if (suffixStatus === false) {
                 suffixStatus = true;
