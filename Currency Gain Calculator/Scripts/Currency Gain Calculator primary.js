@@ -190,7 +190,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCAstroSelection").setAttribute("class", "SelectedCurr");
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Astro</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-				document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 x (1.03 ^ max(0, (Planetoid Level - 31)))</code> (Unconfirmed formula)";
+				document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 x (1.03 ^ max(0, (Planetoid Level - 31)))</code> (unconfirmed formula)";
 				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Astro gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "measure":
