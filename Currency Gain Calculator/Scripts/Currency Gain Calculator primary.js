@@ -276,7 +276,11 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				}
 				document.getElementById("CGCNormalLevelOutput").innerHTML = notateInt(normalLevel);
 				document.getElementById("CGCGrassGainedOutput").innerHTML = notateInt(grassGained);
-				document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow(normalLevel.dividedBy(10).floor())).times(new Decimal(1.15).pow(grassGained.log10().floor())));
+				if (normalLevel.lessThan(31)) {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
+				} else {
+					document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10).floor())).times(new Decimal(1.15).pow(grassGained.log10().floor())));
+				}
 				break;
 				case "crystal":
 				var tier;
@@ -455,51 +459,67 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 		// Add click event listeners to the currency selection options.
 		document.getElementById("CGCPPSelection").addEventListener("click", function() {
 			updateInputs("pp");
+			updateResults();
 		});
 		document.getElementById("CGCCrystalSelection").addEventListener("click", function() {
 			updateInputs("crystal");
+			updateResults();
 		});
 		document.getElementById("CGCSteelSelection").addEventListener("click", function() {
 			updateInputs("steel");
+			updateResults();
 		});
 		document.getElementById("CGCAPSelection").addEventListener("click", function() {
 			updateInputs("ap");
+			updateResults();
 		});
 		document.getElementById("CGCOilSelection").addEventListener("click", function() {
 			updateInputs("oil");
+			updateResults();
 		});
 		document.getElementById("CGCDMSelection").addEventListener("click", function() {
 			updateInputs("dm");
+			updateResults();
 		});
 		document.getElementById("CGCNPSelection").addEventListener("click", function() {
 			updateInputs("np");
+			updateResults();
 		});
 		document.getElementById("CGCCloudSelection").addEventListener("click", function() {
 			updateInputs("cloud");
+			updateResults();
 		});
 		document.getElementById("CGCRingSelection").addEventListener("click", function() {
 			updateInputs("ring");
+			updateResults();
 		});
 		document.getElementById("CGCAstroSelection").addEventListener("click", function() {
 			updateInputs("astro");
+			updateResults();
 		});
 		document.getElementById("CGCMeasureSelection").addEventListener("click", function() {
 			updateInputs("measure");
+			updateResults();
 		});
 		document.getElementById("CGCLunarPowerSelection").addEventListener("click", function() {
 			updateInputs("lunarpower");
+			updateResults();
 		});
 		document.getElementById("CGCPlanetSelection").addEventListener("click", function() {
 			updateInputs("planet");
+			updateResults();
 		});
 		document.getElementById("CGCStardustSelection").addEventListener("click", function() {
 			updateInputs("stardust");
+			updateResults();
 		});
 		document.getElementById("CGCSolarShardSelection").addEventListener("click", function() {
 			updateInputs("solarshard");
+			updateResults();
 		});
 		document.getElementById("CGCSunstoneSelection").addEventListener("click", function() {
 			updateInputs("sunstone");
+			updateResults();
 		});
 		
 		// Add click event listeners to the calculate and suffix toggle buttons.
