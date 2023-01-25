@@ -144,7 +144,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
 				document.getElementById("CGCNPSelection").setAttribute("class", "SelectedCurr");
 				document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Normality Point</span>";
 				document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Unnatural Level: <input id='CGCUnnaturalLevelInput' style='width:10%'/></p><p>Astral: <input id='CGCAstralInput' style='width:10%'/></p>";
-				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 x (5 ^ floor(max(0, (Unnatural Level - 51)) / 10)) x (1.25 ^ floor(Astral / 10))</code>";
+				document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 x (5 ^ floor(max(0, (Unnatural Level - 50)) / 10)) x (1.25 ^ floor(Astral / 10))</code>";
 				document.getElementById("CGCResultsInnerContainer").innerHTML = "At Unnatural Level <span id='CGCUnnaturalLevelOutput'>?</span> and Astral <span id='CGCAstralOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Normality Point</span> gain is: <span id='CGCResultOutput'>?</span>";
 				break;
 				case "cloud":
