@@ -87,7 +87,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCPPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Prestige Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 × (1.4 ^ floor(max(0, Normal Level - 30) ÷ 10)) × (1.15 ^ OoMs of Grass gained since last Prestige)</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 × (1.4 ^ (max(0, Normal Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Grass gained since last Prestige or higher reset))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base <span style='color:#00FFFF;font-weight:bold'>Prestige Point</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "crystal":
@@ -268,7 +268,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (normalLevel.lessThan(31)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10).floor())).times(new Decimal(1.15).pow(grassGained.log10().floor())));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(grassGained.log10().floor())));
                     }
                     break;
                 case "crystal":
