@@ -227,7 +227,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCSoulSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Soul</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Stage: <input id='CGCStageInput' style='width:10%'/></p><p>Total Souls (includes spent): <input id='CGCTotalSoulsInput' style='width:10%'/></p><p><span style='color:#FF00FF'>Soul Stealer</span> bought? <b><span id='CGCSoulStealerStatusButton' class='templatedesktop' style='color:#FF0000;padding:0.5em'>No</span></b> (click to toggle)</p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>?</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>(Stage + (min(Soul Stealer level, max(0, Stage - 2)) × 2) - (floor(sqrt(max(1, log1.05(Total Souls ÷ 100)))) - 2))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Stage <span id='CGCStageOutput'>?</span><span id='CGCSoulStealerTextOutput' style='display:none'> with the <span style='color:#FF00FF'>Soul Stealer</span> Singularity Upgrade</span>, having amassed a total of <span id='CGCTotalSoulsOutput'>?</span> <span id='CGCSoulPluralCheckOutput'>Souls</span>, the base <span style='color:#00FFFF;font-weight:bold'>Soul</span> gain is: <span id='CGCResultOutput'>?</span>";
                     document.getElementById("CGCSoulStealerStatusButton").addEventListener("click", function() {
                         if (document.getElementById("CGCSoulStealerStatusButton").innerHTML === "No") {
