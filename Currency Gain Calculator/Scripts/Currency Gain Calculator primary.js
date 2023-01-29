@@ -13,7 +13,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
         var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
         var result; // Used for functions to avoid multiple return statements.
         var extraZeroes; // Used to determine the powers of 10 for scientific to suffix notation conversion, particularly for the functions 'toScientific' and 'notateInt'.
-        var selectedCurr; // Determines the selected currency from the updateInputs() function, used for the updateResult() function.
+        var selectedCurr; // Determines the selected currency from the 'updateInputs' function, used for the 'updateResult' function.
         const errorText = "<span class='rainbow' style='font-weight:bold;font-size:20px'>Error!</span>"; // Text string used for HTML outputs in the event of an error.
 
         function toScientific(e) { // Ensure a user-inputted value is a scientific notation Decimal number.
