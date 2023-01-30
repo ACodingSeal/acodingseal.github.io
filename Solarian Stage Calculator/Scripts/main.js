@@ -2,7 +2,7 @@ function addSolarianStageCalculator() {
     // [WIP] Calculator inaccuracies, particularly with the minimum requirement, are known and will be fixed at some point.
     if (document.getElementById("SolarianStageCalculator") !== null && document.getElementById("SolarianStageCalculatorContainer") === null) {
         console.log("[Solarian Stage Calculator] [LOG] ID located. Running script.");
-        document.getElementById("SolarianStageCalculator").innerHTML = "<div id='SolarianStageCalculatorContainer' class='templatedesktop' style='color:#FFF;padding:1em;background:#2F0075;width:80%;margin:auto'><div class='templatedesktop' style='border-radius:initial;background:initial;width:10%;padding:0.5em;margin-top:0.5em'>Toggle Suffixes<button id='SSCSuffixToggleButton' style='background:#FF0000'>Disabled</button></div><div style='text-align:center;font-size:24px'><img src='./Solarian Stage Calculator/Assets/Sword.png' width='100'/> Solarian Stage Calculator <img src='./Solarian Stage Calculator/Assets/Shield.png' width='100'/><br><div style='font-size:initial'><p>Stage: <input id='CurrentStageInput' style='width:5%'/></p><p>Solarian Challenge: <input id='ChallengeInput' class='slider' type='range' value='0' min='0' max='2'/></p><p style='font-size:14px'>Selected challenge: <span id='SelectedChallengeText'/></p></div></div><table style='margin:auto;color:#FFF'><tr><td><b>Your offence:</b> <input id='PlayerOffenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy offence:</b> <span id='EnemyOffenceOutput'/></td></tr><tr><td><b>Your defence:</b> <input id='PlayerDefenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy defence:</b> <span id='EnemyDefenceOutput'/></td></tr><tr><td><b>Your maximum health (100x defence):</b> <span id='PlayerMaximumHealthOutput'/></td><td style='text-align:right'><b>Enemy maximum health:</b> <span id='EnemyMaximumHealthOutput'/></td></tr><tr><td><b>Your current health (optional, default 100% of max health):</b> <input id='PlayerCurrentHealthInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy current health (optional, default 100% of max health):</b> <input id='EnemyCurrentHealthInput' style='width:10%'/></td></tr></table><div style='margin-top:1em;text-align:center'><button id='SSCCalculateButton'>Calculate</button></div><br><div class='templatedesktop' style='background:initial;border-left:0;border-right:0;border-bottom:0;padding:0.5em;border-radius:initial;text-align:center'><div style='font-size:20px;font-weight:bold'>Result</div><br>At Stage <span id='CurrentStageOutput'>?</span>, the requirements to complete the stage, when currently at <span id='CurrentHealthOutput'>?</span>/<span id='MaximumHealthOutput'>?</span> health<img src='./Solarian Stage Calculator/Assets/Health.png' width='50'/>, are:<br><br><img src='./Solarian Stage Calculator/Assets/Sword.png' width='50'/> Offence: <span id='PlayerOffenceCurrentOutput'>?</span> (current) > <span id='PlayerOffenceReqOutput'>?</span> (minimum necessary) > <span id='PlayerOffenceMaxOutput'>?</span> (instant completion)<br><img src='./Solarian Stage Calculator/Assets/Shield.png' width='50'/> Defence: <span id='PlayerDefenceCurrentOutput'>?</span> (current) > <span id='PlayerDefenceReqOutput'>?</span> (minimum necessary) > <span id='PlayerDefenceMaxOutput'>?</span> (instant completion)<br><p>Your Stage Bonuses will also become:<br><br>Sunrise FM: <span id='StageBonusSunriseFMCurrentOutput'>?</span>x > <span id='StageBonusSunriseFMNextOutput'>?</span>x<br>Solar Rays: <span id='StageBonusSolarRaysCurrentOutput'>?</span>x > <span id='StageBonusSolarRaysNextOutput'>?</span>x<br>Sunstone: <span id='StageBonusSunstoneCurrentOutput'>?</span>x > <span id='StageBonusSunstoneNextOutput'>?</span>x<br><span id='SolarShardsStageBonusContainer' style='display:none'>Solar Shards: <span id='StageBonusSolarShardsCurrentOutput'>?</span>x > <span id='StageBonusSolarShardsNextOutput'>?</span>x</span><br><span id='SoulsStageBonusContainer' style='display:none'>Souls (hidden bonus): <span id='StageBonusSoulsCurrentOutput'>?</span>x > <span id='StageBonusSoulsNextOutput'>?</span>x</span></p></div></div>";
+        document.getElementById("SolarianStageCalculator").innerHTML = "<div id='SolarianStageCalculatorContainer' class='templatedesktop' style='color:#FFF;padding:1em;background:#2F0075;width:80%;margin:auto'><div class='templatedesktop' style='border-radius:initial;background:initial;width:20%;padding:0.5em;margin-top:0.5em;overflow:auto'>Toggle Suffixes<br><button id='SSCSuffixToggleButton' style='background:#FF0000'>Disabled</button></div><div style='text-align:center;font-size:24px'><img src='./Solarian Stage Calculator/Assets/Sword.png' width='100'/> Solarian Stage Calculator <img src='./Solarian Stage Calculator/Assets/Shield.png' width='100'/><br><div style='font-size:initial'><p>Stage: <input id='CurrentStageInput' style='width:5%'/></p><p>Solarian Challenge: <input id='ChallengeInput' class='slider' type='range' value='0' min='0' max='2'/></p><p style='font-size:14px'>Selected challenge: <span id='SelectedChallengeText'/></p></div></div><table style='margin:auto;color:#FFF'><tr><td><b>Your offence:</b> <input id='PlayerOffenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy offence:</b> <span id='EnemyOffenceOutput'/></td></tr><tr><td><b>Your defence:</b> <input id='PlayerDefenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy defence:</b> <span id='EnemyDefenceOutput'/></td></tr><tr><td><b>Your maximum health (100x defence):</b> <span id='PlayerMaximumHealthOutput'/></td><td style='text-align:right'><b>Enemy maximum health:</b> <span id='EnemyMaximumHealthOutput'/></td></tr><tr><td><b>Your current health (optional, default 100% of max health):</b> <input id='PlayerCurrentHealthInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy current health (optional, default 100% of max health):</b> <input id='EnemyCurrentHealthInput' style='width:10%'/></td></tr></table><div style='margin-top:1em;text-align:center'><button id='SSCCalculateButton'>Calculate</button></div><br><div class='templatedesktop' style='background:initial;border-left:0;border-right:0;border-bottom:0;padding:0.5em;border-radius:initial;text-align:center'><div style='font-size:20px;font-weight:bold'>Result</div><br>At Stage <span id='CurrentStageOutput'>?</span>, the requirements to complete the stage, when currently at <span id='CurrentHealthOutput'>?</span>/<span id='MaximumHealthOutput'>?</span> health<img src='./Solarian Stage Calculator/Assets/Health.png' width='50'/>, are:<br><br><img src='./Solarian Stage Calculator/Assets/Sword.png' width='50'/> Offence: <span id='PlayerOffenceCurrentOutput'>?</span> (current) > <span id='PlayerOffenceReqOutput'>?</span> (minimum necessary) > <span id='PlayerOffenceMaxOutput'>?</span> (instant completion)<br><img src='./Solarian Stage Calculator/Assets/Shield.png' width='50'/> Defence: <span id='PlayerDefenceCurrentOutput'>?</span> (current) > <span id='PlayerDefenceReqOutput'>?</span> (minimum necessary) > <span id='PlayerDefenceMaxOutput'>?</span> (instant completion)<br><p>Your Stage Bonuses will also become:<br><br>Sunrise FM: <span id='StageBonusSunriseFMCurrentOutput'>?</span>x > <span id='StageBonusSunriseFMNextOutput'>?</span>x<br>Solar Rays: <span id='StageBonusSolarRaysCurrentOutput'>?</span>x > <span id='StageBonusSolarRaysNextOutput'>?</span>x<br>Sunstone: <span id='StageBonusSunstoneCurrentOutput'>?</span>x > <span id='StageBonusSunstoneNextOutput'>?</span>x<br><span id='SolarShardsStageBonusContainer' style='display:none'>Solar Shards: <span id='StageBonusSolarShardsCurrentOutput'>?</span>x > <span id='StageBonusSolarShardsNextOutput'>?</span>x</span><br><span id='SoulsStageBonusContainer' style='display:none'>Souls (hidden bonus): <span id='StageBonusSoulsCurrentOutput'>?</span>x > <span id='StageBonusSoulsNextOutput'>?</span>x</span></p></div></div>";
 
         var playerOffence = new Decimal(1);
         var playerDefence = new Decimal(0);
@@ -37,24 +37,33 @@ function addSolarianStageCalculator() {
         }
 
         function notateInt(e) { // Convert a Decimal number to a string and notate it using either locale string (comma-separated numbers), scientific notation with a fixed number of decimals or suffix notation.
+            e = new Decimal(e);
             if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
-                result = Number(e).toLocaleString();
-            } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e303) && suffixStatus === true) {
-                switch (((e.exponent / 3) - Math.floor(e.exponent / 3)).toFixed(1)) {
-                    case "0.0":
-                        extraZeroes = 0;
-                        break;
-                    case "0.3":
-                        extraZeroes = 1;
-                        break;
-                    case "0.7":
-                        extraZeroes = 2;
-                }
-                result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "" + suffixes[Math.floor(e.exponent / 3)];
+                result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e6, return the input with comma-separated numbers.
+            } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(new Decimal("1e" + suffixes.length * 3)) && suffixStatus === true) {
+                extraZeroes = e.exponent % 3;
+                result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6 and is less than the length of the suffixes array's zero count times 3 and suffix notation is enabled, return the input converted to suffix notation.
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e21)) {
-                result = Number(e).toExponential(decimals).replace(/[+]/g, "");
+                result = Number(e).toExponential(decimals).replace(/[+]/g, ""); // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+            } else if (e.greaterThanOrEqualTo("1e1e3") && e.lessThan("1e1e16")) {
+                switch (suffixStatus) {
+                    case true:
+                        if (e.greaterThan(new Decimal("1e" + (suffixes.length * 3)))) {
+                            extraZeroes = 0;
+                        } else {
+                            extraZeroes = e.exponent % 3;
+                        }
+                        result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "e" + notateInt(e.exponent); // If suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
+                        break;
+                    default:
+                        if (e.greaterThanOrEqualTo("1e1e6")) {
+                            result = (e.mantissa).toFixed(decimals) + "e" + (e.exponent).toExponential(decimals).replace(/[+]/, ""); // Modification of the above: If suffix notation is not enabled, return the input's mantissa with a fixed decimal length and the input's exponent converted to scientific notation with a fixed decimal length.
+                        } else {
+                            result = (e.mantissa).toFixed(decimals) + "e" + notateInt(e.exponent); // Modification of the above: If the exponent is less than 1e6, return the mantissa with a fixed decimal length plus the exponent with comma-separated numbers.
+                        }
+                }
             } else {
-                result = e.toStringWithDecimalPlaces(decimals);
+                result = e.toStringWithDecimalPlaces(decimals); // If none of the above apply, return the input with a fixed decimal length.
             }
             return result;
         }
@@ -81,13 +90,26 @@ function addSolarianStageCalculator() {
             }
         }
 
-        function decimalMax(e, x) { // Function for choosing the maximum of a Decimal number.
-            var e = new Decimal(e);
-            var x = new Decimal(x);
-            if (e.greaterThanOrEqualTo(x)) {
-                result = e;
+        // Return the lowest of two Decimal inputs.
+        function decimalMin(x, y) {
+            x = new Decimal(x);
+            y = new Decimal(y);
+            if (x.greaterThanOrEqualTo(y)) {
+                result = y;
             } else {
                 result = x;
+            }
+            return result;
+        }
+
+        // Return the largest of two Decimal inputs.
+        function decimalMax(x, y) {
+            x = new Decimal(x);
+            y = new Decimal(y);
+            if (x.greaterThanOrEqualTo(y)) {
+                result = x;
+            } else {
+                result = y;
             }
             return result;
         }
@@ -122,7 +144,7 @@ function addSolarianStageCalculator() {
             } else {
                 enemyCurrentHealth = toScientific(document.getElementById("EnemyCurrentHealthInput").value);
             }
-            enemyOffence = new Decimal(10).times(enemyStatScaling.pow(currentStage.sub(1)));
+            enemyOffence = new Decimal(30).times(enemyStatScaling.pow(currentStage.sub(1)));
             enemyDefence = new Decimal(10).times(enemyStatScaling.pow(currentStage.sub(1)));
 
             function soulBonusCalc(e) { // Calculate the effect of the 'Souls' Stage Bonus.
@@ -192,8 +214,55 @@ function addSolarianStageCalculator() {
             var enemyMaxHits;
 
             function calcMaxHits() {
-                playerMaxHits = playerCurrentHealth.add(playerDefence).dividedBy(enemyOffence);
-                enemyMaxHits = enemyCurrentHealth.add(enemyDefence).dividedBy(playerOffence);
+                playerMaxHits = playerCurrentHealth.add(playerDefenceReq).dividedBy(enemyOffence);
+                enemyMaxHits = enemyCurrentHealth.add(enemyDefence).dividedBy(playerOffenceReq);
+
+                console.log("enemyMaxHits: " + enemyMaxHits);
+                console.log("playerMaxHits: " + playerMaxHits);
+                if (playerMaxHits.greaterThanOrEqualTo(enemyMaxHits)) {
+                    console.log("first");
+                    maxDivide = playerMaxHits.dividedBy(enemyMaxHits);
+                } else {
+                    console.log("second");
+                    maxDivide = enemyMaxHits.dividedBy(playerMaxHits);
+                }
+                if (maxDivide.valueOf() === "NaN") {
+                    console.log(true);
+                } else {
+                    console.log(false);
+                }
+                console.log("-----");
+                if (playerDefenceReq.equals(0)) {
+                    document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>?</span>";
+                    document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>?</span>";
+                } else if (playerDefenceReq.greaterThanOrEqualTo(enemyOffence)) {
+                    document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(enemyDefence) + "</span>";
+                    document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefenceReq) + "</span>";
+                } else {
+                    if (playerMaxHits.greaterThanOrEqualTo(enemyMaxHits)) {
+                        document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerOffenceReq) + "</span>";
+                    } else {
+                        document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerOffenceReq.times((maxDivide.sub(1)).dividedBy(2).add(1))) + "</span>";
+                    }
+                    if (playerDefenceReq.times(maxDivide.dividedBy(2)).greaterThanOrEqualTo(enemyOffence)) {
+                        maxDivide = enemyOffence.dividedBy(playerDefenceReq.times((maxDivide.sub(1)).dividedBy(2).add(1)));
+                        document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefenceReq.times(maxDivide)) + "</span>";
+                    } else {
+                        document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefenceReq) + "</span>";
+                    }
+                }
+            }
+
+
+
+
+            // Testing below.
+            var playerOffenceReq = playerOffence;
+            var playerDefenceReq = playerDefence;
+
+            function calcMaxHits2() {
+                playerMaxHits = playerCurrentHealth.add(playerDefenceReq).dividedBy(enemyOffence);
+                enemyMaxHits = enemyCurrentHealth.add(enemyDefence).dividedBy(playerOffenceReq);
                 if (playerMaxHits.greaterThan(enemyMaxHits) && playerOffence.lessThan(enemyCurrentHealth.add(enemyDefence))) {
                     statOutput("e", "o", "y");
                     statOutput("e", "d", "y");
@@ -221,45 +290,35 @@ function addSolarianStageCalculator() {
                     statOutput("p", "o", "y");
                     statOutput("p", "d", "y");
                 }
-
-                console.log("enemyMaxHits: " + enemyMaxHits);
-                console.log("playerMaxHits: " + playerMaxHits);
+                if (playerDefence.greaterThanOrEqualTo(enemyOffence) && enemyDefence.greaterThanOrEqualTo(playerOffence)) {
+                    statOutput("p", "d", "p");
+                    statOutput("p", "o", "r");
+                    statOutput("e", "d", "p");
+                    statOutput("e", "o", "r");
+                } else if (playerDefence.greaterThanOrEqualTo(enemyOffence)) {
+                    statOutput("p", "d", "p");
+                    statOutput("e", "o", "r");
+                } else if (enemyDefence.greaterThanOrEqualTo(playerOffence)) {
+                    statOutput("e", "d", "p");
+                    statOutput("p", "o", "r");
+                } else {
+                    statOutput("p", "d", "y");
+                    statOutput("p", "o", "y");
+                    statOutput("e", "d", "y");
+                    statOutput("e", "o", "y");
+                }
+                document.getElementById("PlayerMaximumHealthOutput").innerHTML = notateInt(playerMaxHealth);
+                document.getElementById("EnemyMaximumHealthOutput").innerHTML = notateInt(enemyMaxHealth);
                 if (playerMaxHits.greaterThanOrEqualTo(enemyMaxHits)) {
-                    console.log("first");
                     maxDivide = playerMaxHits.dividedBy(enemyMaxHits);
                 } else {
-                    console.log("second");
                     maxDivide = enemyMaxHits.dividedBy(playerMaxHits);
                 }
-                if (maxDivide.valueOf() === "NaN") {
-                    console.log(true);
-                } else {
-                    console.log(false);
-                }
-                console.log("-----");
+                playerOffenceReq = playerOffenceReq.times(maxDivide.sub(1).dividedBy(2).add(1));
+                playerDefenceReq = playerDefenceReq.times(maxDivide.sub(1).dividedBy(2).add(1));
             }
-            document.getElementById("PlayerMaximumHealthOutput").innerHTML = notateInt(playerMaxHealth);
-            document.getElementById("EnemyMaximumHealthOutput").innerHTML = notateInt(enemyMaxHealth);
-            calcMaxHits();
-            if (playerDefence.equals(0)) {
-                document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>?</span>";
-                document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>?</span>";
-            } else if (playerDefence.greaterThanOrEqualTo(enemyOffence)) {
-                document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(enemyDefence) + "</span>";
-                document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefence) + "</span>";
-            } else {
-                if (playerMaxHits.greaterThanOrEqualTo(enemyMaxHits)) {
-                    document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerOffence) + "</span>";
-                } else {
-                    document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerOffence.times((maxDivide.sub(1)).dividedBy(2).add(1))) + "</span>";
-                }
-                if (playerDefence.times(maxDivide.dividedBy(2)).greaterThanOrEqualTo(enemyOffence)) {
-                    maxDivide = enemyOffence.dividedBy(playerDefence.times((maxDivide.sub(1)).dividedBy(2).add(1)));
-                    document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefence.times(maxDivide)) + "</span>";
-                } else {
-                    document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefence) + "</span>";
-                }
-            }
+            calcMaxHits2();
+
             document.getElementById("PlayerOffenceMaxOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(enemyCurrentHealth.add(enemyDefence)) + "</span>";
             document.getElementById("PlayerDefenceMaxOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(playerDefence) + "</span>";
 
@@ -287,6 +346,7 @@ function addSolarianStageCalculator() {
         }
         document.getElementById("ChallengeInput").addEventListener("input", updateChallenge);
         document.getElementById("SSCCalculateButton").addEventListener("click", updateResults);
+
         document.getElementById("SSCSuffixToggleButton").addEventListener("click", function() {
             if (suffixStatus === false) {
                 document.getElementById("SSCSuffixToggleButton").setAttribute("style", "background:#00FF00");
