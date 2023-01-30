@@ -4,24 +4,22 @@ function addSolarianStageCalculator() {
         console.log("[Solarian Stage Calculator] [LOG] ID located. Running script.");
         document.getElementById("SolarianStageCalculator").innerHTML = "<div id='SolarianStageCalculatorContainer' class='templatedesktop' style='color:#FFF;padding:1em;background:#2F0075;width:80%;margin:auto'><div class='templatedesktop' style='border-radius:initial;background:initial;width:20%;padding:0.5em;margin-top:0.5em;overflow:auto'>Toggle Suffixes<br><button id='SSCSuffixToggleButton' style='background:#FF0000'>Disabled</button></div><div style='text-align:center;font-size:24px'><img src='./Solarian Stage Calculator/Assets/Sword.png' width='100'/> Solarian Stage Calculator <img src='./Solarian Stage Calculator/Assets/Shield.png' width='100'/><br><div style='font-size:initial'><p>Stage: <input id='CurrentStageInput' style='width:5%'/></p><p>Solarian Challenge: <input id='ChallengeInput' class='slider' type='range' value='0' min='0' max='2'/></p><p style='font-size:14px'>Selected challenge: <span id='SelectedChallengeText'/></p></div></div><table style='margin:auto;color:#FFF'><tr><td><b>Your offence:</b> <input id='PlayerOffenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy offence:</b> <span id='EnemyOffenceOutput'/></td></tr><tr><td><b>Your defence:</b> <input id='PlayerDefenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy defence:</b> <span id='EnemyDefenceOutput'/></td></tr><tr><td><b>Your maximum health (100x defence):</b> <span id='PlayerMaximumHealthOutput'/></td><td style='text-align:right'><b>Enemy maximum health:</b> <span id='EnemyMaximumHealthOutput'/></td></tr><tr><td><b>Your current health (optional, default 100% of max health):</b> <input id='PlayerCurrentHealthInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy current health (optional, default 100% of max health):</b> <input id='EnemyCurrentHealthInput' style='width:10%'/></td></tr></table><div style='margin-top:1em;text-align:center'><button id='SSCCalculateButton'>Calculate</button></div><br><div class='templatedesktop' style='background:initial;border-left:0;border-right:0;border-bottom:0;padding:0.5em;border-radius:initial;text-align:center'><div style='font-size:20px;font-weight:bold'>Result</div><br>At Stage <span id='CurrentStageOutput'>?</span>, the requirements to complete the stage, when currently at <span id='CurrentHealthOutput'>?</span>/<span id='MaximumHealthOutput'>?</span> health<img src='./Solarian Stage Calculator/Assets/Health.png' width='50'/>, are:<br><br><img src='./Solarian Stage Calculator/Assets/Sword.png' width='50'/> Offence: <span id='PlayerOffenceCurrentOutput'>?</span> (current) > <span id='PlayerOffenceReqOutput'>?</span> (minimum necessary) > <span id='PlayerOffenceMaxOutput'>?</span> (instant completion)<br><img src='./Solarian Stage Calculator/Assets/Shield.png' width='50'/> Defence: <span id='PlayerDefenceCurrentOutput'>?</span> (current) > <span id='PlayerDefenceReqOutput'>?</span> (minimum necessary) > <span id='PlayerDefenceMaxOutput'>?</span> (instant completion)<br><p>Your Stage Bonuses will also become:<br><br>Sunrise FM: <span id='StageBonusSunriseFMCurrentOutput'>?</span>x > <span id='StageBonusSunriseFMNextOutput'>?</span>x<br>Solar Rays: <span id='StageBonusSolarRaysCurrentOutput'>?</span>x > <span id='StageBonusSolarRaysNextOutput'>?</span>x<br>Sunstone: <span id='StageBonusSunstoneCurrentOutput'>?</span>x > <span id='StageBonusSunstoneNextOutput'>?</span>x<br><span id='SolarShardsStageBonusContainer' style='display:none'>Solar Shards: <span id='StageBonusSolarShardsCurrentOutput'>?</span>x > <span id='StageBonusSolarShardsNextOutput'>?</span>x</span><br><span id='SoulsStageBonusContainer' style='display:none'>Souls (hidden bonus): <span id='StageBonusSoulsCurrentOutput'>?</span>x > <span id='StageBonusSoulsNextOutput'>?</span>x</span></p></div></div>";
 
-        var playerOffence = new Decimal(1);
-        var playerDefence = new Decimal(0);
-        var playerMaxHealth = new Decimal(100);
-        var playerCurrentHealth = new Decimal(100);
-        var enemyOffence = new Decimal(10);
-        var enemyDefence = new Decimal(10);
-        var enemyMaxHealth = new Decimal(3e3);
-        var enemyCurrentHealth = new Decimal(3e3);
-        var currentStage = new Decimal(1);
-        var challenge = false;
-        var enemyStatScaling = new Decimal(10);
-        var enemyHealthScaling = new Decimal(10.3);
-        var suffixStatus = false;
-        var extraZeroes;
-        var decimals = 3;
-        var result;
-        const suffixes = ["", "", "M", "B", "T", "Qa", "Qt", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "DDc", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg", "UVg", "DVg", "TVg", "QaVg", "QtVg", "SxVg", "SpVg", "OVg", "NVg", "Tg", "UTg", "DTg", "TTg", "QaTg", "QtTg", "SxTg", "SpTg", "OTg", "NTg", "Qd", "UQd", "DQd", "TQd", "QaQd", "QtQd", "SxQd", "SpQd", "OQd", "NQd", "Qi", "UQi", "DQi", "TQi", "QaQi", "QtQi", "SxQi", "SpQi", "OQi", "NQi", "He", "UHe", "DHe", "THe", "QaHe", "QtHe", "SxHe", "SpHe", "OHe", "NHe", "St", "USt", "DSt", "TSt", "QaSt", "QtSt", "SxSt", "SpSt", "OSt", "NSt", "Og", "UOg", "DOg", "TOg", "QaOg", "QtOg", "SxOg", "SpOg", "OOg", "NOg", "Nn", "UNn", "DNn", "TNn", "QaNn", "QtNn", "SxNn", "SpNn", "ONn", "NNn"];
-        const suffixesLC = ["", "", "m", "b", "t", "qa", "qt", "sx", "sp", "oc", "no", "dc", "ud", "ddc", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qtvg", "sxvg", "spvg", "ovg", "nvg", "tg", "utg", "dtg", "ttg", "qatg", "qttg", "sxtg", "sptg", "otg", "ntg", "qd", "uqd", "dqd", "tqd", "qaqd", "qtqd", "sxqd", "spqd", "oqd", "nqd", "qi", "uqi", "dqi", "tqi", "qaqi", "qtqi", "sxqi", "spqi", "oqi", "nqi", "he", "uhe", "dhe", "the", "qahe", "qthe", "sxhe", "sphe", "ohe", "nhe", "st", "ust", "dst", "tst", "qast", "qtst", "sxst", "spst", "ost", "nst", "og", "uog", "dog", "tog", "qaog", "qtog", "sxog", "spog", "oog", "nog", "nn", "unn", "dnn", "tnn", "qann", "qtnn", "sxnn", "spnn", "onn", "nnn"];
+        var playerOffence
+        var playerDefence
+        var playerMaxHealth
+        var playerCurrentHealth
+        var enemyOffence
+        var enemyDefence
+        var enemyMaxHealth
+        var enemyCurrentHealth
+        var currentStage
+        var challenge
+        var enemyStatScaling
+        var enemyHealthScaling
+        var suffixStatus = false; // Determines whether suffix notation output is enabled or disabled.
+		var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
+        var result; // Used for functions to avoid multiple return statements.
+		var extraZeroes; // Used to determine the powers of 10 for scientific to suffix notation conversion, particularly for the functions 'toScientific' and 'notateInt'.
 
         function toScientific(e) { // Used to ensure a user-inputted value is a scientific notation number.
             if (e.match(/[a-z]+/gi) !== null && suffixes[suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase())] !== undefined) {
