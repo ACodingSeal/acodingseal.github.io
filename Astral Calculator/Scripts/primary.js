@@ -1,4 +1,4 @@
-// [WIP] To-do: (1) Fix inaccuracies caused by a lower max time name amount. (2) Properly implement the inclusion of Astral Bonuses. (3) Fix issues resulting from numbers >=1e1e3 with the time output.
+// [WIP] To-do: (1) Fix inaccuracies caused by a lower max time name amount. (2) Fix issues resulting from numbers >=1e1e3 with the time output.
 function addAstralCalculator() { // Function for ensuring all the calculator's variables and functions stay within.
     if (document.getElementById("AstralCalculator") !== null && document.getElementById("AstralCalculatorContainer") === null) {
         console.log("[Astral Calculator] [LOG]: ID located. Running script.");
