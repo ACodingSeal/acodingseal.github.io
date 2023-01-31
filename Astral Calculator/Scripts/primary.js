@@ -165,7 +165,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
                     document.getElementById("ACTimeReqOutput").innerHTML = outputTime(timeReq);
                 }
                 if (isNaN(timeReq)) {
-                    document.getElementById("ACTimeReqOutput").innerHTML = errorText;
+                    document.getElementById("ACTimeReqOutput").innerHTML = "A long time from now in a calculator far, far away...";
                 }
             }
 
@@ -453,22 +453,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
                     addNewTime(secondsToTime(e).s + " " + checkPlural(secondsToTime(e).s, 0));
                 }
                 $a = $a.splice(0, maxTimeNames);
-                switch (onlyYearsStatus) {
-                    case false:
-                        if (secondsToTime(e).e.greaterThanOrEqualTo("1e1e16")) {
-                            result = "A long time from now in a calculator far, far away...";
-                        } else {
-                            result = $a.join(', ');
-                        }
-                        break;
-                    default:
-                        if (secondsToTime(e).y.greaterThanOrEqualTo("1e1e16")) {
-                            result = "A long time from now in a calculator far, far away...";
-                        } else {
-                            result = $a.join(', ');
-                        }
-                }
-                return result;
+                return $a.join(', ');
             }
 
             // Update HTML texts for inputted values.
