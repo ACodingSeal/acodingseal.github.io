@@ -76,6 +76,28 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
             }
             return result;
         }
+		
+        function decimalMin(x, y) { // Return the lowest of two Decimal inputs.
+            x = new Decimal(x);
+            y = new Decimal(y);
+            if (x.greaterThanOrEqualTo(y)) {
+                result = y;
+            } else {
+                result = x;
+            }
+            return result;
+        }
+
+        function decimalMax(x, y) { // Return the largest of two Decimal inputs.
+            x = new Decimal(x);
+            y = new Decimal(y);
+            if (x.greaterThanOrEqualTo(y)) {
+                result = x;
+            } else {
+                result = y;
+            }
+            return result;
+        }
 
         function getInputData() { // Get user values from inputs and interpret them as a Decimal scientific notation number.
             if (document.getElementById("ACCurrentAstralInput").value === '' || toScientific(document.getElementById("ACCurrentAstralInput").value).lessThan(1)) {
@@ -147,7 +169,6 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
                 }
             }
 
-            // [WIP] Created by User:TheSeal27. To-do: (1) Add years-only switch and support for time names above years.
             const timeUnits = [
                 "1",
                 "60",
@@ -211,7 +232,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
                 "Eternities"
             ];
 
-            function secondsToTime(input) {
+            function secondsToTime(input) { // Convert seconds to time names.
                 input = new Decimal(input);
 
                 function modOp(x, y) { // Custom modulo operation function to support >1.797e308 numbers.
@@ -479,6 +500,28 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
             }
 			
 			// Update Astral Bonuses.
+			document.getElementById("ACAstralBonusPPBonusCurrentOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(1.4).pow((new Decimal(100).times(currentAstralPrestige)).add(currentAstral.sub(1)))));
+			document.getElementById("ACAstralBonusPPBonusNextOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(1.4).pow((new Decimal(100).times(currentAstralPrestige)).add(goalAstral.sub(1)))));
+			document.getElementById("ACAstralBonusCrystalBonusCurrentOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(1.1).pow((new Decimal(100).times(currentAstralPrestige)).add(currentAstral.sub(1)))));
+			document.getElementById("ACAstralBonusCrystalBonusNextOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(1.1).pow((new Decimal(100).times(currentAstralPrestige)).add(goalAstral.sub(1)))));
+			document.getElementById("ACAstralBonusPlatinumWorthCurrentOutput").innerHTML = notateInt(currentAstral.dividedBy(2).times(new Decimal(5).pow(currentAstralPrestige)).sub(1));
+			document.getElementById("ACAstralBonusPlatinumWorthNextOutput").innerHTML = notateInt(goalAstral.dividedBy(2).times(new Decimal(5).pow(currentAstralPrestige)).sub(1));
+			document.getElementById("ACAstralBonusSteelMultiplierCurrentOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral));
+			document.getElementById("ACAstralBonusSteelMultiplierNextOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral));
+			document.getElementById("ACAstralBonusGrassBonusCurrentOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1));
+			document.getElementById("ACAstralBonusGrassBonusNextOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1));
+			document.getElementById("ACAstralBonusXPBonusCurrentOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1));
+			document.getElementById("ACAstralBonusXPBonusNextOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1));
+			document.getElementById("ACAstralBonusTPBonusCurrentOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1));
+			document.getElementById("ACAstralBonusTPBonusNextOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1));
+			document.getElementById("ACAstralBonusStarsBonusCurrentOutput").innerHTML = notateInt(new Decimal(0.1).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1));
+			document.getElementById("ACAstralBonusStarsBonusNextOutput").innerHTML = notateInt(new Decimal(0.1).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1));
+			document.getElementById("ACAstralBonusMoonstoneBonusCurrentOutput").innerHTML = notateInt(new Decimal(5).pow(currentAstralPrestige).times(currentAstral));
+			document.getElementById("ACAstralBonusMoonstoneBonusNextOutput").innerHTML = notateInt(new Decimal(5).pow(currentAstralPrestige).times(goalAstral));
+			document.getElementById("ACAstralBonusChargeBonusCurrentOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1));
+			document.getElementById("ACAstralBonusChargeBonusNextOutput").innerHTML = notateInt(new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1));
+			document.getElementById("ACAstralBonusSFRGTBonusCurrentOutput").innerHTML = notateInt(new Decimal(2).pow(new Decimal(100).times(currentAstralPrestige).add(decimalMin(82, decimalMax(0, currentAstral.sub(18))))));
+			document.getElementById("ACAstralBonusSFRGTBonusNextOutput").innerHTML = notateInt(new Decimal(2).pow(new Decimal(100).times(currentAstralPrestige).add(decimalMin(82, decimalMax(0, goalAstral.sub(18))))));
 			if (currentAstralPrestige.greaterThan(0)) {
 				document.getElementById("ACAstralBonusDarkMatterBonusContainer").setAttribute("style", "display:block");
 				document.getElementById("ACAstralBonusDarkMatterBonusOutput").innerHTML = notateInt(new Decimal(25).pow(currentAstralPrestige));
