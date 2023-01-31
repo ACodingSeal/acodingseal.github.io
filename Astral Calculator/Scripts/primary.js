@@ -127,8 +127,8 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
             }
         }
 
-        // Update the SP requirement and (WIP) time requirement.
-        function updateRequirements() {
+        // Update the results, including but not limited to the SP and time requirements.
+        function updateResults() {
             getInputData();
             var baseReq = new Decimal(10).pow((new Decimal(10).times(currentAstralPrestige)).plus(2));
             var multi = new Decimal(2).plus(new Decimal(0.1).times(currentAstralPrestige));
@@ -477,6 +477,62 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
             if (timeReq.lessThan(1e-3)) {
                 document.getElementById("ACTimeReqOutput").innerHTML = "Less than 1 Millisecond";
             }
+			
+			// Update Astral Bonuses.
+			if (currentAstralPrestige.greaterThan(0)) {
+				document.getElementById("ACAstralBonusDarkMatterBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusDarkMatterBonusOutput").innerHTML = notateInt(new Decimal(25).pow(currentAstralPrestige));
+			} else {
+				document.getElementById("ACAstralBonusDarkMatterBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(1)) {
+				document.getElementById("ACAstralBonusNPBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusNPBonusOutput").innerHTML = notateInt(new Decimal(10).pow(currentAstralPrestige.sub(1)));
+			} else {
+				document.getElementById("ACAstralBonusNPBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(2)) {
+				document.getElementById("ACAstralBonusRingsBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusRingsBonusOutput").innerHTML = notateInt(new Decimal(5).pow(currentAstralPrestige.sub(2)));
+			} else {
+				document.getElementById("ACAstralBonusRingsBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(3)) {
+				document.getElementById("ACAstralBonusDarkFruitsAmountBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusDarkFruitsAmountBonusOutput").innerHTML = notateInt(new Decimal(3).pow(currentAstralPrestige.sub(3)));
+			} else {
+				document.getElementById("ACAstralBonusDarkFruitsAmountBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(4)) {
+				document.getElementById("ACAstralBonusLunarPowerBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusLunarPowerBonusOutput").innerHTML = notateInt(new Decimal(3).pow(currentAstralPrestige.sub(4)));
+			} else {
+				document.getElementById("ACAstralBonusLunarPowerBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(5)) {
+				document.getElementById("ACAstralBonusArcsBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusArcsBonusOutput").innerHTML = notateInt(new Decimal(5).pow(currentAstralPrestige.sub(5)));
+			} else {
+				document.getElementById("ACAstralBonusArcsBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(6)) {
+				document.getElementById("ACAstralBonusStardustBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusStardustBonusOutput").innerHTML = notateInt(new Decimal(5).pow(currentAstralPrestige.sub(6)));
+			} else {
+				document.getElementById("ACAstralBonusStardustBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(7)) {
+				document.getElementById("ACAstralBonusSolarFlareBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusSolarFlareBonusOutput").innerHTML = notateInt(new Decimal(3).pow(currentAstralPrestige.sub(7)));
+			} else {
+				document.getElementById("ACAstralBonusSolarFlareBonusContainer").setAttribute("style", "display:none");
+			}
+			if (currentAstralPrestige.greaterThan(8)) {
+				document.getElementById("ACAstralBonusPrestigePointsBonusContainer").setAttribute("style", "display:block");
+				document.getElementById("ACAstralBonusPrestigePointsBonusOutput").innerHTML = notateInt(new Decimal(10).pow(currentAstralPrestige.sub(7)));
+			} else {
+				document.getElementById("ACAstralBonusPrestigePointsBonusContainer").setAttribute("style", "display:none");
+			}
         }
 
         // Set calculating text for a particular HTML requirement or both, depending on the value of the parameter.
@@ -493,7 +549,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
         }
 
         // Add click event listeners to the calculate, suffix toggle, years-only toggle and Astral Bonuses section toggle buttons.
-        document.getElementById("ACCalculateButton").addEventListener("click", updateRequirements);
+        document.getElementById("ACCalculateButton").addEventListener("click", updateResults);
         document.getElementById("ACSuffixButton").addEventListener("click", function() {
             if (suffixStatus === false) {
                 suffixStatus = true;
@@ -504,7 +560,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
                 document.getElementById("ACSuffixButton").innerHTML = "Disabled";
                 document.getElementById("ACSuffixButton").setAttribute("style", "background:#FF0000");
             }
-            updateRequirements();
+            updateResults();
         });
         document.getElementById("ACYearsOnlyButton").addEventListener("click", function() {
             if (onlyYearsStatus === true) {
@@ -514,7 +570,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
                 onlyYearsStatus = true;
                 document.getElementById("ACYearsOnlyButton").innerHTML = "Years";
             }
-            updateRequirements();
+            updateResults();
         });
         document.getElementById("ACAstralBonusesSectionToggle").addEventListener("click", function() {
             if (document.getElementById("ACAstralBonusesSection").getAttribute("style") === "display:none") {
@@ -523,7 +579,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
                 document.getElementById("ACAstralBonusesSection").setAttribute("style", 'display:none');
             }
         });
-        updateRequirements();
+        updateResults();
     } else {
         console.log("[Astral Calculator] [LOG]: Template is not transcluded. Cancelling script.");
     }
