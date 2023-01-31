@@ -87,7 +87,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCPPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Prestige Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 × (1.4 ^ (max(0, Normal Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Grass gained since last Prestige or higher reset))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 × (1.4 ^ max(0, (Normal Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Grass gained since last Prestige or higher reset))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base <span style='color:#00FFFF;font-weight:bold'>Prestige Point</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "crystal":
@@ -100,11 +100,13 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Tier <span id='CGCTierOutput'>?</span>, the base <span style='color:#FF00FF;font-weight:bold'>Crystal</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "ap":
-                    selectedCurr = "";
+                    selectedCurr = "ap";
                     console.log("Selected currency: Anonymity Point");
                     document.getElementById("CGCAPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DC143C'>Anonymity Point</span>";
-                    unknownFormula(true);
+                    document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Anti Level: <input id='CGCAntiLevelInput' style='width:10%'/></p><p>Anti-Grass gained this Anonymity: <input id='CGCAntiGrassGainedInput' style='width:10%'/></p>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 × (1.4 ^ max(0, (Anti Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Anti-Grass gained since last Anonymity or higher reset))</code> (unconfirmed formula)";
+                    document.getElementById("CGCResultsInnerContainer").innerHTML = "At Anti Level <span id='CGCAntiLevelOutput'>?</span>, having gained <span id='CGCAntiGrassGainedOutput'>?</span> Anti-Grass since the last Anonymity or above reset, the base <span style='color:#DC143C;font-weight:bold'>Anonymity Point</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "oil":
                     selectedCurr = "";
@@ -299,6 +301,26 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCTierOutput").innerHTML = notateInt(tier);
                     document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(4).times(tier).times(new Decimal(1.1).pow(tier)));
                     break;
+                case "ap":
+                    var antiLevel;
+                    var antiGrassGained;
+                    if (document.getElementById("CGCAntiLevelInput").value === '' || new Decimal(document.getElementById("CGCAntiLevelInput").value).lessThan(1)) {
+                        antiLevel = new Decimal(1);
+                    } else {
+                        antiLevel = toScientific(document.getElementById("CGCAntiLevelInput").value);
+                    }
+                    if (document.getElementById("CGCAntiGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCAntiGrassGainedInput").value).lessThan(1)) {
+                        antiGrassGained = new Decimal(1);
+                    } else {
+                        antiGrassGained = toScientific(document.getElementById("CGCAntiGrassGainedInput").value);
+                    }
+                    document.getElementById("CGCAntiLevelOutput").innerHTML = notateInt(antiLevel);
+                    document.getElementById("CGCAntiGrassGainedOutput").innerHTML = notateInt(antiGrassGained);
+                    if (antiLevel.lessThan(31)) {
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
+                    } else {
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.4).pow((antiLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(antiGrassGained.log10().floor())));
+                    }
                 case "momentum":
                     var rocketPart;
                     if (document.getElementById("CGCRocketPartInput").value === '' || new Decimal(document.getElementById("CGCRocketPartInput").value).lessThan(0)) {
@@ -555,7 +577,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "?";
             }
         }
-        // Currencies that still need their formulae implemented: AP, Oil.
+        // Currencies that still need their formulae implemented: Oil.
 
         // Add click event listeners to the currency selection options.
         document.getElementById("CGCPPSelection").addEventListener("click", function() {
