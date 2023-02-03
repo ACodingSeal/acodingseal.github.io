@@ -193,7 +193,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCStardustSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Stardust</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>1.01 ^ max(0, (Planetoid Level - 450))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>1.01 ^ max(0, (Planetoid Level - 449))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the Planetoid Level-based bonus to <span style='color:#DD00FF;font-weight:bold'>Stardust</span> gain is: <span id='CGCResultOutput'>?</span>x";
                     break;
                 case "solarshard":
@@ -458,7 +458,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (planetoidLevel.lessThan(450)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(1);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1.01).pow(planetoidLevel.sub(450)));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1.01).pow(planetoidLevel.sub(449)));
                     }
                     break;
                 case "solarshard":
