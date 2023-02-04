@@ -87,7 +87,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCPPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Prestige Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>9 × (1.4 ^ max(0, (Normal Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Grass gained since last Prestige or higher reset))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(9 × (1.4 ^ max(0, (Normal Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Grass gained since last Prestige or higher reset)))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base <span style='color:#00FFFF;font-weight:bold'>Prestige Point</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "crystal":
@@ -96,7 +96,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCCrystalSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FF00FF'>Crystal</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Tier: <input id='CGCTierInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>4 × Tier × (1.1 ^ Tier)</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(4 × Tier × (1.1 ^ Tier))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Tier <span id='CGCTierOutput'>?</span>, the base <span style='color:#FF00FF;font-weight:bold'>Crystal</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "ap":
@@ -105,7 +105,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCAPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DC143C'>Anonymity Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Anti Level: <input id='CGCAntiLevelInput' style='width:10%'/></p><p>Anti-Grass gained this Anonymity: <input id='CGCAntiGrassGainedInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 × (1.4 ^ max(0, (Anti Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Anti-Grass gained since last Anonymity or higher reset))</code> (unconfirmed formula)";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.4 ^ max(0, (Anti Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Anti-Grass gained since last Anonymity or higher reset)))</code> (unconfirmed formula)";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Anti Level <span id='CGCAntiLevelOutput'>?</span>, having gained <span id='CGCAntiGrassGainedOutput'>?</span> Anti-Grass since the last Anonymity or above reset, the base <span style='color:#DC143C;font-weight:bold'>Anonymity Point</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "oil":
@@ -121,7 +121,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCMomentumSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFA500'>Momentum</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Rocket Parts created: <input id='CGCRocketPartInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>10 ^ min(100, max(0, Rocket Parts created + min(1, Supernova Tier)))</code>"
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>10 ^ min(100, max(0, Rocket Parts created))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "With <span id='CGCRocketPartOutput'>?</span> <span id='CGCRocketPartPluralCheckOutput'>Rocket Parts</span> created, assuming AGH Milestone 0GH + 24GS has been reached, the base <span style='color:#FFA500;font-weight:bold'>Momentum</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "dm":
@@ -130,7 +130,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCDMSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Dark Matter</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Stars: <input id='CGCCurrentStarsInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>(log1.05(Stars) - 420) × 1.5 ^ log10(Stars ÷ 1e9)</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor((log1.05(Stars) - 420) × 1.5 ^ log10(Stars ÷ 1e9))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "With currently <span id='CGCCurrentStarsOutput'>?</span> Stars, the base <span style='color:#DD00FF;font-weight:bold'>Dark Matter</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "np":
@@ -139,7 +139,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCNPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Normality Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Unnatural Level: <input id='CGCUnnaturalLevelInput' style='width:10%'/></p><p>Astral: <input id='CGCAstralInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 × (5 ^ floor(max(0, (Unnatural Level - 50)) ÷ 10)) × (1.25 ^ floor(Astral ÷ 10))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(1 × (5 ^ floor(max(0, (Unnatural Level - 50)) ÷ 10)) × (1.25 ^ floor(Astral ÷ 10)))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Unnatural Level <span id='CGCUnnaturalLevelOutput'>?</span> and Astral <span id='CGCAstralOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Normality Point</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "ring":
@@ -148,7 +148,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCRingSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Ring</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>1 × (1.03 ^ max(0, (Planetoid Level - 5)))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(1 × (1.03 ^ max(0, (Planetoid Level - 5))))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Ring gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "astro":
@@ -157,7 +157,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCAstroSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Astro</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 × (1.03 ^ max(0, (Planetoid Level - 31)))</code> (unconfirmed formula)";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.03 ^ max(0, (Planetoid Level - 31))))</code> (unconfirmed formula)";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Astro gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "measure":
@@ -166,7 +166,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCMeasureSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#F5F2F7'>Measure</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 × (1.03 ^ max(0, (Planetoid Level - 101)))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.03 ^ max(0, (Planetoid Level - 101))))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base <span style='color:#F5F2F7;font-weight:bold'>Measure</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "planet":
@@ -175,7 +175,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCPlanetSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#008000'>Planet</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>3 × (1.03 ^ max(0, (Planetoid Level - 191)))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.03 ^ max(0, (Planetoid Level - 191))))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base <span style='color:#008000;font-weight:bold'>Planet</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "lunarpower":
@@ -211,7 +211,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCSolarRaySelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Solar Ray</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Star Growth: <input id='CGCStarGrowthInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>10 × 1.15 ^ floor(log10(Star Growth))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(10 × 1.15 ^ floor(log10(Star Growth)))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "With a Star Growth of <span id='CGCStarGrowthOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Solar Ray</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "sunstone":
@@ -220,7 +220,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCSunstoneSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Sunstone</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Eclipse: <input id='CGCEclipseInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>8 × 1.02 ^ (min(300, Eclipse) - 1)</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(8 × 1.02 ^ (min(300, Eclipse) - 1))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Eclipse <span id='CGCEclipseOutput'>?</span>, the base <span style='color:#FFFF00;font-weight:bold'>Sunstone</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "soul":
@@ -288,7 +288,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (normalLevel.lessThan(31)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(grassGained.log10().floor())));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(grassGained.log10().floor())).floor());
                     }
                     break;
                 case "crystal":
@@ -299,7 +299,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                         tier = toScientific(document.getElementById("CGCTierInput").value);
                     }
                     document.getElementById("CGCTierOutput").innerHTML = notateInt(tier);
-                    document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(4).times(tier).times(new Decimal(1.1).pow(tier)));
+                    document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(4).times(tier).times(new Decimal(1.1).pow(tier)).floor());
                     break;
                 case "ap":
                     var antiLevel;
@@ -319,7 +319,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (antiLevel.lessThan(31)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.4).pow((antiLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(antiGrassGained.log10().floor())));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.4).pow((antiLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(antiGrassGained.log10().floor())).floor());
                     }
                 case "momentum":
                     var rocketPart;
@@ -328,13 +328,13 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     } else if (new Decimal(document.getElementById("CGCRocketPartInput").value).greaterThanOrEqualTo(100)) {
                         rocketPart = new Decimal(100);
                     } else {
-                        rocketPart = toScientific(document.getElementById("CGCRocketPartInput").value);
+                        rocketPart = toScientific(document.getElementById("CGCRocketPartInput").value).floor();
                     }
                     document.getElementById("CGCRocketPartOutput").innerHTML = notateInt(rocketPart);
                     if (rocketPart.lessThan(1)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(1);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(10).pow(rocketPart.sub(1).floor())));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(10 ** rocketPart);
                     }
                     if (rocketPart.equals(1)) {
                         document.getElementById("CGCRocketPartPluralCheckOutput").innerHTML = "Rocket Part";
@@ -353,7 +353,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (stars.lessThan(1e9)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt((stars.log10().dividedBy(Math.log10(1.05)).sub(420)).times(new Decimal(1.5).pow(stars.dividedBy(1e9).log10())));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt((stars.log10().dividedBy(Math.log10(1.05)).sub(420)).times(new Decimal(1.5).pow(stars.dividedBy(1e9).log10())).floor());
                     }
                     break;
                 case "np":
@@ -374,7 +374,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (unnaturalLevel.lessThan(51)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(5).pow((unnaturalLevel.sub(50)).dividedBy(10).floor())).times(new Decimal(1.25).pow(astral.dividedBy(10).floor())));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(5).pow((unnaturalLevel.sub(50)).dividedBy(10).floor())).times(new Decimal(1.25).pow(astral.dividedBy(10).floor())).floor());
                     }
                     break;
                 case "ring":
@@ -388,7 +388,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (planetoidLevel.lessThan(5)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(1.03).pow(planetoidLevel.sub(5))));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1).times(new Decimal(1.03).pow(planetoidLevel.sub(5))).floor());
                     }
                     break;
                 case "astro":
@@ -402,7 +402,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (planetoidLevel.lessThan(31)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.03).pow(planetoidLevel.sub(31))));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.03).pow(planetoidLevel.sub(31))).floor());
                     }
                     break;
                 case "measure":
@@ -416,7 +416,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (planetoidLevel.lessThan(101)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.03).pow(planetoidLevel.sub(101))));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.03).pow(planetoidLevel.sub(101))).floor());
                     }
                     break;
                 case "planet":
@@ -430,7 +430,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (planetoidLevel.lessThan(201)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.03).pow(planetoidLevel.sub(201))));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.03).pow(planetoidLevel.sub(201))).floor());
                     }
                     break;
                 case "lunarpower":
@@ -523,7 +523,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (starGrowth.lessThan(10)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(10)); // Star Growth OoM multiplier is 1x if Star Growth is less than 10.
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(10).times(new Decimal(1.15).pow(starGrowth.log10().floor()))); // Normal Solar Ray gain for when Star Growth is at least 10.
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(10).times(new Decimal(1.15).pow(starGrowth.log10().floor())).floor()); // Normal Solar Ray gain for when Star Growth is at least 10.
                     }
                     break;
                 case "sunstone":
@@ -537,9 +537,9 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     }
                     document.getElementById("CGCEclipseOutput").innerHTML = notateInt(eclipse);
                     if (eclipse.greaterThanOrEqualTo(300)) {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(8).times(new Decimal(1.02).pow(299))) + " <sup>(softcapped)</sup>";
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(8).times(new Decimal(1.02).pow(299)).floor()) + " <sup>(softcapped)</sup>";
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(8).times(new Decimal(1.02).pow(eclipse.sub(1))));
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(8).times(new Decimal(1.02).pow(eclipse.sub(1))).floor());
                     }
                     break;
                 case "soul":
