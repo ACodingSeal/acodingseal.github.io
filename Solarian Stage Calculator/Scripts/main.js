@@ -130,7 +130,11 @@ function addSolarianStageCalculator() {
                 playerMaxHealth = new Decimal(0);
             } else {
                 playerDefence = toScientific(document.getElementById("PlayerDefenceInput").value);
-                playerMaxHealth = playerDefence.times(100);
+				if (playerDefence.lessThan(15)) {
+					playerMaxHealth = new Decimal(0);
+				} else {
+					playerMaxHealth = playerDefence.times(100);
+				}
             }
             if (document.getElementById("PlayerCurrentHealthInput").value === '' || new Decimal(document.getElementById("PlayerCurrentHealthInput").value).lessThan(0) || new Decimal(document.getElementById("PlayerCurrentHealthInput").value).greaterThan(playerMaxHealth)) {
                 playerCurrentHealth = playerMaxHealth;
