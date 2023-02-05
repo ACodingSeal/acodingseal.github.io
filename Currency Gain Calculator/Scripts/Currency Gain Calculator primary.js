@@ -120,9 +120,18 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     console.log("Selected currency: Momentum");
                     document.getElementById("CGCMomentumSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFA500'>Momentum</span>";
-                    document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Rocket Parts created: <input id='CGCRocketPartInput' style='width:10%'/></p>";
+                    document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Rocket Parts created: <input id='CGCRocketPartInput' style='width:10%'/></p><p>Supernova performed? <b><span id='CGCSupernovaDoneButton' class='templatedesktop' style='color:#FF0000;padding:0.5em'>No</span></b> (click to toggle)</p>";
                     document.getElementById("CGCFormulaUsed").innerHTML = "<code>10 ^ min(100, Rocket Parts created)</code>";
-                    document.getElementById("CGCResultsInnerContainer").innerHTML = "With <span id='CGCRocketPartOutput'>?</span> <span id='CGCRocketPartPluralCheckOutput'>Rocket Parts</span> created, assuming AGH Milestone 0GH + 24GS has been reached, the base <span style='color:#FFA500;font-weight:bold'>Momentum</span> gain is: <span id='CGCResultOutput'>?</span>";
+                    document.getElementById("CGCResultsInnerContainer").innerHTML = "With <span id='CGCRocketPartOutput'>?</span> <span id='CGCRocketPartPluralCheckOutput'>Rocket Parts</span> created, assuming AGH Milestone 0GH + 24GS has been reached<span id='CGCSupernovaDoneTextOutput' style='display:none'> and having done at least one Supernova</span>, the base <span style='color:#FFA500;font-weight:bold'>Momentum</span> gain is: <span id='CGCResultOutput'>?</span>";
+                    document.getElementById("CGCSupernovaDoneButton").addEventListener("click", function() {
+                        if (document.getElementById("CGCSupernovaDoneButton").innerHTML === "No") {
+                            document.getElementById("CGCSupernovaDoneButton").setAttribute("style", "color:#00FF00;padding:0.5em");
+                            document.getElementById("CGCSupernovaDoneButton").innerHTML = "Yes";
+                        } else {
+                            document.getElementById("CGCSupernovaDoneButton").setAttribute("style", "color:#FF0000;padding:0.5em");
+                            document.getElementById("CGCSupernovaDoneButton").innerHTML = "No";
+                        }
+                    });
                     break;
                 case "dm":
                     selectedCurr = "dm";
@@ -323,6 +332,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     }
                 case "momentum":
                     var rocketPart;
+                    var supernovaDone;
                     if (document.getElementById("CGCRocketPartInput").value === '' || new Decimal(document.getElementById("CGCRocketPartInput").value).lessThan(0)) {
                         rocketPart = new Decimal(0);
                     } else if (new Decimal(document.getElementById("CGCRocketPartInput").value).greaterThanOrEqualTo(100)) {
@@ -331,7 +341,16 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                         rocketPart = toScientific(document.getElementById("CGCRocketPartInput").value).floor();
                     }
                     document.getElementById("CGCRocketPartOutput").innerHTML = notateInt(rocketPart);
-                    if (rocketPart.lessThan(1)) {
+                    if (document.getElementById("CGCSupernovaDoneButton").innerHTML === "Yes") {
+                        document.getElementById("CGCSupernovaDoneTextOutput").setAttribute("style", "display:inline");
+                        supernovaDone = true;
+                    } else {
+                        document.getElementById("CGCSupernovaDoneTextOutput").setAttribute("style", "display:none");
+                        supernovaDone = false;
+                    }
+                    if (rocketPart.equals(0) && supernovaDone === true) {
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(10);
+                    } else if (rocketPart.lessThan(1)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(1);
                     } else {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(10 ** rocketPart);
