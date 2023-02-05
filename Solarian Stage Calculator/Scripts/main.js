@@ -17,9 +17,9 @@ function addSolarianStageCalculator() {
         var enemyStatScaling
         var enemyHealthScaling
         var suffixStatus = false; // Determines whether suffix notation output is enabled or disabled.
-		var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
+        var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
         var result; // Used for functions to avoid multiple return statements.
-		var extraZeroes; // Used to determine the powers of 10 for scientific to suffix notation conversion, particularly for the functions 'toScientific' and 'notateInt'.
+        var extraZeroes; // Used to determine the powers of 10 for scientific to suffix notation conversion, particularly for the functions 'toScientific' and 'notateInt'.
 
         function toScientific(e) { // Used to ensure a user-inputted value is a scientific notation number.
             if (e.match(/[a-z]+/gi) !== null && suffixes[suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase())] !== undefined) {
@@ -84,7 +84,7 @@ function addSolarianStageCalculator() {
                     challenge = "evil";
                     enemyStatScaling = new Decimal(1e10);
                     enemyHealthScaling = new Decimal(1.03e10);
-                    document.getElementById("SelectedChallengeText").innerHTML = "Evil (1e10x stats, 1.03e10x health)";
+                    document.getElementById("SelectedChallengeText").innerHTML = "Evil (" + notateInt(1e10) + "x stats, " + notateInt(1.03e10) + "x health)";
             }
         }
 
@@ -130,11 +130,11 @@ function addSolarianStageCalculator() {
                 playerMaxHealth = new Decimal(0);
             } else {
                 playerDefence = toScientific(document.getElementById("PlayerDefenceInput").value);
-				if (playerDefence.lessThan(15)) {
-					playerMaxHealth = new Decimal(0);
-				} else {
-					playerMaxHealth = playerDefence.times(100);
-				}
+                if (playerDefence.lessThan(15)) {
+                    playerMaxHealth = new Decimal(0);
+                } else {
+                    playerMaxHealth = playerDefence.times(100);
+                }
             }
             if (document.getElementById("PlayerCurrentHealthInput").value === '' || new Decimal(document.getElementById("PlayerCurrentHealthInput").value).lessThan(0) || new Decimal(document.getElementById("PlayerCurrentHealthInput").value).greaterThan(playerMaxHealth)) {
                 playerCurrentHealth = playerMaxHealth;
@@ -212,117 +212,65 @@ function addSolarianStageCalculator() {
 
             // Variables are currently declared outside their function for testing.
             var maxDivide;
-            var playerMaxHits;
-            var enemyMaxHits;
-
-            function calcMaxHits() {
-                playerMaxHits = playerCurrentHealth.add(playerDefenceReq).dividedBy(enemyOffence);
-                enemyMaxHits = enemyCurrentHealth.add(enemyDefence).dividedBy(playerOffenceReq);
-
-                console.log("enemyMaxHits: " + enemyMaxHits);
-                console.log("playerMaxHits: " + playerMaxHits);
-                if (playerMaxHits.greaterThanOrEqualTo(enemyMaxHits)) {
-                    console.log("first");
-                    maxDivide = playerMaxHits.dividedBy(enemyMaxHits);
-                } else {
-                    console.log("second");
-                    maxDivide = enemyMaxHits.dividedBy(playerMaxHits);
-                }
-                if (maxDivide.valueOf() === "NaN") {
-                    console.log(true);
-                } else {
-                    console.log(false);
-                }
-                console.log("-----");
-                if (playerDefenceReq.equals(0)) {
-                    document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>?</span>";
-                    document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>?</span>";
-                } else if (playerDefenceReq.greaterThanOrEqualTo(enemyOffence)) {
-                    document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(enemyDefence) + "</span>";
-                    document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefenceReq) + "</span>";
-                } else {
-                    if (playerMaxHits.greaterThanOrEqualTo(enemyMaxHits)) {
-                        document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerOffenceReq) + "</span>";
-                    } else {
-                        document.getElementById("PlayerOffenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerOffenceReq.times((maxDivide.sub(1)).dividedBy(2).add(1))) + "</span>";
-                    }
-                    if (playerDefenceReq.times(maxDivide.dividedBy(2)).greaterThanOrEqualTo(enemyOffence)) {
-                        maxDivide = enemyOffence.dividedBy(playerDefenceReq.times((maxDivide.sub(1)).dividedBy(2).add(1)));
-                        document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefenceReq.times(maxDivide)) + "</span>";
-                    } else {
-                        document.getElementById("PlayerDefenceReqOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(playerDefenceReq) + "</span>";
-                    }
-                }
-            }
-
-
-
-
-            // Testing below.
+            var playerMaxHits = (playerCurrentHealth.add(playerDefence)).dividedBy(enemyOffence);
+            var enemyMaxHits = (enemyCurrentHealth.add(enemyDefence)).dividedBy(playerOffence);
             var playerOffenceReq = playerOffence;
             var playerDefenceReq = playerDefence;
 
-            function calcMaxHits2() {
-                playerMaxHits = playerCurrentHealth.add(playerDefenceReq).dividedBy(enemyOffence);
-                enemyMaxHits = enemyCurrentHealth.add(enemyDefence).dividedBy(playerOffenceReq);
-                if (playerMaxHits.greaterThan(enemyMaxHits) && playerOffence.lessThan(enemyCurrentHealth.add(enemyDefence))) {
-                    statOutput("e", "o", "y");
-                    statOutput("e", "d", "y");
-                    statOutput("p", "o", "g");
-                    statOutput("p", "d", "g");
-                } else {
-                    statOutput("e", "o", "y");
-                    statOutput("e", "d", "y");
-                    statOutput("p", "o", "y");
-                    statOutput("p", "d", "y");
-                }
-                if (playerOffence.greaterThanOrEqualTo(enemyCurrentHealth.add(enemyDefence))) {
-                    statOutput("e", "o", "r");
-                    statOutput("e", "d", "r");
-                    statOutput("p", "o", "p");
-                    statOutput("p", "d", "p");
-                } else if (enemyOffence.greaterThanOrEqualTo(playerCurrentHealth.add(playerDefence))) {
-                    statOutput("e", "o", "p");
-                    statOutput("e", "d", "p");
-                    statOutput("p", "o", "r");
-                    statOutput("p", "d", "r");
-                } else {
-                    statOutput("e", "o", "y");
-                    statOutput("e", "d", "y");
-                    statOutput("p", "o", "y");
-                    statOutput("p", "d", "y");
-                }
-                if (playerDefence.greaterThanOrEqualTo(enemyOffence) && enemyDefence.greaterThanOrEqualTo(playerOffence)) {
-                    statOutput("p", "d", "p");
-                    statOutput("p", "o", "r");
-                    statOutput("e", "d", "p");
-                    statOutput("e", "o", "r");
-                } else if (playerDefence.greaterThanOrEqualTo(enemyOffence)) {
-                    statOutput("p", "d", "p");
-                    statOutput("e", "o", "r");
-                } else if (enemyDefence.greaterThanOrEqualTo(playerOffence)) {
-                    statOutput("e", "d", "p");
-                    statOutput("p", "o", "r");
-                } else {
-                    statOutput("p", "d", "y");
-                    statOutput("p", "o", "y");
-                    statOutput("e", "d", "y");
-                    statOutput("e", "o", "y");
-                }
-                document.getElementById("PlayerMaximumHealthOutput").innerHTML = notateInt(playerMaxHealth);
-                document.getElementById("EnemyMaximumHealthOutput").innerHTML = notateInt(enemyMaxHealth);
-                if (playerMaxHits.greaterThanOrEqualTo(enemyMaxHits)) {
-                    maxDivide = playerMaxHits.dividedBy(enemyMaxHits);
-                } else {
-                    maxDivide = enemyMaxHits.dividedBy(playerMaxHits);
-                }
-                playerOffenceReq = playerOffenceReq.times(maxDivide.sub(1).dividedBy(2).add(1));
-                playerDefenceReq = playerDefenceReq.times(maxDivide.sub(1).dividedBy(2).add(1));
+            // Updating the HTML output.
+            if (playerMaxHits.greaterThan(enemyMaxHits) && playerOffence.lessThan(enemyCurrentHealth.add(enemyDefence))) {
+                statOutput("e", "o", "y");
+                statOutput("e", "d", "y");
+                statOutput("p", "o", "g");
+                statOutput("p", "d", "g");
+            } else {
+                statOutput("e", "o", "y");
+                statOutput("e", "d", "y");
+                statOutput("p", "o", "y");
+                statOutput("p", "d", "y");
             }
-            calcMaxHits2();
+            if (playerDefence.greaterThanOrEqualTo(enemyOffence) && enemyDefence.greaterThanOrEqualTo(playerOffence)) {
+                statOutput("p", "d", "p");
+                statOutput("p", "o", "r");
+                statOutput("e", "d", "p");
+                statOutput("e", "o", "r");
+            } else if (playerDefence.greaterThanOrEqualTo(enemyOffence)) {
+                statOutput("p", "d", "p");
+                statOutput("e", "o", "r");
+            } else if (enemyDefence.greaterThanOrEqualTo(playerOffence)) {
+                statOutput("e", "d", "p");
+                statOutput("p", "o", "r");
+            } else {
+                statOutput("p", "d", "y");
+                statOutput("p", "o", "y");
+                statOutput("e", "d", "y");
+                statOutput("e", "o", "y");
+            }
+            if (playerOffence.greaterThanOrEqualTo(enemyCurrentHealth.add(enemyDefence))) {
+                statOutput("e", "o", "r");
+                statOutput("e", "d", "r");
+                statOutput("p", "o", "p");
+                statOutput("p", "d", "p");
+            } else if (enemyOffence.greaterThanOrEqualTo(playerCurrentHealth.add(playerDefence))) {
+                statOutput("e", "o", "p");
+                statOutput("e", "d", "p");
+                statOutput("p", "o", "r");
+                statOutput("p", "d", "r");
+            } else {
+                statOutput("e", "o", "y");
+                statOutput("e", "d", "y");
+                statOutput("p", "o", "y");
+                statOutput("p", "d", "y");
+            }
 
+            document.getElementById("PlayerMaximumHealthOutput").innerHTML = notateInt(playerMaxHealth);
+            document.getElementById("EnemyMaximumHealthOutput").innerHTML = notateInt(enemyMaxHealth);
             document.getElementById("PlayerOffenceMaxOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(enemyCurrentHealth.add(enemyDefence)) + "</span>";
-            document.getElementById("PlayerDefenceMaxOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(playerDefence) + "</span>";
+            if (playerDefence.greaterThanOrEqualTo(enemyOffence)) {
+                document.getElementById("PlayerDefenceMaxOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(enemyOffence) + "</span>";
+            } else {
+                document.getElementById("PlayerDefenceMaxOutput").innerHTML = "<span style='color:#FF00FF'>" + notateInt(playerDefence) + "</span>";
+            }
 
             document.getElementById("StageBonusSunriseFMCurrentOutput").innerHTML = notateInt(new Decimal(3).pow(currentStage.sub(1)));
             document.getElementById("StageBonusSunriseFMNextOutput").innerHTML = notateInt(new Decimal(3).pow(currentStage));
