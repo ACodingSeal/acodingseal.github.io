@@ -487,7 +487,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
             }
         }
 
-        // Add click event listeners to the calculate, suffix toggle, years-only toggle and Astral Bonuses section toggle buttons.
+        // Add click event listeners to the calculate, suffix toggle, years-only toggle and Astral Bonuses and time name meanings sections toggle buttons.
         document.getElementById("ACCalculateButton").addEventListener("click", updateResults);
         document.getElementById("ACSuffixButton").addEventListener("click", function() {
             if (suffixStatus === false) {
