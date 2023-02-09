@@ -85,13 +85,13 @@ function addSolarianStageCalculator() {
                     challenge = "wall";
                     enemyStatScaling = new Decimal(50);
                     enemyHealthScaling = new Decimal(51.5);
-                    document.getElementById("SelectedChallengeText").innerHTML = "Wall (50x stats, 51.5x health, 3:1 offline time)";
+                    document.getElementById("SelectedChallengeText").innerHTML = "Wall (50x stats, 51.5x health, 300:1 offline time)";
                     break;
                 case "3":
                     challenge = "evil";
                     enemyStatScaling = new Decimal(1e10);
                     enemyHealthScaling = new Decimal(1.03e10);
-                    document.getElementById("SelectedChallengeText").innerHTML = "Evil (" + notateInt(1e10) + "x stats, " + notateInt(1.03e10) + "x health, 3:1 offline time)";
+                    document.getElementById("SelectedChallengeText").innerHTML = "Evil (" + notateInt(1e10) + "x stats, " + notateInt(1.03e10) + "x health, 300:1 offline time)";
             }
         }
 
