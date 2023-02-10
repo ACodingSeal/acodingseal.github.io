@@ -143,101 +143,26 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                 document.getElementById("CCChargerBonusesSection").innerHTML = errorText;
             } else {
 
-                // Steel.
-                if (goalCharge.greaterThanOrEqualTo(milestones[0])) {
-                    document.getElementById("CCSteelNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[0]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCSteelNextOutput").innerHTML = "1";
+                function setBonusesOutput(curr, pos) {
+                    if (goalCharge.greaterThanOrEqualTo(milestones[pos])) {
+                        document.getElementById("CC" + curr + "NextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[pos]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
+                    } else {
+                        document.getElementById("CC" + curr + "NextOutput").innerHTML = "1";
+                    }
+                    if (currentCharge.greaterThanOrEqualTo(milestones[pos])) {
+                        document.getElementById("CC" + curr + "CurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[pos]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
+                    } else {
+                        document.getElementById("CC" + curr + "CurrentOutput").innerHTML = "1";
+                    }
                 }
-                if (currentCharge.greaterThanOrEqualTo(milestones[0])) {
-                    document.getElementById("CCSteelCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[0]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCSteelCurrentOutput").innerHTML = "1";
-                }
-
-                // XP.
-                if (goalCharge.greaterThanOrEqualTo(milestones[1])) {
-                    document.getElementById("CCXPNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[1]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCXPNextOutput").innerHTML = "1";
-                }
-                if (currentCharge.greaterThanOrEqualTo(milestones[1])) {
-                    document.getElementById("CCXPCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[1]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCXPCurrentOutput").innerHTML = "1";
-                }
-
-                // TP.
-                if (goalCharge.greaterThanOrEqualTo(milestones[2])) {
-                    document.getElementById("CCTPNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[2]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCTPNextOutput").innerHTML = "1";
-                }
-                if (currentCharge.greaterThanOrEqualTo(milestones[2])) {
-                    document.getElementById("CCTPCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[2]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCTPCurrentOutput").innerHTML = "1";
-                }
-
-                // Grass.
-                if (goalCharge.greaterThanOrEqualTo(milestones[3])) {
-                    document.getElementById("CCGrassNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[3]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCGrassNextOutput").innerHTML = "1";
-                }
-                if (currentCharge.greaterThanOrEqualTo(milestones[3])) {
-                    document.getElementById("CCGrassCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[3]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCGrassCurrentOutput").innerHTML = "1";
-                }
-
-                // PP.
-                if (goalCharge.greaterThanOrEqualTo(milestones[4])) {
-                    document.getElementById("CCPPNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[4]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCPPNextOutput").innerHTML = "1";
-                }
-                if (currentCharge.greaterThanOrEqualTo(milestones[4])) {
-                    document.getElementById("CCPPCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[4]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCPPCurrentOutput").innerHTML = "1";
-                }
-
-                // Crystals.
-                if (goalCharge.greaterThanOrEqualTo(milestones[5])) {
-                    document.getElementById("CCCrystalsNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[5]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCCrystalsNextOutput").innerHTML = "1";
-                }
-                if (currentCharge.greaterThanOrEqualTo(milestones[5])) {
-                    document.getElementById("CCCrystalsCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[5]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCCrystalsCurrentOutput").innerHTML = "1";
-                }
-
-                // AP.
-                if (goalCharge.greaterThanOrEqualTo(milestones[6])) {
-                    document.getElementById("CCAPNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[6]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCAPNextOutput").innerHTML = "1";
-                }
-                if (currentCharge.greaterThanOrEqualTo(milestones[6])) {
-                    document.getElementById("CCAPCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[6]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCAPCurrentOutput").innerHTML = "1";
-                }
-
-                // Oil.
-                if (goalCharge.greaterThanOrEqualTo(milestones[7])) {
-                    document.getElementById("CCOilNextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[7]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
-                } else {
-                    document.getElementById("CCOilNextOutput").innerHTML = "1";
-                }
-                if (currentCharge.greaterThanOrEqualTo(milestones[7])) {
-                    document.getElementById("CCOilCurrentOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (currentCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[7]).exponent - lessZeroesCurrent))).log10())).times(gh30CurrentEffect));
-                } else {
-                    document.getElementById("CCOilCurrentOutput").innerHTML = "1";
-                }
+                setBonusesOutput("Steel", 0);
+                setBonusesOutput("XP", 1);
+                setBonusesOutput("TP", 2);
+                setBonusesOutput("Grass", 3);
+                setBonusesOutput("PP", 4);
+                setBonusesOutput("Crystals", 5);
+                setBonusesOutput("AP", 6);
+                setBonusesOutput("Oil", 7);
             }
         }
 
