@@ -143,14 +143,14 @@ function addEclipseCalculator() { // Function for ensuring all the calculator's 
                 suffixStatus = true;
                 document.getElementById("ECSuffixButton").innerHTML = "Enabled";
                 document.getElementById("ECSuffixButton").setAttribute("style", "background:#00FF00");
-                updateResults();
             } else {
                 suffixStatus = false;
                 document.getElementById("ECSuffixButton").innerHTML = "Disabled";
                 document.getElementById("ECSuffixButton").setAttribute("style", "background:#FF0000");
-                updateResults();
             }
+			updateResults();
         });
+		updateResults();
     } else {
         console.log("[Eclipse Calculator] [LOG]: Failed to locate ID or calculator already exists. Cancelling script.");
     }
