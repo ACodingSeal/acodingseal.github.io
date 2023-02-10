@@ -124,24 +124,24 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
             const lessZeroesNext = decimalMin(1e308, decimalMin(1, decimalMax(goalGrasshop.sub(12), 0)).add(decimalMin(1, decimalMax(goalGrasshop.sub(13), 0))).add(decimalMin(1, decimalMax(goalGrasshop.sub(15), 0))).add(decimalMax(goalGrasshop.sub(17), 0)));
 
             // Update the HTML outputs.
+            document.getElementById("CCChargerBonusesSection").innerHTML = calculatorHTMLBonusesContainer;
+            if (currentCharge.equals("1e325")) {
+                document.getElementById("CCCurrentChargeOutput").innerHTML = "1e325<sup>(softcapped)</sup>";
+            } else {
+                document.getElementById("CCCurrentChargeOutput").innerHTML = notateInt(currentCharge);
+            }
+            if (goalCharge.equals("1e325")) {
+                document.getElementById("CCGoalChargeOutput").innerHTML = "1e325<sup>(softcapped)</sup>";
+            } else {
+                document.getElementById("CCGoalChargeOutput").innerHTML = notateInt(goalCharge);
+            }
+            document.getElementById("CCCurrentGrasshopOutput").innerHTML = notateInt(currentGrasshop);
+            document.getElementById("CCGoalGrasshopOutput").innerHTML = notateInt(goalGrasshop);
+            document.getElementById("CCCurrentGrasshopPluralCheck").innerHTML = checkPlural(currentGrasshop, "Grasshop", "Grasshops");
+            document.getElementById("CCGoalGrasshopPluralCheck").innerHTML = checkPlural(goalGrasshop, "Grasshop", "Grasshops");
             if (goalCharge.lessThan(currentCharge) || goalGrasshop.lessThan(currentGrasshop)) {
                 document.getElementById("CCChargerBonusesSection").innerHTML = errorText;
             } else {
-                document.getElementById("CCChargerBonusesSection").innerHTML = calculatorHTMLBonusesContainer;
-				if (currentCharge.equals("1e325")) {
-					document.getElementById("CCCurrentChargeOutput").innerHTML = "1e325<sup>(softcapped)</sup>";
-				} else {
-					document.getElementById("CCCurrentChargeOutput").innerHTML = notateInt(currentCharge);
-				}
-                if (goalCharge.equals("1e325")) {
-					document.getElementById("CCGoalChargeOutput").innerHTML = "1e325<sup>(softcapped)</sup>";
-				} else {
-					document.getElementById("CCGoalChargeOutput").innerHTML = notateInt(goalCharge);
-				}
-                document.getElementById("CCCurrentGrasshopOutput").innerHTML = notateInt(currentGrasshop);
-                document.getElementById("CCGoalGrasshopOutput").innerHTML = notateInt(goalGrasshop);
-                document.getElementById("CCCurrentGrasshopPluralCheck").innerHTML = checkPlural(currentGrasshop, "Grasshop", "Grasshops");
-                document.getElementById("CCGoalGrasshopPluralCheck").innerHTML = checkPlural(goalGrasshop, "Grasshop", "Grasshops");
 
                 // Steel.
                 if (goalCharge.greaterThanOrEqualTo(milestones[0])) {
