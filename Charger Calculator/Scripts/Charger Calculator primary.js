@@ -101,12 +101,12 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
             if (document.getElementById("CCCurrentChargeInput").value === '' || toScientific(document.getElementById("CCCurrentChargeInput").value).lessThan(0)) {
                 currentCharge = new Decimal(0);
             } else {
-                currentCharge = toScientific(document.getElementById("CCCurrentChargeInput").value).floor();
+                currentCharge = decimalMin("1e325", toScientific(document.getElementById("CCCurrentChargeInput").value));
             }
             if (document.getElementById("CCGoalChargeInput").value === '' || toScientific(document.getElementById("CCGoalChargeInput").value).lessThan(1)) {
                 goalCharge = new Decimal(1);
             } else {
-                goalCharge = toScientific(document.getElementById("CCGoalChargeInput").value).floor();
+                goalCharge = decimalMin("1e325", toScientific(document.getElementById("CCGoalChargeInput").value));
             }
             if (document.getElementById("CCCurrentGrasshopInput").value === '' || toScientific(document.getElementById("CCCurrentGrasshopInput").value).lessThan(0)) {
                 currentGrasshop = new Decimal(0);
@@ -128,8 +128,16 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                 document.getElementById("CCChargerBonusesSection").innerHTML = errorText;
             } else {
                 document.getElementById("CCChargerBonusesSection").innerHTML = calculatorHTMLBonusesContainer;
-                document.getElementById("CCCurrentChargeOutput").innerHTML = notateInt(currentCharge);
-                document.getElementById("CCGoalChargeOutput").innerHTML = notateInt(goalCharge);
+				if (currentCharge.equals("1e325")) {
+					document.getElementById("CCCurrentChargeOutput").innerHTML = "1e325<sup>(softcapped)</sup>";
+				} else {
+					document.getElementById("CCCurrentChargeOutput").innerHTML = notateInt(currentCharge);
+				}
+                if (goalCharge.equals("1e325")) {
+					document.getElementById("CCGoalChargeOutput").innerHTML = "1e325<sup>(softcapped)</sup>";
+				} else {
+					document.getElementById("CCGoalChargeOutput").innerHTML = notateInt(goalCharge);
+				}
                 document.getElementById("CCCurrentGrasshopOutput").innerHTML = notateInt(currentGrasshop);
                 document.getElementById("CCGoalGrasshopOutput").innerHTML = notateInt(goalGrasshop);
                 document.getElementById("CCCurrentGrasshopPluralCheck").innerHTML = checkPlural(currentGrasshop, "Grasshop", "Grasshops");
