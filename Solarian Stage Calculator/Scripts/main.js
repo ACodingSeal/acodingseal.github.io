@@ -366,10 +366,10 @@ function addSolarianStageCalculator() {
                 }
 
                 function outputTime(e) { // Return the time output as a string, separated by commas.
-                    var maxTimeNames = 3; // Determines the maximum number of time names to be outputted. Lower numbers may cause inaccuracies.
                     const timeUnits = ["1", "60", "3.6e3", "8.64e4", "3.15576e7"];
                     const timeNames = ["Second", "Minute", "Hour", "Day", "Year"];
                     const timeNamesPlural = ["Seconds", "Minutes", "Hours", "Days", "Years"];
+					var maxTimeNames = timeUnits.length; // Determines the maximum number of time names to be outputted. Lower numbers may cause inaccuracies.
 
                     function secondsToTime(input) { // Convert seconds to time names.
                         var years = new Decimal(input.dividedBy(new Decimal(timeUnits[4]))).floor();
