@@ -142,7 +142,6 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
             if (goalCharge.lessThan(currentCharge) || goalGrasshop.lessThan(currentGrasshop)) {
                 document.getElementById("CCChargerBonusesSection").innerHTML = errorText;
             } else {
-
                 function setBonusesOutput(curr, pos) {
                     if (goalCharge.greaterThanOrEqualTo(milestones[pos])) {
                         document.getElementById("CC" + curr + "NextOutput").innerHTML = notateInt(new Decimal(1.5).pow(decimalMax(1, (goalCharge.dividedBy("1e" + decimalMax(0, new Decimal(milestones[pos]).exponent - lessZeroesNext))).log10())).times(gh30NextEffect));
