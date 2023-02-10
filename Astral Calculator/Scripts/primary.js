@@ -527,7 +527,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
         });
         updateResults();
     } else {
-        console.log("[Astral Calculator] [LOG]: Template is not transcluded. Cancelling script.");
+        console.log("[Astral Calculator] [LOG] Failed to locate ID or calculator already exists. Cancelling script.");
     }
 }
 addAstralCalculator();
