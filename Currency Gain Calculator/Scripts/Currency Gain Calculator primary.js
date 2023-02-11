@@ -109,9 +109,9 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     console.log("Selected currency: Anonymity Point");
                     document.getElementById("CGCAPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DC143C'>Anonymity Point</span>";
-                    document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Anti Level: <input id='CGCAntiLevelInput' style='width:10%'/></p><p>Anti-Grass gained this Anonymity: <input id='CGCAntiGrassGainedInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.4 ^ max(0, (Anti Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Anti-Grass gained since last Anonymity or higher reset)))</code> (unconfirmed formula)";
-                    document.getElementById("CGCResultsInnerContainer").innerHTML = "At Anti Level <span id='CGCAntiLevelOutput'>?</span>, having gained <span id='CGCAntiGrassGainedOutput'>?</span> Anti-Grass since the last Anonymity or above reset, the base <span style='color:#DC143C;font-weight:bold'>Anonymity Point</span> gain is: <span id='CGCResultOutput'>?</span>";
+                    document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.4 ^ max(0, (Normal Level - 30) ÷ 10)) × 1.15 ^ floor(log10(Grass gained since last Prestige or higher reset)))</code>";
+                    document.getElementById("CGCResultsInnerContainer").innerHTML = "At Normal Level <span id='CGCNormalLevelOutput'>?</span>, having gained <span id='CGCGrassGainedOutput'>?</span> Grass since the last Prestige or above reset, the base <span style='color:#DC143C;font-weight:bold'>Anonymity Point</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "oil":
                     selectedCurr = "";
@@ -292,8 +292,8 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     } else {
                         normalLevel = toScientific(document.getElementById("CGCNormalLevelInput").value);
                     }
-                    if (document.getElementById("CGCGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCGrassGainedInput").value).lessThan(1)) {
-                        grassGained = new Decimal(1);
+                    if (document.getElementById("CGCGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCGrassGainedInput").value).lessThan(0)) {
+                        grassGained = new Decimal(0);
                     } else {
                         grassGained = toScientific(document.getElementById("CGCGrassGainedInput").value);
                     }
@@ -302,7 +302,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (normalLevel.lessThan(31)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(grassGained.log10().floor())).floor());
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(9).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(decimalMax(grassGained, new Decimal(1)).log10().floor())).floor());
                     }
                     break;
                 case "crystal":
@@ -316,25 +316,26 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(4).times(tier).times(new Decimal(1.1).pow(tier)).floor());
                     break;
                 case "ap":
-                    var antiLevel;
-                    var antiGrassGained;
-                    if (document.getElementById("CGCAntiLevelInput").value === '' || new Decimal(document.getElementById("CGCAntiLevelInput").value).lessThan(1)) {
-                        antiLevel = new Decimal(1);
+                    var normalLevel;
+                    var grassGained;
+                    if (document.getElementById("CGCNormalLevelInput").value === '' || new Decimal(document.getElementById("CGCNormalLevelInput").value).lessThan(1)) {
+                        normalLevel = new Decimal(1);
                     } else {
-                        antiLevel = toScientific(document.getElementById("CGCAntiLevelInput").value);
+                        normalLevel = toScientific(document.getElementById("CGCNormalLevelInput").value);
                     }
-                    if (document.getElementById("CGCAntiGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCAntiGrassGainedInput").value).lessThan(1)) {
-                        antiGrassGained = new Decimal(1);
+                    if (document.getElementById("CGCGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCGrassGainedInput").value).lessThan(0)) {
+                        grassGained = new Decimal(0);
                     } else {
-                        antiGrassGained = toScientific(document.getElementById("CGCAntiGrassGainedInput").value);
+                        grassGained = toScientific(document.getElementById("CGCGrassGainedInput").value);
                     }
-                    document.getElementById("CGCAntiLevelOutput").innerHTML = notateInt(antiLevel);
-                    document.getElementById("CGCAntiGrassGainedOutput").innerHTML = notateInt(antiGrassGained);
-                    if (antiLevel.lessThan(31)) {
+                    document.getElementById("CGCNormalLevelOutput").innerHTML = notateInt(normalLevel);
+                    document.getElementById("CGCGrassGainedOutput").innerHTML = notateInt(grassGained);
+                    if (normalLevel.lessThan(31)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
                     } else {
-                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.4).pow((antiLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(antiGrassGained.log10().floor())).floor());
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.4).pow((normalLevel.sub(30)).dividedBy(10))).times(new Decimal(1.15).pow(decimalMax(grassGained, new Decimal(1)).log10().floor())).floor());
                     }
+                    break;
                 case "momentum":
                     var rocketPart;
                     var supernovaDone;
@@ -518,7 +519,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                         case 6:
                             nextSTReq = new Decimal(1e39);
                     }
-
                     if (document.getElementById("CGCStarGrowthInput").value === '' || new Decimal(document.getElementById("CGCStarGrowthInput").value).lessThan(0)) {
                         starGrowth = new Decimal(0);
                     } else {
