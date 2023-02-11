@@ -37,15 +37,12 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
             function checkNoDecimal(x) {
                 x = new Decimal(x);
                 if (new Decimal(x.toStringWithDecimalPlaces(1)).equals(x.floor())) {
-                    console.log(true);
                     result = x.floor().toString();
                 } else {
-                    console.log(false);
                     result = x.toStringWithDecimalPlaces(decimals);
                 }
                 return result;
             }
-            console.log("test: " + checkNoDecimal(2.5) + "e25");
             e = new Decimal(e);
             if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
                 result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e6, return the input with comma-separated numbers.
