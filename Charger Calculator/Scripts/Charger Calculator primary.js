@@ -39,9 +39,17 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                 result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e6, return the input with comma-separated numbers.
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(new Decimal("1e" + suffixes.length * 3)) && suffixStatus === true) {
                 extraZeroes = e.exponent % 3;
-                result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6 and is less than the length of the suffixes array's zero count times 3 and suffix notation is enabled, return the input converted to suffix notation.
+                if (Number(e.mantissa.toFixed(1)) !== Math.floor(e.mantissa)) {
+                    result = (e.mantissa * (10 ** extraZeroes)).toFixed(decimals) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6 and is less than the length of the suffixes array's zero count times 3 and suffix notation is enabled, return the input converted to suffix notation.
+                } else {
+                    result = Math.floor(e.mantissa * (10 ** extraZeroes)) + "" + suffixes[Math.floor(e.exponent / 3)];
+                }
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e21)) {
-                result = Number(e).toExponential(decimals).replace(/[+]/g, ""); // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+                if (Number(e.mantissa.toFixed(1)) !== Math.floor(e.mantissa)) {
+                    result = Number(e).toExponential(decimals).replace(/[+]/g, ""); // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+                } else {
+                    result = Math.floor(e.mantissa) + "e" + e.exponent; // Modification of the above: If the floored mantissa is mathematically equal to the mantissa with a fixed decimal length of 1, return the above result without a mantissa with a fixed decimal length.
+                }
             } else if (e.greaterThanOrEqualTo("1e1e3") && e.lessThan("1e1e16")) {
                 switch (suffixStatus) {
                     case true:
@@ -60,7 +68,11 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                         }
                 }
             } else {
-                result = e.toStringWithDecimalPlaces(decimals); // If none of the above apply, return the input with a fixed decimal length.
+                if (Number(e) !== Math.floor(e)) {
+                    result = e.toStringWithDecimalPlaces(decimals); // If none of the above apply, return the input with a fixed decimal length.
+                } else {
+                    result = Math.floor(e); // Modification of the above: If the floored mantissa is mathematically equal to the mantissa with a fixed decimal length of 1, return the above result without a mantissa with a fixed decimal length.
+                }
             }
             return result;
         }
