@@ -50,7 +50,7 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                 extraZeroes = e.exponent % 3;
                 result = checkNoDecimal(e.mantissa * (10 ** extraZeroes)) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6 and is less than the length of the suffixes array's zero count times 3 and suffix notation is enabled, return the input converted to suffix notation.
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e21)) {
-                result = Number(checkNoDecimal(Number(e).toExponential())).toExponential(3).replace(/[+]/g, ""); // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+                result = checkNoDecimal(e.mantissa) + "e" + e.exponent; // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
             } else if (e.greaterThanOrEqualTo("1e1e3") && e.lessThan("1e1e16")) {
                 switch (suffixStatus) {
                     case true:
