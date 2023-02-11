@@ -68,10 +68,11 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                         }
                 }
             } else {
-                if (Number(e) !== Math.floor(e)) {
+                if (Number(e.mantissa) !== Math.floor(e.mantissa)) {
+					console.log(true);
                     result = e.toStringWithDecimalPlaces(decimals); // If none of the above apply, return the input with a fixed decimal length.
                 } else {
-                    result = Math.floor(e); // Modification of the above: If the floored mantissa is mathematically equal to the mantissa with a fixed decimal length of 1, return the above result without a mantissa with a fixed decimal length.
+                    result = Math.floor(e.mantissa) + "e" + e.exponent; // Modification of the above: If the floored mantissa is mathematically equal to the mantissa with a fixed decimal length of 1, return the above result without a mantissa with a fixed decimal length.
                 }
             }
             return result;
