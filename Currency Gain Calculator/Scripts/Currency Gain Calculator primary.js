@@ -171,7 +171,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCAstroSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Astro</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.05 ^ Planetoid Level))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × 1.05 ^ (Planetoid Level + 1))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Astro gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "measure":
@@ -424,7 +424,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                         planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
                     }
                     document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
-                    document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.05).pow(planetoidLevel)).floor());
+                    document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.05).pow(planetoidLevel.add(1))).floor());
                     break;
                 case "measure":
                     var planetoidLevel;
