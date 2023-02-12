@@ -36,7 +36,7 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
         function notateInt(e) { // Convert a Decimal number to a string and notate it using either locale string (comma-separated numbers), scientific notation with a fixed number of decimals or suffix notation.
             function checkNoDecimal(x) {
                 x = new Decimal(x);
-                if (new Decimal(x.toStringWithDecimalPlaces(1)).equals(x.floor())) {
+                if (new Decimal(x.toStringWithDecimalPlaces(decimals)).equals(x.floor())) {
                     result = x.floor().toString();
                 } else {
                     result = x.toStringWithDecimalPlaces(decimals);
