@@ -40,11 +40,7 @@ function addUpgradeCalculator() { // Function for ensuring all the calculator's 
                 }
                 return result;
             }
-            if (e.lessThan(0)) {
-                e = new Decimal(e.toString().replace(/[-]/, ""));
-            } else {
-                e = new Decimal(e);
-            }
+            e = new Decimal(e);
             if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
                 result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e6, return the input with comma-separated numbers.
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(new Decimal("1e" + suffixes.length * 3)) && suffixStatus === true) {
@@ -442,10 +438,18 @@ function addUpgradeCalculator() { // Function for ensuring all the calculator's 
                 }
                 switch (diffStatus) {
                     case "percentage":
-                        result = notateInt(x.times(100).sub(100)) + "%";
+                        if (x.times(100).sub(100).lessThan(0)) {
+                            result = notateInt(new Decimal(new Decimal(x).times(100).sub(100).toString().replace(/[-]/, ""))) + "%";
+                        } else {
+                            result = notateInt(x.times(100).sub(100)) + "%";
+                        }
                         break;
                     default:
-                        result = notateInt(x) + "x";
+                        if (x.lessThan(0)) {
+                            result = notateInt(new Decimal(x.toString().replace(/[-]/, ""))) + "x";
+                        } else {
+                            result = notateInt(x) + "x";
+                        }
                 }
                 return result;
             }
@@ -514,6 +518,9 @@ function addUpgradeCalculator() { // Function for ensuring all the calculator's 
                         result = " <i>unknown currency</i>";
                 }
                 return result;
+            }
+            if (totalCost.lessThan(0)) {
+                totalCost = new Decimal(totalCost.toString().replace(/[-]/, ""));
             }
             document.getElementById("UCCostOutput").innerHTML = notateInt(totalCost) + getCurrencyUsed();
             document.getElementById("UCUpgradeDescription").innerHTML = upgradeDescription;
