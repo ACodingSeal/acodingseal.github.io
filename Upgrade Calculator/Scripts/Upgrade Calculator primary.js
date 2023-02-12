@@ -479,6 +479,14 @@ function addUpgradeCalculator() { // Function for ensuring all the calculator's 
                         document.getElementById("UCAnEffectiveMultiplierWord").innerHTML = "an effective multiplier";
                 }
             } else {
+                switch (diffStatus) {
+                    case "percentage":
+                        document.getElementById("UCAnEffectiveMultiplierWord").innerHTML = "an effective increase";
+                        break;
+                    default:
+                        document.getElementById("UCAnEffectiveMultiplierWord").innerHTML = "an effective multiplier";
+                }
+                document.getElementById("UCAnIncreaseWord").innerHTML = "an increase";
                 document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#FFFF00'>" + diffNotation(totalEffectC) + " = " + diffNotation(totalEffectG) + "</span>";
                 document.getElementById("UCGoalLevelOutput").innerHTML = notateInt(goalLevel) + " (<span style='color:#FFFF00'>+0</span>)";
             }
