@@ -460,7 +460,13 @@ function addUpgradeCalculator() { // Function for ensuring all the calculator's 
             document.getElementById("UCCurrentLevelOutput").innerHTML = notateInt(currentLevel);
             if (currentLevel.lessThan(goalLevel)) {
                 document.getElementById("UCGoalLevelOutput").innerHTML = notateInt(goalLevel) + " (<span style='color:#00FF00'>+" + notateInt(goalLevel.sub(currentLevel)) + "</span>)";
-                document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#00FF00'>" + diffNotation(totalEffectC) + " > " + diffNotation(totalEffectG) + "</span>";
+                switch (noDiffSymbol) {
+                    case true:
+                        document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#00FF00'>" + notateInt(totalEffectC) + " > " + notateInt(totalEffectG) + "</span>";
+                        break;
+                    default:
+                        document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#00FF00'>" + diffNotation(totalEffectC) + " > " + diffNotation(totalEffectG) + "</span>";
+                }
                 document.getElementById("UCCostWord").innerHTML = "cost";
                 document.getElementById("UCAnIncreaseWord").innerHTML = "an increase";
                 switch (diffStatus) {
@@ -472,7 +478,13 @@ function addUpgradeCalculator() { // Function for ensuring all the calculator's 
                 }
             } else if (goalLevel.lessThan(currentLevel)) {
                 document.getElementById("UCGoalLevelOutput").innerHTML = notateInt(goalLevel) + " (<span style='color:#FF0000'>-" + notateInt(currentLevel.sub(goalLevel)) + "</span>)";
-                document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#FF0000'>" + diffNotation(totalEffectC) + " > " + diffNotation(totalEffectG) + "</span>";
+                switch (noDiffSymbol) {
+                    case true:
+                        document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#FF0000'>" + notateInt(totalEffectC) + " > " + notateInt(totalEffectG) + "</span>";
+                        break;
+                    default:
+                        document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#FF0000'>" + diffNotation(totalEffectC) + " > " + diffNotation(totalEffectG) + "</span>";
+                }
                 document.getElementById("UCCostWord").innerHTML = "take away";
                 document.getElementById("UCAnIncreaseWord").innerHTML = "a decrease";
                 switch (diffStatus) {
@@ -491,7 +503,13 @@ function addUpgradeCalculator() { // Function for ensuring all the calculator's 
                         document.getElementById("UCAnEffectiveMultiplierWord").innerHTML = "an effective multiplier";
                 }
                 document.getElementById("UCAnIncreaseWord").innerHTML = "an increase";
-                document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#FFFF00'>" + diffNotation(totalEffectC) + " = " + diffNotation(totalEffectG) + "</span>";
+                switch (noDiffSymbol) {
+                    case true:
+                        document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#FFFF00'>" + notateInt(totalEffectC) + " > " + notateInt(totalEffectG) + "</span>";
+                        break;
+                    default:
+                        document.getElementById("UCUpgradeEffectOutput").innerHTML = "<span style='color:#FFFF00'>" + diffNotation(totalEffectC) + " > " + diffNotation(totalEffectG) + "</span>";
+                }
                 document.getElementById("UCGoalLevelOutput").innerHTML = notateInt(goalLevel) + " (<span style='color:#FFFF00'>+0</span>)";
             }
             switch (noDiffSymbol) {
