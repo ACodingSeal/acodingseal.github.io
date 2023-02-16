@@ -4,7 +4,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
         console.log("[Astral Calculator] [LOG]: ID located. Running script.");
 
         // Create the calculator's user interface.
-        const calculatorHTMLPrimaryStatisticsContainer = "<div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;text-align:center'><span style='font-size:20px'>Main Statistics</span></div><br><img src='./Astral Calculator/Assets/Star.png' width='50'/>Current Astral (<abbr title='Default value: 1.'>notes</abbr>): <input id='ACCurrentAstralInput' style='width:10%'/><p><img src='./Astral Calculator/Assets/Star.png' width='50'/>Desired Astral (<abbr title='Default value: 2.'>notes</abbr>): <input id='ACGoalAstralInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/Current Astral Prestige.png' width='50'/>Current Astral Prestige (<abbr title='(n1) Optional. (n2) Default value: 0.'>notes</abbr>): <input id='ACCurrentAstralPrestigeInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/Current Astral Prestige.png' width='50'/>Desired Astral Prestige (<abbr title='(n1) Optional. (n2) Default value: Current Astral Prestige.'>notes</abbr>): <input id='ACGoalAstralPrestigeInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/SP.png' width='50'/>SP gain per grass cut (<abbr title='This value is according to the Stats Menu, and in-game there is currently a bug where it does not correctly visually output the bonus when at Tier 58+.'>notes</abbr>): <input id='ACSPGainInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/Star.png' width='50'/>Percentage until next Astral (<abbr title='(n1) Optional. (n2) Input any value ranging from 0 to 100, without the percentage symbol. (n3) Default value: 0%.'>notes</abbr>): <input id='ACNextAstralCompletionInput' style='width:10%'/>%</p>";
+        const calculatorHTMLPrimaryStatisticsContainer = "<div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;text-align:center'><span style='font-size:20px'>Main Statistics</span></div><br><img src='./Astral Calculator/Assets/Star.png' width='50'/>Current Astral (<abbr title='Default value: 1.'>notes</abbr>): <input id='ACCurrentAstralInput' style='width:10%'/><p><img src='./Astral Calculator/Assets/Star.png' width='50'/>Desired Astral (<abbr title='Default value: 2.'>notes</abbr>): <input id='ACGoalAstralInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/Astral Prestige.png' width='50'/>Current Astral Prestige (<abbr title='(n1) Optional. (n2) Default value: 0.'>notes</abbr>): <input id='ACCurrentAstralPrestigeInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/Astral Prestige.png' width='50'/>Desired Astral Prestige (<abbr title='(n1) Optional. (n2) Default value: Current Astral Prestige.'>notes</abbr>): <input id='ACGoalAstralPrestigeInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/SP.png' width='50'/>SP gain per grass cut (<abbr title='This value is according to the Stats Menu, and in-game there is currently a bug where it does not correctly visually output the bonus when at Tier 58+.'>notes</abbr>): <input id='ACSPGainInput' style='width:10%'/></p><p><img src='./Astral Calculator/Assets/Star.png' width='50'/>Percentage until next Astral (<abbr title='(n1) Optional. (n2) Input any value ranging from 0 to 100, without the percentage symbol. (n3) Default value: 0%.'>notes</abbr>): <input id='ACNextAstralCompletionInput' style='width:10%'/>%</p>";
         const calculatorHTMLManualCuttingStatisticsContainer = "<div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;text-align:center'><span style='font-size:20px'>Manual Cutting Statistics</span></div><p><img src='./Astral Calculator/Assets/Manual Grass Cutting Rate.png' width='50'/>Manual grass cut per second (<abbr title='Leave blank if not manually cutting grass.'>notes</abbr>): <input id='ACManualCuttingRateInput' width='10%'/></p>";
         const calculatorHTMLAutocutStatisticsContainer = "<div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;text-align:center'><span style='font-size:20px'>Autocut Statistics</span></div><p><img src='./Astral Calculator/Assets/Autocut Rate.png' width='50'/>Autocut rate (<abbr title='(n1) Default value: 0. (n2) Input interval in seconds, such as 0.5 for 2 per second. (n3) Leave blank if autocut is disabled.'>notes</abbr>): <input id='ACAutocutRateInput' width='10%'/></p><p><img src='./Astral Calculator/Assets/Autocut Amount.png' width='50'/>Autocut amount (<abbr title='(n1) Default value: 1. (n2) Leave blank if autocut is disabled.'>notes</abbr>): <input id='ACAutocutAmountInput' width='10%'/></p><p><img src='./Astral Calculator/Assets/Autocut Value.png' width='50'/>Autocut value (<abbr title='(n1) Default value: 1. (n2) Leave blank if autocut is disabled.'>notes</abbr>): <input id='ACAutocutValueInput' width='10%'/></p>";
         const calculatorHTMLResultsAstralBonusesContainer = "<br><br><br><div>Your Astral Bonuses will also become (<u><span id='ACAstralBonusesSectionToggle'>click to toggle</span></u> section visibility):<br><div id='ACAstralBonusesSection' style='display:none'><p>[Standard] PP bonus: <span id='ACAstralBonusPPBonusCurrentOutput'>?</span> > <span id='ACAstralBonusPPBonusNextOutput'>?</span> (<span id='ACAstralBonusPPBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusPPBonusDiffActual'>?</span> actual)</p><p>[Standard] Crystal bonus: <span id='ACAstralBonusCrystalBonusCurrentOutput'>?</span> > <span id='ACAstralBonusCrystalBonusNextOutput'>?</span> (<span id='ACAstralBonusCrystalBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusCrystalBonusDiffActual'>?</span> actual)</p><p>[Standard] Platinum worth: +<span id='ACAstralBonusPlatinumWorthCurrentOutput'>?</span> > +<span id='ACAstralBonusPlatinumWorthNextOutput'>?</span> (<span id='ACAstralBonusPlatinumWorthDiffEffect'>?</span> effect/<span id='ACAstralBonusPlatinumWorthDiffActual'>?</span> actual)</p><p>[Standard] Steel multiplier: <span id='ACAstralBonusSteelMultiplierCurrentOutput'>?</span> > <span id='ACAstralBonusSteelMultiplierNextOutput'>?</span> (<span id='ACAstralBonusSteelMultiplierDiffEffect'>?</span> effect/<span id='ACAstralBonusSteelMultiplierDiffActual'>?</span> actual)</p><p>[AGH 28GH] Grass bonus: <span id='ACAstralBonusGrassBonusCurrentOutput'>?</span> > <span id='ACAstralBonusGrassBonusNextOutput'>?</span> (<span id='ACAstralBonusGrassBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusGrassBonusDiffActual'>?</span> actual)</p><p>[AGH 25GH] XP bonus: <span id='ACAstralBonusXPBonusCurrentOutput'>?</span> > <span id='ACAstralBonusXPBonusNextOutput'>?</span> (<span id='ACAstralBonusXPBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusXPBonusDiffActual'>?</span> actual)</p><p>[AGH 22GH] TP bonus: <span id='ACAstralBonusTPBonusCurrentOutput'>?</span> > <span id='ACAstralBonusTPBonusNextOutput'>?</span> (<span id='ACAstralBonusTPBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusTPBonusDiffActual'>?</span> actual)</p><p>[AGH 19GH] Stars bonus: <span id='ACAstralBonusStarsBonusCurrentOutput'>?</span> > <span id='ACAstralBonusStarsBonusNextOutput'>?</span> (<span id='ACAstralBonusStarsBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusStarsBonusDiffActual'>?</span> actual)</p><p>[AGH 16GH] Moonstone bonus: +<span id='ACAstralBonusMoonstoneBonusCurrentOutput'>?</span> > +<span id='ACAstralBonusMoonstoneBonusNextOutput'>?</span> (<span id='ACAstralBonusMoonstoneBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusMoonstoneBonusDiffActual'>?</span> actual)</p><p>[AGH 13GH] Charge bonus: <span id='ACAstralBonusChargeBonusCurrentOutput'>?</span> > <span id='ACAstralBonusChargeBonusNextOutput'>?</span> (<span id='ACAstralBonusChargeBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusChargeBonusDiffActual'>?</span> actual)</p><p>[AGH 10GH] SFRGT bonus: <span id='ACAstralBonusSFRGTBonusCurrentOutput'>?</span> > <span id='ACAstralBonusSFRGTBonusNextOutput'>?</span> (<span id='ACAstralBonusSFRGTBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusSFRGTBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusDarkMatterBonusContainer' style='display:none'>[ASP 1] Dark Matter bonus: <span id='ACAstralBonusDarkMatterBonusCurrentOutput'>?</span> > <span id='ACAstralBonusDarkMatterBonusNextOutput'>?</span> (<span id='ACAstralBonusDarkMatterBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusDarkMatterBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusNPBonusContainer' style='display:none'>[ASP 2] NP bonus: <span id='ACAstralBonusNPBonusCurrentOutput'>?</span> > <span id='ACAstralBonusNPBonusNextOutput'>?</span> (<span id='ACAstralBonusNPBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusNPBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusRingsBonusContainer' style='display:none'>[ASP 3] Rings bonus: <span id='ACAstralBonusRingsBonusCurrentOutput'>?</span> > <span id='ACAstralBonusRingsBonusNextOutput'>?</span> (<span id='ACAstralBonusRingsBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusRingsBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusDarkFruitsAmountBonusContainer' style='display:none'>[ASP 4] Dark Fruits Amount bonus: <span id='ACAstralBonusDarkFruitsAmountBonusCurrentOutput'>?</span> > <span id='ACAstralBonusDarkFruitsAmountBonusNextOutput'>?</span> (<span id='ACAstralBonusDarkFruitsAmountBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusDarkFruitsAmountBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusLunarPowerBonusContainer' style='display:none'>[ASP 5] Lunar Power bonus: <span id='ACAstralBonusLunarPowerBonusCurrentOutput'>?</span> > <span id='ACAstralBonusLunarPowerBonusNextOutput'>?</span> (<span id='ACAstralBonusLunarPowerBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusLunarPowerBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusArcsBonusContainer' style='display:none'>[ASP 6] Arcs bonus: <span id='ACAstralBonusArcsBonusCurrentOutput'>?</span> > <span id='ACAstralBonusArcsBonusNextOutput'>?</span> (<span id='ACAstralBonusArcsBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusArcsBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusStardustBonusContainer' style='display:none'>[ASP 7] Stardust bonus: <span id='ACAstralBonusStardustBonusCurrentOutput'>?</span> > <span id='ACAstralBonusStardustBonusNextOutput'>?</span> (<span id='ACAstralBonusStardustBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusStardustBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusSolarFlareBonusContainer' style='display:none'>[ASP 8] Solar Flare bonus: <span id='ACAstralBonusSolarFlareBonusCurrentOutput'>?</span> > <span id='ACAstralBonusSolarFlareBonusNextOutput'>?</span> (<span id='ACAstralBonusSolarFlareBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusSolarFlareBonusDiffActual'>?</span> actual)</p><p id='ACAstralBonusPrestigePointsBonusContainer' style='display:none'>[ASP 9] Prestige Points bonus: <span id='ACAstralBonusPrestigePointsBonusCurrentOutput'>?</span> > <span id='ACAstralBonusPrestigePointsBonusNextOutput'>?</span> (<span id='ACAstralBonusPrestigePointsBonusDiffEffect'>?</span> effect/<span id='ACAstralBonusPrestigePointsBonusDiffActual'>?</span> actual)</p></div>";
@@ -468,187 +468,128 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
             setErrorTexts();
 
             // Update Astral Bonuses.
+            function updateAstralBonuses(id, current, next, diff) {
+                if (diff !== false) {
+                    document.getElementById("ACAstralBonus" + id + "CurrentOutput").innerHTML = diffNotation(current);
+                    document.getElementById("ACAstralBonus" + id + "NextOutput").innerHTML = diffNotation(next);
+                } else {
+                    document.getElementById("ACAstralBonus" + id + "CurrentOutput").innerHTML = notateInt(current);
+                    document.getElementById("ACAstralBonus" + id + "NextOutput").innerHTML = notateInt(next);
+                }
+                document.getElementById("ACAstralBonus" + id + "DiffEffect").innerHTML = diffNotation(next.sub(current));
+                document.getElementById("ACAstralBonus" + id + "DiffActual").innerHTML = diffNotation(next.dividedBy(current));
+            }
             const astralBonusPPBonusCurrent = new Decimal(1).times(new Decimal(1.4).pow((new Decimal(100).times(currentAstralPrestige)).add(currentAstral.sub(1))));
             const astralBonusPPBonusNext = new Decimal(1).times(new Decimal(1.4).pow((new Decimal(100).times(goalAstralPrestige)).add(goalAstral.sub(1))));
-            document.getElementById("ACAstralBonusPPBonusCurrentOutput").innerHTML = diffNotation(astralBonusPPBonusCurrent);
-            document.getElementById("ACAstralBonusPPBonusNextOutput").innerHTML = diffNotation(astralBonusPPBonusNext);
-            document.getElementById("ACAstralBonusPPBonusDiffEffect").innerHTML = diffNotation(astralBonusPPBonusNext.sub(astralBonusPPBonusCurrent));
-            document.getElementById("ACAstralBonusPPBonusDiffActual").innerHTML = diffNotation(astralBonusPPBonusNext.dividedBy(astralBonusPPBonusCurrent));
-
             const astralBonusCrystalBonusCurrent = new Decimal(1).times(new Decimal(1.1).pow((new Decimal(100).times(currentAstralPrestige)).add(currentAstral.sub(1))));
             const astralBonusCrystalBonusNext = new Decimal(1).times(new Decimal(1.1).pow((new Decimal(100).times(goalAstralPrestige)).add(goalAstral.sub(1))));
-            document.getElementById("ACAstralBonusCrystalBonusCurrentOutput").innerHTML = diffNotation(astralBonusCrystalBonusCurrent);
-            document.getElementById("ACAstralBonusCrystalBonusNextOutput").innerHTML = diffNotation(astralBonusCrystalBonusNext);
-            document.getElementById("ACAstralBonusCrystalBonusDiffEffect").innerHTML = diffNotation(astralBonusCrystalBonusNext.sub(astralBonusCrystalBonusCurrent));
-            document.getElementById("ACAstralBonusCrystalBonusDiffActual").innerHTML = diffNotation(astralBonusCrystalBonusNext.dividedBy(astralBonusCrystalBonusCurrent));
-
             const astralBonusPlatinumWorthCurrent = decimalMax(0, currentAstral.dividedBy(2).times(new Decimal(5).pow(currentAstralPrestige)).sub(1));
             const astralBonusPlatinumWorthNext = decimalMax(0, goalAstral.dividedBy(2).times(new Decimal(5).pow(goalAstralPrestige)).sub(1));
-            document.getElementById("ACAstralBonusPlatinumWorthCurrentOutput").innerHTML = notateInt(astralBonusPlatinumWorthCurrent);
-            document.getElementById("ACAstralBonusPlatinumWorthNextOutput").innerHTML = notateInt(astralBonusPlatinumWorthNext);
-            document.getElementById("ACAstralBonusPlatinumWorthDiffEffect").innerHTML = diffNotation(astralBonusPlatinumWorthNext.sub(astralBonusPlatinumWorthCurrent));
-            document.getElementById("ACAstralBonusPlatinumWorthDiffActual").innerHTML = diffNotation(astralBonusPlatinumWorthNext.dividedBy(astralBonusPlatinumWorthCurrent));
-
             const astralBonusSteelMultiplierCurrent = new Decimal(1).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral)
-            const astralBonusSteelMultiplierNext = new Decimal(1).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral);
-            document.getElementById("ACAstralBonusSteelMultiplierCurrentOutput").innerHTML = diffNotation(astralBonusSteelMultiplierCurrent);
-            document.getElementById("ACAstralBonusSteelMultiplierNextOutput").innerHTML = diffNotation(astralBonusSteelMultiplierNext);
-            document.getElementById("ACAstralBonusSteelMultiplierDiffEffect").innerHTML = diffNotation(astralBonusSteelMultiplierNext.sub(astralBonusSteelMultiplierCurrent));
-            document.getElementById("ACAstralBonusSteelMultiplierDiffActual").innerHTML = diffNotation(astralBonusSteelMultiplierNext.dividedBy(astralBonusSteelMultiplierCurrent));
-
+            const astralBonusSteelMultiplierNext = new Decimal(1).times(new Decimal(5).pow(goalAstralPrestige)).times(goalAstral);
             const astralBonusGrassBonusCurrent = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1);
-            const astralBonusGrassBonusNext = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1);
-            document.getElementById("ACAstralBonusGrassBonusCurrentOutput").innerHTML = diffNotation(astralBonusGrassBonusCurrent);
-            document.getElementById("ACAstralBonusGrassBonusNextOutput").innerHTML = diffNotation(astralBonusGrassBonusNext);
-            document.getElementById("ACAstralBonusGrassBonusDiffEffect").innerHTML = diffNotation(astralBonusGrassBonusNext.sub(astralBonusGrassBonusCurrent));
-            document.getElementById("ACAstralBonusGrassBonusDiffActual").innerHTML = diffNotation(astralBonusGrassBonusNext.dividedBy(astralBonusGrassBonusCurrent));
-
+            const astralBonusGrassBonusNext = new Decimal(0.25).times(new Decimal(5).pow(goalAstralPrestige)).times(goalAstral).add(1);
             const astralBonusXPBonusCurrent = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1);
-            const astralBonusXPBonusNext = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1);
-            document.getElementById("ACAstralBonusXPBonusCurrentOutput").innerHTML = diffNotation(astralBonusXPBonusCurrent);
-            document.getElementById("ACAstralBonusXPBonusNextOutput").innerHTML = diffNotation(astralBonusXPBonusNext);
-            document.getElementById("ACAstralBonusXPBonusDiffEffect").innerHTML = diffNotation(astralBonusXPBonusNext.sub(astralBonusXPBonusCurrent));
-            document.getElementById("ACAstralBonusXPBonusDiffActual").innerHTML = diffNotation(astralBonusXPBonusNext.dividedBy(astralBonusXPBonusCurrent));
-
+            const astralBonusXPBonusNext = new Decimal(0.25).times(new Decimal(5).pow(goalAstralPrestige)).times(goalAstral).add(1);
             const astralBonusTPBonusCurrent = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1);
-            const astralBonusTPBonusNext = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1);
-            document.getElementById("ACAstralBonusTPBonusCurrentOutput").innerHTML = diffNotation(astralBonusTPBonusCurrent);
-            document.getElementById("ACAstralBonusTPBonusNextOutput").innerHTML = diffNotation(astralBonusTPBonusNext);
-            document.getElementById("ACAstralBonusTPBonusDiffEffect").innerHTML = diffNotation(astralBonusTPBonusNext.sub(astralBonusTPBonusCurrent));
-            document.getElementById("ACAstralBonusTPBonusDiffActual").innerHTML = diffNotation(astralBonusTPBonusNext.dividedBy(astralBonusTPBonusCurrent));
-
+            const astralBonusTPBonusNext = new Decimal(0.25).times(new Decimal(5).pow(goalAstralPrestige)).times(goalAstral).add(1);
             const astralBonusStarsBonusCurrent = new Decimal(0.1).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1);
-            const astralBonusStarsBonusNext = new Decimal(0.1).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1);
-            document.getElementById("ACAstralBonusStarsBonusCurrentOutput").innerHTML = diffNotation(astralBonusStarsBonusCurrent);
-            document.getElementById("ACAstralBonusStarsBonusNextOutput").innerHTML = diffNotation(astralBonusStarsBonusNext);
-            document.getElementById("ACAstralBonusStarsBonusDiffEffect").innerHTML = diffNotation(astralBonusStarsBonusNext.sub(astralBonusStarsBonusCurrent));
-            document.getElementById("ACAstralBonusStarsBonusDiffActual").innerHTML = diffNotation(astralBonusStarsBonusNext.dividedBy(astralBonusStarsBonusCurrent));
-
+            const astralBonusStarsBonusNext = new Decimal(0.1).times(new Decimal(5).pow(goalAstralPrestige)).times(goalAstral).add(1);
             const astralBonusMoonstoneBonusCurrent = new Decimal(5).pow(currentAstralPrestige).times(currentAstral);
-            const astralBonusMoonstoneBonusNext = new Decimal(5).pow(currentAstralPrestige).times(goalAstral);
-            document.getElementById("ACAstralBonusMoonstoneBonusCurrentOutput").innerHTML = notateInt(astralBonusMoonstoneBonusCurrent);
-            document.getElementById("ACAstralBonusMoonstoneBonusNextOutput").innerHTML = notateInt(astralBonusMoonstoneBonusNext);
-            document.getElementById("ACAstralBonusMoonstoneBonusDiffEffect").innerHTML = diffNotation(astralBonusMoonstoneBonusNext.sub(astralBonusMoonstoneBonusCurrent));
-            document.getElementById("ACAstralBonusMoonstoneBonusDiffActual").innerHTML = diffNotation(astralBonusMoonstoneBonusNext.dividedBy(astralBonusMoonstoneBonusCurrent));
-
+            const astralBonusMoonstoneBonusNext = new Decimal(5).pow(goalAstralPrestige).times(goalAstral);
             const astralBonusChargeBonusCurrent = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(currentAstral).add(1);
-            const astralBonusChargeBonusNext = new Decimal(0.25).times(new Decimal(5).pow(currentAstralPrestige)).times(goalAstral).add(1);
-            document.getElementById("ACAstralBonusChargeBonusCurrentOutput").innerHTML = diffNotation(astralBonusChargeBonusCurrent);
-            document.getElementById("ACAstralBonusChargeBonusNextOutput").innerHTML = diffNotation(astralBonusChargeBonusNext);
-            document.getElementById("ACAstralBonusChargeBonusDiffEffect").innerHTML = diffNotation(astralBonusChargeBonusNext.sub(astralBonusChargeBonusCurrent));
-            document.getElementById("ACAstralBonusChargeBonusDiffActual").innerHTML = diffNotation(astralBonusChargeBonusNext.dividedBy(astralBonusChargeBonusCurrent));
-
+            const astralBonusChargeBonusNext = new Decimal(0.25).times(new Decimal(5).pow(goalAstralPrestige)).times(goalAstral).add(1);
             const astralBonusSFRGTBonusCurrent = new Decimal(2).pow(new Decimal(100).times(currentAstralPrestige).add(decimalMin(82, decimalMax(0, currentAstral.sub(18)))));
-            const astralBonusSFRGTBonusNext = new Decimal(2).pow(new Decimal(100).times(currentAstralPrestige).add(decimalMin(82, decimalMax(0, goalAstral.sub(18)))));
-            document.getElementById("ACAstralBonusSFRGTBonusCurrentOutput").innerHTML = diffNotation(astralBonusSFRGTBonusCurrent);
-            document.getElementById("ACAstralBonusSFRGTBonusNextOutput").innerHTML = diffNotation(astralBonusSFRGTBonusNext);
-            document.getElementById("ACAstralBonusSFRGTBonusDiffEffect").innerHTML = diffNotation(astralBonusSFRGTBonusNext.sub(astralBonusSFRGTBonusCurrent));
-            document.getElementById("ACAstralBonusSFRGTBonusDiffActual").innerHTML = diffNotation(astralBonusSFRGTBonusNext.dividedBy(astralBonusSFRGTBonusCurrent));
+            const astralBonusSFRGTBonusNext = new Decimal(2).pow(new Decimal(100).times(goalAstralPrestige).add(decimalMin(82, decimalMax(0, goalAstral.sub(18)))));
+            updateAstralBonuses("PPBonus", astralBonusPPBonusCurrent, astralBonusPPBonusNext);
+            updateAstralBonuses("CrystalBonus", astralBonusCrystalBonusCurrent, astralBonusCrystalBonusNext);
+            updateAstralBonuses("PlatinumWorth", astralBonusPlatinumWorthCurrent, astralBonusPlatinumWorthNext, false);
+            updateAstralBonuses("SteelMultiplier", astralBonusSteelMultiplierCurrent, astralBonusSteelMultiplierNext);
+            updateAstralBonuses("GrassBonus", astralBonusGrassBonusCurrent, astralBonusGrassBonusNext);
+            updateAstralBonuses("XPBonus", astralBonusXPBonusCurrent, astralBonusXPBonusNext);
+            updateAstralBonuses("TPBonus", astralBonusTPBonusCurrent, astralBonusTPBonusNext);
+            updateAstralBonuses("StarsBonus", astralBonusStarsBonusCurrent, astralBonusStarsBonusNext);
+            updateAstralBonuses("MoonstoneBonus", astralBonusMoonstoneBonusCurrent, astralBonusMoonstoneBonusNext, false);
+            updateAstralBonuses("ChargeBonus", astralBonusChargeBonusCurrent, astralBonusChargeBonusNext);
+            updateAstralBonuses("SFRGTBonus", astralBonusSFRGTBonusCurrent, astralBonusSFRGTBonusNext);
 
             const astralBonusDarkMatterBonusCurrent = decimalMax(1, new Decimal(25).pow(currentAstralPrestige));
             const astralBonusDarkMatterBonusNext = decimalMax(1, new Decimal(25).pow(goalAstralPrestige));
+            const astralBonusNPBonusCurrent = decimalMax(1, new Decimal(10).pow(currentAstralPrestige.sub(1)));
+            const astralBonusNPBonusNext = decimalMax(1, new Decimal(10).pow(goalAstralPrestige.sub(1)));
+            const astralBonusRingsBonusCurrent = decimalMax(1, new Decimal(5).pow(currentAstralPrestige.sub(2)));
+            const astralBonusRingsBonusNext = decimalMax(1, new Decimal(5).pow(goalAstralPrestige.sub(2)));
+            const astralBonusDarkFruitsAmountBonusCurrent = decimalMax(1, new Decimal(3).pow(currentAstralPrestige.sub(3)));
+            const astralBonusDarkFruitsAmountBonusNext = decimalMax(1, new Decimal(3).pow(goalAstralPrestige.sub(3)));
+            const astralBonusLunarPowerBonusCurrent = decimalMax(1, new Decimal(3).pow(currentAstralPrestige.sub(4)));
+            const astralBonusLunarPowerBonusNext = decimalMax(1, new Decimal(3).pow(goalAstralPrestige.sub(4)));
+            const astralBonusArcsBonusCurrent = decimalMax(1, new Decimal(5).pow(currentAstralPrestige.sub(5)));
+            const astralBonusArcsBonusNext = decimalMax(1, new Decimal(5).pow(goalAstralPrestige.sub(5)));
+            const astralBonusStardustBonusCurrent = decimalMax(1, new Decimal(5).pow(currentAstralPrestige.sub(6)));
+            const astralBonusStardustBonusNext = decimalMax(1, new Decimal(5).pow(goalAstralPrestige.sub(6)));
+            const astralBonusSolarFlareBonusCurrent = decimalMax(1, new Decimal(3).pow(currentAstralPrestige.sub(7)));
+            const astralBonusSolarFlareBonusNext = decimalMax(1, new Decimal(3).pow(goalAstralPrestige.sub(7)));
+            const astralBonusPrestigePointsBonusCurrent = decimalMax(1, new Decimal(10).pow(currentAstralPrestige.sub(7)).dividedBy(100).add(1));
+            const astralBonusPrestigePointsBonusNext = decimalMax(1, new Decimal(10).pow(goalAstralPrestige.sub(7)).dividedBy(100).add(1));
             if (currentAstralPrestige.greaterThan(0) || goalAstralPrestige.greaterThan(0)) {
                 document.getElementById("ACAstralBonusDarkMatterBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusDarkMatterBonusCurrentOutput").innerHTML = diffNotation(astralBonusDarkMatterBonusCurrent);
-                document.getElementById("ACAstralBonusDarkMatterBonusNextOutput").innerHTML = diffNotation(astralBonusDarkMatterBonusNext);
-                document.getElementById("ACAstralBonusDarkMatterBonusDiffEffect").innerHTML = diffNotation(astralBonusDarkMatterBonusNext.sub(astralBonusDarkMatterBonusCurrent));
-                document.getElementById("ACAstralBonusDarkMatterBonusDiffActual").innerHTML = diffNotation(astralBonusDarkMatterBonusNext.dividedBy(astralBonusDarkMatterBonusCurrent));
+                updateAstralBonuses("DarkMatterBonus", astralBonusDarkMatterBonusCurrent, astralBonusDarkMatterBonusNext);
             } else {
                 document.getElementById("ACAstralBonusDarkMatterBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusNPBonusCurrent = decimalMax(1, new Decimal(10).pow(currentAstralPrestige.sub(1)));
-            const astralBonusNPBonusNext = decimalMax(1, new Decimal(10).pow(goalAstralPrestige.sub(1)));
             if (currentAstralPrestige.greaterThan(1) || goalAstralPrestige.greaterThan(1)) {
                 document.getElementById("ACAstralBonusNPBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusNPBonusCurrentOutput").innerHTML = diffNotation(astralBonusNPBonusCurrent);
-                document.getElementById("ACAstralBonusNPBonusNextOutput").innerHTML = diffNotation(astralBonusNPBonusNext);
-                document.getElementById("ACAstralBonusNPBonusDiffEffect").innerHTML = diffNotation(astralBonusNPBonusNext.sub(astralBonusNPBonusCurrent));
-                document.getElementById("ACAstralBonusNPBonusDiffActual").innerHTML = diffNotation(astralBonusNPBonusNext.dividedBy(astralBonusNPBonusCurrent));
+                updateAstralBonuses("NPBonus", astralBonusNPBonusCurrent, astralBonusNPBonusNext);
             } else {
                 document.getElementById("ACAstralBonusNPBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusRingsBonusCurrent = decimalMax(1, new Decimal(5).pow(currentAstralPrestige.sub(2)));
-            const astralBonusRingsBonusNext = decimalMax(1, new Decimal(5).pow(goalAstralPrestige.sub(2)));
             if (currentAstralPrestige.greaterThan(2) || goalAstralPrestige.greaterThan(2)) {
                 document.getElementById("ACAstralBonusRingsBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusRingsBonusCurrentOutput").innerHTML = diffNotation(astralBonusRingsBonusCurrent);
-                document.getElementById("ACAstralBonusRingsBonusNextOutput").innerHTML = diffNotation(astralBonusRingsBonusNext);
-                document.getElementById("ACAstralBonusRingsBonusDiffEffect").innerHTML = diffNotation(astralBonusRingsBonusNext.sub(astralBonusRingsBonusCurrent));
-                document.getElementById("ACAstralBonusRingsBonusDiffActual").innerHTML = diffNotation(astralBonusRingsBonusNext.dividedBy(astralBonusRingsBonusCurrent));
+                updateAstralBonuses("RingsBonus", astralBonusRingsBonusCurrent, astralBonusRingsBonusNext);
             } else {
                 document.getElementById("ACAstralBonusRingsBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusDarkFruitsAmountBonusCurrent = decimalMax(1, new Decimal(3).pow(currentAstralPrestige.sub(3)));
-            const astralBonusDarkFruitsAmountBonusNext = decimalMax(1, new Decimal(3).pow(goalAstralPrestige.sub(3)));
             if (currentAstralPrestige.greaterThan(3) || goalAstralPrestige.greaterThan(3)) {
                 document.getElementById("ACAstralBonusDarkFruitsAmountBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusDarkFruitsAmountBonusCurrentOutput").innerHTML = diffNotation(astralBonusDarkFruitsAmountBonusCurrent);
-                document.getElementById("ACAstralBonusDarkFruitsAmountBonusNextOutput").innerHTML = diffNotation(astralBonusDarkFruitsAmountBonusNext)
-                document.getElementById("ACAstralBonusDarkFruitsAmountBonusDiffEffect").innerHTML = diffNotation(astralBonusDarkFruitsAmountBonusNext.sub(astralBonusDarkFruitsAmountBonusCurrent));
-                document.getElementById("ACAstralBonusDarkFruitsAmountBonusDiffActual").innerHTML = diffNotation(astralBonusDarkFruitsAmountBonusNext.dividedBy(astralBonusDarkFruitsAmountBonusCurrent));
+                updateAstralBonuses("DarkFruitsAmountBonus", astralBonusDarkFruitsAmountBonusCurrent, astralBonusDarkFruitsAmountBonusNext);
             } else {
                 document.getElementById("ACAstralBonusDarkFruitsAmountBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusLunarPowerBonusCurrent = decimalMax(1, new Decimal(3).pow(currentAstralPrestige.sub(4)));
-            const astralBonusLunarPowerBonusNext = decimalMax(1, new Decimal(3).pow(goalAstralPrestige.sub(4)));
             if (currentAstralPrestige.greaterThan(4) || goalAstralPrestige.greaterThan(4)) {
                 document.getElementById("ACAstralBonusLunarPowerBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusLunarPowerBonusCurrentOutput").innerHTML = diffNotation(astralBonusLunarPowerBonusCurrent);
-                document.getElementById("ACAstralBonusLunarPowerBonusNextOutput").innerHTML = diffNotation(astralBonusLunarPowerBonusNext);
-                document.getElementById("ACAstralBonusLunarPowerBonusDiffEffect").innerHTML = diffNotation(astralBonusLunarPowerBonusNext.sub(astralBonusLunarPowerBonusCurrent));
-                document.getElementById("ACAstralBonusLunarPowerBonusDiffActual").innerHTML = diffNotation(astralBonusLunarPowerBonusNext.dividedBy(astralBonusLunarPowerBonusCurrent));
+                updateAstralBonuses("LunarPowerBonus", astralBonusLunarPowerBonusCurrent, astralBonusLunarPowerBonusNext);
             } else {
                 document.getElementById("ACAstralBonusLunarPowerBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusArcsBonusCurrent = decimalMax(1, new Decimal(5).pow(currentAstralPrestige.sub(5)));
-            const astralBonusArcsBonusNext = decimalMax(1, new Decimal(5).pow(goalAstralPrestige.sub(5)));
             if (currentAstralPrestige.greaterThan(5) || goalAstralPrestige.greaterThan(5)) {
                 document.getElementById("ACAstralBonusArcsBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusArcsBonusCurrentOutput").innerHTML = diffNotation(astralBonusArcsBonusCurrent);
-                document.getElementById("ACAstralBonusArcsBonusNextOutput").innerHTML = diffNotation(astralBonusArcsBonusNext);
-                document.getElementById("ACAstralBonusArcsBonusDiffEffect").innerHTML = diffNotation(astralBonusArcsBonusNext.sub(astralBonusArcsBonusCurrent));
-                document.getElementById("ACAstralBonusArcsBonusDiffActual").innerHTML = diffNotation(astralBonusArcsBonusNext.dividedBy(astralBonusArcsBonusCurrent));
+                updateAstralBonuses("ArcsBonus", astralBonusArcsBonusCurrent, astralBonusArcsBonusNext);
             } else {
                 document.getElementById("ACAstralBonusArcsBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusStardustBonusCurrent = decimalMax(1, new Decimal(5).pow(currentAstralPrestige.sub(6)));
-            const astralBonusStardustBonusNext = decimalMax(1, new Decimal(5).pow(goalAstralPrestige.sub(6)));
             if (currentAstralPrestige.greaterThan(6) || goalAstralPrestige.greaterThan(6)) {
                 document.getElementById("ACAstralBonusStardustBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusStardustBonusCurrentOutput").innerHTML = diffNotation(astralBonusStardustBonusCurrent);
-                document.getElementById("ACAstralBonusStardustBonusNextOutput").innerHTML = diffNotation(astralBonusStardustBonusNext);
-                document.getElementById("ACAstralBonusStardustBonusDiffEffect").innerHTML = diffNotation(astralBonusStardustBonusNext.sub(astralBonusStardustBonusCurrent));
-                document.getElementById("ACAstralBonusStardustBonusDiffActual").innerHTML = diffNotation(astralBonusStardustBonusNext.dividedBy(astralBonusStardustBonusCurrent));
+                updateAstralBonuses("StardustBonus", astralBonusStardustBonusCurrent, astralBonusStardustBonusNext);
             } else {
                 document.getElementById("ACAstralBonusStardustBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusSolarFlareBonusCurrent = decimalMax(1, new Decimal(3).pow(currentAstralPrestige.sub(7)));
-            const astralBonusSolarFlareBonusNext = decimalMax(1, new Decimal(3).pow(goalAstralPrestige.sub(7)));
             if (currentAstralPrestige.greaterThan(7) || goalAstralPrestige.greaterThan(7)) {
                 document.getElementById("ACAstralBonusSolarFlareBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusSolarFlareBonusCurrentOutput").innerHTML = diffNotation(astralBonusSolarFlareBonusCurrent);
-                document.getElementById("ACAstralBonusSolarFlareBonusNextOutput").innerHTML = diffNotation(astralBonusSolarFlareBonusNext);
-                document.getElementById("ACAstralBonusSolarFlareBonusDiffEffect").innerHTML = diffNotation(astralBonusSolarFlareBonusNext.sub(astralBonusSolarFlareBonusCurrent));
-                document.getElementById("ACAstralBonusSolarFlareBonusDiffActual").innerHTML = diffNotation(astralBonusSolarFlareBonusNext.dividedBy(astralBonusSolarFlareBonusCurrent));
+                updateAstralBonuses("SolarFlareBonus", astralBonusSolarFlareBonusCurrent, astralBonusSolarFlareBonusNext);
             } else {
                 document.getElementById("ACAstralBonusSolarFlareBonusContainer").setAttribute("style", "display:none");
             }
 
-            const astralBonusPrestigePointsBonusCurrent = decimalMax(1, new Decimal(10).pow(currentAstralPrestige.sub(7)).dividedBy(100).add(1));
-            const astralBonusPrestigePointsBonusNext = decimalMax(1, new Decimal(10).pow(goalAstralPrestige.sub(7)).dividedBy(100).add(1));
             if (currentAstralPrestige.greaterThan(8) || goalAstralPrestige.greaterThan(8)) {
                 document.getElementById("ACAstralBonusPrestigePointsBonusContainer").setAttribute("style", "display:block");
-                document.getElementById("ACAstralBonusPrestigePointsBonusCurrentOutput").innerHTML = diffNotation(astralBonusPrestigePointsBonusCurrent);
-                document.getElementById("ACAstralBonusPrestigePointsBonusNextOutput").innerHTML = diffNotation(astralBonusPrestigePointsBonusNext);
-                document.getElementById("ACAstralBonusPrestigePointsBonusDiffEffect").innerHTML = diffNotation(astralBonusPrestigePointsBonusNext.sub(astralBonusPrestigePointsBonusCurrent));
-                document.getElementById("ACAstralBonusPrestigePointsBonusDiffActual").innerHTML = diffNotation(astralBonusPrestigePointsBonusNext.dividedBy(astralBonusPrestigePointsBonusCurrent));
+                updateAstralBonuses("PrestigePointsBonus", astralBonusPrestigePointsBonusBonusCurrent, astralBonusPrestigePointsBonusBonusNext);
             } else {
                 document.getElementById("ACAstralBonusPrestigePointsBonusContainer").setAttribute("style", "display:none");
             }
