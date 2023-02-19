@@ -101,8 +101,8 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                 case "2":
                     challenge = "wall";
                     enemyStatScaling = new Decimal(50);
-                    enemyHealthScaling = new Decimal(51.5);
-                    document.getElementById("SelectedChallengeText").innerHTML = "Wall (50x stats, 51.5x health, 300:1 offline time)";
+                    enemyHealthScaling = new Decimal(50.15);
+                    document.getElementById("SelectedChallengeText").innerHTML = "Wall (50x stats, 50.15x health, 300:1 offline time)";
                     break;
                 case "3":
                     challenge = "evil";
