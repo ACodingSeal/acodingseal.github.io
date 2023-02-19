@@ -47,7 +47,7 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                         if (x.greaterThanOrEqualTo(1e3)) {
                             result = new Decimal(x.mantissa).toStringWithDecimalPlaces(decimals) + "e" + x.exponent;
                         } else {
-                            result = new Decimal(new Decimal(x.mantissa * 10 ** x.exponent).toStringWithDecimalPlaces(decimals).replace(/[.]0+/, "")).toStringWithDecimalPlaces(decimals).replace(/[.]0+/, "");
+                            result = new Decimal(new Decimal(x.mantissa * 10 ** x.exponent).toStringWithDecimalPlaces(decimals));
                         }
                     }
                 } else {
@@ -62,7 +62,12 @@ function addChargerCalculator() { // Function for ensuring all the calculator's 
                 extraZeroes = e.exponent % 3;
                 result = checkNoDecimal(e.mantissa * (10 ** extraZeroes)) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6 and is less than the length of the suffixes array's zero count times 3 and suffix notation is enabled, return the input converted to suffix notation.
             } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(1e21)) {
-                result = checkNoDecimal(e.mantissa) + "e" + e.exponent; // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+                e = new Decimal(e.mantissa.toFixed(3) + "e" + e.exponent);
+                if ((e.mantissa).toString() === "9.999999999999") {
+                    result = "1e" + e.exponent;
+                } else {
+                    result = checkNoDecimal(e.mantissa) + "e" + e.exponent; // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+                }
             } else if (e.greaterThanOrEqualTo("1e1e3") && e.lessThan("1e1e16")) {
                 switch (suffixStatus) {
                     case true:
