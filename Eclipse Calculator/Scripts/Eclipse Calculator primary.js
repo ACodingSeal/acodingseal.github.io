@@ -36,9 +36,9 @@ function addEclipseCalculator() { // Function for ensuring all the calculator's 
             function checkNoDecimal(x) {
                 x = new Decimal(x);
                 if (x.lessThan(1.797693134862315907729305190789e308)) {
-                    if (Math.floor(x.mantissa) == new Decimal(x.mantissa).toStringWithDecimalPlaces(5)) {
+                    if (Math.round(x.mantissa) == new Decimal(x.mantissa).toStringWithDecimalPlaces(5)) {
                         if (x.greaterThanOrEqualTo(1e3)) {
-                            result = Math.floor(new Decimal(x.mantissa).toStringWithDecimalPlaces(decimals)) + "e" + x.exponent;
+                            result = Math.round(new Decimal(x.mantissa).toStringWithDecimalPlaces(decimals)) + "e" + x.exponent;
                         } else {
                             result = new Decimal(new Decimal(x.mantissa * 10 ** x.exponent).toStringWithDecimalPlaces(decimals).replace(/[.]0+/, "")).toStringWithDecimalPlaces(decimals).replace(/[.]0+/, "");
                         }
