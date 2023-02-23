@@ -2,7 +2,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
     // [WIP] Calculator inaccuracies, particularly with the minimum requirement, are known and will be fixed at some point.
     if (document.getElementById("SolarianStageCalculator") !== null && document.getElementById("SolarianStageCalculatorContainer") === null) {
         console.log("[Solarian Stage Calculator] [LOG] ID located. Running script.");
-        document.getElementById("SolarianStageCalculator").innerHTML = "<div id='SolarianStageCalculatorContainer' class='templatedesktop' style='color:#FFF;padding:1em;background:#2F0075;width:80%;margin:auto'><div class='templatedesktop' style='background:initial;width:20%;padding:1em;overflow:auto'>Toggle Suffixes<br><button id='SSCSuffixToggleButton' style='background:#FF0000'>Disabled</button></div><div style='text-align:center;font-size:24px'><img src='./Solarian Stage Calculator/Assets/Sword.png' width='100'/> Solarian Stage Calculator <img src='./Solarian Stage Calculator/Assets/Shield.png' width='100'/><br><div style='font-size:initial'><p>Stage: <input id='CurrentStageInput' style='width:5%'/></p><p>Solarian Challenge: <input id='ChallengeInput' class='slider' type='range' value='0' min='0' max='3'/></p><p style='font-size:14px'>Selected challenge: <span id='SelectedChallengeText'/></p></div></div><table style='margin:auto;color:#FFF'><tr><td><b>Your offence:</b> <input id='PlayerOffenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy offence:</b> <span id='EnemyOffenceOutput'/></td></tr><tr><td><b>Your defence:</b> <input id='PlayerDefenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy defence:</b> <span id='EnemyDefenceOutput'/></td></tr><tr><td><b>Your maximum health (100x defence):</b> <span id='PlayerMaximumHealthOutput'/></td><td style='text-align:right'><b>Enemy maximum health:</b> <span id='EnemyMaximumHealthOutput'/></td></tr><tr><td><b>Your current health (optional, default 100% of max health):</b> <input id='PlayerCurrentHealthInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy current health (optional, default 100% of max health):</b> <input id='EnemyCurrentHealthInput' style='width:10%'/></td></tr></table><div style='margin-top:1em;text-align:center'><p>Real Time/Offline Time converter:<br><input id='SSCTimeConverterYearsInput' style='width:10%' placeholder='Years'></input><input id='SSCTimeConverterDaysInput' style='width:10%' placeholder='Days'></input><input id='SSCTimeConverterHoursInput' style='width:10%' placeholder='Hours'></input><input id='SSCTimeConverterMinutesInput' style='width:10%' placeholder='Minutes'></input><input id='SSCTimeConverterSecondsInput' style='width:10%' placeholder='Seconds'></input></p><p>Mode: <span id='SSCTimeConverterModeOutput' class='templatedesktop' style='padding:0.25em'>Real time > Offline time</span><br><p>Result: <span id='SSCTimeConverterTimeOutput'>?</span> (<span id='SSCTimeConverterEffectOutput'>?x</span>)</p><button id='SSCCalculateButton'>Calculate</button></div><br><div class='templatedesktop' style='background:initial;border-left:0;border-right:0;border-bottom:0;padding:0.5em;border-radius:initial;text-align:center'><div style='font-size:20px;font-weight:bold'>Result</div><br>At Stage <span id='CurrentStageOutput'>?</span>, the requirements to complete the stage, when currently at <span id='CurrentHealthOutput'>?</span>/<span id='MaximumHealthOutput'>?</span> health<img src='./Solarian Stage Calculator/Assets/Health.png' width='50'/>, are:<br><br><img src='./Solarian Stage Calculator/Assets/Sword.png' width='50'/> Offence: <span id='PlayerOffenceCurrentOutput'>?</span> (current) > <span id='PlayerOffenceReqOutput'>?</span> (minimum necessary; currently unavailable) > <span id='PlayerOffenceMaxOutput'>?</span> (instant completion)<br><img src='./Solarian Stage Calculator/Assets/Shield.png' width='50'/> Defence: <span id='PlayerDefenceCurrentOutput'>?</span> (current) > <span id='PlayerDefenceReqOutput'>?</span> (minimum necessary; currently unavailable) > <span id='PlayerDefenceMaxOutput'>?</span> (instant completion)<br><p>Your Stage Bonuses will also become:<br><br>Sunrise FM: <span id='StageBonusSunriseFMCurrentOutput'>?</span>x > <span id='StageBonusSunriseFMNextOutput'>?</span>x<br>Solar Rays: <span id='StageBonusSolarRaysCurrentOutput'>?</span>x > <span id='StageBonusSolarRaysNextOutput'>?</span>x<br>Sunstone: <span id='StageBonusSunstoneCurrentOutput'>?</span>x > <span id='StageBonusSunstoneNextOutput'>?</span>x<br><span id='SolarShardsStageBonusContainer' style='display:none'>Solar Shards: <span id='StageBonusSolarShardsCurrentOutput'>?</span>x > <span id='StageBonusSolarShardsNextOutput'>?</span>x</span><br><span id='SoulsStageBonusContainer' style='display:none'>Souls (hidden bonus): <span id='StageBonusSoulsCurrentOutput'>?</span>x > <span id='StageBonusSoulsNextOutput'>?</span>x</span></p></div></div>";
+        document.getElementById("SolarianStageCalculator").innerHTML = "<div id='SolarianStageCalculatorContainer' class='templatedesktop' style='color:#FFF;padding:1em;background:#2F0075;width:80%;margin:auto'><div class='templatedesktop' style='background:initial;width:20%;padding:1em;overflow:auto'>Toggle Suffixes<br><button id='SSCSuffixToggleButton' style='background:#FF0000'>Disabled</button></div><div style='text-align:center;font-size:24px'><img src='./Solarian Stage Calculator/Assets/Sword.png' width='100'/> Solarian Stage Calculator <img src='./Solarian Stage Calculator/Assets/Shield.png' width='100'/><br><div style='font-size:initial'><p>Stage: <input id='CurrentStageInput' style='width:5%'/></p><p>Solarian Challenge: <input id='ChallengeInput' class='slider' type='range' value='0' min='0' max='3'/></p><p style='font-size:14px'>Selected challenge: <span id='SelectedChallengeText'/></p></div></div><table style='margin:auto;color:#FFF'><tr><td><b>Your offence:</b> <input id='PlayerOffenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy offence:</b> <span id='EnemyOffenceOutput'/></td></tr><tr><td><b>Your defence:</b> <input id='PlayerDefenceInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy defence:</b> <span id='EnemyDefenceOutput'/></td></tr><tr><td><b>Your maximum health (100x defence):</b> <span id='PlayerMaximumHealthOutput'/></td><td style='text-align:right'><b>Enemy maximum health:</b> <span id='EnemyMaximumHealthOutput'/></td></tr><tr><td><b>Your current health (optional, default 100% of max health):</b> <input id='PlayerCurrentHealthInput' style='width:10%'/></td><td style='text-align:right'><b>Enemy current health (optional, default 100% of max health):</b> <input id='EnemyCurrentHealthInput' style='width:10%'/></td></tr></table><div style='margin-top:1em;text-align:center'><p>Real Time/Offline Time converter:<br><input id='SSCTimeConverterYearsInput' style='width:10%' placeholder='Years'></input><input id='SSCTimeConverterDaysInput' style='width:10%' placeholder='Days'></input><input id='SSCTimeConverterHoursInput' style='width:10%' placeholder='Hours'></input><input id='SSCTimeConverterMinutesInput' style='width:10%' placeholder='Minutes'></input><input id='SSCTimeConverterSecondsInput' style='width:10%' placeholder='Seconds'></input></p><p>Mode: <span id='SSCTimeConverterModeOutput' class='templatedesktop' style='padding:0.25em'>Real time > Offline time</span><br><p>Result: <span id='SSCTimeConverterTimeOutput'>?</span> (<span id='SSCTimeConverterEffectOutput'>?x</span>)</p><br><p>Challenge Score <> Fighting Multiplier converter:<br><input id='SSCCSConverterInput' style='width:20%' placeholder='CS or FM'><p>Mode: <span id='SSCCSConverterModeOutput' class='templatedesktop' style='padding:0.25em'>Challenge Score > Fighting Multiplier</span></p><p>Result: <span id='SSCCSConverterOutput'>?</span></p><button id='SSCCalculateButton'>Calculate</button></div><br><div class='templatedesktop' style='background:initial;border-left:0;border-right:0;border-bottom:0;padding:0.5em;border-radius:initial;text-align:center'><div style='font-size:20px;font-weight:bold'>Result</div><br>At Stage <span id='CurrentStageOutput'>?</span>, the requirements to complete the stage, when currently at <span id='CurrentHealthOutput'>?</span>/<span id='MaximumHealthOutput'>?</span> health<img src='./Solarian Stage Calculator/Assets/Health.png' width='50'/>, are:<br><br><img src='./Solarian Stage Calculator/Assets/Sword.png' width='50'/> Offence: <span id='PlayerOffenceCurrentOutput'>?</span> (current) > <span id='PlayerOffenceReqOutput'>?</span> (minimum necessary; currently unavailable) > <span id='PlayerOffenceMaxOutput'>?</span> (instant completion)<br><img src='./Solarian Stage Calculator/Assets/Shield.png' width='50'/> Defence: <span id='PlayerDefenceCurrentOutput'>?</span> (current) > <span id='PlayerDefenceReqOutput'>?</span> (minimum necessary; currently unavailable) > <span id='PlayerDefenceMaxOutput'>?</span> (instant completion)<br><p>Your Stage Bonuses will also become:<br><br>Sunrise FM: <span id='StageBonusSunriseFMCurrentOutput'>?</span>x > <span id='StageBonusSunriseFMNextOutput'>?</span>x<br>Solar Rays: <span id='StageBonusSolarRaysCurrentOutput'>?</span>x > <span id='StageBonusSolarRaysNextOutput'>?</span>x<br>Sunstone: <span id='StageBonusSunstoneCurrentOutput'>?</span>x > <span id='StageBonusSunstoneNextOutput'>?</span>x<br><span id='SolarShardsStageBonusContainer' style='display:none'>Solar Shards: <span id='StageBonusSolarShardsCurrentOutput'>?</span>x > <span id='StageBonusSolarShardsNextOutput'>?</span>x</span><br><span id='SoulsStageBonusContainer' style='display:none'>Souls (hidden bonus): <span id='StageBonusSoulsCurrentOutput'>?</span>x > <span id='StageBonusSoulsNextOutput'>?</span>x</span></p></div></div>";
 
         var playerOffence;
         var playerDefence;
@@ -20,7 +20,8 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
         var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
         var result; // Used for functions to avoid multiple return statements.
         var extraZeroes; // Used to determine the powers of 10 for scientific to suffix notation conversion, particularly for the functions 'toScientific' and 'notateInt'.
-        var modeTC = "ro"; // Determines the conversion method of the Offline Time Converter.
+        var modeTC = 'ro'; // Determines the conversion method of the Offline Time Converter.
+        var modeCSC = 'csfm'; // Determines the conversion method of the Challenge Score Converter.
 
         function toScientific(e) { // Used to ensure a user-inputted value is a scientific notation number.
             if (e.match(/[a-z]+/gi) !== null && suffixes[suffixesLC.indexOf(e.match(/[a-z]+/gi)[0].toLowerCase())] !== undefined) {
@@ -199,6 +200,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
             var hoursTC;
             var daysTC;
             var yearsTC;
+            var inputValueCSC;
             if (document.getElementById("SSCTimeConverterSecondsInput").value === '' || new Decimal(document.getElementById("SSCTimeConverterSecondsInput").value).lessThan(0)) {
                 secondsTC = new Decimal(0);
             } else {
@@ -223,6 +225,11 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                 yearsTC = new Decimal(0);
             } else {
                 yearsTC = toScientific(document.getElementById("SSCTimeConverterYearsInput").value);
+            }
+            if (document.getElementById("SSCCSConverterInput").value === '' || new Decimal(document.getElementById("SSCCSConverterInput").value).lessThan(0)) {
+                inputValueCSC = new Decimal(0);
+            } else {
+                inputValueCSC = toScientific(document.getElementById("SSCCSConverterInput").value).floor();
             }
             enemyOffence = new Decimal(30).times(enemyStatScaling.pow(currentStage.sub(1)));
             enemyDefence = new Decimal(10).times(enemyStatScaling.pow(currentStage.sub(1)));
@@ -391,7 +398,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                     const timeUnits = ["1", "60", "3.6e3", "8.64e4", "3.15576e7"];
                     const timeNames = ["Second", "Minute", "Hour", "Day", "Year"];
                     const timeNamesPlural = ["Seconds", "Minutes", "Hours", "Days", "Years"];
-					var maxTimeNames = timeUnits.length; // Determines the maximum number of time names to be outputted. Lower numbers may cause inaccuracies.
+                    var maxTimeNames = timeUnits.length; // Determines the maximum number of time names to be outputted. Lower numbers may cause inaccuracies.
 
                     function secondsToTime(input) { // Convert seconds to time names.
                         var years = new Decimal(input.dividedBy(new Decimal(timeUnits[4]))).floor();
@@ -450,6 +457,13 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
             } else {
                 document.getElementById("SSCTimeConverterTimeOutput").innerHTML = "0 Seconds";
             }
+            switch (modeCSC) {
+                case 'fmcs':
+                    document.getElementById('SSCCSConverterOutput').innerHTML = notateInt(decimalMax(1, inputValueCSC)) + 'x FM requires ' + notateInt(inputValueCSC.pow(2).floor()) + ' CS';
+                    break;
+                default:
+                    document.getElementById('SSCCSConverterOutput').innerHTML = notateInt(inputValueCSC) + ' CS equates to a FM of ' + notateInt(decimalMax(1, inputValueCSC.pow(0.5).floor())) + 'x';
+            }
         }
 
         // Add event listeners.
@@ -468,12 +482,22 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
             updateResults();
         });
         document.getElementById("SSCTimeConverterModeOutput").addEventListener("click", function() {
-            if (modeTC === "ro") {
+            if (modeTC === 'ro') {
                 document.getElementById("SSCTimeConverterModeOutput").innerHTML = "Offline time &gt; Real time";
-                modeTC = "or";
+                modeTC = 'or';
             } else {
                 document.getElementById("SSCTimeConverterModeOutput").innerHTML = "Real time &gt; Offline time";
-                modeTC = "ro";
+                modeTC = 'ro';
+            }
+            updateResults();
+        });
+        document.getElementById("SSCCSConverterModeOutput").addEventListener("click", function() {
+            if (modeCSC === 'csfm') {
+                document.getElementById("SSCCSConverterModeOutput").innerHTML = "Fighting Multiplier &gt; Challenge Score";
+                modeCSC = 'fmcs';
+            } else {
+                document.getElementById("SSCCSConverterModeOutput").innerHTML = "Challenge Score &gt; Fighting Multiplier";
+                modeCSC = 'csfm';
             }
             updateResults();
         });
