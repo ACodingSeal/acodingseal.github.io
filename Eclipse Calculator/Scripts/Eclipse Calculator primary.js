@@ -128,14 +128,11 @@ function addEclipseCalculator() { // Function for ensuring all the calculator's 
             document.getElementById("CurrentEclipse").innerHTML = notateInt(currentEclipse);
             document.getElementById("GoalEclipse").innerHTML = notateInt(goalEclipse);
             document.getElementById("NextEclipseCompletionOutput").innerHTML = notateInt(nextEclipseCompletion.times(100));
-            console.log(nextEclipseCompletion);
             result = new Decimal((new Decimal(100).times(new Decimal(1.05).pow((goalEclipse.sub(1))))).dividedBy(1.05 - 1).sub((new Decimal(100).times(new Decimal(1.05).pow((currentEclipse.sub(1))))).dividedBy(1.05 - 1))).sub(new Decimal(100).times(new Decimal(1.05).pow(currentEclipse.sub(1))).times(nextEclipseCompletion)); // Determines the total Solar Ray requirement from current Eclipse to goal Eclipse, as well as next Eclipse completion.
             if (currentEclipse.greaterThan(goalEclipse)) {
-                console.log("error");
                 document.getElementById("EclipseCalculatorSRReq").innerHTML = errorText;
                 document.getElementById("EclipseCalculatorTimeReq").innerHTML = errorText;
             } else {
-                console.log("normal");
                 document.getElementById("EclipseCalculatorSRReq").innerHTML = notateInt(result);
             }
         }

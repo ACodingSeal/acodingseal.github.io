@@ -105,7 +105,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
             switch (e) {
                 case "pp":
                     selectedCurr = "pp";
-                    console.log("Selected currency: Prestige Point");
                     document.getElementById("CGCPPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Prestige Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
@@ -114,7 +113,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "crystal":
                     selectedCurr = "crystal";
-                    console.log("Selected currency: Crystal");
                     document.getElementById("CGCCrystalSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FF00FF'>Crystal</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Tier: <input id='CGCTierInput' style='width:10%'/></p>";
@@ -123,7 +121,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "ap":
                     selectedCurr = "ap";
-                    console.log("Selected currency: Anonymity Point");
                     document.getElementById("CGCAPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DC143C'>Anonymity Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Normal Level: <input id='CGCNormalLevelInput' style='width:10%'/></p><p>Grass gained this Prestige: <input id='CGCGrassGainedInput' style='width:10%'/></p>";
@@ -132,14 +129,12 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "oil":
                     selectedCurr = "";
-                    console.log("Selected currency: Oil");
                     document.getElementById("CGCOilSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#6F6F6F'>Oil</span>";
                     unknownFormula(true);
                     break;
                 case "momentum":
                     selectedCurr = "momentum";
-                    console.log("Selected currency: Momentum");
                     document.getElementById("CGCMomentumSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFA500'>Momentum</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Rocket Parts created: <input id='CGCRocketPartInput' style='width:10%'/></p><p>Supernova performed? <b><span id='CGCSupernovaDoneButton' class='templatedesktop' style='color:#FF0000;padding:0.5em'>No</span></b> (click to toggle)</p>";
@@ -157,7 +152,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "dm":
                     selectedCurr = "dm";
-                    console.log("Selected currency: Dark Matter");
                     document.getElementById("CGCDMSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Dark Matter</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Stars: <input id='CGCCurrentStarsInput' style='width:10%'/></p>";
@@ -166,7 +160,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "np":
                     selectedCurr = "np";
-                    console.log("Selected currency: Normality Point");
                     document.getElementById("CGCNPSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Normality Point</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Unnatural Level: <input id='CGCUnnaturalLevelInput' style='width:10%'/></p><p>Astral: <input id='CGCAstralInput' style='width:10%'/></p>";
@@ -175,7 +168,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "ring":
                     selectedCurr = "ring";
-                    console.log("Selected currency: Ring");
                     document.getElementById("CGCRingSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Ring</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
@@ -184,7 +176,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "astro":
                     selectedCurr = "astro";
-                    console.log("Selected currency: Astro");
                     document.getElementById("CGCAstroSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Astro</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
@@ -193,7 +184,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "measure":
                     selectedCurr = "measure";
-                    console.log("Selected currency: Measure");
                     document.getElementById("CGCMeasureSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#F5F2F7'>Measure</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
@@ -202,7 +192,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "planet":
                     selectedCurr = "planet";
-                    console.log("Selected currency: Planet");
                     document.getElementById("CGCPlanetSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#008000'>Planet</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
@@ -211,7 +200,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "lunarpower":
                     selectedCurr = "lunarpower";
-                    console.log("Selected currency: Lunar Power");
                     document.getElementById("CGCLunarPowerSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#8BBFFF'>Lunar Power</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Moonstone: <input id='CGCCurrentMoonstoneInput' style='width:10%'/></p>";
@@ -220,7 +208,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "stardust":
                     selectedCurr = "stardust";
-                    console.log("Selected currency: Stardust");
                     document.getElementById("CGCStardustSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Stardust</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
@@ -229,7 +216,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "solarshard":
                     selectedCurr = "solarshard";
-                    console.log("Selected currency: Solar Shard");
                     document.getElementById("CGCSolarShardSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Solar Shard</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Star Tier: <input id='CGCStarTierInput' style='width:10%'/></p><p>Star Growth: <input id='CGCStarGrowthInput' style='width:10%'/></p>";
@@ -238,7 +224,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "solarray":
                     selectedCurr = "solarray";
-                    console.log("Selected currency: Solar Ray");
                     document.getElementById("CGCSolarRaySelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Solar Ray</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Star Growth: <input id='CGCStarGrowthInput' style='width:10%'/></p>";
@@ -247,7 +232,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "sunstone":
                     selectedCurr = "sunstone";
-                    console.log("Selected currency: Sunstone");
                     document.getElementById("CGCSunstoneSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#FFFF00'>Sunstone</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Eclipse: <input id='CGCEclipseInput' style='width:10%'/></p>";
@@ -256,7 +240,6 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     break;
                 case "soul":
                     selectedCurr = "soul";
-                    console.log("Selected currency: Soul");
                     document.getElementById("CGCSoulSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Soul</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Current Stage: <input id='CGCStageInput' style='width:10%'/></p><p>Total Souls (includes spent): <input id='CGCTotalSoulsInput' style='width:10%'/></p><p><span style='color:#FF00FF'>Soul Stealer</span> bought? <b><span id='CGCSoulStealerStatusButton' class='templatedesktop' style='color:#FF0000;padding:0.5em'>No</span></b> (click to toggle)</p>";
