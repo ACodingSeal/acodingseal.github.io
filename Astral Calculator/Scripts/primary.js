@@ -589,7 +589,7 @@ function addAstralCalculator() { // Function for ensuring all the calculator's v
 
             if (currentAstralPrestige.greaterThan(8) || goalAstralPrestige.greaterThan(8)) {
                 document.getElementById("ACAstralBonusPrestigePointsBonusContainer").setAttribute("style", "display:block");
-                updateAstralBonuses("PrestigePointsBonus", astralBonusPrestigePointsBonusBonusCurrent, astralBonusPrestigePointsBonusBonusNext);
+                updateAstralBonuses("PrestigePointsBonus", astralBonusPrestigePointsBonusCurrent, astralBonusPrestigePointsBonusBonusNext);
             } else {
                 document.getElementById("ACAstralBonusPrestigePointsBonusContainer").setAttribute("style", "display:none");
             }
