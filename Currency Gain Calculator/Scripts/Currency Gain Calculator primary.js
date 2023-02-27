@@ -3,10 +3,10 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
         console.log("[Currency Gain Calculator] [LOG]: ID located. Running script.");
 
         // Create the calculator's user interface.
-        const calculatorHTMLCurrencySelectionContainer = "<tr><td><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Currency Selection</div><p style='text-align:center'>Selected: <b><span id='CGCSelectedCurrency'>?</span></b></p><p style='text-align:center'><img id='CGCPPSelection' src='./Currency Gain Calculator/Assets/Prestige.png' width='50'/><img id='CGCCrystalSelection' src='./Currency Gain Calculator/Assets/Crystal.png' width='50'/><img id='CGCAPSelection' src='./Currency Gain Calculator/Assets/Anonymity.png' width='50'/><img id='CGCOilSelection' src='./Currency Gain Calculator/Assets/Oil.png' width='50'/><img id='CGCMomentumSelection' src='./Currency Gain Calculator/Assets/Momentum.png' width='50'/><img id='CGCDMSelection' src='./Currency Gain Calculator/Assets/DarkMatter.png' width='50'/><img id='CGCNPSelection' src='./Currency Gain Calculator/Assets/Normality.png' width='50'/><img id='CGCRingSelection' src='./Currency Gain Calculator/Assets/Ring.png' width='50'/><img id='CGCAstroSelection' src='./Currency Gain Calculator/Assets/Astrolabe New.png' width='50'/><img id='CGCMeasureSelection' src='./Currency Gain Calculator/Assets/Measure.png' width='50'/><img id='CGCLunarPowerSelection' src='./Currency Gain Calculator/Assets/Lunar.png' width='50'/><img id='CGCPlanetSelection' src='./Currency Gain Calculator/Assets/Planet.png' width='50'/><img id='CGCStardustSelection' src='./Currency Gain Calculator/Assets/Stardust.png' width='50'/><img id='CGCSolarShardSelection' src='./Currency Gain Calculator/Assets/SolarShard.png' width='50'/><img id='CGCSolarRaySelection' src='./Currency Gain Calculator/Assets/XP3.png' width='50'/><img id='CGCSunstoneSelection' src='./Currency Gain Calculator/Assets/Sunstone.png' width='50'/><img id='CGCSoulSelection' src='./Currency Gain Calculator/Assets/Soul.png' width='50'/></p></td></tr>";
+        const calculatorHTMLCurrencySelectionContainer = "<tr><td><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Currency Selection</div><p style='text-align:center'>Selected: <b><span id='CGCSelectedCurrency'>?</span></b></p><p style='text-align:center'><img id='CGCPPSelection' src='./Assets/Prestige.png' width='50'/><img id='CGCCrystalSelection' src='./Assets/Crystal.png' width='50'/><img id='CGCAPSelection' src='./Assets/Anonymity.png' width='50'/><img id='CGCOilSelection' src='./Assets/Oil.png' width='50'/><img id='CGCMomentumSelection' src='./Assets/Momentum.png' width='50'/><img id='CGCDMSelection' src='./Assets/DarkMatter.png' width='50'/><img id='CGCNPSelection' src='./Assets/Normality.png' width='50'/><img id='CGCRingSelection' src='./Assets/Ring.png' width='50'/><img id='CGCAstroSelection' src='./Assets/Astrolabe New.png' width='50'/><img id='CGCMeasureSelection' src='./Assets/Measure.png' width='50'/><img id='CGCLunarPowerSelection' src='./Assets/Lunar.png' width='50'/><img id='CGCPlanetSelection' src='./Assets/Planet.png' width='50'/><img id='CGCStardustSelection' src='./Assets/Stardust.png' width='50'/><img id='CGCSolarShardSelection' src='./Assets/SolarShard.png' width='50'/><img id='CGCSolarRaySelection' src='./Assets/XP3.png' width='50'/><img id='CGCSunstoneSelection' src='./Assets/Sunstone.png' width='50'/><img id='CGCSoulSelection' src='./Assets/Soul.png' width='50'/></p></td></tr>";
         const calculatorHTMLInputsContainer = "<tr><td id='CGCInputsOuterContainer' style='display:none'><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Inputs</div><p id='CGCInputsInnerContainer'></p></td></tr>";
         const calculatorHTMLResultsContainer = "<tr><td id='CGCResultsOuterContainer' style='display:none'><div class='templatedesktop' style='background:initial;border-radius:initial;border-left:0;border-right:0;padding:0.25em;font-size:20px;text-align:center'>Result</div><center><br><button id='CGCCalculateButton'>Calculate</button><br>Formula: <span id='CGCFormulaUsed'>?</span><br><br><div id='CGCResultsInnerContainer'></div></center></td></tr>";
-        document.getElementById("CurrencyGainCalculator").innerHTML = "<div id='CurrencyGainCalculatorContainer' class='templatedesktop' style='padding:1em;background:#4D4D4D;text-align:center;width:80%;margin:auto'><div style='text-align:initial;width:20%;padding:1em;background:initial;overflow:auto' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='CGCSuffixButton'>Disabled</button></div><div style='text-align:center;font-weight:bold;font-size:20px'><img src='./Currency Gain Calculator/Assets/Prestige.png' width='75'/> Currency Gain Calculator <img src='./Currency Gain Calculator/Assets/DarkMatter.png' width='75'/></div><table class='templatedesktop' style='margin:auto;width:100%;border:0;border-radius:initial;background:#3D3D3D;padding:0.5em'>" + calculatorHTMLCurrencySelectionContainer + calculatorHTMLInputsContainer + calculatorHTMLResultsContainer + "</table></div>";
+        document.getElementById("CurrencyGainCalculator").innerHTML = "<div id='CurrencyGainCalculatorContainer' class='templatedesktop' style='padding:1em;background:#4D4D4D;text-align:center;width:80%;margin:auto'><div style='text-align:initial;width:20%;padding:1em;background:initial;overflow:auto' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='CGCSuffixButton'>Disabled</button></div><div style='text-align:center;font-weight:bold;font-size:20px'><img src='./Assets/Prestige.png' width='75'/> Currency Gain Calculator <img src='./Assets/DarkMatter.png' width='75'/></div><table class='templatedesktop' style='margin:auto;width:100%;border:0;border-radius:initial;background:#3D3D3D;padding:0.5em'>" + calculatorHTMLCurrencySelectionContainer + calculatorHTMLInputsContainer + calculatorHTMLResultsContainer + "</table></div>";
 
         // Variable and constant declarations.
         var suffixStatus = false; // Determines whether suffix notation output is enabled or disabled.
@@ -82,6 +82,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
             }
             return result;
         }
+
 
         // Update the inputs according to the selected currency.
         function updateInputs(e) {
@@ -173,7 +174,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCRingSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#00FFFF'>Ring</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(1 × (1.03 ^ max(0, (Planetoid Level - 5))))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(1 × (1.03 ^ max(0, Planetoid Level - 5)))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base Ring gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "astro":
@@ -189,7 +190,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCMeasureSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#F5F2F7'>Measure</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.03 ^ max(0, (Planetoid Level - 101))))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.03 ^ max(0, Planetoid Level - 101)))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base <span style='color:#F5F2F7;font-weight:bold'>Measure</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "planet":
@@ -197,7 +198,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCPlanetSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#008000'>Planet</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.03 ^ max(0, (Planetoid Level - 191))))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>floor(3 × (1.03 ^ max(0, Planetoid Level - 191)))</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the base <span style='color:#008000;font-weight:bold'>Planet</span> gain is: <span id='CGCResultOutput'>?</span>";
                     break;
                 case "lunarpower":
@@ -213,7 +214,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     document.getElementById("CGCStardustSelection").setAttribute("class", "SelectedCurr");
                     document.getElementById("CGCSelectedCurrency").innerHTML = "<span style='color:#DD00FF'>Stardust</span>";
                     document.getElementById("CGCInputsInnerContainer").innerHTML = "<p>Planetoid Level: <input id='CGCPlanetoidLevelInput' style='width:10%'/></p>";
-                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>1.01 ^ max(0, (Planetoid Level - 449))</code>";
+                    document.getElementById("CGCFormulaUsed").innerHTML = "<code>1.01 ^ max(0, Planetoid Level - 449)</code>";
                     document.getElementById("CGCResultsInnerContainer").innerHTML = "At Planetoid Level <span id='CGCPlanetoidLevelOutput'>?</span>, the Planetoid Level-based bonus to <span style='color:#DD00FF;font-weight:bold'>Stardust</span> gain is: <span id='CGCResultOutput'>?</span>x";
                     break;
                 case "solarshard":
@@ -292,12 +293,12 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCNormalLevelInput").value === '' || new Decimal(document.getElementById("CGCNormalLevelInput").value).lessThan(1)) {
                         normalLevel = new Decimal(1);
                     } else {
-                        normalLevel = toScientific(document.getElementById("CGCNormalLevelInput").value);
+                        normalLevel = toScientific(document.getElementById("CGCNormalLevelInput").value).floor();
                     }
                     if (document.getElementById("CGCGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCGrassGainedInput").value).lessThan(0)) {
                         grassGained = new Decimal(0);
                     } else {
-                        grassGained = toScientific(document.getElementById("CGCGrassGainedInput").value);
+                        grassGained = toScientific(document.getElementById("CGCGrassGainedInput").value).floor();
                     }
                     document.getElementById("CGCNormalLevelOutput").innerHTML = notateInt(normalLevel);
                     document.getElementById("CGCGrassGainedOutput").innerHTML = notateInt(grassGained);
@@ -312,7 +313,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCTierInput").value === '' || new Decimal(document.getElementById("CGCTierInput").value).lessThan(1)) {
                         tier = new Decimal(1);
                     } else {
-                        tier = toScientific(document.getElementById("CGCTierInput").value);
+                        tier = toScientific(document.getElementById("CGCTierInput").value).floor();
                     }
                     document.getElementById("CGCTierOutput").innerHTML = notateInt(tier);
                     document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(4).times(tier).times(new Decimal(1.1).pow(tier)).floor());
@@ -323,12 +324,12 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCNormalLevelInput").value === '' || new Decimal(document.getElementById("CGCNormalLevelInput").value).lessThan(1)) {
                         normalLevel = new Decimal(1);
                     } else {
-                        normalLevel = toScientific(document.getElementById("CGCNormalLevelInput").value);
+                        normalLevel = toScientific(document.getElementById("CGCNormalLevelInput").value).floor();
                     }
                     if (document.getElementById("CGCGrassGainedInput").value === '' || new Decimal(document.getElementById("CGCGrassGainedInput").value).lessThan(0)) {
                         grassGained = new Decimal(0);
                     } else {
-                        grassGained = toScientific(document.getElementById("CGCGrassGainedInput").value);
+                        grassGained = toScientific(document.getElementById("CGCGrassGainedInput").value).floor();
                     }
                     document.getElementById("CGCNormalLevelOutput").innerHTML = notateInt(normalLevel);
                     document.getElementById("CGCGrassGainedOutput").innerHTML = notateInt(grassGained);
@@ -343,7 +344,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCTierInput").value === '' || new Decimal(document.getElementById("CGCTierInput").value).lessThan(1)) {
                         tier = new Decimal(1);
                     } else {
-                        tier = toScientific(document.getElementById("CGCTierInput").value);
+                        tier = toScientific(document.getElementById("CGCTierInput").value).floor();
                     }
                     document.getElementById("CGCTierOutput").innerHTML = notateInt(tier);
                     document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(4).times(tier).times(new Decimal(1.1).pow(tier)).floor());
@@ -384,7 +385,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCCurrentStarsInput").value === '' || new Decimal(document.getElementById("CGCCurrentStarsInput").value).lessThan(0)) {
                         stars = new Decimal(0);
                     } else {
-                        stars = toScientific(document.getElementById("CGCCurrentStarsInput").value);
+                        stars = toScientific(document.getElementById("CGCCurrentStarsInput").value).floor();
                     }
                     document.getElementById("CGCCurrentStarsOutput").innerHTML = notateInt(stars);
                     if (stars.lessThan(1e9)) {
@@ -399,12 +400,12 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCUnnaturalLevelInput").value === '' || new Decimal(document.getElementById("CGCUnnaturalLevelInput").value).lessThan(1)) {
                         unnaturalLevel = new Decimal(1);
                     } else {
-                        unnaturalLevel = toScientific(document.getElementById("CGCUnnaturalLevelInput").value);
+                        unnaturalLevel = toScientific(document.getElementById("CGCUnnaturalLevelInput").value).floor();
                     }
                     if (document.getElementById("CGCAstralInput").value === '' || new Decimal(document.getElementById("CGCAstralInput").value).lessThan(1)) {
                         astral = new Decimal(1);
                     } else {
-                        astral = toScientific(document.getElementById("CGCAstralInput").value);
+                        astral = toScientific(document.getElementById("CGCAstralInput").value).floor();
                     }
                     document.getElementById("CGCUnnaturalLevelOutput").innerHTML = notateInt(unnaturalLevel);
                     document.getElementById("CGCAstralOutput").innerHTML = notateInt(astral);
@@ -419,7 +420,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCPlanetoidLevelInput").value === '' || new Decimal(document.getElementById("CGCPlanetoidLevelInput").value).lessThan(1)) {
                         planetoidLevel = new Decimal(1);
                     } else {
-                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
+                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value).floor();
                     }
                     document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
                     if (planetoidLevel.lessThan(5)) {
@@ -433,7 +434,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCPlanetoidLevelInput").value === '' || new Decimal(document.getElementById("CGCPlanetoidLevelInput").value).lessThan(1)) {
                         planetoidLevel = new Decimal(1);
                     } else {
-                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
+                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value).floor();
                     }
                     document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
                     document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(3).times(new Decimal(1.05).pow(planetoidLevel.add(1))).floor());
@@ -443,7 +444,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCPlanetoidLevelInput").value === '' || new Decimal(document.getElementById("CGCPlanetoidLevelInput").value).lessThan(1)) {
                         planetoidLevel = new Decimal(1);
                     } else {
-                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
+                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value).floor();
                     }
                     document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
                     if (planetoidLevel.lessThan(101)) {
@@ -457,7 +458,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCPlanetoidLevelInput").value === '' || new Decimal(document.getElementById("CGCPlanetoidLevelInput").value).lessThan(1)) {
                         planetoidLevel = new Decimal(1);
                     } else {
-                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
+                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value).floor();
                     }
                     document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
                     if (planetoidLevel.lessThan(201)) {
@@ -471,10 +472,12 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCCurrentMoonstoneInput").value === '' || new Decimal(document.getElementById("CGCCurrentMoonstoneInput").value).lessThan(0)) {
                         moonstone = new Decimal(0);
                     } else {
-                        moonstone = toScientific(document.getElementById("CGCCurrentMoonstoneInput").value);
+                        moonstone = toScientific(document.getElementById("CGCCurrentMoonstoneInput").value).floor();
                     }
                     document.getElementById("CGCCurrentMoonstoneOutput").innerHTML = notateInt(moonstone);
-                    if (moonstone.greaterThan(0)) {
+                    if (moonstone.equals(1)) {
+                        document.getElementById("CGCResultOutput").innerHTML = notateInt(0.1);
+                    } else if (moonstone.greaterThan(0)) {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(new Decimal(1.5).pow(moonstone.log10()).dividedBy(100));
                     } else {
                         document.getElementById("CGCResultOutput").innerHTML = notateInt(0);
@@ -485,7 +488,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCPlanetoidLevelInput").value === '' || new Decimal(document.getElementById("CGCPlanetoidLevelInput").value).lessThan(1)) {
                         planetoidLevel = new Decimal(1);
                     } else {
-                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value);
+                        planetoidLevel = toScientific(document.getElementById("CGCPlanetoidLevelInput").value).floor();
                     }
                     document.getElementById("CGCPlanetoidLevelOutput").innerHTML = notateInt(planetoidLevel);
                     if (planetoidLevel.lessThan(450)) {
@@ -503,7 +506,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     } else if (new Decimal(document.getElementById("CGCStarTierInput").value).greaterThan(6)) {
                         starTier = new Decimal(6);
                     } else {
-                        starTier = toScientific(document.getElementById("CGCStarTierInput").value);
+                        starTier = toScientific(document.getElementById("CGCStarTierInput").value).floor();
                     }
                     switch (Number(starTier)) {
                         case 0:
@@ -530,7 +533,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCStarGrowthInput").value === '' || new Decimal(document.getElementById("CGCStarGrowthInput").value).lessThan(0)) {
                         starGrowth = new Decimal(0);
                     } else {
-                        starGrowth = toScientific(document.getElementById("CGCStarGrowthInput").value);
+                        starGrowth = toScientific(document.getElementById("CGCStarGrowthInput").value).floor();
                     }
                     document.getElementById("CGCStarTierOutput").innerHTML = notateInt(starTier);
                     document.getElementById("CGCStarGrowthOutput").innerHTML = notateInt(starGrowth);
@@ -549,7 +552,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCStarGrowthInput").value === '' || new Decimal(document.getElementById("CGCStarGrowthInput").value).lessThan(0)) {
                         starGrowth = new Decimal(0);
                     } else {
-                        starGrowth = toScientific(document.getElementById("CGCStarGrowthInput").value);
+                        starGrowth = toScientific(document.getElementById("CGCStarGrowthInput").value).floor();
                     }
                     document.getElementById("CGCStarGrowthOutput").innerHTML = notateInt(starGrowth);
                     if (starGrowth.lessThan(10)) {
@@ -565,7 +568,7 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     } else if (new Decimal(document.getElementById("CGCEclipseInput").value).greaterThanOrEqualTo(300)) {
                         eclipse = new Decimal(300);
                     } else {
-                        eclipse = toScientific(document.getElementById("CGCEclipseInput").value);
+                        eclipse = toScientific(document.getElementById("CGCEclipseInput").value).floor();
                     }
                     document.getElementById("CGCEclipseOutput").innerHTML = notateInt(eclipse);
                     if (eclipse.greaterThanOrEqualTo(300)) {
@@ -581,12 +584,12 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
                     if (document.getElementById("CGCStageInput").value === '' || new Decimal(document.getElementById("CGCStageInput").value).lessThan(1)) {
                         currentStage = new Decimal(1);
                     } else {
-                        currentStage = toScientific(document.getElementById("CGCStageInput").value);
+                        currentStage = toScientific(document.getElementById("CGCStageInput").value).floor();
                     }
                     if (document.getElementById("CGCTotalSoulsInput").value === '' || new Decimal(document.getElementById("CGCTotalSoulsInput").value).lessThan(0)) {
                         totalSouls = new Decimal(0);
                     } else {
-                        totalSouls = toScientific(document.getElementById("CGCTotalSoulsInput").value);
+                        totalSouls = toScientific(document.getElementById("CGCTotalSoulsInput").value).floor();
                     }
                     if (document.getElementById("CGCSoulStealerStatusButton").innerHTML === "Yes") {
                         document.getElementById("CGCSoulStealerTextOutput").setAttribute("style", "display:inline");
@@ -612,74 +615,29 @@ function addCurrencyGainCalculator() { // Function for ensuring all the calculat
         // Currencies that still need their formulae implemented: Oil.
 
         // Add click event listeners to the currency selection options.
-        document.getElementById("CGCPPSelection").addEventListener("click", function() {
-            updateInputs("pp");
-            updateResults();
-        });
-        document.getElementById("CGCCrystalSelection").addEventListener("click", function() {
-            updateInputs("crystal");
-            updateResults();
-        });
-        document.getElementById("CGCAPSelection").addEventListener("click", function() {
-            updateInputs("ap");
-            updateResults();
-        });
-        document.getElementById("CGCOilSelection").addEventListener("click", function() {
-            updateInputs("oil");
-            updateResults();
-        });
-        document.getElementById("CGCMomentumSelection").addEventListener("click", function() {
-            updateInputs("momentum");
-            updateResults();
-        });
-        document.getElementById("CGCDMSelection").addEventListener("click", function() {
-            updateInputs("dm");
-            updateResults();
-        });
-        document.getElementById("CGCNPSelection").addEventListener("click", function() {
-            updateInputs("np");
-            updateResults();
-        });
-        document.getElementById("CGCRingSelection").addEventListener("click", function() {
-            updateInputs("ring");
-            updateResults();
-        });
-        document.getElementById("CGCAstroSelection").addEventListener("click", function() {
-            updateInputs("astro");
-            updateResults();
-        });
-        document.getElementById("CGCMeasureSelection").addEventListener("click", function() {
-            updateInputs("measure");
-            updateResults();
-        });
-        document.getElementById("CGCLunarPowerSelection").addEventListener("click", function() {
-            updateInputs("lunarpower");
-            updateResults();
-        });
-        document.getElementById("CGCPlanetSelection").addEventListener("click", function() {
-            updateInputs("planet");
-            updateResults();
-        });
-        document.getElementById("CGCStardustSelection").addEventListener("click", function() {
-            updateInputs("stardust");
-            updateResults();
-        });
-        document.getElementById("CGCSolarShardSelection").addEventListener("click", function() {
-            updateInputs("solarshard");
-            updateResults();
-        });
-        document.getElementById("CGCSolarRaySelection").addEventListener("click", function() {
-            updateInputs("solarray");
-            updateResults();
-        });
-        document.getElementById("CGCSunstoneSelection").addEventListener("click", function() {
-            updateInputs("sunstone");
-            updateResults();
-        });
-        document.getElementById("CGCSoulSelection").addEventListener("click", function() {
-            updateInputs("soul");
-            updateResults();
-        });
+        function addListenerToCurrency(curr) {
+            document.getElementById('CGC' + curr + 'Selection').addEventListener('click', function() {
+                updateInputs(curr.toLowerCase());
+                updateResults();
+            });
+        }
+        addListenerToCurrency('PP');
+        addListenerToCurrency('Crystal');
+        addListenerToCurrency('AP');
+        addListenerToCurrency('Oil');
+        addListenerToCurrency('Momentum');
+        addListenerToCurrency('DM');
+        addListenerToCurrency('NP');
+        addListenerToCurrency('Ring');
+        addListenerToCurrency('Astro');
+        addListenerToCurrency('Measure');
+        addListenerToCurrency('LunarPower');
+        addListenerToCurrency('Planet');
+        addListenerToCurrency('Stardust');
+        addListenerToCurrency('SolarShard');
+        addListenerToCurrency('SolarRay');
+        addListenerToCurrency('Sunstone');
+        addListenerToCurrency('Soul');
 
         // Add click event listeners to the calculate and suffix toggle buttons.
         document.getElementById("CGCCalculateButton").addEventListener("click", function() {
