@@ -238,7 +238,11 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
         updateResult();
 
         // Add event listeners.
-        document.getElementById('LCCurrentRealmSlider').addEventListener('input', updateResult);
+        document.getElementById('LCCurrentRealmSlider').addEventListener('input', function() {
+			document.getElementById('LCCurrentLevelInput').value = '';
+			document.getElementById('LCGoalLevelInput').value = '';
+			updateResult();
+		});
         document.getElementById('LCSuffixToggleButton').addEventListener('click', function() {
             if (suffixStatus === false) {
                 suffixStatus = true;
