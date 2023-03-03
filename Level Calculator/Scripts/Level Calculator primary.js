@@ -3,7 +3,7 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
         console.log('[Level Calculator] [LOG]: ID located. Running script.');
 
         // Create the calculator's user interface.
-        document.getElementById('LevelCalculator').innerHTML = "<div id='LevelCalculatorContainer'><div class='templatedesktop' style='text-align:center;padding:0.5em;width:80%;margin:auto'><span style='text-align:center;font-size:30px;color:#FFF'><img src='./Assets/XP.png' width='150'/> Level Calculator <img src='./Assets/XP.png' width='150'/></span><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='LCSuffixToggleButton'>Disabled</button></div><p>Current Level (<abbr id='LCCurrentLevelNotes' title='(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCCurrentLevelInput' style='width:10%'/></p><p>Desired Level (<abbr id='LCGoalLevelNotes' title='(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCGoalLevelInput' style='width:10%'/></p><p>Current Realm (<abbr title='Default value: Normal Realm.'>notes</abbr>): <input id='LCCurrentRealmSlider' class='slider' type='range' value='0' min='0' max='3'/><br><small>Currently: <span id='LCCurrentRealmOutput'>?</span></small></p><br><p class='templatedesktop' style='border-left:initial;border-right:initial;border-radius:initial;padding:0.25em'>Result</p><p><button id='LCCalculateButton'>Calculate</button></p>At <span id='LCCurrentLevelTypeOutput'></span> <span id='LCCurrentLevelOutput'>?</span>, the requirement to reach <span id='LCGoalLevelTypeOutput'></span> <span id='LCGoalLevelOutput'>?</span> is:<br><span id='LCRequirementTypeOutput'></span> <span id='LCRequirementOutput'>?</span></table></div></div>";
+        document.getElementById('LevelCalculator').innerHTML = "<div id='LevelCalculatorContainer'><div class='templatedesktop' style='text-align:center;padding:0.5em;width:80%;margin:auto'><span style='text-align:center;font-size:30px;color:#FFF'><img src='./Level Calculator/Assets/XP.png' width='150'/> Level Calculator <img src='./Level Calculator/Assets/XP.png' width='150'/></span><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='LCSuffixToggleButton'>Disabled</button></div><p>Current Level (<abbr id='LCCurrentLevelNotes' title='(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCCurrentLevelInput' style='width:10%'/></p><p>Desired Level (<abbr id='LCGoalLevelNotes' title='(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCGoalLevelInput' style='width:10%'/></p><p>Current Realm (<abbr title='Default value: Normal Realm.'>notes</abbr>): <input id='LCCurrentRealmSlider' class='slider' type='range' value='0' min='0' max='3'/><br><small>Currently: <span id='LCCurrentRealmOutput'>?</span></small></p><br><p class='templatedesktop' style='border-left:initial;border-right:initial;border-radius:initial;padding:0.25em'>Result</p><p><button id='LCCalculateButton'>Calculate</button></p>At <span id='LCCurrentLevelTypeOutput'></span> <span id='LCCurrentLevelOutput'>?</span>, the requirement to reach <span id='LCGoalLevelTypeOutput'></span> <span id='LCGoalLevelOutput'>?</span> is:<br><span id='LCRequirementTypeOutput'></span> <span id='LCRequirementOutput'>?</span></table></div></div>";
 
         // Variable declarations.
         var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
@@ -87,7 +87,6 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
                             extraZeroes = e.exponent % 3;
                         }
                         result = decimalMax(checkNoDecimal(e.mantissa * (10 ** extraZeroes)) % 10, 1) + 'e' + notateInt(checkNoDecimal(e.exponent)); // If suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
-                        console.log('testing: ' + result);
                         break;
                     default:
                         result = decimalMax(checkNoDecimal(e.mantissa) % 10, 1) + 'e' + notateInt(checkNoDecimal(e.exponent)); // Modification of the above: If the exponent is less than 1e6, return the mantissa with a fixed decimal length plus the exponent with comma-separated numbers.
@@ -137,28 +136,28 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
                     document.getElementById('LCCurrentRealmOutput').innerHTML = "<span style='color:#87CEEB;font-weight:bold'>Normal Realm</span>";
                     document.getElementById('LCCurrentLevelTypeOutput').innerHTML = "<span style='color:#87CEEB;font-weight:bold'>Normal Level</span>";
                     document.getElementById('LCGoalLevelTypeOutput').innerHTML = "<span style='color:#87CEEB;font-weight:bold'>Normal Level</span>";
-                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Assets/XP.png' width='50'/><b>XP:</b>";
+                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Level Calculator/Assets/XP.png' width='50'/><b>XP:</b>";
                     break;
                 case 1:
                     realm = 'anti';
                     document.getElementById('LCCurrentRealmOutput').innerHTML = "<span style='color:#0000FF;font-weight:bold'>Anti Realm</span>";
                     document.getElementById('LCCurrentLevelTypeOutput').innerHTML = "<span style='color:#0000FF;font-weight:bold'>Anti Level</span>";
                     document.getElementById('LCGoalLevelTypeOutput').innerHTML = "<span style='color:#0000FF;font-weight:bold'>Anti Level</span>";
-                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Assets/XP.png' width='50'/><b>XP:</b>";
+                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Level Calculator/Assets/XP.png' width='50'/><b>XP:</b>";
                     break;
                 case 2:
                     realm = 'unnatural';
                     document.getElementById('LCCurrentRealmOutput').innerHTML = "<span style='color:#9EEB00;font-weight:bold'>Unnatural Realm</span>";
                     document.getElementById('LCCurrentLevelTypeOutput').innerHTML = "<span style='color:#9EEB00;font-weight:bold'>Unnatural Level</span>";
                     document.getElementById('LCGoalLevelTypeOutput').innerHTML = "<span style='color:#9EEB00;font-weight:bold'>Unnatural Level</span>";
-                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Assets/XP.png' width='50'/><b>XP:</b>";
+                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Level Calculator/Assets/XP.png' width='50'/><b>XP:</b>";
                     break;
                 case 3:
                     realm = 'planetoid';
                     document.getElementById('LCCurrentRealmOutput').innerHTML = "<span style='color:#8000FF;font-weight:bold'>Planetoid</span>";
                     document.getElementById('LCCurrentLevelTypeOutput').innerHTML = "<span style='color:#8000FF;font-weight:bold'>Planetoid Level</span>";
                     document.getElementById('LCGoalLevelTypeOutput').innerHTML = "<span style='color:#8000FF;font-weight:bold'>Planetoid Level</span>";
-                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Assets/XP2.png' width='50'/><b>Cosmic:</b>";
+                    document.getElementById('LCRequirementTypeOutput').innerHTML = "<img src='./Level Calculator/Assets/XP2.png' width='50'/><b>Cosmic:</b>";
             }
             document.getElementById('LCCurrentLevelOutput').innerHTML = '?';
             document.getElementById('LCGoalLevelOutput').innerHTML = '?';
