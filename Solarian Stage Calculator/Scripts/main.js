@@ -367,6 +367,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
 
 
             // Variables are currently declared outside their function for testing.
+            var maxDivide;
             var playerMaxHits = (playerCurrentHealth.add(playerDefence)).dividedBy(enemyOffence);
             var enemyMaxHits = (enemyCurrentHealth.add(enemyDefence)).dividedBy(playerOffence);
             var playerOffenceReq = playerOffence;
