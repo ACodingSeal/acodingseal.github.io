@@ -174,8 +174,8 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
             }
             if (document.getElementById("LCGoalLevelInput").value === '') {
                 goalLevel = currentLevel.add(1);
-			} else if (toScientific(document.getElementById("LCGoalLevelInput").value).lessThan(1)) {
-				goalLevel = new Decimal(1);
+            } else if (toScientific(document.getElementById("LCGoalLevelInput").value).lessThan(1)) {
+                goalLevel = new Decimal(1);
             } else {
                 goalLevel = toScientific(document.getElementById("LCGoalLevelInput").value).floor();
             }
@@ -229,11 +229,11 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
                 goalReq = goalReq.add(calcSingle(i));
             }
             result = goalReq.sub(currentReq);
-			if (result.lessThan(0)) {
-				document.getElementById('LCRequirementOutput').innerHTML = '-' + notateInt(result.toString().replace(/[-]/, ''));
-			} else {
-				document.getElementById('LCRequirementOutput').innerHTML = notateInt(result);
-			}
+            if (result.lessThan(0)) {
+                document.getElementById('LCRequirementOutput').innerHTML = '-' + notateInt(result.toString().replace(/[-]/, ''));
+            } else {
+                document.getElementById('LCRequirementOutput').innerHTML = notateInt(result);
+            }
         }
         updateResult();
 
