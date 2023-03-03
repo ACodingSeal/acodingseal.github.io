@@ -3,7 +3,7 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
         console.log('[Level Calculator] [LOG]: ID located. Running script.');
 
         // Create the calculator's user interface.
-        document.getElementById('LevelCalculator').innerHTML = "<div id='LevelCalculatorContainer'><div class='templatedesktop' style='text-align:center;padding:0.5em;width:80%;margin:auto'><span style='text-align:center;font-size:30px;color:#FFF'><img src='./Level Calculator/Assets/XP.png' width='150'/> Level Calculator <img src='./Level Calculator/Assets/XP2.png' width='150'/></span><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='LCSuffixToggleButton'>Disabled</button></div><p>Current Level (<abbr id='LCCurrentLevelNotes' title='(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCCurrentLevelInput' style='width:10%'/></p><p>Desired Level (<abbr id='LCGoalLevelNotes' title='(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCGoalLevelInput' style='width:10%'/></p><p>Current Realm (<abbr title='Default value: Normal Realm.'>notes</abbr>): <input id='LCCurrentRealmSlider' class='slider' type='range' value='0' min='0' max='3'/><br><small>Currently: <span id='LCCurrentRealmOutput'>?</span></small></p><br><p class='templatedesktop' style='border-left:initial;border-right:initial;border-radius:initial;padding:0.25em'>Result</p><p><button id='LCCalculateButton'>Calculate</button></p>At <span id='LCCurrentLevelTypeOutput'></span> <span id='LCCurrentLevelOutput'>?</span>, the requirement to reach <span id='LCGoalLevelTypeOutput'></span> <span id='LCGoalLevelOutput'>?</span> is:<br><span id='LCRequirementTypeOutput'></span> <span id='LCRequirementOutput'>?</span></table></div></div>";
+        document.getElementById('LevelCalculator').innerHTML = "<div id='LevelCalculatorContainer'><div class='templatedesktop' style='text-align:center;padding:0.5em;width:80%;margin:auto'><span style='text-align:center;font-size:30px;color:#FFF'><img src='./Level Calculator/Assets/XP.png' width='150'/> Level Calculator <img src='./Level Calculator/Assets/XP2.png' width='150'/></span><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='LCSuffixToggleButton'>Disabled</button></div><p>Current Level (<abbr id='LCCurrentLevelNotes' title='(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCCurrentLevelInput' style='width:10%'/></p><p>Desired Level (<abbr id='LCGoalLevelNotes' title='(n1) Default value: Current Level + 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of 1e9.'>notes</abbr>): <input id='LCGoalLevelInput' style='width:10%'/></p><p>Current Realm (<abbr title='Default value: Normal Realm.'>notes</abbr>): <input id='LCCurrentRealmSlider' class='slider' type='range' value='0' min='0' max='3'/><br><small>Currently: <span id='LCCurrentRealmOutput'>?</span></small></p><br><p class='templatedesktop' style='border-left:initial;border-right:initial;border-radius:initial;padding:0.25em'>Result</p><p><button id='LCCalculateButton'>Calculate</button></p>At <span id='LCCurrentLevelTypeOutput'></span> <span id='LCCurrentLevelOutput'>?</span>, the requirement to reach <span id='LCGoalLevelTypeOutput'></span> <span id='LCGoalLevelOutput'>?</span> is:<br><span id='LCRequirementTypeOutput'></span> <span id='LCRequirementOutput'>?</span></table></div></div>";
 
         // Variable declarations.
         var decimals = 3; // Determines the maximum and fixed number of decimal digits for number output strings.
@@ -87,6 +87,7 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
                             extraZeroes = e.exponent % 3;
                         }
                         result = decimalMax(checkNoDecimal(e.mantissa * (10 ** extraZeroes)) % 10, 1) + 'e' + notateInt(checkNoDecimal(e.exponent)); // If suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
+                        console.log('testing: ' + result);
                         break;
                     default:
                         result = decimalMax(checkNoDecimal(e.mantissa) % 10, 1) + 'e' + notateInt(checkNoDecimal(e.exponent)); // Modification of the above: If the exponent is less than 1e6, return the mantissa with a fixed decimal length plus the exponent with comma-separated numbers.
@@ -171,8 +172,10 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
             } else {
                 currentLevel = toScientific(document.getElementById("LCCurrentLevelInput").value).floor();
             }
-            if (document.getElementById("LCGoalLevelInput").value === '' || toScientific(document.getElementById("LCGoalLevelInput").value).lessThan(1)) {
-                goalLevel = new Decimal(1);
+            if (document.getElementById("LCGoalLevelInput").value === '') {
+                goalLevel = currentLevel.add(1);
+			} else if (toScientific(document.getElementById("LCGoalLevelInput").value).lessThan(1)) {
+				goalLevel = new Decimal(1);
             } else {
                 goalLevel = toScientific(document.getElementById("LCGoalLevelInput").value).floor();
             }
@@ -195,14 +198,14 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
                 var req = new Decimal(50).times(x);
                 switch (realm) {
                     case 'planetoid':
-                        req = req.times(new Decimal(1.093).pow(x));
+                        req = req.times(new Decimal(1.093).pow(x.sub(1)));
                         req = req.times(new Decimal(1.8).pow(x.dividedBy(10).floor()));
                         if (x.greaterThan(200)) {
                             req = req.times(new Decimal(3).pow((x.sub(191)).dividedBy(10).floor()));
                         }
                         break;
                     default:
-                        req = req.times(new Decimal(1.1).pow(x));
+                        req = req.times(new Decimal(1.1).pow(x.sub(1)));
                         if (timed === true) {
                             req = req.dividedBy(10);
                         }
@@ -226,7 +229,11 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
                 goalReq = goalReq.add(calcSingle(i));
             }
             result = goalReq.sub(currentReq);
-            document.getElementById('LCRequirementOutput').innerHTML = notateInt(result);
+			if (result.lessThan(0)) {
+				document.getElementById('LCRequirementOutput').innerHTML = '-' + notateInt(result.toString().replace(/[-]/, ''));
+			} else {
+				document.getElementById('LCRequirementOutput').innerHTML = notateInt(result);
+			}
         }
         updateResult();
 
