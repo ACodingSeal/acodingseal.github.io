@@ -26,7 +26,7 @@ function addLevelCalculator() { // Function for ensuring all the calculator's va
                 document.getElementById('LCSuffixToggleButton').innerHTML = 'Disabled';
             }
             document.getElementById('LCCurrentLevelNotes').title = '(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of ' + notateInt(1e9) + '.';
-            document.getElementById('LCGoalLevelNotes').title = '(n1) Default value: 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of ' + notateInt(1e9) + '.';
+            document.getElementById('LCGoalLevelNotes').title = '(n1) Default value: Current Level + 1. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of ' + notateInt(1e9) + '.';
         }
         updateSuffixStatus();
 
