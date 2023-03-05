@@ -553,10 +553,12 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                         if (currentStage.greaterThan(14)) {
 							completionsDoable = Number(decimalMin(8, decimalMin(22, currentStage).sub(14).add(1)));
 							totalChallengeCompletions += completionsDoable;
+							totalChallengeScore += 10 * completionsDoable;
                             challengesWithStage.push("Basic: Completions 1 - " + notateInt(completionsDoable));
                         } else {
 							completionsDoable = 1;
 							totalChallengeCompletions += completionsDoable;
+							totalChallengeScore += 10;
                             challengesWithStage.push('Basic: Completion 1');
                         }
                     }
@@ -565,11 +567,13 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
 							completionsDoable = Number(decimalMin(10, decimalMin(30, currentStage).sub(10).dividedBy(2).add(1).floor()));
 							totalChallengeCompletions += completionsDoable;
 							totalGoldenStars += completionsDoable;
+							totalChallengeScore += 20 * completionsDoable;
                             challengesWithStage.push("Cycle: Completions 1 - " + notateInt(completionsDoable));
                         } else {
 							completionsDoable = 1;
 							totalChallengeCompletions += completionsDoable;
 							totalGoldenStars += 1;
+							totalChallengeScore += 20;
                             challengesWithStage.push('Cycle: Completion 1');
                         }
                         if (currentStage.greaterThanOrEqualTo(14)) {
@@ -577,11 +581,13 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
 								completionsDoable = Number(decimalMin(10, decimalMin(24, currentStage).sub(14).add(1)));
 								totalChallengeCompletions += completionsDoable;
 								totalGoldenStars += completionsDoable;
+								totalChallengeScore += 50 * completionsDoable;
                                 challengesWithStage.push("Soul: Completions 1 - " + notateInt(completionsDoable));
                             } else {
 								completionsDoable = 1;
 								totalChallengeCompletions += completionsDoable;
 								totalGoldenStars += 1;
+								totalChallengeScore += 50;
                                 challengesWithStage.push('Soul: Completion 1');
                             }
                         }
@@ -589,16 +595,19 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
 							completionsDoable = Number(decimalMin(10, decimalMin(20, currentStage).sub(10).add(1)));
 							totalChallengeCompletions += completionsDoable;
 							totalGoldenStars += completionsDoable;
+							totalChallengeScore += 100 * completionsDoable;
                             challengesWithStage.push("Wall: Completions 1 - " + notateInt(completionsDoable));
 							completionsDoable = Number(decimalMin(5, decimalMin(20, currentStage).sub(10).dividedBy(2).add(1).floor()));
 							console.log('testing: ' + completionsDoable);
 							totalChallengeCompletions += completionsDoable;
 							totalGoldenStars += completionsDoable;
+							totalChallengeScore += 100 * completionsDoable;
                             challengesWithStage.push("Soulless: Completions 1 - " + notateInt(completionsDoable));
                         } else {
 							completionsDoable = 2;
 							totalChallengeCompletions += completionsDoable;
 							totalGoldenStars += 2;
+							totalChallengeScore += 100 * completionsDoable;
                             challengesWithStage.push('Wall: Completion 1');
                             challengesWithStage.push('Soulless: Completion 1');
                         }
@@ -606,15 +615,18 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                             if (currentStage.greaterThan(20)) {
 								completionsDoable = Number(decimalMin(5, decimalMin(30, currentStage).sub(20).dividedBy(2).add(1).floor()));
 								totalChallengeCompletions += completionsDoable;
+								totalChallengeScore += 100 * completionsDoable;
                                 challengesWithStage.push("Limited: Completions 1 - " + notateInt(completionsDoable));
 								completionsDoable = Number(decimalMin(5, decimalMin(35, currentStage).sub(20).dividedBy(3).add(1).floor()));
 								totalChallengeCompletions += completionsDoable;
 								totalGoldenStars += completionsDoable;
+								totalChallengeScore += 250 * completionsDoable;
                                 challengesWithStage.push("Strong: Completions 1 - " + notateInt(completionsDoable));
                             } else {
 								completionsDoable = 2;
 								totalChallengeCompletions += completionsDoable;
 								totalGoldenStars += 1;
+								totalChallengeScore += (100 + 250);
                                 challengesWithStage.push('Limited: Completion 1');
                                 challengesWithStage.push('Strong: Completion 1');
                             }
@@ -625,11 +637,13 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
 							completionsDoable = Number(decimalMin(5, decimalMin(8, currentStage).sub(3).add(1)));
 							totalChallengeCompletions += completionsDoable;
 							totalGoldenStars += 2 * completionsDoable;
+							totalChallengeScore += 500 * completionsDoable;
                             challengesWithStage.push("Evil: Completions 1 - " + notateInt(completionsDoable));
                         } else {
 							completionsDoable = 1;
 							totalChallengeCompletions += completionsDoable;
 							totalGoldenStars += 1;
+							totalChallengeScore += 500;
                             challengesWithStage.push('Evil: Completion 1');
                         }
                     }
@@ -637,6 +651,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
 						completionsDoable = 1;
 						totalChallengeCompletions += completionsDoable;
 						totalGoldenStars += 999;
+						totalChallengeScore += 1337;
                         challengesWithStage.push('Touch Real Grass: Completion 1');
                     }
                 }
@@ -647,7 +662,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                     result += challengesWithStage[i] + "<br>";
                 }
 
-                return result += '<br>Your total Solarian Challenge completions will also become ' + notateInt(totalChallengeCompletions) + ', and you will have gained a total of ' + notateInt(totalGoldenStars) + ' ' + checkPlural(totalGoldenStars, 'Golden Star', 'Golden Stars') + "<img src='./Solarian Stage Calculator/Assets/GoldStar.png' width='50'/>";
+                return result += '<br>Your Challenge Score will become ' + notateInt(totalChallengeScore) + ' (equal to a FM of ' + Math.floor(totalChallengeScore ** 0.5) + 'x), your total Solarian Challenge completions will become ' + notateInt(totalChallengeCompletions) + ', and you will have gained a total of ' + notateInt(totalGoldenStars) + ' ' + checkPlural(totalGoldenStars, 'Golden Star', 'Golden Stars') + "<img src='./Assets/GoldStar.png' width='50'/>";
             }
             switch (modeCSRC) {
                 case 'ssc':
