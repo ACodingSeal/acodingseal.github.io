@@ -546,6 +546,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                 const challengesWithStage = [];
 				var totalChallengeCompletions = 0;
 				var totalGoldenStars = 0;
+				var totalChallengeScore = 0;
 				var completionsDoable;
 
                 function genChalList() {
