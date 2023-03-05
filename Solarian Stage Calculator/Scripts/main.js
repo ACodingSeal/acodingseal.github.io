@@ -663,7 +663,7 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                     result += challengesWithStage[i] + "<br>";
                 }
 
-                return result += '<br>Your Challenge Score will become ' + notateInt(totalChallengeScore) + ' (equal to a FM of ' + Math.floor(totalChallengeScore ** 0.5) + 'x), your total Solarian Challenge completions will become ' + notateInt(totalChallengeCompletions) + ', and you will have gained a total of ' + notateInt(totalGoldenStars) + ' ' + checkPlural(totalGoldenStars, 'Golden Star', 'Golden Stars') + "<img src='./Assets/GoldStar.png' width='50'/>";
+                return result += '<br>Your Challenge Score will become ' + notateInt(totalChallengeScore) + ' (equal to a FM of ' + Math.floor(totalChallengeScore ** 0.5) + 'x), your total Solarian Challenge completions will become ' + notateInt(totalChallengeCompletions) + ' and you will have gained a total of ' + notateInt(totalGoldenStars) + ' ' + checkPlural(totalGoldenStars, 'Golden Star', 'Golden Stars') + "<img src='./Assets/GoldStar.png' width='50'/>";
             }
             switch (modeCSRC) {
                 case 'ssc':
