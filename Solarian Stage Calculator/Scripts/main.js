@@ -663,11 +663,11 @@ function addSolarianStageCalculator() { // Function for ensuring all the calcula
                     result += challengesWithStage[i] + "<br>";
                 }
 
-                return result += '<br>Your Challenge Score will become ' + notateInt(totalChallengeScore) + ' (equal to a FM of ' + Math.floor(totalChallengeScore ** 0.5) + 'x), your total Solarian Challenge completions will become ' + notateInt(totalChallengeCompletions) + ' and you will have gained a total of ' + notateInt(totalGoldenStars) + ' ' + checkPlural(totalGoldenStars, 'Golden Star', 'Golden Stars') + "<img src='./Assets/GoldStar.png' width='50'/>";
+                return result += '<br>Your Challenge Score will become ' + notateInt(totalChallengeScore) + ' (equal to a FM of ' + Math.floor(totalChallengeScore ** 0.5) + 'x), your total Solarian Challenge completions will become ' + notateInt(totalChallengeCompletions) + ' and you will have gained a total of ' + notateInt(totalGoldenStars) + ' ' + checkPlural(totalGoldenStars, 'Golden Star', 'Golden Stars') + "<img src='./Solarian Stage Calculator/Assets/GoldStar.png' width='50'/>";
             }
             switch (modeCSRC) {
                 case 'ssc':
-                    document.getElementById('SSCCSRCOutput').innerHTML = 'At Stage ' + notateInt(currentStage) + ', the following Solarian Challenges can be completed:<br>' + calcChallengesList();
+                    document.getElementById('SSCCSRCOutput').innerHTML = 'At Stage ' + notateInt(currentStage) + ", during each of the following Solarian Challenges, the number of each challenge's completions can be achieved:<br>" + calcChallengesList();
                     break;
                 default:
                     document.getElementById('SSCCSRCOutput').innerHTML = "During the '" + challengeSCSRC + "' Solarian Challenge, having completed it " + notateInt(completionsCurrentSCSRC) + ' ' + checkPlural(completionsCurrentSCSRC, 'time', 'times') + ', the requirement with ' + notateInt(completionsNextSCSRC) + ' ' + checkPlural(completionsNextSCSRC, 'completion', 'completions') + ' is:<br>Stage ' + notateInt(calcChallengeToStageReq(completionsNextSCSRC)) + ' (from Stage ' + notateInt(calcChallengeToStageReq(completionsCurrentSCSRC)) + ')';
