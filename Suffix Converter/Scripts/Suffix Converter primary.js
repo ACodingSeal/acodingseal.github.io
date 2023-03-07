@@ -129,7 +129,6 @@ function addSuffixConverter() {
             var tooHigh = false;
             var negative = false;
             if (document.getElementById('SuffixConverterInputField').value === '') {
-                console.log(toScientific(document.getElementById('SuffixConverterInputField').value));
                 var input = new Decimal(0);
             } else if (toScientific(document.getElementById('SuffixConverterInputField').value).greaterThanOrEqualTo(1e303) || toScientific(document.getElementById('SuffixConverterInputField').value).lessThan(-1e303) || toScientific(document.getElementById('SuffixConverterInputField').value).equals(-1e303)) {
                 tooHigh = true;
