@@ -92,7 +92,6 @@ function addTierCalculator() {
                             extraZeroes = e.exponent % 3;
                         }
                         result = decimalMax(checkNoDecimal(e.mantissa * (10 ** extraZeroes)) % 10, 1) + 'e' + notateInt(checkNoDecimal(e.exponent)); // If suffix notation is enabled, return the input's mantissa converted to normal notation with its exponent converted to comma-separated numbers.
-                        console.log('testing: ' + result);
                         break;
                     default:
                         result = decimalMax(checkNoDecimal(e.mantissa) % 10, 1) + 'e' + notateInt(checkNoDecimal(e.exponent)); // Modification of the above: If the exponent is less than 1e6, return the mantissa with a fixed decimal length plus the exponent with comma-separated numbers.
@@ -163,7 +162,6 @@ function addTierCalculator() {
 
         // Update the HTML output.
         function updateResults() {
-            console.log('updateResults');
             getInputData();
 
             // Function for assigning specific colours to each bonus based on whether the difference is a gain, a loss or is equal.
@@ -212,7 +210,6 @@ function addTierCalculator() {
             } else {
                 var totalTPReq = goalTP.sub(currentTP).sub(currentTierNextReq.times(nextTierCompletion.dividedBy(100)));
             }
-            console.log(totalTPReq);
 
             // Update current and desired Tier and next Tier completion outputs.
             document.getElementById('TierCalculatorCurrentTierOutput').innerHTML = notateInt(currentTier);
