@@ -4,7 +4,7 @@ function addTierCalculator() {
         console.log('[Tier Calculator] [LOG]: ID located. Running script.');
 
         // Create the calculator's user interface.
-        document.getElementById('TierCalculator').innerHTML = "<div id='TierCalculatorContainer'><div class='templatedesktop' style='padding:0.5em;width:80%;margin:auto;text-align:center'><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='TierCalculatorSuffixToggleButton'>Disabled</button></div><div style='font-size:24px;font-weight:bold;text-align:center'><img src='./Tier Calculator/Assets/TP.png' width='150'/> Tier Calculator <img src='./Tier Calculator/Assets/TP.png' width='150'/></div><p>Current Tier (<abbr title='Default value: 1.'>notes</abbr>):<input id='TierCalculatorCurrentTierInput' style='width:10%'></input></p><p>Desired Tier (<abbr title='Default value: Current Tier + 1.'>notes</abbr>):<input id='TierCalculatorGoalTierInput' style='width:10%'></input></p><p>Percentage until next Tier (<abbr title='(n1) Optional. (n2) Input any value ranging from 0 to 100, without the percentage symbol. (n3) Default value: 0%.'>notes</abbr>):<input id='TierCalculatorNextTierCompletionInput' style='width:10%'></input>%</p><button id='TierCalculatorCalculateButton'>Calculate</button><p class='templatedesktop' style='font-weight:bold;font-size:20px;padding:0.25em;border-left:initial;border-right:initial;border-radius:initial'>Results</p><p><p id='TierCalculatorComputingText' style='display:none'><i>Computing...</i></p><div id='TierCalculatorResultsSection'><br>At Tier <span id='TierCalculatorCurrentTierOutput'></span>, when currently <span id='TierCalculatorNextTierCompletionOutput'></span>% to next Tier, reaching Tier <span id='TierCalculatorGoalTierOutput'></span> will require <span id='TierCalculatorTPRequirementOutput'></span> TP, and will result in the following bonuses:<br><p><img src='./Tier Calculator/Assets/Grass.png' width='50'/><img src='./Tier Calculator/Assets/XP.png' width='50'/><b>Grass</b> and <b>XP</b>: <span id='TierCalculatorGrassXPBonusCurrentOutput'></span> > <span id='TierCalculatorGrassXPBonusNextOutput'></span></p><p id='TierCalculatorSPBonusSection'><img src='./Tier Calculator/Assets/SP.png' width='50'/><b>SP:</b> <span id='TierCalculatorSPBonusCurrentOutput'></span> > <span id='TierCalculatorSPBonusNextOutput'></span></p></p></div></div></div>";
+        document.getElementById('TierCalculator').innerHTML = "<div id='TierCalculatorContainer'><div class='templatedesktop' style='padding:0.5em;width:80%;margin:auto;text-align:center'><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='TierCalculatorSuffixToggleButton'>Disabled</button></div><div style='font-size:24px;font-weight:bold;text-align:center'><img src='./Tier Calculator/Assets/TP.png' width='150'/> Tier Calculator <img src='./Tier Calculator/Assets/TP.png' width='150'/></div><p>Current Tier (<abbr title='Default value: 1.'>notes</abbr>):<input id='TierCalculatorCurrentTierInput' style='width:10%'></input></p><p>Desired Tier (<abbr title='Default value: Current Tier + 1.'>notes</abbr>):<input id='TierCalculatorGoalTierInput' style='width:10%'></input></p><p>Percentage until next Tier (<abbr title='(n1) Optional. (n2) Input any value ranging from 0 to 100, without the percentage symbol. (n3) Default value: 0%.'>notes</abbr>):<input id='TierCalculatorNextTierCompletionInput' style='width:10%'></input>%</p><button id='TierCalculatorCalculateButton'>Calculate</button><p class='templatedesktop' style='font-weight:bold;font-size:20px;padding:0.25em;border-left:initial;border-right:initial;border-radius:initial'>Results</p><p><p id='TierCalculatorComputingText' style='display:none'><i>Computing...</i></p><div id='TierCalculatorResultsSection'><br>At Tier <span id='TierCalculatorCurrentTierOutput'></span>, when currently <span id='TierCalculatorNextTierCompletionOutput'></span>% to next Tier, reaching Tier <span id='TierCalculatorGoalTierOutput'></span> will <span id='TierCalculatorRequireWordOutput'></span> <span id='TierCalculatorTPRequirementOutput'></span> TP, and will result in the following bonuses:<br><p><img src='./Tier Calculator/Assets/Grass.png' width='50'/><img src='./Tier Calculator/Assets/XP.png' width='50'/><b>Grass</b> and <b>XP</b>: <span id='TierCalculatorGrassXPBonusCurrentOutput'></span> > <span id='TierCalculatorGrassXPBonusNextOutput'></span></p><p id='TierCalculatorSPBonusSection'><img src='./Tier Calculator/Assets/SP.png' width='50'/><b>SP:</b> <span id='TierCalculatorSPBonusCurrentOutput'></span> > <span id='TierCalculatorSPBonusNextOutput'></span></p></p></div></div></div>";
 
         // Variable declarations.
         var suffixStatus; // Determines whether suffix notation output is enabled or disabled.
@@ -179,23 +179,23 @@ function addTierCalculator() {
             var goalTP = new Decimal(0);
             for (var x = 0; x < decimalMin(58, currentTier); x++) {
                 if (x > 35 && x < 49) {
-                    currentTP = currentTP.add(new Decimal(6.122e49).times(new Decimal(1e3).pow(currentTier - 35)));
+                    currentTP = currentTP.add(new Decimal(6.122e49).times(new Decimal(1e3).pow(currentTier.sub(35))));
                 } else if (x > 49) {
-                    currentTP = currentTP.add(new Decimal(6.122e92).times(new Decimal(1e4).pow(currentTier - 49)));
+                    currentTP = (new Decimal(6.122e92).times(new Decimal(1e4).pow((currentTier.sub(49))))).dividedBy(new Decimal(1e4).sub(1));
                 } else {
                     currentTP = currentTP.add(tpReqs[x]);
                 }
             }
             for (var x = 0; x < decimalMin(58, goalTier); x++) {
                 if (x > 35 && x < 49) {
-                    goalTP = goalTP.add(new Decimal(6.122e49).times(new Decimal(1e3).pow(goalTier - 35)));
+                    goalTP = goalTP.add(new Decimal(6.122e49).times(new Decimal(1e3).pow(goalTier.sub(35))));
                 } else if (x > 49) {
-                    goalTP = goalTP.add(new Decimal(6.122e92).times(new Decimal(1e4).pow(goalTier - 49)));
+                    goalTP = (new Decimal(6.122e92).times(new Decimal(1e4).pow((goalTier.sub(49))))).dividedBy(new Decimal(1e4).sub(1));
                 } else {
                     goalTP = goalTP.add(tpReqs[x]);
                 }
             }
-            if (currentTier > 35 && currentTier < 49) {
+            if (currentTier.greaterThan(35) && currentTier.lessThan(49)) {
                 var currentTierNextReq = new Decimal(6.122e49).times(new Decimal(1e3).pow(currentTier.sub(35)));
             } else if (currentTier.greaterThan(49)) {
                 var currentTierNextReq = new Decimal(6.122e92).times(new Decimal(1e4).pow(currentTier.sub(49)));
@@ -203,15 +203,20 @@ function addTierCalculator() {
                 var currentTierNextReq = new Decimal(tpReqs[currentTier]);
             }
 
-            if (nextTierCompletion.equals(100) && (goalTier.sub(1).equals(currentTier) || currentTier.sub(1).equals(goalTier))) {
+            if (goalTier.greaterThanOrEqualTo(currentTier) && nextTierCompletion.equals(100) && (goalTier.sub(1).equals(currentTier) || currentTier.sub(1).equals(goalTier))) {
                 var totalTPReq = new Decimal(0);
             } else {
-                var totalTPReq = goalTP.sub(currentTP).sub(currentTierNextReq.times(nextTierCompletion.dividedBy(100)));
+                var totalTPReq = goalTP.sub(currentTP).sub(currentTP.times(nextTierCompletion.dividedBy(100)));
             }
 
             // Update current and desired Tier and next Tier completion outputs.
             document.getElementById('TierCalculatorCurrentTierOutput').innerHTML = notateInt(currentTier);
             document.getElementById('TierCalculatorGoalTierOutput').innerHTML = notateInt(goalTier);
+            document.getElementById('TierCalculatorRequireWordOutput').innerHTML = 'require';
+            if (currentTier.greaterThan(goalTier)) {
+                totalTPReq = new Decimal(totalTPReq.toString().replace(/[-]/, ''));
+                document.getElementById('TierCalculatorRequireWordOutput').innerHTML = 'result in a loss of';
+            }
             document.getElementById('TierCalculatorTPRequirementOutput').innerHTML = notateInt(totalTPReq);
             document.getElementById('TierCalculatorNextTierCompletionOutput').innerHTML = notateInt(nextTierCompletion);
 
