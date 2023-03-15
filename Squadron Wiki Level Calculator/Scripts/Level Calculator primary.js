@@ -228,25 +228,25 @@ function addLevelCalculator() {
 
                 function checkReq(x) {
                     var tempString = '';
-                    if (currentLevel.greaterThanOrEqualTo(mapData[x].e) || goalLevel.greaterThanOrEqualTo(mapData[x].e)) {
+                    if (goalLevel.greaterThanOrEqualTo(mapData[x].e)) {
                         tempString += "<span style='color:#009600'>E (" + notateInt(mapData[x].e) + ')</span>';
                         totalPlayableMaps++;
                         totalDifficulties++;
                     }
-                    if (currentLevel.greaterThanOrEqualTo(mapData[x].m) || goalLevel.greaterThanOrEqualTo(mapData[x].m)) {
+                    if (goalLevel.greaterThanOrEqualTo(mapData[x].m)) {
                         tempString += "<span style='color:#AAAA00'> | M (" + notateInt(mapData[x].m) + ')</span>';
                         totalDifficulties++;
                     }
-                    if (currentLevel.greaterThanOrEqualTo(mapData[x].h) || goalLevel.greaterThanOrEqualTo(mapData[x].h)) {
+                    if (goalLevel.greaterThanOrEqualTo(mapData[x].h)) {
                         tempString += "<span style='color:#964B00'> | H (" + notateInt(mapData[x].h) + ')</span>';
                         totalDifficulties++;
                     }
-                    if (currentLevel.greaterThanOrEqualTo(mapData[x].i) || goalLevel.greaterThanOrEqualTo(mapData[x].i)) {
+                    if (goalLevel.greaterThanOrEqualTo(mapData[x].i)) {
                         tempString += "<span style='color:#960000'> | I (" + notateInt(mapData[x].i) + ')</span>';
                         totalDifficulties++;
                     }
 
-                    if (currentLevel.greaterThanOrEqualTo(mapData[x].e) || goalLevel.greaterThanOrEqualTo(mapData[x].e)) {
+                    if (goalLevel.greaterThanOrEqualTo(mapData[x].e)) {
                         tempString = "<br><span style='font-weight:bold'>[" + tempString + '] ' + mapData[x].name + '</span>';
                     }
                     return tempString;
