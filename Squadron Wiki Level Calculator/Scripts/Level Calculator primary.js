@@ -145,9 +145,6 @@ function addLevelCalculator() {
             return new Decimal(100).add(new Decimal(50).times((y.sub(1)).pow(1.25))).times(x).add(0.5).floor();
         }
 
-        console.log('testing test: ' + calcHP(false, 6));
-        console.log('-----');
-
         function calcXPReq(x) {
             x = new Decimal(x);
             if (x.equals(0)) {
@@ -202,15 +199,17 @@ function addLevelCalculator() {
             if (goalLevel.greaterThan(currentLevel)) {
                 document.getElementById('LevelCalculatorLevelChangeOutput').innerHTML = "<span style='color:#00FF00'>+" + notateInt(goalLevel.sub(currentLevel)) + '</span>';
                 bonusesOutputString += "<p>Base health: <span style='color:#00FF00'>" + notateInt(calcHP(false, currentLevel)) + "</span> > <span style='color:#00FF00'>" + notateInt(calcHP(false, goalLevel)) + '</span></p>';
+                document.getElementById('LevelCalculatorXPRequirementOutput').innerHTML = notateInt(loopXPReq(goalLevel).sub(loopXPReq(currentLevel)).sub(nextLevelProgress));
             } else if (currentLevel.greaterThan(goalLevel)) {
                 document.getElementById('LevelCalculatorLevelChangeOutput').innerHTML = "<span style='color:#FF0000'>-" + notateInt(currentLevel.sub(goalLevel)) + '</span>';
                 document.getElementById('LevelCalculatorRequireWordOutput').innerHTML = 'result in a loss of';
                 bonusesOutputString += "<p>Base health: <span style='color:#FF0000'>" + notateInt(calcHP(false, currentLevel)) + "</span> > <span style='color:#FF0000'>" + notateInt(calcHP(false, goalLevel)) + '</span></p>';
+                document.getElementById('LevelCalculatorXPRequirementOutput').innerHTML = notateInt(loopXPReq(currentLevel).sub(loopXPReq(goalLevel)).sub(nextLevelProgress));
             } else {
                 document.getElementById('LevelCalculatorLevelChangeOutput').innerHTML = "<span style='color:#FFFF00'>~0</span>";
                 bonusesOutputString += "<p>Base health: <span style='color:#FFFF00'>" + notateInt(calcHP(false, currentLevel)) + "</span> > <span style='color:#FFFF00'>" + notateInt(calcHP(false, goalLevel)) + '</span></p>';
+                document.getElementById('LevelCalculatorXPRequirementOutput').innerHTML = '0';
             }
-            document.getElementById('LevelCalculatorXPRequirementOutput').innerHTML = notateInt(loopXPReq(goalLevel).sub(loopXPReq(currentLevel)).sub(nextLevelProgress));
 
             var totalPlayableMaps = 0;
             var totalDifficulties = 0;
