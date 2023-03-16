@@ -4,7 +4,7 @@ function addTheFinalStarCalculator() {
         console.log('[The Final Star Calculator] [LOG]: ID located. Running script.');
 
         // Create the calculator's user interface.
-        document.getElementById('TheFinalStarCalculator').innerHTML = "<div id='TheFinalStarCalculatorContainer'><div class='templatedesktop' style='padding:0.5em;width:80%;margin:auto;text-align:center'><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='TheFinalStarCalculatorSuffixToggleButton'>Disabled</button></div><div style='font-size:24px;font-weight:bold;text-align:center'><img src='./The Final Star Calculator/Assets/Tier 58 - The Final Star.png' width='75'/> The Final Star Calculator <img src='./The Final Star Calculator/Assets/Tier 58 - The Final Star.png' width='75'/></div><p>Tier (<abbr id='TheFinalStarCalculatorTierNotes'>notes</abbr>):<input id='TheFinalStarCalculatorTierInput' style='width:10%'></input></p><button id='TheFinalStarCalculatorCalculateButton'>Calculate</button><p class='templatedesktop' style='font-weight:bold;font-size:20px;padding:0.25em;border-left:initial;border-right:initial;border-radius:initial'>Result</p><p><p id='TheFinalStarCalculatorComputingText' style='display:none'><i>Computing...</i></p><div id='TheFinalStarCalculatorResultsSection'><br>Current Tier (<span id='TheFinalStarCalculatorFinalCount'></span>): <p id='TheFinalStarCalculatorTierOutput'></p></div></div></div>";
+        document.getElementById('TheFinalStarCalculator').innerHTML = "<div id='TheFinalStarCalculatorContainer'><div class='templatedesktop' style='padding:0.5em;width:80%;margin:auto;text-align:center'><div style='text-align:initial;padding:1em;background:initial;overflow:auto;float:left' class='templatedesktop'>Toggle Suffixes<br><button style='background:#FF0000' id='TheFinalStarCalculatorSuffixToggleButton'>Disabled</button></div><div style='font-size:24px;font-weight:bold;text-align:center'><img src='./The Final Star Calculator/Assets/Tier 58 - The Final Star.png' width='75'/> The Final Star Calculator <img src='./The Final Star Calculator/Assets/Tier 58 - The Final Star.png' width='75'/></div><p>Tier (<abbr id='TheFinalStarCalculatorTierNotes'>notes</abbr>):<br><textarea id='TheFinalStarCalculatorTierInput' style='width:20%'></textarea></p><button id='TheFinalStarCalculatorCalculateButton'>Calculate</button><p class='templatedesktop' style='font-weight:bold;font-size:20px;padding:0.25em;border-left:initial;border-right:initial;border-radius:initial'>Result</p><p><p id='TheFinalStarCalculatorComputingText' style='display:none'><i>Computing...</i></p><div id='TheFinalStarCalculatorResultsSection'><br>Current Tier (<span id='TheFinalStarCalculatorFinalCount'></span>): <p id='TheFinalStarCalculatorTierOutput'></p></div></div></div>";
 
         // Variable declarations.
         var suffixStatus; // Determines whether suffix notation output is enabled or disabled.
@@ -132,17 +132,27 @@ function addTheFinalStarCalculator() {
         }
 
         function updateResult() {
-            if (document.getElementById('TheFinalStarCalculatorTierInput').value === '' || toScientific(document.getElementById('TheFinalStarCalculatorTierInput').value).lessThan(58)) {
+            var conversionMode = 'nts';
+            if (document.getElementById('TheFinalStarCalculatorTierInput').value.match(/final/gi) !== null) {
+                conversionMode = 'stn';
+                tier = new Decimal(57).add(document.getElementById('TheFinalStarCalculatorTierInput').value.match(/final/gi).length);
+            } else if (document.getElementById('TheFinalStarCalculatorTierInput').value === '' || toScientific(document.getElementById('TheFinalStarCalculatorTierInput').value).lessThan(58)) {
                 tier = new Decimal(58);
             } else {
                 tier = toScientific(document.getElementById('TheFinalStarCalculatorTierInput').value).floor();
             }
 
             var outputString = '';
-            for (var x = 0; tier.sub(57).greaterThan(x); x++) {
-                outputString += 'Final ';
+            switch (conversionMode) {
+                case 'nts':
+                    for (var x = 0; tier.sub(57).greaterThan(x); x++) {
+                        outputString += 'Final ';
+                    }
+                    outputString = 'The ' + outputString + 'Star';
+                    break;
+                case 'stn':
+                    outputString = notateInt(tier);
             }
-            outputString = 'The ' + outputString + 'Star';
 
             document.getElementById('TheFinalStarCalculatorFinalCount').innerHTML = notateInt(tier.sub(57)) + ' ' + checkPlural(tier.sub(57), 'Final Star', 'Final Stars');
             document.getElementById('TheFinalStarCalculatorTierOutput').innerHTML = outputString;
