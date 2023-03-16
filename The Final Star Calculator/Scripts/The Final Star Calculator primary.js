@@ -23,7 +23,7 @@ function addTheFinalStarCalculator() {
                 document.getElementById('TheFinalStarCalculatorSuffixToggleButton').setAttribute('style', 'background:#FF0000');
                 document.getElementById('TheFinalStarCalculatorSuffixToggleButton').innerHTML = 'Disabled';
             }
-            document.getElementById('TheFinalStarCalculatorTierNotes').title = '(n1) Default and minimum value: 58. (n2) Values above 100,000 may cause performance issues. It is not recommended to exceed values of ' + notateInt(1e7) + '.';
+            document.getElementById('TheFinalStarCalculatorTierNotes').title = "(n1) Default and minimum value: 58. (n2) Input either a number in scientific, suffix or plain notation or 'The -X- Star', with -X- being the number of Final Stars (i.e. 'The Final Final Final Star' for 3 Final Stars). (n3) Values above 100,000 may cause performance issues. It is not recommended to exceed values of " + notateInt(1e7) + '.';
         }
         updateSuffixStatus();
 
