@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>Article Creator</title>
+</head>
+<style>
+.rainbow {
+	background:linear-gradient(to right,#FF0000,#FFA500,#FFFF00,#00FF00,#00FFFF,#0000FF,#4B0082,#EE82EE,#FF0000,#FFA500,#FFFF00,#00FF00,#00FFFF,#0000FF,#4B0082,#EE82EE,#FF0000);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	background-size:200%;
+	animation:rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+  to {
+background-position:100%;
+  }
+}
+
+@font-face {
+	font-family:Rubik;
+	src:url('./Fonts/Rubik-Regular.ttf');
+}
+p,div,span,table {
+	font-family:Rubik;
+}
+
+th {
+    display:table-cell;
+    vertical-align:inherit;
+    font-weight:bold;
+    text-align:-internal-center;
+}
+
+.wikitable {
+    background-color:#F8F9FA;
+    color:#202122;
+    margin:1em 0;
+    border:1px solid #A2A9B1;
+    border-collapse:collapse;
+}
+
+table {
+    border-collapse:separate;
+    text-indent:initial;
+    border-spacing:2px;
+}
+
+.templatedesktop {
+	background:#272C3B;
+	color:#FFF;
+	border-width:1px;
+	border-style:solid;
+	border-color:#000;
+	border-radius:5px;
+}
+
+code {
+    background:#4C4C4C;
+    border:1px solid #CCC;
+    color:#FFF;
+    padding:1px 4px;
+    font-family:monospace;
+}
+
+img {
+	vertical-align:middle;
+}
+
+@keyframes mythical{
+     0%{
+         color: #E4551E;
+    }
+     17%{
+         color: white;
+    }
+     33%{
+         color: #E4551E;
+    }
+     50%{
+         color: white;
+    }
+     67%{
+         color: #E4551E;
+    }
+     83%{
+         color: white;
+    }
+     100%{
+         color: #E4551E;
+    }
+}
+.mythical{
+     font-weight:bold;
+     text-shadow: 0 0 5px #000;
+     animation: mythical 3.5s infinite;
+     -webkit-animation: mythical 3.5s infinite;
+     -moz-animation: mythical 3.5s infinite;
+}
+
+@keyframes legendary{
+     0%{
+         color: #BD9AE1;
+    }
+     17%{
+         color: #E394DF;
+    }
+     33%{
+         color: #E7A29C;
+    }
+     50%{
+         color: #EDEEA8;
+    }
+     67%{
+         color: #9AF3A8;
+    }
+     83%{
+         color: #96C1FC;
+    }
+     100%{
+         color: #BD9AE1;
+    }
+}
+.legendary{
+     font-weight:bold;
+     text-shadow: 0 0 5px #000;
+     animation: legendary 3.5s infinite;
+     -webkit-animation: legendary 3.5s infinite;
+     -moz-animation: legendary 3.5s infinite;
+}
+.legendary-ms2 {
+     background:linear-gradient(to right,#FF0000,#FFA500,#FFFF00,#00FF00,#00FFFF,#0000FF,#4B0082,#EE82EE,#FF0000,#FFA500,#FFFF00,#00FF00,#00FFFF,#0000FF,#4B0082,#EE82EE,#FF0000);
+     -webkit-background-clip:text;
+     -webkit-text-fill-color:transparent;
+     background-size:200%;
+     animation:legendary-ms2 2s linear infinite;
+     font-weight:bold;
+}
+@keyframes legendary-ms2 {
+     to {
+         background-position:100%;
+    }
+}
+
+.epic{
+     color: #a86ae1;
+     font-weight:bold;
+     text-shadow: 0 0 5px #000;
+}
+
+.rare {
+     color: #e15858;
+     font-weight:bold;
+     text-shadow: 0 0 5px #000;
+}
+
+.unique {
+     color: #e1a07f;
+     font-weight:bold;
+     text-shadow: 0 0 5px #000;
+}
+
+.common {
+     color: #ffffff;
+     font-weight:bold;
+     text-shadow: 0 0 5px #000;
+}
+</style>
+<body style='background:#2D2D2D'>
+<div id='MSWikiArticleCreator'></div>
+</body>
+<script src="https://acodingseal.github.io/Mining%20Simulator%20Wiki%20miscellaneous/break%20eternity.js"></script>
+<script src="https://acodingseal.github.io/Mining%20Simulator%20Wiki%20miscellaneous/Suffixes%20Collection.js"></script>
+<script src="./Mining Simulator Wiki Article Creator/Scripts/Article Creator primary.js"></script>
+</html>
