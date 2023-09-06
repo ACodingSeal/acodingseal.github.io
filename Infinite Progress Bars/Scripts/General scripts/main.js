@@ -1,5 +1,5 @@
 (function() {
-    document.getElementById('MainSection').innerHTML = "<p style='text-align:center'><span style='font-size:2em'>Infinite Progress Bars, created by TheSeal27#1962 on Discord in under an hour.</span><br>Every power of 10 of progress bars (not floored) reached provides a slightly-increasing 2x boost (calculated as <code>2 ^ log10(x)</code>) to all progress bars! How high can you go?<br>(Note: Does not save.)</p><hr/>";
+    document.getElementById('MainSection').innerHTML = "<p style='text-align:center'><span style='font-size:2em'>Infinite Progress Bars, created by TheSeal27#1962 on Discord in under an hour.</span><br>Every log10 of progress bars (not floored) reached provides a slightly-increasing 2x boost (calculated as <code>2 ^ log10(x)</code>) to all progress bars! How high can you go?<br>(Note: Does not save.)</p><hr/>";
     document.getElementById('MainSection').innerHTML += "<div id='ProgressBarsSection'></div>";
 
     // Compute permanent multiplier.
