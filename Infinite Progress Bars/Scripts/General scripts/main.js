@@ -1,5 +1,5 @@
 var testMulti = 1;
-document.getElementById('MainSection').innerHTML = "<p style='text-align:center'><span style='font-size:2em'>Infinite Progress Bars, created by TheSeal27#1962 on Discord.</span><br>Every power of 10 of progress bars (not floored) reached provides a 2x compounding boost to all progress bars! How high can you go?<br>(Note: Does not save.)</p><hr/>";
+document.getElementById('MainSection').innerHTML = "<p style='text-align:center'><span style='font-size:2em'>Infinite Progress Bars, created by TheSeal27#1962 on Discord in under an hour.</span><br>Every power of 10 of progress bars (not floored) reached provides a 2x compounding boost to all progress bars! How high can you go?<br>(Note: Does not save.)</p><hr/>";
 document.getElementById('MainSection').innerHTML += "<div id='ProgressBarsSection'></div>";
 
 // Compute permanent multiplier.
