@@ -27,36 +27,70 @@
             if (progressBars[progressBars.length - 1].level.greaterThanOrEqualTo(progressBars[progressBars.length - 1].nextBarReq)) {
                 document.getElementById('ProgressBarsSection').innerHTML += createProgressBar();
             }
-            progressBars[x].amount = progressBars[x].amount.add(new Decimal(5).times(stats.barMulti()).times(stats.rebirthMulti()));
+            progressBars[x].amount = progressBars[x].amount.add(new Decimal(2.5).times(stats.barMulti()).times(stats.rebirthMulti()));
         }
     }
-    setInterval(increment, 100);
+    setInterval(increment, 50);
+
+    // Add style to the progress bar. Credit: Various threads on Stack Overflow.
+    function invertHex(hex) {
+        return (Number(`0x1${hex}`) ^ 0xFFFFFF).toString(16).substr(1).toUpperCase();
+    }
+
+    function componentToHex(c) {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    function rgbToHex(r, g, b) {
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+
+    function hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+    }
 
     // Update values.
     function updater() {
         for (var x = 0; x < progressBars.length; x++) {
+            var hexFromRGB = rgbToHex(progressBars[x].colour[0], progressBars[x].colour[1], progressBars[x].colour[2]);
+            // console.log(invertHex(hexFromRGB.replace(/#/, '')));
             document.getElementById('ProgressBarProgression_' + x).innerHTML = progressBars[x].amount.toFixed(3) + '/' + progressBars[x].amountNextLevel + ' (level ' + progressBars[x].level + ')';
+            document.getElementById('ProgressBar' + x).style.background = "linear-gradient(90deg, #" + invertHex(hexFromRGB.replace(/#/, '')) + ' ' + 100 * progressBars[0].amount / progressBars[0].amountNextLevel + '%, ' + hexFromRGB + ' 0%)';
         }
         document.getElementById('StatsSection').innerHTML = 'Current progress bar: ' + progressBars.length + '<br>Highest progress bar: ' + stats.highestBar + '<br>Rebirths: ' + stats.rebirths + '<br>Total speed multiplier: ' + stats.rebirthMulti().times(stats.barMulti()).toFixed(3) + 'x';
         progressBars.length >= stats.rebirthReq ? document.getElementById('RebirthButton').style.display = '' : document.getElementById('RebirthButton').style.display = 'none';
     }
-    setInterval(updater, 100);
+    setInterval(updater, 50);
 
     // Internal progress bar.
-    function ProgressBar() {
+    function ProgressBar(colour) {
         this.amount = new Decimal(0);
         this.amountNextLevel = new Decimal(100);
         this.level = new Decimal(0);
         this.nextBarReq = new Decimal(10);
+        this.colour = [];
     }
 
     // UI progress bar.
     function createProgressBar() {
-        progressBars.push(new ProgressBar());
+        const r = Math.floor(Math.random() * 255);
+        const g = Math.floor(Math.random() * 255);
+        const b = Math.floor(Math.random() * 255);
+        const newBar = new ProgressBar();
+        newBar.colour.push(r);
+        newBar.colour.push(g);
+        newBar.colour.push(b);
+        progressBars.push(newBar);
         if (progressBars.length > stats.highestBar) {
             stats.highestBar = stats.highestBar.add(1);
         }
-        return "<progressbar id='ProgressBar" + (progressBars.length - 1) + "' style='background:rgb(" + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + "'>Progress Bar #" + (progressBars.length) + ": <span id='ProgressBarProgression_" + (progressBars.length - 1) + "'>?</span></progressbar><p/>";
+        return "<progressbar id='ProgressBar" + (progressBars.length - 1) + "' style='background:rgb(" + r + ',' + g + ',' + b + "'>Progress Bar #" + (progressBars.length) + ": <span id='ProgressBarProgression_" + (progressBars.length - 1) + "'>?</span></progressbar><p/>";
     }
 
     // Add a rebirth system.
