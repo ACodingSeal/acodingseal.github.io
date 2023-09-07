@@ -53,7 +53,7 @@
     // UI progress bar.
     function createProgressBar() {
         progressBars.push(new ProgressBar());
-        if (progressBars.length >= stats.highestBar) {
+        if (progressBars.length > stats.highestBar) {
             stats.highestBar = stats.highestBar.add(1);
         }
         return "<progressbar id='ProgressBar" + (progressBars.length - 1) + "' style='background:rgb(" + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + "'>Progress Bar #" + (progressBars.length) + ": <span id='ProgressBarProgression_" + (progressBars.length - 1) + "'>?</span></progressbar><p/>";
