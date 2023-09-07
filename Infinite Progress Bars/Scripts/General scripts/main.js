@@ -37,7 +37,7 @@
         for (var x = 0; x < progressBars.length; x++) {
             document.getElementById('ProgressBarProgression_' + x).innerHTML = progressBars[x].amount.toFixed(3) + '/' + progressBars[x].amountNextLevel + ' (level ' + progressBars[x].level + ')';
         }
-        document.getElementById('StatsSection').innerHTML = 'Current progress bar: ' + progressBars.length + '<br>Highest progress bar: ' + stats.highestBar + '<br>Rebirths: ' + stats.rebirths + '<br>Total multiplier to amount gain: ' + stats.rebirthMulti().times(stats.barMulti()).toFixed(3) + 'x';
+        document.getElementById('StatsSection').innerHTML = 'Current progress bar: ' + progressBars.length + '<br>Highest progress bar: ' + stats.highestBar + '<br>Rebirths: ' + stats.rebirths + '<br>Total speed multiplier: ' + stats.rebirthMulti().times(stats.barMulti()).toFixed(3) + 'x';
         progressBars.length >= stats.rebirthReq ? document.getElementById('RebirthButton').style.display = '' : document.getElementById('RebirthButton').style.display = 'none';
     }
     setInterval(updater, 100);
