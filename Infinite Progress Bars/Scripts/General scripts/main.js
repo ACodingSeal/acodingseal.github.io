@@ -23,9 +23,9 @@
     // Increment bar progression.
     function increment() {
         for (var x = 0; x < progressBars.length; x++) {
-            if (progressBars[x].amount.greaterThanOrEqualTo(progressBars[x].amountNextLevel)) {
-                progressBars[x].level = progressBars[x].level.add(new Decimal(0).add(progressBars[x].amount.dividedBy(progressBars[x].amountNextLevel).floor()));
-                progressBars[x].amount = progressBars[x].amount.sub(progressBars[x].amountNextLevel.times(progressBars[x].amount.dividedBy(progressBars[x].amountNextLevel).floor()));
+            if (progressBars[x].amount.greaterThanOrEqualTo(progressBars[x].amountNextLevel())) {
+                progressBars[x].level = progressBars[x].level.add(new Decimal(0).add(progressBars[x].amount.dividedBy(progressBars[x].amountNextLevel()).floor()));
+                progressBars[x].amount = progressBars[x].amount.sub(progressBars[x].amountNextLevel().times(progressBars[x].amount.dividedBy(progressBars[x].amountNextLevel()).floor()));
             }
             if (progressBars[progressBars.length - 1].level.greaterThanOrEqualTo(progressBars[progressBars.length - 1].nextBarReq)) {
                 document.getElementById('ProgressBarsSection').innerHTML += createProgressBar();
@@ -63,9 +63,9 @@
         stats.currentBar.add(1).greaterThan(stats.highestBar) ? stats.highestBar = stats.currentBar.add(1) : null;
         for (var x = 0; x < progressBars.length; x++) {
             var hexFromRGB = rgbToHex(progressBars[x].colour[0], progressBars[x].colour[1], progressBars[x].colour[2]);
-            // console.log(invertHex(hexFromRGB.replace(/#/, '')));
-            document.getElementById('ProgressBarProgression_' + x).innerHTML = progressBars[x].amount.toFixed(3) + '/' + progressBars[x].amountNextLevel + ' (level ' + progressBars[x].level + ')';
-            document.getElementById('ProgressBar' + x).style.background = "linear-gradient(90deg, #" + invertHex(hexFromRGB.replace(/#/, '')) + ' ' + Math.max(0, 100 * progressBars[x].amount / progressBars[x].amountNextLevel) + '%, ' + hexFromRGB + ' 0%)';
+
+            document.getElementById('ProgressBarProgression_' + x).innerHTML = progressBars[x].amount.toFixed(3) + '/' + progressBars[x].amountNextLevel() + ' (level ' + progressBars[x].level + ')';
+            document.getElementById('ProgressBar' + x).style.background = "linear-gradient(90deg, #" + invertHex(hexFromRGB.replace(/#/, '')) + ' ' + Math.max(0, 100 * progressBars[x].amount / progressBars[x].amountNextLevel()) + '%, ' + hexFromRGB + ' 0%)';
         }
         document.getElementById('StatsSection').innerHTML = 'Current progress bar: ' + progressBars.length + '<br>Highest progress bar: ' + stats.highestBar + '<br>Rebirths: ' + stats.rebirths + '<br>Total speed multiplier: ' + stats.rebirthMulti().times(stats.barMulti()).toFixed(3) + 'x';
         progressBars.length >= stats.rebirthReq ? document.getElementById('RebirthButton').style.display = '' : document.getElementById('RebirthButton').style.display = 'none';
@@ -75,10 +75,13 @@
     // Internal progress bar.
     function ProgressBar(colour) {
         this.amount = new Decimal(0);
-        this.amountNextLevel = new Decimal(100).add(new Decimal(10).times(stats.currentBar));
+        this.amountNextLevel = function() {
+            return new Decimal(100).add(new Decimal(10).times(this.id));
+        }
         this.level = new Decimal(0);
         this.nextBarReq = new Decimal(10);
         this.colour = [];
+        this.id = new Decimal(0);
     }
 
     // UI progress bar.
@@ -90,6 +93,7 @@
         newBar.colour.push(r);
         newBar.colour.push(g);
         newBar.colour.push(b);
+        newBar.id = new Decimal(0).add(progressBars.length);
         progressBars.push(newBar);
         stats.currentBar = stats.currentBar.add(1);
         return "<progressbar id='ProgressBar" + (progressBars.length - 1) + "' style='background:rgb(" + r + ',' + g + ',' + b + "'>Progress Bar #" + (progressBars.length) + ": <span id='ProgressBarProgression_" + (progressBars.length - 1) + "'>?</span></progressbar><p/>";
@@ -155,17 +159,15 @@
         for (var y = 0; y < findInString('barLevels', null, true).length; y++) {
             progressBarLevels.push(findInString('barLevels', y));
         }
-        // console.log(progressBarLevels);
+
         for (var x = 0; x < progressBarLevels.length; x++) {
             document.getElementById('ProgressBarsSection').innerHTML += createProgressBar();
         }
+
         for (var x = 0; x < progressBarLevels.length; x++) {
             progressBars[x].level = new Decimal(progressBarLevels[x]);
         }
 
-        // console.log('testing!');
-        // console.log(findInString('barLevels', null, true).length);
-        // console.log(progressBarLevels.join('--'));
         stats.highestBar = new Decimal(findInString('highestBar'));
         stats.rebirths = new Decimal(findInString('rebirths'));
     }
@@ -222,8 +224,9 @@
         exportSave(true);
     });
     document.getElementById('ManualSaveButton').addEventListener('click', function() {
-        exportSave();
-        console.log('Successfully manually saved string: ' + window.localStorage.InfiniteProgressBarsSaveString);
+        var x = exportSave();
+        window.localStorage.InfiniteProgressBarsSaveString = x;
+        console.log('Successfully manually saved string: ' + x);
     });
 
     setInterval(function() {
