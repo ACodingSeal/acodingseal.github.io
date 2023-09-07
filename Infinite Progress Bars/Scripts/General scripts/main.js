@@ -63,7 +63,7 @@
         stats.currentBar.add(1).greaterThan(stats.highestBar) ? stats.highestBar = stats.currentBar.add(1) : null;
         for (var x = 0; x < progressBars.length; x++) {
             var hexFromRGB = rgbToHex(progressBars[x].colour[0], progressBars[x].colour[1], progressBars[x].colour[2]);
-
+			
             document.getElementById('ProgressBarProgression_' + x).innerHTML = progressBars[x].amount.toFixed(3) + '/' + progressBars[x].amountNextLevel() + ' (level ' + progressBars[x].level + ')';
             document.getElementById('ProgressBar' + x).style.background = "linear-gradient(90deg, #" + invertHex(hexFromRGB.replace(/#/, '')) + ' ' + Math.max(0, 100 * progressBars[x].amount / progressBars[x].amountNextLevel()) + '%, ' + hexFromRGB + ' 0%)';
         }
@@ -137,39 +137,41 @@
 
     // Add a saving system.
     function importSave(saveString) {
-        hardReset();
-        if (saveString === undefined) {
-            saveString = decrypt(rENC_k, window.localStorage.InfiniteProgressBarsSaveString.replace(/InfiniteProgressBars_SaveString___/, ''));
-        } else {
-            saveString = decrypt(rENC_k, saveString.replace(/InfiniteProgressBars_SaveString___/, ''));
-        }
-
-        function findInString(content, matchSecondary, returnLength) {
-            if (matchSecondary === undefined) {
-                matchSecondary = 0;
+        if (saveString !== undefined && (window.localStorage.InfiniteProgressBarsSaveString !== 'undefined' || window.localStorage.InfiniteProgressBarsSaveString !== '')) {
+            hardReset();
+            if (saveString === undefined) {
+                saveString = decrypt(rENC_k, window.localStorage.InfiniteProgressBarsSaveString.replace(/InfiniteProgressBars_SaveString___/, ''));
+            } else {
+                saveString = decrypt(rENC_k, saveString.replace(/InfiniteProgressBars_SaveString___/, ''));
             }
-            const regex = new RegExp(content + '[=].+', 'g');
-            const stage1 = saveString.match(regex)[0];
-            const stage2 = stage1.match(/\d+[.]*\d*[e]*\d*/g);
-            var result;
-            returnLength === true ? result = stage2 : result = stage2[matchSecondary];
-            return result;
-        }
-        const progressBarLevels = [];
-        for (var y = 0; y < findInString('barLevels', null, true).length; y++) {
-            progressBarLevels.push(findInString('barLevels', y));
-        }
 
-        for (var x = 0; x < progressBarLevels.length; x++) {
-            document.getElementById('ProgressBarsSection').innerHTML += createProgressBar();
-        }
+            function findInString(content, matchSecondary, returnLength) {
+                if (matchSecondary === undefined) {
+                    matchSecondary = 0;
+                }
+                const regex = new RegExp(content + '[=].+', 'g');
+                const stage1 = saveString.match(regex)[0];
+                const stage2 = stage1.match(/\d+[.]*\d*[e]*\d*/g);
+                var result;
+                returnLength === true ? result = stage2 : result = stage2[matchSecondary];
+                return result;
+            }
+            const progressBarLevels = [];
+            for (var y = 0; y < findInString('barLevels', null, true).length; y++) {
+                progressBarLevels.push(findInString('barLevels', y));
+            }
+			
+            for (var x = 0; x < progressBarLevels.length; x++) {
+                document.getElementById('ProgressBarsSection').innerHTML += createProgressBar();
+            }
 
-        for (var x = 0; x < progressBarLevels.length; x++) {
-            progressBars[x].level = new Decimal(progressBarLevels[x]);
-        }
+            for (var x = 0; x < progressBarLevels.length; x++) {
+                progressBars[x].level = new Decimal(progressBarLevels[x]);
+            }
 
-        stats.highestBar = new Decimal(findInString('highestBar'));
-        stats.rebirths = new Decimal(findInString('rebirths'));
+            stats.highestBar = new Decimal(findInString('highestBar'));
+            stats.rebirths = new Decimal(findInString('rebirths'));
+        }
     }
 
     // Credit for encryption/decryption functions: Stack Overflow.
