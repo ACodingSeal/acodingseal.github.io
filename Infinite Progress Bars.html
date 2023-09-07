@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>[v0.0.1] Infinite Progress Bars</title>
+<title>[v0.0.1a] Infinite Progress Bars</title>
 </head>
 <style>
 @font-face {
@@ -98,6 +98,37 @@ progressbar {
 
 img {
 	vertical-align:middle;
+}
+
+resetbutton {
+	display:inline-block;
+	border:0.2em solid #000;
+	border-radius:0.75em;
+	padding:0.75em;
+	margin:0.2em;
+	max-width:5em;
+	width:5em;
+	overflow:auto;
+	text-align:center;
+}
+
+@keyframes rebirthAnimation {
+	0% {
+		filter:opacity(100%);
+		background:#2D2D2D;
+	}
+	25% {
+		filter:opacity(0%);
+		background:#64ABE5;
+	}
+	75% {
+		filter:opacity(0%);
+		background:#64ABE5;
+	}
+	100% {
+		filter:opacity(100%);
+		background:#2D2D2D;
+	}
 }
 </style>
 <body id='MainBody' style='background:#2D2D2D;color:#FFF'>
