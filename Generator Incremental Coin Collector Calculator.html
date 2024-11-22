@@ -1,0 +1,296 @@
+<html>
+<head>
+<title>Generator Incremental Coin Collector Calculator</title>
+</head>
+<style>
+:root {
+	--bg-alpha:1;
+}
+.rainbow {
+	background:linear-gradient(to right,#FF0000,#FFA500,#FFFF00,#00FF00,#00FFFF,#0000FF,#4B0082,#EE82EE,#FF0000,#FFA500,#FFFF00,#00FF00,#00FFFF,#0000FF,#4B0082,#EE82EE,#FF0000);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	background-size:200%;
+	animation:rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+  to {
+background-position:100%;
+  }
+}
+
+@font-face {
+	font-family:Rubik;
+	src:url('./Generator Incremental Coin Collector Calculator/Fonts/Rubik-Regular.ttf');
+}
+
+p,div,span,table {
+	font-family:Rubik;
+}
+
+th {
+    display:table-cell;
+    vertical-align:inherit;
+    font-weight:bold;
+    text-align:-internal-center;
+}
+
+.wikitable {
+    background-color:rgba(248,249,250,var(--bg-alpha));
+    color:rgba(32,33,34,var(--bg-alpha));
+    margin:1em 0;
+    border:1px solid rgba(162,169,177,var(--bg-alpha));
+    border-collapse:collapse;
+}
+
+table {
+    border-collapse:collapse;
+    text-indent:initial;
+    border-spacing:2px;
+	table-layout:fixed;
+}
+
+.templatedesktop {
+	background:rgba(39,44,59,var(--bg-alpha));
+	color:rgba(255,255,255,var(--bg-alpha));
+	border-width:1px;
+	border-style:solid;
+	border-color:rgba(204,204,204,var(--bg-alpha));
+}
+
+.ColspanPercentageFirstHalf {
+	float:left;
+	width:50%;
+}
+.ColspanPercentageSecondHalf {
+	float:right;
+	width:50%;
+}
+
+.ProgressBar {
+	border:0.2em solid rgba(0,0,0,var(--bg-alpha));
+	border-radius:0.75em;
+	margin:0.2em;
+}
+
+td .content {
+	aspect-ratio:1/1;
+}
+
+td > img {
+	display:block;
+}
+
+.PressableButton {
+  cursor:pointer;
+}
+
+.FloatingMenuCollapsibleContent {
+  max-height: 0;
+}
+
+.MenuHeader {
+	text-align:center;
+	font-size:1.75em;
+	font-weight:bold;
+	border-bottom:0.1em solid rgba(0,0,0,var(--bg-alpha));
+}
+
+.MenuSubheader {
+	text-align:center;
+	font-size:1em;
+	font-weight:bold;
+	border-bottom:0.1em solid rgba(0,0,0,var(--bg-alpha));
+}
+
+.UpdateLogContainer {
+	border:2px solid rgba(0,0,0,var(--bg-alpha));
+	text-align:initial;
+	padding:0.5em;
+	height:40em;
+	overflow:auto;
+}
+.ULAdd {
+	color:rgba(0,255,0,var(--bg-alpha));
+	font-weight:bold;
+}
+.ULChange {
+	color:rgba(255,165,0,var(--bg-alpha));
+	font-weight:bold;
+}
+.ULRemove {
+	color:rgba(255,0,0,var(--bg-alpha));
+	font-weight:bold;
+}
+.ULFix {
+	color:rgba(130,94,63,var(--bg-alpha));
+	font-weight:bold;
+}
+.ULOther {
+	color:rgba(76,76,76,var(--bg-alpha));
+	font-weight:bold;
+}
+
+img {
+	vertical-align:middle;
+	opacity:var(--bg-alpha);
+}
+
+textarea {
+	background:rgba(211,211,211,var(--bg-alpha));
+	width:10em;
+	border:0.3em solid rgba(0,0,0, var(--bg-alpha));
+	color:rgba(0, 0, 0, var(--bg-alpha));
+}
+
+::placeholder {
+	color:rgba(0, 0, 0, var(--bg-alpha));
+}
+
+::selection {
+	background:rgba(0,0,255,var(--bg-alpha));
+	color:rgba(255,255,255,var(--bg-alpha));
+}
+
+.ImageTextContainer {
+	position:relative;
+	text-align:center;
+	color:rgba(255,255,255,var(--bg-alpha));
+}
+
+
+input {
+	background:rgba(211,211,211,var(--bg-alpha));
+	width:10em;
+	/* border:1px solid rgba(255, 255, 255, var(--bg-alpha)); */
+	color:rgba(0, 0, 0, var(--bg-alpha));
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+th {
+	color:rgba(255,255,255,var(--bg-alpha));
+	font-size:120%;
+}
+
+code {
+	background-color:rgba(45,45,45,var(--bg-alpha));
+	padding:0.2em;
+	border-radius:0.2em;
+	font-size:85%;
+	font-family:monospace;
+}
+
+.SwitchButtonEnabled {
+	background:rgba(0,128,0,var(--bg-alpha));
+}
+.SwitchButtonDisabled {
+	background:rgba(139,0,0,var(--bg-alpha));
+}
+
+.ToolLockout {
+	display:none !important;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 25px;
+  background: rgba(211,211,211,var(--bg-alpha));
+  outline: none;
+  border-radius:0.3em;
+  -webkit-transition: .2s;
+  transition:.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(91,136,229,calc(var(--bg-alpha) * 1));
+  border-radius:0.3em;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: rgba(4,170,109,var(--bg-alpha));
+  cursor: pointer;
+}
+
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.undraggable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+a {
+	color:rgba(102,152,255,var(--bg-alpha));
+	text-decoration:none;
+}
+
+hr {
+	border-color:rgba(255,255,255,var(--bg-alpha));
+}
+
+.StandardText {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% ); */
+    text-align: center;
+    color: rgba(255,255,255,var(--bg-alpha));
+    font-weight: bold;
+    font-size: 0.7em;
+    text-shadow: 2px 0 rgba(0,0,0,var(--bg-alpha)), -2px 0 rgba(0,0,0,var(--bg-alpha)), 0 2px rgba(0,0,0,var(--bg-alpha)), 0 -2px rgba(0,0,0,var(--bg-alpha)),1px 1px rgba(0,0,0,var(--bg-alpha)), -1px -1px rgba(0,0,0,var(--bg-alpha)), 1px -1px rgba(0,0,0,var(--bg-alpha)), -1px 1px rgba(0,0,0,var(--bg-alpha));
+}
+
+button {
+	width:100%;
+}
+
+button:active {
+	width:90%;
+	height:90%;
+}
+</style>
+<body id="GeneratorIncrementalCoinCollectorCalculator" style="background:rgba(45,45,45,var(--bg-alpha));color:rgba(255,255,255,var(--bg-alpha))">
+<noscript style='color:rgba(255,255,255,var(--bg-alpha))'>Please enable JavaScript to use this tool. The following scripts will be loaded in this exact order:
+<ul>
+<li><a href='./Generator Incremental Coin Collector Calculator/Scripts/HackTimerWorker.min.js'>HackTimerWorker.min.js</a></li>
+<li><a href='./Generator Incremental Coin Collector Calculator/Scripts/break eternity.js'>break eternity.js</a></li>
+<li><a href='./Generator Incremental Coin Collector Calculator/Scripts/Suffixes Collection.js'>Suffixes Collection.js</a></li>
+<li><a href='./Generator Incremental Coin Collector Calculator/Scripts/basic functions.js'>basic functions.js</a></li>
+<li><a href='./Generator Incremental Coin Collector Calculator/Scripts/Generator Incremental CCC main.js'>Generator Incremental CCC main.js</a></li>
+</ul>
+The total size of this tool is approximately 1.5MB, primarily consisting of <a href='./Generator Incremental Coin Collector Calculator/Fonts'>fonts</a> and scripts.
+</noscript>
+</body>
+<script src="./Generator Incremental Coin Collector Calculator/Scripts/HackTimerWorker.min.js"></script>
+<script src="./Generator Incremental Coin Collector Calculator/Scripts/break eternity.js"></script>
+<script src="./Generator Incremental Coin Collector Calculator/Scripts/Suffixes Collection.js"></script>
+<script src="./Generator Incremental Coin Collector Calculator/Scripts/basic functions.js"></script>
+<script src="./Generator Incremental Coin Collector Calculator/Scripts/Generator Incremental CCC main.js"></script>
+</html>
