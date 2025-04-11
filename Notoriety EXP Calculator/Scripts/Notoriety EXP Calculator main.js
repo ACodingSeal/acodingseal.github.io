@@ -158,7 +158,7 @@
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_Results'>";
 		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Results</h2>";
-		tool_baseHTML_MenuContainer_Calculator += "<p><div><p id='NotorietyEXPandInfamyCalculator_Section_Results_Disclaimer' style='font-size:80%'>placeholder!!!</p><div style='width:10em;height:4em;margin:auto'><div style='margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CalculateButton' style='cursor:pointer'>Calculate</button></div></div></div></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p><div><p id='NotorietyEXPandInfamyCalculator_Section_Results_Disclaimer' style='font-size:80%'>placeholder!!!</p><div style='width:10em;height:4em;margin:auto'><div style='margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CalculateButton' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Calculate</button></div></div></div></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p><div id='NotorietyEXPandInfamyCalculator_OutputResults'>" + 'dallas medic bag scream' + "</div></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
 		
