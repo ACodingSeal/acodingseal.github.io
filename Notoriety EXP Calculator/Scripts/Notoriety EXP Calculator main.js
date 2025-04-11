@@ -1096,7 +1096,6 @@
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
 						outputString += " Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
 					}
-					outputString += avgTimeOutput.formatAmount();
 				} else if (data.untilMXPUsage.greaterThan(0)) {
 					const orig = calcMXPReq({untilMXP: true}, {currentRank:data.currentMutatorRank, remainingMXP:data.remainingMXP, extraMXP:data.untilMXPUsage});
 					outputString += "At <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span>";
