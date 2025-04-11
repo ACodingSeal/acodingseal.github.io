@@ -379,7 +379,7 @@
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 13 days after starting the rerelease 43 hours late (contemplating whether to start the long grind train), after grinding on average 15+ hours a day, including one 48-hour session, grinding almost exclusively Authority and Shadow Raid, encountering many delays.",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 13 days after starting the rerelease 43 hours late (contemplating whether to start the long grind train), after grinding on average 15+ hours a day, including one 48-hour session, grinding almost exclusively Authority and Shadow Raid, encountering many delays. CCL #1 is also the creator of this tool!",
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease.",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo.",
 		"Achieved CCL mere hours before the suit revamp, becoming the fourth and final owner of the now-unobtainable Crimson (now Classic Crimson) suit pattern.",
