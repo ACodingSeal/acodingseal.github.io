@@ -286,7 +286,6 @@
 		"GenericDreamer",
 		"M4kA13",
 		"Aimilized",
-		undefined,
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -316,7 +315,6 @@
 		"GenericDreamer",
 		"m4ka",
 		"Aimilized",
-		undefined,
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -375,12 +373,12 @@
 		{approx:'within hours', timestamp: ["2025-04-01T07:35Z", "2025-04-01T10:57Z"]},
 		{approx:'within hours', timestamp: ["2025-04-04T11:30Z", "2025-04-04T13:38Z"]},
 		{approx:'within under 1 minute', timestamp: "2025-04-11T17:19Z"},
-		undefined,
 		];
 		const playersData_positions = [
 		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
 		];
 		const playersData_notes = [
+		// 1 - 10
 		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 13 days after starting the rerelease 43 hours late (contemplating whether to start the long grind train), after grinding on average 15+ hours a day, including one 48-hour session, grinding almost exclusively Authority and Shadow Raid, encountering many delays.",
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease.",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo.",
@@ -391,6 +389,7 @@
 		"Highest infamy classic suit: Royalty (150)",
 		"Highest infamy classic suit: Blue Navy (100)",
 		undefined,
+		// 11 - 20
 		undefined,
 		undefined,
 		"Highest infamy classic suit: Blue Navy (100)",
@@ -401,14 +400,15 @@
 		undefined,
 		"Possibly the first alternate account to reach CCL, being possibly an alt of CCL #17; this is based on having a very empty profile and the default avatar, in addition to only being friends with CCL #17 (at the time of addition to the CCLs list, friends with another player) and their badges being almost exclusively Notoriety ones since joining the game until Rank 250.",
 		"Possibly the first solo grinder to reach CCL.",
+		// 21 - 30
 		undefined,
 		undefined,
 		undefined,
 		undefined,
 		"This user primarily solo grinded. May also be the first CCL to reach it without owning the 'True Criminal' badge (1873037302).",
 		undefined,
-		"This user was at Infamy 235 for many weeks or months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs.",
-		undefined,
+		"This user was at infamy 235 for many weeks or months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs.",
+		"This user grinded 200 infamy ranks with random players in public matches.",
 		];
 		
 		for (var x = 0; x < countCCLs; x++) {
