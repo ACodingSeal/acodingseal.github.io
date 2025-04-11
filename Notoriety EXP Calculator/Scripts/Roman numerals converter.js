@@ -43,7 +43,7 @@ function toRoman(input, separator, convertNum) {
         output += letters[2] + letters[4];
     } else if (inputRemaining.greaterThanOrEqualTo(100)) {
         var inputRemaining_a = inputRemaining.dividedBy(100).floor().add(1);
-        inputRemaining = inputRemaining_a.sub(inputRemaining_a.sub(1).times(100));
+        inputRemaining = inputRemaining.sub(inputRemaining_a.sub(1).times(100));
         output += Array(inputRemaining_a.toNumber()).join(letters[4]);
     }
 	
