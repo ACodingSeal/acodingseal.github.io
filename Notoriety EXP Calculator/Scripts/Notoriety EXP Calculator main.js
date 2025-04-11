@@ -247,7 +247,7 @@
 	}
 	
 	function addHallofInfamyCCLs() {
-		const countCCLs = 26;
+		const countCCLs = 27;
 		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second</b> format. Entries may take some time to be added, especially depending on available data. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, position, notes) {
 			this.username = username;
@@ -285,6 +285,7 @@
 		"Benja_boy64",
 		"GenericDreamer",
 		"M4kA13",
+		"Aimilized",
 		undefined,
 		];
 		const playersData_displayNames = [
@@ -314,6 +315,7 @@
 		"iforgor",
 		"GenericDreamer",
 		"m4ka",
+		"Aimilized",
 		undefined,
 		];
 		const playersData_robloxAvatars = [
@@ -343,6 +345,7 @@
 		"Benja_boy64 - 2025-04-10T22-09Z.png",
 		"GenericDreamer - 2025-04-10T22-10Z.png",
 		"M4kA13 - 2025-04-10T22-10Z.png",
+		"Aimilized - 2025-04-11T19-35Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35Z"},
@@ -371,10 +374,11 @@
 		{approx:'within many hours', timestamp: ["2025-03-29T11:33Z", "2025-03-30T03:12Z"]},
 		{approx:'within hours', timestamp: ["2025-04-01T07:35Z", "2025-04-01T10:57Z"]},
 		{approx:'within hours', timestamp: ["2025-04-04T11:30Z", "2025-04-04T13:38Z"]},
+		{approx:'within under 1 minute', timestamp: "2025-04-11T17:19Z"},
 		undefined,
 		];
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
 		];
 		const playersData_notes = [
 		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 13 days after starting the rerelease 43 hours late (contemplating whether to start the long grind train), after grinding on average 15+ hours a day, including one 48-hour session, grinding almost exclusively Authority and Shadow Raid, encountering many delays.",
@@ -402,6 +406,8 @@
 		undefined,
 		undefined,
 		"This user primarily solo grinded. May also be the first CCL to reach it without owning the 'True Criminal' badge (1873037302).",
+		undefined,
+		"This user was at Infamy 235 for many weeks or months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs.",
 		undefined,
 		];
 		
