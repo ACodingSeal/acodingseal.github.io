@@ -164,17 +164,17 @@ function notateInt(e) {
             e = new Decimal(e);
 			if (e.equals(Infinity)) {
 				result = 'Infinity';
-			} else if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e6)) {
-                result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e6, return the input with comma-separated numbers.
-            } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan(new Decimal("1e" + suffixes.length * 3)) && suffixStatus === true) {
+			} else if (e.greaterThanOrEqualTo(1e3) && e.lessThan(1e12)) {
+                result = Number(e).toLocaleString(); // If the input is equal to at least 1e3 and less than 1e12, return the input with comma-separated numbers.
+            } else if (e.greaterThanOrEqualTo(1e12) && e.lessThan(new Decimal("1e" + suffixes.length * 3)) && suffixStatus === true) {
                 extraZeroes = e.exponent % 3;
                 result = checkNoDecimal(e.mantissa * (10 ** extraZeroes)) + "" + suffixes[Math.floor(e.exponent / 3)]; // If the input is at least 1e6 and is less than the length of the suffixes array's zero count times 3 and suffix notation is enabled, return the input converted to suffix notation.
-            } else if (e.greaterThanOrEqualTo(1e6) && e.lessThan('1e1e3')) {
+            } else if (e.greaterThanOrEqualTo(1e12) && e.lessThan('1e1e3')) {
                 e = new Decimal(e.mantissa.toFixed(3) + "e" + e.exponent);
                 if ((e.mantissa).toString() === "9.999999999999") {
                     result = "1e" + e.exponent;
                 } else {
-                    result = checkNoDecimal(e.mantissa) + "e" + e.exponent; // If the input is at least 1e6, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
+                    result = checkNoDecimal(e.mantissa) + "e" + e.exponent; // If the input is at least 1e12, less than 1e21 and suffix notation is not enabled, return the input converted to scientific notation.
                 }
             } else if (e.greaterThanOrEqualTo("1e1e3") && e.lessThan("1e1e16")) {
                 switch (suffixStatus) {
