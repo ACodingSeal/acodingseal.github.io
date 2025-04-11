@@ -412,7 +412,6 @@
 			} else {
 				players[x].username = playersData_usernames[x];
 			}
-			console.log(playersData_usernames[x]);
 			
 			if (playersData_displayNames[x] == undefined) {
 				players[x].displayName = undefined;
@@ -612,15 +611,10 @@
 	        }
 			
 	        if (test_a.match(/EXCL?(?=[=])/) != null || test_a.match(/MENU?(?=[(])/) != null) {
-	            console.log('bravo test');
 	            if (test_a.match(/EXCL?(?=[=])/) != null) {
-	                console.log('charlie 1 test');
-	                console.log('run excluded');
 	                test_a = test_a.replace(/EXCL[=]/, '');
 					excludedRuns = excludedRuns.add(1);
 	            } else if (test_a.match(/MENU?(?=[(])/) != null) {
-	                console.log('charlie 2 test');
-	                console.log('menu');
 	                test_a = test_a.replace(/MENU[(]/, '');
 	                extraTime = extraTime.add(Number(test_a.match(/.+?(?=[)])/)[0].replace(/[)]/, '')));
 	                test_a = test_a.replace(/.+?(?=[)])[)]/, '');
@@ -737,7 +731,6 @@
 		hideAllMenus();
 		document.getElementById(menuIDs[menuButtonIDs.indexOf(input)]).style.display = '';
 	}
-	switchMenuToThis(menuButtonIDs[1]);
 	
 	(function() {
 		const orig = document.getElementById('NotorietyEXPandInfamyCalculator_MenuButtons');
@@ -748,16 +741,10 @@
 		buttons[0].innerHTML = "<span style='color:rgba(255,255,255,var(--bg-alpha));font-weight:bold'>Calculator</span>";
 		buttons[1].innerHTML = "<span style='color:rgba(255,255,255,var(--bg-alpha));font-weight:bold'>Miscellaneous</span>";
 		for (var x = 0; x < buttons.length; x++) {
-			console.log('TESTING BUTTONS');
-			console.log('TESTING BUTTONS');
-			console.log(buttons[x]);
 			buttons[x].setAttribute('class', 'NotorietyEXPCalculatorButton NotorietyEXPCalculatorMenuButton');
 			buttons[x].setAttribute('id', menuButtonIDs[x]);
 			orig.appendChild(buttons[x]);
 			buttons[x].addEventListener('click', function() {
-				console.log('TESTING BUTTONS');
-				console.log('TESTING BUTTONS');
-				console.log(this);
 				switchMenuToThis(this.id);
 			});
 		}
@@ -869,7 +856,6 @@
 	// Add listeners to toggles
 	(function() {
 		elem.toggleInputSliders_Global.addEventListener('click', function() {
-			console.log(data.toggleInputSliders_Global);
 			data.toggleInputSliders_Global = data.toggleInputSliders_Global == 0 ? 1 : 0
 			this.innerHTML = ['Input method: Manual inputs', 'Input method: Sliders'][Number(data.toggleInputSliders_Global)];
 			const sliderElems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput];
@@ -1095,7 +1081,6 @@
 				if (data.untilMXPUsage.equals(0)) {
 					const orig = calcMXPReq({untilMXP: false}, {currentRank:data.currentMutatorRank, goalRank:data.goalMutatorRank, remainingMXP:data.remainingMXP});
 					totalMxpReq = totalMxpReq.add(orig);
-					console.log(rotationInputsCalculated.time);
 					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + "</span> "
 					if (data.remainingMXP.greaterThan(0)) {
 						outputString += " with <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.remainingMXP) + " MXP</span> remaining until the next rank, ";
@@ -1110,9 +1095,6 @@
 					} else {
 						outputString += ',';
 					}
-					console.log(calcMXPReq({untilMXP:false}, {currentRank:0, goalRank:5}));
-					console.log(orig.totalMXP);
-					console.log(data.untilMXPUsage);
 					totalMxpReq = totalMxpReq.add(data.untilMXPUsage);
 					outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.untilMXPUsage) + " MXP</span> will reach:";
 					outputString += "<br>- <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig.newRank) + "</span> (+" + formatInt(orig.extraRanks) + ")";
