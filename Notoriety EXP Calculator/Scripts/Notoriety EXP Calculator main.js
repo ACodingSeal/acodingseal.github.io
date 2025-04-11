@@ -582,7 +582,7 @@
 		<p>
 		<b>[Testing] <u>Version 0.0.1 - The Beginning</u></b>
 		<ul>
-			${updateLogEntry('other', "Testers: ashvul, nate247.")}
+			${updateLogEntry('other', "Testers: ashvul, nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: TBA")}
 		</ul></p>
 		<b>[Testing] <u>Version Indev</u></b>
