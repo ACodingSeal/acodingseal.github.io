@@ -731,7 +731,7 @@
 		hideAllMenus();
 		document.getElementById(menuIDs[menuButtonIDs.indexOf(input)]).style.display = '';
 	}
-	switchMenuToThis(buttonIDs[0]);
+	switchMenuToThis(menuButtonIDs[0]);
 	
 	(function() {
 		const orig = document.getElementById('NotorietyEXPandInfamyCalculator_MenuButtons');
