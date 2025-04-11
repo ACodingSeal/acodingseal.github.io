@@ -12,26 +12,28 @@
 	const validKeysInterpretation = [75879, 25220, 63];
 	
 	function interpretKey(input) {
-		const characters = [];
-		var remainingInput = input;
-		var output;
-		var numA = 0;
-		var numB = 0;
-		for (var x = 0; x < input.length; x++) {
-			characters.push(remainingInput.match(/./)[0]);
-			remainingInput = remainingInput.replace(/./, '');
-			if (letters.indexOf(characters[x]) != -1 || lettersLC.indexOf(characters[x]) != -1) {
-				if (letters.indexOf(characters[x]) != -1) {
-					numA += (1 + lettersLC.indexOf(characters[x].toLowerCase())) * 5;
-				} else if (lettersLC.indexOf(characters[x]) != -1) {
-					numA += (1 + lettersLC.indexOf(characters[x].toLowerCase())) * 2;
+		var output = 0;
+		if (input != null) {
+			const characters = [];
+			var remainingInput = input;
+			var numA = 0;
+			var numB = 0;
+			for (var x = 0; x < input.length; x++) {
+				characters.push(remainingInput.match(/./)[0]);
+				remainingInput = remainingInput.replace(/./, '');
+				if (letters.indexOf(characters[x]) != -1 || lettersLC.indexOf(characters[x]) != -1) {
+					if (letters.indexOf(characters[x]) != -1) {
+						numA += (1 + lettersLC.indexOf(characters[x].toLowerCase())) * 5;
+					} else if (lettersLC.indexOf(characters[x]) != -1) {
+						numA += (1 + lettersLC.indexOf(characters[x].toLowerCase())) * 2;
+					}
+				}
+				if (Number(characters[x]) >= 0) {
+					numB += (Number(characters[x]) * Math.floor(Number(characters[x]) ** 1.2 + 1));
 				}
 			}
-			if (Number(characters[x]) >= 0) {
-				numB += (Number(characters[x]) * Math.floor(Number(characters[x]) ** 1.2 + 1));
-			}
+			output = Math.floor((numA + numB) / 8) + (numA * numB);
 		}
-		output = Math.floor((numA + numB) / 8) + (numA * numB);
 		return output;
 	}
 	if (validKeysInterpretation.indexOf(interpretKey(window.localStorage.getItem('NotorietyEXPCalculator_TesterGatekeep_CodeUsed'))) != -1) {
