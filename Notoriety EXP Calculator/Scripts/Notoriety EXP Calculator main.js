@@ -399,7 +399,7 @@
 		undefined,
 		"Possibly the first post-rerelease player to reach CCL, based on their badges.",
 		undefined,
-		"Possibly the first alternate account to reach CCL, being possibly an alt of CCL-17; this is based on having a very empty profile and the default avatar, in addition to only being friends with CCL-17 (at the time of addition to the CCLs list, friends with another player) and their badges being almost exclusively Notoriety ones since joining the game until Rank 250.",
+		"Possibly the first alternate account to reach CCL, being possibly an alt of CCL #17; this is based on having a very empty profile and the default avatar, in addition to only being friends with CCL #17 (at the time of addition to the CCLs list, friends with another player) and their badges being almost exclusively Notoriety ones since joining the game until Rank 250.",
 		"Possibly the first solo grinder to reach CCL.",
 		undefined,
 		undefined,
