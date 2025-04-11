@@ -579,7 +579,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~40 hours.
+		Estimated total active development time across all versions: ~41 hours.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -589,7 +589,7 @@
 		<b>[Testing] <u>Version 0.0.1 - The Beginning</u></b>
 		<ul>
 			${updateLogEntry('other', "Testers: ashvul, nate247, player6978.")}
-			${updateLogEntry('other', "Estimated active development time: TBA")}
+			${updateLogEntry('other', "Estimated active development time: ~1 hour.")}
 		</ul></p>
 		<b>[Testing] <u>Version Indev</u></b>
 		<ul>
