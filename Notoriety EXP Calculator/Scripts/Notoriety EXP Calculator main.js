@@ -1092,7 +1092,10 @@
 					if (data.remainingMXP.greaterThan(0)) {
 						outputString += " with <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.remainingMXP) + " MXP</span> remaining until the next rank, ";
 					}
-					outputString += " the requirement is <span class='NotorietyEXPCalculator_MXP'>" + formatInt(totalMxpReq) + " MXP</span>. Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+					outputString += " the requirement is <span class='NotorietyEXPCalculator_MXP'>" + formatInt(totalMxpReq) + " MXP</span>.";
+					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
+						outputString += " Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+					}
 					outputString += avgTimeOutput.formatAmount();
 				} else if (data.untilMXPUsage.greaterThan(0)) {
 					const orig = calcMXPReq({untilMXP: true}, {currentRank:data.currentMutatorRank, remainingMXP:data.remainingMXP, extraMXP:data.untilMXPUsage});
@@ -1106,7 +1109,9 @@
 					outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.untilMXPUsage) + " MXP</span> will reach:";
 					outputString += "<br>- <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig.newRank) + "</span> (+" + formatInt(orig.extraRanks) + ")";
 					outputString += "<br>- Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig.leftoverMXP) + "</span>";
-					outputString += "<p/>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
+						outputString += "<p/>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+					}
 				} else {
 					outputString += "Wait a minute, how did this happen? We're smarter than this.";
 				}
