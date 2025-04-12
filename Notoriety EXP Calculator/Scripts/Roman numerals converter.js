@@ -131,7 +131,7 @@ function toRomanWithSeparator(x, y, conversionAllowed, includeSeparator) {
 			output = y;
 		}
 	}
-	if (x.greaterThan(0)) {
+	if (x.greaterThan(0) && conversionAllowed == 1) {
 		if (x.greaterThanOrEqualTo(1) && x.lessThan(5)) {
 			output = "<span class='NotorietyEXPCalculator_InfamyRanks1to4'>" + output + "</span>";
 		} else if (x.greaterThanOrEqualTo(5) && x.lessThan(10)) {
