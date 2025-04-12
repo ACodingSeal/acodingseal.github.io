@@ -44,6 +44,7 @@
 			orig.insertAdjacentHTML("beforeend", "<div id='NotorietyEXPandInfamyCalculator_TesterGatekeep'></div>");
 			orig.style.display = '';
 			orig.getElementsByTagName('div')[0].style.display = 'none';
+			orig.getElementsByTagName('div')[0].remove();
 			doTheStuff();
 		}, 0);
 		
