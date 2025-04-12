@@ -109,27 +109,42 @@ function toRoman(input, separator, convertNum) {
 function toRomanWithSeparator(x, y, conversionAllowed, includeSeparator) {
 	x = new Decimal(x);
 	y = new Decimal(y);
+	var output;
 	if (conversionAllowed == 1) {
 		if (x.greaterThan(0)) {
 			if (includeSeparator == true) {
-				return toRoman(x) + '-' + y
+				output = toRoman(x) + '-' + y;
 			} else {
-				return toRoman(x)
+				output = toRoman(x);
 			}
 		} else {
-			return y
+			output = y;
 		}
 	} else {
 		if (x.greaterThan(0)) {
 			if (includeSeparator == true) {
-				return x + '-' + y
+				output = x + '-' + y;
 			} else {
-				return x
+				output = x;
 			}
 		} else {
-			return y
+			output = y;
 		}
 	}
+	if (x.greaterThan(0)) {
+		if (x.greaterThanOrEqualTo(1) && x.lessThan(5)) {
+			output = "<span class='NotorietyEXPCalculator_InfamyRanks1to4'>" + output + "</span>";
+		} else if (x.greaterThanOrEqualTo(5) && x.lessThan(10)) {
+			output = "<span class='NotorietyEXPCalculator_InfamyRanks5to9'>" + output + "</span>";
+		} else if (x.greaterThanOrEqualTo(10) && x.lessThan(15)) {
+			output = "<span class='NotorietyEXPCalculator_InfamyRanks10to14'>" + output + "</span>";
+		} else if (x.greaterThanOrEqualTo(15) && x.lessThan(20)) {
+			output = "<span class='NotorietyEXPCalculator_InfamyRanks15to19'>" + output + "</span>";
+		} else if (x.greaterThanOrEqualTo(20)) {
+			output = "<span class='NotorietyEXPCalculator_InfamyRanks20to25'>" + output + "</span>";
+		}
+	}
+	return output;
 }
 
 function fromRoman(input) {
