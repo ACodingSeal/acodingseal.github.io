@@ -1024,13 +1024,21 @@
 		var totalMxpReq = new Decimal(0);
 		const testingFalsy = false;
 		const rotationInputsCalculated = data.rotationInputTotals(elem.runGainsInput.value)
+		var forEXPOnlyNote = false;
 		
 		
+		const avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
+		const avgTimeOutput = new Timer();
+		avgTimeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
+		avgTimeOutput.amount = avgTime.times(1e3);
 		switch (data.toggleComputationType_Global) {
 			case 0:
+				var avgExpGains = rotationInputsCalculated.exp.dividedBy(rotationInputsCalculated.includedRuns);
+				var infamyRunsReq = NotoExpReqTotal(1, 100).dividedBy(avgExpGains);
+				var avgMoneyGains = (rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns)).times(infamyRunsReq);
 				if (data.currentInfamyLevel.equals(0) && data.goalInfamyLevel.equals(0)) {
 				var levelDiff = data.goalLevel.sub(data.currentLevel).abs();
-				totalExpReq = NotoExpReqTotal(data.currentLevel.min(data.goalLevel), data.currentLevel.max(data.goalLevel))
+				totalExpReq = NotoExpReqTotal(data.currentLevel.min(data.goalLevel), data.currentLevel.max(data.goalLevel));
 				if (data.remainingEXP.notEquals(0)) {
 					var nextLevelReq = NotoExpReqTotal(data.currentLevel.min(data.goalLevel), data.currentLevel.min(data.goalLevel).add(1));
 					totalExpReq = totalExpReq.sub(nextLevelReq.min(data.remainingEXP.sub(nextLevelReq).abs()));
@@ -1038,9 +1046,6 @@
 				outputString += "To go from Level " + formatInt(data.currentLevel) + " to " + formatInt(data.goalLevel) + ", the following is required:";
 				outputString += '<br>• ' + formatInt(totalExpReq) + ' EXP (' + levelDiff.valueOf() + checkPlural(levelDiff, ' level', ' levels') + ')';
 				} else if (data.untilOutOfMoneyCheck == 1 && data.currentInfamyLevel.greaterThan(0)) {
-					var avgExpGains = rotationInputsCalculated.exp.dividedBy(rotationInputsCalculated.includedRuns);
-					var infamyRunsReq = NotoExpReqTotal(1, 100).dividedBy(avgExpGains);
-					var avgMoneyGains = (rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns)).times(infamyRunsReq);
 					const calcPoorOutput = calcInfamiesUntilPoor(data.currentInfamyLevel, [data.currentMoney, avgMoneyGains]);
 					
 					if (calcPoorOutput.infsWithPassive.greaterThan(0)) {
@@ -1053,11 +1058,16 @@
 					outputString += '<br>• Infamies: ' + formatInt(calcPoorOutput.infs) + ' (passive: ' + formatInt(calcPoorOutput.passiveInfs) + ' | total: ' + formatInt(calcPoorOutput.infsWithPassive) + ')';
 					outputString += '<br>• Reach Infamy ' + toRomanWithSeparator(data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive), '', data.toggleRomanNumerals_Global && (data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive)).greaterThan(0), false /*data.currentInfamyLevel > 0*/) + ' for totals of <b>' + formatInt(totalExpReq) + "</b> EXP and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.totalCostWithPassive) + "</span> (leftover: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.remainingMoney) + '</span>)';
 				} else {
-					outputString += "To go from Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/) + ' to ' + toRomanWithSeparator(data.goalInfamyLevel, data.goalLevel, data.toggleRomanNumerals_Global && data.goalInfamyLevel.greaterThan(0), true /*data.goalInfamyLevel > 0*/) + ', the following are required:';
+					outputString += "To go from Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/) + ' to ' + toRomanWithSeparator(data.goalInfamyLevel, data.goalLevel, data.toggleRomanNumerals_Global && data.goalInfamyLevel.greaterThan(0), true /*data.goalInfamyLevel > 0*/);
+					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
+						outputString += "assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run"
+					}
+					outputString += ', the following are required:';
 					var currentLevel_Temp = data.currentLevel, goalLevel_Temp = data.goalLevel;
 					var infamyLevelDiff = data.goalInfamyLevel.sub(data.currentInfamyLevel).abs();
 					if (infamyLevelDiff.greaterThan(0)) {
-						totalExpReq = totalExpReq.add(NotoExpReqTotal(data.currentLevel, 100)); // gets exp req to very next infamy
+						// gets exp req to very next infamy
+						totalExpReq = totalExpReq.add(NotoExpReqTotal(data.currentLevel, 100));
 						
 						// last infamy until desired level
 						if (infamyLevelDiff.greaterThan(1)) {
@@ -1073,18 +1083,16 @@
 					
 					outputString += '<br>• <b>' + formatInt(totalExpReq) + '</b> EXP';
 					var infamyMoneyReq = calcInfamyMoneyReq_v2(data.currentInfamyLevel, data.goalInfamyLevel, data.cheaperPassCheck, [data.currentMoney, rotationInputsCalculated.money], data.preMoneyCapCheck);
-					outputString += "<br>• <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.max(0)) + '</span> money (based on average gains and average infamy costs, excluding current money)'
+					outputString += "<br>• <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.max(0)) + '</span> money (excluding current money)';
 					if (infamyMoneyReq.lessThan(0)) {
 						outputString += " (using up <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.abs().sub(data.currentMoney).abs()) + "</span> with <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.abs()) + '</span> remaining)';
+					} else if (infamyMoneyReq.greaterThan(0)) {
+						forEXPOnlyNote = true;
 					}
 				}
 				break;
 			case 1:
 				const avgMxpGains = rotationInputsCalculated.mxp.dividedBy(rotationInputsCalculated.includedRuns);
-				const avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
-				const avgTimeOutput = new Timer();
-				avgTimeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
-				avgTimeOutput.amount = avgTime.times(1e3);
 				if (data.untilMXPUsage.equals(0)) {
 					const orig = calcMXPReq({untilMXP: false}, {currentRank:data.currentMutatorRank, goalRank:data.goalMutatorRank, remainingMXP:data.remainingMXP});
 					totalMxpReq = totalMxpReq.add(orig);
@@ -1130,8 +1138,13 @@
 					rotationsReq = new Decimal(0);
 				}
 				if (totalExpReq.notEquals(0)) {
-					outputString += '<br>• <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-					outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+					if (forEXPOnlyNote == true) {
+						outputString += '<br>• For EXP only: <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+						outputString += '<br>• For EXP only: <b>' + timeOutput.formatAmount() + '</b> playtime';
+					} else {
+						outputString += '<br>• <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+						outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+					}
 				}
 			}
 		break;
