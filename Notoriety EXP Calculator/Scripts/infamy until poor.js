@@ -19,8 +19,8 @@ function calcInfamyMoneyReq_v2(base, goal, cheaperInf, moneyCurrentNGain, preMon
             var calcSingleRes = new Decimal();
             if (preMoneyReqLimit == true) {
 				calcSingleRes = new Decimal(1e6).times(20).times(new Decimal(25).min(x))
-				.add(new Decimal(1e6).times(new Decimal(20).times(new Decimal(0).max(x.sub(25)))))
-				.add(new Decimal(10).times(new Decimal(0).max(x.sub(25)).times(new Decimal(0).max(x.sub(25)).add(1)).dividedBy(2)))
+				.add(new Decimal(1e6).times(new Decimal(20).times(new Decimal(0).max(x.sub(25)))
+				.add(new Decimal(10).times(new Decimal(0).max(x.sub(25)).times(new Decimal(0).max(x.sub(25)).add(1)).dividedBy(2)))))
             } else {
 				calcSingleRes = new Decimal(20).times(new Decimal(25).min(x))
 				.add(new Decimal(875).min(new Decimal(20).times(new Decimal(0).max(x.sub(25)))
