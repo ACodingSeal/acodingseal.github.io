@@ -1037,7 +1037,7 @@
 					totalExpReq = totalExpReq.sub(nextLevelReq.min(data.remainingEXP.sub(nextLevelReq).abs()));
 				}
 				outputString += "To go from Level " + formatInt(data.currentLevel) + " to " + formatInt(data.goalLevel) + ", the following is required:";
-				outputString += '<br>- ' + formatInt(totalExpReq) + ' EXP (' + levelDiff.valueOf() + checkPlural(levelDiff, ' level', ' levels') + ')';
+				outputString += '<br>• ' + formatInt(totalExpReq) + ' EXP (' + levelDiff.valueOf() + checkPlural(levelDiff, ' level', ' levels') + ')';
 				} else if (data.untilOutOfMoneyCheck == 1 && data.currentInfamyLevel.greaterThan(0)) {
 					var avgExpGains = rotationInputsCalculated.exp.dividedBy(rotationInputsCalculated.includedRuns);
 					var infamyRunsReq = NotoExpReqTotal(1, 100).dividedBy(avgExpGains);
@@ -1051,8 +1051,8 @@
 						}
 					}
 					outputString += "At Infamy " + toRomanWithSeparator(data.currentInfamyLevel, '', data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), false /*data.currentInfamyLevel > 0*/) + " with currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + '</span> and average gains of ' + formatInt(avgExpGains) + " EXP per run and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + '</span> per infamy (based on runs required for enough exp), the following can be achieved:';
-					outputString += '<br>- Infamies: ' + formatInt(calcPoorOutput.infs) + ' (passive: ' + formatInt(calcPoorOutput.passiveInfs) + ' | total: ' + formatInt(calcPoorOutput.infsWithPassive) + ')';
-					outputString += '<br>- Reach Infamy ' + toRomanWithSeparator(data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive), '', data.toggleRomanNumerals_Global && (data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive)).greaterThan(0), false /*data.currentInfamyLevel > 0*/) + ' for totals of <b>' + formatInt(totalExpReq) + "</b> EXP and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.totalCostWithPassive) + "</span> (leftover: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.remainingMoney) + '</span>)';
+					outputString += '<br>• Infamies: ' + formatInt(calcPoorOutput.infs) + ' (passive: ' + formatInt(calcPoorOutput.passiveInfs) + ' | total: ' + formatInt(calcPoorOutput.infsWithPassive) + ')';
+					outputString += '<br>• Reach Infamy ' + toRomanWithSeparator(data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive), '', data.toggleRomanNumerals_Global && (data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive)).greaterThan(0), false /*data.currentInfamyLevel > 0*/) + ' for totals of <b>' + formatInt(totalExpReq) + "</b> EXP and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.totalCostWithPassive) + "</span> (leftover: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.remainingMoney) + '</span>)';
 				} else {
 					outputString += "To go from Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/) + ' to ' + toRomanWithSeparator(data.goalInfamyLevel, data.goalLevel, data.toggleRomanNumerals_Global && data.goalInfamyLevel.greaterThan(0), true /*data.goalInfamyLevel > 0*/) + ', the following are required:';
 					var currentLevel_Temp = data.currentLevel, goalLevel_Temp = data.goalLevel;
@@ -1072,9 +1072,9 @@
 						totalExpReq = totalExpReq.sub(nextLevelReq.min(data.remainingEXP.sub(nextLevelReq).abs()));
 					}
 					
-					outputString += '<br>- <b>' + formatInt(totalExpReq) + '</b> EXP';
+					outputString += '<br>• <b>' + formatInt(totalExpReq) + '</b> EXP';
 					var infamyMoneyReq = calcInfamyMoneyReq_v2(data.currentInfamyLevel, data.goalInfamyLevel, data.cheaperPassCheck, [data.currentMoney, rotationInputsCalculated.money], data.preMoneyCapCheck);
-					outputString += "<br>- <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.max(0)) + '</span> money (based on average gains and average infamy costs, excluding current money)'
+					outputString += "<br>• <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.max(0)) + '</span> money (based on average gains and average infamy costs, excluding current money)'
 					if (infamyMoneyReq.lessThan(0)) {
 						outputString += " (using up <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.abs().sub(data.currentMoney).abs()) + "</span> with <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.abs()) + '</span> remaining)';
 					}
@@ -1107,8 +1107,8 @@
 					}
 					totalMxpReq = totalMxpReq.add(data.untilMXPUsage);
 					outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.untilMXPUsage) + " MXP</span> will reach:";
-					outputString += "<br>- <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig.newRank) + "</span> (+" + formatInt(orig.extraRanks) + ")";
-					outputString += "<br>- Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig.leftoverMXP) + "</span>";
+					outputString += "<br>• <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig.newRank) + "</span> (+" + formatInt(orig.extraRanks) + ")";
+					outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig.leftoverMXP) + "</span>";
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
 						outputString += "<p/>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
 					}
@@ -1130,8 +1130,8 @@
 				if (rotationsReq.isNan() == true) {
 					rotationsReq = new Decimal(0);
 				}
-				outputString += '<br>- <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-				outputString += '<br>- <b>' + timeOutput.formatAmount() + '</b> playtime';
+				outputString += '<br>• <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
 			}
 		break;
 		case 1:
@@ -1147,8 +1147,8 @@
 				if (rotationsReq.isNan() == true) {
 					rotationsReq = new Decimal(0);
 				}
-				outputString += '<br>- <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-				outputString += '<br>- <b>' + timeOutput.formatAmount() + '</b> playtime';
+				outputString += '<br>• <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
 			}
 		}
 		elem.outputResults.innerHTML = outputString;
