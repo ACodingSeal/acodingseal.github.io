@@ -37,7 +37,7 @@
 		return output;
 	}
 	if (validKeysInterpretation.indexOf(interpretKey(window.localStorage.getItem('NotorietyEXPCalculator_TesterGatekeep_CodeUsed'))) != -1) {
-		console.log('Entered correct tester key: ' + window.localStorage.getItem('NotorietyEXPCalculator_TesterGatekeep_CodeUsed'));
+		console.log('Entered correct tester access key: ' + window.localStorage.getItem('NotorietyEXPCalculator_TesterGatekeep_CodeUsed'));
 	} else {
 		orig.style.display = 'none';
 		setTimeout(function() {
