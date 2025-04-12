@@ -1130,8 +1130,10 @@
 				if (rotationsReq.isNan() == true) {
 					rotationsReq = new Decimal(0);
 				}
-				outputString += '<br>• <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+				if (totalExpReq.notEquals(0)) {
+					outputString += '<br>• <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+					outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+				}
 			}
 		break;
 		case 1:
