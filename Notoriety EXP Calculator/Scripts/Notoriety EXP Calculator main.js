@@ -1083,6 +1083,9 @@
 					
 					outputString += '<br>• <b>' + formatInt(totalExpReq) + '</b> EXP';
 					var infamyMoneyReq = calcInfamyMoneyReq_v2(data.currentInfamyLevel, data.goalInfamyLevel, data.cheaperPassCheck, [data.currentMoney, rotationInputsCalculated.money], data.preMoneyCapCheck);
+					if (rotationInputsCalculated.includedRuns.equals(0)) {
+						infamyMoneyReq = infamyMoneyReq.sub(data.currentMoney);
+					}
 					outputString += "<br>• <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.max(0)) + '</span> money (excluding current money)';
 					if (infamyMoneyReq.lessThan(0)) {
 						outputString += " (using up <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.abs().sub(data.currentMoney).abs()) + "</span> with <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.abs()) + '</span> remaining)';
