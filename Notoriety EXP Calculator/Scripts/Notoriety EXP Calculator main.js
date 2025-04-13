@@ -444,7 +444,7 @@
 		undefined,
 		"This user primarily solo grinded to CCL. May also be the first CCL to reach it without owning the 'True Criminal' badge (1873037302).",
 		undefined,
-		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs.<p/><b>User-written description:</b><br>I first played Notoriety in the year 2020. In late July of 2022, I discovered the game again because my sister and a friend of mine had asked me to play. I quickly got the hang of it, and in 30 days I had gotten both XXV-100 and True Criminal.<p/>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release.<p/>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025.<p/>Two days later, myself and the same people that attempted 1.000 bags in ToT before the DMCA takedown, smashed that limit and managed to get 3.000 bags, being the first and only to do thus far. It took us almost 16 hours. After I got to Infamy 225, I took a nearly 2 month long hiatus. I got to CCL on 11/04/2025, having gotten my last 100 levels in an infamy rotation.",
+		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs. Highest infamy classic suit: Royalty (150)<p/><b>User-written description:</b><br>I first played Notoriety in the year 2020. In late July of 2022, I discovered the game again because my sister and a friend of mine had asked me to play. I quickly got the hang of it, and in 30 days I had gotten both XXV-100 and True Criminal.<p/>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release.<p/>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025.<p/>Two days later, myself and the same people that attempted 1.000 bags in ToT before the DMCA takedown, smashed that limit and managed to get 3.000 bags, being the first and only to do thus far. It took us almost 16 hours. After I got to Infamy 225, I took a nearly 2 month long hiatus. I got to CCL on 11/04/2025, having gotten my last 100 levels in an infamy rotation.",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters.",
 		];
 		
@@ -455,6 +455,7 @@
 			} else {
 				players[x].username = playersData_usernames[x];
 			}
+			console.log(playersData_usernames[x]);
 			
 			if (playersData_displayNames[x] == undefined) {
 				players[x].displayName = undefined;
@@ -619,7 +620,7 @@
 		for (var x = 0; x < (countCCLs - 4); x++) {
 			if (["seroly2345"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '220,20,60');
-			} else if (["theREALdynamic", "bigfootbb045", "LuvlyGirlMaisy"].indexOf(players[x + 4].username) != -1) {
+			} else if (["theREALdynamic", "bigfootbb045", "LuvlyGirlMaisy", "Aimilized"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '106,50,159');
 			} else if (["ARandomNoobGamer", "cl3rical"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '7,55,99');
