@@ -510,7 +510,7 @@
 			output += "<div class='ImageTextContainer'>";
 			
 			if (input.robloxAvatar != undefined) {
-				output += "<img src='./Notoriety EXP Calculator/Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
+				output += "<img src='./Notoriety EXP Calculator (testing)/Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
 			}
 			
 			output += "<div class='CellText'>";
