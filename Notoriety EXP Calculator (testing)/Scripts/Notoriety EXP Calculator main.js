@@ -106,7 +106,7 @@
 	}
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(v0.0.1 testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(v0.0.1a testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -355,64 +355,64 @@
 		"LosCracks9000 - 2025-04-13T00-14Z.png",
 		];
 		const playersData_whenCCL = [
-		{approx:false, timestamp: "2025-01-01T10:04:35Z"},
-		{approx:'within hours', timestamp: "2025-01-11T00:00Z"},
-		{approx:'within minutes', timestamp: "2025-01-11T05:20Z"},
-		{approx:'within many hours', timestamp: ["2025-01-17T13:00Z", "2025-01-17T19:00Z"]},
-		{approx:'within hours', timestamp: "2025-01-21T02:33Z"},
-		{approx:'within many hours', timestamp: ["2025-01-24T18:00Z", "2025-01-25T12:00Z"]},
-		{approx:'within minutes', timestamp: "2025-01-30T02:23Z"},
-		{approx:'within hours', timestamp: "2025-02-04T20:05Z"},
-		{approx:'within minutes', timestamp: "2025-02-09T10:30Z"},
-		{approx:'within seconds', timestamp: "2025-02-16T02:40:39Z"},
-		{approx:'within hours', timestamp: "2025-02-21T17:00Z"},
-		{approx:'within seconds', timestamp: "2025-02-21T19:41:58Z"},
-		{approx:'within minutes', timestamp: "2025-02-24T01:16Z"},
-		{approx:'within hours', timestamp: ["2025-02-27T02:00Z", "2025-02-27T03:42Z"]},
-		{approx:'within minutes', timestamp: "2025-02-28T13:22Z"},
-		{approx:'within hours', timestamp: ["2025-03-01T18:15Z", "2025-03-01T22:45Z"]},
-		{approx:'within many hours', timestamp: ["2025-03-08T06:47Z", "2025-03-08T12:18Z"]},
-		{approx:'within hours', timestamp: ["2025-03-10T13:25Z", "2025-03-10T15:57Z"]},
-		{approx:'within many hours', timestamp: ["2025-03-12T14:14Z", "2025-03-12T21:10Z"]},
-		{approx:'within seconds', timestamp: "2025-03-13T23:59:04Z"},
-		{approx:'within seconds', timestamp: "2025-03-20T01:35Z"},
-		{approx:'within minutes', timestamp: "2025-03-20T02:10Z"},
-		{approx:'within minutes', timestamp: ["2025-03-25T03:24Z", "2025-03-25T03:57Z"]},
-		{approx:'within many hours', timestamp: ["2025-03-29T11:33Z", "2025-03-30T03:12Z"]},
-		{approx:'within hours', timestamp: ["2025-04-01T07:35Z", "2025-04-01T10:57Z"]},
-		{approx:'within hours', timestamp: ["2025-04-04T11:30Z", "2025-04-04T13:38Z"]},
-		{approx:'within under 1 minute', timestamp: "2025-04-11T17:19Z"},
-		{approx:'within seconds', timestamp: "2025-04-12T13:51:27Z"},
+		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
+		{approx:false, timestamp: "2025-01-11T00:06:19.4206484Z"}, // orig "2025-01-11T00:00Z" = early by 6m~19s
+		{approx:false, timestamp: "2025-01-11T05:20:42.5916753Z"}, // orig "2025-01-11T05:20Z" = early by 42.~5s
+		{approx:false, timestamp: "2025-01-17T17:17:59.093865Z"}, // orig "2025-01-17T13:00Z", "2025-01-17T19:00Z" = from 4h17m59s early to 1h42m1s late
+		{approx:false, timestamp: "2025-01-21T02:31:47.1374201Z"}, // orig "2025-01-21T02:33Z" = late by 1m~13s
+		{approx:false, timestamp: "2025-01-24T19:35:04.9623688Z"}, // orig "2025-01-24T18:00Z", "2025-01-25T12:00Z" = from 1h35m4s early to 16h24m56s late
+		{approx:false, timestamp: "2025-01-30T02:23:38.7066862Z"}, // orig "2025-01-30T02:23Z" = early by 38.~7s
+		{approx:false, timestamp: "2025-02-04T15:25:56.5696312Z"}, // orig "2025-02-04T20:05Z" = late by 4h39m4s
+		{approx:false, timestamp: "2025-02-08T10:30:11.9653792Z"}, // orig "2025-02-09T10:30Z" = early by 11.~9s
+		{approx:false, timestamp: "2025-02-16T02:40:34.572448Z"}, // orig "2025-02-16T02:40:39Z" = late by 4.~4s
+		{approx:false, timestamp: "2025-02-21T15:19:23.852687Z"}, // orig "2025-02-21T17:00Z" = late by 1h40m36s.~1s
+		{approx:false, timestamp: "2025-02-21T19:41:51.9340899Z"}, // orig "2025-02-21T19:41:58Z" = late by ~6s
+		{approx:false, timestamp: "2025-02-24T01:14:46.1209478Z"}, // orig "2025-02-24T01:16Z" = late by 1m13.~8s
+		{approx:false, timestamp: "2025-02-27T03:36:08.7666892Z"}, // orig "2025-02-27T02:00Z", "2025-02-27T03:42Z" = from 1h36m8.~7s early to 5m51.~2s late
+		{approx:false, timestamp: "2025-02-28T13:21:45.4899004Z"}, // orig 2025-02-28T13:22Z = late by 14.~5s
+		{approx:false, timestamp: "2025-03-01T18:28:13.8551641Z"}, // orig "2025-03-01T18:15Z", "2025-03-01T22:45Z" = from 13m13.~8s early to 4h16m46~.1s late
+		{approx:false, timestamp: "2025-03-08T10:00:46.2868391Z"}, // orig "2025-03-08T06:47Z", "2025-03-08T12:18Z" = from 3h13m46.~2s early to 2h17m13.~7s late
+		{approx:false, timestamp: "2025-03-10T15:42:04.5078582Z"}, // orig "2025-03-10T13:25Z", "2025-03-10T15:57Z" = from 2h17m4.~5s early to 14m55.~5s late
+		{approx:false, timestamp: "2025-03-12T18:50:46.5468413Z"}, // orig "2025-03-12T14:14Z", "2025-03-12T21:10Z" = from 4h36m46.~5s early to 2h19m13.~5s late
+		{approx:false, timestamp: "2025-03-13T23:28:45.9244871Z"}, // orig "2025-03-13T23:59:04Z" = early by 30m18.~1s
+		{approx:false, timestamp: "2025-03-20T01:32:46.8115315Z"}, // orig "2025-03-20T01:35Z" = early by 2m13.~2s
+		{approx:false, timestamp: "2025-03-20T02:10:28.6222769Z"}, // orig "2025-03-20T02:10Z" = early by 28.~6s
+		{approx:false, timestamp: "2025-03-25T03:55:17.1221124Z"}, // orig "2025-03-25T03:24Z", "2025-03-25T03:57Z" = from 31m17.~1s early to 1m42.~8s late
+		{approx:false, timestamp: "2025-03-29T23:49:06.6591207Z"}, // orig "2025-03-29T11:33Z", "2025-03-30T03:12Z" = from 12h16m6.~7s early to 3h13m53.~3s late
+		{approx:false, timestamp: "2025-04-01T09:24:23.1946652Z"}, // orig "2025-04-01T07:35Z", "2025-04-01T10:57Z" = 33863.1946652 from 1h49m23.~2s early to 1h32m36.~8s late
+		{approx:false, timestamp: "2025-04-04T12:32:49.9747681Z"}, // orig "2025-04-04T11:30Z", "2025-04-04T13:38Z" = 45169.9747681 from 1h2m~50s early to 1h5m10s late
+		{approx:false, timestamp: "2025-04-11T17:19:54.2575158Z"}, // orig "2025-04-11T17:19Z" = early by 54.~26s
+		{approx:false, timestamp: "2025-04-12T13:51:23.7958377Z"}, // orig "2025-04-12T13:51:27Z" = early by 3.~2s
 		];
 		const playersData_timeSincePrevious = [
-		{approx:false, seconds: false},
-		{approx:'within hours', seconds: 827725},
-		{approx:'within hours', seconds: 19200},
-		{approx:'within hours', seconds: [546000, 567600]},
-		{approx:'within hours', seconds: [286380, 307980]},
-		{approx:'within hours', seconds: [314820, 379620]},
-		{approx:'within hours', seconds: [397380, 462180]},
-		{approx:'within hours', seconds: 495720},
-		{approx:'within hours', seconds: 397500},
-		{approx:'within hours', seconds: 576639},
-		{approx:'within hours', seconds: 483561},
-		{approx:'within hours', seconds: 9718},
-		{approx:'within hours', seconds: 192842},
-		{approx:'within hours', seconds: [261840, 267960]},
-		{approx:'within hours', seconds: [121200, 127320]},
-		{approx:'within hours', seconds: [103980, 120180]},
-		{approx:'within hours', seconds: [563520, 583380]},
-		{approx:'within hours', seconds: [196680, 205800]},
-		{approx:'within hours', seconds: [175740, 200700]},
-		{approx:'within hours', seconds: [56944, 81904]},
-		{approx:'within hours', seconds: 563756},
-		{approx:'within hours', seconds: 2100},
-		{approx:'within hours', seconds: [436440, 438420]},
-		{approx:'within hours', seconds: [374940, 431280]},
-		{approx:'within hours', seconds: [244920, 257040]},
-		{approx:'within hours', seconds: [273300, 280980]},
-		{approx:'within hours', seconds: [618060, 625740]},
-		{approx:'within seconds', seconds: 73947},
+		{approx:false, milliseconds: false},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[1].timestamp).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[2].timestamp).getTime() - new Date(playersData_whenCCL[1].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[3].timestamp).getTime() - new Date(playersData_whenCCL[2].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[4].timestamp).getTime() - new Date(playersData_whenCCL[3].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[5].timestamp).getTime() - new Date(playersData_whenCCL[4].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[6].timestamp).getTime() - new Date(playersData_whenCCL[5].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[7].timestamp).getTime() - new Date(playersData_whenCCL[6].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[8].timestamp).getTime() - new Date(playersData_whenCCL[7].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[9].timestamp).getTime() - new Date(playersData_whenCCL[8].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[10].timestamp).getTime() - new Date(playersData_whenCCL[9].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[11].timestamp).getTime() - new Date(playersData_whenCCL[10].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[12].timestamp).getTime() - new Date(playersData_whenCCL[11].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[13].timestamp).getTime() - new Date(playersData_whenCCL[12].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[14].timestamp).getTime() - new Date(playersData_whenCCL[13].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[15].timestamp).getTime() - new Date(playersData_whenCCL[14].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[16].timestamp).getTime() - new Date(playersData_whenCCL[15].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[17].timestamp).getTime() - new Date(playersData_whenCCL[16].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[18].timestamp).getTime() - new Date(playersData_whenCCL[17].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[19].timestamp).getTime() - new Date(playersData_whenCCL[18].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[20].timestamp).getTime() - new Date(playersData_whenCCL[19].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[21].timestamp).getTime() - new Date(playersData_whenCCL[20].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[22].timestamp).getTime() - new Date(playersData_whenCCL[21].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[23].timestamp).getTime() - new Date(playersData_whenCCL[22].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[24].timestamp).getTime() - new Date(playersData_whenCCL[23].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[25].timestamp).getTime() - new Date(playersData_whenCCL[24].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[26].timestamp).getTime() - new Date(playersData_whenCCL[25].timestamp).getTime()},
+		{approx:false, milliseconds: new Date(playersData_whenCCL[27].timestamp).getTime() - new Date(playersData_whenCCL[26].timestamp).getTime()},
 		];
 		const playersData_positions = [
 		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
@@ -448,7 +448,7 @@
 		"This user primarily solo grinded to CCL. May also be the first CCL to reach it without owning the 'True Criminal' badge (1873037302).",
 		undefined,
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs. Highest infamy classic suit: Royalty (150)",
-		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters.",
+		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		];
 		
 		const playersData_ownDescription = [
@@ -473,10 +473,42 @@
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - Derpifi3d, withwillin101, Aurora_The1Cat lined up in heist (2025-01-25T12-30-00Z).jpg'></div><div class='gallerytext'>Three of the four OG Crimson suit owners lined up, as I took this screenshot. (2025-01-25T12:30:00Z)</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners end of Jewelry Shop (2025-01-25T12-36-17Z).jpg'></div><div class='gallerytext'>We're going to need a bigger van... (2025-01-25T12:36:17Z)</div></li>"
 		+ "</ul>",
-		"The Beginning & The End: Derp’s Journey To CCL<br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson"
-		+ "<p></p><b>Pre-CCL Release</b><br/>“Yo, I found a new game, it’s pretty good”<br/>There it began, just a childhood friend and a goober, well precisely, 2 goobers. Man, I have not seen that shithead in a while, anyway honestly at first when I started Notoriety, I didn’t understand a single thing, it was super confusing, and I kept selling my friend on… erm… Jewelry shop….. ANYWAY, after getting the ropes of the game, I learnt RO-Bank, honestly it was super difficult as a beginner for some reason, and that's all the memory I had as a beginner really. After that, I got a pacifist badge a while after my friend departed, we really didn’t play much Notoriety together not gonna lie. Afterwards, I left my alt account, and a year later, I decided to give Notoriety a shot again. I forgot why, but I decided to play it, cause why not? After achieving infamy 9 or so, I decided to try getting shadow raid’s secret badge, Crystal Clear. Wednesday July 14th, 2021, 6:15 PM I joined a group of people that also wanted the badge. I met the main person of the group by chance, and there he was, the silly nerd and future online best friend of mine, Will. Shortly after obtaining the badge, my other close friend, Pixel kept wanting to voice call, and after spamming voice calls lots of times, the other two got sick of it and left, leaving just me and Will, and I cannot lie, I was lowkey going to leave too. But we eventually became friends and I grinded and reached XXV, it was a huge achievement for me at the time, and I was thrilled. I got XXV approximately 2 weeks after playing the game again. After a while, Will and I decided to go for every obtainable badge, which I ended up doing alongside Will, though I didn’t get the headhunter nor the baneful criminal badge. Man I forgot how agonizing the pain was, getting billionaire without gamepasses, and having repeat penalties. After billionaire, things pretty much died down, me and Will kinda went on hiatus and didn’t play much. I went on hiatus AT THE WORST TIME BRO, THE MONTHLY CHALLENGES I MISSED NOOOOOOOOOOOOO."
-		+ "<p></p><b>Journey to CCL & Notoriety’s Rerelease</b><br>After playing some games with Will and being bored out of our minds due to lack of good games and content, we just finished block tales and stuff. Notoriety finally re-released! AND… we didn’t do much for the first week, Will was being bodied by homework, and I had massive (no low taper fade meme) projects due. Since both of us were busy, we didn’t play at all really for the first week. Once winter break started, we started grinding, nonoptimal of course, we were mainly doing tomfoolery as one may say, and I made a group of 4 friends of mine, including Will that was grinding brick bank and rush hour. Me and Will were basically training them at speedrunning etc since they were new to Notoriety but learnt very quickly. After a few Ozela runs and rush hour runs, we heard some Infamy 100 dude’s advice, and that is, authority is the most optimal method of gaining xp. Honestly, my jaw dropped when I heard some SWEAT was already 100! (Also jaw dropping when I saw some sweat like Aimilized, who at the time was also around Infamy 100), But quickly adopted his strategy and joined his lobbies to quickly reach 250, originally, I planned to be around top 20 or so to 250, I figured there are a bunch of sweats like Seal, and I was shocked after the grueling amounts of Shadow Raid cash grind and Authority XP grind. But finally, on approximately Friday January 10th, 2025, 7:05 PM, I reached CCL, the suit was lowkey disappointing but it became exclusive so I’m not complaining. Andddddddd “wondering how we should make to obtain the classic suits, dont like that theyre fomo rn” anddd my day is ruined I am ending it all, Rendhy plans on making Og Crimson obtainable to the public, I am in tears of agony. Totally not exaggerated."
-		+ "<p></p><b>Post CCL Short Story</b><br/>“Touch grass” “Bro is allergic to soap”<br/>FU-<br/>Man… stop harassing me bro :sob: I do shower!!!<p></p>Oh, and my friend Will got CCL like I forgot, but probably 5 hours after me, making him the third CCL",
+		"The Beginning & The End: Derp’s Journey To CCL<br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson<p></p><br/><b>Pre-CCL Release</b><br/>"
+		+ "“Yo, I found a new game, it’s pretty good”"
+		+ "<br/>There it began, just a childhood friend and a goober, well precisely, 2 goobers. Man, I have not seen that shithead in a while, anyway honestly at first when I started Notoriety, I didn’t understand a single thing, it was super confusing, and I kept selling my friend on… erm… Jewelry shop….. ANYWAY, after getting the ropes of the game, I learnt RO-Bank, honestly it was super difficult as a beginner for some reason, and that's all the memory I had as a beginner really."
+		+ "<p></p>After that, I got a pacifist badge a while after my friend departed, we really didn’t play much Notoriety together not gonna lie. Afterwards, I left my alt account, and a year later, I decided to give Notoriety a shot again. I forgot why, but I decided to play it, cause why not? After achieving infamy 9 or so, I decided to try getting shadow raid’s secret badge, Crystal Clear. Wednesday July 14th, 2021, 6:15 PM I joined a group of people that also wanted the badge. I met the main person of the group by chance, and there he was, the silly nerd and future online best friend of mine, Will. Shortly after obtaining the badge, my other close friend, Pixel kept wanting to voice call, and after spamming voice calls lots of times, the other two got sick of it and left, leaving just me and Will, and I cannot lie, I was lowkey going to leave too. But we eventually became friends and I grinded and reached XXV, it was a huge achievement for me at the time, and I was thrilled."
+		+ "<p></p>I got XXV approximately 2 weeks after playing the game again. After a while, Will and I decided to go for every obtainable badge, which I ended up doing alongside Will, though I didn’t get the headhunter nor the baneful criminal badge. Man I forgot how agonizing the pain was, getting billionaire without gamepasses, and having repeat penalties. After billionaire, things pretty much died down, me and Will kinda went on hiatus and didn’t play much. I went on hiatus AT THE WORST TIME BRO, THE MONTHLY CHALLENGES I MISSED NOOOOOOOOOOOOO."
+		+ "<p></p><p></p><p></p><p></p>Photos below btw"
+		+ "<p></p><b>Some old photos:</b>"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0003.jpg'></div><div class='gallerytext'>Achieved XXV</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0004.jpg'></div><div class='gallerytext'>1 Billion!!!!</div></li>"
+		+ "</ul>"
+		+ "<p></p><b>Journey to CCL & Notoriety’s Rerelease</b>"
+		+ "<br/>After playing some games with Will and being bored out of our minds due to lack of good games and content, we just finished block tales and stuff. Notoriety finally re-released! AND… we didn’t do much for the first week, Will was being bodied by homework, and I had massive (no low taper fade meme) projects due. Since both of us were busy, we didn’t play at all really for the first week."
+		+ "<p></p>Once winter break started, we started grinding, nonoptimal of course, we were mainly doing tomfoolery as one may say, and I made a group of 4 friends of mine, including Will that was grinding brick bank and rush hour. Me and Will were basically training them at speedrunning etc since they were new to Notoriety but learnt very quickly. The first week wasn’t very optimized grinding and was mainly tomfoolery and having fun with friends."
+		+ "<p></p>After a few Ozela runs and rush hour runs, we heard some Infamy 100 dude’s advice, and that is, authority is the most optimal method of gaining xp. Honestly, my jaw dropped when I heard some SWEAT was already 100! (Also jaw dropping when I saw some sweat like Aimilized, who at the time was also around Infamy 100), But quickly adopted his strategy and joined his lobbies to quickly reach 250, originally, I planned to be around top 20 or so to 250, I figured there are a bunch of sweats like Seal."
+		+ "<p></p>As winter break ended, my progress slowed down significantly as I had to study for exams and had projects due. On top of that, I had a lot of assignments to complete. My average infamy per day went from 17-22 to 2-7. This was due to me having school, and having assignments to do, decreasing my freetime for grinding CCL. What really impacted my infamy per day was mainly people also having exams and school. Most of my network of Authority grinders had school and wasn’t able to play. This made finding good lobbies far more slow and ended up sometimes with terrible teammates."
+		+ "<p></p>But finally, on approximately Friday January 10th, 2025, 7:05 PM, I reached CCL, the suit was lowkey disappointing but it became exclusive so I’m not complaining. Andddddddd “wondering how we should make to obtain the classic suits, dont like that theyre fomo rn” anddd my day is ruined I am ending it all, Rendhy plans on making Og Crimson obtainable to the public, I am in tears of agony. Totally not exaggerated."
+		+ "<p></p><b>Photos during the Journey:</b>"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0006.jpg'></div><div class='gallerytext'>Dark Drip</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0005.jpg'></div><div class='gallerytext'>The Goobers</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0007.jpg'></div><div class='gallerytext'>Kazret, Will, Nulzza, Derp in respective order</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0001.jpg'></div><div class='gallerytext'>Obtained CCL</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0002.jpg'></div><div class='gallerytext'>Nerd gets CCL</div></li>"
+		+ "</ul>"
+		+ "<p></p><b>Post CCL Short Story</b>"
+		+ "<br/>“Touch grass” “Bro is allergic to soap”<br/>FU-<br/>Man… stop harassing me bro :sob: I do shower!!!<p></p>Oh, and my friend Will got CCL like I forgot, but probably 5 hours after me, making him the third CCL"
+		+ "<p></p><b>Some extra pictures:</b>"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0008.jpg'></div><div class='gallerytext'>All 4 Owners Of  OG Crimson</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0009.jpg'></div><div class='gallerytext'>Bigger Van MIGHT be necessary</div></li>"
+		+ "</ul>"
+		+ "<p></p><b>Non-Notoriety Related:</b>"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0010.jpg'></div><div class='gallerytext'>The P.D.W Gang<br>(Pixel, Derp, Will)</div></li>"
+		+ "</ul>",
 		undefined,
 		undefined,
 		undefined,
@@ -605,11 +637,11 @@
 				output += "Badge obtained: ";
 				if (typeof orig.timestamp == 'object') {
 					output += 'between ';
-					output += formatDate(new Date(orig.timestamp[0]), "yyyy-MM-dd HH:mm:ss", false);
+					output += formatDate(new Date(orig.timestamp[0]), "yyyy-MM-dd HH:mm:ss:ms", false);
 					output += ' to ';
-					output += formatDate(new Date(orig.timestamp[1]), "yyyy-MM-dd HH:mm:ss", false);
+					output += formatDate(new Date(orig.timestamp[1]), "yyyy-MM-dd HH:mm:ss:ms", false);
 				} else {
-					output += formatDate(new Date(orig.timestamp), "yyyy-MM-dd HH:mm:ss", false);
+					output += formatDate(new Date(orig.timestamp), "yyyy-MM-dd HH:mm:ss:ms", false);
 				}
 				if (orig.approx != false) {
 					if (orig.approx == true) {
@@ -628,17 +660,17 @@
 			
 			if (input.timeSincePrevious != undefined) {
 				const orig = input.timeSincePrevious;
-				if (input.timeSincePrevious.seconds !=  false) {
+				if (input.timeSincePrevious.milliseconds !=  false) {
 					output += "<br>Time since previous: ";
-					if (typeof orig.seconds == 'object') {
+					if (typeof orig.milliseconds == 'object') {
 						output += 'between ';
-						timeOutput.amount = orig.seconds[0] * 1e3;
+						timeOutput.amount = orig.milliseconds[0];
 						output += timeOutput.formatAmount();
 						output += ' to ';
-						timeOutput.amount = orig.seconds[1] * 1e3;
+						timeOutput.amount = orig.milliseconds[1];
 						output += timeOutput.formatAmount();
 					} else {
-						timeOutput.amount = orig.seconds * 1e3;
+						timeOutput.amount = orig.milliseconds;
 						output += timeOutput.formatAmount();
 					}
 					if (orig.approx != false) {
@@ -698,7 +730,7 @@
 				string += playerHTML(players[x + 4], '220,20,60');
 			} else if (["theREALdynamic", "bigfootbb045", "LuvlyGirlMaisy", "Aimilized"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '106,50,159');
-			} else if (["ARandomNoobGamer", "cl3rical"].indexOf(players[x + 4].username) != -1) {
+			} else if (["ARandomNoobGamer", "cl3rical", "LosCracks9000"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '7,55,99');
 			} else {
 				string += playerHTML(players[x + 4]);
@@ -759,12 +791,19 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~46 hours.
+		Estimated total active development time across all versions: ~47 hours, 30 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
+		<p>
+		<b><u>[2025-04-13 15:02] Version 0.0.1a</u></b>
+		<ul>
+			${updateLogEntry('add', "Significantly expanded CCL #2's entry in the Hall of CCLs, and modified existing parts. Also noted that CCL #28 owns the classic Blue Navy (100) suit.")}
+			${updateLogEntry('fix', "In the Hall of CCLs, corrected all CCL players' Rank 250 badge obtainment timestamps to exact timestamps right down to the milliseconds using the Roblox badges API, simultaneously correcting the 'time since previous' and 'average time apart' values as well.")}
+			${updateLogEntry('other', "Estimated active development time: ~1.5 hours.")}
+		</ul></p>
 		<p>
 		<b><u>[2025-04-13 08:20] Version 0.0.1</u></b>
 		<ul>
