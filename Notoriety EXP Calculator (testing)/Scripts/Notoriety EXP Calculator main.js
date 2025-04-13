@@ -106,7 +106,7 @@
 	}
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1a testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1b testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -169,14 +169,14 @@
 	(function() {
 		var tool_baseHTML_MenuContainer_Miscellaneous = '';
 		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_UpdateLogs'>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_UpdateLog'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<h2>Hall of CCLs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'>(toggle visibility)</span></small>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs' style='text-align:initial;display:none'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Update Logs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLogs'>(toggle visibility)</span></small>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLogs' style='text-align:initial;display:none'>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Update Log</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'>(toggle visibility)</span></small>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog' style='text-align:initial;display:none'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		
@@ -206,14 +206,14 @@
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
 		Section_Results: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Results'),
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
-		Section_UpdateLogs: document.getElementById('NotorietyEXPandInfamyCalculator_Section_UpdateLogs'),
+		Section_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Section_UpdateLog'),
 		
 		SectionContainer_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings'),
-		SectionContainer_UpdateLogs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLogs'),
+		SectionContainer_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog'),
 		SectionContainer_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs'),
 		
 		SectionContainerToggle_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'),
-		SectionContainerToggle_UpdateLogs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLogs'),
+		SectionContainerToggle_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'),
 		SectionContainerToggle_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'),
 		
 		currentLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentLevelInput'),
@@ -707,7 +707,7 @@
 			}
 			
 			if (input.ownDescription != undefined) {
-				output += "<p></p><b id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionToggle_" + input.username + "'>User-written description (toggle):</b><br><div id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionContainer_" + input.username + "' style='display:none'>" + input.ownDescription + "</div>";
+				output += "<p></p><b class='PressableButton' id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionToggle_" + input.username + "'>User-written description (toggle):</b><br><div id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionContainer_" + input.username + "' style='display:none'>" + input.ownDescription + "</div>";
 				ownDescriptionButtons.push("NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionToggle_" + input.username);
 				ownDescriptionContainers.push("NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionContainer_" + input.username);
 			}
@@ -751,7 +751,7 @@
 	}
 	addHallofInfamyCCLs();
 	
-	function addUpdateLogs() {
+	function addUpdateLog() {
 	    function updateLogEntry(type, string, isVersion) {
 	        if (isVersion === undefined) {
 	            isVersion = false;
@@ -791,12 +791,19 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~47 hours, 30 minutes.
+		Estimated total active development time across all versions: ~47 hours, 35 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
+		<p>
+		<b><u>[Testing] Version 0.0.1b</u></b>
+		<ul>
+			${updateLogEntry('edit', "In the Hall of CCLs, the 'User-written description' toggle button now displays a mouse pointer icon on hover.")}
+			${updateLogEntry('edit', "Renamed section " + '"' + "Update Logs" + '"' + " to " + '"' + "Update Log" + '"' + ". Update Log entry " + '"' + "Version Indev" + '"' + " no longer displays the [Testing] tag.")}
+			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
+		</ul></p>
 		<p>
 		<b><u>[2025-04-13 15:02] Version 0.0.1a</u></b>
 		<ul>
@@ -811,7 +818,7 @@
 			${updateLogEntry('other', "Testers: ashvul (did not test), nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
 		</ul></p>
-		<b>[Testing] <u>Version Indev</u></b>
+		<b><u>Version Indev</u></b>
 		<ul>
 			${updateLogEntry('add', "Added everything else. (A lot!)")}
 			${updateLogEntry('other', "Estimated active development time: ~40 hours over about 10 weeks.")}
@@ -819,9 +826,9 @@
 		<hr/>
 		</ul>`
 		
-		elem.SectionContainer_UpdateLogs.innerHTML = theLogs;
+		elem.SectionContainer_UpdateLog.innerHTML = theLogs;
 	}
-	addUpdateLogs();
+	addUpdateLog();
 
 	function getRotationInput(input) {
 		const runLog = [];
@@ -1069,8 +1076,8 @@
 		computeBeepBoop();
 	});
 	
-	elem.SectionContainerToggle_UpdateLogs.addEventListener('click', function() {
-		elem.SectionContainer_UpdateLogs.style.display = elem.SectionContainer_UpdateLogs.style.display == 'block' ? 'none' : 'block'
+	elem.SectionContainerToggle_UpdateLog.addEventListener('click', function() {
+		elem.SectionContainer_UpdateLog.style.display = elem.SectionContainer_UpdateLog.style.display == 'block' ? 'none' : 'block'
 	});
 	
 	elem.SectionContainerToggle_HallofInfamyCCLs.addEventListener('click', function() {
