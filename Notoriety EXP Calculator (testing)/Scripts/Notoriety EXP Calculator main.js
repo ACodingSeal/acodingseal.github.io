@@ -445,13 +445,14 @@
 		undefined,
 		undefined,
 		undefined,
-		"This user primarily solo grinded to CCL. May also be the first CCL to reach it without owning the 'True Criminal' badge (1873037302).",
+		"This user primarily solo grinded to CCL.",
 		undefined,
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs. Highest infamy classic suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		];
 		
 		const playersData_ownDescription = [
+		// #1
 		"I've been playing Notoriety since what I call the 'Golden Era', being before the 22 December 2017 revamp, more specifically since early September 2015, or possibly in August 2015 as I bought my first gamepass early next month. I achieved only a few infamy ranks at most, but I also completed feats like the badges Overdrill, Flawless and Big Bank - Stealth Master and 101 bags (vials) in Blood Money Death Wish solo using the Minigun and RPG. Most of my playtime of this era was in 2016. I always get nostalgic of this era of Notoriety, aka Heist, aka Payday 2. I have some old videos and screenshots of this era collecting dust on a hard drive somewhere."
 		+ "<p></p>I almost entirely stopped playing after the Revamp Update, as it removed a lot of my favourite heists like World Bank, Blood Money, Fave Breakout and Shadow Raid (eventually rereleased). This is also why I didn't want to play the new Authority heist, out of protest against the revamp and due to the global data wipe. However, I played until I reached the maximum infamy rank of XXV (25) and obtained the True Criminal badge (which also required the Very Hard and Anarchy difficulties). Then I stopped playing for a while. In 2019, during the Live Ops event, I revisited the game, but didn't play any heists."
 		+ "<p></p>Around the late 2020 era was when I was extremely active. I was first to complete Star Criminal and Baneful Criminal (the latter was done in solo in 89m54s). I was first to complete Resourceful Criminal in solo, without using glitches. I was one of the first to solo the Soul Collector badge on Nightmare using the Suit, and as the 420th or 421st player to obtain the badge. I was very likely the first player to full sweep Shadow Raid Nightmare 1,000 times. Around this era up until the very end of 2020, I was a dedicated contributor to the official Notoriety Wikia on Fandom, serving the community as an administrator and being the top contributor based on largest contributions (including info, page structure & site design), most edits and most badges & badge points (I no longer believe in badges, since it encourages badge farming)."
@@ -473,6 +474,7 @@
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - Derpifi3d, withwillin101, Aurora_The1Cat lined up in heist (2025-01-25T12-30-00Z).jpg'></div><div class='gallerytext'>Three of the four OG Crimson suit owners lined up, as I took this screenshot. (2025-01-25T12:30:00Z)</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners end of Jewelry Shop (2025-01-25T12-36-17Z).jpg'></div><div class='gallerytext'>We're going to need a bigger van... (2025-01-25T12:36:17Z)</div></li>"
 		+ "</ul>",
+		// #2
 		"The Beginning & The End: Derp’s Journey To CCL<br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson<p></p><br/><b>Pre-CCL Release</b><br/>"
 		+ "“Yo, I found a new game, it’s pretty good”"
 		+ "<br/>There it began, just a childhood friend and a goober, well precisely, 2 goobers. Man, I have not seen that shithead in a while, anyway honestly at first when I started Notoriety, I didn’t understand a single thing, it was super confusing, and I kept selling my friend on… erm… Jewelry shop….. ANYWAY, after getting the ropes of the game, I learnt RO-Bank, honestly it was super difficult as a beginner for some reason, and that's all the memory I had as a beginner really."
@@ -516,6 +518,7 @@
 		undefined,
 		undefined,
 		undefined,
+		// #10
 		"i knew about notoriety for a very long time, and i did try it out for a bit, but ended up stopping (couldn't tell you why, i have basically no memory of it other than when i started playing again, i was level 8 and had like 50k in cash)"
 		+ "<p></p>i played payday 2 on and off for years (on console, wasn't much of a pc gamer at the time). eventually moved onto other games. never played payday: the heist or anything, but i did enjoy payday 2"
 		+ "<p></p>i picked up notoriety again at the 31st of december 2024, since i heard about it being reopened. started off just playing casually for a bit, then i wanted to complete every heist on every difficulty and every tactic (to fill out the heist tracker)"
@@ -537,8 +540,32 @@
 		undefined,
 		undefined,
 		undefined,
+		// #25
+		// Harry = Inherited
+		// Alisa = 0,153,255
+		// Isaac = 0,204,0
+		// Katelyn = 255,153,0
+		"Before we start, I am plural, and my headmates and I are a part of the Tulpamancy community. The origin of our system is far too personal to recount on a Roblox tool, but they made the CCL grind (and life in general) much more bearable and fun than if I grinded it truly solo. I might not even have the motivation to do this if it weren’t for them keeping me company. Unless stated otherwise, all the text below will be from my perspective and my own words."
+		+ "<p></p>Anyways, before the journey, I remember wanting to show Notoriety to my two headmates in 2023, but Starbreeze dropped an OVERKILL-sized nuke on the game before I got the chance. I was a pretty avid player back then, and well, that hasn’t changed given my placement here."
+		+ "<p></p>I distinctly remember seeing the infamy 250 badge on the relaunch and thought “Yeah, no thanks.” I eventually saw people climbing the ranks though, and that silly completionist instinct within me started to well up. We bought the three gamepasses (Cheaper Infamy, double XP, and double money) in December 2024, and we only had enough Robux thanks to the Microsoft Rewards program. If we were going to spend a long time playing this game, then might as well skip some of the grind, right?"
+		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us didn’t even have plans to grind up towards infamy CCL back then!! We just wanted to get infamy 100 for the Navy Blue suit, which seemed like a good milestone to stop at, and Blue is our favourite color!!]</span>"
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {However, university work, life schedules, other games, and the constant ghost disconnect/ ping freeze issue put a stop to that ambition at roughly the 70th rank, and we returned to being a somewhat casual but dedicated player. Eventually, we reached infamy 100 by simply playing for an hour (acquiring 1-2 infamies) a day. It was a shame that we missed out on the classic Navy Blue suit, but we would’ve had to grind twice as long per day to get it.}</span>"
+		+ "<p></p>We thought we’d stop after this, but we had already done 75 infamies in around 40 days. What’s 150 more? It sounds bad up-front like that, but we just enjoyed playing the game for an hour or so every day. Additionally, we can easily switch who’s controlling the physical body at any time, so my headmates could join in on the grind too, preventing any potential burnout we might’ve suffered."
+		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us just continued on with our shared lives as usual, and there’d be an occasional longer grinding session when we had more free time!! We just steadily climbed the ranks without thinking about when we will reach CCL.]</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /I became part of my friends’ system when they were at infamy 120, I think..? A lot of things happened in our lives back then, but I was introduced to the concept of Notoriety by them../</span>"
+		+ "<p></p>Side note, us original three members met Katelyn when she screamed out “/I want to exist!/” during a shared dream, and for a group that calls themselves “GenericDreamer” and “The Dreamers Collective”, we welcomed her with open arms!! Existing is much more difficult than you’d imagine, but she pulled through wonderfully."
+		+ "<p></p><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Eventually, we made our own solo infamy rotation (RH -> DS x4 -> Ozela (with trophies) x2 -> Depot x2) and optimized our time to around 25-30 minutes per infamy, thus reaching infamy CC 51 days after infamy C. There was little celebration, however, as we prepared to sprint towards the finish line.}</span>"
+		+ "<p></p>Remember, my headmates don’t have corporal forms in the physical world, so they can only interact with the world through my physical body. That’s why we are a team of four, but we could only play on one account at a time. A somewhat unfortunate consequence of plurality, but we’ve accepted it long ago."
+		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Regardless, the four of us had more free time compared to before, so we ramped up our hours into Notoriety to put an end to this grind once and for all!!!! In just 12 days, we managed to get infamy CCL with around $200 million left in our character’s account!!]</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, I joined halfway through the grind, but all of us were happy that we were the 25th collective owners of the CCL badge../</span>"
+		+ "<p></p>We finished right on April fool’s day (a few hours after the update dropped, in fact!), so we’d like to imagine that our infamy stands for Connivers’ Ceaseless Loyalty. Make no mistake, we’ll be playing this game long into the future."
+		+ "<p></p>To end off this lengthy description, fix the ghost disconnection/ ping freeze issue, Roblox!!! That bug alone cost us at least 50 Ozela + Rush Hour runs combined and hours of our time..."
+		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Nonetheless, GG, everyone!!!]</span>"
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {We’re somewhat glad we can return to being a casual player now. Full sweeping a heist is fun.}</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, playing Notoriety helped me attune to and get better at controlling our physical body, so thank you, Notoriety devs./</span>"
+		+ "<p></p>And lastly, reality is subjective. Everything in this life is meaningless until you assign a meaning to it, whether that be happiness, anger, sadness, or something else entirely. Whether you think we’ve gone mad or not, just know we’re living our best lives.",
 		undefined,
-		undefined,
+		// #27
 		"I first played Notoriety in the year 2020. In late July of 2022, I discovered the game again because my sister and a friend of mine had asked me to play. I quickly got the hang of it, and in 30 days I had gotten both XXV-100 and True Criminal."
 		+ "<p></p>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release."
 		+ "<p></p>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025."
@@ -791,7 +818,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~47 hours, 35 minutes.
+		Estimated total active development time across all versions: ~47 hours, 56 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -800,10 +827,11 @@
 		<p>
 		<b><u>[Testing] Version 0.0.1b</u></b>
 		<ul>
+			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #25's user-written description and modified the user's notes.")}
 			${updateLogEntry('add', "Added ':millisecond' to the note of how times are noted in the Hall of CCLs section.")}
 			${updateLogEntry('edit', "In the Hall of CCLs section, the 'User-written description' toggle button now displays a mouse pointer icon on hover.")}
 			${updateLogEntry('edit', "Renamed section " + '"' + "Update Logs" + '"' + " to " + '"' + "Update Log" + '"' + ". Update Log entry " + '"' + "Version Indev" + '"' + " no longer displays the [Testing] tag.")}
-			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~26 minutes.")}
 		</ul></p>
 		<p>
 		<b><u>[2025-04-13 15:02] Version 0.0.1a</u></b>
