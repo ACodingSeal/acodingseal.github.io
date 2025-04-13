@@ -374,6 +374,94 @@ hr {
 	color:rgba(8,121,237,var(--bg-alpha));
 	font-weight:bold;
 }
+
+
+
+/* Gallery code source: https://commons.wikimedia.org/wiki/Module:Gallery/styles.css */
+@media all and (max-width: 720px) {
+	.mod-gallery {
+		width: 100% !important;
+	}
+}
+.mod-gallery {
+	display: table;
+	margin:auto;
+}
+.mod-gallery-default {
+	background: transparent;
+	margin-top: 4px;
+}
+.mod-gallery-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.mod-gallery-left {
+	float: left;
+}
+.mod-gallery-right {
+	float: right;
+}
+.mod-gallery-none {
+	float: none;
+}
+.mod-gallery-collapsible {
+	width: 100%;
+}
+.mod-gallery .title,
+.mod-gallery .main,
+.mod-gallery .footer {
+	display: table-row;
+}
+.mod-gallery .title > div {
+	display: table-cell;
+	padding: 0 4px 4px;
+	text-align: center;
+	font-weight: bold;
+}
+.mod-gallery .main > div {
+	display: table-cell;
+}
+.mod-gallery .gallerytext>:not(p) {
+	margin:.5em 0;
+}
+.mod-gallery .gallerytext>:not(p)+:not(p) {
+	margin-top:-.5em;
+}
+.mod-gallery .gallerytext {
+	line-height: 1.375em;
+}
+.mod-gallery .footer > div {
+	display: table-cell;
+	padding: 4px;
+	text-align: right;
+	font-size: 80%;
+	line-height: 1em;
+}
+.mod-gallery .title > div *,
+.mod-gallery .footer > div * {
+	overflow: visible;
+}
+.mod-gallery .gallerybox img {
+	background: none !important;
+}
+.mod-gallery .bordered-images .thumb img {
+	outline: solid #eaecf0 1px;
+}
+.mod-gallery .whitebg .thumb {
+	background: #fff !important;
+}
+
+.thumb img {
+	width:10em;
+	height:12em;
+}
+.gallerybox {
+	display:inline-block;
+	margin:0.5em;
+	max-width:10em;
+	border:1px solid rgba(128,128,128,var(--bg-alpha));
+	vertical-align:top;
+}
 </style>
 <body id="NotorietyEXPandInfamyCalculator" style="background:rgba(45,45,45,var(--bg-alpha));color:rgba(255,255,255,var(--bg-alpha))">
 <noscript style='color:rgba(255,255,255,var(--bg-alpha))'>Please enable JavaScript to use this tool. The following scripts will be loaded in this exact order:
@@ -387,7 +475,7 @@ hr {
 <li><a href='./Notoriety EXP Calculator (testing)/Scripts/infamy until poor.js'>infamy until poor.js</a></li>
 <li><a href='./Notoriety EXP Calculator (testing)/Scripts/Notoriety EXP Calculator main.js'>Notoriety EXP Calculator main.js</a></li>
 </ul>
-The total size of this tool is approximately 3.2MB, primarily consisting of <a href='./Fonts'>fonts</a> and assets (including images).
+The total size of this tool is approximately 5.6MB, primarily consisting of <a href='./Notoriety EXP Calculator (testing)/Assets'>assets</a> (including images) and <a href='./Notoriety EXP Calculator (testing)/Fonts'>fonts</a>.
 </noscript>
 </body>
 <script src="./Notoriety EXP Calculator (testing)/Scripts/HackTimerWorker.min.js"></script>
