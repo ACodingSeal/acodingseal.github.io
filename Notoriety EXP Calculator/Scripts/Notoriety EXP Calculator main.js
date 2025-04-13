@@ -158,7 +158,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
-		const countCCLs = 28;
+		const grassAvoiders = 28;
 		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
@@ -423,7 +423,7 @@
 		undefined,
 		];
 		
-		for (var x = 0; x < countCCLs; x++) {
+		for (var x = 0; x < grassAvoiders; x++) {
 			players.push(new Player());
 			if (playersData_usernames[x] == undefined) {
 				players[x].username = undefined;
@@ -602,7 +602,7 @@
 		
 		string += "<p><table style='margin:auto;width:100%'>";
 		string += "<h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss", false) + ") CCLs</h3>";
-		for (var x = 0; x < (countCCLs - 4); x++) {
+		for (var x = 0; x < (grassAvoiders - 4); x++) {
 			if (["seroly2345"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '220,20,60');
 			} else if (["theREALdynamic", "bigfootbb045", "LuvlyGirlMaisy", "Aimilized"].indexOf(players[x + 4].username) != -1) {
