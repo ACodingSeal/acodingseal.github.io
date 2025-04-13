@@ -766,7 +766,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b><u>[Testing] Version 0.0.1</u></b>
+		<b><u>[2025-04-13 08:20] Version 0.0.1</u></b>
 		<ul>
 			${updateLogEntry('other', "Testers: ashvul (did not test), nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
