@@ -248,13 +248,15 @@
 	}
 	
 	function addHallofInfamyCCLs() {
-		const countCCLs = 27;
+		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
+		const countCCLs = 28;
 		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
-		function Player(username, displayName, robloxAvatar, whenCCL, position, notes) {
+		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes) {
 			this.username = username;
 			this.displayName = displayName;
 			this.robloxAvatar = robloxAvatar;
 			this.whenCCL = whenCCL;
+			this.timeSincePrevious = timeSincePrevious;
 			this.position = position;
 			this.notes = notes;
 		}
@@ -287,6 +289,7 @@
 		"GenericDreamer",
 		"M4kA13",
 		"Aimilized",
+		"LosCracks9000",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -302,7 +305,7 @@
 		"stix",
 		"ALiteralPotato",
 		"cleric",
-		undefined, // "私の睡眠マヒの悪魔は私を攻撃し続ける",
+		"私の睡眠マヒの悪魔は私を攻撃し続ける",
 		"notrealdude755",
 		"Pola",
 		"Swift",
@@ -316,6 +319,7 @@
 		"GenericDreamer",
 		"m4ka",
 		"Aimilized",
+		"NekoChan",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -345,6 +349,7 @@
 		"GenericDreamer - 2025-04-10T22-10Z.png",
 		"M4kA13 - 2025-04-10T22-10Z.png",
 		"Aimilized - 2025-04-11T19-35Z.png",
+		"LosCracks9000 - 2025-04-13T00-14Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35Z"},
@@ -374,9 +379,40 @@
 		{approx:'within hours', timestamp: ["2025-04-01T07:35Z", "2025-04-01T10:57Z"]},
 		{approx:'within hours', timestamp: ["2025-04-04T11:30Z", "2025-04-04T13:38Z"]},
 		{approx:'within under 1 minute', timestamp: "2025-04-11T17:19Z"},
+		{approx:'within seconds', timestamp: "2025-04-12T13:51:27Z"},
+		];
+		const playersData_timeSincePrevious = [
+		{approx:false, seconds: false},
+		{approx:'within hours', seconds: 827725},
+		{approx:'within hours', seconds: 19200},
+		{approx:'within hours', seconds: [546000, 567600]},
+		{approx:'within hours', seconds: [286380, 307980]},
+		{approx:'within hours', seconds: [314820, 379620]},
+		{approx:'within hours', seconds: [397380, 462180]},
+		{approx:'within hours', seconds: 495720},
+		{approx:'within hours', seconds: 397500},
+		{approx:'within hours', seconds: 576639},
+		{approx:'within hours', seconds: 483561},
+		{approx:'within hours', seconds: 9718},
+		{approx:'within hours', seconds: 192842},
+		{approx:'within hours', seconds: [261840, 267960]},
+		{approx:'within hours', seconds: [121200, 127320]},
+		{approx:'within hours', seconds: [103980, 120180]},
+		{approx:'within hours', seconds: [563520, 583380]},
+		{approx:'within hours', seconds: [196680, 205800]},
+		{approx:'within hours', seconds: [175740, 200700]},
+		{approx:'within hours', seconds: [56944, 81904]},
+		{approx:'within hours', seconds: 563756},
+		{approx:'within hours', seconds: 2100},
+		{approx:'within hours', seconds: [436440, 438420]},
+		{approx:'within hours', seconds: [374940, 431280]},
+		{approx:'within hours', seconds: [244920, 257040]},
+		{approx:'within hours', seconds: [273300, 280980]},
+		{approx:'within hours', seconds: [618060, 625740]},
+		{approx:'within seconds', seconds: 73947},
 		];
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -389,7 +425,7 @@
 		"Highest infamy classic suit: Royalty (150)",
 		"Highest infamy classic suit: Royalty (150)",
 		"Highest infamy classic suit: Blue Navy (100)",
-		undefined,
+		"<b>User-written description:</b><br>i knew about notoriety for a very long time, and i did try it out for a bit, but ended up stopping (couldn't tell you why, i have basically no memory of it other than when i started playing again, i was level 8 and had like 50k in cash)<p/>i played payday 2 on and off for years (on console, wasn't much of a pc gamer at the time). eventually moved onto other games. never played payday: the heist or anything, but i did enjoy payday 2<p/>i picked up notoriety again at the 31st of december 2024, since i heard about it being reopened. started off just playing casually for a bit, then i wanted to complete every heist on every difficulty and every tactic (to fill out the heist tracker)<p/>i then moved onto badges, which i got those pretty quickly (pied piper sucks lmao)<p/>somewhere around early january this year, i decided to go for CCL, but i didn't really want to grind it by doing the same heists over and over for max efficiency<p/>so i got to CCL by mostly playing public lobbies, helping others with badges and nightmare. mixed in some solo stealth too (mostly ozela)<p/>i hit CCL at the 16th of february 2025 just after 2:40 a.m",
 		// 11 - 20
 		undefined,
 		"This user grinded 200 infamy ranks with random players in public matches.",
@@ -401,7 +437,7 @@
 		undefined,
 		"Possibly the first alternate account to reach CCL, being possibly an alt of CCL #17; this is based on having a very empty profile and the default avatar, in addition to only being friends with CCL #17 (at the time of addition to the CCLs list, friends with another player) and their badges being almost exclusively Notoriety ones since joining the game until Rank 250.",
 		"Possibly the first solo grinder to reach CCL.",
-		// 21 - 30
+		// 21 - 28
 		undefined,
 		undefined,
 		undefined,
@@ -409,6 +445,7 @@
 		"This user primarily solo grinded to CCL. May also be the first CCL to reach it without owning the 'True Criminal' badge (1873037302).",
 		undefined,
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs.<p/><b>User-written description:</b><br>I first played Notoriety in the year 2020. In late July of 2022, I discovered the game again because my sister and a friend of mine had asked me to play. I quickly got the hang of it, and in 30 days I had gotten both XXV-100 and True Criminal.<p/>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release.<p/>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025.<p/>Two days later, myself and the same people that attempted 1.000 bags in ToT before the DMCA takedown, smashed that limit and managed to get 3.000 bags, being the first and only to do thus far. It took us almost 16 hours. After I got to Infamy 225, I took a nearly 2 month long hiatus. I got to CCL on 11/04/2025, having gotten my last 100 levels in an infamy rotation.",
+		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters.",
 		];
 		
 		for (var x = 0; x < countCCLs; x++) {
@@ -435,6 +472,12 @@
 				players[x].whenCCL = undefined;
 			} else {
 				players[x].whenCCL = playersData_whenCCL[x];
+			}
+			
+			if (playersData_timeSincePrevious[x] == undefined) {
+				players[x].timeSincePrevious = undefined;
+			} else {
+				players[x].timeSincePrevious = playersData_timeSincePrevious[x];
 			}
 			
 			if (playersData_positions[x] == undefined) {
@@ -476,16 +519,17 @@
 			}
 			
 			output += "<b>";
-			if (input.username == "T4x_Ev4der") {
+			if (input.username == undefined /*"T4x_Ev4der"*/) {
 				output += '<i>--(This display name cannot be placed here)--</i>';
 			} else {
 				output += input.displayName;
 			}
 			output += " (<a href='https://www.roblox.com/users/profile?username=" + input.username + "'>@" + input.username + "</a></b>)";
 			
+			output += "<p style='font-size:80%'>";
 			if (input.whenCCL != undefined) {
 				const orig = input.whenCCL;
-				output += "<p style='font-size:80%'>Badge obtained: ";
+				output += "Badge obtained: ";
 				if (typeof orig.timestamp == 'object') {
 					output += 'between ';
 					output += formatDate(new Date(orig.timestamp[0]), "yyyy-MM-dd HH:mm:ss", false);
@@ -501,8 +545,57 @@
 						output += " <small>(approximately: " + orig.approx + ")</small>";
 					}
 				}
-				output += '</p>';
 			}
+			
+			const timeOutput = new Timer();
+			if (data.toggleTimeOutputFormat_Global == undefined) {
+				data.toggleTimeOutputFormat_Global = 1;
+			}
+			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
+			
+			if (input.timeSincePrevious != undefined) {
+				const orig = input.timeSincePrevious;
+				if (input.timeSincePrevious.seconds !=  false) {
+					output += "<br>Time since previous: ";
+					if (typeof orig.seconds == 'object') {
+						output += 'between ';
+						timeOutput.amount = orig.seconds[0] * 1e3;
+						output += timeOutput.formatAmount();
+						output += ' to ';
+						timeOutput.amount = orig.seconds[1] * 1e3;
+						output += timeOutput.formatAmount();
+					} else {
+						timeOutput.amount = orig.seconds * 1e3;
+						output += timeOutput.formatAmount();
+					}
+					if (orig.approx != false) {
+						if (orig.approx == true) {
+							output += " <small>(approximately)</small>";
+						} else {
+							output += " <small>(approximately: " + orig.approx + ")</small>";
+						}
+					}
+					
+					if (input.position != undefined) {
+						output += "<br>Average time apart: "
+						if (typeof input.whenCCL.timestamp == 'object') {
+							output += 'between ';
+							timeOutput.amount = (new Date(input.whenCCL.timestamp[0]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
+							output += timeOutput.formatAmount();
+							console.log(timeOutput.formatAmount());
+							output += ' to ';
+							timeOutput.amount = (new Date(input.whenCCL.timestamp[1]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
+							output += timeOutput.formatAmount();
+							console.log(timeOutput.formatAmount());
+						} else {
+							timeOutput.amount = (new Date(input.whenCCL.timestamp).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
+							output += timeOutput.formatAmount();
+						}
+					}
+				}
+			}
+			
+			output += '</p>';
 			
 			if (input.notes != undefined) {
 				output += "<p>" + input.notes + "</p>";
@@ -615,7 +708,6 @@
 				this.mxp = mxp;
 	            this.time = time;
 	        }
-			
 	        if (test_a.match(/EXCL?(?=[=])/) != null || test_a.match(/MENU?(?=[(])/) != null) {
 	            if (test_a.match(/EXCL?(?=[=])/) != null) {
 	                test_a = test_a.replace(/EXCL[=]/, '');
@@ -930,6 +1022,7 @@
 			}
 			this.innerHTML = 'Time output format: ' + ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
 			updateSettingsDisplayedValues();
+			addHallofInfamyCCLs();
 			if (data.toggleAutoCalculate_Global == 1) {
 				computeBeepBoop();
 			}
@@ -1083,7 +1176,7 @@
 					
 					outputString += '<br>• <b>' + formatInt(totalExpReq) + '</b> EXP';
 					var infamyMoneyReq = calcInfamyMoneyReq_v2(data.currentInfamyLevel, data.goalInfamyLevel, data.cheaperPassCheck, [data.currentMoney, rotationInputsCalculated.money], data.preMoneyCapCheck);
-					if (rotationInputsCalculated.includedRuns.equals(0)) {
+					if (rotationInputsCalculated.money.equals(0)) {
 						infamyMoneyReq = infamyMoneyReq.sub(data.currentMoney);
 					}
 					outputString += "<br>• <span class='NotorietyEXPCalculator_Money'>$" + formatInt(infamyMoneyReq.max(0)) + '</span> money (excluding current money)';
