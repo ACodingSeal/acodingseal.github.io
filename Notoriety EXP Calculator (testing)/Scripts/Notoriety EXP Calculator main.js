@@ -106,7 +106,7 @@
 	}
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1b testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1c testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -250,7 +250,7 @@
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
 		const grassAvoiders = 28;
-		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
+		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
 			this.displayName = displayName;
@@ -475,7 +475,7 @@
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners end of Jewelry Shop (2025-01-25T12-36-17Z).jpg'></div><div class='gallerytext'>We're going to need a bigger van... (2025-01-25T12:36:17Z)</div></li>"
 		+ "</ul>",
 		// #2
-		"The Beginning & The End: Derp’s Journey To CCL<br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson<p></p><br/><b>Pre-CCL Release</b><br/>"
+		"<h1>The Beginning & The End: Derp’s Journey To CCL</h1><br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson<p></p><br/><b>Pre-CCL Release</b><br/>"
 		+ "“Yo, I found a new game, it’s pretty good”"
 		+ "<br/>There it began, just a childhood friend and a goober, well precisely, 2 goobers. Man, I have not seen that shithead in a while, anyway honestly at first when I started Notoriety, I didn’t understand a single thing, it was super confusing, and I kept selling my friend on… erm… Jewelry shop….. ANYWAY, after getting the ropes of the game, I learnt RO-Bank, honestly it was super difficult as a beginner for some reason, and that's all the memory I had as a beginner really."
 		+ "<p></p>After that, I got a pacifist badge a while after my friend departed, we really didn’t play much Notoriety together not gonna lie. Afterwards, I left my alt account, and a year later, I decided to give Notoriety a shot again. I forgot why, but I decided to play it, cause why not? After achieving infamy 9 or so, I decided to try getting shadow raid’s secret badge, Crystal Clear. Wednesday July 14th, 2021, 6:15 PM I joined a group of people that also wanted the badge. I met the main person of the group by chance, and there he was, the silly nerd and future online best friend of mine, Will. Shortly after obtaining the badge, my other close friend, Pixel kept wanting to voice call, and after spamming voice calls lots of times, the other two got sick of it and left, leaving just me and Will, and I cannot lie, I was lowkey going to leave too. But we eventually became friends and I grinded and reached XXV, it was a huge achievement for me at the time, and I was thrilled."
@@ -666,7 +666,7 @@
 			output += "<div class='ImageTextContainer'>";
 			
 			if (input.robloxAvatar != undefined) {
-				output += "<img src='./Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
+				output += "<img src='./Notoriety EXP Calculator (testing)/Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
 			}
 			
 			output += "<div class='CellText'>";
@@ -843,12 +843,19 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 21 minutes.
+		Estimated total active development time across all versions: ~48 hours, 24 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
+		<p>
+		<b><u>[Testing] Version 0.0.1c</u></b>
+		<ul>
+			${updateLogEntry('edit', "Section Hall of CCLs: Changed " + '"' + "Times are noted" + '"' + " to " + '"' + "Badge obtainment times are noted" + '"' + ".")}
+			${updateLogEntry('edit', "Section Hall of CCLs: CCL #2's user-written description now begins with a h1 tag.")}
+			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
+		</ul></p>
 		<p>
 		<b><u>[2025-04-14 10:15] Version 0.0.1b</u></b>
 		<ul>
