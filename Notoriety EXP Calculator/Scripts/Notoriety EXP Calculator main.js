@@ -15,7 +15,7 @@
 	}
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1c | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1d | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -752,14 +752,20 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 25 minutes.
+		Estimated total active development time across all versions: ~48 hours, 29 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
 		<p>
-		<b><u>[2025-04-14 15:05] Version 0.0.1c</u></b>
+		<b>[2025-04-14 17:47] Version 0.0.1d</b>
+		<ul>
+			${updateLogEntry('edit', "Fixed some things in the update log.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
+		</ul></p>
+		<p>
+		<b>[2025-04-14 15:05] Version 0.0.1c</b>
 		<ul>
 			${updateLogEntry('edit', "Section Hall of CCLs: Changed " + '"' + "Times are noted" + '"' + " to " + '"' + "Badge obtainment times are noted" + '"' + ".")}
 			${updateLogEntry('edit', "Section Hall of CCLs: CCL #2's user-written description now begins with a h1 tag.")}
@@ -767,7 +773,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
 		</ul></p>
 		<p>
-		<b><u>[2025-04-14 10:15] Version 0.0.1b</u></b>
+		<b>[2025-04-14 10:15] Version 0.0.1b</b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added " + '"' + "Open images in a new tab to view the full image." + '"' + "to the top-of-section primary info.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCLs #20 and #25 user-written descriptions.")}
@@ -778,7 +784,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~51 minutes.")}
 		</ul></p>
 		<p>
-		<b><u>[2025-04-13 15:02] Version 0.0.1a</u></b>
+		<b>[2025-04-13 15:02] Version 0.0.1a</b>
 		<ul>
 			${updateLogEntry('add', "Significantly expanded CCL #2's entry in the Hall of CCLs, and modified existing parts. Also noted that CCL #28 owns the classic Blue Navy (100) suit.")}
 			${updateLogEntry('edit', "Removed 'v' from the top header text of the tool's version.")}
