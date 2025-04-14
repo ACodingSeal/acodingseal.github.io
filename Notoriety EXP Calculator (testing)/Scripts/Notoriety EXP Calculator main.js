@@ -843,7 +843,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 24 minutes.
+		Estimated total active development time across all versions: ~48 hours, 25 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -854,13 +854,14 @@
 		<ul>
 			${updateLogEntry('edit', "Section Hall of CCLs: Changed " + '"' + "Times are noted" + '"' + " to " + '"' + "Badge obtainment times are noted" + '"' + ".")}
 			${updateLogEntry('edit', "Section Hall of CCLs: CCL #2's user-written description now begins with a h1 tag.")}
-			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
+			${updateLogEntry('edit', "Fixed update log entry Version 0.0.1b, sub-entry #2: CCLs #25 and #26 > CCLs #20 and #25")}
+			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
 		</ul></p>
 		<p>
 		<b><u>[2025-04-14 10:15] Version 0.0.1b</u></b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added " + '"' + "Open images in a new tab to view the full image." + '"' + "to the top-of-section primary info.")}
-			${updateLogEntry('add', "Section Hall of CCLs: Added CCLs #25 and #26 user-written descriptions.")}
+			${updateLogEntry('add', "Section Hall of CCLs: Added CCLs #20 and #25 user-written descriptions.")}
 			${updateLogEntry('add', "Added ':millisecond' to the note of how times are noted in the Hall of CCLs section.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Modified CCL #25's notes.")}
 			${updateLogEntry('edit', "In the Hall of CCLs section, the 'User-written description' toggle button now displays a mouse pointer icon on hover.")}
