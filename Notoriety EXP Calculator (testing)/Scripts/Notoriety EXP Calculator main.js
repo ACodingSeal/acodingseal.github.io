@@ -250,7 +250,7 @@
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
 		const grassAvoiders = 28;
-		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
+		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
 			this.displayName = displayName;
@@ -831,7 +831,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 6 minutes.
+		Estimated total active development time across all versions: ~48 hours, 9 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -840,12 +840,13 @@
 		<p>
 		<b><u>[Testing] Version 0.0.1b</u></b>
 		<ul>
+			${updateLogEntry('add', "Section Hall of CCLs: Added " + '"' + "Open images in a new tab to view the full image." + '"' + "to the top-of-section primary info.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCLs #25 and #26 user-written descriptions.")}
 			${updateLogEntry('add', "Added ':millisecond' to the note of how times are noted in the Hall of CCLs section.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Modified CCL #25's notes.")}
 			${updateLogEntry('edit', "In the Hall of CCLs section, the 'User-written description' toggle button now displays a mouse pointer icon on hover.")}
 			${updateLogEntry('edit', "Renamed section " + '"' + "Update Logs" + '"' + " to " + '"' + "Update Log" + '"' + ". Update Log entry " + '"' + "Version Indev" + '"' + " no longer displays the [Testing] tag.")}
-			${updateLogEntry('other', "Estimated active development time: ~36 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~39 minutes.")}
 		</ul></p>
 		<p>
 		<b><u>[2025-04-13 15:02] Version 0.0.1a</u></b>
