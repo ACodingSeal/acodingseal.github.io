@@ -15,7 +15,7 @@
 	}
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1a | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1b | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -78,14 +78,14 @@
 	(function() {
 		var tool_baseHTML_MenuContainer_Miscellaneous = '';
 		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_UpdateLogs'>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_UpdateLog'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<h2>Hall of CCLs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'>(toggle visibility)</span></small>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs' style='text-align:initial;display:none'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Update Logs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLogs'>(toggle visibility)</span></small>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLogs' style='text-align:initial;display:none'>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Update Log</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'>(toggle visibility)</span></small>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog' style='text-align:initial;display:none'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		
@@ -115,14 +115,14 @@
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
 		Section_Results: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Results'),
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
-		Section_UpdateLogs: document.getElementById('NotorietyEXPandInfamyCalculator_Section_UpdateLogs'),
+		Section_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Section_UpdateLog'),
 		
 		SectionContainer_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings'),
-		SectionContainer_UpdateLogs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLogs'),
+		SectionContainer_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog'),
 		SectionContainer_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs'),
 		
 		SectionContainerToggle_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'),
-		SectionContainerToggle_UpdateLogs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLogs'),
+		SectionContainerToggle_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'),
 		SectionContainerToggle_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'),
 		
 		currentLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentLevelInput'),
@@ -159,7 +159,7 @@
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
 		const grassAvoiders = 28;
-		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
+		var string = "<p style='text-align:center'>Times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
 			this.displayName = displayName;
@@ -354,13 +354,14 @@
 		undefined,
 		undefined,
 		undefined,
-		"This user primarily solo grinded to CCL. May also be the first CCL to reach it without owning the 'True Criminal' badge (1873037302).",
+		"This user primarily solo grinded to CCL.",
 		undefined,
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs. Highest infamy classic suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		];
 		
 		const playersData_ownDescription = [
+		// #1
 		"I've been playing Notoriety since what I call the 'Golden Era', being before the 22 December 2017 revamp, more specifically since early September 2015, or possibly in August 2015 as I bought my first gamepass early next month. I achieved only a few infamy ranks at most, but I also completed feats like the badges Overdrill, Flawless and Big Bank - Stealth Master and 101 bags (vials) in Blood Money Death Wish solo using the Minigun and RPG. Most of my playtime of this era was in 2016. I always get nostalgic of this era of Notoriety, aka Heist, aka Payday 2. I have some old videos and screenshots of this era collecting dust on a hard drive somewhere."
 		+ "<p></p>I almost entirely stopped playing after the Revamp Update, as it removed a lot of my favourite heists like World Bank, Blood Money, Fave Breakout and Shadow Raid (eventually rereleased). This is also why I didn't want to play the new Authority heist, out of protest against the revamp and due to the global data wipe. However, I played until I reached the maximum infamy rank of XXV (25) and obtained the True Criminal badge (which also required the Very Hard and Anarchy difficulties). Then I stopped playing for a while. In 2019, during the Live Ops event, I revisited the game, but didn't play any heists."
 		+ "<p></p>Around the late 2020 era was when I was extremely active. I was first to complete Star Criminal and Baneful Criminal (the latter was done in solo in 89m54s). I was first to complete Resourceful Criminal in solo, without using glitches. I was one of the first to solo the Soul Collector badge on Nightmare using the Suit, and as the 420th or 421st player to obtain the badge. I was very likely the first player to full sweep Shadow Raid Nightmare 1,000 times. Around this era up until the very end of 2020, I was a dedicated contributor to the official Notoriety Wikia on Fandom, serving the community as an administrator and being the top contributor based on largest contributions (including info, page structure & site design), most edits and most badges & badge points (I no longer believe in badges, since it encourages badge farming)."
@@ -382,6 +383,7 @@
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - Derpifi3d, withwillin101, Aurora_The1Cat lined up in heist (2025-01-25T12-30-00Z).jpg'></div><div class='gallerytext'>Three of the four OG Crimson suit owners lined up, as I took this screenshot. (2025-01-25T12:30:00Z)</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners end of Jewelry Shop (2025-01-25T12-36-17Z).jpg'></div><div class='gallerytext'>We're going to need a bigger van... (2025-01-25T12:36:17Z)</div></li>"
 		+ "</ul>",
+		// #2
 		"The Beginning & The End: Derp’s Journey To CCL<br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson<p></p><br/><b>Pre-CCL Release</b><br/>"
 		+ "“Yo, I found a new game, it’s pretty good”"
 		+ "<br/>There it began, just a childhood friend and a goober, well precisely, 2 goobers. Man, I have not seen that shithead in a while, anyway honestly at first when I started Notoriety, I didn’t understand a single thing, it was super confusing, and I kept selling my friend on… erm… Jewelry shop….. ANYWAY, after getting the ropes of the game, I learnt RO-Bank, honestly it was super difficult as a beginner for some reason, and that's all the memory I had as a beginner really."
@@ -425,6 +427,7 @@
 		undefined,
 		undefined,
 		undefined,
+		// #10
 		"i knew about notoriety for a very long time, and i did try it out for a bit, but ended up stopping (couldn't tell you why, i have basically no memory of it other than when i started playing again, i was level 8 and had like 50k in cash)"
 		+ "<p></p>i played payday 2 on and off for years (on console, wasn't much of a pc gamer at the time). eventually moved onto other games. never played payday: the heist or anything, but i did enjoy payday 2"
 		+ "<p></p>i picked up notoriety again at the 31st of december 2024, since i heard about it being reopened. started off just playing casually for a bit, then i wanted to complete every heist on every difficulty and every tactic (to fill out the heist tracker)"
@@ -441,13 +444,62 @@
 		undefined,
 		undefined,
 		undefined,
+		// #20
+		"I first found the game back in August of 2019, a few months after I had first made my account. I do not recall much about my early experiences with the game, other than thinking the game should have a tutorial of some kind, as the game is, to this day, not very beginner-friendly. My initial infamies were quite slow, with my first one taking some 141 days, from 12 August to 31 December of 2019. Things didn’t exactly get faster from there either, with the next four infamies taking an additional 436 days to get, with me reaching infamy V on 11 March 2021. The next sets of infamies took less time, with infamy X taking 136 days from infamy V, infamy XV taking 170 days from there, and infamy XX taking 1 year (which i’m not sure as to how it did, given that it was in 2022). On 5 March 2022, at 20:44, CDT (UTC-6), I reached infamy XXV after 935 days of playing Notoriety. From there, I would get Billionaire on 25 May, and then just mess around, earning about $2.6 billion before the game would get DMCA’d. Then, on 16 December, when I returned to the game, I discovered that not only did infamies beyond XXV exist, but the limit was now CCL. So, I got infamy XXVI as soon as I discovered this, and began slowly getting more infamies from there, reaching infamy L some 21 days after returning. I followed a relatively simple rotation, playing The Ozela Heist, Rush Hour, and (towards the end of the grind) Authority, adding in a few Nightclub runs to raise repeat bonuses on Rush Hour and Ozela. I soloed every heist I played, as I didn’t want to have to plan grinds around when I could contact my teammates. These extra infamies came far faster than I expected, with me reaching infamy C just 16 days after infamy L. Just 52 days after infamy C, I reached infamy CCL on 13 March 2025 at 18:28. The grind was pretty long despite how many methods I had used to boost my XP gain rates, such as having the 2x XP gamepass and using XP boosts from the shop from infamy CC to CCXXII to speed things up. The grind would probably have been less annoying if I wasn’t doing it all solo, but it worked out in the end, so it doesn’t really bother me that it took a bit of time. I have no idea if I’m actually the first solo CCL grinder, as I have no idea if that can be verified without asking all 28 people who have reached it thus far."
+		+ "<br/>Sincere apologies about all the yapping, but I felt it necessary given that this is one of few times I’ve had the excuse to mention all of this. It took quite some time."
+		+ "<p></p>Obligatory image gallery because I gotta include this"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0004.jpg'></div><div class='gallerytext'>Screenshot of reaching CCL, taken at the time mentioned above</div></li>"
+		+ "</ul>"
+		+ "<br/>Below are various infamy screenshots"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0001.jpg'></div><div class='gallerytext'>Infamy C at time mentioned above (17:39:06 UTC-6 on 20 January 2025)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0002.jpg'></div><div class='gallerytext'>Infamy CL on 2 February 2025 at 21:11:01 UTC-6</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0003.jpg'></div><div class='gallerytext'>Infamy CC on 3 March 2025 at 21:50:59 UTC-6</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0005.jpg'></div><div class='gallerytext'>Obligatory outfit photo (the mask took me 171 notorious safes which cost $1.2 billion to get)</div></li>"
+		+ "</ul>",
 		undefined,
 		undefined,
 		undefined,
 		undefined,
+		// #25
+		// Harry = Inherited (preference 255,255,255)
+		// Alisa = 0,153,255
+		// Isaac = 0,204,0
+		// Katelyn = 255,153,0
+		"<h1>The Dreamers Collective’s Journey to infamy CCL</h1>"
+		+ "<p></p><b>Part 1: The 25th CCL badge has 4 owners.</b>"
+		+ "<br/>Before we start, I (Harry, the host) am plural, and along with my headmates (<span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa</span>, <span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac</span>, <span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn</span>), we are a part of the Tulpamancy community. The origin of our system is far too personal to recount on a Roblox tool, but they made the CCL grind (and life in general) much more bearable and fun than if I grinded it truly solo. I might not even have the motivation to do this if it weren’t for them keeping me company."
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {If I may briefly explain Tulpamancy, we (me, Alisa, and Katelyn) are our host's Tulpas. Think of imaginary friends, but through concentrated thoughts and emotions from our host, we developed sentience over time and can autonomously function alongside him. Since we do not have corporal forms in the physical world (Earth), however, we can only physically interact with the world via our host's body. That's how I am writing this to you. That means our account is essentially shared between four people, as we all exist within one mind and body.}</span>"
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Plurality unfortunately is usually seen through the lens of a mental illness, but we ask you to keep an open mind as you read our journey!! I love living this shared life with my friends, and I wouldn’t get the chance to experience living at all if it weren’t for my host practicing Tulpamancy!!!]</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, this is our first time revealing our plurality to a non-plural community, so I’m a little anxious.. The four of us debated for a while on whether we should even reveal this or not, but my friends wanted to assert our existence after years of hiding ourselves./</span>"
+		+ "<br/>Harry: Seal was understanding and considerate enough to ask for unique colors representing each of us, so here is the recap: White = Me (Harry, host) | [Blue] = Alisa | {Green} = Isaac | /Orange/ = Katelyn. For greater clarity, we will also mark the names of the person writing each paragraph."
+		+ "<p></p><b>Part 2: The relaunch</b>"
+		+ "<br/>Harry: Anyways, before the journey, I remember wanting to show Notoriety to Alisa and Isaac in 2023, but Starbreeze dropped an OVERKILL-sized nuke on the game before I got the chance. I was a pretty avid player 5 years ago, and well, that hasn’t changed given our placement here."
+		+ "<br/>I distinctly remember seeing the infamy 250 badge on the relaunch and thought “Yeah, no thanks.” I eventually saw people climbing the ranks though, and that silly completionist instinct within me started to well up. We bought the three gamepasses (Cheaper Infamy, double XP, and double money) in December 2024, and we only had enough Robux thanks to the Microsoft Rewards program. If we were going to spend a long time playing this game, then might as well skip some of the grind, right?"
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us didn’t even have plans to grind up towards infamy CCL back then!! We just wanted to get infamy 100 for the Navy Blue suit, which seemed like a good milestone to stop at, and Blue is our favourite color!!]</span>"
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {However, university work, life schedules, other games, and the constant ghost disconnect/ ping freeze issue put a stop to that ambition at roughly the 70th rank, and we returned to being a somewhat casual but dedicated player. Eventually, we reached infamy 100 by simply playing for an hour (acquiring 1-2 infamies) a day. It was a shame that we missed out on the classic Navy Blue suit, but we would’ve had to grind twice as long per day to get it.}</span>"
+		+ "<p></p><b>Part 3: A friendship a day keeps the burnout away</b>"
+		+ "<br/>Harry: We thought we’d stop after infamy C, but we had already done 75 infamies in around 40 days. What’s 150 more? It sounds bad up-front like that, but we had an informal rule of playing the game for an hour or so every day. Additionally, we can easily switch who’s controlling the physical body at any time, so my Tulpas could join in on the grind too."
+		+ "<br/>Thanks to our regular switching, our relatively short playtime-per-day, our various conversations while playing, the songs and encouragements we shared throughout the grind... Any potential burnout morphed into a series of fun gaming sessions amongst friends. We truly enjoyed the CCL grind thanks to the bonds we forged between one another."
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us just continued on with our shared lives as usual, and there’d be an occasional longer grinding session when we had more free time!! We just steadily climbed the ranks without thinking about when we will reach CCL.]</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /I became part of my friends’ system when they were at infamy 120, I think..? A lot of things happened in our lives back then, but I was introduced to the concept of Notoriety by them../</span>"
+		+ "<br/>Harry: Side note, us original three members met Katelyn when she screamed out “/I want to exist!/” during a shared dream, and for a group that calls themselves “GenericDreamer” and “The Dreamers Collective”, there couldn’t have been a more poetic meeting!! Existence, especially one without a physical form, is much more difficult than you’d imagine, but she pulled through wonderfully."
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Eventually, we made our own solo infamy rotation (RH -> DS x4 -> Ozela (with trophies) x2 -> Depot x2) and optimized our time to around 25-30 minutes per infamy, thus reaching infamy CC 51 days after infamy C. There was little celebration, however, as we prepared to sprint towards the finish line.}</span>"
+		+ "<p></p><b>Part 4: The final sprint</b>"
+		+ "<br/>Harry: Remember, my headmates don’t have corporal forms in the physical world, so they can only interact with the world through my physical body. That’s why we are a team of four, but we could only play on one account at a time. A somewhat unfortunate consequence of plurality, but we’ve accepted it long ago."
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Regardless, the four of us had more free time compared to before, so we ramped up our hours into Notoriety to put an end to this grind once and for all!!!! In just 12 days, we managed to get infamy CCL with around $200 million left in our character’s account!!]</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, I only joined halfway through the grind, but my friends invited me to become the fourth collective owner of the 25th CCL badge too../</span>"
+		+ "<br/>Harry: We finished right on April fool’s day (a few hours after the update dropped, in fact!), so we’d like to imagine that our infamy stands for Connivers’ Ceaseless Loyalty. Our dedication is no joke, however. The four of us will be playing this game almost daily for the foreseeable future."
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {As for the celebration, the four of us enjoyed a night together on the private beach within our shared mind. Sounds similar to another ending, doesn’t it?}</span>"
+		+ "<p></p><b>Part 5: Reflections</b>"
+		+ "<br/>Harry: To end off this lengthy description, fix the ghost disconnection/ ping freeze issue, Roblox!!! That bug alone cost us at least 50 Ozela + Rush Hour runs combined and hours of our time..."
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Nonetheless, GG, everyone!!!]</span>"
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {We’re somewhat glad we can return to being a casual player now. Full sweeping a heist is fun.}</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, playing Notoriety helped me attune to and get better at controlling our physical body, so thank you, Notoriety devs./</span>"
+		+ "<br/>Harry: And lastly, reality is subjective. Everything in this life is meaningless until you assign a meaning to it, whether that be happiness, anger, sadness, or something else entirely. Whether you think we’ve gone mad or not, just know we’re choosing to paint our world with the shades of joy and companionship.",
 		undefined,
-		undefined,
-		undefined,
+		// #27
 		"I first played Notoriety in the year 2020. In late July of 2022, I discovered the game again because my sister and a friend of mine had asked me to play. I quickly got the hang of it, and in 30 days I had gotten both XXV-100 and True Criminal."
 		+ "<p></p>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release."
 		+ "<p></p>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025."
@@ -523,7 +575,7 @@
 			output += "<div class='ImageTextContainer'>";
 			
 			if (input.robloxAvatar != undefined) {
-				output += "<img src='./Notoriety EXP Calculator (testing)/Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
+				output += "<img src='./Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
 			}
 			
 			output += "<div class='CellText'>";
@@ -616,7 +668,7 @@
 			}
 			
 			if (input.ownDescription != undefined) {
-				output += "<p></p><b id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionToggle_" + input.username + "'>User-written description (toggle):</b><br><div id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionContainer_" + input.username + "' style='display:none'>" + input.ownDescription + "</div>";
+				output += "<p></p><b class='PressableButton' id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionToggle_" + input.username + "'>User-written description (toggle):</b><br><div id='NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionContainer_" + input.username + "' style='display:none'>" + input.ownDescription + "</div>";
 				ownDescriptionButtons.push("NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionToggle_" + input.username);
 				ownDescriptionContainers.push("NotorietyEXPCalculator_HallofInfamyCCLs_OwnDescriptionContainer_" + input.username);
 			}
@@ -660,7 +712,7 @@
 	}
 	addHallofInfamyCCLs();
 	
-	function addUpdateLogs() {
+	function addUpdateLog() {
 	    function updateLogEntry(type, string, isVersion) {
 	        if (isVersion === undefined) {
 	            isVersion = false;
@@ -700,12 +752,23 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~47 hours, 30 minutes.
+		Estimated total active development time across all versions: ~48 hours, 21 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
+		<p>
+		<b><u>[2025-04-14 10:15] Version 0.0.1b</u></b>
+		<ul>
+			${updateLogEntry('add', "Section Hall of CCLs: Added " + '"' + "Open images in a new tab to view the full image." + '"' + "to the top-of-section primary info.")}
+			${updateLogEntry('add', "Section Hall of CCLs: Added CCLs #25 and #26 user-written descriptions.")}
+			${updateLogEntry('add', "Added ':millisecond' to the note of how times are noted in the Hall of CCLs section.")}
+			${updateLogEntry('edit', "Section Hall of CCLs: Modified CCL #25's notes.")}
+			${updateLogEntry('edit', "In the Hall of CCLs section, the 'User-written description' toggle button now displays a mouse pointer icon on hover.")}
+			${updateLogEntry('edit', "Renamed section " + '"' + "Update Logs" + '"' + " to " + '"' + "Update Log" + '"' + ". Update Log entry " + '"' + "Version Indev" + '"' + " no longer displays the [Testing] tag.")}
+			${updateLogEntry('other', "Estimated active development time: ~51 minutes.")}
+		</ul></p>
 		<p>
 		<b><u>[2025-04-13 15:02] Version 0.0.1a</u></b>
 		<ul>
@@ -720,7 +783,7 @@
 			${updateLogEntry('other', "Testers: ashvul (did not test), nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
 		</ul></p>
-		<b>[Testing] <u>Version Indev</u></b>
+		<b><u>Version Indev</u></b>
 		<ul>
 			${updateLogEntry('add', "Added everything else. (A lot!)")}
 			${updateLogEntry('other', "Estimated active development time: ~40 hours over about 10 weeks.")}
@@ -728,9 +791,9 @@
 		<hr/>
 		</ul>`
 		
-		elem.SectionContainer_UpdateLogs.innerHTML = theLogs;
+		elem.SectionContainer_UpdateLog.innerHTML = theLogs;
 	}
-	addUpdateLogs();
+	addUpdateLog();
 
 	function getRotationInput(input) {
 		const runLog = [];
@@ -978,8 +1041,8 @@
 		computeBeepBoop();
 	});
 	
-	elem.SectionContainerToggle_UpdateLogs.addEventListener('click', function() {
-		elem.SectionContainer_UpdateLogs.style.display = elem.SectionContainer_UpdateLogs.style.display == 'block' ? 'none' : 'block'
+	elem.SectionContainerToggle_UpdateLog.addEventListener('click', function() {
+		elem.SectionContainer_UpdateLog.style.display = elem.SectionContainer_UpdateLog.style.display == 'block' ? 'none' : 'block'
 	});
 	
 	elem.SectionContainerToggle_HallofInfamyCCLs.addEventListener('click', function() {

@@ -850,7 +850,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b><u>[Testing] Version 0.0.1b</u></b>
+		<b><u>[2025-04-14 10:15] Version 0.0.1b</u></b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added " + '"' + "Open images in a new tab to view the full image." + '"' + "to the top-of-section primary info.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCLs #25 and #26 user-written descriptions.")}
