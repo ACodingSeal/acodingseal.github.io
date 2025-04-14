@@ -850,7 +850,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b><u>[Testing] Version 0.0.1c</u></b>
+		<b><u>[2025-04-14 15:05] Version 0.0.1c</u></b>
 		<ul>
 			${updateLogEntry('edit', "Section Hall of CCLs: Changed " + '"' + "Times are noted" + '"' + " to " + '"' + "Badge obtainment times are noted" + '"' + ".")}
 			${updateLogEntry('edit', "Section Hall of CCLs: CCL #2's user-written description now begins with a h1 tag.")}
