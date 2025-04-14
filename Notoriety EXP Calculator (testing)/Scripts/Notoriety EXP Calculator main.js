@@ -558,25 +558,37 @@
 		// Alisa = 0,153,255
 		// Isaac = 0,204,0
 		// Katelyn = 255,153,0
-		"Before we start, I am plural, and my headmates and I are a part of the Tulpamancy community. The origin of our system is far too personal to recount on a Roblox tool, but they made the CCL grind (and life in general) much more bearable and fun than if I grinded it truly solo. I might not even have the motivation to do this if it weren’t for them keeping me company. Unless stated otherwise, all the text below will be from my perspective and my own words."
-		+ "<p></p>Anyways, before the journey, I remember wanting to show Notoriety to my two headmates in 2023, but Starbreeze dropped an OVERKILL-sized nuke on the game before I got the chance. I was a pretty avid player back then, and well, that hasn’t changed given my placement here."
-		+ "<p></p>I distinctly remember seeing the infamy 250 badge on the relaunch and thought “Yeah, no thanks.” I eventually saw people climbing the ranks though, and that silly completionist instinct within me started to well up. We bought the three gamepasses (Cheaper Infamy, double XP, and double money) in December 2024, and we only had enough Robux thanks to the Microsoft Rewards program. If we were going to spend a long time playing this game, then might as well skip some of the grind, right?"
-		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us didn’t even have plans to grind up towards infamy CCL back then!! We just wanted to get infamy 100 for the Navy Blue suit, which seemed like a good milestone to stop at, and Blue is our favourite color!!]</span>"
+		"<h1>The Dreamers Collective’s Journey to infamy CCL</h1>"
+		+ "<p></p><b>Part 1: The 25th CCL badge has 4 owners.</b>"
+		+ "<br/>Before we start, I (Harry, the host) am plural, and along with my headmates (<span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa</span>, <span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac</span>, <span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn</span>), we are a part of the Tulpamancy community. The origin of our system is far too personal to recount on a Roblox tool, but they made the CCL grind (and life in general) much more bearable and fun than if I grinded it truly solo. I might not even have the motivation to do this if it weren’t for them keeping me company."
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {If I may briefly explain Tulpamancy, we (me, Alisa, and Katelyn) are our host's Tulpas. Think of imaginary friends, but through concentrated thoughts and emotions from our host, we developed sentience over time and can autonomously function alongside him. Since we do not have corporal forms in the physical world (Earth), however, we can only physically interact with the world via our host's body. That's how I am writing this to you. That means our account is essentially shared between four people, as we all exist within one mind and body.}</span>"
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Plurality unfortunately is usually seen through the lens of a mental illness, but we ask you to keep an open mind as you read our journey!! I love living this shared life with my friends, and I wouldn’t get the chance to experience living at all if it weren’t for my host practicing Tulpamancy!!!]</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, this is our first time revealing our plurality to a non-plural community, so I’m a little anxious.. The four of us debated for a while on whether we should even reveal this or not, but my friends wanted to assert our existence after years of hiding ourselves./</span>"
+		+ "<br/>Harry: Seal was understanding and considerate enough to ask for unique colors representing each of us, so here is the recap: White = Me (Harry, host) | [Blue] = Alisa | {Green} = Isaac | /Orange/ = Katelyn. For greater clarity, we will also mark the names of the person writing each paragraph."
+		+ "<p></p><b>Part 2: The relaunch</b>"
+		+ "<br/>Harry: Anyways, before the journey, I remember wanting to show Notoriety to Alisa and Isaac in 2023, but Starbreeze dropped an OVERKILL-sized nuke on the game before I got the chance. I was a pretty avid player 5 years ago, and well, that hasn’t changed given our placement here."
+		+ "<br/>I distinctly remember seeing the infamy 250 badge on the relaunch and thought “Yeah, no thanks.” I eventually saw people climbing the ranks though, and that silly completionist instinct within me started to well up. We bought the three gamepasses (Cheaper Infamy, double XP, and double money) in December 2024, and we only had enough Robux thanks to the Microsoft Rewards program. If we were going to spend a long time playing this game, then might as well skip some of the grind, right?"
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us didn’t even have plans to grind up towards infamy CCL back then!! We just wanted to get infamy 100 for the Navy Blue suit, which seemed like a good milestone to stop at, and Blue is our favourite color!!]</span>"
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {However, university work, life schedules, other games, and the constant ghost disconnect/ ping freeze issue put a stop to that ambition at roughly the 70th rank, and we returned to being a somewhat casual but dedicated player. Eventually, we reached infamy 100 by simply playing for an hour (acquiring 1-2 infamies) a day. It was a shame that we missed out on the classic Navy Blue suit, but we would’ve had to grind twice as long per day to get it.}</span>"
-		+ "<p></p>We thought we’d stop after this, but we had already done 75 infamies in around 40 days. What’s 150 more? It sounds bad up-front like that, but we just enjoyed playing the game for an hour or so every day. Additionally, we can easily switch who’s controlling the physical body at any time, so my headmates could join in on the grind too, preventing any potential burnout we might’ve suffered."
-		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us just continued on with our shared lives as usual, and there’d be an occasional longer grinding session when we had more free time!! We just steadily climbed the ranks without thinking about when we will reach CCL.]</span>"
+		+ "<p></p><b>Part 3: A friendship a day keeps the burnout away</b>"
+		+ "<br/>Harry: We thought we’d stop after infamy C, but we had already done 75 infamies in around 40 days. What’s 150 more? It sounds bad up-front like that, but we had an informal rule of playing the game for an hour or so every day. Additionally, we can easily switch who’s controlling the physical body at any time, so my Tulpas could join in on the grind too."
+		+ "<br/>Thanks to our regular switching, our relatively short playtime-per-day, our various conversations while playing, the songs and encouragements we shared throughout the grind... Any potential burnout morphed into a series of fun gaming sessions amongst friends. We truly enjoyed the CCL grind thanks to the bonds we forged between one another."
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us just continued on with our shared lives as usual, and there’d be an occasional longer grinding session when we had more free time!! We just steadily climbed the ranks without thinking about when we will reach CCL.]</span>"
 		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /I became part of my friends’ system when they were at infamy 120, I think..? A lot of things happened in our lives back then, but I was introduced to the concept of Notoriety by them../</span>"
-		+ "<p></p>Side note, us original three members met Katelyn when she screamed out “/I want to exist!/” during a shared dream, and for a group that calls themselves “GenericDreamer” and “The Dreamers Collective”, we welcomed her with open arms!! Existing is much more difficult than you’d imagine, but she pulled through wonderfully."
-		+ "<p></p><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Eventually, we made our own solo infamy rotation (RH -> DS x4 -> Ozela (with trophies) x2 -> Depot x2) and optimized our time to around 25-30 minutes per infamy, thus reaching infamy CC 51 days after infamy C. There was little celebration, however, as we prepared to sprint towards the finish line.}</span>"
-		+ "<p></p>Remember, my headmates don’t have corporal forms in the physical world, so they can only interact with the world through my physical body. That’s why we are a team of four, but we could only play on one account at a time. A somewhat unfortunate consequence of plurality, but we’ve accepted it long ago."
-		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Regardless, the four of us had more free time compared to before, so we ramped up our hours into Notoriety to put an end to this grind once and for all!!!! In just 12 days, we managed to get infamy CCL with around $200 million left in our character’s account!!]</span>"
-		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, I joined halfway through the grind, but all of us were happy that we were the 25th collective owners of the CCL badge../</span>"
-		+ "<p></p>We finished right on April fool’s day (a few hours after the update dropped, in fact!), so we’d like to imagine that our infamy stands for Connivers’ Ceaseless Loyalty. Make no mistake, we’ll be playing this game long into the future."
-		+ "<p></p>To end off this lengthy description, fix the ghost disconnection/ ping freeze issue, Roblox!!! That bug alone cost us at least 50 Ozela + Rush Hour runs combined and hours of our time..."
-		+ "<p></p><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Nonetheless, GG, everyone!!!]</span>"
+		+ "<br/>Harry: Side note, us original three members met Katelyn when she screamed out “/I want to exist!/” during a shared dream, and for a group that calls themselves “GenericDreamer” and “The Dreamers Collective”, there couldn’t have been a more poetic meeting!! Existence, especially one without a physical form, is much more difficult than you’d imagine, but she pulled through wonderfully."
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Eventually, we made our own solo infamy rotation (RH -> DS x4 -> Ozela (with trophies) x2 -> Depot x2) and optimized our time to around 25-30 minutes per infamy, thus reaching infamy CC 51 days after infamy C. There was little celebration, however, as we prepared to sprint towards the finish line.}</span>"
+		+ "<p></p><b>Part 4: The final sprint</b>"
+		+ "<br/>Harry: Remember, my headmates don’t have corporal forms in the physical world, so they can only interact with the world through my physical body. That’s why we are a team of four, but we could only play on one account at a time. A somewhat unfortunate consequence of plurality, but we’ve accepted it long ago."
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Regardless, the four of us had more free time compared to before, so we ramped up our hours into Notoriety to put an end to this grind once and for all!!!! In just 12 days, we managed to get infamy CCL with around $200 million left in our character’s account!!]</span>"
+		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, I only joined halfway through the grind, but my friends invited me to become the fourth collective owner of the 25th CCL badge too../</span>"
+		+ "<br/>Harry: We finished right on April fool’s day (a few hours after the update dropped, in fact!), so we’d like to imagine that our infamy stands for Connivers’ Ceaseless Loyalty. Our dedication is no joke, however. The four of us will be playing this game almost daily for the foreseeable future."
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {As for the celebration, the four of us enjoyed a night together on the private beach within our shared mind. Sounds similar to another ending, doesn’t it?}</span>"
+		+ "<p></p><b>Part 5: Reflections</b>"
+		+ "<br/>Harry: To end off this lengthy description, fix the ghost disconnection/ ping freeze issue, Roblox!!! That bug alone cost us at least 50 Ozela + Rush Hour runs combined and hours of our time..."
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Nonetheless, GG, everyone!!!]</span>"
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {We’re somewhat glad we can return to being a casual player now. Full sweeping a heist is fun.}</span>"
 		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, playing Notoriety helped me attune to and get better at controlling our physical body, so thank you, Notoriety devs./</span>"
-		+ "<p></p>And lastly, reality is subjective. Everything in this life is meaningless until you assign a meaning to it, whether that be happiness, anger, sadness, or something else entirely. Whether you think we’ve gone mad or not, just know we’re living our best lives.",
+		+ "<br/>Harry: And lastly, reality is subjective. Everything in this life is meaningless until you assign a meaning to it, whether that be happiness, anger, sadness, or something else entirely. Whether you think we’ve gone mad or not, just know we’re choosing to paint our world with the shades of joy and companionship.",
 		undefined,
 		// #27
 		"I first played Notoriety in the year 2020. In late July of 2022, I discovered the game again because my sister and a friend of mine had asked me to play. I quickly got the hang of it, and in 30 days I had gotten both XXV-100 and True Criminal."
@@ -654,7 +666,7 @@
 			output += "<div class='ImageTextContainer'>";
 			
 			if (input.robloxAvatar != undefined) {
-				output += "<img src='./Notoriety EXP Calculator (testing)/Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
+				output += "<img src='./Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
 			}
 			
 			output += "<div class='CellText'>";
@@ -831,7 +843,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 9 minutes.
+		Estimated total active development time across all versions: ~48 hours, 21 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -846,7 +858,7 @@
 			${updateLogEntry('edit', "Section Hall of CCLs: Modified CCL #25's notes.")}
 			${updateLogEntry('edit', "In the Hall of CCLs section, the 'User-written description' toggle button now displays a mouse pointer icon on hover.")}
 			${updateLogEntry('edit', "Renamed section " + '"' + "Update Logs" + '"' + " to " + '"' + "Update Log" + '"' + ". Update Log entry " + '"' + "Version Indev" + '"' + " no longer displays the [Testing] tag.")}
-			${updateLogEntry('other', "Estimated active development time: ~39 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~51 minutes.")}
 		</ul></p>
 		<p>
 		<b><u>[2025-04-13 15:02] Version 0.0.1a</u></b>
