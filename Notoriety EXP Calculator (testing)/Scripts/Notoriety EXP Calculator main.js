@@ -106,7 +106,7 @@
 	}
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1d testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1e testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -249,7 +249,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
-		const grassAvoiders = 28;
+		const grassAvoiders = 29;
 		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
@@ -293,6 +293,7 @@
 		"M4kA13",
 		"Aimilized",
 		"LosCracks9000",
+		"Minimalisation",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -323,6 +324,7 @@
 		"m4ka",
 		"Aimilized",
 		"NekoChan",
+		"Roxy",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -353,6 +355,7 @@
 		"M4kA13 - 2025-04-10T22-10Z.png",
 		"Aimilized - 2025-04-11T19-35Z.png",
 		"LosCracks9000 - 2025-04-13T00-14Z.png",
+		"Minimalisation - 2025-04-15T23-59Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -383,39 +386,16 @@
 		{approx:false, timestamp: "2025-04-04T12:32:49.9747681Z"}, // orig "2025-04-04T11:30Z", "2025-04-04T13:38Z" = 45169.9747681 from 1h2m~50s early to 1h5m10s late
 		{approx:false, timestamp: "2025-04-11T17:19:54.2575158Z"}, // orig "2025-04-11T17:19Z" = early by 54.~26s
 		{approx:false, timestamp: "2025-04-12T13:51:23.7958377Z"}, // orig "2025-04-12T13:51:27Z" = early by 3.~2s
+		{approx:false, timestamp: "2025-04-14T20:57:29.3298677Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[1].timestamp).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[2].timestamp).getTime() - new Date(playersData_whenCCL[1].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[3].timestamp).getTime() - new Date(playersData_whenCCL[2].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[4].timestamp).getTime() - new Date(playersData_whenCCL[3].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[5].timestamp).getTime() - new Date(playersData_whenCCL[4].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[6].timestamp).getTime() - new Date(playersData_whenCCL[5].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[7].timestamp).getTime() - new Date(playersData_whenCCL[6].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[8].timestamp).getTime() - new Date(playersData_whenCCL[7].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[9].timestamp).getTime() - new Date(playersData_whenCCL[8].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[10].timestamp).getTime() - new Date(playersData_whenCCL[9].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[11].timestamp).getTime() - new Date(playersData_whenCCL[10].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[12].timestamp).getTime() - new Date(playersData_whenCCL[11].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[13].timestamp).getTime() - new Date(playersData_whenCCL[12].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[14].timestamp).getTime() - new Date(playersData_whenCCL[13].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[15].timestamp).getTime() - new Date(playersData_whenCCL[14].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[16].timestamp).getTime() - new Date(playersData_whenCCL[15].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[17].timestamp).getTime() - new Date(playersData_whenCCL[16].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[18].timestamp).getTime() - new Date(playersData_whenCCL[17].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[19].timestamp).getTime() - new Date(playersData_whenCCL[18].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[20].timestamp).getTime() - new Date(playersData_whenCCL[19].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[21].timestamp).getTime() - new Date(playersData_whenCCL[20].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[22].timestamp).getTime() - new Date(playersData_whenCCL[21].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[23].timestamp).getTime() - new Date(playersData_whenCCL[22].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[24].timestamp).getTime() - new Date(playersData_whenCCL[23].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[25].timestamp).getTime() - new Date(playersData_whenCCL[24].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[26].timestamp).getTime() - new Date(playersData_whenCCL[25].timestamp).getTime()},
-		{approx:false, milliseconds: new Date(playersData_whenCCL[27].timestamp).getTime() - new Date(playersData_whenCCL[26].timestamp).getTime()},
 		];
+		for (var x = 0; x < grassAvoiders - 1; x++) {
+			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
+		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -449,6 +429,7 @@
 		undefined,
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs. Highest infamy classic suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
+		undefined,
 		];
 		
 		const playersData_ownDescription = [
@@ -595,6 +576,7 @@
 		+ "<p></p>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release."
 		+ "<p></p>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025."
 		+ "<p></p>Two days later, myself and the same people that attempted 1.000 bags in ToT before the DMCA takedown, smashed that limit and managed to get 3.000 bags, being the first and only to do thus far. It took us almost 16 hours. After I got to Infamy 225, I took a nearly 2 month long hiatus. I got to CCL on 11/04/2025, having gotten my last 100 levels in an infamy rotation.",
+		undefined,
 		undefined,
 		];
 		
@@ -843,12 +825,18 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 29 minutes.
+		Estimated total active development time across all versions: ~48 hours, 34 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
+		<p>
+		<b>[2025-04-16 00:12 Version 0.0.1e</b>
+		<ul>
+			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #29.")}
+			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
+		</ul></p>
 		<p>
 		<b>[2025-04-14 17:47] Version 0.0.1d</b>
 		<ul>
