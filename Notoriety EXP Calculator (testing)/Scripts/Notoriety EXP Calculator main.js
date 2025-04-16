@@ -106,7 +106,7 @@
 	}
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1e testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1f testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -427,7 +427,7 @@
 		undefined,
 		"This user primarily solo grinded to CCL.",
 		undefined,
-		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs. Highest infamy classic suit: Royalty (150)",
+		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest infamy classic suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		undefined,
 		];
@@ -832,7 +832,14 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[2025-04-16 00:12 Version 0.0.1e</b>
+		<b>[Testing] Version 0.0.1f</b>
+		<ul>
+			${updateLogEntry('edit', "Fixed some things in the update log.")}
+			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #25's notes.")}
+			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
+		</ul></p>
+		<p>
+		<b>[2025-04-16 00:12] Version 0.0.1e</b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #29.")}
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
