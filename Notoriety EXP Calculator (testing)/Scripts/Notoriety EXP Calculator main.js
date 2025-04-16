@@ -250,7 +250,7 @@
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
 		const grassAvoiders = 29;
-		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
+		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Roblox avatars must be updated manually. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
 			this.displayName = displayName;
@@ -758,7 +758,7 @@
 		string += "</table></p>";
 		
 		string += "<p><table style='margin:auto;width:100%'>";
-		string += "<h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss", false) + ") CCLs</h3>";
+		string += "<h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss:ms", false) + ") CCLs</h3>";
 		for (var x = 0; x < (grassAvoiders - 4); x++) {
 			if (["seroly2345"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '220,20,60');
@@ -825,7 +825,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 37 minutes.
+		Estimated total active development time across all versions: ~48 hours, 41 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -834,9 +834,11 @@
 		<p>
 		<b>[Testing] Version 0.0.1f</b>
 		<ul>
+			${updateLogEntry('add', "Section Hall of CCLs: Added to the top-of-section notes that Roblox avatars must be updated manually.")}
+			${updateLogEntry('add', "Section Hall of CCLs: Post-suits revamp header now displays the milliseconds of the update time.")}
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #25's notes.")}
-			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-16 00:12] Version 0.0.1e</b>
