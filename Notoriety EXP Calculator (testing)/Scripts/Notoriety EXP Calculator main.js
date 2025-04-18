@@ -113,7 +113,7 @@
 	// data.expFormula = 1;
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1f testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.2 testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -138,7 +138,7 @@
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentLevelInput'>Current level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentLevelInput_Result'>undefined</span></code></span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_RemainingEXPInput'>Remaining EXP: <input type='range' min='0' max='999999' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_RemainingEXPInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_RemainingEXPInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(This is EXP remaining until the next level.)</span></span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalLevelInput'>Desired level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalLevelInput_Result'>undefined</span></code></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_EXPFormulaInput'>EXP formula: <input type='range' min='0' max='1' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_EXPFormulaInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_EXPFormulaInput_Result'>undefined</span></code></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Which EXP formula to use. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).)</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_EXPFormulaInput'>EXP formula: <input type='range' min='0' max='1' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_EXPFormulaInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_EXPFormulaInput_Result'>undefined</span></code></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Which EXP formula to use. 2 options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>). With input sliders disabled, input a number ranging from 0 to 1.</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_MutatorRankSettings'>";
@@ -842,15 +842,16 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 7 minutes.
+		Estimated total active development time across all versions: ~49 hours, 9 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
 		<p>
-		<b>[Testing] Version 0.0.1f</b>
+		<b>[Testing] Version 0.0.2</b>
 		<ul>
+			${updateLogEntry('add', "Added input toggle for EXP formula. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time elapsed since badge obtainment' to each CCL's entry.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added to the top-of-section notes that Roblox avatars must be updated manually.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #26's user-written description.")}
@@ -858,7 +859,7 @@
 			${updateLogEntry('edit', "Section Hall of CCLs: Renamed 'Time since previous' to 'Time difference since previous'. Also changed 'Average time apart' to 'Average time difference apart'.")}
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #25's notes.")}
-			${updateLogEntry('other', "Estimated active development time: ~33 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~35 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-16 00:12] Version 0.0.1e</b>
