@@ -536,10 +536,12 @@
 		undefined,
 		undefined,
 		// #25
-		// Harry = Inherited (preference 255,255,255)
-		// Alisa = 0,153,255
-		// Isaac = 0,204,0
-		// Katelyn = 255,153,0
+		/*
+		Harry = Inherited (preference 255,255,255)
+		Alisa = 0,153,255
+		Isaac = 0,204,0
+		Katelyn = 255,153,0
+		*/
 		"<h1>The Dreamers Collective’s Journey to infamy CCL</h1>"
 		+ "<p></p><b>Part 1: The 25th CCL badge has 4 owners.</b>"
 		+ "<br/>Before we start, I (Harry, the host) am plural, and along with my headmates (<span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa</span>, <span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac</span>, <span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn</span>), we are a part of the Tulpamancy community. The origin of our system is far too personal to recount on a Roblox tool, but they made the CCL grind (and life in general) much more bearable and fun than if I grinded it truly solo. I might not even have the motivation to do this if it weren’t for them keeping me company."
@@ -695,12 +697,12 @@
 			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
 			
 			timeOutput.amount = currentTime.getTime() - new Date(input.whenCCL.timestamp).getTime();
-			output += "<br>Time since obtainment: " + timeOutput.formatAmount();
+			output += "<br>Time elapsed since badge obtainment: " + timeOutput.formatAmount();
 			
 			if (input.timeSincePrevious != undefined) {
 				const orig = input.timeSincePrevious;
 				if (input.timeSincePrevious.milliseconds !=  false) {
-					output += "<br>Time since previous: ";
+					output += "<br>Time difference since previous: ";
 					if (typeof orig.milliseconds == 'object') {
 						output += 'between ';
 						timeOutput.amount = orig.milliseconds[0];
@@ -721,7 +723,7 @@
 					}
 					
 					if (input.position != undefined) {
-						output += "<br>Average time apart: "
+						output += "<br>Average time difference apart: "
 						if (typeof input.whenCCL.timestamp == 'object') {
 							output += 'between ';
 							timeOutput.amount = (new Date(input.whenCCL.timestamp[0]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
@@ -830,7 +832,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 46 minutes.
+		Estimated total active development time across all versions: ~48 hours, 47 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -839,13 +841,14 @@
 		<p>
 		<b>[Testing] Version 0.0.1f</b>
 		<ul>
-			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time since obtainment' to each CCL's entry.")}
+			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time elapsed since badge obtainment' to each CCL's entry.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added to the top-of-section notes that Roblox avatars must be updated manually.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #26's user-written description.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Post-suits revamp header now displays the milliseconds of the update time.")}
+			${updateLogEntry('edit', "Section Hall of CCLs: Renamed 'Time since previous' to 'Time difference since previous'. Also changed 'Average time apart' to 'Average time difference apart'.")}
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #25's notes.")}
-			${updateLogEntry('other', "Estimated active development time: ~12 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~13 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-16 00:12] Version 0.0.1e</b>
