@@ -261,6 +261,7 @@
 			this.notes = notes;
 			this.ownDescription = ownDescription;
 		}
+		const currentTime = new Date();
 		const players = [];
 		const ownDescriptionButtons = [];
 		const ownDescriptionContainers = [];
@@ -693,6 +694,9 @@
 			}
 			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
 			
+			timeOutput.amount = currentTime.getTime() - new Date(input.whenCCL.timestamp).getTime();
+			output += "<br>Time since obtainment: " + timeOutput.formatAmount();
+			
 			if (input.timeSincePrevious != undefined) {
 				const orig = input.timeSincePrevious;
 				if (input.timeSincePrevious.milliseconds !=  false) {
@@ -826,7 +830,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 43 minutes.
+		Estimated total active development time across all versions: ~48 hours, 46 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -835,12 +839,13 @@
 		<p>
 		<b>[Testing] Version 0.0.1f</b>
 		<ul>
+			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time since obtainment' to each CCL's entry.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added to the top-of-section notes that Roblox avatars must be updated manually.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #26's user-written description.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Post-suits revamp header now displays the milliseconds of the update time.")}
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #25's notes.")}
-			${updateLogEntry('other', "Estimated active development time: ~9 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~12 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-16 00:12] Version 0.0.1e</b>
