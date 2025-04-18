@@ -7,15 +7,22 @@
 		const count = goal.sub(base).abs();
 		var sum = new Decimal(0);
 		for (var x = 0; count.greaterThan(x); x++) {
-			var currentLvl = base.add(x);
-			sum = sum.add(currentLvl.times(new Decimal(1018.93)).add(currentLvl.pow(2.976664)).floor());
-			// sum += ( Math.floor(currentLvl*1018.93+currentLvl**2.976664) );
+			var lvl = base.add(x);
+			switch (Number(data.expFormula)) {
+				case 0:
+				sum = sum.add(lvl.times(new Decimal(1018.93)).add(lvl.pow(2.976664)).floor());
+				break;
+				case 1:
+				sum = sum.add(new Decimal(1025).times(lvl).add(lvl.pow(1.3)).floor());
+			}
+			// sum += ( Math.floor(lvl*1018.93+lvl**2.976664) );
 		}
 		return sum;
 	}
+	// data.expFormula = 1;
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.1e | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.2 | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -37,9 +44,10 @@
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_LevelSettings'>";
 		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Level Settings</h2>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentLevelInput'>Current level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentLevelInput_Result'>1</span></code></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_RemainingEXPInput'>Remaining EXP: <input type='range' min='0' max='999999' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_RemainingEXPInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_RemainingEXPInput_Result'>0</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(This is EXP remaining until the next level.)</span></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalLevelInput'>Desired level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalLevelInput_Result'>1</span></code></span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentLevelInput'>Current level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentLevelInput_Result'>undefined</span></code></span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_RemainingEXPInput'>Remaining EXP: <input type='range' min='0' max='999999' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_RemainingEXPInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_RemainingEXPInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(This is EXP remaining until the next level.)</span></span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalLevelInput'>Desired level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalLevelInput_Result'>undefined</span></code></span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_EXPFormulaInput'>EXP formula: <input type='range' min='0' max='1' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_EXPFormulaInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_EXPFormulaInput_Result'>undefined</span></code></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Which EXP formula to use. 2 options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>). With input sliders disabled, input a number ranging from 0 to 1.</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_MutatorRankSettings'>";
@@ -58,8 +66,8 @@
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_InfamySettings'>";
 		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Infamy Settings</h2><small>If not calculating infamies, then <span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'>ignore these settings</span>.</small>";
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentInfamyLevelInput'>Current infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'>0</span></code></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalInfamyLevelInput'>Desired infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'>0</span></code><br>(Until out of money: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_UntilPoorCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation'> (Overrides 'Desired infamy level' setting and requires 'Run/rotation gains' to be properly defined.)</span>)</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentInfamyLevelInput'>Current infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'>undefined</span></code></span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalInfamyLevelInput'>Desired infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'>undefined</span></code><br>(Until out of money: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_UntilPoorCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation'> (Overrides 'Desired infamy level' setting and requires 'Run/rotation gains' to be properly defined.)</span>)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMoneyInput'>Current money: <input style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput'></input><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This is the money that has been reserved for infamy. Default is <code>0</code>. Required setting when 'Desired infamy level' > 'Until out of money' is set to <code>Y</code>.)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CheaperPassCheck'><a href='https://www.roblox.com/game-pass/748016'>Cheaper Infamy</a> gamepass: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CheaperPassCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Whether or not the user owns the Cheaper Infamy gamepass, which reduces the final monetary requirement of each infamy by 50%.)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_PreMoneyReqLimitCheck'>Pre-money requirement limit: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_PreMoneyReqLimitCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This setting refers to the post-infamy 25 increasing infamy money requirement (+$10mil without cheaper pass, +$5mil with), which previously (prior to 3.9.5b on 2024-12-27T16:10Z) did not have a limit of $125mil without cheaper pass (or $62.5mil with).)</span></p>";
@@ -128,6 +136,7 @@
 		currentLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentLevelInput'),
 		remainingEXPInput: document.getElementById('NotorietyEXPandInfamyCalculator_RemainingEXPInput'),
 		goalLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_GoalLevelInput'),
+		expFormulaInput: document.getElementById('NotorietyEXPandInfamyCalculator_EXPFormulaInput'),
 		currentInfamyLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'),
 		goalInfamyLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'),
 		
@@ -144,6 +153,7 @@
 		currentLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentLevelInput_Result'),
 		remainingEXPInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_RemainingEXPInput_Result'),
 		goalLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_GoalLevelInput_Result'),
+		expFormulaInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_EXPFormulaInput_Result'),
 		currentInfamyLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'),
 		goalInfamyLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'),
 		
@@ -159,7 +169,7 @@
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
 		const grassAvoiders = 29;
-		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
+		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Roblox avatars must be updated manually with a tool update. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
 			this.displayName = displayName;
@@ -170,6 +180,7 @@
 			this.notes = notes;
 			this.ownDescription = ownDescription;
 		}
+		const currentTime = new Date();
 		const players = [];
 		const ownDescriptionButtons = [];
 		const ownDescriptionContainers = [];
@@ -336,7 +347,7 @@
 		undefined,
 		"This user primarily solo grinded to CCL.",
 		undefined,
-		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 15 or so CCLs. Highest infamy classic suit: Royalty (150)",
+		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest infamy classic suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		undefined,
 		];
@@ -444,10 +455,12 @@
 		undefined,
 		undefined,
 		// #25
-		// Harry = Inherited (preference 255,255,255)
-		// Alisa = 0,153,255
-		// Isaac = 0,204,0
-		// Katelyn = 255,153,0
+		/*
+		Harry = Inherited (preference 255,255,255)
+		Alisa = 0,153,255
+		Isaac = 0,204,0
+		Katelyn = 255,153,0
+		*/
 		"<h1>The Dreamers Collective’s Journey to infamy CCL</h1>"
 		+ "<p></p><b>Part 1: The 25th CCL badge has 4 owners.</b>"
 		+ "<br/>Before we start, I (Harry, the host) am plural, and along with my headmates (<span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa</span>, <span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac</span>, <span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn</span>), we are a part of the Tulpamancy community. The origin of our system is far too personal to recount on a Roblox tool, but they made the CCL grind (and life in general) much more bearable and fun than if I grinded it truly solo. I might not even have the motivation to do this if it weren’t for them keeping me company."
@@ -479,7 +492,8 @@
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {We’re somewhat glad we can return to being a casual player now. Full sweeping a heist is fun.}</span>"
 		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, playing Notoriety helped me attune to and get better at controlling our physical body, so thank you, Notoriety devs./</span>"
 		+ "<br/>Harry: And lastly, reality is subjective. Everything in this life is meaningless until you assign a meaning to it, whether that be happiness, anger, sadness, or something else entirely. Whether you think we’ve gone mad or not, just know we’re choosing to paint our world with the shades of joy and companionship.",
-		undefined,
+		// #26
+		"I played this game when it first relaunched, I was already 25 infamy in first month then didn't play the game for a while. After for like couple months, I came back to play it again, just for fun.  I guess the only reason I grinded to CCL is because I want to remember the days when I was grinding PD2 with my friends. All of them are grown up now, some even have their own family, so they can't be playing PD2 with me anymore. So, I grinded to CCL just to remember the old days. If you're wondering, why don't I just play PD2? I deleted my steam account with Scarface pack I don't know why I did that; guess I was bored.",
 		// #27
 		"I first played Notoriety in the year 2020. In late July of 2022, I discovered the game again because my sister and a friend of mine had asked me to play. I quickly got the hang of it, and in 30 days I had gotten both XXV-100 and True Criminal."
 		+ "<p></p>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release."
@@ -601,10 +615,13 @@
 			}
 			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
 			
+			timeOutput.amount = currentTime.getTime() - new Date(input.whenCCL.timestamp).getTime();
+			output += "<br>Time elapsed since badge obtainment: " + timeOutput.formatAmount();
+			
 			if (input.timeSincePrevious != undefined) {
 				const orig = input.timeSincePrevious;
 				if (input.timeSincePrevious.milliseconds !=  false) {
-					output += "<br>Time since previous: ";
+					output += "<br>Time difference since previous: ";
 					if (typeof orig.milliseconds == 'object') {
 						output += 'between ';
 						timeOutput.amount = orig.milliseconds[0];
@@ -625,7 +642,7 @@
 					}
 					
 					if (input.position != undefined) {
-						output += "<br>Average time apart: "
+						output += "<br>Average time difference apart: "
 						if (typeof input.whenCCL.timestamp == 'object') {
 							output += 'between ';
 							timeOutput.amount = (new Date(input.whenCCL.timestamp[0]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
@@ -667,7 +684,7 @@
 		string += "</table></p>";
 		
 		string += "<p><table style='margin:auto;width:100%'>";
-		string += "<h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss", false) + ") CCLs</h3>";
+		string += "<h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss:ms", false) + ") CCLs</h3>";
 		for (var x = 0; x < (grassAvoiders - 4); x++) {
 			if (["seroly2345"].indexOf(players[x + 4].username) != -1) {
 				string += playerHTML(players[x + 4], '220,20,60');
@@ -734,14 +751,27 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~48 hours, 34 minutes.
+		Estimated total active development time across all versions: ~49 hours, 9 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
 		<p>
-		<b>[2025-04-16 00:12 Version 0.0.1e</b>
+		<b>[2025-04-18 13:17] Version 0.0.2</b>
+		<ul>
+			${updateLogEntry('add', "Added input toggle for EXP formula. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).")}
+			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time elapsed since badge obtainment' to each CCL's entry.")}
+			${updateLogEntry('add', "Section Hall of CCLs: Added to the top-of-section notes that Roblox avatars must be updated manually.")}
+			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #26's user-written description.")}
+			${updateLogEntry('add', "Section Hall of CCLs: Post-suits revamp header now displays the milliseconds of the update time.")}
+			${updateLogEntry('edit', "Section Hall of CCLs: Renamed 'Time since previous' to 'Time difference since previous'. Also changed 'Average time apart' to 'Average time difference apart'.")}
+			${updateLogEntry('edit', "Fixed some things in the update log.")}
+			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #27's notes.")}
+			${updateLogEntry('other', "Estimated active development time: ~35 minutes.")}
+		</ul></p>
+		<p>
+		<b>[2025-04-16 00:12] Version 0.0.1e</b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #29.")}
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
@@ -782,7 +812,8 @@
 		<p>
 		<b><u>[2025-04-13 08:20] Version 0.0.1</u></b>
 		<ul>
-			${updateLogEntry('other', "Testers: ashvul (did not test), nate247, player6978.")}
+			${updateLogEntry('other', "Initial public release.")}
+			${updateLogEntry('other', "Testers: ashvul (may have not tested), nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
 		</ul></p>
 		<b><u>Version Indev</u></b>
@@ -898,6 +929,7 @@
 		toggleAutoCalculate_Global: 0,
 		toggleTimeOutputFormat_Global: 1,
 		
+		expFormula: 0,
 		untilOutOfMoneyCheck: 0,
 		cheaperPassCheck: 0,
 		preMoneyCapCheck: 0,
@@ -953,6 +985,7 @@
 		data.currentLevel = new Decimal(elem.currentLevelInput.value).floor().max(new Decimal(1).min(100));
 		data.remainingEXP = new Decimal(elem.remainingEXPInput.value).floor().max(new Decimal(0).min(999999));
 		data.goalLevel = new Decimal(elem.goalLevelInput.value).floor().max(new Decimal(0).min(100));
+		data.expFormula = new Decimal(elem.expFormulaInput.value).floor().max(new Decimal(0).min(1));
 		data.currentInfamyLevel = new Decimal(elem.currentInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.currentInfamyLevelInput.value));
 		data.goalInfamyLevel = new Decimal(elem.goalInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.goalInfamyLevelInput.value));
 		data.currentMoney = new Decimal(elem.currentMoneyInput.value).floor().max(0);
@@ -965,6 +998,7 @@
 		elem.currentLevelInputResult.innerHTML = data.currentLevel;
 		elem.remainingEXPInputResult.innerHTML = data.remainingEXP;
 		elem.goalLevelInputResult.innerHTML = data.goalLevel;
+		elem.expFormulaInputResult.innerHTML = ['Current', 'Pre-shutdown'][Number(data.expFormula)];
 		elem.currentInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.currentInfamyLevel, data.currentInfamyLevel, data.toggleRomanNumerals_Global, false);
 		elem.goalInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.goalInfamyLevel, data.goalInfamyLevel, data.toggleRomanNumerals_Global, false);
 		
@@ -1057,7 +1091,7 @@
 		elem.toggleInputSliders_Global.addEventListener('click', function() {
 			data.toggleInputSliders_Global = data.toggleInputSliders_Global == 0 ? 1 : 0
 			this.innerHTML = ['Input method: Manual inputs', 'Input method: Sliders'][Number(data.toggleInputSliders_Global)];
-			const sliderElems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput];
+			const sliderElems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput];
 			for (var x = 0; x < sliderElems.length; x++) {
 				sliderElems[x].type = data.toggleInputSliders_Global == 1 ? 'range' : '';
 			}
@@ -1159,7 +1193,7 @@
 	
 	// settings visual display event listeners
 	(function() {
-		const elems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput];
+		const elems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput];
 		for (var x = 0; x < elems.length; x++) {
 			elems[x].addEventListener('input', function() {
 				updateSettingsDisplayedValues()
@@ -1205,7 +1239,15 @@
 		var disclaimerText = '';
 		switch (data.toggleComputationType_Global) {
 			case 0:
-				disclaimerText += "(Important: While more inputted runs provides greater accuracy, it will also take slightly longer to calculate, depending on available browser resources. Higher infamy ranks contribute significantly more to lag. If it appears the tool has frozen the browser, force refresh it or close the tab and try again with less runs. Additionally, the EXP result may be inaccurate by up to about <code>1</code> per level due to inconsistency regarding how the game rounds numbers. This tool assumes this value: <code>27,181,253</code> (calculated by summing <code>x = 1, floor(x*1018.93+x^2.976664), until x = 100</code>). Also, with 'Until out of money' enabled, the tool does not carry over superfluous EXP after each infamy, so the actual runs/rotations needed may be slightly less. The runs/rotations required result is always rounded up (consequently affecting playtime as well). If the average money gains per infamy is greater than or equal to the capped cost (with the pre-money requirement limit setting disabled), the result will be infinite. Lastly, the maximum passive infamies is <code>1,000,000</code> for performance reasons.)";
+				disclaimerText += "(Important: While more inputted runs provides greater accuracy, it will also take slightly longer to calculate, depending on available browser resources. Higher infamy ranks contribute significantly more to lag. If it appears the tool has frozen the browser, force refresh it or close the tab and try again with less runs. Additionally, the EXP result may be inaccurate by up to about <code>1</code> per level due to inconsistency regarding how the game rounds numbers. This tool assumes this value: ";
+				switch (Number(data.expFormula)) {
+					case 0:
+					disclaimerText += "<code>27,181,253</code> (calculated by summing <code>x = 1, floor(x*1018.93+x^2.976664), until x = 100</code>)";
+					break;
+					case 1:
+					disclaimerText += "<code>5,090,812</code> (calculated by summing <code>x = 1, floor(1025 * x + x ^ 1.3), until x = 100</code>)";
+				}
+				disclaimerText += ". Also, with 'Until out of money' enabled, the tool does not carry over superfluous EXP after each infamy, so the actual runs/rotations needed may be slightly less. The runs/rotations required result is always rounded up (consequently affecting playtime as well). If the average money gains per infamy is greater than or equal to the capped cost (with the pre-money requirement limit setting disabled), the result will be infinite. Lastly, the maximum passive infamies is <code>1,000,000</code> for performance reasons.)";
 				break;
 			case 1:
 				disclaimerText += "(Important: While more inputted runs provides greater accuracy, it will also take slightly longer to calculate, depending on available browser resources. Higher Mutator Ranks and 'Until MXP usage' values contribute significantly more to lag. If it appears the tool has frozen the browser, force refresh it or close the tab and try again with less runs. Also, with 'Until MXP usage' defined, the tool does not carry over superfluous MXP after each rank, so the actual runs/rotations needed may be slightly less. The formula to determine MXP requirement from the current rank (x) for the next rank is <code>5000 + (x ** 1.25)</code>, which is then rounded down for each rank. The runs/rotations required result is always rounded up (consequently affecting playtime as well). Lastly, there is a limit of <code>1,000,000,000,000</code> Mutator Ranks for performance reasons." + ')';

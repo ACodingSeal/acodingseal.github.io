@@ -260,7 +260,7 @@
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
 		const grassAvoiders = 29;
-		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Roblox avatars must be updated manually. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
+		var string = "<p style='text-align:center'>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Roblox avatars must be updated manually with a tool update. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</p>";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
 			this.displayName = displayName;
@@ -849,7 +849,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[Testing] Version 0.0.2</b>
+		<b>[2025-04-18 13:17] Version 0.0.2</b>
 		<ul>
 			${updateLogEntry('add', "Added input toggle for EXP formula. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time elapsed since badge obtainment' to each CCL's entry.")}
@@ -858,7 +858,7 @@
 			${updateLogEntry('add', "Section Hall of CCLs: Post-suits revamp header now displays the milliseconds of the update time.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Renamed 'Time since previous' to 'Time difference since previous'. Also changed 'Average time apart' to 'Average time difference apart'.")}
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
-			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #25's notes.")}
+			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #27's notes.")}
 			${updateLogEntry('other', "Estimated active development time: ~35 minutes.")}
 		</ul></p>
 		<p>
@@ -1145,17 +1145,6 @@
 		}
 		
 		runGainsInput_InputExplanation_Text += ' While commas can be included in numbers, <b>do not include suffixed numbers</b> such as 1M.';
-		/*
-		If the input is considered invalid, it will default to <code>';
-		switch (data.toggleComputationType_Global) {
-			case 0:
-				runGainsInput_InputExplanation_Text += '1|1|1';
-				break;
-			case 1:
-				runGainsInput_InputExplanation_Text += '1|1';
-		}
-		runGainsInput_InputExplanation_Text += '</code>.)';
-		*/
 		
 		elem.runGainsInput_InputExplanation.innerHTML = runGainsInput_InputExplanation_Text;
 		
