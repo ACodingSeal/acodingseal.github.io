@@ -157,9 +157,9 @@
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_InfamySettings'>";
 		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Infamy Settings</h2><small>If not calculating infamies, then <span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'>ignore these settings</span>.</small>";
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentInfamyLevelInput'>Current infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'>undefined</span></code></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalInfamyLevelInput'>Desired infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'>undefined</span></code><br>(Until out of money: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_UntilPoorCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation'> (Overrides 'Desired infamy level' setting and requires 'Run/rotation gains' to be properly defined.)</span>)</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMoneyInput'>Current money: <input style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput'></input><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This is the money that has been reserved for infamy. Default is <code>0</code>. Required setting when 'Desired infamy level' > 'Until out of money' is set to <code>Y</code>.)</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentInfamyLevelInput'>Current infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span></span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalInfamyLevelInput'>Desired infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span><br>(Until out of money: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_UntilPoorCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation'> (Overrides 'Desired infamy level' setting and requires 'Run/rotation gains' to be properly defined.)</span>)</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMoneyInput'>Current money: <input style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput'></input><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This is the money that will be used for infamy costs. Default is <code>0</code>. Required setting when 'Desired infamy level' > 'Until out of money' is set to <code>Y</code>.)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CheaperPassCheck'><a href='https://www.roblox.com/game-pass/748016'>Cheaper Infamy</a> gamepass: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CheaperPassCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Whether or not the user owns the Cheaper Infamy gamepass, which reduces the final monetary requirement of each infamy by 50%.)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_PreMoneyReqLimitCheck'>Pre-money requirement limit: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_PreMoneyReqLimitCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This setting refers to the post-infamy 25 increasing infamy money requirement (+$10mil without cheaper pass, +$5mil with), which previously (prior to 3.9.5b on 2024-12-27T16:10Z) did not have a limit of $125mil without cheaper pass (or $62.5mil with).)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
@@ -842,7 +842,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 15 minutes.
+		Estimated total active development time across all versions: ~49 hours, 19 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -851,13 +851,16 @@
 		<p>
 		<b>[Testing] Version 0.0.2a</b>
 		<ul>
-			${updateLogEntry('add', "Section Hall of CCLs: At the top-of-section notes, noted that the 'Time elapsed since badge obtainment' value refers to actual elapsed time and that it is updated on tool load or changing the 'Time output format' toggle setting. Also noted that timestamps in user-written descriptions are usually plaintext and therefore won't update to the system time.")}
-			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
-			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #4's notes.")}
-			${updateLogEntry('other', "Estimated active development time: ~6 minutes.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: At the top-of-section notes, noted that the 'Time elapsed since badge obtainment' value refers to actual elapsed time and that it is updated on tool load or changing the 'Time output format' toggle setting. Also noted that timestamps in user-written descriptions are usually plaintext and therefore won't update to the system time.")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #4's notes.")}
+			${updateLogEntry('add', "Menu Calculator > Section Infamy Settings: Added input explanations to the 'Current infamy level' and 'Desired infamy level' inputs: for each, explaining that a whole number must be inputted.")}
+			${updateLogEntry('edit', "Menu Calculator > Section Infamy Settings: Rewording of the 'Current money' input's input explanation.")}
+			${updateLogEntry('edit', "Made update log entry Version 0.0.2 underlined. Adjusted the underline format of Version 0.0.1.")}
+			${updateLogEntry('other', "Estimated active development time: ~10 minutes.")}
 		</ul></p>
 		<p>
-		<b>[2025-04-18 13:17] Version 0.0.2</b>
+		<b>[2025-04-18 13:17] <u>Version 0.0.2</u></b>
 		<ul>
 			${updateLogEntry('add', "Added input toggle for EXP formula. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time elapsed since badge obtainment' to each CCL's entry.")}
@@ -909,7 +912,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~1.5 hours.")}
 		</ul></p>
 		<p>
-		<b><u>[2025-04-13 08:20] Version 0.0.1</u></b>
+		<b>[2025-04-13 08:20] <u>Version 0.0.1</u></b>
 		<ul>
 			${updateLogEntry('other', "Initial public release.")}
 			${updateLogEntry('other', "Testers: ashvul (may have not tested), nate247, player6978.")}
