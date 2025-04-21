@@ -849,7 +849,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[Testing] Version 0.0.2a</b>
+		<b>[2025-04-21 01:39] Version 0.0.2a</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Infamy Settings: Added input explanations to the 'Current infamy level' and 'Desired infamy level' inputs: for each, explaining that a whole number must be inputted.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: At the top-of-section notes, noted that the 'Time elapsed since badge obtainment' value refers to actual elapsed time and that it is updated on tool load or changing the 'Time output format' toggle setting. Also noted that timestamps in user-written descriptions are usually plaintext and therefore won't update to the system time.")}
