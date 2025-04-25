@@ -113,7 +113,7 @@
 	// data.expFormula = 1;
 	// console.log(NotoExpReqTotal(1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.2b testing | Notoriety 3.9.6f)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.2b testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -842,7 +842,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 45 minutes.
+		Estimated total active development time across all versions: ~49 hours, 46 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -852,11 +852,12 @@
 		<b>[Testing] Version 0.0.2b</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and included runs greater than 0, added leftover MXP to the outputted results. With/without any included runs, added Mutator Ranks difference.")}
+			${updateLogEntry('edit', "Changed the tool's Notoriety version from 3.9.6f to 3.10.0.")}
 			${updateLogEntry('edit', "Menu Calculator > Section Mutator Rank Settings: 'Current rank' and 'Desired rank' inputs' values are now floored, and must be a minimum of 0. Also properly added a limit of <code>1,000,000,000,000</code>.")}
 			${updateLogEntry('edit', "Menu Calculator > Section Results: Added missing comma and whitespace characters.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Infamy Settings: Fixed a bug where hiding the Infamy Settings inputs would not work on first click after tool load.")}
-			${updateLogEntry('other', "Estimated active development time: ~26 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~27 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-21 01:39] Version 0.0.2a</b>
