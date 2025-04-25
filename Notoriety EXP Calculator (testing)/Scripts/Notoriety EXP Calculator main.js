@@ -842,7 +842,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 44 minutes.
+		Estimated total active development time across all versions: ~49 hours, 45 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -852,11 +852,11 @@
 		<b>[Testing] Version 0.0.2b</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and included runs greater than 0, added leftover MXP to the outputted results. With/without any included runs, added Mutator Ranks difference.")}
-			${updateLogEntry('edit', "Menu Calculator > Section Mutator Rank Settings: 'Current rank' and 'Desired rank' inputs' values are now floored, and must be a minimum of 0.")}
+			${updateLogEntry('edit', "Menu Calculator > Section Mutator Rank Settings: 'Current rank' and 'Desired rank' inputs' values are now floored, and must be a minimum of 0. Also properly added a limit of <code>1,000,000,000,000</code>.")}
 			${updateLogEntry('edit', "Menu Calculator > Section Results: Added missing comma and whitespace characters.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Infamy Settings: Fixed a bug where hiding the Infamy Settings inputs would not work on first click after tool load.")}
-			${updateLogEntry('other', "Estimated active development time: ~25 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~26 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-21 01:39] Version 0.0.2a</b>
@@ -1102,8 +1102,8 @@
 		data.goalInfamyLevel = new Decimal(elem.goalInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.goalInfamyLevelInput.value));
 		data.currentMoney = new Decimal(elem.currentMoneyInput.value).floor().max(0);
 		
-		data.currentMutatorRank = new Decimal(elem.currentMutatorRankInput.value).floor().max(0);
-		data.goalMutatorRank = new Decimal(elem.goalMutatorRankInput.value).floor().max(0);
+		data.currentMutatorRank = new Decimal(elem.currentMutatorRankInput.value).floor().max(0).min(1e12);
+		data.goalMutatorRank = new Decimal(elem.goalMutatorRankInput.value).floor().max(0).min(1e12);
 		data.remainingMXP = new Decimal(elem.remainingMXPInput.value);
 		data.untilMXPUsage = new Decimal(elem.untilMXPUsageInput.value);
 		
