@@ -842,7 +842,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 22 minutes.
+		Estimated total active development time across all versions: ~49 hours, 23 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -852,8 +852,9 @@
 		<b>[Testing] Version 0.0.2b</b>
 		<ul>
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
+			${updateLogEntry('edit', "Menu Calculator > Section Results: Added missing comma and whitespace characters.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Infamy Settings: Fixed a bug where hiding the Infamy Settings inputs would not work on first click after tool load.")}
-			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-21 01:39] Version 0.0.2a</b>
@@ -1403,7 +1404,7 @@
 				} else {
 					outputString += "To go from Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/) + ' to ' + toRomanWithSeparator(data.goalInfamyLevel, data.goalLevel, data.toggleRomanNumerals_Global && data.goalInfamyLevel.greaterThan(0), true /*data.goalInfamyLevel > 0*/);
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
-						outputString += "assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run"
+						outputString += ", assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run"
 					}
 					outputString += ', the following are required:';
 					var currentLevel_Temp = data.currentLevel, goalLevel_Temp = data.goalLevel;
