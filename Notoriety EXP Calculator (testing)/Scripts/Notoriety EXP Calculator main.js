@@ -842,7 +842,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 41 minutes.
+		Estimated total active development time across all versions: ~49 hours, 44 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -851,11 +851,12 @@
 		<p>
 		<b>[Testing] Version 0.0.2b</b>
 		<ul>
-			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and included runs greater than 0, added leftover MXP to the outputted results.")}
-			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
+			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and included runs greater than 0, added leftover MXP to the outputted results. With/without any included runs, added Mutator Ranks difference.")}
+			${updateLogEntry('edit', "Menu Calculator > Section Mutator Rank Settings: 'Current rank' and 'Desired rank' inputs' values are now floored, and must be a minimum of 0.")}
 			${updateLogEntry('edit', "Menu Calculator > Section Results: Added missing comma and whitespace characters.")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Infamy Settings: Fixed a bug where hiding the Infamy Settings inputs would not work on first click after tool load.")}
-			${updateLogEntry('other', "Estimated active development time: ~22 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~25 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-21 01:39] Version 0.0.2a</b>
@@ -1101,8 +1102,8 @@
 		data.goalInfamyLevel = new Decimal(elem.goalInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.goalInfamyLevelInput.value));
 		data.currentMoney = new Decimal(elem.currentMoneyInput.value).floor().max(0);
 		
-		data.currentMutatorRank = new Decimal(elem.currentMutatorRankInput.value);
-		data.goalMutatorRank = new Decimal(elem.goalMutatorRankInput.value);
+		data.currentMutatorRank = new Decimal(elem.currentMutatorRankInput.value).floor().max(0);
+		data.goalMutatorRank = new Decimal(elem.goalMutatorRankInput.value).floor().max(0);
 		data.remainingMXP = new Decimal(elem.remainingMXPInput.value);
 		data.untilMXPUsage = new Decimal(elem.untilMXPUsageInput.value);
 		
@@ -1445,7 +1446,7 @@
 				if (data.untilMXPUsage.equals(0)) {
 					orig_MXP = calcMXPReq({untilMXP: false}, {currentRank:data.currentMutatorRank, goalRank:data.goalMutatorRank, remainingMXP:data.remainingMXP});
 					totalMxpReq = totalMxpReq.add(orig_MXP);
-					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + "</span> "
+					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + " (+" + formatInt(data.goalMutatorRank.sub(data.currentMutatorRank)) + ")</span> "
 					if (data.remainingMXP.greaterThan(0)) {
 						outputString += " with <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.remainingMXP) + " MXP</span> remaining until the next rank, ";
 					}
