@@ -842,7 +842,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 51 minutes.
+		Estimated total active development time across all versions: ~49 hours, 52 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -853,7 +853,8 @@
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Some expansions to CCL #1's user-written description.")}
 			${updateLogEntry('edit', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
-			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
+			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
+			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
@@ -939,7 +940,7 @@
 		<b>[2025-04-13 08:20] <u>Version 0.0.1</u></b>
 		<ul>
 			${updateLogEntry('other', "Initial public release.")}
-			${updateLogEntry('other', "Testers: ashvul (may have not tested), nate247, player6978.")}
+			${updateLogEntry('other', "Added the following testers: ashvul, nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
 		</ul></p>
 		<b><u>Version Indev</u></b>
