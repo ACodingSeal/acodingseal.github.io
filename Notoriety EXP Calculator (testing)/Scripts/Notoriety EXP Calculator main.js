@@ -937,7 +937,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~53 hours, 51 minutes.
+		Estimated total active development time across all versions: ~53 hours, 56 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -949,6 +949,7 @@
 			${updateLogEntry('add', "Menu Calculator: Added section 'Money Settings' and one input in this section: 'Desired money'. Moved 'Current money' input from 'Infamy Settings' section to this section.")}
 			${updateLogEntry('add', "Menu Calculator: Added a third option to the 'Computing' toggle setting: 'Money'. This appears as option 2, while 'MXP & Mutator Ranks' has been moved to option 3.")}
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the 'Until this many rotations' input. This overrides the 'Desired level' and 'Desired infamy level' (Computing: 'EXP, Levels & Infamy') and 'Desired rank' and 'Until MXP usage' (Computing: 'MXP & Mutator Ranks') inputs. Limit is <code>1,000</code> with 'Input method' toggle setting set to 'Sliders' or <code>1,000,000,000,000</code> with the toggle setting set to 'Manual'.")}
+			${updateLogEntry('add', "Menu Calculator > Section Results: Levels, Infamies and Mutator Ranks now display the additive, multiplicative and exponential differences (assuming the current value is less than or equal to the new value.)")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Some expansions to CCL #1's user-written description.")}
 			${updateLogEntry('edit', "Menu Calculator: Moved section 'Progression Settings' to right above the 'Results' section.")}
 			${updateLogEntry('edit', "Menu Calculator: The toggle settings now only underline the caption, rather than the entire toggle. The functionality remains unchanged.")}
@@ -956,7 +957,7 @@
 			${updateLogEntry('edit', "Menu Calculator: Made the toggle settings unselectable and undraggable.")}
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
 			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
-			${updateLogEntry('other', "Estimated active development time: ~4 hours, 4 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 hours, 9 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
@@ -1567,7 +1568,7 @@
 					outputString += ", assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run, the following will happen:"
 					if (orig.extraInfamyLevels.equals(0)) {
 						outputString += '<br>• Reach Level ' + formatInt(data.currentLevel);
-						outputString += ' (+' + formatInt(orig.extraLevels)
+						outputString += ' (Levels: +' + formatInt(orig.extraLevels)
 						if (data.currentLevel.greaterThan(0)) {
 							outputString += ', x' + formatInt(orig.newLevel.dividedBy(data.currentLevel));
 							if (data.currentLevel.greaterThan(1)) {
@@ -1577,7 +1578,7 @@
 						outputString += ')';
 					} else {
 						outputString += '<br>• Reach Level ' + toRomanWithSeparator(orig.newInfamyLevel, orig.newLevel, data.toggleRomanNumerals_Global && orig.newInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/);
-						outputString += ' (+' + formatInt(orig.extraInfamyLevels)
+						outputString += ' (Infamies: +' + formatInt(orig.extraInfamyLevels)
 						if (data.currentInfamyLevel.greaterThan(0)) {
 							outputString += ', x' + formatInt(orig.newInfamyLevel.dividedBy(data.currentInfamyLevel));
 							if (data.currentInfamyLevel.greaterThan(1)) {
@@ -1664,7 +1665,7 @@
 					orig_MXP = calcMXPReq({untilMXP: false}, {currentRank:data.currentMutatorRank, goalRank:data.goalMutatorRank, remainingMXP:data.remainingMXP});
 					totalMxpReq = totalMxpReq.add(orig_MXP);
 					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + "</span>"
-					outputString += ' (+' + formatInt(orig_MXP.extraRanks)
+					outputString += ' (Mutator Ranks: +' + formatInt(orig_MXP.extraRanks)
 					if (data.currentMutatorRank.greaterThan(0)) {
 						outputString += ', x' + formatInt(orig_MXP.newRank.dividedBy(data.currentMutatorRank));
 						if (data.currentMutatorRank.greaterThan(1)) {
@@ -1702,7 +1703,7 @@
 						outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.untilMXPUsage) + " MXP</span> will reach:";
 					}
 					outputString += "<br>• <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig_MXP.newRank) + "</span>";
-					outputString += ' (+' + formatInt(orig_MXP.extraRanks)
+					outputString += ' (Mutator Ranks: +' + formatInt(orig_MXP.extraRanks)
 					if (data.currentMutatorRank.greaterThan(0)) {
 						outputString += ', x' + formatInt(orig_MXP.newRank.dividedBy(data.currentMutatorRank));
 						if (data.currentMutatorRank.greaterThan(1)) {
