@@ -92,28 +92,36 @@
 }());
 
 (function() {
-	function NotoExpReqTotal(base, goal) {
-		base = new Decimal(base).abs();
-		goal = new Decimal(goal).abs();
-		const count = goal.sub(base).abs();
-		var sum = new Decimal(0);
-		for (var x = 0; count.greaterThan(x); x++) {
-			var lvl = base.add(x);
-			switch (Number(data.expFormula)) {
-				case 0:
-				sum = sum.add(lvl.times(new Decimal(1018.93)).add(lvl.pow(2.976664)).floor());
-				break;
-				case 1:
-				sum = sum.add(new Decimal(1025).times(lvl).add(lvl.pow(1.3)).floor());
+	function NotoExpReqTotal(settings, base, goal) {
+		if (settings.untilEXP == true) {
+			// tba
+			/*
+			const output = null // {current
+			return output
+			*/
+		} else {
+			base = new Decimal(base).abs();
+			goal = new Decimal(goal).abs();
+			const count = goal.sub(base).abs();
+			var sum = new Decimal(0);
+			for (var x = 0; count.greaterThan(x); x++) {
+				var lvl = base.add(x);
+				switch (Number(data.expFormula)) {
+					case 0:
+					sum = sum.add(lvl.times(new Decimal(1018.93)).add(lvl.pow(2.976664)).floor());
+					break;
+					case 1:
+					sum = sum.add(new Decimal(1025).times(lvl).add(lvl.pow(1.3)).floor());
+				}
+				// sum += ( Math.floor(lvl*1018.93+lvl**2.976664) );
 			}
-			// sum += ( Math.floor(lvl*1018.93+lvl**2.976664) );
+			return sum;
 		}
-		return sum;
 	}
 	// data.expFormula = 1;
-	// console.log(NotoExpReqTotal(1, 100));
+	// console.log(NotoExpReqTotal({}, 1, 100));
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.2d testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.3 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -125,13 +133,13 @@
 	
 	(function() {
 		var tool_baseHTML_MenuContainer_Calculator = '';
-		tool_baseHTML_MenuContainer_Calculator += "<small id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global' style='cursor:pointer;float:left;text-decoration:underline'>Input method: Sliders</div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleRomanNumerals_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleRomanNumerals_Global' style='cursor:pointer;float:left;text-decoration:underline'>Roman numerals: ON</div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputExplanations_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputExplanations_Global' style='cursor:pointer;float:left;text-decoration:underline'>Input explanations: Visible</div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleComputationType_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleComputationType_Global' style='cursor:pointer;float:left;text-decoration:underline'>Computing: EXP, Levels & Infamy</div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInfiniteInfamies_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInfiniteInfamies_Global' style='cursor:pointer;float:left;text-decoration:underline'>Maximum infamies: 250</div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleAutoCalculate_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleAutoCalculate_Global' style='cursor:pointer;float:left;text-decoration:underline'>Auto calculate: OFF</div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleTimeOutputFormat_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleTimeOutputFormat_Global' style='cursor:pointer;float:left;text-decoration:underline'>Time output format: words</div><br></small>";
+		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global' style='cursor:pointer;float:left'>Input method: <u>Sliders</u></div><br></small>";
+		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleRomanNumerals_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleRomanNumerals_Global' style='cursor:pointer;float:left'>Roman numerals: <u>ON</u></div><br></small>";
+		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputExplanations_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputExplanations_Global' style='cursor:pointer;float:left'>Input explanations: <u>Visible</u></div><br></small>";
+		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleComputationType_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleComputationType_Global' style='cursor:pointer;float:left'>Computing: <u>EXP, Levels & Infamy</u></div><br></small>";
+		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInfiniteInfamies_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInfiniteInfamies_Global' style='cursor:pointer;float:left'>Maximum infamies: <u>250</u></div><br></small>";
+		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleAutoCalculate_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleAutoCalculate_Global' style='cursor:pointer;float:left'>Auto calculate: <u>OFF</u></div><br></small>";
+		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleTimeOutputFormat_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleTimeOutputFormat_Global' style='cursor:pointer;float:left'>Time output format: <u>words</u></div><br></small>";
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_LevelSettings'>";
 		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Level Settings</h2>";
@@ -149,9 +157,10 @@
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_UntilMXPUsageInput'>Until MXP usage: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_UntilMXPUsageInput'></input><br><span style='font-size:80%'><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(Search for which Mutator Rank can be achieved using this much MXP. Overrides the 'Desired rank' setting.)</span></span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
 		
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_ProgressionSettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Progression Settings</h2>";		
-		tool_baseHTML_MenuContainer_Calculator += "<p>Run/rotation gains:<br><textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPandInfamyCalculator_RunGainsInput'></textarea><span id='NotorietyEXPandInfamyCalculator_RunGainsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_MoneySettings'>";
+		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Money Settings</h2>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMoneyInput'>Current money: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput'></input><span id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This is the money that will be used for infamy costs. Default is <code>0</code>. Required setting when 'Desired infamy level' > 'Until out of money' is set to <code>Y</code>.)</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalMoneyInput'>Desired money: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_GoalMoneyInput'></input><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>Required setting when 'Computing' toggle setting is set to 'Money'.</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_InfamySettings'>";
@@ -159,10 +168,15 @@
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings' style='display:block'>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentInfamyLevelInput'>Current infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span></span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalInfamyLevelInput'>Desired infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span><br>(Until out of money: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_UntilPoorCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation'> (Overrides 'Desired infamy level' setting and requires 'Run/rotation gains' to be properly defined.)</span>)</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMoneyInput'>Current money: <input style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput'></input><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This is the money that will be used for infamy costs. Default is <code>0</code>. Required setting when 'Desired infamy level' > 'Until out of money' is set to <code>Y</code>.)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CheaperPassCheck'><a href='https://www.roblox.com/game-pass/748016'>Cheaper Infamy</a> gamepass: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CheaperPassCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Whether or not the user owns the Cheaper Infamy gamepass, which reduces the final monetary requirement of each infamy by 50%.)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_PreMoneyReqLimitCheck'>Pre-money requirement limit: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_PreMoneyReqLimitCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This setting refers to the post-infamy 25 increasing infamy money requirement (+$10mil without cheaper pass, +$5mil with), which previously (prior to 3.9.5b on 2024-12-27T16:10Z) did not have a limit of $125mil without cheaper pass (or $62.5mil with).)</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		
+		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_ProgressionSettings'>";
+		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Progression Settings</h2>";		
+		tool_baseHTML_MenuContainer_Calculator += "<p>Run/rotation gains:<br><textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPandInfamyCalculator_RunGainsInput'></textarea><span id='NotorietyEXPandInfamyCalculator_RunGainsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_UntilRotationsInput'>Until this many rotations: <input type='range' min='0' max='1000' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_UntilRotationsInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'>undefined</span></code><br><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_Results'>";
@@ -211,6 +225,7 @@
 		Section_LevelSettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_LevelSettings'),
 		Section_MutatorRankSettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_MutatorRankSettings'),
 		Section_ProgressionSettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_ProgressionSettings'),
+		Section_MoneySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_MoneySettings'),
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
 		Section_Results: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Results'),
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
@@ -228,6 +243,10 @@
 		remainingEXPInput: document.getElementById('NotorietyEXPandInfamyCalculator_RemainingEXPInput'),
 		goalLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_GoalLevelInput'),
 		expFormulaInput: document.getElementById('NotorietyEXPandInfamyCalculator_EXPFormulaInput'),
+		
+		currentMoneyInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentMoneyInput'),
+		goalMoneyInput: document.getElementById('NotorietyEXPandInfamyCalculator_GoalMoneyInput'),
+		
 		currentInfamyLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'),
 		goalInfamyLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'),
 		
@@ -239,6 +258,10 @@
 		runGainsInput: document.getElementById('NotorietyEXPandInfamyCalculator_RunGainsInput'),
 		runGainsInput_InputExplanation: document.getElementById('NotorietyEXPandInfamyCalculator_RunGainsInput_InputExplanation'),
 		
+		untilRotationsInput_Block: document.getElementById('NotorietyEXPandInfamyCalculator_Block_UntilRotationsInput'),
+		untilRotationsInput: document.getElementById('NotorietyEXPandInfamyCalculator_UntilRotationsInput'),
+		untilRotationsInput_InputExplanation: document.getElementById('NotorietyEXPandInfamyCalculator_UntilRotationsInput_InputExplanation'),
+		
 		currentMoneyInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentMoneyInput'),
 		
 		currentLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentLevelInput_Result'),
@@ -247,6 +270,7 @@
 		expFormulaInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_EXPFormulaInput_Result'),
 		currentInfamyLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'),
 		goalInfamyLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'),
+		untilRotationsInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'),
 		
 		untilOutOfMoneyCheck: document.getElementById('NotorietyEXPandInfamyCalculator_UntilPoorCheck'),
 		cheaperPassCheck: document.getElementById('NotorietyEXPandInfamyCalculator_CheaperPassCheck'),
@@ -842,19 +866,26 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~49 hours, 52 minutes.
+		Estimated total active development time across all versions: ~51 hours, 42 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
 		<p>
-		<b>[Testing] Version 0.0.2d</b>
+		<b>[Testing] <u>Version 0.0.3</u></b>
 		<ul>
+			${updateLogEntry('add', "Menu Calculator: Added section 'Money Settings' and one input in this section: 'Desired money'. Moved 'Current money' input from 'Infamy Settings' section to this section.")}
+			${updateLogEntry('add', "Menu Calculator: Added a third option to the 'Computing' toggle setting: 'Money'. This appears as option 2, while 'MXP & Mutator Ranks' has been moved to option 3.")}
+			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the 'Until this many rotations' input. This overrides the 'Desired level' and 'Desired infamy level' (Computing: 'EXP, Levels & Infamy') and 'Desired rank' and 'Until MXP usage' (Computing: 'MXP & Mutator Ranks') inputs. This setting does not appear when 'Computing' toggle setting is set to 'EXP, Levels & Infamy'. Limit is <code>1,000</code> with 'Input method' toggle setting set to 'Sliders' or <code>1,000,000,000,000</code> with the toggle setting set to 'Manual'.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Some expansions to CCL #1's user-written description.")}
-			${updateLogEntry('edit', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
+			${updateLogEntry('edit', "Menu Calculator: Moved section 'Progression Settings' to right above the 'Results' section.")}
+			${updateLogEntry('edit', "Menu Calculator: The toggle settings now only underline the caption, rather than the entire toggle. The functionality remains unchanged.")}
+			${updateLogEntry('edit', "Menu Calculator: Changed 'Input method' toggle setting's option 2 caption from 'Manual inputs' to 'Manual'.")}
+			${updateLogEntry('edit', "Menu Calculator: Made the toggle settings unselectable and undraggable.")}
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
-			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
+			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
+			${updateLogEntry('other', "Estimated active development time: ~1 hour, 55 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
@@ -989,6 +1020,12 @@
 						test_a = test_a.replace(/.*$\n/m, '');
 						break;
 					case 1:
+						x.money = new Decimal(Number(test_a.match(/.+?(?=[|])/)[0].replace(/,/g, '')));
+						test_a = test_a.replace(/.+?(?=[|])[|]/, '');
+						x.time = new Decimal(Number(test_a.match(/.*$/m)[0].replace(/,/g, '')));
+						test_a = test_a.replace(/.*$\n/m, '');
+						break;
+					case 2:
 						x.mxp = new Decimal(Number(test_a.match(/.+?(?=[|])/)[0].replace(/,/g, '')));
 						test_a = test_a.replace(/.+?(?=[|])[|]/, '');
 						x.time = new Decimal(Number(test_a.match(/.*$/m)[0].replace(/,/g, '')));
@@ -1041,12 +1078,13 @@
 		goalLevel: new Decimal(100),
 		currentInfamyLevel: new Decimal(0),
 		goalInfamyLevel: new Decimal(1),
-		moneyLoss: new Decimal(0),
 		currentMoney: new Decimal(0),
 		currentMutatorRank: new Decimal(0),
 		remainingMXP: new Decimal(0),
 		goalMutatorRank: new Decimal(1),
 		untilMXPUsage: new Decimal(0),
+		goalMoney: new Decimal(0),
+		untilRotations: new Decimal(0),
 		
 		toggleInputSliders_Global: 1,
 		toggleRomanNumerals_Global: 1,
@@ -1116,11 +1154,14 @@
 		data.currentInfamyLevel = new Decimal(elem.currentInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.currentInfamyLevelInput.value));
 		data.goalInfamyLevel = new Decimal(elem.goalInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.goalInfamyLevelInput.value));
 		data.currentMoney = new Decimal(elem.currentMoneyInput.value).floor().max(0);
+		data.goalMoney = new Decimal(elem.goalMoneyInput.value).floor().max(0);
 		
 		data.currentMutatorRank = new Decimal(elem.currentMutatorRankInput.value).floor().max(0).min(1e12);
 		data.goalMutatorRank = new Decimal(elem.goalMutatorRankInput.value).floor().max(0).min(1e12);
 		data.remainingMXP = new Decimal(elem.remainingMXPInput.value);
 		data.untilMXPUsage = new Decimal(elem.untilMXPUsageInput.value);
+		
+		data.untilRotations = new Decimal(elem.untilRotationsInput.value).floor().max(0).min(elem.untilRotationsInput.max);
 		
 		elem.currentLevelInputResult.innerHTML = data.currentLevel;
 		elem.remainingEXPInputResult.innerHTML = data.remainingEXP;
@@ -1128,6 +1169,7 @@
 		elem.expFormulaInputResult.innerHTML = ['Current', 'Pre-shutdown'][Number(data.expFormula)];
 		elem.currentInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.currentInfamyLevel, data.currentInfamyLevel, data.toggleRomanNumerals_Global, false);
 		elem.goalInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.goalInfamyLevel, data.goalInfamyLevel, data.toggleRomanNumerals_Global, false);
+		elem.untilRotationsInputResult.innerHTML = data.untilRotations;
 		
 		(function() {
 			
@@ -1156,11 +1198,19 @@
 			elem.Section_LevelSettings.style.display = 'none';
 			elem.Section_MutatorRankSettings.style.display = 'none';
 			elem.Section_InfamySettings.style.display = 'none';
+			elem.Section_MoneySettings.style.display = 'none';
+			
+			// also hide some inputs and their blocks:
+			elem.untilRotationsInput_Block.style.display = 'none';
+			elem.goalMoneyInput.style.display = 'none';
 		}
 		hideAllSections();
 		
 		var runGainsInput_InputExplanation_Text = '<br>';
 		runGainsInput_InputExplanation_Text += '(One run per line. One rotation for the entire input. Begin a line with <code>EXCL=</code> to exclude it from the calculations entirely. Time can be added to the calculations by using <code>MENU</code>. For instance, a line containing only the text <code>MENU(85)</code> means 85 seconds spent in menu, loading or otherwise not in a run. While it is possible to use this line after each run, it is instead recommended to already factor in loading times in the times of each run, as doing so will reduce the amount of computations the tool needs to perform. <b>Factor in repeat bonus</b>, as each line is equal to one run.';
+		
+		var untilRotationsInput_InputExplanation_Text = '<br>';
+		untilRotationsInput_InputExplanation_Text += "Continue the rotation until this many rotations done.";
 		switch (data.toggleComputationType_Global) {
 			case 0:
 				elem.toggleInfiniteInfamies_Global_Container.style.display = '';
@@ -1169,20 +1219,40 @@
 				
 				elem.runGainsInput.placeholder = 'Money|EXP|Time (seconds). Example of a rotation involving 3 runs (heists):\n\n3,250,700|842,500|170\n2580715|948048|155\n2600750|405725|162';
 				runGainsInput_InputExplanation_Text += ' Money, EXP and Time values will be averaged based on all included runs, and then these averages will be used for computations. If you know exactly which particular runs are needed for each infamy, it is heavily recommended to input them.';
+				untilRotationsInput_InputExplanation_Text += " Overrides 'Desired level' and 'Desired infamy level' inputs.";
 				break;
 			case 1:
+				elem.Section_MoneySettings.style.display = '';
+				elem.goalMoneyInput.style.display = '';
+				elem.untilRotationsInput_Block.style.display = '';
+				elem.runGainsInput.placeholder = 'Money|Time (seconds). Example of a rotation involving 3 runs (heists):\n\n842,200|160\n487814|115\n3482775|214';
+				runGainsInput_InputExplanation_Text += ' Money and Time values will be averaged based on all included runs, and then these averages will be used for computations.';
+				break;
+			case 2:
 				elem.Section_MutatorRankSettings.style.display = '';
+				elem.untilRotationsInput_Block.style.display = '';
 				if (data.toggleInfiniteInfamies_Global == 1) {
 					elem.toggleInfiniteInfamies_Global.click();
 				}
 				
 				elem.runGainsInput.placeholder = 'MXP|Time (seconds). Example of a rotation involving 3 runs (heists):\n\n8,500|170\n4048|155\n5725|162';
 				runGainsInput_InputExplanation_Text += ' MXP and Time values will be averaged based on all included runs, and then these averages will be used for computations.';
+				untilRotationsInput_InputExplanation_Text += " Overrides 'Desired rank' and 'Until MXP usage' inputs.";
 		}
 		
 		runGainsInput_InputExplanation_Text += ' While commas can be included in numbers, <b>do not include suffixed numbers</b> such as 1M.';
 		
+		switch (data.toggleInputSliders_Global) {
+			case 0:
+			untilRotationsInput_InputExplanation_Text += " Limit of <code>1,000,000,000,000</code>";
+			break;
+			case 1:
+			untilRotationsInput_InputExplanation_Text += " Limit of <code>1,000</code>";
+		}
+		untilRotationsInput_InputExplanation_Text += ".";
+		
 		elem.runGainsInput_InputExplanation.innerHTML = runGainsInput_InputExplanation_Text;
+		elem.untilRotationsInput_InputExplanation.innerHTML = untilRotationsInput_InputExplanation_Text;
 		
 		if (data.toggleInfiniteInfamies_Global == 1) {
 			elem.currentInfamyLevelInput.max = 'Infinity';
@@ -1217,16 +1287,25 @@
 	(function() {
 		elem.toggleInputSliders_Global.addEventListener('click', function() {
 			data.toggleInputSliders_Global = data.toggleInputSliders_Global == 0 ? 1 : 0
-			this.innerHTML = ['Input method: Manual inputs', 'Input method: Sliders'][Number(data.toggleInputSliders_Global)];
-			const sliderElems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput];
+			this.innerHTML = 'Input method: <u>' + ['Manual', 'Sliders'][Number(data.toggleInputSliders_Global)] + '</u>';
+			const sliderElems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput, elem.untilRotationsInput];
 			for (var x = 0; x < sliderElems.length; x++) {
 				sliderElems[x].type = data.toggleInputSliders_Global == 1 ? 'range' : '';
 			}
+			
+			switch (data.toggleInputSliders_Global) {
+				case 0:
+					elem.untilRotationsInput.max = 1e12;
+				break;
+				case 1:
+					elem.untilRotationsInput.max = 1e3;
+			}
+			updateSettingsDisplayedValues();
 		});
 		
 		elem.toggleRomanNumerals_Global.addEventListener('click', function() {
 			data.toggleRomanNumerals_Global = data.toggleRomanNumerals_Global == 0 ? 1 : 0
-			this.innerHTML = ['Roman numerals: OFF', 'Roman numerals: ON'][Number(data.toggleRomanNumerals_Global)];
+			this.innerHTML = 'Roman numerals: <u>' + ['OFF', 'ON'][Number(data.toggleRomanNumerals_Global)] + '</u>';
 			updateSettingsDisplayedValues()
 			if (data.toggleAutoCalculate_Global == 1) {
 				computeBeepBoop();
@@ -1235,7 +1314,7 @@
 		
 		elem.toggleAutoCalculate_Global.addEventListener('click', function() {
 			data.toggleAutoCalculate_Global = data.toggleAutoCalculate_Global == 0 ? 1 : 0
-			this.innerHTML = ['Auto calculate: OFF', 'Auto calculate: ON'][Number(data.toggleAutoCalculate_Global)];
+			this.innerHTML = 'Auto calculate: <u>' + ['OFF', 'ON'][Number(data.toggleAutoCalculate_Global)] + '</u>';
 			if (data.toggleAutoCalculate_Global == 1) {
 				computeBeepBoop();
 			}
@@ -1243,7 +1322,7 @@
 		
 		elem.toggleInputExplanations_Global.addEventListener('click', function() {
 			data.toggleInputExplanations_Global = data.toggleInputExplanations_Global == 0 ? 1 : 0
-			this.innerHTML = ['Input explanations: Hidden', 'Input explanations: Visible'][Number(data.toggleInputExplanations_Global)];
+			this.innerHTML = 'Input explanations: <u>' + ['Hidden', 'Visible'][Number(data.toggleInputExplanations_Global)] + '</u>';
 			updateSettingsDisplayedValues();
 		});
 		
@@ -1254,16 +1333,19 @@
 					data.toggleComputationType_Global = 1;
 					break;
 				case 1:
+					data.toggleComputationType_Global = 2;
+					break;
+				case 2:
 					data.toggleComputationType_Global = 0;
 			}
-			this.innerHTML = 'Computing: ' + ['EXP, Levels & Infamy', 'MXP & Mutator Ranks'][Number(data.toggleComputationType_Global)];
+			this.innerHTML = 'Computing: <u>' + ['EXP, Levels & Infamy', 'Money', 'MXP & Mutator Ranks'][Number(data.toggleComputationType_Global)] + '</u>';
 			updateSettingsDisplayedValues();
 			computeBeepBoop();
 		});
 		
 		elem.toggleInfiniteInfamies_Global.addEventListener('click', function() {
 			data.toggleInfiniteInfamies_Global = data.toggleInfiniteInfamies_Global == 0 ? 1 : 0
-			this.innerHTML = ['Maximum infamies: 250', 'Maximum infamies: Unlimited (Disable input sliders)'][Number(data.toggleInfiniteInfamies_Global)];
+			this.innerHTML = 'Maximum infamies: <u>' + ['250', 'Unlimited (Disable input sliders)'][Number(data.toggleInfiniteInfamies_Global)] + '</u>';
 			updateSettingsDisplayedValues();
 		});
 		
@@ -1281,7 +1363,7 @@
 				case 3:
 					data.toggleTimeOutputFormat_Global = 0;
 			}
-			this.innerHTML = 'Time output format: ' + ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
+			this.innerHTML = 'Time output format: ' + '<u>' + ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)] + '</u>';
 			updateSettingsDisplayedValues();
 			addHallofInfamyCCLs();
 			if (data.toggleAutoCalculate_Global == 1) {
@@ -1320,7 +1402,7 @@
 	
 	// settings visual display event listeners
 	(function() {
-		const elems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput];
+		const elems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput, elem.untilRotationsInput];
 		for (var x = 0; x < elems.length; x++) {
 			elems[x].addEventListener('input', function() {
 				updateSettingsDisplayedValues()
@@ -1376,8 +1458,10 @@
 				}
 				disclaimerText += ". Also, with 'Until out of money' enabled, the tool does not carry over superfluous EXP after each infamy, so the actual runs/rotations needed may be slightly less. The runs/rotations required result is always rounded up (consequently affecting playtime as well). If the average money gains per infamy is greater than or equal to the capped cost (with the pre-money requirement limit setting disabled), the result will be infinite. Lastly, the maximum passive infamies is <code>1,000,000</code> for performance reasons.)";
 				break;
-			case 1:
+			case 2:
 				disclaimerText += "(Important: While more inputted runs provides greater accuracy, it will also take slightly longer to calculate, depending on available browser resources. Higher Mutator Ranks and 'Until MXP usage' values contribute significantly more to lag. If it appears the tool has frozen the browser, force refresh it or close the tab and try again with less runs. Also, with 'Until MXP usage' defined, the tool does not carry over superfluous MXP after each rank, so the actual runs/rotations needed may be slightly less. The formula to determine MXP requirement from the current rank (x) for the next rank is <code>5000 + (x ** 1.25)</code>, which is then rounded down for each rank. The runs/rotations required result is always rounded up (consequently affecting playtime as well). Lastly, there is a limit of <code>1,000,000,000,000</code> Mutator Ranks for performance reasons." + ')';
+			default:
+				disclaimerText += "(Important: While more inputted runs provides greater accuracy, it will also take slightly longer to calculate, depending on available browser resources. If it appears the tool has frozen the browser, force refresh it or close the tab and try again with less runs. The runs/rotations required result is always rounded up (consequently affecting playtime as well)." + ')';
 		}
 		elem.resultsDisclaimer.innerHTML = disclaimerText;
 		var outputString = '';
@@ -1393,16 +1477,17 @@
 		avgTimeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 		avgTimeOutput.amount = avgTime.times(1e3);
 		var orig_MXP = null;
+		var avgMoneyGains = null;
 		switch (data.toggleComputationType_Global) {
 			case 0:
 				var avgExpGains = rotationInputsCalculated.exp.dividedBy(rotationInputsCalculated.includedRuns);
-				var infamyRunsReq = NotoExpReqTotal(1, 100).dividedBy(avgExpGains);
-				var avgMoneyGains = (rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns)).times(infamyRunsReq);
+				var infamyRunsReq = NotoExpReqTotal({}, 1, 100).dividedBy(avgExpGains);
+				avgMoneyGains = (rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns)).times(infamyRunsReq);
 				if (data.currentInfamyLevel.equals(0) && data.goalInfamyLevel.equals(0)) {
 				var levelDiff = data.goalLevel.sub(data.currentLevel).abs();
-				totalExpReq = NotoExpReqTotal(data.currentLevel.min(data.goalLevel), data.currentLevel.max(data.goalLevel));
+				totalExpReq = NotoExpReqTotal({}, data.currentLevel.min(data.goalLevel), data.currentLevel.max(data.goalLevel));
 				if (data.remainingEXP.notEquals(0)) {
-					var nextLevelReq = NotoExpReqTotal(data.currentLevel.min(data.goalLevel), data.currentLevel.min(data.goalLevel).add(1));
+					var nextLevelReq = NotoExpReqTotal({}, data.currentLevel.min(data.goalLevel), data.currentLevel.min(data.goalLevel).add(1));
 					totalExpReq = totalExpReq.sub(nextLevelReq.min(data.remainingEXP.sub(nextLevelReq).abs()));
 				}
 				outputString += "To go from Level " + formatInt(data.currentLevel) + " to " + formatInt(data.goalLevel) + ", the following is required:";
@@ -1411,9 +1496,9 @@
 					const calcPoorOutput = calcInfamiesUntilPoor(data.currentInfamyLevel, [data.currentMoney, avgMoneyGains]);
 					
 					if (calcPoorOutput.infsWithPassive.greaterThan(0)) {
-						totalExpReq = totalExpReq.add(NotoExpReqTotal(data.currentLevel, 100));
+						totalExpReq = totalExpReq.add(NotoExpReqTotal({}, data.currentLevel, 100));
 						if (calcPoorOutput.infsWithPassive.greaterThan(1)) {
-							totalExpReq = totalExpReq.add(NotoExpReqTotal(1, 100).times(calcPoorOutput.infsWithPassive.sub(1)));
+							totalExpReq = totalExpReq.add(NotoExpReqTotal({}, 1, 100).times(calcPoorOutput.infsWithPassive.sub(1)));
 						}
 					}
 					outputString += "At Infamy " + toRomanWithSeparator(data.currentInfamyLevel, '', data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), false /*data.currentInfamyLevel > 0*/) + " with currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + '</span> and average gains of ' + formatInt(avgExpGains) + " EXP per run and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + '</span> per infamy (based on runs required for enough exp), the following can be achieved:';
@@ -1429,17 +1514,17 @@
 					var infamyLevelDiff = data.goalInfamyLevel.sub(data.currentInfamyLevel).abs();
 					if (infamyLevelDiff.greaterThan(0)) {
 						// gets exp req to very next infamy
-						totalExpReq = totalExpReq.add(NotoExpReqTotal(data.currentLevel, 100));
+						totalExpReq = totalExpReq.add(NotoExpReqTotal({}, data.currentLevel, 100));
 						
 						// last infamy until desired level
 						if (infamyLevelDiff.greaterThan(1)) {
-							totalExpReq = totalExpReq.add(NotoExpReqTotal(1, 100).times(infamyLevelDiff.sub(1)));
+							totalExpReq = totalExpReq.add(NotoExpReqTotal({}, 1, 100).times(infamyLevelDiff.sub(1)));
 						}
 					}
-					totalExpReq = totalExpReq.add(NotoExpReqTotal(1, data.goalLevel));
+					totalExpReq = totalExpReq.add(NotoExpReqTotal({}, 1, data.goalLevel));
 					
 					if (data.remainingEXP.notEquals(0)) {
-						var nextLevelReq = NotoExpReqTotal(data.currentLevel.min(data.goalLevel), data.currentLevel.min(data.goalLevel).add(1));
+						var nextLevelReq = NotoExpReqTotal({}, data.currentLevel.min(data.goalLevel), data.currentLevel.min(data.goalLevel).add(1));
 						totalExpReq = totalExpReq.sub(nextLevelReq.min(data.remainingEXP.sub(nextLevelReq).abs()));
 					}
 					
@@ -1457,8 +1542,19 @@
 				}
 				break;
 			case 1:
+				avgMoneyGains = rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns);
+				
+				if (data.untilRotations.greaterThan(0) && rotationInputsCalculated.includedRuns.greaterThan(0)) {
+					var gainsInRotations = avgMoneyGains.times(data.untilRotations);
+					outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, gaining another <span class='NotorietyEXPCalculator_Money'>$" + formatInt(gainsInRotations) + "</span> will total:"
+					outputString += "<br>• Money: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney.add(gainsInRotations)) + "</span>";
+				} else {
+					outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, to reach <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney) + "</span>, the requirement is <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney.sub(data.currentMoney)) + "</span> money.";
+				}
+				break;
+			case 2:
 				const avgMxpGains = rotationInputsCalculated.mxp.dividedBy(rotationInputsCalculated.includedRuns);
-				if (data.untilMXPUsage.equals(0)) {
+				if (data.untilMXPUsage.equals(0) && data.untilRotations.equals(0)) {
 					orig_MXP = calcMXPReq({untilMXP: false}, {currentRank:data.currentMutatorRank, goalRank:data.goalMutatorRank, remainingMXP:data.remainingMXP});
 					totalMxpReq = totalMxpReq.add(orig_MXP);
 					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + " (+" + formatInt(data.goalMutatorRank.sub(data.currentMutatorRank)) + ")</span> "
@@ -1469,16 +1565,28 @@
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
 						outputString += " Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
 					}
-				} else if (data.untilMXPUsage.greaterThan(0)) {
-					orig_MXP = calcMXPReq({untilMXP: true}, {currentRank:data.currentMutatorRank, remainingMXP:data.remainingMXP, extraMXP:data.untilMXPUsage});
+				} else if (data.untilMXPUsage.greaterThan(0) || data.untilRotations.greaterThan(0)) {
+					if (data.untilRotations.greaterThan(0)) {
+						orig_MXP = calcMXPReq({untilMXP: true}, {currentRank:data.currentMutatorRank, remainingMXP:data.remainingMXP, extraMXP:rotationInputsCalculated.mxp.times(data.untilRotations)});
+					} else {
+						orig_MXP = calcMXPReq({untilMXP: true}, {currentRank:data.currentMutatorRank, remainingMXP:data.remainingMXP, extraMXP:data.untilMXPUsage});
+					}
 					outputString += "At <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span>";
 					if (data.remainingMXP.greaterThan(0)) {
 						outputString += " with <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.remainingMXP) + " MXP</span> remaining until the next rank, ";
 					} else {
 						outputString += ',';
 					}
-					totalMxpReq = totalMxpReq.add(data.untilMXPUsage);
-					outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.untilMXPUsage) + " MXP</span> will reach:";
+					if (data.untilRotations.greaterThan(0)) {
+						totalMxpReq = totalMxpReq.add(rotationInputsCalculated.mxp.times(data.untilRotations));
+					} else {
+						totalMxpReq = totalMxpReq.add(data.untilMXPUsage);
+					}
+					if (data.untilRotations.greaterThan(0)) {
+						outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(rotationInputsCalculated.mxp.times(data.untilRotations)) + " MXP</span> will reach:";
+					} else {
+						outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.untilMXPUsage) + " MXP</span> will reach:";
+					}
 					outputString += "<br>• <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig_MXP.newRank) + "</span> (+" + formatInt(orig_MXP.extraRanks) + ")";
 					outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig_MXP.leftoverMXP) + "</span>";
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
@@ -1514,23 +1622,40 @@
 			}
 		break;
 		case 1:
+		if (data.untilRotations.greaterThan(0) && rotationInputsCalculated.includedRuns.notEquals(0)) {
+			const timeOutput = new Timer();
+			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
+			timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).times(data.untilRotations).ceil());
+			outputString += '<br>• <b>' + formatInt(data.untilRotations) + '</b>' + checkPlural(data.untilRotations, ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+			outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+		}
+		break;
+		case 2:
 			if (rotationInputsCalculated.includedRuns.notEquals(0)) {
-				const timeOutput = new Timer();
-				timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
-				if (totalMxpReq.dividedBy(rotationInputsCalculated.mxp).equals(0) || totalMxpReq.equals(0)) {
-					timeOutput.amount = new Decimal(0);
+				if (data.untilRotations.greaterThan(0) && rotationInputsCalculated.includedRuns.notEquals(0)) {
+					const timeOutput = new Timer();
+					timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
+					timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).times(data.untilRotations).ceil());
+					outputString += '<br>• <b>' + formatInt(data.untilRotations) + '</b>' + checkPlural(data.untilRotations, ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+					outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
 				} else {
-					timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime)).times(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).ceil());
+					const timeOutput = new Timer();
+					timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
+					if (totalMxpReq.dividedBy(rotationInputsCalculated.mxp).equals(0) || totalMxpReq.equals(0)) {
+						timeOutput.amount = new Decimal(0);
+					} else {
+						timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime)).times(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).ceil());
+					}
+					var rotationsReq = totalMxpReq.dividedBy(rotationInputsCalculated.mxp);
+					if (rotationsReq.isNan() == true) {
+						rotationsReq = new Decimal(0);
+					}
+					if (data.untilMXPUsage.equals(0)) {
+						outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).sub(rotationsReq.floor()).times(rotationInputsCalculated.mxp)) + "</span>";
+					}
+					outputString += '<br>• <b>' + formatInt(rotationsReq.ceil()) + '</b>' + checkPlural(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+					outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
 				}
-				var rotationsReq = totalMxpReq.dividedBy(rotationInputsCalculated.mxp);
-				if (rotationsReq.isNan() == true) {
-					rotationsReq = new Decimal(0);
-				}
-				if (data.untilMXPUsage.equals(0)) {
-					outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).sub(rotationsReq.floor()).times(rotationInputsCalculated.mxp)) + "</span>";
-				}
-				outputString += '<br>• <b>' + formatInt(rotationsReq.ceil()) + '</b>' + checkPlural(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
 			}
 		}
 		elem.outputResults.innerHTML = outputString;
