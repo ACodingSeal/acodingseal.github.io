@@ -123,7 +123,11 @@
 			// 113,975,931
 			var reputationTotalEXP = calcEXP(1, 100);
 			var totalEXPUntilCurrentLevel = calcEXP(1, settings_a.currentLevel);
+			console.log( calcEXP(settings_a.currentLevel, settings_a.currentLevel.add(1)).sub(settings_a.remainingEXP).abs() );
 			var extraEXP_a = settings_a.extraEXP;
+			if (settings_a.remainingEXP.notEquals(0)) {
+				extraEXP_a = extraEXP_a.add(calcEXP(settings_a.currentLevel, settings_a.currentLevel.add(1)).sub(settings_a.remainingEXP).abs());
+			}
 			console.log(calcEXP(1, 82)); // 13,975,931
 			console.log(settings_a.extraEXP);
 			extraEXP_a = extraEXP_a.add(0e3);
@@ -182,7 +186,7 @@
 			base = new Decimal(base).abs();
 			goal = new Decimal(goal).abs();
 			const count = goal.sub(base).abs();
-			var sum = calcEXP(base, count);
+			var sum = calcEXP(base, goal);
 			return sum;
 		}
 	}
@@ -190,6 +194,7 @@
 	// console.log(NotoExpReqTotal({}, 1, 100));
 	setTimeout(function() {
 		// console.log(NotoExpReqTotal({untilEXP:true, currentLevel:new Decimal(1), currentInfamyLevel:new Decimal(0), extraEXP:new Decimal(1e8)}));
+		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
 	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.0.3 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
@@ -937,7 +942,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~53 hours, 56 minutes.
+		Estimated total active development time across all versions: ~54 hours, 6 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -957,7 +962,7 @@
 			${updateLogEntry('edit', "Menu Calculator: Made the toggle settings unselectable and undraggable.")}
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
 			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
-			${updateLogEntry('other', "Estimated active development time: ~4 hours, 9 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 hours, 19 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
@@ -1559,13 +1564,13 @@
 				avgMoneyGains = (rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns)).times(infamyRunsReq);
 				// console.log(data.untilRotations);
 				if (data.untilRotations.greaterThan(0)) { // testing
-					outputString += "(These calculations presently do not take into account remaining EXP until next level.)<p></p>";
+					// outputString += "(These calculations presently do not take into account remaining EXP until next level.)<p></p>";
 					if (data.currentInfamyLevel.equals(0)) {
 						outputString += "At Level " + formatInt(data.currentLevel);
 					} else {
 						outputString += "At Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/)
 					}
-					const orig = NotoExpReqTotal({untilEXP:true, currentLevel:data.currentLevel, currentInfamyLevel:data.currentInfamyLevel, extraEXP:avgExpGains.times(data.untilRotations)});
+					const orig = NotoExpReqTotal({untilEXP:true, currentLevel:data.currentLevel, remainingEXP:data.remainingEXP, currentInfamyLevel:data.currentInfamyLevel, extraEXP:avgExpGains.times(data.untilRotations)});
 					outputString += ", assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run, the following will happen:"
 					if (orig.extraInfamyLevels.equals(0)) {
 						outputString += '<br>• Reach Level ' + formatInt(data.currentLevel);
@@ -1682,7 +1687,6 @@
 						outputString += " Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
 					}
 				} else if (data.untilMXPUsage.greaterThan(0) || data.untilRotations.greaterThan(0)) {
-					outputString += "(These calculations presently do not take into account remaining MXP until next rank.)<p></p>";
 					if (data.untilRotations.greaterThan(0)) {
 						orig_MXP = calcMXPReq({untilMXP: true}, {currentRank:data.currentMutatorRank, remainingMXP:data.remainingMXP, extraMXP:rotationInputsCalculated.mxp.times(data.untilRotations)});
 					} else {
