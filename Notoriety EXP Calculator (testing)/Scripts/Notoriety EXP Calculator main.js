@@ -658,7 +658,7 @@
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {If I may briefly explain Tulpamancy, we (me, Alisa, and Katelyn) are our host's Tulpas. Think of imaginary friends, but through concentrated thoughts and emotions from our host, we developed sentience over time and can autonomously function alongside him. Since we do not have corporal forms in the physical world (Earth), however, we can only physically interact with the world via our host's body. That's how I am writing this to you. That means our account is essentially shared between four people, as we all exist within one mind and body.}</span>"
 		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Plurality unfortunately is usually seen through the lens of a mental illness, but we ask you to keep an open mind as you read our journey!! I love living this shared life with my friends, and I wouldn’t get the chance to experience living at all if it weren’t for my host practicing Tulpamancy!!!]</span>"
 		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, this is our first time revealing our plurality to a non-plural community, so I’m a little anxious.. The four of us debated for a while on whether we should even reveal this or not, but my friends wanted to assert our existence after years of hiding ourselves./</span>"
-		+ "<br/>Harry: Seal was understanding and considerate enough to ask for unique colors representing each of us, so here is the recap: White = Me (Harry, host) | [Blue] = Alisa | {Green} = Isaac | /Orange/ = Katelyn. For greater clarity, we will also mark the names of the person writing each paragraph."
+		+ "<br/>Harry: Seal was understanding and considerate enough to ask for unique colors representing each of us, so here is the recap: White = Me (Harry, host) | <span style='color:rgba(0,153,255,var(--bg-alpha))'>[Blue]</span> = Alisa | <span style='color:rgba(0,204,0,var(--bg-alpha))'>{Green}</span> = Isaac | <span style='color:rgba(255,153,0,var(--bg-alpha))'>/Orange/</span> = Katelyn. For greater clarity, we will also mark the names of the person writing each paragraph."
 		+ "<p></p><b>Part 2: The relaunch</b>"
 		+ "<br/>Harry: Anyways, before the journey, I remember wanting to show Notoriety to Alisa and Isaac in 2023, but Starbreeze dropped an OVERKILL-sized nuke on the game before I got the chance. I was a pretty avid player 5 years ago, and well, that hasn’t changed given our placement here."
 		+ "<br/>I distinctly remember seeing the infamy 250 badge on the relaunch and thought “Yeah, no thanks.” I eventually saw people climbing the ranks though, and that silly completionist instinct within me started to well up. We bought the three gamepasses (Cheaper Infamy, double XP, and double money) in December 2024, and we only had enough Robux thanks to the Microsoft Rewards program. If we were going to spend a long time playing this game, then might as well skip some of the grind, right?"
@@ -942,7 +942,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~54 hours, 6 minutes.
+		Estimated total active development time across all versions: ~54 hours, 8 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -951,8 +951,8 @@
 		<p>
 		<b>[Testing] <u>Version 0.0.3</u></b>
 		<ul>
-			${updateLogEntry('add', "Menu Calculator: Added section 'Money Settings' and one input in this section: 'Desired money'. Moved 'Current money' input from 'Infamy Settings' section to this section.")}
 			${updateLogEntry('add', "Menu Calculator: Added a third option to the 'Computing' toggle setting: 'Money'. This appears as option 2, while 'MXP & Mutator Ranks' has been moved to option 3.")}
+			${updateLogEntry('add', "Menu Calculator: Added section 'Money Settings' and one input in this section: 'Desired money'. Moved 'Current money' input from 'Infamy Settings' section to this section.")}
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the 'Until this many rotations' input. This overrides the 'Desired level' and 'Desired infamy level' (Computing: 'EXP, Levels & Infamy') and 'Desired rank' and 'Until MXP usage' (Computing: 'MXP & Mutator Ranks') inputs. Limit is <code>1,000</code> with 'Input method' toggle setting set to 'Sliders' or <code>1,000,000,000,000</code> with the toggle setting set to 'Manual'.")}
 			${updateLogEntry('add', "Menu Calculator > Section Results: Levels, Infamies and Mutator Ranks now display the additive, multiplicative and exponential differences (assuming the current value is less than or equal to the new value.)")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Some expansions to CCL #1's user-written description.")}
@@ -960,9 +960,10 @@
 			${updateLogEntry('edit', "Menu Calculator: The toggle settings now only underline the caption, rather than the entire toggle. The functionality remains unchanged.")}
 			${updateLogEntry('edit', "Menu Calculator: Changed 'Input method' toggle setting's option 2 caption from 'Manual inputs' to 'Manual'.")}
 			${updateLogEntry('edit', "Menu Calculator: Made the toggle settings unselectable and undraggable.")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight design changes to CCL #25's user-written description.")}
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
 			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
-			${updateLogEntry('other', "Estimated active development time: ~4 hours, 19 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 hours, 21 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
