@@ -166,7 +166,7 @@
 					}
 				}
 				console.log(calcEXP(1, output.newLevel));
-				extraEXP_a = calcEXP(1, output.newLevel).sub(extraEXP_a);
+				extraEXP_a = calcEXP(1, output.newLevel).sub(extraEXP_a).abs();
 			}
 			console.log(extraEXP_a);
 			
@@ -531,13 +531,13 @@
 		undefined,
 		"Possibly the first alternate account to reach CCL, being possibly an alt of CCL #17; this is based on having a very empty profile and the default avatar, in addition to only being friends with CCL #17 (at the time of addition to the CCLs list, friends with another player) and their badges being almost exclusively Notoriety ones since joining the game until Rank 250.",
 		"Possibly the first solo grinder to reach CCL.",
-		// 21 - 28
+		// 21 - 29
 		undefined,
 		undefined,
 		undefined,
 		undefined,
 		"This user primarily solo grinded to CCL.",
-		undefined,
+		"Highest infamy classic suit: Blue Navy (100)",
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest infamy classic suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		undefined,
@@ -878,10 +878,13 @@
 		string += "<h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss:ms", false) + ") CCLs</h3>";
 		for (var x = 0; x < (grassAvoiders - 4); x++) {
 			if (["seroly2345"].indexOf(players[x + 4].username) != -1) {
+				// Rojo (200)
 				string += playerHTML(players[x + 4], '220,20,60');
 			} else if (["theREALdynamic", "bigfootbb045", "LuvlyGirlMaisy", "Aimilized"].indexOf(players[x + 4].username) != -1) {
+				// Royalty (150)
 				string += playerHTML(players[x + 4], '106,50,159');
-			} else if (["ARandomNoobGamer", "cl3rical", "LosCracks9000"].indexOf(players[x + 4].username) != -1) {
+			} else if (["ARandomNoobGamer", "cl3rical", "M4kA13", "LosCracks9000"].indexOf(players[x + 4].username) != -1) {
+				// Blue Navy (100)
 				string += playerHTML(players[x + 4], '7,55,99');
 			} else {
 				string += playerHTML(players[x + 4]);
@@ -942,7 +945,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~54 hours, 8 minutes.
+		Estimated total active development time across all versions: ~54 hours, 22 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -956,6 +959,7 @@
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the 'Until this many rotations' input. This overrides the 'Desired level' and 'Desired infamy level' (Computing: 'EXP, Levels & Infamy') and 'Desired rank' and 'Until MXP usage' (Computing: 'MXP & Mutator Ranks') inputs. Limit is <code>1,000</code> with 'Input method' toggle setting set to 'Sliders' or <code>1,000,000,000,000</code> with the toggle setting set to 'Manual'.")}
 			${updateLogEntry('add', "Menu Calculator > Section Results: Levels, Infamies and Mutator Ranks now display the additive, multiplicative and exponential differences (assuming the current value is less than or equal to the new value.)")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Some expansions to CCL #1's user-written description.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Noted CCL #26's ownership of the Blue Navy (100) classic infamy suit.")}
 			${updateLogEntry('edit', "Menu Calculator: Moved section 'Progression Settings' to right above the 'Results' section.")}
 			${updateLogEntry('edit', "Menu Calculator: The toggle settings now only underline the caption, rather than the entire toggle. The functionality remains unchanged.")}
 			${updateLogEntry('edit', "Menu Calculator: Changed 'Input method' toggle setting's option 2 caption from 'Manual inputs' to 'Manual'.")}
@@ -963,7 +967,7 @@
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight design changes to CCL #25's user-written description.")}
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
 			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
-			${updateLogEntry('other', "Estimated active development time: ~4 hours, 21 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 hours, 35 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
@@ -1552,7 +1556,12 @@
 		var forEXPOnlyNote = false;
 		
 		
-		const avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
+		var avgTime = null;
+		if (data.untilRotations.greaterThan(0)) {
+			avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime);
+		} else {
+			avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
+		}
 		const avgTimeOutput = new Timer();
 		avgTimeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 		avgTimeOutput.amount = avgTime.times(1e3);
@@ -1571,10 +1580,10 @@
 					} else {
 						outputString += "At Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/)
 					}
-					const orig = NotoExpReqTotal({untilEXP:true, currentLevel:data.currentLevel, remainingEXP:data.remainingEXP, currentInfamyLevel:data.currentInfamyLevel, extraEXP:avgExpGains.times(data.untilRotations)});
-					outputString += ", assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run, the following will happen:"
+					const orig = NotoExpReqTotal({untilEXP:true, currentLevel:data.currentLevel, remainingEXP:data.remainingEXP, currentInfamyLevel:data.currentInfamyLevel, extraEXP:rotationInputsCalculated.exp.times(data.untilRotations)});
+					outputString += ", assuming gains of " + formatInt(rotationInputsCalculated.exp) + " EXP and playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per rotation, the following will happen:"
 					if (orig.extraInfamyLevels.equals(0)) {
-						outputString += '<br>• Reach Level ' + formatInt(data.currentLevel);
+						outputString += '<br>• Reach Level ' + formatInt(orig.newLevel);
 						outputString += ' (Levels: +' + formatInt(orig.extraLevels)
 						if (data.currentLevel.greaterThan(0)) {
 							outputString += ', x' + formatInt(orig.newLevel.dividedBy(data.currentLevel));
@@ -1720,7 +1729,11 @@
 					outputString += ')';
 					outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig_MXP.leftoverMXP) + "</span>";
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
-						outputString += "<p/>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+						if (data.untilRotations.greaterThan(0)) {
+							outputString += "<p/>Assuming gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(rotationInputsCalculated.mxp) + " MXP</span> and playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per rotation:";
+						} else {
+							outputString += "<p/>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+						}
 					}
 				} else {
 					outputString += "Wait a minute, how did this happen? We're smarter than this.";
