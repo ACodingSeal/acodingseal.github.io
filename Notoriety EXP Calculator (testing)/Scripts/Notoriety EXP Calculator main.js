@@ -1559,6 +1559,7 @@
 				avgMoneyGains = (rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns)).times(infamyRunsReq);
 				// console.log(data.untilRotations);
 				if (data.untilRotations.greaterThan(0)) { // testing
+					outputString += "(These calculations presently do not take into account remaining EXP until next level.)<p></p>";
 					if (data.currentInfamyLevel.equals(0)) {
 						outputString += "At Level " + formatInt(data.currentLevel);
 					} else {
@@ -1681,6 +1682,7 @@
 						outputString += " Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
 					}
 				} else if (data.untilMXPUsage.greaterThan(0) || data.untilRotations.greaterThan(0)) {
+					outputString += "(These calculations presently do not take into account remaining MXP until next rank.)<p></p>";
 					if (data.untilRotations.greaterThan(0)) {
 						orig_MXP = calcMXPReq({untilMXP: true}, {currentRank:data.currentMutatorRank, remainingMXP:data.remainingMXP, extraMXP:rotationInputsCalculated.mxp.times(data.untilRotations)});
 					} else {
