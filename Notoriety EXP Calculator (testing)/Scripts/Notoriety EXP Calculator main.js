@@ -176,7 +176,7 @@
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_ProgressionSettings'>";
 		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Progression Settings</h2>";		
 		tool_baseHTML_MenuContainer_Calculator += "<p>Run/rotation gains:<br><textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPandInfamyCalculator_RunGainsInput'></textarea><span id='NotorietyEXPandInfamyCalculator_RunGainsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_UntilRotationsInput'>Until this many rotations: <input type='range' min='0' max='1000' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_UntilRotationsInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'>undefined</span></code><br><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
+		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_UntilRotationsInput'>Until this many rotations: <input type='range' min='0' max='1000' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_UntilRotationsInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'>undefined</span></code></span><br><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
 		tool_baseHTML_MenuContainer_Calculator += "</div>";
 		
 		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_Results'>";
@@ -1210,7 +1210,7 @@
 		runGainsInput_InputExplanation_Text += '(One run per line. One rotation for the entire input. Begin a line with <code>EXCL=</code> to exclude it from the calculations entirely. Time can be added to the calculations by using <code>MENU</code>. For instance, a line containing only the text <code>MENU(85)</code> means 85 seconds spent in menu, loading or otherwise not in a run. While it is possible to use this line after each run, it is instead recommended to already factor in loading times in the times of each run, as doing so will reduce the amount of computations the tool needs to perform. <b>Factor in repeat bonus</b>, as each line is equal to one run.';
 		
 		var untilRotationsInput_InputExplanation_Text = '<br>';
-		untilRotationsInput_InputExplanation_Text += "Continue the rotation until this many rotations done.";
+		untilRotationsInput_InputExplanation_Text += "Continue the rotation until this many rotations done. Requires the 'Run/rotation gains' input to be properly defined.";
 		switch (data.toggleComputationType_Global) {
 			case 0:
 				elem.toggleInfiniteInfamies_Global_Container.style.display = '';
