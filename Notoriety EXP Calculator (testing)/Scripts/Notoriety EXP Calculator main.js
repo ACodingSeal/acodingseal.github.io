@@ -937,7 +937,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~53 hours, 36 minutes.
+		Estimated total active development time across all versions: ~53 hours, 51 minutes.
 		<p/>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
@@ -956,7 +956,7 @@
 			${updateLogEntry('edit', "Menu Calculator: Made the toggle settings unselectable and undraggable.")}
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
 			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
-			${updateLogEntry('other', "Estimated active development time: ~3 hours, 49 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 hours, 4 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
@@ -1567,8 +1567,24 @@
 					outputString += ", assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run, the following will happen:"
 					if (orig.extraInfamyLevels.equals(0)) {
 						outputString += '<br>• Reach Level ' + formatInt(data.currentLevel);
+						outputString += ' (+' + formatInt(orig.extraLevels)
+						if (data.currentLevel.greaterThan(0)) {
+							outputString += ', x' + formatInt(orig.newLevel.dividedBy(data.currentLevel));
+							if (data.currentLevel.greaterThan(1)) {
+								outputString += ', ^' + formatInt(orig.newLevel.log10().dividedBy(data.currentLevel.log10()));
+							}
+						}
+						outputString += ')';
 					} else {
 						outputString += '<br>• Reach Level ' + toRomanWithSeparator(orig.newInfamyLevel, orig.newLevel, data.toggleRomanNumerals_Global && orig.newInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/);
+						outputString += ' (+' + formatInt(orig.extraInfamyLevels)
+						if (data.currentInfamyLevel.greaterThan(0)) {
+							outputString += ', x' + formatInt(orig.newInfamyLevel.dividedBy(data.currentInfamyLevel));
+							if (data.currentInfamyLevel.greaterThan(1)) {
+								outputString += ', ^' + formatInt(orig.newInfamyLevel.log10().dividedBy(data.currentInfamyLevel.log10()));
+							}
+						}
+						outputString += ')';
 					}
 					outputString += "<br>• Leftover EXP: " + formatInt(orig.leftoverEXP);
 				} else {
@@ -1647,7 +1663,15 @@
 				if (data.untilMXPUsage.equals(0) && data.untilRotations.equals(0)) {
 					orig_MXP = calcMXPReq({untilMXP: false}, {currentRank:data.currentMutatorRank, goalRank:data.goalMutatorRank, remainingMXP:data.remainingMXP});
 					totalMxpReq = totalMxpReq.add(orig_MXP);
-					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + " (+" + formatInt(data.goalMutatorRank.sub(data.currentMutatorRank)) + ")</span> "
+					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + "</span>"
+					outputString += ' (+' + formatInt(orig_MXP.extraRanks)
+					if (data.currentMutatorRank.greaterThan(0)) {
+						outputString += ', x' + formatInt(orig_MXP.newRank.dividedBy(data.currentMutatorRank));
+						if (data.currentMutatorRank.greaterThan(1)) {
+							outputString += ', ^' + formatInt(orig_MXP.newRank.log10().dividedBy(data.currentMutatorRank.log10()));
+						}
+					}
+					outputString += ')';
 					if (data.remainingMXP.greaterThan(0)) {
 						outputString += " with <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.remainingMXP) + " MXP</span> remaining until the next rank, ";
 					}
@@ -1677,7 +1701,15 @@
 					} else {
 						outputString += " gaining another <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.untilMXPUsage) + " MXP</span> will reach:";
 					}
-					outputString += "<br>• <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig_MXP.newRank) + "</span> (+" + formatInt(orig_MXP.extraRanks) + ")";
+					outputString += "<br>• <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(orig_MXP.newRank) + "</span>";
+					outputString += ' (+' + formatInt(orig_MXP.extraRanks)
+					if (data.currentMutatorRank.greaterThan(0)) {
+						outputString += ', x' + formatInt(orig_MXP.newRank.dividedBy(data.currentMutatorRank));
+						if (data.currentMutatorRank.greaterThan(1)) {
+							outputString += ', ^' + formatInt(orig_MXP.newRank.log10().dividedBy(data.currentMutatorRank.log10()));
+						}
+					}
+					outputString += ')';
 					outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig_MXP.leftoverMXP) + "</span>";
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
 						outputString += "<p/>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
