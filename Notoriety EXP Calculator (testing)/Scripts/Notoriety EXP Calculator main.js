@@ -1285,6 +1285,7 @@
 		switch (data.toggleComputationType_Global) {
 			case 0:
 				elem.toggleInfiniteInfamies_Global_Container.style.display = '';
+				elem.Section_MoneySettings.style.display = '';
 				elem.Section_LevelSettings.style.display = '';
 				elem.Section_InfamySettings.style.display = '';
 				elem.untilRotationsInput_Block.style.display = ''; // temp while testing addition of exp to the until rotations input
