@@ -962,7 +962,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[Testing] <u>Version 0.1.0</u></b>
+		<b>[2025-04-28 12:08] <u>Version 0.1.0</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator: Added a third option to the 'Computing' toggle setting: 'Money'. This appears as option 2, while 'MXP & Mutator Ranks' has been moved to option 3.")}
 			${updateLogEntry('add', "Menu Calculator: Added section 'Money Settings' and one input in this section: 'Desired money'. Moved 'Current money' input from 'Infamy Settings' section to this section.")}
