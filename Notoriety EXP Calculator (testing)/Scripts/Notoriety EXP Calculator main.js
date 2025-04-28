@@ -951,7 +951,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~54 hours, 29 minutes.
+		Estimated total active development time across all versions: ~54 hours, 30 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -975,8 +975,9 @@
 			${updateLogEntry('edit', "Menu Calculator: Made the toggle settings unselectable and undraggable.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight design changes to CCL #25's user-written description.")}
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
+			${updateLogEntry('edit', "Noted that users should report issues or suggestions about this tool to the tool creator, and that they can also open an issue.")}
 			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
-			${updateLogEntry('other', "Estimated active development time: ~4 hours, 42 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~4 hours, 43 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
