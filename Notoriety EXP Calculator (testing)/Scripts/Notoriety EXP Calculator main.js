@@ -123,19 +123,19 @@
 			// 113,975,931
 			var reputationTotalEXP = calcEXP(1, 100);
 			var totalEXPUntilCurrentLevel = calcEXP(1, settings_a.currentLevel);
-			console.log( calcEXP(settings_a.currentLevel, settings_a.currentLevel.add(1)).sub(settings_a.remainingEXP).abs() );
+			// console.log( calcEXP(settings_a.currentLevel, settings_a.currentLevel.add(1)).sub(settings_a.remainingEXP).abs() );
 			var extraEXP_a = settings_a.extraEXP;
 			if (settings_a.remainingEXP.notEquals(0)) {
 				extraEXP_a = extraEXP_a.add(calcEXP(settings_a.currentLevel, settings_a.currentLevel.add(1)).sub(settings_a.remainingEXP).abs());
 			}
-			console.log(calcEXP(1, 82)); // 13,975,931
-			console.log(settings_a.extraEXP);
+			// console.log(calcEXP(1, 82)); // 13,975,931
+			// console.log(settings_a.extraEXP);
 			extraEXP_a = extraEXP_a.add(0e3);
 			// next infamy check:
 			if (extraEXP_a.add(totalEXPUntilCurrentLevel).greaterThanOrEqualTo(reputationTotalEXP) && settings_a.currentLevel.notEquals(100)) {
 				extraEXP_a = extraEXP_a.sub(reputationTotalEXP);
 			}
-			console.log(extraEXP_a);
+			// console.log(extraEXP_a);
 			// extra infamies:
 			var maxInfamies = new Decimal(250);
 			if (data.toggleInfiniteInfamies_Global == 1) {
@@ -148,14 +148,14 @@
 					} else {
 						output.extraInfamyLevels = extraEXP_a.dividedBy(reputationTotalEXP).floor();
 					}
-					console.log(extraEXP_a);
+					// console.log(extraEXP_a);
 					extraEXP_a = extraEXP_a.sub(extraEXP_a.dividedBy(reputationTotalEXP).floor().min(maxInfamies.sub(settings_a.currentInfamyLevel)).times(reputationTotalEXP));
-					console.log(extraEXP_a);
-					console.log(output.extraInfamyLevels.times(reputationTotalEXP));
+					// console.log(extraEXP_a);
+					// console.log(output.extraInfamyLevels.times(reputationTotalEXP));
 					// output.extraInfamyLevels = output.extraInfamyLevels.add(settings_a.extraEXP)
 				}
 			}
-			console.log(extraEXP_a);
+			// console.log(extraEXP_a);
 			// new level after last extra infamy (if any):
 			if (true) {
 				for (var x = 1; x < 100; x++) {
@@ -165,14 +165,15 @@
 						// extraEXP_a = extraEXP_a.sub(calcEXP(0 + x, 1 + x));
 					}
 				}
-				console.log(calcEXP(1, output.newLevel));
+				// console.log(calcEXP(1, output.newLevel));
 				extraEXP_a = calcEXP(1, output.newLevel).sub(extraEXP_a).abs();
 			}
-			console.log(extraEXP_a);
+			// console.log(extraEXP_a);
 			
 			output.newInfamyLevel = settings_a.currentInfamyLevel.add(output.extraInfamyLevels);
 			output.leftoverEXP = extraEXP_a;
 			
+			/*
 			console.log('--------------------');
 			console.log(output.extraInfamyLevels);
 			console.log(output.newInfamyLevel);
@@ -181,6 +182,7 @@
 			console.log(calcEXP(1, output.newLevel.add(0)));
 			console.log(calcEXP(output.newLevel, output.newLevel.add(1)));
 			console.log('--------------------');
+			*/
 			return output;
 		} else {
 			base = new Decimal(base).abs();
@@ -707,7 +709,7 @@
 			} else {
 				players[x].username = playersData_usernames[x];
 			}
-			console.log(playersData_usernames[x]);
+			// console.log(playersData_usernames[x]);
 			
 			if (playersData_displayNames[x] == undefined) {
 				players[x].displayName = undefined;
@@ -844,11 +846,11 @@
 							output += 'between ';
 							timeOutput.amount = (new Date(input.whenCCL.timestamp[0]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
 							output += timeOutput.formatAmount();
-							console.log(timeOutput.formatAmount());
+							// console.log(timeOutput.formatAmount());
 							output += ' to ';
 							timeOutput.amount = (new Date(input.whenCCL.timestamp[1]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
 							output += timeOutput.formatAmount();
-							console.log(timeOutput.formatAmount());
+							// console.log(timeOutput.formatAmount());
 						} else {
 							timeOutput.amount = (new Date(input.whenCCL.timestamp).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
 							output += timeOutput.formatAmount();
