@@ -962,7 +962,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[2025-04-29 01:22] Version 0.1.1</b>
+		<b>[2025-04-29 01:25] Version 0.1.1</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'Money', the required runs/rotations and playtime requirement are now listed.")}
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: With 'Computing' toggle setting set to 'Money', the text " + '"' + "Overrides" + " 'Desired money' input" + '"' + " now appears in the 'Until this many rotations' input's input explanation.")}
