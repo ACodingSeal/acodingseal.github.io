@@ -143,6 +143,8 @@ function toRomanWithSeparator(x, y, conversionAllowed, includeSeparator) {
 		} else if (x.greaterThanOrEqualTo(20)) {
 			output = "<span class='NotorietyEXPCalculator_InfamyRanks20to25'>" + output + "</span>";
 		}
+	} else {
+		output = "<span class='NotorietyEXPCalculator_InfamyRank0'>" + output + "</span>";
 	}
 	return output;
 }
