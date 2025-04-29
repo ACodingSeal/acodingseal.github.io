@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.1.0 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.1.1 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -862,7 +862,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>.
 		<p/>
-		Estimated total active development time across all versions: ~54 hours, 30 minutes.
+		Estimated total active development time across all versions: ~55 hours, 9 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -870,6 +870,15 @@
 		</ul>
 		</p>
 		<hr/>
+		<p>
+		<b>[2025-04-29 01:25] Version 0.1.1</b>
+		<ul>
+			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'Money', the required runs/rotations and playtime requirement are now listed.")}
+			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: With 'Computing' toggle setting set to 'Money', the text " + '"' + "Overrides" + " 'Desired money' input" + '"' + " now appears in the 'Until this many rotations' input's input explanation.")}
+			${updateLogEntry('edit', "Infamy and Level texts now default to the non-infamy chat colour, if roman numerals are disabled or if the value is not greater than 0.")}
+			${updateLogEntry('fix', "Menu Calculator > Section Results: With Section Progression Settings input 'Until this many rotations' value greater than 0, the listed playtime per run is no longer the total time in the rotation, but rather the average.")}
+			${updateLogEntry('other', "Estimated active development time: ~39 minutes.")}
+		</ul></p>
 		<p>
 		<b>[2025-04-28 12:08] <u>Version 0.1.0</u></b>
 		<ul>
@@ -1232,6 +1241,7 @@
 				elem.untilRotationsInput_Block.style.display = '';
 				elem.runGainsInput.placeholder = 'Money|Time (seconds). Example of a rotation involving 3 runs (heists):\n\n842,200|160\n487814|115\n3482775|214';
 				runGainsInput_InputExplanation_Text += ' Money and Time values will be averaged based on all included runs, and then these averages will be used for computations.';
+				untilRotationsInput_InputExplanation_Text += " Overrides 'Desired money' input.";
 				break;
 			case 2:
 				elem.Section_MutatorRankSettings.style.display = '';
@@ -1472,6 +1482,7 @@
 		var outputString = '';
 		var totalExpReq = new Decimal(0);
 		var totalMxpReq = new Decimal(0);
+		var totalMoneyReq = new Decimal(0);
 		const testingFalsy = false;
 		const rotationInputsCalculated = data.rotationInputTotals(elem.runGainsInput.value)
 		var forEXPOnlyNote = false;
@@ -1479,7 +1490,8 @@
 		
 		var avgTime = null;
 		if (data.untilRotations.greaterThan(0)) {
-			avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime);
+			// avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime);
+			avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
 		} else {
 			avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
 		}
@@ -1587,13 +1599,19 @@
 				break;
 			case 1:
 				avgMoneyGains = rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns);
+				totalMoneyReq = data.goalMoney.sub(data.currentMoney);
 				
-				if (data.untilRotations.greaterThan(0) && rotationInputsCalculated.includedRuns.greaterThan(0)) {
-					var gainsInRotations = avgMoneyGains.times(data.untilRotations);
-					outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, gaining another <span class='NotorietyEXPCalculator_Money'>$" + formatInt(gainsInRotations) + "</span> will total:"
-					outputString += "<br>• Money: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney.add(gainsInRotations)) + "</span>";
+				if (data.untilRotations.greaterThan(0) || rotationInputsCalculated.includedRuns.greaterThan(0)) {
+					if (data.untilRotations.greaterThan(0)) {
+						var gainsInRotations = rotationInputsCalculated.money.times(data.untilRotations);
+						outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, assuming average gains of <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + "</span> and playtime of " + avgTimeOutput.formatAmount() + " per run, gaining another <span class='NotorietyEXPCalculator_Money'>$" + formatInt(gainsInRotations) + "</span> will total:"
+						outputString += "<br>• Money: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney.add(gainsInRotations)) + "</span>";
+					} else {
+						outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, assuming average gains of <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + "</span> and playtime of " + avgTimeOutput.formatAmount() + " per run, to reach <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney) + "</span>, the requirements are:";
+						outputString += "<br>• Money: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(totalMoneyReq) + "</span>";
+					}
 				} else {
-					outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, to reach <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney) + "</span>, the requirement is <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney.sub(data.currentMoney)) + "</span> money.";
+					outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, to reach <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney) + "</span>, the requirement is <span class='NotorietyEXPCalculator_Money'>$" + formatInt(totalMoneyReq) + "</span> money.";
 				}
 				break;
 			case 2:
@@ -1695,12 +1713,29 @@
 			}
 		break;
 		case 1:
-		if (data.untilRotations.greaterThan(0) && rotationInputsCalculated.includedRuns.notEquals(0)) {
-			const timeOutput = new Timer();
-			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
-			timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).times(data.untilRotations).ceil());
-			outputString += '<br>• <b>' + formatInt(data.untilRotations) + '</b>' + checkPlural(data.untilRotations, ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-			outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+		if (rotationInputsCalculated.includedRuns.notEquals(0)) {
+			if (data.untilRotations.greaterThan(0)) {
+				const timeOutput = new Timer();
+				timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
+				timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).times(data.untilRotations).ceil());
+				outputString += '<br>• <b>' + formatInt(data.untilRotations) + '</b>' + checkPlural(data.untilRotations, ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+			} else {
+				const timeOutput = new Timer();
+				timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
+				if (totalMoneyReq.dividedBy(rotationInputsCalculated.money).equals(0) || totalMoneyReq.equals(0)) {
+					timeOutput.amount = new Decimal(0);
+				} else {
+					timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime)).times(totalMoneyReq.dividedBy(rotationInputsCalculated.money).ceil());
+				}
+				var rotationsReq = totalMoneyReq.dividedBy(rotationInputsCalculated.money);
+				if (rotationsReq.isNan() == true) {
+					rotationsReq = new Decimal(0);
+				}
+				outputString += "<br>• Leftover Money: <span class='NotorietyEXPCalculator_Money'>" + formatInt(totalMoneyReq.dividedBy(rotationInputsCalculated.money).sub(rotationsReq.floor()).times(rotationInputsCalculated.money)) + "</span>";
+				outputString += '<br>• <b>' + formatInt(rotationsReq.ceil()) + '</b>' + checkPlural(totalMoneyReq.dividedBy(rotationInputsCalculated.money).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
+				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+			}
 		}
 		break;
 		case 2:
