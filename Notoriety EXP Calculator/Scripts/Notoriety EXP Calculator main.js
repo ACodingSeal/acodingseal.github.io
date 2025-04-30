@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.1.1a | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.1.1b | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -447,7 +447,7 @@
 		undefined,
 		undefined,
 		"Possibly the first post-rerelease player to reach CCL, based on their badges.",
-		undefined,
+		"Minimum infamy classic suit (highest unknown): Blue Navy (100)",
 		"Possibly the first alternate account to reach CCL, being possibly an alt of CCL #17; this is based on having a very empty profile and the default avatar, in addition to only being friends with CCL #17 (at the time of addition to the CCLs list, friends with another player) and their badges being almost exclusively Notoriety ones since joining the game until Rank 250.",
 		"Possibly the first solo grinder to reach CCL.",
 		// 21 - 30
@@ -807,7 +807,7 @@
 			} else if (["theREALdynamic", "bigfootbb045", "LuvlyGirlMaisy", "Aimilized"].indexOf(players[x + 4].username) != -1) {
 				// Royalty (150)
 				string += playerHTML(players[x + 4], '106,50,159');
-			} else if (["ARandomNoobGamer", "cl3rical", "M4kA13", "LosCracks9000"].indexOf(players[x + 4].username) != -1) {
+			} else if (["ARandomNoobGamer", "cl3rical", "Danneilkoko", "M4kA13", "LosCracks9000"].indexOf(players[x + 4].username) != -1) {
 				// Blue Navy (100)
 				string += playerHTML(players[x + 4], '7,55,99');
 			} else {
@@ -867,9 +867,9 @@
 			${updateLogEntry('remove', 'Removal of something')}
 			${updateLogEntry('fix', 'Patch of a problem')}
 			${updateLogEntry('other', 'Other')}
-		Major tool versions are <u>underlined</u>.
+		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~55 hours, 12 minutes.
+		Estimated total active development time across all versions: ~55 hours, 17 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -877,6 +877,15 @@
 		</ul>
 		</p>
 		<hr/>
+		<p>
+		<b>[2025-04-30 04:26] Version 0.1.1b</b>
+		<ul>
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Noted CCL #18's ownership of the Blue Navy (100) classic infamy suit.")}
+			${updateLogEntry('add', "Noted that all Update Log entries' timestamps are noted in UTC.")}
+			${updateLogEntry('edit', "Slightly reordered the sub-entries in Update Log entry Version 0.1.1.")}
+			${updateLogEntry('fix', "Menu Miscellaneous > Section Results: Fixed a bug where current mutator rank is always 0 regardless of the input.")}
+			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
+		</ul></p>
 		<p>
 		<b>[2025-04-29 23:30] Version 0.1.1a</b>
 		<ul>
@@ -886,8 +895,8 @@
 		<p>
 		<b>[2025-04-29 01:25] Version 0.1.1</b>
 		<ul>
-			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'Money', the required runs/rotations and playtime requirement are now listed.")}
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: With 'Computing' toggle setting set to 'Money', the text " + '"' + "Overrides" + " 'Desired money' input" + '"' + " now appears in the 'Until this many rotations' input's input explanation.")}
+			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'Money', the required runs/rotations and playtime requirement are now listed.")}
 			${updateLogEntry('edit', "Infamy and Level texts now default to the non-infamy chat colour, if roman numerals are disabled or if the value is not greater than 0.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: With Section Progression Settings input 'Until this many rotations' value greater than 0, the listed playtime per run is no longer the total time in the rotation, but rather the average.")}
 			${updateLogEntry('other', "Estimated active development time: ~39 minutes.")}
@@ -1635,9 +1644,9 @@
 					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + "</span>"
 					outputString += ' (Mutator Ranks: +' + formatInt(orig_MXP.extraRanks)
 					if (data.currentMutatorRank.greaterThan(0)) {
-						outputString += ', x' + formatInt(orig_MXP.newRank.dividedBy(data.currentMutatorRank));
+						outputString += ', x' + formatInt(data.goalMutatorRank.dividedBy(data.currentMutatorRank));
 						if (data.currentMutatorRank.greaterThan(1)) {
-							outputString += ', ^' + formatInt(orig_MXP.newRank.log10().dividedBy(data.currentMutatorRank.log10()));
+							outputString += ', ^' + formatInt(data.goalMutatorRank.log10().dividedBy(data.currentMutatorRank.log10()));
 						}
 					}
 					outputString += ')';
