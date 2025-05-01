@@ -721,7 +721,13 @@
 		+ "<p></p>Two days later, myself and the same people that attempted 1.000 bags in ToT before the DMCA takedown, smashed that limit and managed to get 3.000 bags, being the first and only to do thus far. It took us almost 16 hours. After I got to Infamy 225, I took a nearly 2 month long hiatus. I got to CCL on 11/04/2025, having gotten my last 100 levels in an infamy rotation.",
 		undefined,
 		undefined,
-		undefined,
+		// #30
+		"I started playing Noto in 2019-2020 but started playing consistently around 2021 and started creating YouTube content in the middle of 2022, couple months before the game got taken down. Before the ban, I reached XXV-100 and was skilled in max mutator runs, where I obtained my nickname “Clutch Toad” for clutching a Mall Raid Max Mutator Run."
+		+ "<p></p>Fast-forward to the re-release, as soon as the game came out and the new infamy cap was at 250, that’s when I decided CCL was going to be my goal. Now while I had a personal life and didn’t grind Noto for 13hrs straight every day, I still pursued that goal by playing casually up until the suit rework was announced. Obviously at around infamy 50 or so, getting 200 more infamies within a couple days was out of the question, so missing out on the suits upseted me a bit. However, I still pursued and grinded casually until my winter break was over."
+		+ "<p></p>Back at college, I’d play Noto from time to time, trying to get 2 infamies a day to hopefully reach CCL before the end of the school year, however, the game got boring and schoolwork took a toll on my ability to play, so my progress was halted a bit, until one day in mid-April, I’d see a few CCL players talking about the new CCL’er, CCL #29 Roxy. That’s when I told myself, “I am going to do the impossible, grind to CCL during the College Hell that is the month of APRIL, as well as getting into the top 50 CCL’ers.”"
+		+ "<p></p>I was at Infamy 175 when I started my 5 infamy a day grind, where I’d create my own solo rotation strat that ensured an infamy in 30-40mins while also going net-neutral/positive with money. During this grind, I came across CCL #1, ILikeToast5 (aka TheSeal27), where he addressed me as the potential CCL #30. After that moment, I was inspired to reach that #30 spot and continued my grind. This continued until the Wi-Fi of my dorm building went out for 2 days, so on the 2nd day I had to literally walk to my school’s library to play Notoriety . Anyways after that scuffed grind, I came back to my dorm, when my internet was finally back up, however, I was behind schedule with infamies and CCL #31 Alxzor/Brago was 12 infamies ahead of me and was also in pursuit of reaching CCL before me (Brago: 231, Me: 219). So I told myself, “I can’t let this slide, I’ve got to ratio this #####.”"
+		+ "<p></p>On 04/27/2025 while at Infamy 226, fueled by a large iced coffee, a sausage egg and cheese sandwichand some Pepsi Zero’s , I started pumping out infamy after infamy after infamy. The only time I walked away from my desk was for piss breaks . Since me and Brago were in different time zones and he grinded while I was asleep, I knew for sure he had to have been in the 240’s, so I had to get CCL TODAY if I were to reach that #30 spot. Although my strategy was good for solo runs, I also had the help of some other friends both before and during this gauntlet of infamies. 11hrs later, my short term rival Brago joined the game. His infamy… 242, mine… was just a measly 246! I was 4 Infamies ahead of him and knew it was a gg’s. So I did what I do best and clutched that number #30 spot after 13hrs of non-stop grinding. After the grind, I legit couldn’t stop thinking about the Depot . Had I not grinded for that long, I would’ve lost that #30 spot. So this means I’m potentially the first CCL player to grind for it during the College Hell of APRIL ."
+		+ "<p></p>I would like to give thanks to the following people that helped me on this grind. MVP & #1 Supporter: blast (@ShopBlastsLocker). Inspiration: CCL #31 Brago (@Alxzor) & CCL #1 ILikeToast5 (aka TheSeal27). Supporters & Teammates: abcd (@DeTeditive), Facepalm2221 (@facepalm2221), MoonGrave (@Ekko_lokation), Retro (@InfinitelyRetro & ngl 2nd MVP), XYZcheeseborger (@lawsuitace), thermonuclear bullet (@Liokkgi), mung ster (@munster4best), Karlo (@hikaru123456), Tuxedoge (@Magnuslover2), bruh (@NathanJZC), ex0sphere (@ex0spher_e) & nark (@narkyii). Honorable Mention: @ameertttfssd201099.",
 		undefined,
 		];
 		
@@ -976,7 +982,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~55 hours, 31 minutes.
+		Estimated total active development time across all versions: ~55 hours, 35 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -987,10 +993,10 @@
 		<p>
 		<b>[Testing] Version 0.1.1c</b>
 		<ul>
-			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #21's user-written description.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #21's and #30's user-written descriptions.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Some formatting adjustments to CCL #1's user-written description.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Corrected CCL #31's display name: <code>Alxzor</code> > <code>Brago</code>.")}
-			${updateLogEntry('other', "Estimated active development time: ~14 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~18 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-30 04:26] Version 0.1.1b</b>
