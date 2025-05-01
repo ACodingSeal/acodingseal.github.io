@@ -989,7 +989,7 @@
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #21's user-written description.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Some formatting adjustments to CCL #1's user-written description.")}
-			${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed CCL #31's display name.")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Corrected CCL #31's display name: <code>Alxzor</code> > <code>Brago</code>.")}
 			${updateLogEntry('other', "Estimated active development time: ~14 minutes.")}
 		</ul></p>
 		<p>
