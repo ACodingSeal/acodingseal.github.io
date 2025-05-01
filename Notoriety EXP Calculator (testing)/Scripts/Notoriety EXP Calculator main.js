@@ -441,7 +441,7 @@
 		"NekoChan",
 		"Roxy",
 		"CHIEF_TOAD",
-		"Alxzor",
+		"Brago",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -976,7 +976,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~55 hours, 30 minutes.
+		Estimated total active development time across all versions: ~55 hours, 31 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -989,7 +989,8 @@
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #21's user-written description.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Some formatting adjustments to CCL #1's user-written description.")}
-			${updateLogEntry('other', "Estimated active development time: ~13 minutes.")}
+			${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed CCL #31's display name.")}
+			${updateLogEntry('other', "Estimated active development time: ~14 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-04-30 04:26] Version 0.1.1b</b>
