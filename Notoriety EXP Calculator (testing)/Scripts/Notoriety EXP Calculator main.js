@@ -991,7 +991,7 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[Testing] Version 0.1.1c</b>
+		<b>[2025-05-01 04:43] Version 0.1.1c</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #21's and #30's user-written descriptions.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Some formatting adjustments to CCL #1's user-written description.")}
