@@ -988,7 +988,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~55 hours, 58 minutes.
+		Estimated total active development time across all versions: ~56 hours, 5 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -997,13 +997,13 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[2025-05-03 08:16] Version 0.1.1f</b>
+		<b>[2025-05-03 08:19] Version 0.1.1f</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #32.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added notes to CCL #29's entry.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Fixed Update Log entry Version 0.1.1e having the [Testing] tag instead of a release timestamp.")}
-			${updateLogEntry('other', "Estimated active development time: ~10 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~12 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-05-03 01:40] Version 0.1.1e</b>
