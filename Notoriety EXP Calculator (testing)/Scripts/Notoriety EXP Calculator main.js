@@ -993,7 +993,8 @@
 		<p>
 		<b>[Testing] Version 0.1.1f</b>
 		<ul>
-			${updateLogEntry('edit', "Fixed Update Log entry Version 0.1.1e having the [Testing] tag instead of a release timestamp.")}
+			${updateLogEntry('edit', "Some source code changes.")}
+			${updateLogEntry('fix', "Fixed Update Log entry Version 0.1.1e having the [Testing] tag instead of a release timestamp.")}
 			${updateLogEntry('other', "Estimated active development time: ~7 minutes.")}
 		</ul></p>
 		<p>
