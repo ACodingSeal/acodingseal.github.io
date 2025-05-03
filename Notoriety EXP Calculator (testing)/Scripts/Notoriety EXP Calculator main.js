@@ -550,7 +550,7 @@
 		"Highest infamy classic suit: Blue Navy (100)",
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest infamy classic suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
-		undefined,
+		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		undefined,
 		// 31 - 31
 		undefined,
@@ -982,7 +982,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~55 hours, 55 minutes.
+		Estimated total active development time across all versions: ~55 hours, 56 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -993,9 +993,10 @@
 		<p>
 		<b>[Testing] Version 0.1.1f</b>
 		<ul>
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added notes to CCL #29's entry.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Fixed Update Log entry Version 0.1.1e having the [Testing] tag instead of a release timestamp.")}
-			${updateLogEntry('other', "Estimated active development time: ~7 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~8 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-05-03 01:40] Version 0.1.1e</b>
