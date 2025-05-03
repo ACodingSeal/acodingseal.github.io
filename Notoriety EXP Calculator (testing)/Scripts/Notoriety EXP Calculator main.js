@@ -642,7 +642,25 @@
 		+ "<p></p>somewhere around early january this year, i decided to go for CCL, but i didn't really want to grind it by doing the same heists over and over for max efficiency"
 		+ "<p></p>so i got to CCL by mostly playing public lobbies, helping others with badges and nightmare. mixed in some solo stealth too (mostly ozela)"
 		+ "<p></p>i hit CCL at the 16th of february 2025 just after 2:40 a.m",
-		undefined, // contacted, user is writing description
+		"It all started back in 2018 or 2019 if i don't remember wrong, i had a friend group of 3 (with me) and back in those days i mostly played KAT with them."
+		+ "<p></p>Around later they found out about notoriety and started playing it together, inviting me aswell so i did join. If i remember right i joined in the halloween update so there was the halloween lobby and theme."
+		+ "<p></p>My first ever heist with them was ro bank on normal, and i think it was loud since we didn't even know stealth was a thing back then."
+		+ "<p></p>Things gone on and we started playing notoriety more, starting to do heists on nightmare difficulty. Back then, no matter what I couldn't just do transport on nightmare. It annoyed me and asked my group to help me, but that didn't help neither. I never beat it until the re release of notoriety."
+		+ "<p></p>Near the end of the games shutdown, my group and I quit the game. Blood Money has always been my favourite heist, and back when i quit the game, (around 2020) blood money had a  new badge called " + '"' + "Panic Room" + '"' + ". When i noticed this badge was available, I started the game again and tried to get it. I used to run a Remington 870 dodge build back then. The badge required you to press bunch of buttons in the hospital and after doing so you complete the game as normal,and it takes you to a secret floor where demon like creatures attack you and one tap you. If you survived long enough you could use a flare and " + '"' + "get saved" + '"' + ", but i simply gave up too quick back then and quit the game after like a month again."
+		+ "<p></p> And then i never heard about the game anyways until 2024, started with a friend of mine again. I was infamy 7 when i joined the game (December 20) and i noticed there are alot of new badges plus the infamy limit increase. I started playing with my friend for a while, doing all heists on nightmare. And he quit it so I was alone again. I decided i want to be infamy XXV so i could say i unlocked every infamy bonuses. Then I stayed on that infamy for a while, playing the game as normal."
+		+ "<p></p>And then I decided i want to be infamy L atleast, and i only just spammed ozelas to get to it with my other duo i found throughout the server. If without them it would be very boring and unbearable. (They grinded with me until like rank C atleast) After that i tried out pho's rotations but i didn't like it, it was far too complex for a game what i call the payday 2 ripoff. (I love notoriety) When I became L however, I didn't stop. I wanted to see how much more I can go. "
+		+ "<p></p>Eventually I became rank C aswell and said to myself, if I can get to C, I can definitely get to CC and likely CCL. Spammed ozelas until i find a good rotation for myself. I didn't do loud heists at all when I locked in for the grind. Which i loved them. When i got to C i got demotivated too, for I don't know what reason but the grind just felt too long. But my duo got me back up."
+		+ "<p></p>Eventually we found a third, helping us in our ozela spam. We all eventually parted our ways because my duo was grinding money needed throughout the whole CCL, and I was trying to grind both xp and money. But i continued with the third guy i found. He had gamepasses like me so I could grind better with him. He helped me grind all the way to the CCL, and even was with me when i infamied to CCL."
+		+ "<p></p>We tried many rotations by different users, but they weren't really effective. So overtime I found my own rotation that i spammed until the end of CCL grind. It was like this:"
+		+ "<br/>When level 0,<br>(2x) Ozela Heist<br>(4x) Rush Hour"
+		+ "<br/>This would make me level 100 alone, but I was aware of repeat bonuses too so after i did the rotation above, I switched Rush Hour to Authority. Goes like this:"
+		+ "<br/>When level 0,<br>(2x) Ozela Heist<br>(6x) Authority"
+		+ "<p></p>So it was a repeat of 2 ozelas and then switch between rush hour-authority depending on the repeat bonus. And finally, I finished my grind at February 21, hitting CCL. I uploaded a video right after."
+		+ "<p></p>The grind of a game that was once my childhood took me 2 months. Was it worth it? I leave that for you to answer, but for me I'm glad I met new people along the way."
+		+ "<p></p>Most I did was playing loud with others, testing builds, making my own builds after being CCL. I would still play the game if anyone wants to play it with me, preferably loud."
+		+ "<br>My ingame user is kogamarobloxman<br>My discord: stix_real"
+		+ "<p></p><a href='https://www.youtube.com/watch?v=a536IwGzJtg'>The video where I became infamy CCL</a>"
+		+ "",
 		undefined, // contacted, refused to provide description
 		undefined, // contacted, refused to provide description
 		undefined, // not contacted
@@ -989,7 +1007,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~56 hours, 8 minutes.
+		Estimated total active development time across all versions: ~56 hours, 18 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -998,11 +1016,11 @@
 		</p>
 		<hr/>
 		<p>
-		<b>[Testing] Version 0.1.1g</b>
+		<b>[2025-05-03 11:02] Version 0.1.1g</b>
 		<ul>
-			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #32's user-written description.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #11's and #32's user-written descriptions.")}
 			${updateLogEntry('edit', "Some source code changes.")}
-			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~13 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-05-03 08:19] Version 0.1.1f</b>
