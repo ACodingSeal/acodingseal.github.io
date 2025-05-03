@@ -622,13 +622,13 @@
 		+ "<br/><ul class='mod-gallery'>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0010.jpg'></div><div class='gallerytext'>The P.D.W Gang<br>(Pixel, Derp, Will)</div></li>"
 		+ "</ul>",
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
+		undefined, // contacted and acknowledged
+		undefined, // contacted and acknowledged
+		undefined, // contacted and acknowledged, did not provide description
+		undefined, // not contacted
+		undefined, // contacted, no response
+		undefined, // not contacted
+		undefined, // contacted, waiting
 		// #10
 		"i knew about notoriety for a very long time, and i did try it out for a bit, but ended up stopping (couldn't tell you why, i have basically no memory of it other than when i started playing again, i was level 8 and had like 50k in cash)"
 		+ "<p></p>i played payday 2 on and off for years (on console, wasn't much of a pc gamer at the time). eventually moved onto other games. never played payday: the heist or anything, but i did enjoy payday 2"
@@ -637,15 +637,15 @@
 		+ "<p></p>somewhere around early january this year, i decided to go for CCL, but i didn't really want to grind it by doing the same heists over and over for max efficiency"
 		+ "<p></p>so i got to CCL by mostly playing public lobbies, helping others with badges and nightmare. mixed in some solo stealth too (mostly ozela)"
 		+ "<p></p>i hit CCL at the 16th of february 2025 just after 2:40 a.m",
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
-		undefined,
+		undefined, // contacted, waiting
+		undefined, // contacted, refused to provide description
+		undefined, // contacted, refused to provide description
+		undefined, // not contacted
+		undefined, // not contacted
+		undefined, // not contacted
+		undefined, // contacted, waiting
+		undefined, // not contacted
+		undefined, // not contacted
 		// #20
 		"I first found the game back in August of 2019, a few months after I had first made my account. I do not recall much about my early experiences with the game, other than thinking the game should have a tutorial of some kind, as the game is, to this day, not very beginner-friendly. My initial infamies were quite slow, with my first one taking some 141 days, from 12 August to 31 December of 2019. Things didn’t exactly get faster from there either, with the next four infamies taking an additional 436 days to get, with me reaching infamy V on 11 March 2021. The next sets of infamies took less time, with infamy X taking 136 days from infamy V, infamy XV taking 170 days from there, and infamy XX taking 1 year (which i’m not sure as to how it did, given that it was in 2022). On 5 March 2022, at 20:44, CDT (UTC-6), I reached infamy XXV after 935 days of playing Notoriety. From there, I would get Billionaire on 25 May, and then just mess around, earning about $2.6 billion before the game would get DMCA’d. Then, on 16 December, when I returned to the game, I discovered that not only did infamies beyond XXV exist, but the limit was now CCL. So, I got infamy XXVI as soon as I discovered this, and began slowly getting more infamies from there, reaching infamy L some 21 days after returning. I followed a relatively simple rotation, playing The Ozela Heist, Rush Hour, and (towards the end of the grind) Authority, adding in a few Nightclub runs to raise repeat bonuses on Rush Hour and Ozela. I soloed every heist I played, as I didn’t want to have to plan grinds around when I could contact my teammates. These extra infamies came far faster than I expected, with me reaching infamy C just 16 days after infamy L. Just 52 days after infamy C, I reached infamy CCL on 13 March 2025 at 18:28. The grind was pretty long despite how many methods I had used to boost my XP gain rates, such as having the 2x XP gamepass and using XP boosts from the shop from infamy CC to CCXXII to speed things up. The grind would probably have been less annoying if I wasn’t doing it all solo, but it worked out in the end, so it doesn’t really bother me that it took a bit of time. I have no idea if I’m actually the first solo CCL grinder, as I have no idea if that can be verified without asking all 28 people who have reached it thus far."
 		+ "<br/>Sincere apologies about all the yapping, but I felt it necessary given that this is one of few times I’ve had the excuse to mention all of this. It took quite some time."
@@ -671,9 +671,9 @@
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0002.png'></div><div class='gallerytext'>Messages with informant (part 2)</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0003.png'></div><div class='gallerytext'>Messages with informant (part 3)</div></li>"
 		+ "</ul>",
-		undefined,
-		undefined,
-		undefined,
+		undefined, // contacted, no response
+		undefined, // contacted, refused to provide description
+		undefined, // not contacted
 		// #25
 		/*
 		Harry = Inherited (preference 255,255,255)
@@ -719,8 +719,8 @@
 		+ "<p></p>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release."
 		+ "<p></p>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025."
 		+ "<p></p>Two days later, myself and the same people that attempted 1.000 bags in ToT before the DMCA takedown, smashed that limit and managed to get 3.000 bags, being the first and only to do thus far. It took us almost 16 hours. After I got to Infamy 225, I took a nearly 2 month long hiatus. I got to CCL on 11/04/2025, having gotten my last 100 levels in an infamy rotation.",
-		undefined,
-		undefined,
+		undefined, // contacted, no response
+		undefined, // contacted, no response
 		// #30
 		"I started playing Noto in 2019-2020 but started playing consistently around 2021 and started creating YouTube content in the middle of 2022, couple months before the game got taken down. Before the ban, I reached XXV-100 and was skilled in max mutator runs, where I obtained my nickname “Clutch Toad” for clutching a Mall Raid Max Mutator Run."
 		+ "<p></p>Fast-forward to the re-release, as soon as the game came out and the new infamy cap was at 250, that’s when I decided CCL was going to be my goal. Now while I had a personal life and didn’t grind Noto for 13hrs straight every day, I still pursued that goal by playing casually up until the suit rework was announced. Obviously at around infamy 50 or so, getting 200 more infamies within a couple days was out of the question, so missing out on the suits upseted me a bit. However, I still pursued and grinded casually until my winter break was over."
@@ -728,7 +728,7 @@
 		+ "<p></p>I was at Infamy 175 when I started my 5 infamy a day grind, where I’d create my own solo rotation strat that ensured an infamy in 30-40mins while also going net-neutral/positive with money. During this grind, I came across CCL #1, ILikeToast5 (aka TheSeal27), where he addressed me as the potential CCL #30. After that moment, I was inspired to reach that #30 spot and continued my grind. This continued until the Wi-Fi of my dorm building went out for 2 days, so on the 2nd day I had to literally walk to my school’s library to play Notoriety . Anyways after that scuffed grind, I came back to my dorm, when my internet was finally back up, however, I was behind schedule with infamies and CCL #31 Alxzor/Brago was 12 infamies ahead of me and was also in pursuit of reaching CCL before me (Brago: 231, Me: 219). So I told myself, “I can’t let this slide, I’ve got to ratio this #####.”"
 		+ "<p></p>On 04/27/2025 while at Infamy 226, fueled by a large iced coffee, a sausage egg and cheese sandwichand some Pepsi Zero’s , I started pumping out infamy after infamy after infamy. The only time I walked away from my desk was for piss breaks . Since me and Brago were in different time zones and he grinded while I was asleep, I knew for sure he had to have been in the 240’s, so I had to get CCL TODAY if I were to reach that #30 spot. Although my strategy was good for solo runs, I also had the help of some other friends both before and during this gauntlet of infamies. 11hrs later, my short term rival Brago joined the game. His infamy… 242, mine… was just a measly 246! I was 4 Infamies ahead of him and knew it was a gg’s. So I did what I do best and clutched that number #30 spot after 13hrs of non-stop grinding. After the grind, I legit couldn’t stop thinking about the Depot . Had I not grinded for that long, I would’ve lost that #30 spot. So this means I’m potentially the first CCL player to grind for it during the College Hell of APRIL ."
 		+ "<p></p>I would like to give thanks to the following people that helped me on this grind. MVP & #1 Supporter: blast (@ShopBlastsLocker). Inspiration: CCL #31 Brago (@Alxzor) & CCL #1 ILikeToast5 (aka TheSeal27). Supporters & Teammates: abcd (@DeTeditive), Facepalm2221 (@facepalm2221), MoonGrave (@Ekko_lokation), Retro (@InfinitelyRetro & ngl 2nd MVP), XYZcheeseborger (@lawsuitace), thermonuclear bullet (@Liokkgi), mung ster (@munster4best), Karlo (@hikaru123456), Tuxedoge (@Magnuslover2), bruh (@NathanJZC), ex0sphere (@ex0spher_e) & nark (@narkyii). Honorable Mention: @ameertttfssd201099.",
-		undefined,
+		undefined, // contacted, waiting
 		];
 		
 		for (var x = 0; x < grassAvoiders; x++) {
@@ -982,7 +982,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~55 hours, 49 minutes.
+		Estimated total active development time across all versions: ~55 hours, 55 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -994,7 +994,7 @@
 		<b>[Testing] Version 0.1.1f</b>
 		<ul>
 			${updateLogEntry('edit', "Fixed Update Log entry Version 0.1.1e having the [Testing] tag instead of a release timestamp.")}
-			${updateLogEntry('other', "Estimated active development time: ~1 minute.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-05-03 01:40] Version 0.1.1e</b>
