@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.1.1i testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.1.2 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -1005,66 +1005,70 @@
 			${updateLogEntry('fix', 'Patch of a problem')}
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
-		<p/>
-		Estimated total active development time across all versions: ~57 hours, 13 minutes.
-		<p/>
+		<p></p>
+		Estimated total active development time across all versions: ~57 hours, 26 minutes.
+		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
-		<p/>
+		<p></p>
 		Some features of this tool are copied from my other tools, including an extremely developed tool that has seen hundreds of hours of active development time yet hasn't seen the light of day with a release.
 		</ul>
 		</p>
 		<hr/>
-		<p>
-		<b>[Testing] Version 0.1.1i</b>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+		<b>[Testing] Version 0.1.2</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
+			${updateLogEntry('add', "Added visual boxes to each Update Log version entry.")}
+			${updateLogEntry('edit', "Reordered 1 sub-entry in Update Log entry Version 0.1.1f.")}
+			${updateLogEntry('edit', "Changed Update Log entry Version 0.0.1a's estimated active development time from <code>~1.5 hours</code> to <code>~1 hour, 30 minutes</code> for consistency.")}
+			${updateLogEntry('edit', "Some minor source code changes.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
-			${updateLogEntry('other', "Estimated active development time: ~53 minutes.")}
-		</ul></p>
-		<p>
+			${updateLogEntry('other', "Estimated active development time: ~1 hour, 6 minutes.")}
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
 		<ul>
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Moved a part of CCL #32's user-written description to their notes while also improving the grammar.")}
 			${updateLogEntry('other', "Estimated active development time: ~2 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:02] Version 0.1.1g</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #11's and #32's user-written descriptions.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('other', "Estimated active development time: ~13 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 08:19] Version 0.1.1f</b>
 		<ul>
-			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #32.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added notes to CCL #29's entry.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #32.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Fixed Update Log entry Version 0.1.1e having the [Testing] tag instead of a release timestamp.")}
 			${updateLogEntry('other', "Estimated active development time: ~12 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 01:40] Version 0.1.1e</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Modified the first paragraph of the top-of-section notes.")}
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-01 10:35] Version 0.1.1d</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Prepended an expansion to the top-of-section notes.")}
 			${updateLogEntry('other', "Estimated active development time: ~13 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-01 04:43] Version 0.1.1c</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #21's and #30's user-written descriptions.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Some formatting adjustments to CCL #1's user-written description.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Corrected CCL #31's display name: <code>Alxzor</code> > <code>Brago</code>.")}
 			${updateLogEntry('other', "Estimated active development time: ~18 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-30 04:26] Version 0.1.1b</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Noted CCL #18's ownership of the Blue Navy (100) classic infamy suit.")}
@@ -1072,14 +1076,14 @@
 			${updateLogEntry('edit', "Slightly reordered the sub-entries in Update Log entry Version 0.1.1.")}
 			${updateLogEntry('fix', "Menu Miscellaneous > Section Results: Fixed a bug where current mutator rank is always 0 regardless of the input.")}
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-29 23:30] Version 0.1.1a</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #31.")}
 			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-29 01:25] Version 0.1.1</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: With 'Computing' toggle setting set to 'Money', the text " + '"' + "Overrides" + " 'Desired money' input" + '"' + " now appears in the 'Until this many rotations' input's input explanation.")}
@@ -1087,8 +1091,8 @@
 			${updateLogEntry('edit', "Infamy and Level texts now default to the non-infamy chat colour, if roman numerals are disabled or if the value is not greater than 0.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: With Section Progression Settings input 'Until this many rotations' value greater than 0, the listed playtime per run is no longer the total time in the rotation, but rather the average.")}
 			${updateLogEntry('other', "Estimated active development time: ~39 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-28 12:08] <u>Version 0.1.0</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator: Added a third option to the 'Computing' toggle setting: 'Money'. This appears as option 2, while 'MXP & Mutator Ranks' has been moved to option 3.")}
@@ -1107,14 +1111,14 @@
 			${updateLogEntry('edit', "Clarified update log entry Version 0.0.1 as having added the listed people as testers, rather than them having tested the update. This is to avoid confusion of them having possibly not tested future updates. Also removed tester ashvul's note of 'may have not tested'.")}
 			${updateLogEntry('fix', "Fixed the update log's estimated total active development time not accounting for Version 0.0.2c.")}
 			${updateLogEntry('other', "Estimated active development time: ~4 hours, 43 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-25 22:08] Version 0.0.2c</b>
 		<ul>
 			${updateLogEntry('edit', "Fixed improper date format in the update log's Version 0.0.2b entry.")}
 			${updateLogEntry('other', "Estimated active development time: ~1 minute.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-25 22:03] Version 0.0.2b</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and included runs greater than 0, added leftover MXP to the outputted results. With/without any included runs, added Mutator Ranks difference.")}
@@ -1124,8 +1128,8 @@
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #1's user-written description.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Infamy Settings: Fixed a bug where hiding the Infamy Settings inputs would not work on first click after tool load.")}
 			${updateLogEntry('other', "Estimated active development time: ~27 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-21 01:39] Version 0.0.2a</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Infamy Settings: Added input explanations to the 'Current infamy level' and 'Desired infamy level' inputs: for each, explaining that a whole number must be inputted.")}
@@ -1135,8 +1139,8 @@
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #4's notes.")}
 			${updateLogEntry('edit', "Made update log entry Version 0.0.2 underlined. Adjusted the underline format of Version 0.0.1.")}
 			${updateLogEntry('other', "Estimated active development time: ~10 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-18 13:17] <u>Version 0.0.2</u></b>
 		<ul>
 			${updateLogEntry('add', "Added input toggle for EXP formula. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).")}
@@ -1148,28 +1152,28 @@
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
 			${updateLogEntry('edit', "Section Hall of CCLs: Slight changes to CCL #27's notes.")}
 			${updateLogEntry('other', "Estimated active development time: ~35 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-16 00:12] Version 0.0.1e</b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #29.")}
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-14 17:47] Version 0.0.1d</b>
 		<ul>
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
 			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-14 15:05] Version 0.0.1c</b>
 		<ul>
 			${updateLogEntry('edit', "Section Hall of CCLs: Changed " + '"' + "Times are noted" + '"' + " to " + '"' + "Badge obtainment times are noted" + '"' + ".")}
 			${updateLogEntry('edit', "Section Hall of CCLs: CCL #2's user-written description now begins with a h1 tag.")}
 			${updateLogEntry('edit', "Fixed update log entry Version 0.0.1b, sub-entry #2: CCLs #25 and #26 > CCLs #20 and #25")}
 			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-14 10:15] Version 0.0.1b</b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added " + '"' + "Open images in a new tab to view the full image." + '"' + "to the top-of-section primary info.")}
@@ -1179,27 +1183,28 @@
 			${updateLogEntry('edit', "In the Hall of CCLs section, the 'User-written description' toggle button now displays a mouse pointer icon on hover.")}
 			${updateLogEntry('edit', "Renamed section " + '"' + "Update Logs" + '"' + " to " + '"' + "Update Log" + '"' + ". Update Log entry " + '"' + "Version Indev" + '"' + " no longer displays the [Testing] tag.")}
 			${updateLogEntry('other', "Estimated active development time: ~51 minutes.")}
-		</ul></p>
-		<p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-13 15:02] Version 0.0.1a</b>
 		<ul>
 			${updateLogEntry('add', "Significantly expanded CCL #2's entry in the Hall of CCLs, and modified existing parts. Also noted that CCL #28 owns the classic Blue Navy (100) suit.")}
 			${updateLogEntry('edit', "Removed 'v' from the top header text of the tool's version.")}
 			${updateLogEntry('fix', "In the Hall of CCLs, corrected all CCL players' Rank 250 badge obtainment timestamps to exact timestamps right down to the milliseconds using the Roblox badges API, simultaneously correcting the 'time since previous' and 'average time apart' values as well.")}
-			${updateLogEntry('other', "Estimated active development time: ~1.5 hours.")}
-		</ul></p>
-		<p>
+			${updateLogEntry('other', "Estimated active development time: ~1 hour, 30 minutes.")}
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-04-13 08:20] <u>Version 0.0.1</u></b>
 		<ul>
 			${updateLogEntry('other', "Initial public release.")}
 			${updateLogEntry('other', "Added the following testers: ashvul, nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
-		</ul></p>
+		</ul></div>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b><u>Version Indev</u></b>
 		<ul>
 			${updateLogEntry('add', "Added everything else. (A lot!)")}
 			${updateLogEntry('other', "Estimated active development time: ~40 hours over about 10 weeks.")}
-		</ul></p>
+		</ul></div>
 		<hr/>
 		</ul>`
 		
@@ -1878,9 +1883,9 @@
 					outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig_MXP.leftoverMXP) + "</span>";
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
 						if (data.untilRotations.greaterThan(0)) {
-							outputString += "<p/>Assuming gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(rotationInputsCalculated.mxp) + " MXP</span> and playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per rotation:";
+							outputString += "<p></p>Assuming gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(rotationInputsCalculated.mxp) + " MXP</span> and playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per rotation:";
 						} else {
-							outputString += "<p/>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+							outputString += "<p></p>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
 						}
 					}
 				} else {
