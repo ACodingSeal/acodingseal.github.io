@@ -1006,7 +1006,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p/>
-		Estimated total active development time across all versions: ~57 hours, 10 minutes.
+		Estimated total active development time across all versions: ~57 hours, 13 minutes.
 		<p/>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p/>
@@ -1019,7 +1019,8 @@
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
-			${updateLogEntry('other', "Estimated active development time: ~50 minutes.")}
+			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
+			${updateLogEntry('other', "Estimated active development time: ~53 minutes.")}
 		</ul></p>
 		<p>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
@@ -1828,7 +1829,7 @@
 					orig_MXP = calcMXPReq({untilMXP: false}, {currentRank:data.currentMutatorRank, goalRank:data.goalMutatorRank, remainingMXP:data.remainingMXP});
 					totalMxpReq = totalMxpReq.add(orig_MXP);
 					outputString += "To go from <span class='NotorietyEXPCalculator_MXP'>Mutator Rank " + formatInt(data.currentMutatorRank) + "</span> to <span class='NotorietyEXPCalculator_MXP'>" + formatInt(data.goalMutatorRank) + "</span>"
-					outputString += ' (Mutator Ranks: +' + formatInt(orig_MXP.extraRanks)
+					outputString += ' (Mutator Ranks: +' + formatInt(data.goalMutatorRank.sub(data.currentMutatorRank))
 					if (data.currentMutatorRank.greaterThan(0)) {
 						outputString += ', x' + formatInt(data.goalMutatorRank.dividedBy(data.currentMutatorRank));
 						if (data.currentMutatorRank.greaterThan(1)) {
