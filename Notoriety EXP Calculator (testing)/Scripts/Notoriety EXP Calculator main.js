@@ -1098,7 +1098,7 @@
 			output += "<div class='CellText'>";
 			
 			if (input.position != undefined) {
-				output += '[#' + input.position.toLocaleString() + '] ';
+				output += '[CCL #' + input.position.toLocaleString() + '] ';
 			}
 			
 			output += "<b>";
@@ -1377,7 +1377,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~63 hours, 37 minutes.
+		Estimated total active development time across all versions: ~63 hours, 38 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1386,10 +1386,11 @@
 		</p>
 		<hr/>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[Testing] Version 0.1.2</b>
+		<b>[Testing] <u>Version 0.1.2</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default), newest to oldest or random.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Each CCL's obtainment number now has the prepended text 'CCL'. For instance, '[CCL #1]'.")}
 			${updateLogEntry('add', "Added visual boxes to each Update Log version entry.")}
 			${updateLogEntry('add', "Added two easter eggs?")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slightly clarified the top-of-section notes.")}
@@ -1398,7 +1399,7 @@
 			${updateLogEntry('edit', "Some source code changes, namely to improve consistent HTML output and slightly improve script performance.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
-			${updateLogEntry('other', "Estimated active development time: ~7 hours, 17 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 hours, 18 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
