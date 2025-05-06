@@ -210,58 +210,57 @@
 	document.getElementById('NotorietyEXPandInfamyCalculator').innerHTML = tool_baseHTML;
 	
 	(function() {
-		var tool_baseHTML_MenuContainer_Calculator = '';
-		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global' style='cursor:pointer;float:left'>Input method: <u>Sliders</u></div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleRomanNumerals_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleRomanNumerals_Global' style='cursor:pointer;float:left'>Roman numerals: <u>ON</u></div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputExplanations_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputExplanations_Global' style='cursor:pointer;float:left'>Input explanations: <u>Visible</u></div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleComputationType_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleComputationType_Global' style='cursor:pointer;float:left'>Computing: <u>EXP, Levels & Infamy</u></div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInfiniteInfamies_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInfiniteInfamies_Global' style='cursor:pointer;float:left'>Maximum infamies: <u>250</u></div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleAutoCalculate_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleAutoCalculate_Global' style='cursor:pointer;float:left'>Auto calculate: <u>OFF</u></div><br></small>";
-		tool_baseHTML_MenuContainer_Calculator += "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleTimeOutputFormat_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleTimeOutputFormat_Global' style='cursor:pointer;float:left'>Time output format: <u>words</u></div><br></small>";
+		var tool_baseHTML_MenuContainer_Calculator = "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global' style='cursor:pointer;float:left'>Input method: <u>Sliders</u></div><br></small>"
+		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleRomanNumerals_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleRomanNumerals_Global' style='cursor:pointer;float:left'>Roman numerals: <u>ON</u></div><br></small>"
+		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputExplanations_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputExplanations_Global' style='cursor:pointer;float:left'>Input explanations: <u>Visible</u></div><br></small>"
+		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleComputationType_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleComputationType_Global' style='cursor:pointer;float:left'>Computing: <u>EXP, Levels & Infamy</u></div><br></small>"
+		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInfiniteInfamies_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInfiniteInfamies_Global' style='cursor:pointer;float:left'>Maximum infamies: <u>250</u></div><br></small>"
+		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleAutoCalculate_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleAutoCalculate_Global' style='cursor:pointer;float:left'>Auto calculate: <u>OFF</u></div><br></small>"
+		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleTimeOutputFormat_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleTimeOutputFormat_Global' style='cursor:pointer;float:left'>Time output format: <u>words</u></div><br></small>"
 		
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_LevelSettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Level Settings</h2>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentLevelInput'>Current level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentLevelInput_Result'>undefined</span></code></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_RemainingEXPInput'>Remaining EXP: <input type='range' min='0' max='999999' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_RemainingEXPInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_RemainingEXPInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(This is EXP remaining until the next level.)</span></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalLevelInput'>Desired level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalLevelInput_Result'>undefined</span></code></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_EXPFormulaInput'>EXP formula: <input type='range' min='0' max='1' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_EXPFormulaInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_EXPFormulaInput_Result'>undefined</span></code></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Which EXP formula to use. 2 options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>). With input sliders disabled, input a number ranging from 0 to 1.</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_LevelSettings'>"
+		+ "<hr/><h2>Level Settings</h2>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentLevelInput'>Current level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentLevelInput_Result'>undefined</span></code></span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_RemainingEXPInput'>Remaining EXP: <input type='range' min='0' max='999999' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_RemainingEXPInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_RemainingEXPInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(This is EXP remaining until the next level.)</span></span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_GoalLevelInput'>Desired level: <input type='range' min='1' max='100' value='1' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalLevelInput_Result'>undefined</span></code></span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_EXPFormulaInput'>EXP formula: <input type='range' min='0' max='1' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_EXPFormulaInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_EXPFormulaInput_Result'>undefined</span></code></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Which EXP formula to use. 2 options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>). With input sliders disabled, input a number ranging from 0 to 1.</span></p>"
+		+ "</div>"
 		
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_MutatorRankSettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Mutator Rank Settings</h2>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMutatorRankInput'>Current rank: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_CurrentMutatorRankInput'></input><br><span style='font-size:80%'><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(Starting rank is 0.)</span></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_RemainingMXPInput'>Remaining MXP: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_RemainingMXPInput'></input><br><span style='font-size:80%'><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(This is MXP remaining until the next level. Leave blank if no progress has been made.)</span></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalMutatorRankInput'>Desired rank: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_GoalMutatorRankInput'></input></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_UntilMXPUsageInput'>Until MXP usage: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_UntilMXPUsageInput'></input><br><span style='font-size:80%'><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(Search for which Mutator Rank can be achieved using this much MXP. Overrides the 'Desired rank' setting.)</span></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_MutatorRankSettings'>"
+		+ "<hr/><h2>Mutator Rank Settings</h2>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMutatorRankInput'>Current rank: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_CurrentMutatorRankInput'></input><br><span style='font-size:80%'><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(Starting rank is 0.)</span></span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_RemainingMXPInput'>Remaining MXP: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_RemainingMXPInput'></input><br><span style='font-size:80%'><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(This is MXP remaining until the next level. Leave blank if no progress has been made.)</span></span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_GoalMutatorRankInput'>Desired rank: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_GoalMutatorRankInput'></input></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_UntilMXPUsageInput'>Until MXP usage: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_UntilMXPUsageInput'></input><br><span style='font-size:80%'><span class='NotorietyEXPandInfamyCalculator_InputExplanation'><br>(Search for which Mutator Rank can be achieved using this much MXP. Overrides the 'Desired rank' setting.)</span></span></p>"
+		+ "</div>"
 		
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_MoneySettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Money Settings</h2>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMoneyInput'>Current money: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput'></input><span id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This is the money that will be used for infamy costs. Default is <code>0</code>. Required setting when 'Desired infamy level' > 'Until out of money' is set to <code>Y</code>.)</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalMoneyInput'>Desired money: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_GoalMoneyInput'></input><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>Required setting when 'Computing' toggle setting is set to 'Money'.</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_MoneySettings'>"
+		+ "<hr/><h2>Money Settings</h2>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentMoneyInput'>Current money: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput'></input><span id='NotorietyEXPandInfamyCalculator_CurrentMoneyInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This is the money that will be used for infamy costs. Default is <code>0</code>. Required setting when 'Desired infamy level' > 'Until out of money' is set to <code>Y</code>.)</span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_GoalMoneyInput'>Desired money: <input style='width:4em' id='NotorietyEXPandInfamyCalculator_GoalMoneyInput'></input><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>Required setting when 'Computing' toggle setting is set to 'Money'.</span></p>"
+		+ "</div>"
 		
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_InfamySettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Infamy Settings</h2><small>If not calculating infamies, then <span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'>ignore these settings</span>.</small>";
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings' style='display:block'>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentInfamyLevelInput'>Current infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span></span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_GoalInfamyLevelInput'>Desired infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span><br>(Until out of money: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_UntilPoorCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation'> (Overrides 'Desired infamy level' setting and requires 'Run/rotation gains' to be properly defined.)</span>)</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_CheaperPassCheck'><a href='https://www.roblox.com/game-pass/748016'>Cheaper Infamy</a> gamepass: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CheaperPassCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Whether or not the user owns the Cheaper Infamy gamepass, which reduces the final monetary requirement of each infamy by 50%.)</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_PreMoneyReqLimitCheck'>Pre-money requirement limit: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_PreMoneyReqLimitCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This setting refers to the post-infamy 25 increasing infamy money requirement (+$10mil without cheaper pass, +$5mil with), which previously (prior to 3.9.5b on 2024-12-27T16:10Z) did not have a limit of $125mil without cheaper pass (or $62.5mil with).)</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "</div>";
-		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_InfamySettings'>"
+		+ "<hr/><h2>Infamy Settings</h2><small>If not calculating infamies, then <span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'>ignore these settings</span>.</small>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings' style='display:block'>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_CurrentInfamyLevelInput'>Current infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span></span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_GoalInfamyLevelInput'>Desired infamy level: <input type='range' min='0' max='250' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'>undefined</span></code><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Input a whole number.)</span><br>(Until out of money: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_UntilPoorCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation'> (Overrides 'Desired infamy level' setting and requires 'Run/rotation gains' to be properly defined.)</span>)</span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_CheaperPassCheck'><a href='https://www.roblox.com/game-pass/748016'>Cheaper Infamy</a> gamepass: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CheaperPassCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(Whether or not the user owns the Cheaper Infamy gamepass, which reduces the final monetary requirement of each infamy by 50%.)</span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_PreMoneyReqLimitCheck'>Pre-money requirement limit: <span style='width:4em;height:4em;display:inline-block'><button class='customCheckbox NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_PreMoneyReqLimitCheck' style='cursor:pointer'>[N]</button></span><span class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'><br>(This setting refers to the post-infamy 25 increasing infamy money requirement (+$10mil without cheaper pass, +$5mil with), which previously (prior to 3.9.5b on 2024-12-27T16:10Z) did not have a limit of $125mil without cheaper pass (or $62.5mil with).)</span></p>"
+		+ "</div>"
+		+ "</div>"
 		
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_ProgressionSettings'>";
-		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Progression Settings</h2>";		
-		tool_baseHTML_MenuContainer_Calculator += "<p>Run/rotation gains:<br><textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPandInfamyCalculator_RunGainsInput'></textarea><span id='NotorietyEXPandInfamyCalculator_RunGainsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p id='NotorietyEXPandInfamyCalculator_Block_UntilRotationsInput'>Until this many rotations: <input type='range' min='0' max='1000' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_UntilRotationsInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'>undefined</span></code></span><br><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>";
-		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_ProgressionSettings'>"
+		+ "<hr/><h2>Progression Settings</h2>"
+		+ "<p>Run/rotation gains:<br><textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPandInfamyCalculator_RunGainsInput'></textarea><span id='NotorietyEXPandInfamyCalculator_RunGainsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>"
+		+ "<p id='NotorietyEXPandInfamyCalculator_Block_UntilRotationsInput'>Until this many rotations: <input type='range' min='0' max='1000' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_UntilRotationsInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'>undefined</span></code></span><br><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>"
+		+ "</div>"
 		
-		tool_baseHTML_MenuContainer_Calculator += "<div id='NotorietyEXPandInfamyCalculator_Section_Results'>";
-		tool_baseHTML_MenuContainer_Calculator += "<hr/><h2>Results</h2>";
-		tool_baseHTML_MenuContainer_Calculator += "<p><div><p id='NotorietyEXPandInfamyCalculator_Section_Results_Disclaimer' style='font-size:80%'>placeholder!!!</p><div style='width:10em;height:4em;margin:auto'><div style='margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CalculateButton' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Calculate</button></div></div></div></p>";
-		tool_baseHTML_MenuContainer_Calculator += "<p><div id='NotorietyEXPandInfamyCalculator_OutputResults'>" + 'dallas medic bag scream' + "</div></p>";
-		tool_baseHTML_MenuContainer_Calculator += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_Results'>"
+		+ "<hr/><h2>Results</h2>"
+		+ "<p><div><p id='NotorietyEXPandInfamyCalculator_Section_Results_Disclaimer' style='font-size:80%'>placeholder!!!</p><div style='width:10em;height:4em;margin:auto'><div style='margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPandInfamyCalculator_CalculateButton' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Calculate</button></div></div></div></p>"
+		+ "<p><div id='NotorietyEXPandInfamyCalculator_OutputResults'>" + 'dallas medic bag scream' + "</div></p>"
+		+ "</div>";
 		
 		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Calculator').innerHTML = tool_baseHTML_MenuContainer_Calculator;
 	}());
@@ -269,12 +268,13 @@
 	(function() {
 		var tool_baseHTML_MenuContainer_Miscellaneous = '';
 		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_UpdateLog'>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_HallofInfamyCCLs'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<h2>Hall of CCLs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'>(toggle visibility)</span></small>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs' style='text-align:initial;display:none'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_UpdateLog'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Update Log</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'>(toggle visibility)</span></small>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog' style='text-align:initial;display:none'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
@@ -282,6 +282,40 @@
 		
 		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous').innerHTML = tool_baseHTML_MenuContainer_Miscellaneous;
 	}());
+	
+	var filterDaysOptions = "<option value='undefined'>day</option>";
+	var filterYearsOptions = "<option value='undefined'>year</option>";
+	for (var x = 0; x < 31; x++) {
+		filterDaysOptions += "<option value='" + (x + 1) + "'>" + (x + 1) + "</option>";
+	}
+	
+	// no support beyond the year 2124
+	for (var x = 0; x < 101; x++) {
+		filterYearsOptions += "<option value='" + (2024 + x) + "'>" + (2024 + x) + "</option>";
+	}
+	
+	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs').innerHTML = "<div style='text-align:center'>"
+		+ "At the end of the day, when we're no longer around, we become stories, a relic of the past, and we generally want to be remembered. To live on in society's collective minds, to ensure our story is told and retold countless times. That is true immortality. The following people have achieved Infamy Rank 250 (CCL) in Notoriety. Through their unwavering commitment, they have become legendary heisters known far and wide throughout the Notoriety criminal underground. For such an extraordinary accomplishment, they have earned a permanent recognition in the Hall of CCLs. These are their stories."
+		+ "<p></p>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. 'Time elapsed since badge obtainment' is actual elapsed time, and is updated on tool load or changing the 'Time output format' toggle setting. Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to the system time. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Roblox avatars must be updated manually with a tool update. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username)."
+		+ "<p></p><p style='font-weight:inherit;border-bottom:1px solid rgba(255,255,255,var(--bg-alpha));width:25%;margin:auto'>Filtering and Sorting</p>"
+		+ "<p></p>Filter: Classic infamy suits<br/>"
+		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson' type='checkbox'>Crimson (250)</input>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo' type='checkbox'>Rojo (200)</input>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty' type='checkbox'>Royalty (150)</input>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy' type='checkbox'>Blue Navy (100)</input>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions' type='checkbox'>Exclude?</input>"
+		+ "<p></p>Filter: Time<br/>"
+		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Year'>" + filterYearsOptions + "</select>"
+		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Month'><option value='undefined'>month</option><option value='0'>January</option><option value='1'>February</option><option value='2'>March</option><option value='3'>April</option><option value='4'>May</option><option value='5'>June</option><option value='6'>July</option><option value='7'>August</option><option value='8'>September</option><option value='9'>October</option><option value='10'>November</option><option value='11'>December</option></select>"
+		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Day'>" + filterDaysOptions + "</select>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions' type='checkbox'>Exclude?</input>"
+		+ "<p></p>Sort: Obtainment order<br/>"
+		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Sort_ObtainmentOrder'><option value='oldestNewest'>Oldest to newest</option><option value='newestOldest'>Newest to oldest</option></select>"
+		+ "<p></p><div style='width:10em;height:4em;margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Filter and sort!</button></div>"
+		+ "<p></p><div id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSort_GeneratedText'>you are such a medic bag (i need it)</div>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs_TheList'>*cloaker noises*</div>"
+		+ "</div>";
+	document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit').addEventListener('click', addHallofInfamyCCLs);
 	
 	const elem = {
 		toggleInputSliders_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'),
@@ -306,12 +340,25 @@
 		Section_MoneySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_MoneySettings'),
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
 		Section_Results: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Results'),
-		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
+		Section_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_Section_HallofInfamyCCLs'),
 		Section_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Section_UpdateLog'),
+		
+		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson'),
+		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo'),
+		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty'),
+		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy'),
+		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions'),
+		Section_HallofInfamyCCLs_Filter_Time_Year: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Year'),
+		Section_HallofInfamyCCLs_Filter_Time_Month: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Month'),
+		Section_HallofInfamyCCLs_Filter_Time_Day: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Day'),
+		Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions'),
+		Section_HallofInfamyCCLs_Sort_ObtainmentOrder: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Sort_ObtainmentOrder'),
+		Section_HallofInfamyCCLs_FilterSort_GeneratedText: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSort_GeneratedText'),
 		
 		SectionContainer_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings'),
 		SectionContainer_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog'),
 		SectionContainer_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs'),
+		SectionContainer_HallofInfamyCCLs_TheList: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs_TheList'),
 		
 		SectionContainerToggle_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'),
 		SectionContainerToggle_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'),
@@ -360,9 +407,10 @@
 	}
 	
 	function addHallofInfamyCCLs() {
-		elem.SectionContainer_HallofInfamyCCLs.innerHTML = '';
+		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
 		const grassAvoiders = 32;
-		var string = "<div style='text-align:center'>At the end of the day, when we're no longer around, we become stories, a relic of the past, and we generally want to be remembered. To live on in society's collective minds, to ensure our story is told and retold countless times. That is true immortality. The following people have achieved Infamy Rank 250 (CCL) in Notoriety. Through their unwavering commitment, they have become legendary heisters known far and wide throughout the Notoriety criminal underground. For such an extraordinary accomplishment, they have earned a permanent recognition in the Hall of CCLs. These are their stories.<p></p>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. 'Time elapsed since badge obtainment' is actual elapsed time, and is updated on tool load or changing the 'Time output format' toggle setting. Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to the system time. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Roblox avatars must be updated manually with a tool update. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username).</div>";
+		var generatedEntries = 0;
+		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
 			this.username = username;
 			this.displayName = displayName;
@@ -755,6 +803,28 @@
 		"<p></p>Special thanks to my friends - iron (18th CCL), minh, rice and pho for supporting me along my CCL journey. They have boosted me alot since I started infamy grinding.",
 		];
 		
+		const playersData_classicInfamySuit = [];
+		// ymdLocalTimeCCLs is based on local system time
+		const ymdLocalTimeCCLs = [];
+		console.log();
+		for (var x = 0; x < grassAvoiders; x++) {
+			playersData_classicInfamySuit.push(undefined);
+			ymdLocalTimeCCLs.push({year:new Date(playersData_whenCCL[x].timestamp).getFullYear(), month:new Date(playersData_whenCCL[x].timestamp).getMonth(), day:new Date(playersData_whenCCL[x].timestamp).getDate()});
+		}
+		console.log(ymdLocalTimeCCLs[8].day);
+		playersData_classicInfamySuit[0] = playersData_classicInfamySuit[1] = playersData_classicInfamySuit[2] = playersData_classicInfamySuit[3] = 'Crimson';
+		playersData_classicInfamySuit[4] = 'Rojo';
+		playersData_classicInfamySuit[5] = playersData_classicInfamySuit[6] = playersData_classicInfamySuit[7] = playersData_classicInfamySuit[26] = 'Royalty';
+		playersData_classicInfamySuit[8] = playersData_classicInfamySuit[12] = playersData_classicInfamySuit[17] = playersData_classicInfamySuit[25] = playersData_classicInfamySuit[27] = 'Blue Navy';
+		const classicSuitOwners = {
+			crimson:[playersData_usernames[0], playersData_usernames[1], playersData_usernames[2], playersData_usernames[3]],
+			rojo:[playersData_usernames[4]],
+			royalty:[playersData_usernames[5], playersData_usernames[6], playersData_usernames[7], playersData_usernames[26]],
+			blueNavy:[playersData_usernames[8], playersData_usernames[12], playersData_usernames[17], playersData_usernames[25], playersData_usernames[27]],
+		}
+		console.log(classicSuitOwners);
+		console.log(playersData_whenCCL[0].timestamp);
+		
 		for (var x = 0; x < grassAvoiders; x++) {
 			players.push(new Player());
 			if (playersData_usernames[x] == undefined) {
@@ -805,7 +875,155 @@
 			} else {
 				players[x].ownDescription = playersData_ownDescription[x];
 			}
+			
+			if (playersData_classicInfamySuit[x] == undefined) {
+				players[x].classicInfamySuit = undefined;
+			} else {
+				players[x].classicInfamySuit = playersData_classicInfamySuit[x];
+			}
 		}
+		
+		const filters = {
+			classicInfamySuits: {crimson:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson.checked, rojo:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo.checked, royalty:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty.checked, blueNavy:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions.checked},
+			time: {year:elem.Section_HallofInfamyCCLs_Filter_Time_Year.value, month:elem.Section_HallofInfamyCCLs_Filter_Time_Month.value,day:elem.Section_HallofInfamyCCLs_Filter_Time_Day.value, exclude:elem.Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions.checked},
+		}
+		if (filters.classicInfamySuits.crimson == false && filters.classicInfamySuits.rojo == false && filters.classicInfamySuits.royalty == false && filters.classicInfamySuits.blueNavy == false && filters.classicInfamySuits.exclude == false) {
+			filters.classicInfamySuits.unused = true;
+		}
+		if (filters.time.year == 'undefined' && filters.time.month == 'undefined' && filters.time.day == 'undefined' && filters.time.exclude == false) {
+			filters.time.unused = true;
+		}
+		console.log(filters.classicInfamySuits);
+		console.log(filters.time);
+		const filterIncludedCCLs = [];
+		const filterIncludedCCLs_positions = [];
+		
+		for (var x = 0; x < grassAvoiders; x++) {
+			var filterInCurrentCCL = true;
+			if (filters.classicInfamySuits.unused != true) {
+				if (filters.classicInfamySuits.crimson == true) {
+					if (['Crimson'].indexOf(players[x].classicInfamySuit) != -1) {
+						if (filters.classicInfamySuits.exclude == false) {
+							filterInCurrentCCL = true;
+						} else {
+							filterInCurrentCCL = false;
+						}
+					} else {
+						if (filters.classicInfamySuits.exclude == false) {
+							filterInCurrentCCL = false;
+						}
+					}
+				}
+				if (filters.classicInfamySuits.rojo == true) {
+					if (['Rojo'].indexOf(players[x].classicInfamySuit) != -1) {
+						if (filters.classicInfamySuits.exclude == false) {
+							filterInCurrentCCL = true;
+						} else {
+							filterInCurrentCCL = false;
+						}
+					} else {
+						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true) {
+							filterInCurrentCCL = false;
+						}
+					}
+				}
+				if (filters.classicInfamySuits.royalty == true) {
+					if (['Royalty'].indexOf(players[x].classicInfamySuit) != -1) {
+						if (filters.classicInfamySuits.exclude == false) {
+							filterInCurrentCCL = true;
+						} else {
+							filterInCurrentCCL = false;
+						}
+					} else {
+						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true && filters.classicInfamySuits.rojo != true) {
+							filterInCurrentCCL = false;
+						}
+					}
+				}
+				if (filters.classicInfamySuits.blueNavy == true) {
+					if (['Blue Navy'].indexOf(players[x].classicInfamySuit) != -1) {
+						if (filters.classicInfamySuits.exclude == false) {
+							filterInCurrentCCL = true;
+						} else {
+							filterInCurrentCCL = false;
+						}
+					} else {
+						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true && filters.classicInfamySuits.rojo != true && filters.classicInfamySuits.royalty != true) {
+							filterInCurrentCCL = false;
+						}
+					}
+				}
+			}
+			
+			// filters.time.unused = false;
+			// filters.time.day = '1';
+			const timeFilters = [];
+			if (filters.time.unused != true) {
+				// test
+				if (filters.time.year != 'undefined') {
+					if (ymdLocalTimeCCLs[x].year.toString() == filters.time.year) {
+						if (filters.time.exclude == false) {
+							timeFilters.push(true);
+						} else {
+							timeFilters.push(false);
+						}
+					} else {
+						if (filters.time.exclude == false) {
+							timeFilters.push(false);
+						}
+					}
+				}
+				if (filters.time.month != 'undefined') {
+					if (ymdLocalTimeCCLs[x].month.toString() == filters.time.month) {
+						if (filters.time.exclude == false) {
+							timeFilters.push(true);
+						} else {
+							timeFilters.push(false);
+						}
+					} else {
+						if (filters.time.exclude == false) {
+							timeFilters.push(false);
+						}
+					}
+				}
+				if (filters.time.day != 'undefined') {
+					if (ymdLocalTimeCCLs[x].day.toString() == filters.time.day) {
+						if (filters.time.exclude == false) {
+							timeFilters.push(true);
+						} else {
+							timeFilters.push(false);
+						}
+					} else {
+						if (filters.time.exclude == false) {
+							timeFilters.push(false);
+						}
+					}
+				}
+			}
+			if (timeFilters.indexOf(false) != -1) {
+				filterInCurrentCCL = false;
+			}
+			console.log(timeFilters);
+			// console.log(ymdLocalTimeCCLs[x].day);
+			// console.log(x);
+			
+			if (filterInCurrentCCL == true) {
+				filterIncludedCCLs.push(players[x]);
+				filterIncludedCCLs_positions.push(players[x].position);
+			}
+		}
+		
+		// elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value = 'newestOldest';
+		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
+			filterIncludedCCLs.reverse();
+			filterIncludedCCLs_positions.reverse();
+		}
+		console.log(elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value);
+		console.log(filterIncludedCCLs);
+		
+		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + ".";
+		
+		// EVERYTHING BELOW THIS LINE GENERATES ENTRIES
 		
 		// Crimson: 128,0,0
 		// Rojo: 220,20,60
@@ -928,37 +1146,96 @@
 			
 			return output;
 		}
-		string += "<p><table style='margin:auto;width:100%'>";
-		string += "<hr/><h3 style='text-align:center'>The Crimson Four</h3>";
-		for (var x = 0; x < 4; x++) {
-			string += playerHTML(players[x], '128,0,0');
-		}
-		string += "</table></p>";
 		
-		string += "<p><table style='margin:auto;width:100%'>";
-		string += "<h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss:ms", false) + ") CCLs</h3>";
-		for (var x = 0; x < (grassAvoiders - 4); x++) {
-			if (["seroly2345"].indexOf(players[x + 4].username) != -1) {
-				// Rojo (200)
-				string += playerHTML(players[x + 4], '220,20,60');
-			} else if (["theREALdynamic", "bigfootbb045", "LuvlyGirlMaisy", "Aimilized"].indexOf(players[x + 4].username) != -1) {
-				// Royalty (150)
-				string += playerHTML(players[x + 4], '106,50,159');
-			} else if (["ARandomNoobGamer", "cl3rical", "Danneilkoko", "M4kA13", "LosCracks9000"].indexOf(players[x + 4].username) != -1) {
-				// Blue Navy (100)
-				string += playerHTML(players[x + 4], '7,55,99');
-			} else {
-				string += playerHTML(players[x + 4]);
+		const filterIncludedCCLs_positions_alt = filterIncludedCCLs_positions;
+		console.log(filterIncludedCCLs_positions_alt);
+		var crimsonIncluded = 0;
+		for (var x = 0; x < 4; x++) {
+			if (filterIncludedCCLs_positions_alt.indexOf(x + 1) != -1) {
+				filterIncludedCCLs_positions_alt.splice(filterIncludedCCLs_positions_alt.indexOf(x + 1), 1);
+				crimsonIncluded++;
 			}
 		}
-		string += "</table></p>";
-		elem.SectionContainer_HallofInfamyCCLs.innerHTML = string;
+		const playerEntryTables = [];
+		
+		console.log(Math.min(...filterIncludedCCLs_positions));
+		console.log(filterIncludedCCLs_positions);
+		console.log(filterIncludedCCLs_positions_alt);
+		console.log(crimsonIncluded);
+		function getCrimsonTable() {
+			var string_a = '';
+			if (crimsonIncluded > 0) {
+				console.log(filterIncludedCCLs[filterIncludedCCLs.length - 1]);
+				string_a = '';
+				string_a += "<p><table style='margin:auto;width:100%'>";
+				if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
+					for (var x = crimsonIncluded; x > 0; x--) {
+						string_a += playerHTML(filterIncludedCCLs[filterIncludedCCLs.length - x], '128,0,0');
+						// console.log(filterIncludedCCLs[x + filterIncludedCCLs.length - 1]);
+						console.log(filterIncludedCCLs[x].username);
+					}
+				} else {
+					for (var x = 0; x < crimsonIncluded; x++) {
+						string_a += playerHTML(filterIncludedCCLs[x], '128,0,0');
+					}
+				}
+				string_a += "<hr/><h3 style='text-align:center'>The Crimson " + ['One', 'Two', 'Three', 'Four'][crimsonIncluded - 1] + "</h3>";
+				string_a += "</table></p>";
+				return string_a;
+			}
+		}
+		
+		console.log(filterIncludedCCLs_positions_alt);
+		function getStandardTable() {
+			var string_a = '';
+			if (Math.min(...filterIncludedCCLs_positions_alt) >= 5 && filterIncludedCCLs_positions_alt.length > 0) {
+				string_a = '';
+				string_a += "<p><table style='margin:auto;width:100%'>";
+				string_a += "<hr/><h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss:ms", false) + ") CCLs</h3>";
+				var maxIterations = filterIncludedCCLs.length;
+				var iterationBase = crimsonIncluded;
+				if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
+					maxIterations = maxIterations - crimsonIncluded;
+					iterationBase = 0;
+				}
+				for (var x = 0 + iterationBase; x < maxIterations; x++) {
+					if (filterIncludedCCLs[x].classicInfamySuit == 'Rojo') {
+						// Rojo (200)
+						string_a += playerHTML(filterIncludedCCLs[x], '220,20,60');
+					} else if (filterIncludedCCLs[x].classicInfamySuit == 'Royalty') {
+						// Royalty (150)
+						string_a += playerHTML(filterIncludedCCLs[x], '106,50,159');
+					} else if (filterIncludedCCLs[x].classicInfamySuit == 'Blue Navy') {
+						// Blue Navy (100)
+						string_a += playerHTML(filterIncludedCCLs[x], '7,55,99');
+					} else {
+						string_a += playerHTML(filterIncludedCCLs[x]);
+					}
+					// console.log(filterIncludedCCLs[x].username);
+					console.log(filterIncludedCCLs[x]);
+				}
+				string_a += "</table></p>";
+			}
+			return string_a;
+		}
+		console.log(elem.SectionContainer_HallofInfamyCCLs_TheList);
+		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
+			playerEntryTables.push(getStandardTable());
+			playerEntryTables.push(getCrimsonTable());
+		} else {
+			playerEntryTables.push(getCrimsonTable());
+			playerEntryTables.push(getStandardTable());
+		}
+		// console.log(playerEntryTables[0]);
+		// console.log(playerEntryTables[1]);
+		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = playerEntryTables.join("");
 		
 		function makeDescButtonWork(id) {
 			document.getElementById(id).style.display == 'none' ? document.getElementById(id).style.display = 'block' : document.getElementById(id).style.display = 'none';
 		}
 		
 		for (var x = 0; x < ownDescriptionButtons.length; x++) {
+			// console.log(ownDescriptionButtons[x]);
 			document.getElementById(ownDescriptionButtons[x]).addEventListener('click', function() {
 				makeDescButtonWork(ownDescriptionContainers[ownDescriptionButtons.indexOf(this.id)]);
 			});
@@ -1006,7 +1283,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~57 hours, 26 minutes.
+		Estimated total active development time across all versions: ~61 hours, 46 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1017,14 +1294,15 @@
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[Testing] Version 0.1.2</b>
 		<ul>
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default) or newest to oldest.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
 			${updateLogEntry('add', "Added visual boxes to each Update Log version entry.")}
 			${updateLogEntry('edit', "Reordered 1 sub-entry in Update Log entry Version 0.1.1f.")}
 			${updateLogEntry('edit', "Changed Update Log entry Version 0.0.1a's estimated active development time from <code>~1.5 hours</code> to <code>~1 hour, 30 minutes</code> for consistency.")}
-			${updateLogEntry('edit', "Some minor source code changes.")}
+			${updateLogEntry('edit', "Some source code changes to improve consistent HTML output and slightly improve script performance.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
-			${updateLogEntry('other', "Estimated active development time: ~1 hour, 6 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~5 hours, 26 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
