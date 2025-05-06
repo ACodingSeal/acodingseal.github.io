@@ -967,12 +967,19 @@
 				}
 			}
 			
-			// filters.time.unused = false;
-			// filters.time.day = '1';
+			/*
+			filters.time.unused = false;
+			filters.time.year = '2025';
+			filters.time.month = '2';
+			filters.time.day = '1';
+			filters.time.exclude = true;
+			*/
 			const timeFilters = [];
+			var timeFiltersActive = 0;
 			if (filters.time.unused != true) {
 				// test
 				if (filters.time.year != 'undefined') {
+					timeFiltersActive++;
 					if (ymdLocalTimeCCLs[x].year.toString() == filters.time.year) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
@@ -986,6 +993,7 @@
 					}
 				}
 				if (filters.time.month != 'undefined') {
+					timeFiltersActive++;
 					if (ymdLocalTimeCCLs[x].month.toString() == filters.time.month) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
@@ -999,6 +1007,7 @@
 					}
 				}
 				if (filters.time.day != 'undefined') {
+					timeFiltersActive++;
 					if (ymdLocalTimeCCLs[x].day.toString() == filters.time.day) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
@@ -1012,8 +1021,10 @@
 					}
 				}
 			}
-			if (timeFilters.indexOf(false) != -1) {
+			if (timeFilters.length == timeFiltersActive) {
 				filterInCurrentCCL = false;
+			} else {
+				filterInCurrentCCL = true;
 			}
 			console.log(timeFilters);
 			// console.log(ymdLocalTimeCCLs[x].day);
@@ -1310,7 +1321,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~61 hours, 51 minutes.
+		Estimated total active development time across all versions: ~62 hours, 1 minute.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1329,7 +1340,7 @@
 			${updateLogEntry('edit', "Some source code changes to improve consistent HTML output and slightly improve script performance.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
-			${updateLogEntry('other', "Estimated active development time: ~5 hours, 31 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~5 hours, 41 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
