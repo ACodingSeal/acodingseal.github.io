@@ -309,13 +309,12 @@
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Month'><option value='undefined'>month</option><option value='0'>January</option><option value='1'>February</option><option value='2'>March</option><option value='3'>April</option><option value='4'>May</option><option value='5'>June</option><option value='6'>July</option><option value='7'>August</option><option value='8'>September</option><option value='9'>October</option><option value='10'>November</option><option value='11'>December</option></select>"
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Day'>" + filterDaysOptions + "</select>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions' type='checkbox'>Exclude?</input>"
-		+ "<p></p>Sort: Obtainment order<br/>"
-		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Sort_ObtainmentOrder'><option value='oldestNewest'>Oldest to newest</option><option value='newestOldest'>Newest to oldest</option></select>"
-		+ "<p></p><div style='width:10em;height:4em;margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Filter and sort!</button></div>"
+		+ "<p></p>Sort: Badge obtainment timestamp order<br/>"
+		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Sort_ObtainmentOrder'><option value='oldestNewest'>Oldest to newest</option><option value='newestOldest'>Newest to oldest</option><option value='random'>Random</option></select>"
+		+ "<p></p><div style='width:10em;height:4em;margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Filter and sort</button></div>"
 		+ "<p></p><div id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSort_GeneratedText'>you are such a medic bag (i need it)</div>"
 		+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs_TheList'>*cloaker noises*</div>"
 		+ "</div>";
-	document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit').addEventListener('click', addHallofInfamyCCLs);
 	
 	const elem = {
 		toggleInputSliders_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'),
@@ -404,6 +403,8 @@
 		resultsDisclaimer: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Results_Disclaimer'),
 		calculateButton: document.getElementById('NotorietyEXPandInfamyCalculator_CalculateButton'),
 		outputResults: document.getElementById('NotorietyEXPandInfamyCalculator_OutputResults'),
+		
+		filterSortButton: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit'),
 	}
 	
 	function addHallofInfamyCCLs() {
@@ -675,13 +676,13 @@
 		+ "<br/><ul class='mod-gallery'>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0010.jpg'></div><div class='gallerytext'>The P.D.W Gang<br>(Pixel, Derp, Will)</div></li>"
 		+ "</ul>",
-		undefined, // contacted and acknowledged
-		undefined, // contacted and acknowledged
-		undefined, // contacted and acknowledged, did not provide description
+		undefined, // contacted (2025-04-12) and acknowledged
+		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
+		undefined, // contacted (unknown date) and acknowledged, did not provide description
 		undefined, // not contacted
-		undefined, // contacted, no response
+		undefined, // contacted (2025-04-12), no response
 		undefined, // not contacted
-		undefined, // contacted, refused to provide description
+		undefined, // contacted (2025-05-03), refused to provide description (also unsure what to write)
 		// #10
 		"i knew about notoriety for a very long time, and i did try it out for a bit, but ended up stopping (couldn't tell you why, i have basically no memory of it other than when i started playing again, i was level 8 and had like 50k in cash)"
 		+ "<p></p>i played payday 2 on and off for years (on console, wasn't much of a pc gamer at the time). eventually moved onto other games. never played payday: the heist or anything, but i did enjoy payday 2"
@@ -709,12 +710,12 @@
 		+ "<br>My ingame user is kogamarobloxman<br>My discord: stix_real"
 		+ "<p></p><a href='https://www.youtube.com/watch?v=a536IwGzJtg'>The video where I became infamy CCL</a>"
 		+ "",
-		undefined, // contacted, refused to provide description
-		undefined, // contacted, refused to provide description
+		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
+		undefined, // contacted (2025-04-18), refused to provide description (refusal deleted)
 		undefined, // not contacted
 		undefined, // not contacted
 		undefined, // not contacted
-		undefined, // contacted, waiting
+		undefined, // contacted (2025-04-27), waiting
 		undefined, // not contacted
 		undefined, // not contacted
 		// #20
@@ -742,8 +743,8 @@
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0002.png'></div><div class='gallerytext'>Messages with informant (part 2)</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0003.png'></div><div class='gallerytext'>Messages with informant (part 3)</div></li>"
 		+ "</ul>",
-		undefined, // contacted, no response
-		undefined, // contacted, refused to provide description
+		undefined, // contacted (2025-04-15), no response
+		undefined, // contacted (2025-05-03), refused to provide description
 		undefined, // not contacted
 		// #25
 		/*
@@ -790,8 +791,8 @@
 		+ "<p></p>During that time I also joined Moonstone Games, where I am still active. The fall of that year, I became interested in endurance challenges for Notoriety. To my knowledge, we were the first to ever get 200 bags on Trick or Treat (Red, Toxic, Myself and Jon) , and the first to get 200 vials on Blood Money (Myself and LuboMontana). We also attempted 1.000 bags on ToT multiple times, but we were not able to do it at that time. After the DMCA takedown, I remained active in the community until the re-release."
 		+ "<p></p>After that, I got invested into getting more infamies and playing more, and I was the second ever member of Pho's ECM Rushing server, where I am also active to this day and rank relatively highly in, being an active ECM Rusher and having gotten most of my infamies in. By 31/12/2024 I was infamy 100, then by 16/01/2025 150, and then infamy 200 on the 07/02/2025."
 		+ "<p></p>Two days later, myself and the same people that attempted 1.000 bags in ToT before the DMCA takedown, smashed that limit and managed to get 3.000 bags, being the first and only to do thus far. It took us almost 16 hours. After I got to Infamy 225, I took a nearly 2 month long hiatus. I got to CCL on 11/04/2025, having gotten my last 100 levels in an infamy rotation.",
-		undefined, // contacted, no response
-		undefined, // contacted, no response
+		undefined, // contacted (2025-04-21), no response
+		undefined, // contacted (2025-04-18), no response
 		// #30
 		"I started playing Noto in 2019-2020 but started playing consistently around 2021 and started creating YouTube content in the middle of 2022, couple months before the game got taken down. Before the ban, I reached XXV-100 and was skilled in max mutator runs, where I obtained my nickname “Clutch Toad” for clutching a Mall Raid Max Mutator Run."
 		+ "<p></p>Fast-forward to the re-release, as soon as the game came out and the new infamy cap was at 250, that’s when I decided CCL was going to be my goal. Now while I had a personal life and didn’t grind Noto for 13hrs straight every day, I still pursued that goal by playing casually up until the suit rework was announced. Obviously at around infamy 50 or so, getting 200 more infamies within a couple days was out of the question, so missing out on the suits upseted me a bit. However, I still pursued and grinded casually until my winter break was over."
@@ -799,7 +800,7 @@
 		+ "<p></p>I was at Infamy 175 when I started my 5 infamy a day grind, where I’d create my own solo rotation strat that ensured an infamy in 30-40mins while also going net-neutral/positive with money. During this grind, I came across CCL #1, ILikeToast5 (aka TheSeal27), where he addressed me as the potential CCL #30. After that moment, I was inspired to reach that #30 spot and continued my grind. This continued until the Wi-Fi of my dorm building went out for 2 days, so on the 2nd day I had to literally walk to my school’s library to play Notoriety . Anyways after that scuffed grind, I came back to my dorm, when my internet was finally back up, however, I was behind schedule with infamies and CCL #31 Alxzor/Brago was 12 infamies ahead of me and was also in pursuit of reaching CCL before me (Brago: 231, Me: 219). So I told myself, “I can’t let this slide, I’ve got to ratio this #####.”"
 		+ "<p></p>On 04/27/2025 while at Infamy 226, fueled by a large iced coffee, a sausage egg and cheese sandwichand some Pepsi Zero’s , I started pumping out infamy after infamy after infamy. The only time I walked away from my desk was for piss breaks . Since me and Brago were in different time zones and he grinded while I was asleep, I knew for sure he had to have been in the 240’s, so I had to get CCL TODAY if I were to reach that #30 spot. Although my strategy was good for solo runs, I also had the help of some other friends both before and during this gauntlet of infamies. 11hrs later, my short term rival Brago joined the game. His infamy… 242, mine… was just a measly 246! I was 4 Infamies ahead of him and knew it was a gg’s. So I did what I do best and clutched that number #30 spot after 13hrs of non-stop grinding. After the grind, I legit couldn’t stop thinking about the Depot . Had I not grinded for that long, I would’ve lost that #30 spot. So this means I’m potentially the first CCL player to grind for it during the College Hell of APRIL ."
 		+ "<p></p>I would like to give thanks to the following people that helped me on this grind. MVP & #1 Supporter: blast (@ShopBlastsLocker). Inspiration: CCL #31 Brago (@Alxzor) & CCL #1 ILikeToast5 (aka TheSeal27). Supporters & Teammates: abcd (@DeTeditive), Facepalm2221 (@facepalm2221), MoonGrave (@Ekko_lokation), Retro (@InfinitelyRetro & ngl 2nd MVP), XYZcheeseborger (@lawsuitace), thermonuclear bullet (@Liokkgi), mung ster (@munster4best), Karlo (@hikaru123456), Tuxedoge (@Magnuslover2), bruh (@NathanJZC), ex0sphere (@ex0spher_e) & nark (@narkyii). Honorable Mention: @ameertttfssd201099.",
-		undefined, // contacted, waiting
+		undefined, // contacted (2025-05-02), waiting
 		"<p></p>Special thanks to my friends - iron (18th CCL), minh, rice and pho for supporting me along my CCL journey. They have boosted me alot since I started infamy grinding.",
 		];
 		
@@ -1062,16 +1063,18 @@
 		}
 		
 		// elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value = 'newestOldest';
+		// elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value = 'random';
 		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
 			filterIncludedCCLs.reverse();
 			filterIncludedCCLs_positions.reverse();
+		} else if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'random') {
+			filterIncludedCCLs.sort(function() { return randomBetween(0, 2) - randomBetween(1.2, 2.5) });
+			filterIncludedCCLs_positions.sort(function() { return randomBetween(0, 2) - randomBetween(1.2, 2.5) });
 		}
 		console.log(elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value);
 		console.log(filterIncludedCCLs);
 		
 		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%).";
-		
-		// EVERYTHING BELOW THIS LINE GENERATES ENTRIES
 		
 		// Crimson: 128,0,0
 		// Rojo: 220,20,60
@@ -1253,6 +1256,12 @@
 						string_a += playerHTML(filterIncludedCCLs[filterIncludedCCLs.length - x], '128,0,0');
 						// console.log(filterIncludedCCLs[x + filterIncludedCCLs.length - 1]);
 					}
+				} else if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'random') {
+					for (var x = 0; x < filterIncludedCCLs.length; x++) {
+						if (filterIncludedCCLs[x].classicInfamySuit == 'Crimson') {
+							string_a += playerHTML(filterIncludedCCLs[x], '128,0,0');
+						}
+					}
 				} else {
 					for (var x = 0; x < crimsonIncluded; x++) {
 						string_a += playerHTML(filterIncludedCCLs[x], '128,0,0');
@@ -1277,6 +1286,8 @@
 				if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
 					maxIterations = maxIterations - crimsonIncluded;
 					iterationBase = 0;
+				} else if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'random') {
+					iterationBase = 0;
 				}
 				for (var x = 0 + iterationBase; x < maxIterations; x++) {
 					if (filterIncludedCCLs[x].classicInfamySuit == 'Rojo') {
@@ -1288,7 +1299,7 @@
 					} else if (filterIncludedCCLs[x].classicInfamySuit == 'Blue Navy') {
 						// Blue Navy (100)
 						string_a += playerHTML(filterIncludedCCLs[x], '7,55,99');
-					} else {
+					} else if (filterIncludedCCLs[x].classicInfamySuit != 'Crimson') {
 						string_a += playerHTML(filterIncludedCCLs[x]);
 					}
 					// console.log(filterIncludedCCLs[x].username);
@@ -1299,12 +1310,15 @@
 			return string_a;
 		}
 		console.log(elem.SectionContainer_HallofInfamyCCLs_TheList);
-		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
-			playerEntryTables.push(getStandardTable());
+		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'oldestNewest') {
 			playerEntryTables.push(getCrimsonTable());
+			playerEntryTables.push(getStandardTable());
 		} else {
-			playerEntryTables.push(getCrimsonTable());
 			playerEntryTables.push(getStandardTable());
+			playerEntryTables.push(getCrimsonTable());
+		}
+		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'random') {
+			playerEntryTables.sort(function() { return randomBetween(0, 2) - randomBetween(1.2, 2.5) });
 		}
 		// console.log(playerEntryTables[0]);
 		// console.log(playerEntryTables[1]);
@@ -1363,7 +1377,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~62 hours, 46 minutes.
+		Estimated total active development time across all versions: ~63 hours, 36 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1374,16 +1388,17 @@
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[Testing] Version 0.1.2</b>
 		<ul>
-			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default) or newest to oldest.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default), newest to oldest or random.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
 			${updateLogEntry('add', "Added visual boxes to each Update Log version entry.")}
+			${updateLogEntry('add', "Added two easter eggs?")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slightly clarified the top-of-section notes.")}
 			${updateLogEntry('edit', "Reordered 1 sub-entry in Update Log entry Version 0.1.1f.")}
 			${updateLogEntry('edit', "Changed Update Log entry Version 0.0.1a's estimated active development time from <code>~1.5 hours</code> to <code>~1 hour, 30 minutes</code> for consistency.")}
 			${updateLogEntry('edit', "Some source code changes to improve consistent HTML output and slightly improve script performance.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
-			${updateLogEntry('other', "Estimated active development time: ~6 hours, 26 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 hours, 16 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
@@ -2345,5 +2360,18 @@
 	
 	elem.calculateButton.addEventListener('click', function() {
 		computeBeepBoop();
+		if (randomBetween(1,20) == 1) {
+			elem.calculateButton.innerHTML = "Did you know you can automate this?";
+		} else {
+			elem.calculateButton.innerHTML = "Calculate";
+		}
+	});
+	elem.filterSortButton.addEventListener('click', function() {
+		addHallofInfamyCCLs();
+		if (randomBetween(1,20) == 1) {
+			elem.filterSortButton.innerHTML = "Discrimination!";
+		} else {
+			elem.filterSortButton.innerHTML = "Filter and sort";
+		}
 	});
 }());
