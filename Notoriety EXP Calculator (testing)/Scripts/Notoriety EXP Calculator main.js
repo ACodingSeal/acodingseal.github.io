@@ -909,63 +909,76 @@
 		console.log(filters.time);
 		const filterIncludedCCLs = [];
 		const filterIncludedCCLs_positions = [];
+		/*
+		filters.classicInfamySuits.crimson = true;
+		filters.classicInfamySuits.unused = false;
+		*/
 		
 		for (var x = 0; x < grassAvoiders; x++) {
 			var filterInCurrentCCL = true;
+			var classicInfamySuitsFilter = true;
+			console.log('TESTING');
+			console.log('TESTING');
+			console.log('TESTING');
+			console.log('TESTING');
 			if (filters.classicInfamySuits.unused != true) {
 				if (filters.classicInfamySuits.crimson == true) {
 					if (['Crimson'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							filterInCurrentCCL = true;
+							classicInfamySuitsFilter = true;
 						} else {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false) {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					}
 				}
+				console.log(filters.classicInfamySuits.rojo);
 				if (filters.classicInfamySuits.rojo == true) {
 					if (['Rojo'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							filterInCurrentCCL = true;
+							classicInfamySuitsFilter = true;
 						} else {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true) {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					}
 				}
 				if (filters.classicInfamySuits.royalty == true) {
 					if (['Royalty'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							filterInCurrentCCL = true;
+							classicInfamySuitsFilter = true;
 						} else {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true && filters.classicInfamySuits.rojo != true) {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					}
 				}
 				if (filters.classicInfamySuits.blueNavy == true) {
 					if (['Blue Navy'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							filterInCurrentCCL = true;
+							classicInfamySuitsFilter = true;
 						} else {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true && filters.classicInfamySuits.rojo != true && filters.classicInfamySuits.royalty != true) {
-							filterInCurrentCCL = false;
+							classicInfamySuitsFilter = false;
 						}
 					}
 				}
 			}
+			console.log(classicInfamySuitsFilter);
+			console.log(x);
+			console.log('TESTING OVER');
 			
 			/*
 			filters.time.unused = false;
@@ -974,6 +987,8 @@
 			filters.time.day = '1';
 			filters.time.exclude = true;
 			*/
+			// filters.time.month = '0';
+			// filters.time.unused = false;
 			const timeFilters = [];
 			var timeFiltersActive = 0;
 			if (filters.time.unused != true) {
@@ -1021,10 +1036,20 @@
 					}
 				}
 			}
-			if (timeFilters.length == timeFiltersActive && timeFilters.indexOf(false) != -1) {
-				filterInCurrentCCL = false;
-			} else {
+			var timeFilter = true;
+			if (timeFilters.length > 0) {
+				if (timeFilters.length == timeFiltersActive && timeFilters.indexOf(false) != -1) {
+					timeFilter = false;
+				} else {
+					timeFilter = true;
+				}
+			}
+			console.log(classicInfamySuitsFilter);
+			// console.log(filters.classicInfamySuits.rojo);
+			if (classicInfamySuitsFilter == true && timeFilter == true) {
 				filterInCurrentCCL = true;
+			} else {
+				filterInCurrentCCL = false;
 			}
 			console.log(timeFilters);
 			// console.log(ymdLocalTimeCCLs[x].day);
@@ -1179,12 +1204,29 @@
 		}
 		console.log(crimsonPositions);
 		console.log(classicInfamySuitOwners.crimson);
-		for (var x = 0; x < filterIncludedCCLs_positions_alt.length; x++) {
-			if (filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]) != -1) {
-				filterIncludedCCLs_positions_alt.splice(filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]), 1);
-				crimsonIncluded++;
+		/*
+		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
+			for (var x = filterIncludedCCLs_positions_alt[0].length; x > 0; x--) {
+				if (filterIncludedCCLs_positions_alt[x].indexOf(crimsonPositions[x]) != -1) {
+					crimsonIncluded++;
+				}
+			}
+		} else {
+			for (var x = 0; x < filterIncludedCCLs.length; x++) {
+				if (filterIncludedCCLs_positions_alt[x].indexOf(crimsonPositions[x]) != -1) {
+					crimsonIncluded++;
+				}
 			}
 		}
+		*/
+		for (var x = 0; x < crimsonPositions.length; x++) {
+			if (filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]) != -1) {
+				filterIncludedCCLs_positions_alt.splice(filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]), 1);
+				crimsonIncluded++
+			}
+		}
+		console.log(filterIncludedCCLs_positions_alt);
+		console.log(crimsonIncluded);
 		
 		/*
 		for (var x = 0; x < 4; x++) {
@@ -1210,7 +1252,6 @@
 					for (var x = crimsonIncluded; x > 0; x--) {
 						string_a += playerHTML(filterIncludedCCLs[filterIncludedCCLs.length - x], '128,0,0');
 						// console.log(filterIncludedCCLs[x + filterIncludedCCLs.length - 1]);
-						console.log(filterIncludedCCLs[x].username);
 					}
 				} else {
 					for (var x = 0; x < crimsonIncluded; x++) {
@@ -1226,6 +1267,7 @@
 		console.log(filterIncludedCCLs_positions_alt);
 		function getStandardTable() {
 			var string_a = '';
+			console.log(Math.min(...filterIncludedCCLs_positions_alt));
 			if (Math.min(...filterIncludedCCLs_positions_alt) >= 5 && filterIncludedCCLs_positions_alt.length > 0) {
 				string_a = '';
 				string_a += "<p><table style='margin:auto;width:100%'>";
@@ -1250,7 +1292,7 @@
 						string_a += playerHTML(filterIncludedCCLs[x]);
 					}
 					// console.log(filterIncludedCCLs[x].username);
-					console.log(filterIncludedCCLs[x]);
+					// console.log(filterIncludedCCLs[x]);
 				}
 				string_a += "</table></p>";
 			}
