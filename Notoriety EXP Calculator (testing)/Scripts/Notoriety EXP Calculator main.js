@@ -1021,7 +1021,7 @@
 					}
 				}
 			}
-			if (timeFilters.length == timeFiltersActive) {
+			if (timeFilters.length == timeFiltersActive && timeFilters.indexOf(false) != -1) {
 				filterInCurrentCCL = false;
 			} else {
 				filterInCurrentCCL = true;
@@ -1321,7 +1321,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~62 hours, 1 minute.
+		Estimated total active development time across all versions: ~62 hours, 3 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1340,7 +1340,7 @@
 			${updateLogEntry('edit', "Some source code changes to improve consistent HTML output and slightly improve script performance.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
-			${updateLogEntry('other', "Estimated active development time: ~5 hours, 41 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~5 hours, 43 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
