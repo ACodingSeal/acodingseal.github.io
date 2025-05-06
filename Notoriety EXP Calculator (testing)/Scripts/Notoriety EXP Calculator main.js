@@ -296,7 +296,7 @@
 	
 	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs').innerHTML = "<div style='text-align:center'>"
 		+ "At the end of the day, when we're no longer around, we become stories, a relic of the past, and we generally want to be remembered. To live on in society's collective minds, to ensure our story is told and retold countless times. That is true immortality. The following people have achieved Infamy Rank 250 (CCL) in Notoriety. Through their unwavering commitment, they have become legendary heisters known far and wide throughout the Notoriety criminal underground. For such an extraordinary accomplishment, they have earned a permanent recognition in the Hall of CCLs. These are their stories."
-		+ "<p></p>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. 'Time elapsed since badge obtainment' is actual elapsed time, and is updated on tool load or changing the 'Time output format' toggle setting. Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to the system time. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. Roblox avatars must be updated manually with a tool update. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username)."
+		+ "<p></p>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format. 'Time elapsed since badge obtainment' is actual elapsed time, and is updated on tool load, filtering/sorting the list or changing the 'Time output format' toggle setting. Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to the system time. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. All data, including Roblox avatars, must be updated manually with a tool update. Open images in a new tab to view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username)."
 		+ "<p></p><p style='font-weight:inherit;border-bottom:1px solid rgba(255,255,255,var(--bg-alpha));width:25%;margin:auto'>Filtering and Sorting</p>"
 		+ "<p></p>Filter: Classic infamy suits<br/>"
 		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson' type='checkbox'>Crimson (250)</input>"
@@ -1363,7 +1363,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~62 hours, 45 minutes.
+		Estimated total active development time across all versions: ~62 hours, 46 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1377,12 +1377,13 @@
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default) or newest to oldest.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
 			${updateLogEntry('add', "Added visual boxes to each Update Log version entry.")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slightly clarified the top-of-section notes.")}
 			${updateLogEntry('edit', "Reordered 1 sub-entry in Update Log entry Version 0.1.1f.")}
 			${updateLogEntry('edit', "Changed Update Log entry Version 0.0.1a's estimated active development time from <code>~1.5 hours</code> to <code>~1 hour, 30 minutes</code> for consistency.")}
 			${updateLogEntry('edit', "Some source code changes to improve consistent HTML output and slightly improve script performance.")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #19's notes due to being purely speculation and possibly reputation damaging.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Results: Fixed a bug where, with 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and 'Until this many rotations' input equal to 0, the additive (+) Mutator Ranks difference would always be 0.")}
-			${updateLogEntry('other', "Estimated active development time: ~6 hours, 25 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~6 hours, 26 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-03 11:12] Version 0.1.1h</b>
