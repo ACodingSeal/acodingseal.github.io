@@ -816,14 +816,13 @@
 		playersData_classicInfamySuit[4] = 'Rojo';
 		playersData_classicInfamySuit[5] = playersData_classicInfamySuit[6] = playersData_classicInfamySuit[7] = playersData_classicInfamySuit[26] = 'Royalty';
 		playersData_classicInfamySuit[8] = playersData_classicInfamySuit[12] = playersData_classicInfamySuit[17] = playersData_classicInfamySuit[25] = playersData_classicInfamySuit[27] = 'Blue Navy';
-		const classicSuitOwners = {
-			crimson:[playersData_usernames[0], playersData_usernames[1], playersData_usernames[2], playersData_usernames[3]],
-			rojo:[playersData_usernames[4]],
-			royalty:[playersData_usernames[5], playersData_usernames[6], playersData_usernames[7], playersData_usernames[26]],
-			blueNavy:[playersData_usernames[8], playersData_usernames[12], playersData_usernames[17], playersData_usernames[25], playersData_usernames[27]],
+		
+		const classicInfamySuitOwners = {
+			crimson:[],
+			rojo:[],
+			royalty:[],
+			blueNavy:[],
 		}
-		console.log(classicSuitOwners);
-		console.log(playersData_whenCCL[0].timestamp);
 		
 		for (var x = 0; x < grassAvoiders; x++) {
 			players.push(new Player());
@@ -882,6 +881,19 @@
 				players[x].classicInfamySuit = playersData_classicInfamySuit[x];
 			}
 		}
+		
+		for (var x = 0; x < grassAvoiders; x++) {
+			if (players[x].classicInfamySuit == 'Crimson') {
+				classicInfamySuitOwners.crimson.push(players[x]);
+			} else if (players[x].classicInfamySuit == 'Rojo') {
+				classicInfamySuitOwners.rojo.push(players[x]);
+			} else if (players[x].classicInfamySuit == 'Royalty') {
+				classicInfamySuitOwners.royalty.push(players[x]);
+			} else if (players[x].classicInfamySuit == 'Blue Navy') {
+				classicInfamySuitOwners.blueNavy.push(players[x]);
+			}
+		}
+		console.log(classicInfamySuitOwners);
 		
 		const filters = {
 			classicInfamySuits: {crimson:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson.checked, rojo:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo.checked, royalty:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty.checked, blueNavy:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions.checked},
@@ -1150,7 +1162,12 @@
 		const filterIncludedCCLs_positions_alt = filterIncludedCCLs_positions;
 		console.log(filterIncludedCCLs_positions_alt);
 		var crimsonIncluded = 0;
-		const crimsonPositions = [1,2,3,4];
+		const crimsonPositions = [];
+		for (var x = 0; x < classicInfamySuitOwners.crimson.length; x++) {
+			crimsonPositions.push(players[x].position);
+		}
+		console.log(crimsonPositions);
+		console.log(classicInfamySuitOwners.crimson);
 		for (var x = 0; x < filterIncludedCCLs_positions_alt.length; x++) {
 			if (filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]) != -1) {
 				filterIncludedCCLs_positions_alt.splice(filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]), 1);
