@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.1.2 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.2.0 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -1386,7 +1386,7 @@
 		</p>
 		<hr/>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[Testing] <u>Version 0.1.2</u></b>
+		<b>[Testing] <u>Version 0.2.0</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default), newest to oldest or random.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
