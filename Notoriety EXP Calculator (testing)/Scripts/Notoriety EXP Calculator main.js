@@ -807,12 +807,12 @@
 		const playersData_classicInfamySuit = [];
 		// ymdLocalTimeCCLs is based on local system time
 		const ymdLocalTimeCCLs = [];
-		console.log();
+		// console.log();
 		for (var x = 0; x < grassAvoiders; x++) {
 			playersData_classicInfamySuit.push(undefined);
 			ymdLocalTimeCCLs.push({year:new Date(playersData_whenCCL[x].timestamp).getFullYear(), month:new Date(playersData_whenCCL[x].timestamp).getMonth(), day:new Date(playersData_whenCCL[x].timestamp).getDate()});
 		}
-		console.log(ymdLocalTimeCCLs[8].day);
+		// console.log(ymdLocalTimeCCLs[8].day);
 		playersData_classicInfamySuit[0] = playersData_classicInfamySuit[1] = playersData_classicInfamySuit[2] = playersData_classicInfamySuit[3] = 'Crimson';
 		playersData_classicInfamySuit[4] = 'Rojo';
 		playersData_classicInfamySuit[5] = playersData_classicInfamySuit[6] = playersData_classicInfamySuit[7] = playersData_classicInfamySuit[26] = 'Royalty';
@@ -894,7 +894,7 @@
 				classicInfamySuitOwners.blueNavy.push(players[x]);
 			}
 		}
-		console.log(classicInfamySuitOwners);
+		// console.log(classicInfamySuitOwners);
 		
 		const filters = {
 			classicInfamySuits: {crimson:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson.checked, rojo:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo.checked, royalty:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty.checked, blueNavy:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions.checked},
@@ -906,8 +906,8 @@
 		if (filters.time.year == 'undefined' && filters.time.month == 'undefined' && filters.time.day == 'undefined' && filters.time.exclude == false) {
 			filters.time.unused = true;
 		}
-		console.log(filters.classicInfamySuits);
-		console.log(filters.time);
+		// console.log(filters.classicInfamySuits);
+		// console.log(filters.time);
 		const filterIncludedCCLs = [];
 		const filterIncludedCCLs_positions = [];
 		/*
@@ -918,10 +918,12 @@
 		for (var x = 0; x < grassAvoiders; x++) {
 			var filterInCurrentCCL = true;
 			var classicInfamySuitsFilter = true;
+			/*
 			console.log('TESTING');
 			console.log('TESTING');
 			console.log('TESTING');
 			console.log('TESTING');
+			*/
 			if (filters.classicInfamySuits.unused != true) {
 				if (filters.classicInfamySuits.crimson == true) {
 					if (['Crimson'].indexOf(players[x].classicInfamySuit) != -1) {
@@ -936,7 +938,7 @@
 						}
 					}
 				}
-				console.log(filters.classicInfamySuits.rojo);
+				// console.log(filters.classicInfamySuits.rojo);
 				if (filters.classicInfamySuits.rojo == true) {
 					if (['Rojo'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
@@ -977,9 +979,11 @@
 					}
 				}
 			}
+			/*
 			console.log(classicInfamySuitsFilter);
 			console.log(x);
 			console.log('TESTING OVER');
+			*/
 			
 			/*
 			filters.time.unused = false;
@@ -1045,14 +1049,14 @@
 					timeFilter = true;
 				}
 			}
-			console.log(classicInfamySuitsFilter);
+			// console.log(classicInfamySuitsFilter);
 			// console.log(filters.classicInfamySuits.rojo);
 			if (classicInfamySuitsFilter == true && timeFilter == true) {
 				filterInCurrentCCL = true;
 			} else {
 				filterInCurrentCCL = false;
 			}
-			console.log(timeFilters);
+			// console.log(timeFilters);
 			// console.log(ymdLocalTimeCCLs[x].day);
 			// console.log(x);
 			
@@ -1071,8 +1075,8 @@
 			filterIncludedCCLs.sort(function() { return randomBetween(0, 2) - randomBetween(1.2, 2.5) });
 			filterIncludedCCLs_positions.sort(function() { return randomBetween(0, 2) - randomBetween(1.2, 2.5) });
 		}
-		console.log(elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value);
-		console.log(filterIncludedCCLs);
+		// console.log(elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value);
+		// console.log(filterIncludedCCLs);
 		
 		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%).";
 		
@@ -1199,14 +1203,14 @@
 		}
 		
 		const filterIncludedCCLs_positions_alt = filterIncludedCCLs_positions;
-		console.log(filterIncludedCCLs_positions_alt);
+		// console.log(filterIncludedCCLs_positions_alt);
 		var crimsonIncluded = 0;
 		const crimsonPositions = [];
 		for (var x = 0; x < classicInfamySuitOwners.crimson.length; x++) {
 			crimsonPositions.push(players[x].position);
 		}
-		console.log(crimsonPositions);
-		console.log(classicInfamySuitOwners.crimson);
+		// console.log(crimsonPositions);
+		// console.log(classicInfamySuitOwners.crimson);
 		/*
 		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
 			for (var x = filterIncludedCCLs_positions_alt[0].length; x > 0; x--) {
@@ -1228,8 +1232,8 @@
 				crimsonIncluded++
 			}
 		}
-		console.log(filterIncludedCCLs_positions_alt);
-		console.log(crimsonIncluded);
+		// console.log(filterIncludedCCLs_positions_alt);
+		// console.log(crimsonIncluded);
 		
 		/*
 		for (var x = 0; x < 4; x++) {
@@ -1241,14 +1245,16 @@
 		*/
 		const playerEntryTables = [];
 		
+		/*
 		console.log(Math.min(...filterIncludedCCLs_positions));
 		console.log(filterIncludedCCLs_positions);
 		console.log(filterIncludedCCLs_positions_alt);
 		console.log(crimsonIncluded);
+		*/
 		function getCrimsonTable() {
 			var string_a = '';
 			if (crimsonIncluded > 0) {
-				console.log(filterIncludedCCLs[filterIncludedCCLs.length - 1]);
+				// console.log(filterIncludedCCLs[filterIncludedCCLs.length - 1]);
 				string_a = '';
 				string_a += "<p><table style='margin:auto;width:100%'>";
 				if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
@@ -1273,10 +1279,10 @@
 			}
 		}
 		
-		console.log(filterIncludedCCLs_positions_alt);
+		// console.log(filterIncludedCCLs_positions_alt);
 		function getStandardTable() {
 			var string_a = '';
-			console.log(Math.min(...filterIncludedCCLs_positions_alt));
+			// console.log(Math.min(...filterIncludedCCLs_positions_alt));
 			if (Math.min(...filterIncludedCCLs_positions_alt) >= 5 && filterIncludedCCLs_positions_alt.length > 0) {
 				string_a = '';
 				string_a += "<p><table style='margin:auto;width:100%'>";
@@ -1309,7 +1315,7 @@
 			}
 			return string_a;
 		}
-		console.log(elem.SectionContainer_HallofInfamyCCLs_TheList);
+		// console.log(elem.SectionContainer_HallofInfamyCCLs_TheList);
 		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'oldestNewest') {
 			playerEntryTables.push(getCrimsonTable());
 			playerEntryTables.push(getStandardTable());
