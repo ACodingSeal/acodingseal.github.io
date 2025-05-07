@@ -1390,7 +1390,7 @@
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default), newest to oldest or random.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>.")}
-			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Each CCL's obtainment number now has the prepended text 'CCL'. For instance, '[CCL #1]'.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Each CCL's badge obtainment number now has the prepended text 'CCL'. For instance, '[CCL #1]'.")}
 			${updateLogEntry('add', "Added visual boxes to each Update Log version entry.")}
 			${updateLogEntry('add', "Added two easter eggs?")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slightly clarified the top-of-section notes.")}
