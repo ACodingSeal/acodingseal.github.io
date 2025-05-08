@@ -1590,7 +1590,7 @@
 		<b>[2025-04-13 08:20] <u>Version 0.0.1</u></b>
 		<ul>
 			${updateLogEntry('other', "Initial public release.")}
-			${updateLogEntry('other', "Added the following testers: ashvul, nate247, player6978.")}
+			${updateLogEntry('other', "Added the following testers: ashlyn, nate247, player6978.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
