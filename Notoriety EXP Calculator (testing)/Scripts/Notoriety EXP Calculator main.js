@@ -1400,7 +1400,7 @@
 			${updateLogEntry('edit', "In Update Log entry Version 0.0.1, changed tester <code>ashvul</code>'s name to <code>ashlyn</code>.")}
 			${updateLogEntry('add', "Expanded Update Log entry Version 0.2.0, sub-entry 2, by including the following text: <code>(Modified the notes of the following 12 entries: #1, #3, #4, #6, #7, #10, #11, #12, #14, #18, #21, #32.)</code>")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #17's notes due to being inaccurate.")}
-			${updateLogEntry('other', "Attempted to fix a non-existent problem with total MXP requirement when 'Remaining MXP' input is defined.")}
+			${updateLogEntry('other', "Spent 20 minutes attempting to fix a non-existent problem with total MXP requirement when 'Remaining MXP' input is defined.")}
 			${updateLogEntry('other', "Estimated active development time: ~50 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
