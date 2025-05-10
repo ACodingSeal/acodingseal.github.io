@@ -1398,7 +1398,7 @@
 		</p>
 		<hr/>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[Testing] Version 0.2.1</b>
+		<b>[2025-05-10 00:32] Version 0.2.1</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded a sentence in the first paragraph of the top-of-section notes.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33.")}
