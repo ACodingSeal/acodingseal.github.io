@@ -409,7 +409,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
-		const grassAvoiders = 32;
+		const grassAvoiders = 33;
 		var generatedEntries = 0;
 		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
@@ -459,6 +459,7 @@
 		"chief_toad619",
 		"Alxzor",
 		"rebirthed6coin",
+		"DeTedtive",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -493,6 +494,7 @@
 		"CHIEF_TOAD",
 		"Brago",
 		"VX_coin",
+		"abcd",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -527,6 +529,7 @@
 		"chief_toad619 - 2025-04-28T06-39Z.png",
 		"Alxzor - 2025-04-29T23-23Z.png",
 		"rebirthed6coin - 2025-05-03T06-19Z.png",
+		"DeTedtive - 2025-05-10T00-21Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -561,6 +564,7 @@
 		{approx:false, timestamp: "2025-04-28T03:44:54.6658801Z"},
 		{approx:false, timestamp: "2025-04-29T13:36:57.9926942Z"},
 		{approx:false, timestamp: "2025-05-03T08:00:36.6114285Z"},
+		{approx:false, timestamp: "2025-05-10T00:06:59.3892787Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -569,7 +573,7 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -605,9 +609,10 @@
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		undefined,
-		// 31 - 32
+		// 31 - 33
 		"Started playing post-rerelease.",
-		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge."
+		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
+		"Minimum infamy classic suit (highest unknown): Blue Navy (100)",
 		];
 		
 		const playersData_ownDescription = [
@@ -802,6 +807,7 @@
 		+ "<p></p>I would like to give thanks to the following people that helped me on this grind. MVP & #1 Supporter: blast (@ShopBlastsLocker). Inspiration: CCL #31 Brago (@Alxzor) & CCL #1 ILikeToast5 (aka TheSeal27). Supporters & Teammates: abcd (@DeTeditive), Facepalm2221 (@facepalm2221), MoonGrave (@Ekko_lokation), Retro (@InfinitelyRetro & ngl 2nd MVP), XYZcheeseborger (@lawsuitace), thermonuclear bullet (@Liokkgi), mung ster (@munster4best), Karlo (@hikaru123456), Tuxedoge (@Magnuslover2), bruh (@NathanJZC), ex0sphere (@ex0spher_e) & nark (@narkyii). Honorable Mention: @ameertttfssd201099.",
 		undefined, // contacted (2025-05-02), waiting
 		"<p></p>Special thanks to my friends - iron (18th CCL), minh, rice and pho for supporting me along my CCL journey. They have boosted me alot since I started infamy grinding.",
+		undefined, // contacted (2025-05-10), waiting
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -816,7 +822,7 @@
 		playersData_classicInfamySuit[0] = playersData_classicInfamySuit[1] = playersData_classicInfamySuit[2] = playersData_classicInfamySuit[3] = 'Crimson';
 		playersData_classicInfamySuit[4] = 'Rojo';
 		playersData_classicInfamySuit[5] = playersData_classicInfamySuit[6] = playersData_classicInfamySuit[7] = playersData_classicInfamySuit[26] = 'Royalty';
-		playersData_classicInfamySuit[8] = playersData_classicInfamySuit[12] = playersData_classicInfamySuit[17] = playersData_classicInfamySuit[25] = playersData_classicInfamySuit[27] = 'Blue Navy';
+		playersData_classicInfamySuit[8] = playersData_classicInfamySuit[12] = playersData_classicInfamySuit[17] = playersData_classicInfamySuit[25] = playersData_classicInfamySuit[27] = playersData_classicInfamySuit[32] = 'Blue Navy';
 		
 		const classicInfamySuitOwners = {
 			crimson:[],
@@ -1383,7 +1389,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~64 hours, 34 minutes.
+		Estimated total active development time across all versions: ~64 hours, 39 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1395,13 +1401,14 @@
 		<b>[Testing] Version 0.2.1</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded a sentence in the first paragraph of the top-of-section notes.")}
-			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the <code><a href='https://www.roblox.com/badges/1249439344'>New Life of Crime</a></code> badge after the game's rerelease, and if so, noted this fact in their entry's notes. (Modified the notes of the following 4 entries: #10, #19, #26, #31.)")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 33 CCLs for whether or not they obtained the <code><a href='https://www.roblox.com/badges/1249439344'>New Life of Crime</a></code> badge after the game's rerelease, and if so, noted this fact in their entry's notes. (Modified the notes of the following 4 entries: #10, #19, #26, #31.)")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added a missing full stop (<code>.</code>) to CCL #14's notes.")}
 			${updateLogEntry('edit', "In Update Log entry Version 0.0.1, changed tester <code>ashvul</code>'s name to <code>ashlyn</code>.")}
 			${updateLogEntry('add', "Expanded Update Log entry Version 0.2.0, sub-entry 2, by including the following text: <code>(Modified the notes of the following 12 entries: #1, #3, #4, #6, #7, #10, #11, #12, #14, #18, #21, #32.)</code>")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #17's notes due to being inaccurate.")}
 			${updateLogEntry('other', "Spent 20 minutes attempting to fix a non-existent problem with total MXP requirement when 'Remaining MXP' input is defined.")}
-			${updateLogEntry('other', "Estimated active development time: ~50 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~55 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-07 10:53] <u>Version 0.2.0</u></b>
