@@ -1389,7 +1389,7 @@
 			${updateLogEntry('other', 'Other')}
 		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~64 hours, 39 minutes.
+		Estimated total active development time across all versions: ~64 hours, 40 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1404,11 +1404,11 @@
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 33 CCLs for whether or not they obtained the <code><a href='https://www.roblox.com/badges/1249439344'>New Life of Crime</a></code> badge after the game's rerelease, and if so, noted this fact in their entry's notes. (Modified the notes of the following 4 entries: #10, #19, #26, #31.)")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added a missing full stop (<code>.</code>) to CCL #14's notes.")}
-			${updateLogEntry('edit', "In Update Log entry Version 0.0.1, changed tester <code>ashvul</code>'s name to <code>ashlyn</code>.")}
+			${updateLogEntry('edit', "In Update Log entry Version 0.0.1, renamed the following testers: <code>ashvul</code> > <code>ashlyn</code>, <code>nate247</code> > <code>nate</code>, <code>player6978</code> > <code>player</code>.")}
 			${updateLogEntry('add', "Expanded Update Log entry Version 0.2.0, sub-entry 2, by including the following text: <code>(Modified the notes of the following 12 entries: #1, #3, #4, #6, #7, #10, #11, #12, #14, #18, #21, #32.)</code>")}
 			${updateLogEntry('remove', "Menu Miscellaneous > Section Hall of CCLs: Removed CCL #17's notes due to being inaccurate.")}
 			${updateLogEntry('other', "Spent 20 minutes attempting to fix a non-existent problem with total MXP requirement when 'Remaining MXP' input is defined.")}
-			${updateLogEntry('other', "Estimated active development time: ~55 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~56 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-07 10:53] <u>Version 0.2.0</u></b>
@@ -1597,7 +1597,7 @@
 		<b>[2025-04-13 08:20] <u>Version 0.0.1</u></b>
 		<ul>
 			${updateLogEntry('other', "Initial public release.")}
-			${updateLogEntry('other', "Added the following testers: ashlyn, nate247, player6978.")}
+			${updateLogEntry('other', "Added the following testers: ashlyn, nate, player.")}
 			${updateLogEntry('other', "Estimated active development time: ~6 hours.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
