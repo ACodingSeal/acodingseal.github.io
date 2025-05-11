@@ -426,7 +426,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
-		const grassAvoiders = 33;
+		const grassAvoiders = 34;
 		var generatedEntries = 0;
 		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
@@ -477,6 +477,7 @@
 		"Alxzor",
 		"rebirthed6coin",
 		"DeTedtive",
+		"Friskern",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -512,6 +513,7 @@
 		"Brago",
 		"VX_coin",
 		"abcd",
+		"Frisk",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -547,6 +549,7 @@
 		"Alxzor - 2025-04-29T23-23Z.png",
 		"rebirthed6coin - 2025-05-03T06-19Z.png",
 		"DeTedtive - 2025-05-10T00-21Z.png",
+		"Friskern - 2025-05-11T23-40Z.jpg",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -582,6 +585,7 @@
 		{approx:false, timestamp: "2025-04-29T13:36:57.9926942Z"},
 		{approx:false, timestamp: "2025-05-03T08:00:36.6114285Z"},
 		{approx:false, timestamp: "2025-05-10T00:06:59.3892787Z"},
+		{approx:false, timestamp: "2025-05-11T22:39:04.0366723Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -590,7 +594,7 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -626,10 +630,11 @@
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		undefined,
-		// 31 - 33
+		// 31 - 34
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
 		"Minimum infamy classic suit (highest unknown): Blue Navy (100)",
+		"Started playing post-rerelease.",
 		];
 		
 		const playersData_ownDescription = [
@@ -919,6 +924,7 @@
 		// #32
 		"<p></p>Special thanks to my friends - iron (18th CCL), minh, rice and pho for supporting me along my CCL journey. They have boosted me alot since I started infamy grinding.",
 		undefined, // contacted (2025-05-10), waiting
+		undefined, // not contacted
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1500,7 +1506,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~71 hours, 50 minutes.
+		Estimated total active development time across all versions: ~71 hours, 55 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1509,18 +1515,19 @@
 		</p>
 		<hr/>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[Testing] Version 0.3.0</b>
+		<b>[Testing] <u>Version 0.3.0</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the following top-of-section note: <code>These settings are not required to be defined if not calculating progression requirements.</code>")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded CCL #1's user-written description with a new 'Closing remarks' description section. Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #18's user-written description, including the addition of 28 images.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #34.")}
 			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (currently only Friday Night badge).")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's notes.")}
 			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions'.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch)")}
-			${updateLogEntry('other', "Estimated active development time: ~7 hours, 10 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 hours, 15 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
