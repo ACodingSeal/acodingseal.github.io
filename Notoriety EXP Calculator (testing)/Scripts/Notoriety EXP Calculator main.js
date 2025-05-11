@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.2.1 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(0.3.0 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -251,7 +251,7 @@
 		+ "</div>"
 		
 		+ "<div id='NotorietyEXPandInfamyCalculator_Section_ProgressionSettings'>"
-		+ "<hr/><h2>Progression Settings</h2>"
+		+ "<hr/><h2>Progression Settings</h2><div>These settings are not required to be defined if not calculating progression requirements.</div>"
 		+ "<p>Run/rotation gains:<br><textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPandInfamyCalculator_RunGainsInput'></textarea><span id='NotorietyEXPandInfamyCalculator_RunGainsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>"
 		+ "<p id='NotorietyEXPandInfamyCalculator_Block_UntilRotationsInput'>Until this many rotations: <input type='range' min='0' max='1000' value='0' class='slider' style='width:10em' id='NotorietyEXPandInfamyCalculator_UntilRotationsInput'></input><br><span style='font-size:80%'>Value: <code><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'>undefined</span></code></span><br><span id='NotorietyEXPandInfamyCalculator_UntilRotationsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span></p>"
 		+ "</div>"
@@ -271,6 +271,12 @@
 		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_HallofInfamyCCLs'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<h2>Hall of CCLs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'>(toggle visibility)</span></small>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs' style='text-align:initial;display:none'>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
+		
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_Timers'>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Timers</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_Timers'>(toggle visibility)</span></small>";
+		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers' style='text-align:initial;display:none'>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
 		
@@ -315,6 +321,12 @@
 		+ "<p></p><div id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSort_GeneratedText'>you are such a medic bag (i need it)</div>"
 		+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs_TheList'>*cloaker noises*</div>"
 		+ "</div>";
+		
+	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers').innerHTML = "Milliseconds may not be exactly synchronised."
+	+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_TheList'>It's time to add something here...</div>"
+	+ ""
+	+ ""
+	+ "";
 	
 	const elem = {
 		toggleInputSliders_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'),
@@ -341,6 +353,7 @@
 		Section_Results: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Results'),
 		Section_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_Section_HallofInfamyCCLs'),
 		Section_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Section_UpdateLog'),
+		Section_Timers: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Timers'),
 		
 		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson'),
 		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo'),
@@ -355,13 +368,16 @@
 		Section_HallofInfamyCCLs_FilterSort_GeneratedText: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSort_GeneratedText'),
 		
 		SectionContainer_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings'),
-		SectionContainer_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog'),
 		SectionContainer_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs'),
 		SectionContainer_HallofInfamyCCLs_TheList: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs_TheList'),
+		SectionContainer_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog'),
+		SectionContainer_Timers: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers'),
+		SectionContainer_Timers_TheList: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers_TheList'),
 		
 		SectionContainerToggle_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'),
-		SectionContainerToggle_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'),
 		SectionContainerToggle_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'),
+		SectionContainerToggle_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'),
+		SectionContainerToggle_Timers: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_Timers'),
 		
 		currentLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentLevelInput'),
 		remainingEXPInput: document.getElementById('NotorietyEXPandInfamyCalculator_RemainingEXPInput'),
@@ -370,6 +386,7 @@
 		
 		currentMoneyInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentMoneyInput'),
 		goalMoneyInput: document.getElementById('NotorietyEXPandInfamyCalculator_GoalMoneyInput'),
+		goalMoneyInput_Block: document.getElementById('NotorietyEXPandInfamyCalculator_Block_GoalMoneyInput'),
 		
 		currentInfamyLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput'),
 		goalInfamyLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput'),
@@ -595,7 +612,7 @@
 		undefined,
 		undefined,
 		undefined,
-		"Minimum infamy classic suit (highest unknown): Blue Navy (100). Obtained CCL before the 'True Criminal' badge.",
+		"Highest infamy classic suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge.",
 		"Started playing post-rerelease.",
 		"Possibly the first solo grinder to reach CCL.",
 		// 21 - 30
@@ -621,13 +638,19 @@
 		+ "I've been playing Notoriety since what I call the 'Golden Era', being before the 22 December 2017 revamp, more specifically since early September 2015, or possibly in August 2015 as I bought my first gamepass early next month. I achieved only a few infamy ranks at most, but I also completed feats like the badges Overdrill, Flawless and Big Bank - Stealth Master and 101 bags (vials) in Blood Money Death Wish solo using the Minigun and RPG. Most of my playtime of this era was in 2016. I always get nostalgic of this era of Notoriety, aka Heist, aka Payday 2. I have some old videos and screenshots of this era collecting dust on a hard drive somewhere."
 		+ "<p></p>I almost entirely stopped playing after the Revamp Update, as it removed a lot of my favourite heists like World Bank, Blood Money, Fave Breakout and Shadow Raid (eventually rereleased). This is also why I didn't want to play the new Authority heist, out of protest against the revamp and due to the global data wipe. However, I played until I reached the maximum infamy rank of XXV (25) and obtained the True Criminal badge (which also required the Very Hard and Anarchy difficulties). Then I stopped playing for a while. In 2019, during the Live Ops event, I revisited the game, but didn't play any heists."
 		+ "<p></p><b>Post-revamp Grinding Era</b><br/>"
-		+ "Around the late 2020 era was when I was extremely active. I was first to complete Star Criminal and Baneful Criminal (the latter was done in solo in 89m54s). I was first to complete Resourceful Criminal in solo, without using glitches. I was one of the first to solo the Soul Collector badge on Nightmare using the Suit, and as the 420th or 421st player to obtain the badge. I was very likely the first player to full sweep Shadow Raid Nightmare 1,000 times. Around this era up until the very end of 2020, I was a dedicated contributor to the official Notoriety Wikia on Fandom, serving the community as an administrator and being the top contributor based on largest contributions (including info, page structure & site design), most edits and most badges & badge points (I no longer believe in badges, since it encourages badge farming)."
-		+ "<p></p>One of the game's sub-communities was Notorious Professionals, a community collecting the best of Notoriety's players with its goal to be to help people hunt badges, achieve unofficial challenges and maintain the official Notoriety Wikia on Fandom. At the time this community had its own Roblox group and Discord server. Such unofficial challenges range from easy ones like doing a heist with a certain themed loadout (like the TF2 Engineer, using Sentry Guns), to extremely challenging ones like completing Shadow Raid Nightmare solo stealth with 75 detection risk and a full sweep, or Blood Money Nightmare solo with the most awfully designed build at the time (challenge Bad Mofo using the Bad Build). In this community I achieved the rank of True Professional, an achievement which at the time only two others (Chair and StormDestroyer) had achieved. The rate I had completed all the challenges (except True Gambler: Golden Mask Casino 75 detection risk solo stealth) impressed the server owner, sirowesome, as apparently they weren't supposed to be done in such a short timeframe (a couple of weeks at most?). I was also the first ever Notoriety player to reach 10 billion money (achieved 2020-11-08T04:00:~45Z) by grinding Shadow Raid Nightmare ECM rushing with a squad over and over) and Four Stores Nightmare solo stealth 75 detection risk pacifist with no equipment, pagers, hostages or kills. (However, I unfortunately messed up the run at the very end, partially out of excitement at being close to the end. I did, however, show off many tricks that were used by other players to do the same but with a full stealth run and in far less time.) These two achievements resulted in the creation of two bonus challenges."
+		+ "Around the late 2020 era was when I was extremely active. I was first to complete Star Criminal and Baneful Criminal (the latter was done in solo in 89m54s). I was first to complete Resourceful Criminal in solo, without using glitches. I was one of the first to solo the Soul Collector badge on Nightmare using the Suit, and as the 420th or 421st player to obtain the badge. I was very likely the first player to full sweep Shadow Raid Nightmare 1,000 times. Around this era up until the very end of 2020, I was <a href='https://notoriety.fandom.com/wiki/Special:Contributions/TheSeal27'>a dedicated contributor</a> to the official Notoriety Wikia on Fandom, serving the community as an administrator and being the top contributor based on largest contributions (including info, page structure & site design), most edits and most badges & badge points (I no longer believe in badges, since it encourages badge farming)."
+		+ "<p></p>One of the game's sub-communities was <a href='https://www.roblox.com/communities/5648052'>Notorious Professionals</a>, a community collecting the best of Notoriety's players with its goal to be to help people hunt badges, achieve unofficial challenges and maintain the official Notoriety Wikia on Fandom. At the time this community had its own Roblox group and Discord server. Such unofficial challenges range from easy ones like doing a heist with a certain themed loadout (like the TF2 Engineer, using Sentry Guns), to extremely challenging ones like completing Shadow Raid Nightmare solo stealth with 75 detection risk and a full sweep, or Blood Money Nightmare solo with the most awfully designed build at the time (challenge Bad Mofo using the Bad Build). In this community I achieved the rank of True Professional, an achievement which at the time only two others (Chair and StormDestroyer) had achieved. The rate I had completed all the challenges (except True Gambler: Golden Mask Casino 75 detection risk solo stealth) impressed the server owner, sirowesome, as apparently they weren't supposed to be done in such a short timeframe (a couple of weeks at most?). I was also the first ever Notoriety player to reach 10 billion money (achieved 2020-11-08T04:00:~45Z) by grinding Shadow Raid Nightmare ECM rushing with a squad over and over) and Four Stores Nightmare solo stealth 75 detection risk pacifist with no equipment, pagers, hostages or kills. (However, I unfortunately messed up the run at the very end, partially out of excitement at being close to the end. I did, however, show off many tricks that were used by other players to do the same but with a full stealth run and in far less time.) These two achievements resulted in the creation of two bonus challenges."
 		+ "<p></p>At the end of December 2020, in the Notoriety Wikia's Discord server, I unfairly muted, if I recall correctly, Berse. The wiki's bureaucrat (essentially Head Admin), Goder5555, privately asked me what was going on, and being a little intimidated by the bureaucrat I wasn't very clear in responding. The bureaucrat's perception was that I was being malicious and uncommunicative. I was warned that 'there would be consequences' if I did not undo the punishment, and then shortly later I was demoted from wiki administrator, blocked (banned) indefinitely (later reduced to 1 year) and stripped of my True Professional rank in Notorious Professionals' group and server (a little too far, in my opinion). Many users began leaving the wiki's server, including Goder. He posted a wiki announcement about what had happened and why I had been demoted and blocked. Apparently I 'refused to hand over ownership of the server' (paraphrasing), however I received no such requests; it was likely that this was only an assumption by Goder. A new wiki server was created, and the old one was eventually deleted months or years later after it had become extremely inactive. I admit now that it was definitely a massive mistake on my part to unfairly mute someone. This incident caused me to quit the entire game and its community for four years."
 		+ "<p></p><b>Rerelease + Silent Grinding</b><br/>"
-		+ "In December 2024 I found out about the game's rerelease after being shut down for more than a year due to a DMCA strike by the same company which brought it back. I noticed the infamy cap had been raised from 25 (XXV) to 250 (CCL), and wanted to be the first CCL. I contemplated pressing that large, green play button for 43 hours, knowing that if I did I would get right back on the long grind train as I did back in 2018 and 2020. Eventually I gave in and started playing the rerelease as an XXV-100 with $10.5 billion money and more than 1,200 masks (well over the now-existent limit of 100). (I haven't opened a safe since around the 2019/2020 era.) I began the grind rather modestly, only doing a few infamies a day at most, eventually becoming around 8 to 10 hours a day on average. Before I discovered Authority loud minimum loot with a coordinated team is about 2x more EXP:time efficient than Art Gallery, I once ran it for 7 hours straight with a duo. I don't recall how many infamies we gained, but it was certainly quite repetitive and at the end of it he had to go. I reached infamy 100 (C) before the cap to infamy money requirement was added, knowing it would be added eventually. (The next infamy would've cost $390mil with the cheaper pass). Around this time or just before was when I realised I could reach CCL by the end of the year."
+		+ "In December 2024 I found out about the game's rerelease after being shut down for more than a year due to a DMCA strike by the same company which brought it back. I noticed the infamy cap had been raised from 25 (XXV) to 250 (CCL), and wanted to be the first CCL. I contemplated pressing that large, green play button for 43 hours, knowing that if I did I would get right back on the long grind train as I did back in 2018 and 2020. Eventually I gave in and started playing the rerelease as an XXV-100 with $10.5 billion money and more than 1,200 masks (well over the now-existent limit of 100). (I haven't opened a safe since around the 2019/2020 era.) I began the grind rather modestly, only doing a few infamies a day at most, eventually becoming around 8 to 10 hours a day on average. Before I discovered Authority loud minimum loot with a coordinated team is about 2x more EXP:time efficient than Art Gallery, I grinded it quite a lot, usually with publics, teaching them how to ECM rush and to be fast. I once ran this heist for around 7 hours straight with my duo, <a href='https://www.roblox.com/users/4701150262'>cas</a>. I don't recall how many infamies we gained, but it was certainly quite repetitive and at the end of it they had to go. I reached infamy 100 (C) before the cap to infamy money requirement was added, knowing it would be added eventually. (The next infamy would've cost $390mil with the cheaper pass). Around this time or just before was when I realised I could reach CCL by the end of the year."
 		+ "<p></p><b>Explosive Return</b><br/>"
 		+ "Up until now I had been very quiet about my grind as I knew others had already made a lot more progress; I didn't want to alert the competition. They were trying to find out who was the new infamy 50 who appeared out of nowhere. It was around this time I made my explosive return to the game's Discord server, Moonstone Games, by posting my infamy 100 screenshot, ahead of the next highest player (Ali) by about 30 or 40 infamy ranks. It was around this time I joined a sub-community server called 'super cool elite grinding buddy ccl250 team cool', or the 'elite grinding server' for short, a server comprised of the most dedicated infamy grinders and the founding purpose was for a member to reach CCL. I grinded money in preparation of the introduction of the infamy money requirement cap (which made it $125mil without cheaper pass, $62.5mil with), ending up with around $3 or $4bil. Ali also reached infamy 100 by this time, and he went to 101 supposedly just to be the highest infamy in the game. He had around $10 or $15bil money at this point. I even adjusted my sleep pattern to make sure I would be wide wake when updates are typically released."
+		+ "<p></p>Unfortunately I don't have a screenshot of Moonstone Games' reaction:"
+		+ "<p></p><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0001.jpg'></div><div class='gallerytext'>First ever C!</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0002.jpg'></div><div class='gallerytext'>The very first screenshot of the classic Blue Navy suit.</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0003.jpg'></div><div class='gallerytext'>Post-C chatting with others, including CCLs #9 and #28.</div></li>"
+		+ "</ul>"
 		+ "<p></p><b>The Push towards the End</b><br/>"
 		+ "During the money grind (Shadow Raid ECM rush as usual; specifically around the vault area) one of my teammates pointed out the infamy money requirement had just been added. Within 15 minutes of the update I immediately switched to exp farming (Authority) and started grinding HARD, frequently doing 16+ hours a day, occasionally 24 hours and I even once stayed awake for 48 hours (about 95% of this time spent grinding the game). I contributed to two Authority Nightmare co-op (both 4 players) world records before the introduction of the milliseconds timer, being 1m8s while half asleep and 1m7s unintentionally (not submitted). In a single day I completed Authority 500 times in a row, and I completed it 700 times in a row before switching to a different heist due to having to grind money. I grinded money for a bit more during the exp grind, and knew how much money I would need when factoring in passive gains from exp farming. However, what I didn't factor in was the extreme costs of hosting a contract (and consequent restarts after a win) (about $96mil loss per infamy when hosting or $28mil when not). I eventually realised, so I had to grind about another $1bil."
 		+ "<p></p>At infamy 182 (CLXXXIII), level 86, being about 80 infamy ranks ahead of #2 (Ali hardly grinded at all, and was probably #3), I was grinding exp on Authority with Ashlyn, NoobLol and Fridj. Around this time was when Derp reached infamy 150. I posted the message " + '"' + "the elite grinding server has too many femboys and more are being infected every day 💀"  + '"' + " in a private match where apparently no one would be offended by the word 'femboy'. (This message was referring to the high percentage of elite grinding server members being a femboy, the server where its activity eventually almost entirely consisted of roleplayers instead of grinders. Many grinders ended up leaving.) 53 seconds later, having just bagged Gold Bars from the crate in the shed, around 20:08Z, I received my first-ever moderation on the platform in nearly 11 years, despite everything I have been able to get away with in the past. A 1-day account suspension, of which my two appeals were auto-denied. I even tried to manipulate the AI appeal bot, but failed."
@@ -643,7 +666,11 @@
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners in menu (2025-01-25T12-28-29Z).jpg'></div><div class='gallerytext'>All four OG Crimson suit owners on 2025-01-25T12:28:29Z.</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - Derpifi3d, withwillin101, Aurora_The1Cat lined up in heist (2025-01-25T12-30-00Z).jpg'></div><div class='gallerytext'>Three of the four OG Crimson suit owners lined up, as I took this screenshot. (2025-01-25T12:30:00Z)</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners end of Jewelry Shop (2025-01-25T12-36-17Z).jpg'></div><div class='gallerytext'>We're going to need a bigger van... (2025-01-25T12:36:17Z)</div></li>"
-		+ "</ul>",
+		+ "</ul>"
+		+ "<p></p><b>Closing remarks</b><br/>"
+		+ "What a grind! I could've slept soundly each night and still been first, albeit likely not in 2024 in any time zones. I'm a little disappointed I didn't start the grind sooner and that I didn't really grind too much early on, otherwise could've got the badge in 2024 in many more, even all, time zones. Regardless, even though there were days when I didn't want to grind, I know I was extremely committed and set my mind to achieving my goal, enduring each long day after the next through the sheer will to be first (only stopping due to a physical need or ailment, never out of boredom or demotivation), and later also to achieve it before the end of the year."
+		+ "<p></p>The intense dedication to the grind has been part of the reason for a deep reevaluation of the self, and I realise now that life is not about living an 'unchanging film on repeat'. It is about changing, learning, growing, to love and to be loved. While I did really commit to the grind knowing the sheer dedication, the badge obtainment time and being first would all contribute to being remembered, I heavily overexerted myself just to 'look good' to others. I realise now that personal satisfaction at such an achievement like CCL matters far more than how others recognise said achievement. The reality of my achievement is my own, not anyone else's. After all, when we're no longer around, we become stories, and it's the personality and uniqueness of our stories that make them memorable. Primarily for this reason is why I most likely won't endure such mindless days-long grinding sessions again."
+		+ "<p></p>Sure, the grind may have had negative physical and psychological impacts, but it was also part of the reason for consciously seeking out self enlightenment. Negative experiences make the positive ones meaningful. I've met many friends, and unfortunately many enemies, during my time in the Notoriety community and since starting my journey of self enlightenment. Some of those friends I intend to dedicate myself to our friendship with as much or more commitment as during the CCL grind. Intention and belief allows you to achieve anything, even if it takes time. Remember this, as it applies to everything in this life. Make your own reality, live how you wish to live and write your own truly unforgettable story full of immense detail, personal struggles and growth, love and the friends you met along the way.",
 		// #2
 		"<h1>The Beginning & The End: Derp’s Journey To CCL</h1><br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson<p></p><br/><b>Pre-CCL Release</b><br/>"
 		+ "“Yo, I found a new game, it’s pretty good”"
@@ -721,7 +748,90 @@
 		undefined, // not contacted
 		undefined, // not contacted
 		undefined, // contacted (2025-04-27), waiting
-		undefined, // not contacted
+		// #18
+		"<b style='color:rgba(255,0,0,var(--bg-alpha))'>Disclaimer:</b> Dates on this docs are NOT made up"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>December 16th, 2024:</b> <b style='color:rgba(255,165,0,var(--bg-alpha))'>Notoriety relaunches</b>"
+		+ "<br/>- Didn’t realized you can infamy above 25 until tomorrow"
+		+ "<br/>- Started to grind for “fun”"
+		+ "<br/>- Cash: 2.3B"
+		+ "<br/>- Display name used: “Joker”"
+		+ "<br/><span style='background:rgba(0,0,0,var(--bg-alpha));color:rgba(255,255,0,var(--bg-alpha))'>Original grind strat:</span>"
+		+ "<br/>J shop - Rush Hour - Ozela (no trophies) - Any loud heists (e.g. transport, brick bank) - Nightclub spam (bring back repeat bonus) - Shadow raid ECM rush (with randoms)"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>December 23rd, 2024:</b> <b style='color:rgba(166,41,255,var(--bg-alpha))'>Reaches Infamy 50</b> (I was top 10 at the time)"
+		+ "<br/>- Stuck with the same grind strat"
+		+ "<br/>- Got busy with outside activities so grind slowed down"
+		+ "<br/>- Average 15 hours per day on Notoriety (6-7 infamies per day) down to 2-3 hours per day on Notoriety (1-2 infamies per day)"
+		+ "<br/>- Realizes how absurd the money requirement started to rise so I bought Cheaper Infamy Gamepass"
+		+ "<br/>- People start to make fun of my display name so I changed my display name"
+		+ "<br/>- Changes display name to “Bullet”"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>January 7th, 2025:</b> <b style='color:rgba(166,41,255,var(--bg-alpha))'>Reaches Infamy 100</b>"
+		+ "<br/>- Got the Navy Blue suit"
+		+ "<br/>- Disappointed on how the blue is barely visible"
+		+ "<br/>- Considered quitting due to people calling me “no life”"
+		+ "<br/>- Cash: 1.8B"
+		+ "<br/>- Changes back to “Joker” display name (due to friends and people not being to recognise me in new display names)"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>During the grind for Infamy 150:</b> <b style='color:rgba(255,0,0,var(--bg-alpha))'>Suit update</b> (chance to get the purple Infamy 150 was gone)"
+		+ "<br/>- Kinda disappointed since I need the purple Infamy 150 suit to match the actual Joker cosplay"
+		+ "<br/>- Grind strat changes: In Ozela, started to go for trophies"
+		+ "<br/>- Infamy money cap was set, literally biggest joy in my grind"
+		+ "<br/>- Legit broke: Cash: 1B (due to infamy money cap update coming in a bit too late)"
+		+ "<br/>- Display name used: “Joker”"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>January 31st, 2025:</b> <b style='color:rgba(166,41,255,var(--bg-alpha))'>Reaches Infamy 150</b>"
+		+ "<br/>- Friends started to quit (best friend “Supreme” stopped at Infamy 50)"
+		+ "<br/>- Grind strat need immediate readjustments to friends quitting"
+		+ "<br/><span style='background:rgba(0,0,0,var(--bg-alpha));color:rgba(255,255,0,var(--bg-alpha))'>New grind strat:</span>"
+		+ "<br/>J shop - Rush Hour - Ozela (with trophies and completed twice) - Depot - Brick bank (bus escape) - Nightclub (normal mode, completed twice, for regaining repeat bonus)"
+		+ "<br/>- Changes display name to “Iron”"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>February 23rd, 2025:</b> <b style='color:rgba(166,41,255,var(--bg-alpha))'>Reaches Infamy 200</b>"
+		+ "<br/>- Gone full solo grind mode (trust issues to do public heists)"
+		+ "<br/>- Started to buy exp boosters to accelerate speed of grinding"
+		+ "<br/>- Grind strat changes due to the purchases of exp boosters"
+		+ "<br/><span style='background:rgba(0,0,0,var(--bg-alpha));color:rgba(255,255,0,var(--bg-alpha))'>Solo grind strat:</span>"
+		+ "<br/>J shop - Rush Hour - Ozela (with trophies, completed once) - Depot - Brick bank (bus escape) - Nightclub (normal mode, completed twice, for regaining repeat bonus)"
+		+ "<br/>- With new grind strat I’m able to infamy in only 5 heists"
+		+ "<br/>- Although met new friends but never had chances to play with them"
+		+ "<br/>- Display name used: “Iron”"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>March 10th, 2025:</b> <b style='color:rgba(166,41,255,var(--bg-alpha))'>Reaches Infamy 250</b>"
+		+ "<br/>- Finally got the suit (it's literally just inverted Billionaire suit and not that worth the drip but worth the grind)"
+		+ "<br/>- Go on to help randoms in loud heists (mostly loud heists)"
+		+ "<br/>- Stuck to Infamy 200 suit (bright red suit) since it looked better in my opinion"
+		+ "<br/>- Go back to grind mutations (kinda)"
+		+ "<br/>Started to experiment with new dodge builds with various different weapons, equipments, and gadgets (hence why I’m mostly seen in public loud heists)"
+		+ "<br/>- Cash remaining at last: 264M"
+		+ "<br/>- Later got back up to 2.4B cash"
+		+ "<br/>- Changes display name to “BloodForValentine” for 1 week before changing back to “Iron” (due to friends and people not being to recognise me in new display names)"
+		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>Extras:</b> <span style='background:rgba(255,0,0,var(--bg-alpha));color:rgba(255,255,0,var(--bg-alpha))'>Random moments</span>"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0001.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0002.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0003.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0004.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0005.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0006.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0007.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0008.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0009.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0010.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0011.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0012.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0013.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0014.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0015.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0016.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0017.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0018.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0019.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0020.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0021.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0022.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0023.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0024.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0025.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0026.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0027.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0028.jpg'></div></li>"
+		+ "</ul>"
+		+ "",
 		undefined, // not contacted
 		// #20
 		"I first found the game back in August of 2019, a few months after I had first made my account. I do not recall much about my early experiences with the game, other than thinking the game should have a tutorial of some kind, as the game is, to this day, not very beginner-friendly. My initial infamies were quite slow, with my first one taking some 141 days, from 12 August to 31 December of 2019. Things didn’t exactly get faster from there either, with the next four infamies taking an additional 436 days to get, with me reaching infamy V on 11 March 2021. The next sets of infamies took less time, with infamy X taking 136 days from infamy V, infamy XV taking 170 days from there, and infamy XX taking 1 year (which i’m not sure as to how it did, given that it was in 2022). On 5 March 2022, at 20:44, CDT (UTC-6), I reached infamy XXV after 935 days of playing Notoriety. From there, I would get Billionaire on 25 May, and then just mess around, earning about $2.6 billion before the game would get DMCA’d. Then, on 16 December, when I returned to the game, I discovered that not only did infamies beyond XXV exist, but the limit was now CCL. So, I got infamy XXVI as soon as I discovered this, and began slowly getting more infamies from there, reaching infamy L some 21 days after returning. I followed a relatively simple rotation, playing The Ozela Heist, Rush Hour, and (towards the end of the grind) Authority, adding in a few Nightclub runs to raise repeat bonuses on Rush Hour and Ozela. I soloed every heist I played, as I didn’t want to have to plan grinds around when I could contact my teammates. These extra infamies came far faster than I expected, with me reaching infamy C just 16 days after infamy L. Just 52 days after infamy C, I reached infamy CCL on 13 March 2025 at 18:28. The grind was pretty long despite how many methods I had used to boost my XP gain rates, such as having the 2x XP gamepass and using XP boosts from the shop from infamy CC to CCXXII to speed things up. The grind would probably have been less annoying if I wasn’t doing it all solo, but it worked out in the end, so it doesn’t really bother me that it took a bit of time. I have no idea if I’m actually the first solo CCL grinder, as I have no idea if that can be verified without asking all 28 people who have reached it thus far."
@@ -806,6 +916,7 @@
 		+ "<p></p>On 04/27/2025 while at Infamy 226, fueled by a large iced coffee, a sausage egg and cheese sandwichand some Pepsi Zero’s , I started pumping out infamy after infamy after infamy. The only time I walked away from my desk was for piss breaks . Since me and Brago were in different time zones and he grinded while I was asleep, I knew for sure he had to have been in the 240’s, so I had to get CCL TODAY if I were to reach that #30 spot. Although my strategy was good for solo runs, I also had the help of some other friends both before and during this gauntlet of infamies. 11hrs later, my short term rival Brago joined the game. His infamy… 242, mine… was just a measly 246! I was 4 Infamies ahead of him and knew it was a gg’s. So I did what I do best and clutched that number #30 spot after 13hrs of non-stop grinding. After the grind, I legit couldn’t stop thinking about the Depot . Had I not grinded for that long, I would’ve lost that #30 spot. So this means I’m potentially the first CCL player to grind for it during the College Hell of APRIL ."
 		+ "<p></p>I would like to give thanks to the following people that helped me on this grind. MVP & #1 Supporter: blast (@ShopBlastsLocker). Inspiration: CCL #31 Brago (@Alxzor) & CCL #1 ILikeToast5 (aka TheSeal27). Supporters & Teammates: abcd (@DeTeditive), Facepalm2221 (@facepalm2221), MoonGrave (@Ekko_lokation), Retro (@InfinitelyRetro & ngl 2nd MVP), XYZcheeseborger (@lawsuitace), thermonuclear bullet (@Liokkgi), mung ster (@munster4best), Karlo (@hikaru123456), Tuxedoge (@Magnuslover2), bruh (@NathanJZC), ex0sphere (@ex0spher_e) & nark (@narkyii). Honorable Mention: @ameertttfssd201099.",
 		undefined, // contacted (2025-05-02), waiting
+		// #32
 		"<p></p>Special thanks to my friends - iron (18th CCL), minh, rice and pho for supporting me along my CCL journey. They have boosted me alot since I started infamy grinding.",
 		undefined, // contacted (2025-05-10), waiting
 		];
@@ -1094,9 +1205,9 @@
 		function playerHTML(input, backgroundRGB) {
 			var output = "";
 			if (backgroundRGB == undefined) {
-				output += "<td class='NotorietyEXPCalculator_HallofInfamyCCLsPlayer'>";
+				output += "<td class='NotorietyEXPCalculator_TableStyling'>";
 			} else {
-				output += "<td class='NotorietyEXPCalculator_HallofInfamyCCLsPlayer' style='background:rgba(" + backgroundRGB + ",var(--bg-alpha))'>";
+				output += "<td class='NotorietyEXPCalculator_TableStyling' style='background:rgba(" + backgroundRGB + ",var(--bg-alpha))'>";
 			}
 			
 			output += "<div class='ImageTextContainer'>";
@@ -1387,9 +1498,9 @@
 			${updateLogEntry('remove', 'Removal of something')}
 			${updateLogEntry('fix', 'Patch of a problem')}
 			${updateLogEntry('other', 'Other')}
-		Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
+		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~64 hours, 40 minutes.
+		Estimated total active development time across all versions: ~71 hours, 50 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1397,6 +1508,20 @@
 		</ul>
 		</p>
 		<hr/>
+		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+		<b>[Testing] Version 0.3.0</b>
+		<ul>
+			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the following top-of-section note: <code>These settings are not required to be defined if not calculating progression requirements.</code>")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded CCL #1's user-written description with a new 'Closing remarks' story section. Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #18's user-written description, including the addition of 28 images.")}
+			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (currently only Friday Night badge).")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's notes.")}
+			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions'.")}
+			${updateLogEntry('edit', "Some source code changes.")}
+			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
+			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch)")}
+			${updateLogEntry('other', "Estimated active development time: ~7 hours, 10 minutes.")}
+		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
 		<ul>
@@ -1612,6 +1737,190 @@
 		elem.SectionContainer_UpdateLog.innerHTML = theLogs;
 	}
 	addUpdateLog();
+	
+	function addTimersSection() {
+		const timeOutput = new Timer();
+		const currentDateObj = new Date();
+		timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
+		console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
+		const localTZ = currentDateObj.getTimezoneOffset();
+		var string = '';
+		var tzString = '';
+		function getTZString(input) {
+			input = Number(input);
+			var output = '';
+			if (Math.abs(input) < 600) {
+				output += '0';
+			}
+			// console.log(input);
+			if (input <= 0) {
+				output = '+' + output + Math.floor(Math.abs(input) / 60);
+			} else {
+				output = '-' + output + Math.floor(Math.abs(input) / 60);
+			}
+			output += ':';
+			if (Math.abs(input) % 60 > 0) {
+				output += Math.abs(input) % 60;
+			} else {
+				output += '00';
+			}
+			if (Math.abs(input) == 0) {
+				output = 'UTC / Zulu';
+			} else {
+				output = 'UTC' + output;
+			}
+			return output;
+		}
+		// console.log(localTZ);
+		// console.log("Detected time zone:", getTZString(localTZ));
+		
+		const utcDateObj = new Date(currentDateObj);
+		utcDateObj.setTime(currentDateObj.getTime() - (localTZ * -1 * 60 * 1e3));
+		
+		// temp: 780 should be 720
+		const utcOffsets = ['720', '660', '600', '570', '540', '480', '420', '360', '300', '240', '210', '180', '120', '60', '0', '-60', '-120', '-180', '-210', '-240', '-270', '-300', '-330', '-345', '-360', '-390', '-420', '-480', '-525', '-540', '-570', '-600', '-630', '-660', '-720', '-765', '-780', '-840'];
+		// tba
+		// console.log(utcOffsets.length);
+		const time_FridayNight = [];
+		// UTC: 00:00 & 12:00
+		const time_DailyChallenges = {
+			next:new Date(43200000),
+			previous:new Date(86400000)
+		};
+		const time_WeeklyChallenges = {
+			next:new Date(86400000 * 14),
+			previous:new Date(86400000 * 7),
+		};
+		
+		time_DailyChallenges.previous.setTime(time_DailyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000 - 43200000);
+		time_DailyChallenges.next.setTime(time_DailyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000 + 43200000);
+		
+		time_WeeklyChallenges.previous.setTime(time_WeeklyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / 604800000) * 604800000 - 604800000);
+		time_WeeklyChallenges.next.setTime(time_WeeklyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / 604800000) * 604800000 - 604800000);
+		const timeReset_DailyChallenges = {since:currentDateObj.getTime() - time_DailyChallenges.previous.getTime(), until:time_DailyChallenges.next.getTime() - currentDateObj.getTime()};
+		const timeReset_WeeklyChallenges = {since:currentDateObj.getTime() - time_WeeklyChallenges.previous.getTime(), until:time_WeeklyChallenges.next.getTime() - currentDateObj.getTime()};
+		
+		for (var x = 0; x < utcOffsets.length; x++) {
+			const offsetMilliseconds = Number(utcOffsets[x]) * -1 * 60 * 1000;
+			var obj = new Date(new Date().getTime());
+			obj.setTime(obj.getTime() + (localTZ * 60 * 1e3));
+			obj.setTime(obj.getTime() + (Number(utcOffsets[x]) * -1 * 60 * 1e3));
+			obj = new Date(obj.getTime());
+				// console.log(obj.getDay());
+				// console.log(getTZString(utcOffsets[x]), formatDate(obj, "yyyy-MM-dd HH:mm:ss:ms", false));
+			const output = {currentlyFri:false, remainingTime: null};
+			const whenFriday = {next:new Date(86400000 * 7), previous:new Date(86400000 * 1)}; // temp: should be 2 lower for both & 864000000 > 604800000
+			whenFriday.previous.setTime(whenFriday.previous.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
+			whenFriday.next.setTime(whenFriday.next.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
+			if (false/*x == 0*/) {
+					console.log('--------------------');
+					console.log('--------------------');
+					console.log(formatDate(new Date(obj.getTime()), "yyyy-MM-dd HH:mm:ss:ms", false));
+					console.log(formatDate(new Date(whenFriday.previous), "yyyy-MM-dd HH:mm:ss:ms", false));
+					console.log(formatDate(new Date(whenFriday.next), "yyyy-MM-dd HH:mm:ss:ms", false));
+					console.log(obj.getTime(), new Date().getTime());
+					console.log('--------------------');
+					console.log('--------------------');
+			}
+			if (x == 37) {
+				/*
+			console.log('TESTING');
+			console.log('TESTING');
+			console.log('TESTING');
+			console.log('TESTING');
+			console.log('TESTING');
+			console.log(whenFriday);
+			*/
+			}
+			// console.log(formatDate(new Date(whenFriday.next)), "yyyy-MM-dd HH:mm:ss:ms", false);
+			var objDefaultTime = obj.getTime();
+			if (x == 37) {
+				// console.log(new Date(obj.getTime()).getTime());
+				// console.log(objDefaultTime);
+				// console.log(whenFriday.previous.getTime() - obj.getTime());
+			}
+			// temp: 0, should be 5
+			if (obj.getDay() == 5) {
+				output.currentlyFri = true;
+				output.remainingTime = (whenFriday.previous.getTime() + 86400000 - 1) - obj.getTime();
+			} else {
+				output.remainingTime = (whenFriday.next.getTime() + 86400000 - 1) - obj.getTime();
+				// if statement here is a quickfix solution for negative UTC timezones not being calculated properly
+				if (obj.getTime() >= whenFriday.previous.getTime()) {
+					output.remainingTime = (whenFriday.next.getTime() + 86400000 - 1) - obj.getTime();
+				} else {
+					output.remainingTime = (whenFriday.previous.getTime() - 1) - obj.getTime();
+				}
+				// console.log(output.remainingTime);
+			}
+			if (x == 31) {
+				// console.log(whenFriday);
+			}
+			if (x == 37) {
+				// console.log('test');
+				// console.log(output.remainingTime);
+			}
+			time_FridayNight.push(output);
+		}
+		// console.log(time_FridayNight[31]);
+		// console.log(new Date(new Date().getTime() + time_FridayNight[31].remainingTime));
+		// console.log(utcDateObj);
+		// console.log(utcOffsets);
+		// console.log(timeReset_DailyChallenges);
+		// console.log(timeReset_WeeklyChallenges);
+		string = "<p></p>Challenges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:ms", false) + ' ' + getTZString(localTZ);
+		string += "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable'>"
+		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Daily' class='NotorietyEXPCalculator_TableStyling'>";
+		timeOutput.amount = timeReset_DailyChallenges.since;
+		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		timeOutput.amount = timeReset_DailyChallenges.until;
+		string += "<p>Next reset: " + formatDate(time_DailyChallenges.next, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		
+		
+		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Weekly' class='NotorietyEXPCalculator_TableStyling'>";
+		timeOutput.amount = timeReset_WeeklyChallenges.since;
+		string += "<b>Weekly Challenges</b><p>Last reset: " + formatDate(time_WeeklyChallenges.previous, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		timeOutput.amount = timeReset_WeeklyChallenges.until;
+		string += "<p>Next reset: " + formatDate(time_WeeklyChallenges.next, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		string += "</table>";
+		
+		string += "<p></p>Badges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:ms", false) + ' ' + getTZString(localTZ)
+		+ "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable'>"
+		+ "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable_FridayNight' class='NotorietyEXPCalculator_TableStyling'>";
+		string += "<b>Friday Night</b><p><ul>";
+		for (var x = 0; x < utcOffsets.length; x++) {
+			var string_a = '';
+			if (utcOffsets[x] == localTZ) {
+				// console.log(getTZString(utcOffsets[x]));
+				// console.log(getTZString(localTZ));
+				string_a = "<li style='font-weight:bold;text-decoration:underline'>";
+			} else {
+				string_a = "<li style='font-weight:bold'>";
+			}
+			timeOutput.amount = time_FridayNight[x].remainingTime;
+			if (time_FridayNight[x].currentlyFri == true) {
+				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x]) + ": Available for " + timeOutput.formatAmount() + "</span>"
+			} else {
+				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x]) + ": Available in " + timeOutput.formatAmount() + "</span>";
+			}
+			string_a += "</li>";
+			string += string_a;
+		}
+		string += "</ul></p>";
+		string += "</table>";
+		
+		elem.SectionContainer_Timers_TheList.innerHTML = string;
+		
+		elem.Section_Timers_ChallengesTable = document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable');
+		elem.Section_Timers_ChallengesTable_Daily = document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Daily');
+		elem.Section_Timers_ChallengesTable_Weekly = document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Weekly');
+		
+		
+		// elem.Section_Timers_ChallengesTable_Daily.innerHTML = "Daily:<br><ul><li>Last reset: " + timeOutput.formatAmount() + "</li><li>Next reset: ?</li></ul>";
+		// elem.
+	}
+	// addTimersSection();
+	setTimeout(addTimersSection, 1);
 
 	function getRotationInput(input) {
 		const runLog = [];
@@ -1829,7 +2138,7 @@
 			
 			// also hide some inputs and their blocks:
 			elem.untilRotationsInput_Block.style.display = 'none';
-			elem.goalMoneyInput.style.display = 'none';
+			elem.goalMoneyInput_Block.style.display = 'none';
 		}
 		hideAllSections();
 		
@@ -1852,7 +2161,7 @@
 				break;
 			case 1:
 				elem.Section_MoneySettings.style.display = '';
-				elem.goalMoneyInput.style.display = '';
+				elem.goalMoneyInput_Block.style.display = '';
 				elem.untilRotationsInput_Block.style.display = '';
 				elem.runGainsInput.placeholder = 'Money|Time (seconds). Example of a rotation involving 3 runs (heists):\n\n842,200|160\n487814|115\n3482775|214';
 				runGainsInput_InputExplanation_Text += ' Money and Time values will be averaged based on all included runs, and then these averages will be used for computations.';
@@ -1904,12 +2213,16 @@
 		computeBeepBoop();
 	});
 	
-	elem.SectionContainerToggle_UpdateLog.addEventListener('click', function() {
-		elem.SectionContainer_UpdateLog.style.display = elem.SectionContainer_UpdateLog.style.display == 'block' ? 'none' : 'block'
-	});
-	
 	elem.SectionContainerToggle_HallofInfamyCCLs.addEventListener('click', function() {
 		elem.SectionContainer_HallofInfamyCCLs.style.display = elem.SectionContainer_HallofInfamyCCLs.style.display == 'block' ? 'none' : 'block'
+	});
+	
+	elem.SectionContainerToggle_Timers.addEventListener('click', function() {
+		elem.SectionContainer_Timers.style.display = elem.SectionContainer_Timers.style.display == 'block' ? 'none' : 'block'
+	});
+	
+	elem.SectionContainerToggle_UpdateLog.addEventListener('click', function() {
+		elem.SectionContainer_UpdateLog.style.display = elem.SectionContainer_UpdateLog.style.display == 'block' ? 'none' : 'block'
 	});
 	
 	// --------------------
