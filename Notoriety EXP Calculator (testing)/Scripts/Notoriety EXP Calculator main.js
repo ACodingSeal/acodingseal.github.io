@@ -636,7 +636,7 @@
 		// 31 - 34
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
-		"Minimum infamy classic suit (highest unknown): Blue Navy (100)",
+		"Highest infamy classic suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		];
 		
@@ -926,7 +926,11 @@
 		undefined, // contacted (2025-05-02), waiting
 		// #32
 		"<p></p>Special thanks to my friends - iron (18th CCL), minh, rice and pho for supporting me along my CCL journey. They have boosted me alot since I started infamy grinding.",
-		undefined, // contacted (2025-05-10), waiting
+		// #33
+		"I don't exactly remember how I got into Notoriety - but I can say that I started back in 2018. Memories are somewhat fuzzy during the time, but I do remember Nightclub grinding when repeat bonuses weren't even a thing, which got me Infamy 25 and True Criminal shortly after. I generally slowed down - mainly grinding MXP and waiting for updates until, well, the game got taken down."
+		+ "<p></p>I never really started to fully grind the game as soon as it was re-released, but I did get the blue navy suit pre-rework. I mainly started to ramp up the grind during March-May because I was already around 150-170 and decided to just go for it. And that's pretty much it. I got my funny CCL title and the grind is over."
+		+ "<p></p>Most of the grind, I would say, was roughly 90% solo. The rest was just fun with friends, randoms, and challenges. I never had any rotations. I just kind of picked high EXP heists (Rush Hour, Shadow Raid, Depot, Authority, etc.) and switched when it was 15-25% repeat or just got bored lol. Overall, this grind was fun and I wish anyone grinding for CCL the best of luck!"
+		+ "<p></p>(Big ol' thanks to CHIEF_TOAD, nark, Iliketoast5, Retro, and many other people for being cool n' stuff while doing this grind!)",
 		undefined, // not contacted
 		];
 		
@@ -1509,7 +1513,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~72 hours, 41 minutes.
+		Estimated total active development time across all versions: ~72 hours, 44 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1523,17 +1527,18 @@
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the following top-of-section note: <code>These settings are not required to be defined if not calculating progression requirements.</code>")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded CCL #1's user-written description with a new 'Closing remarks' description section. Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #18's user-written description, including the addition of 28 images.")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33's user-written description.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #34.")}
 			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (currently only <a href='https://www.roblox.com/badges/3410723896492162'>Friday Night</a> badge).")}
 			${updateLogEntry('add', "Double-clicking an image will now open its source file in a new tab.")}
-			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's notes.")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's and #33's notes.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of a part of the second paragraph in the top-of-section notes: <code>Open images in a new tab to view the full image.</code> > <code>Double click an image to open its source file and view the full image.</code>")}
 			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions'.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch). Starting in this version (updated from x.2.1 > x.3.0), all Update Log versions are now 1.x.x higher, as the first released version should've been 1.0.0 instead of 0.0.1.")}
-			${updateLogEntry('other', "Estimated active development time: ~8 hours, 41 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~8 hours, 44 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
