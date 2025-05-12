@@ -1756,7 +1756,7 @@
 		const timeOutput = new Timer();
 		const currentDateObj = new Date(new Date().getTime() + extraHours);
 		timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
-		console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
+		// console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
 		const localTZ = currentDateObj.getTimezoneOffset();
 		var string = '';
 		var tzString = '';
