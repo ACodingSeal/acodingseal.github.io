@@ -1509,7 +1509,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~72 hours, 38 minutes.
+		Estimated total active development time across all versions: ~72 hours, 41 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1533,7 +1533,7 @@
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch). Starting in this version (updated from x.2.1 > x.3.0), all Update Log versions are now 1.x.x higher, as the first released version should've been 1.0.0 instead of 0.0.1.")}
-			${updateLogEntry('other', "Estimated active development time: ~8 hours, 38 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~8 hours, 41 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
@@ -1804,7 +1804,7 @@
 			previous:new Date(timeFixed_Daily)
 		};
 		const time_WeeklyChallenges = {
-			next:new Date(timeFixed_Weekly),
+			next:new Date(timeFixed_Weekly * 2),
 			previous:new Date(timeFixed_Weekly),
 		};
 		
