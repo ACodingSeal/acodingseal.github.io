@@ -322,10 +322,13 @@
 		+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs_TheList'>*cloaker noises*</div>"
 		+ "</div>";
 		
-	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers').innerHTML = "Milliseconds may not be exactly synchronised."
+	var timersAutoUpdateInterval = null;
+	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers').innerHTML = "<ul>"
+	+ "<li>Due to technical limitations, milliseconds may be about 1 or 2 off.</li>"
+	+ "<li>Timestamps are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format.</li>"
+	+ "</ul><p></p><div style='width:10em;height:4em'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_SectionContainer_Timers_UpdateTimers' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Update timers</button></div>"
+	+ "<input id='NotorietyEXPCalculator_SectionContainer_Timers_AutoUpdate' type='checkbox'>Auto update? (interval 250ms)</input>"
 	+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_TheList'>It's time to add something here...</div>"
-	+ ""
-	+ ""
 	+ "";
 	
 	const elem = {
@@ -1242,11 +1245,11 @@
 				output += "Badge obtained: ";
 				if (typeof orig.timestamp == 'object') {
 					output += 'between ';
-					output += formatDate(new Date(orig.timestamp[0]), "yyyy-MM-dd HH:mm:ss:ms", false);
+					output += formatDate(new Date(orig.timestamp[0]), "yyyy-MM-dd HH:mm:ss:fff", false);
 					output += ' to ';
-					output += formatDate(new Date(orig.timestamp[1]), "yyyy-MM-dd HH:mm:ss:ms", false);
+					output += formatDate(new Date(orig.timestamp[1]), "yyyy-MM-dd HH:mm:ss:fff", false);
 				} else {
-					output += formatDate(new Date(orig.timestamp), "yyyy-MM-dd HH:mm:ss:ms", false);
+					output += formatDate(new Date(orig.timestamp), "yyyy-MM-dd HH:mm:ss:fff", false);
 				}
 				if (orig.approx != false) {
 					if (orig.approx == true) {
@@ -1409,7 +1412,7 @@
 			if (Math.min(...filterIncludedCCLs_positions_alt) >= 5 && filterIncludedCCLs_positions_alt.length > 0) {
 				string_a = '';
 				string_a += "<p><table style='margin:auto;width:100%'>";
-				string_a += "<hr/><h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss:ms", false) + ") CCLs</h3>";
+				string_a += "<hr/><h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss:fff", false) + ") CCLs</h3>";
 				var maxIterations = filterIncludedCCLs.length;
 				var iterationBase = crimsonIncluded;
 				if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
@@ -1506,7 +1509,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~71 hours, 38 minutes.
+		Estimated total active development time across all versions: ~72 hours, 10 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1526,8 +1529,9 @@
 			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions'.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
+			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch)")}
-			${updateLogEntry('other', "Estimated active development time: ~7 hours, 38 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~8 hours, 10 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
@@ -1746,8 +1750,9 @@
 	addUpdateLog();
 	
 	function addTimersSection() {
+		const extraHours = 1000 * 3600 * 0; // used for testing
 		const timeOutput = new Timer();
-		const currentDateObj = new Date();
+		const currentDateObj = new Date(new Date().getTime() + extraHours);
 		timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 		console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
 		const localTZ = currentDateObj.getTimezoneOffset();
@@ -1781,7 +1786,7 @@
 		// console.log(localTZ);
 		// console.log("Detected time zone:", getTZString(localTZ));
 		
-		const utcDateObj = new Date(currentDateObj);
+		const utcDateObj = new Date(currentDateObj.getTime());
 		utcDateObj.setTime(currentDateObj.getTime() - (localTZ * -1 * 60 * 1e3));
 		
 		// temp: 780 should be 720
@@ -1811,44 +1816,17 @@
 		
 		for (var x = 0; x < utcOffsets.length; x++) {
 			const offsetMilliseconds = Number(utcOffsets[x]) * -1 * 60 * 1000;
-			var obj = new Date(new Date().getTime());
+			var obj = new Date(new Date().getTime() + extraHours);
 			obj.setTime(obj.getTime() + (localTZ * 60 * 1e3));
 			obj.setTime(obj.getTime() + (Number(utcOffsets[x]) * -1 * 60 * 1e3));
 			obj = new Date(obj.getTime());
 				// console.log(obj.getDay());
-				// console.log(getTZString(utcOffsets[x]), formatDate(obj, "yyyy-MM-dd HH:mm:ss:ms", false));
+				// console.log(getTZString(utcOffsets[x]), formatDate(obj, "yyyy-MM-dd HH:mm:ss:fff", false));
 			const output = {currentlyFri:false, remainingTime: null};
 			const whenFriday = {next:new Date(86400000 * 7), previous:new Date(86400000 * 1)}; // temp: should be 2 lower for both & 864000000 > 604800000
 			whenFriday.previous.setTime(whenFriday.previous.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
 			whenFriday.next.setTime(whenFriday.next.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
-			if (false/*x == 0*/) {
-					console.log('--------------------');
-					console.log('--------------------');
-					console.log(formatDate(new Date(obj.getTime()), "yyyy-MM-dd HH:mm:ss:ms", false));
-					console.log(formatDate(new Date(whenFriday.previous), "yyyy-MM-dd HH:mm:ss:ms", false));
-					console.log(formatDate(new Date(whenFriday.next), "yyyy-MM-dd HH:mm:ss:ms", false));
-					console.log(obj.getTime(), new Date().getTime());
-					console.log('--------------------');
-					console.log('--------------------');
-			}
-			if (x == 37) {
-				/*
-			console.log('TESTING');
-			console.log('TESTING');
-			console.log('TESTING');
-			console.log('TESTING');
-			console.log('TESTING');
-			console.log(whenFriday);
-			*/
-			}
-			// console.log(formatDate(new Date(whenFriday.next)), "yyyy-MM-dd HH:mm:ss:ms", false);
 			var objDefaultTime = obj.getTime();
-			if (x == 37) {
-				// console.log(new Date(obj.getTime()).getTime());
-				// console.log(objDefaultTime);
-				// console.log(whenFriday.previous.getTime() - obj.getTime());
-			}
-			// temp: 0, should be 5
 			if (obj.getDay() == 5) {
 				output.currentlyFri = true;
 				output.remainingTime = (whenFriday.previous.getTime() + 86400000 - 1) - obj.getTime();
@@ -1862,38 +1840,26 @@
 				}
 				// console.log(output.remainingTime);
 			}
-			if (x == 31) {
-				// console.log(whenFriday);
-			}
-			if (x == 37) {
-				// console.log('test');
-				// console.log(output.remainingTime);
-			}
 			time_FridayNight.push(output);
 		}
-		// console.log(time_FridayNight[31]);
-		// console.log(new Date(new Date().getTime() + time_FridayNight[31].remainingTime));
-		// console.log(utcDateObj);
-		// console.log(utcOffsets);
-		// console.log(timeReset_DailyChallenges);
-		// console.log(timeReset_WeeklyChallenges);
-		string = "<p></p>Challenges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:ms", false) + ' ' + getTZString(localTZ);
+		console.log(currentDateObj.getTime());
+		string = "<p></p>Challenges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(localTZ);
 		string += "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable'>"
 		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Daily' class='NotorietyEXPCalculator_TableStyling'>";
 		timeOutput.amount = timeReset_DailyChallenges.since;
-		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
 		timeOutput.amount = timeReset_DailyChallenges.until;
-		string += "<p>Next reset: " + formatDate(time_DailyChallenges.next, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		string += "<p>Next reset: " + formatDate(time_DailyChallenges.next, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
 		
 		
 		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Weekly' class='NotorietyEXPCalculator_TableStyling'>";
 		timeOutput.amount = timeReset_WeeklyChallenges.since;
-		string += "<b>Weekly Challenges</b><p>Last reset: " + formatDate(time_WeeklyChallenges.previous, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		string += "<b>Weekly Challenges</b><p>Last reset: " + formatDate(time_WeeklyChallenges.previous, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
 		timeOutput.amount = timeReset_WeeklyChallenges.until;
-		string += "<p>Next reset: " + formatDate(time_WeeklyChallenges.next, "yyyy-MM-dd HH:mm:ss:ms", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		string += "<p>Next reset: " + formatDate(time_WeeklyChallenges.next, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
 		string += "</table>";
 		
-		string += "<p></p>Badges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:ms", false) + ' ' + getTZString(localTZ)
+		string += "<p></p>Badges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(localTZ)
 		+ "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable'>"
 		+ "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable_FridayNight' class='NotorietyEXPCalculator_TableStyling'>";
 		string += "<b>Friday Night</b><p><ul>";
@@ -1928,8 +1894,20 @@
 		// elem.Section_Timers_ChallengesTable_Daily.innerHTML = "Daily:<br><ul><li>Last reset: " + timeOutput.formatAmount() + "</li><li>Next reset: ?</li></ul>";
 		// elem.
 	}
-	// addTimersSection();
-	setTimeout(addTimersSection, 1);
+	addTimersSection();
+	// setTimeout(addTimersSection, 1);
+	
+	elem.SectionContainer_Timers_UpdateTimers = document.getElementById('NotorietyEXPCalculator_SectionContainer_Timers_UpdateTimers');
+	elem.SectionContainer_Timers_AutoUpdate = document.getElementById('NotorietyEXPCalculator_SectionContainer_Timers_AutoUpdate');
+	
+	elem.SectionContainer_Timers_UpdateTimers.addEventListener('click', addTimersSection);
+	elem.SectionContainer_Timers_AutoUpdate.addEventListener('input', function() {
+		if (this.checked == true) {
+			timersAutoUpdateInterval = setInterval(addTimersSection, 250);
+		} else {
+			clearInterval(timersAutoUpdateInterval);
+		}
+	});
 
 	function getRotationInput(input) {
 		const runLog = [];
