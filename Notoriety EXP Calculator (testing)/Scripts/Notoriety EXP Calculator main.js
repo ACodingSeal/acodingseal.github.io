@@ -516,40 +516,40 @@
 		"Frisk",
 		];
 		const playersData_robloxAvatars = [
-		"ILikeToast5 - 2025-04-10T22-03Z.jpg",
-		"Derpifi3d - 2025-04-10T22-04Z.jpg",
-		"withwillin101 - 2025-04-10T22-04Z.jpg",
-		"Aurora_The1Cat - 2025-04-10T22-04Z.jpg",
-		"seroly2345 - 2025-04-10T22-05Z.jpg",
-		"theREALdynamic 2025-04-10T22-05Z.jpg",
-		"bigfootbb045 - 2025-04-10T22-05Z.jpg",
-		"LuvlyGirlMaisy - 2025-04-10T22-05Z.jpg",
-		"ARandomNoobGamer - 2025-04-10T22-06Z.jpg",
-		"Ryankaye01 - 2025-04-10T22-06Z.jpg",
-		"kogamarobloxman - 2025-04-10T22-06Z.jpg",
-		"ALiteraIPotato - 2025-04-10T22-06Z.jpg",
-		"cl3rical - 2025-04-10T22-07Z.jpg",
-		"T4x_Ev4der - 2025-04-10T22-07Z.jpg",
-		"notrealdude755 - 2025-04-10T22-07Z.jpg",
-		"Kurvinox_PL - 2025-04-10T22-07Z.jpg",
-		"SwiftYards - 2025-04-10T22-08Z.jpg",
-		"Danneilkoko - 2025-04-10T22-08Z.jpg",
-		"Cut1eBetty - 2025-04-10T22-08Z.jpg",
-		"IceColdFrigid - 2025-04-10T22-08Z.jpg",
-		"TexudeoSteve - 2025-04-10T22-09Z.jpg",
-		"ilovebaconflavor - 2025-04-10T22-09Z.jpg",
-		"LeRealShadowflame - 2025-04-10T22-09Z.jpg",
-		"Benja_boy64 - 2025-04-10T22-09Z.jpg",
-		"GenericDreamer - 2025-04-10T22-10Z.jpg",
-		"M4kA13 - 2025-04-10T22-10Z.jpg",
-		"Aimilized - 2025-04-11T19-35Z.jpg",
-		"LosCracks9000 - 2025-04-13T00-14Z.jpg",
-		"Minimalisation - 2025-04-15T23-59Z.jpg",
-		"chief_toad619 - 2025-04-28T06-39Z.jpg",
-		"Alxzor - 2025-04-29T23-23Z.jpg",
-		"rebirthed6coin - 2025-05-03T06-19Z.jpg",
-		"DeTedtive - 2025-05-10T00-21Z.jpg",
-		"Friskern - 2025-05-11T23-40Z.jpg",
+		"ILikeToast5 - 2025-04-10T22-03Z.png",
+		"Derpifi3d - 2025-04-10T22-04Z.png",
+		"withwillin101 - 2025-04-10T22-04Z.png",
+		"Aurora_The1Cat - 2025-04-10T22-04Z.png",
+		"seroly2345 - 2025-04-10T22-05Z.png",
+		"theREALdynamic 2025-04-10T22-05Z.png",
+		"bigfootbb045 - 2025-04-10T22-05Z.png",
+		"LuvlyGirlMaisy - 2025-04-10T22-05Z.png",
+		"ARandomNoobGamer - 2025-04-10T22-06Z.png",
+		"Ryankaye01 - 2025-04-10T22-06Z.png",
+		"kogamarobloxman - 2025-04-10T22-06Z.png",
+		"ALiteraIPotato - 2025-04-10T22-06Z.png",
+		"cl3rical - 2025-04-10T22-07Z.png",
+		"T4x_Ev4der - 2025-04-10T22-07Z.png",
+		"notrealdude755 - 2025-04-10T22-07Z.png",
+		"Kurvinox_PL - 2025-04-10T22-07Z.png",
+		"SwiftYards - 2025-04-10T22-08Z.png",
+		"Danneilkoko - 2025-04-10T22-08Z.png",
+		"Cut1eBetty - 2025-04-10T22-08Z.png",
+		"IceColdFrigid - 2025-04-10T22-08Z.png",
+		"TexudeoSteve - 2025-04-10T22-09Z.png",
+		"ilovebaconflavor - 2025-04-10T22-09Z.png",
+		"LeRealShadowflame - 2025-04-10T22-09Z.png",
+		"Benja_boy64 - 2025-04-10T22-09Z.png",
+		"GenericDreamer - 2025-04-10T22-10Z.png",
+		"M4kA13 - 2025-04-10T22-10Z.png",
+		"Aimilized - 2025-04-11T19-35Z.png",
+		"LosCracks9000 - 2025-04-13T00-14Z.png",
+		"Minimalisation - 2025-04-15T23-59Z.png",
+		"chief_toad619 - 2025-04-28T06-39Z.png",
+		"Alxzor - 2025-04-29T23-23Z.png",
+		"rebirthed6coin - 2025-05-03T06-19Z.png",
+		"DeTedtive - 2025-05-10T00-21Z.png",
+		"Friskern - 2025-05-11T23-40Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -1506,7 +1506,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~71 hours, 35 minutes.
+		Estimated total active development time across all versions: ~71 hours, 38 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1523,12 +1523,11 @@
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #34.")}
 			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (currently only Friday Night badge).")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's notes.")}
-			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Converted all currently existing 33 CCL entries' Roblox avatars from <code>png<code> to <code>jpg</code> to reduce tool loading times, saving about 1MB. Future avatars will be in this file format.")}
 			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions'.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch)")}
-			${updateLogEntry('other', "Estimated active development time: ~7 hours, 35 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 hours, 38 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
