@@ -1902,6 +1902,7 @@
 	
 	elem.SectionContainer_Timers_UpdateTimers.addEventListener('click', addTimersSection);
 	elem.SectionContainer_Timers_AutoUpdate.addEventListener('input', function() {
+		addTimersSection();
 		if (this.checked == true) {
 			timersAutoUpdateInterval = setInterval(addTimersSection, 250);
 		} else {
