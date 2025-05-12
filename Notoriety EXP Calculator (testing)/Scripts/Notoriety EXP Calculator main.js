@@ -1506,7 +1506,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~71 hours, 22 minutes.
+		Estimated total active development time across all versions: ~71 hours, 28 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1528,7 +1528,7 @@
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch)")}
-			${updateLogEntry('other', "Estimated active development time: ~7 hours, 22 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 hours, 28 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
@@ -1800,8 +1800,8 @@
 			previous:new Date(86400000 * 7),
 		};
 		
-		time_DailyChallenges.previous.setTime(time_DailyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000 - 43200000);
-		time_DailyChallenges.next.setTime(time_DailyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000 + 43200000);
+		time_DailyChallenges.previous.setTime(time_DailyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000 - 86400000);
+		time_DailyChallenges.next.setTime(time_DailyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000);
 		
 		time_WeeklyChallenges.previous.setTime(time_WeeklyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / 604800000) * 604800000 - 604800000);
 		time_WeeklyChallenges.next.setTime(time_WeeklyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / 604800000) * 604800000 - 604800000);
