@@ -1506,7 +1506,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
 		<p></p>
-		Estimated total active development time across all versions: ~71 hours, 28 minutes.
+		Estimated total active development time across all versions: ~71 hours, 35 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1528,7 +1528,7 @@
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch)")}
-			${updateLogEntry('other', "Estimated active development time: ~7 hours, 28 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~7 hours, 35 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>[2025-05-10 00:32] Version 0.2.1</b>
@@ -1791,20 +1791,22 @@
 		// console.log(utcOffsets.length);
 		const time_FridayNight = [];
 		// UTC: 00:00 & 12:00
+		const timeFixed_Daily = 86400000;
+		const timeFixed_Weekly = 604800000;
 		const time_DailyChallenges = {
-			next:new Date(43200000),
-			previous:new Date(86400000)
+			next:new Date(timeFixed_Daily / 2),
+			previous:new Date(timeFixed_Daily)
 		};
 		const time_WeeklyChallenges = {
-			next:new Date(86400000 * 14),
-			previous:new Date(86400000 * 7),
+			next:new Date(timeFixed_Weekly * 2),
+			previous:new Date(timeFixed_Weekly),
 		};
 		
-		time_DailyChallenges.previous.setTime(time_DailyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000 - 86400000);
-		time_DailyChallenges.next.setTime(time_DailyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / 86400000) * 86400000);
+		time_DailyChallenges.previous.setTime(time_DailyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / timeFixed_Daily) * timeFixed_Daily - timeFixed_Daily);
+		time_DailyChallenges.next.setTime(time_DailyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / timeFixed_Daily) * timeFixed_Daily);
 		
-		time_WeeklyChallenges.previous.setTime(time_WeeklyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / 604800000) * 604800000 - 604800000);
-		time_WeeklyChallenges.next.setTime(time_WeeklyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / 604800000) * 604800000 - 604800000);
+		time_WeeklyChallenges.previous.setTime(time_WeeklyChallenges.previous.getTime() + Math.floor(currentDateObj.getTime() / timeFixed_Weekly) * timeFixed_Weekly - timeFixed_Weekly);
+		time_WeeklyChallenges.next.setTime(time_WeeklyChallenges.next.getTime() + Math.floor(currentDateObj.getTime() / timeFixed_Weekly) * timeFixed_Weekly - timeFixed_Weekly);
 		const timeReset_DailyChallenges = {since:currentDateObj.getTime() - time_DailyChallenges.previous.getTime(), until:time_DailyChallenges.next.getTime() - currentDateObj.getTime()};
 		const timeReset_WeeklyChallenges = {since:currentDateObj.getTime() - time_WeeklyChallenges.previous.getTime(), until:time_WeeklyChallenges.next.getTime() - currentDateObj.getTime()};
 		
