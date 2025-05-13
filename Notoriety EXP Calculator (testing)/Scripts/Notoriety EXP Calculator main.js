@@ -326,6 +326,7 @@
 	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers').innerHTML = "<ul>"
 	+ "<li>Due to technical limitations, milliseconds may be about 1 or 2 off.</li>"
 	+ "<li>Timestamps are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format.</li>"
+	+ "<li>Challenges timestamps are noted in the local system time in <b>year-month-day 24hour:minute</b> format.</li>"
 	+ "</ul><p></p><div style='width:10em;height:4em'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_SectionContainer_Timers_UpdateTimers' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Update timers</button></div>"
 	+ "<input id='NotorietyEXPCalculator_SectionContainer_Timers_AutoUpdate' type='checkbox'>Auto update? (interval 250ms)</input>"
 	+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_TheList'>It's time to add something here...</div>"
@@ -425,6 +426,36 @@
 		outputResults: document.getElementById('NotorietyEXPandInfamyCalculator_OutputResults'),
 		
 		filterSortButton: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit'),
+	}
+	
+	function getTZString(input, zuluStr) {
+		input = Number(input);
+		var output = '';
+		if (Math.abs(input) < 600) {
+			output += '0';
+		}
+		// console.log(input);
+		if (input <= 0) {
+			output = '+' + output + Math.floor(Math.abs(input) / 60);
+		} else {
+			output = '-' + output + Math.floor(Math.abs(input) / 60);
+		}
+		output += ':';
+		if (Math.abs(input) % 60 > 0) {
+			output += Math.abs(input) % 60;
+		} else {
+			output += '00';
+		}
+		if (Math.abs(input) == 0) {
+			if (zuluStr == true) {
+				output = 'UTC / Zulu';
+			} else {
+				output = 'UTC';
+			}
+		} else {
+			output = 'UTC' + output;
+		}
+		return output;
 	}
 	
 	function addHallofInfamyCCLs() {
@@ -1504,6 +1535,32 @@
 	        }
 	        return output;
 	    }
+		const localTZ = new Date().getTimezoneOffset();
+		const versionDateStrings = {
+			"1.3.0": '[' + 'Testing' + ']',
+			"0.2.1": '[' + formatDate(new Date(1746837120000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.2.0": '[' + formatDate(new Date(1746615180000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1h": '[' + formatDate(new Date(1746270720000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1g": '[' + formatDate(new Date(1746270120000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1f": '[' + formatDate(new Date(1746260340000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1e": '[' + formatDate(new Date(1746236400000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1d": '[' + formatDate(new Date(1746095700000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1c": '[' + formatDate(new Date(1746074580000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1b": '[' + formatDate(new Date(1745987160000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1a": '[' + formatDate(new Date(1745969400000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.1": '[' + formatDate(new Date(1745889900000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.1.0": '[' + formatDate(new Date(1745842080000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.2c": '[' + formatDate(new Date(1745618880000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.2b": '[' + formatDate(new Date(1745618580000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.2a": '[' + formatDate(new Date(1745199540000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.2": '[' + formatDate(new Date(1744982220000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.1e": '[' + formatDate(new Date(1744762320000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.1d": '[' + formatDate(new Date(1744652820000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.1c": '[' + formatDate(new Date(1744643100000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.1b": '[' + formatDate(new Date(1744625700000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.1a": '[' + formatDate(new Date(1744556520000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+			"0.0.1": '[' + formatDate(new Date(1744532400000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
+		}
 	    var theLogs = `<b>Legend:</b><p>
 		<ul>
 			${updateLogEntry('add', 'Addition of something')}
@@ -1511,9 +1568,9 @@
 			${updateLogEntry('remove', 'Removal of something')}
 			${updateLogEntry('fix', 'Patch of a problem')}
 			${updateLogEntry('other', 'Other')}
-		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.
+		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in the local system time in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~72 hours, 44 minutes.
+		Estimated total active development time across all versions: ~73 hours, 10 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1522,7 +1579,7 @@
 		</p>
 		<hr/>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[Testing] <u>Version 1.3.0</u></b>
+		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the following top-of-section note: <code>These settings are not required to be defined if not calculating progression requirements.</code>")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded CCL #1's user-written description with a new 'Closing remarks' description section. Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.")}
@@ -1533,15 +1590,16 @@
 			${updateLogEntry('add', "Double-clicking an image will now open its source file in a new tab.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's and #33's notes.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of a part of the second paragraph in the top-of-section notes: <code>Open images in a new tab to view the full image.</code> > <code>Double click an image to open its source file and view the full image.</code>")}
-			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions'.")}
+			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions' and changed 'All timestamps in the Update Log are noted in UTC.' to 'All timestamps in the Update Log are noted in the local system time in <b>year-month day 24hour:minute</b> format.'")}
+			${updateLogEntry('edit', "Update Log version release timestamps are now noted in the local system time in year-month-day 24hour:minute format and a UTC offset identifier.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch), with larger versions 'resetting' previous versions back to 0 and no letter. Starting in this version (updated from x.2.1 > x.3.0), all Update Log versions are now 1.x.x higher, as the first released version should've been 1.0.0 instead of 0.0.1.")}
-			${updateLogEntry('other', "Estimated active development time: ~8 hours, 44 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~9 hours, 10 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-10 00:32] Version 0.2.1</b>
+		<b>${versionDateStrings['0.2.1']} Version 0.2.1</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded a sentence in the first paragraph of the top-of-section notes.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33.")}
@@ -1554,7 +1612,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~56 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-07 10:53] <u>Version 0.2.0</u></b>
+		<b>${versionDateStrings['0.2.0']} <u>Version 0.2.0</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: The list can now be filtered based on classic infamy suit ownership and time (any combination of year, month, day), including or excluding either one, as well as sorting based on badge obtainment timestamp order from either oldest to newest (default), newest to oldest or random.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Checked all 32 CCLs for whether or not they obtained the following notable badges before <a href='https://www.roblox.com/badges/1157147255776915'>Rank 250</a> (these badges have been obtainable since at least as long as Rank 250), and if not, noted so in their entry's notes: <code><a href='https://www.roblox.com/badges/1249442413'>You're a Billionaire</a></code>, <code><a href='https://www.roblox.com/badges/1249451692'>Lucked Out</a></code>, <code><a href='https://www.roblox.com/badges/1873037302'>True Criminal</a></code>, <code><a href='https://www.roblox.com/badges/1212575742147909'>The Pied Piper</a></code>. (Modified the notes of the following 12 entries: #1, #3, #4, #6, #7, #10, #11, #12, #14, #18, #21, #32.)")}
@@ -1571,20 +1629,20 @@
 			${updateLogEntry('other', "Estimated active development time: ~7 hours, 24 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-03 11:12] Version 0.1.1h</b>
+		<b>${versionDateStrings['0.1.1h']} Version 0.1.1h</b>
 		<ul>
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Moved a part of CCL #32's user-written description to their notes while also improving the grammar.")}
 			${updateLogEntry('other', "Estimated active development time: ~2 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-03 11:02] Version 0.1.1g</b>
+		<b>${versionDateStrings['0.1.1g']} Version 0.1.1g</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #11's and #32's user-written descriptions.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('other', "Estimated active development time: ~13 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-03 08:19] Version 0.1.1f</b>
+		<b>${versionDateStrings['0.1.1f']} Version 0.1.1f</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added notes to CCL #29's entry.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #32.")}
@@ -1593,19 +1651,19 @@
 			${updateLogEntry('other', "Estimated active development time: ~12 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-03 01:40] Version 0.1.1e</b>
+		<b>${versionDateStrings['0.1.1e']} Version 0.1.1e</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Modified the first paragraph of the top-of-section notes.")}
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-01 10:35] Version 0.1.1d</b>
+		<b>${versionDateStrings['0.1.1d']} Version 0.1.1d</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Prepended an expansion to the top-of-section notes.")}
 			${updateLogEntry('other', "Estimated active development time: ~13 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-05-01 04:43] Version 0.1.1c</b>
+		<b>${versionDateStrings['0.1.1c']} Version 0.1.1c</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #21's and #30's user-written descriptions.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Some formatting adjustments to CCL #1's user-written description.")}
@@ -1613,7 +1671,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~18 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-30 04:26] Version 0.1.1b</b>
+		<b>${versionDateStrings['0.1.1b']} Version 0.1.1b</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Noted CCL #18's ownership of the Blue Navy (100) classic infamy suit.")}
 			${updateLogEntry('add', "Noted that all Update Log entries' timestamps are noted in UTC.")}
@@ -1622,13 +1680,13 @@
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-29 23:30] Version 0.1.1a</b>
+		<b>${versionDateStrings['0.1.1a']} Version 0.1.1a</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #31.")}
 			${updateLogEntry('other', "Estimated active development time: ~3 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-29 01:25] Version 0.1.1</b>
+		<b>${versionDateStrings['0.1.1']} Version 0.1.1</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: With 'Computing' toggle setting set to 'Money', the text " + '"' + "Overrides" + " 'Desired money' input" + '"' + " now appears in the 'Until this many rotations' input's input explanation.")}
 			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'Money', the required runs/rotations and playtime requirement are now listed.")}
@@ -1637,7 +1695,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~39 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-28 12:08] <u>Version 0.1.0</u></b>
+		<b>${versionDateStrings['0.1.0']} <u>Version 0.1.0</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator: Added a third option to the 'Computing' toggle setting: 'Money'. This appears as option 2, while 'MXP & Mutator Ranks' has been moved to option 3.")}
 			${updateLogEntry('add', "Menu Calculator: Added section 'Money Settings' and one input in this section: 'Desired money'. Moved 'Current money' input from 'Infamy Settings' section to this section.")}
@@ -1657,13 +1715,13 @@
 			${updateLogEntry('other', "Estimated active development time: ~4 hours, 43 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-25 22:08] Version 0.0.2c</b>
+		<b>${versionDateStrings['0.0.2c']} Version 0.0.2c</b>
 		<ul>
 			${updateLogEntry('edit', "Fixed improper date format in the update log's Version 0.0.2b entry.")}
 			${updateLogEntry('other', "Estimated active development time: ~1 minute.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-25 22:03] Version 0.0.2b</b>
+		<b>${versionDateStrings['0.0.2b']} Version 0.0.2b</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Results: With 'Computing' toggle setting set to 'MXP & Mutator Ranks', 'Until MXP usage' input undefined and included runs greater than 0, added leftover MXP to the outputted results. With/without any included runs, added Mutator Ranks difference.")}
 			${updateLogEntry('edit', "Changed the tool's Notoriety version from 3.9.6f to 3.10.0.")}
@@ -1674,7 +1732,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~27 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-21 01:39] Version 0.0.2a</b>
+		<b>${versionDateStrings['0.0.2a']} Version 0.0.2a</b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator > Section Infamy Settings: Added input explanations to the 'Current infamy level' and 'Desired infamy level' inputs: for each, explaining that a whole number must be inputted.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: At the top-of-section notes, noted that the 'Time elapsed since badge obtainment' value refers to actual elapsed time and that it is updated on tool load or changing the 'Time output format' toggle setting. Also noted that timestamps in user-written descriptions are usually plaintext and therefore won't update to the system time.")}
@@ -1685,7 +1743,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~10 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-18 13:17] <u>Version 0.0.2</u></b>
+		<b>${versionDateStrings['0.0.2']} <u>Version 0.0.2</u></b>
 		<ul>
 			${updateLogEntry('add', "Added input toggle for EXP formula. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added 'Time elapsed since badge obtainment' to each CCL's entry.")}
@@ -1698,19 +1756,19 @@
 			${updateLogEntry('other', "Estimated active development time: ~35 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-16 00:12] Version 0.0.1e</b>
+		<b>${versionDateStrings['0.0.1e']} Version 0.0.1e</b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCL #29.")}
 			${updateLogEntry('other', "Estimated active development time: ~5 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-14 17:47] Version 0.0.1d</b>
+		<b>${versionDateStrings['0.0.1d']} Version 0.0.1d</b>
 		<ul>
 			${updateLogEntry('edit', "Fixed some things in the update log.")}
 			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-14 15:05] Version 0.0.1c</b>
+		<b>${versionDateStrings['0.0.1c']} Version 0.0.1c</b>
 		<ul>
 			${updateLogEntry('edit', "Section Hall of CCLs: Changed " + '"' + "Times are noted" + '"' + " to " + '"' + "Badge obtainment times are noted" + '"' + ".")}
 			${updateLogEntry('edit', "Section Hall of CCLs: CCL #2's user-written description now begins with a h1 tag.")}
@@ -1718,7 +1776,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~4 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-14 10:15] Version 0.0.1b</b>
+		<b>${versionDateStrings['0.0.1b']} Version 0.0.1b</b>
 		<ul>
 			${updateLogEntry('add', "Section Hall of CCLs: Added " + '"' + "Open images in a new tab to view the full image." + '"' + "to the top-of-section primary info.")}
 			${updateLogEntry('add', "Section Hall of CCLs: Added CCLs #20 and #25 user-written descriptions.")}
@@ -1729,7 +1787,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~51 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-13 15:02] Version 0.0.1a</b>
+		<b>${versionDateStrings['0.0.1a']} Version 0.0.1a</b>
 		<ul>
 			${updateLogEntry('add', "Significantly expanded CCL #2's entry in the Hall of CCLs, and modified existing parts. Also noted that CCL #28 owns the classic Blue Navy (100) suit.")}
 			${updateLogEntry('edit', "Removed 'v' from the top header text of the tool's version.")}
@@ -1737,7 +1795,7 @@
 			${updateLogEntry('other', "Estimated active development time: ~1 hour, 30 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>[2025-04-13 08:20] <u>Version 0.0.1</u></b>
+		<b>${versionDateStrings['0.0.1']} <u>Version 0.0.1</u></b>
 		<ul>
 			${updateLogEntry('other', "Initial public release.")}
 			${updateLogEntry('other', "Added the following testers: ashlyn, nate, player.")}
@@ -1765,31 +1823,6 @@
 		const localTZ = currentDateObj.getTimezoneOffset();
 		var string = '';
 		var tzString = '';
-		function getTZString(input) {
-			input = Number(input);
-			var output = '';
-			if (Math.abs(input) < 600) {
-				output += '0';
-			}
-			// console.log(input);
-			if (input <= 0) {
-				output = '+' + output + Math.floor(Math.abs(input) / 60);
-			} else {
-				output = '-' + output + Math.floor(Math.abs(input) / 60);
-			}
-			output += ':';
-			if (Math.abs(input) % 60 > 0) {
-				output += Math.abs(input) % 60;
-			} else {
-				output += '00';
-			}
-			if (Math.abs(input) == 0) {
-				output = 'UTC / Zulu';
-			} else {
-				output = 'UTC' + output;
-			}
-			return output;
-		}
 		// console.log(localTZ);
 		// console.log("Detected time zone:", getTZString(localTZ));
 		
@@ -1854,16 +1887,16 @@
 		string += "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable'>"
 		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Daily' class='NotorietyEXPCalculator_TableStyling'>";
 		timeOutput.amount = timeReset_DailyChallenges.since;
-		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
 		timeOutput.amount = timeReset_DailyChallenges.until;
-		string += "<p>Next reset: " + formatDate(time_DailyChallenges.next, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		string += "<p>Next reset: " + formatDate(time_DailyChallenges.next, "yyyy-MM-dd HH:mm", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
 		
 		
 		string += "<td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Weekly' class='NotorietyEXPCalculator_TableStyling'>";
 		timeOutput.amount = timeReset_WeeklyChallenges.since;
-		string += "<b>Weekly Challenges</b><p>Last reset: " + formatDate(time_WeeklyChallenges.previous, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		string += "<b>Weekly Challenges</b><p>Last reset: " + formatDate(time_WeeklyChallenges.previous, "yyyy-MM-dd HH:mm", false) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
 		timeOutput.amount = timeReset_WeeklyChallenges.until;
-		string += "<p>Next reset: " + formatDate(time_WeeklyChallenges.next, "yyyy-MM-dd HH:mm:ss:fff", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		string += "<p>Next reset: " + formatDate(time_WeeklyChallenges.next, "yyyy-MM-dd HH:mm", false) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
 		string += "</table>";
 		
 		string += "<p></p>Badges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(localTZ)
@@ -1881,9 +1914,9 @@
 			}
 			timeOutput.amount = time_FridayNight[x].remainingTime;
 			if (time_FridayNight[x].currentlyFri == true) {
-				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x]) + ": Available for " + timeOutput.formatAmount() + "</span>"
+				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount() + "</span>"
 			} else {
-				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x]) + ": Available in " + timeOutput.formatAmount() + "</span>";
+				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount() + "</span>";
 			}
 			string_a += "</li>";
 			string += string_a;
