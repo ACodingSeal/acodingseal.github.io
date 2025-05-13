@@ -1575,7 +1575,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~74 hours, 11 minutes.
+		Estimated total active development time across all versions: ~75 hours, 6 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1592,7 +1592,7 @@
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #18's user-written description, including the addition of 28 images.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33's user-written description.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #34.")}
-			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (currently only <a href='https://www.roblox.com/badges/3410723896492162'>Friday Night</a> badge).")}
+			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (that includes the badges <a href='https://www.roblox.com/badges/3410723896492162'>Friday Night</a> and any in October (<a href='https://www.roblox.com/badges/2124440620'>Happy Halloween!</a>, <a href='https://www.roblox.com/badges/2124630220'>Trick or Treater</a>, <a href='https://www.roblox.com/badges/2124630221'>Something Good To Eat</a>, <a href='https://www.roblox.com/badges/2124630227'>Treat Yourself</a>, <a href='https://www.roblox.com/badges/2124630228'>Competitive Spirit</a>) and December (<a href='https://www.roblox.com/badges/2124446484'>Merry Christmas!</a>)).")}
 			${updateLogEntry('add', "Double-clicking an image will now open its source file in a new tab.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's and #33's notes.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of a part of the second paragraph of the top-of-section notes: <code>Open images in a new tab to view the full image.</code> > <code>Double click an image to open its source file and view the full image.</code>")}
@@ -1602,7 +1602,7 @@
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch), with larger versions 'resetting' previous versions back to 0 and no letter. Starting in this version (updated from x.2.1 > x.3.0), all Update Log versions are now 1.x.x higher, as the first released version should've been 1.0.0 instead of 0.0.1.")}
-			${updateLogEntry('other', "Estimated active development time: ~9 hours, 31 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~10 hours, 26 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['0.2.1']} Version 0.2.1</b>
@@ -1821,7 +1821,8 @@
 	addUpdateLog();
 	
 	function addTimersSection() {
-		const extraHours = 1000 * 3600 * 0; // used for testing
+		const extraDays = 1000 * 3600 * 24 * 0;
+		const extraHours = 1000 * 3600 * 0 + extraDays; // used for testing
 		const timeOutput = new Timer();
 		const currentDateObj = new Date(new Date().getTime() + extraHours);
 		timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
@@ -1840,6 +1841,8 @@
 		// tba
 		// console.log(utcOffsets.length);
 		const time_FridayNight = [];
+		const time_MonthOctober = [];
+		const time_MonthDecember = [];
 		// UTC: 00:00 & 12:00
 		const timeFixed_Daily = 43200000;
 		const timeFixed_Weekly = 604800000;
@@ -1860,6 +1863,7 @@
 		const timeReset_DailyChallenges = {since:currentDateObj.getTime() - time_DailyChallenges.previous.getTime(), until:time_DailyChallenges.next.getTime() - currentDateObj.getTime()};
 		const timeReset_WeeklyChallenges = {since:currentDateObj.getTime() - time_WeeklyChallenges.previous.getTime(), until:time_WeeklyChallenges.next.getTime() - currentDateObj.getTime()};
 		
+		// Friday Night
 		for (var x = 0; x < utcOffsets.length; x++) {
 			const offsetMilliseconds = Number(utcOffsets[x]) * -1 * 60 * 1000;
 			var obj = new Date(new Date().getTime() + extraHours);
@@ -1869,7 +1873,7 @@
 				// console.log(obj.getDay());
 				// console.log(getTZString(utcOffsets[x]), formatDate(obj, "yyyy-MM-dd HH:mm:ss:fff", false));
 			const output = {currentlyFri:false, remainingTime: null};
-			const whenFriday = {next:new Date(86400000 * 7), previous:new Date(86400000 * 1)}; // temp: should be 2 lower for both & 864000000 > 604800000
+			const whenFriday = {next:new Date(86400000 * 7), previous:new Date(86400000 * 1)};
 			whenFriday.previous.setTime(whenFriday.previous.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
 			whenFriday.next.setTime(whenFriday.next.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
 			var objDefaultTime = obj.getTime();
@@ -1887,6 +1891,60 @@
 				// console.log(output.remainingTime);
 			}
 			time_FridayNight.push(output);
+		}
+		
+		// Months: October, December
+		for (var x = 0; x < utcOffsets.length; x++) {
+			function addMonthTimes(which) {
+				var whichMonthNum = null;
+				if (which == 'oct') {
+					whichMonthNum = 10;
+				} else if (which == 'dec') {
+					whichMonthNum = 12;
+				}
+				const offsetMilliseconds = Number(utcOffsets[x]) * -1 * 60 * 1000;
+				var obj = new Date(new Date().getTime() + extraHours);
+				obj.setTime(obj.getTime() + (localTZ * 60 * 1e3));
+				obj.setTime(obj.getTime() + (Number(utcOffsets[x]) * -1 * 60 * 1e3));
+				obj = new Date(obj.getTime());
+					// console.log(obj.getDay());
+					// console.log(getTZString(utcOffsets[x]), formatDate(obj, "yyyy-MM-dd HH:mm:ss:fff", false));
+				var monthCurrent = new Date((obj.getFullYear()) + "-" + whichMonthNum + "-01");
+				var monthCurrentEnd = new Date((obj.getFullYear()) + "-" + whichMonthNum + "-31T23:59:59");
+				var extraYear = 0;
+				if (obj.getTime() > monthCurrentEnd.getTime()) {
+					extraYear = 1;
+				}
+				const output = {currentlyMonth:false, remainingTime: null};
+				const whenMonth = {next:new Date(new Date((obj.getFullYear() + extraYear) + '-' + whichMonthNum + '-01').getTime()), previous:new Date(new Date((obj.getFullYear() - 1) + '-' + whichMonthNum + '-01').getTime())};
+				whenMonth.previous.setTime(whenMonth.previous.getTime() - (localTZ * -1 * 60 * 1e3));
+				whenMonth.next.setTime(whenMonth.next.getTime() - (localTZ * -1 * 60 * 1e3));
+				var objDefaultTime = obj.getTime();
+				if (obj.getMonth() == whichMonthNum - 1) {
+					output.currentlyMonth = true;
+					// monthCurrent = new Date(monthCurrent.getTime() - (localTZ * -1 * 60 * 1e3));
+					// monthCurrentEnd = new Date(monthCurrentEnd.getTime() - (localTZ * -1 * 60 * 1e3) + 999);
+					// console.log(monthCurrent);
+					output.remainingTime = monthCurrentEnd.getTime() - obj.getTime();
+					// console.log(monthCurrentEnd.getTime());
+				} else {
+					output.remainingTime = (whenMonth.next.getTime() - 1) - obj.getTime();
+					// if statement here is a quickfix solution for negative UTC timezones not being calculated properly
+					if (obj.getTime() >= whenMonth.previous.getTime()) {
+						output.remainingTime = (whenMonth.next.getTime() - 1) - obj.getTime();
+					} else {
+						output.remainingTime = (whenMonth.previous.getTime() - 1) - obj.getTime();
+					}
+					// console.log(output.remainingTime);
+				}
+				if (which == 'oct') {
+					time_MonthOctober.push(output);
+				} else if (which == 'dec') {
+					time_MonthDecember.push(output);
+				}
+			}
+			addMonthTimes('oct');
+			addMonthTimes('dec');
 		}
 		// console.log(currentDateObj.getTime());
 		string = "<p></p>Challenges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(localTZ);
@@ -1927,8 +1985,52 @@
 			string_a += "</li>";
 			string += string_a;
 		}
-		string += "</ul></p>";
-		string += "</table>";
+		string += "</ul></td>";
+		
+		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable_MonthRange_October' class='NotorietyEXPCalculator_TableStyling'>";
+		string += "<b>October badges: <a href='https://www.roblox.com/badges/2124440620'>Happy Halloween!</a>, <a href='https://www.roblox.com/badges/2124630220'>Trick or Treater</a>, <a href='https://www.roblox.com/badges/2124630221'>Something Good To Eat</a>, <a href='https://www.roblox.com/badges/2124630227'>Treat Yourself</a>, <a href='https://www.roblox.com/badges/2124630228'>Competitive Spirit</a></b><p><ul>";
+		for (var x = 0; x < utcOffsets.length; x++) {
+			var string_a = '';
+			if (utcOffsets[x] == localTZ) {
+				// console.log(getTZString(utcOffsets[x]));
+				// console.log(getTZString(localTZ));
+				string_a = "<li style='font-weight:bold;text-decoration:underline'>";
+			} else {
+				string_a = "<li style='font-weight:bold'>";
+			}
+			timeOutput.amount = time_MonthOctober[x].remainingTime;
+			if (time_MonthOctober[x].currentlyMonth == true) {
+				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount() + "</span>"
+			} else {
+				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount() + "</span>";
+			}
+			string_a += "</li>";
+			string += string_a;
+		}
+		string += "</ul></td>";
+		
+		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable_MonthRange_December' class='NotorietyEXPCalculator_TableStyling'>";
+		string += "<b>December badges: <a href='https://www.roblox.com/badges/2124446484'>Merry Christmas!</a></b><p><ul>";
+		for (var x = 0; x < utcOffsets.length; x++) {
+			var string_a = '';
+			if (utcOffsets[x] == localTZ) {
+				// console.log(getTZString(utcOffsets[x]));
+				// console.log(getTZString(localTZ));
+				string_a = "<li style='font-weight:bold;text-decoration:underline'>";
+			} else {
+				string_a = "<li style='font-weight:bold'>";
+			}
+			timeOutput.amount = time_MonthDecember[x].remainingTime;
+			if (time_MonthDecember[x].currentlyMonth == true) {
+				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount() + "</span>"
+			} else {
+				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount() + "</span>";
+			}
+			string_a += "</li>";
+			string += string_a;
+		}
+		string += "</ul></td>";
+		string += "</p></table>";
 		
 		elem.SectionContainer_Timers_TheList.innerHTML = string;
 		
