@@ -210,13 +210,17 @@
 	document.getElementById('NotorietyEXPandInfamyCalculator').innerHTML = tool_baseHTML;
 	
 	(function() {
-		var tool_baseHTML_MenuContainer_Calculator = "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global' style='cursor:pointer;float:left'>Input method: <u>Sliders</u></div><br></small>"
+		var tool_baseHTML_MenuContainer_Calculator = ""
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_GlobalSettings'>"
+		+ "<h2>Global Settings</h2>"
+		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global' style='cursor:pointer;float:left'>Input method: <u>Sliders</u></div><br></small>"
 		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleRomanNumerals_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleRomanNumerals_Global' style='cursor:pointer;float:left'>Roman numerals: <u>ON</u></div><br></small>"
 		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputExplanations_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputExplanations_Global' style='cursor:pointer;float:left'>Input explanations: <u>Visible</u></div><br></small>"
 		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleComputationType_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleComputationType_Global' style='cursor:pointer;float:left'>Computing: <u>EXP, Levels & Infamy</u></div><br></small>"
 		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInfiniteInfamies_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInfiniteInfamies_Global' style='cursor:pointer;float:left'>Maximum infamies: <u>250</u></div><br></small>"
 		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleAutoCalculate_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleAutoCalculate_Global' style='cursor:pointer;float:left'>Auto calculate: <u>OFF</u></div><br></small>"
 		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleTimeOutputFormat_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleTimeOutputFormat_Global' style='cursor:pointer;float:left'>Time output format: <u>words</u></div><br></small>"
+		+ "</div>"
 		
 		+ "<div id='NotorietyEXPandInfamyCalculator_Section_LevelSettings'>"
 		+ "<hr/><h2>Level Settings</h2>"
@@ -708,6 +712,7 @@
 		+ "</ul>"
 		+ "<p></p><b>Closing remarks</b><br/>"
 		+ "What a grind! I could've slept soundly each night and still been first, albeit likely not in 2024 in any time zones. I'm a little disappointed I didn't start the grind sooner and that I didn't really grind too much early on, otherwise could've got the badge in 2024 in many more, even all, time zones. Regardless, even though there were days when I didn't want to grind, I know I was extremely committed and set my mind to achieving my goal, enduring each long day after the next through the sheer will to be first (only stopping due to a physical need or ailment, never out of boredom or demotivation), and later also to achieve it before the end of the year."
+		+ "<p></p>The developers are planning on making unobtainable items, including the Crimson suit and monthly challenge armour patterns, obtainable again, even if it requires doing a special 'challenge'. Knowing them, it actually won't be difficult, at least not more than what the average roughly 20 hours playtime player is capable of completing. While I can understand their viewpoint (FOMO due to people missing out on items for not playing during a certain timeframe or grinding hard enough), they love to appeal to the 'vocal majority' on a great many matters, and that majority happens to be mainly new players (who have the mindset of wanting the game to be easier and to not have to put in effort for noticeable gains) since most of the older, dedicated players have stopped playing. Of course, when we've 'completed' the game (multiple times in its history, in fact!), but our commitment, loyalty and game knowledge is not to be dismissed so readily. (Some of us still occasionally play for challenge skins, any new badges, hosting gamepass heists for others or grinding Mutator Ranks.) I had the idea of publicly displaying a number based on the player's 'obtainment position' of each given formerly-unobtainable item, such as Crimson #1. However, this requires having the data, which may already be present given that the recently-introduced heists completed tracker includes completions of the removed Very Hard and Anarchy difficulties. This tool has the data for classic infamy suits, but no other OG item data. Chances are the developers don't care, and would rather give their player counts a quick adrenaline shot without regard for the long-term effects, or rather long-term players' dissatisfaction."
 		+ "<p></p>The intense dedication to the grind has been part of the reason for a deep reevaluation of the self, and I realise now that life is not about living an 'unchanging film on repeat'. It is about changing, learning, growing, to love and to be loved. While I did really commit to the grind knowing the sheer dedication, the badge obtainment time and being first would all contribute to being remembered, I heavily overexerted myself just to 'look good' to others. I realise now that personal satisfaction at such an achievement like CCL matters far more than how others recognise said achievement. The reality of my achievement is my own, not anyone else's. After all, when we're no longer around, we become stories, and it's the personality and uniqueness of our stories that make them memorable. Primarily for this reason is why I most likely won't endure such mindless days-long grinding sessions again."
 		+ "<p></p>Sure, the grind may have had negative physical and psychological impacts, but it was also part of the reason for consciously seeking out self enlightenment. Negative experiences make the positive ones meaningful. I've met many friends, and unfortunately many enemies, during my time in the Notoriety community and since starting my journey of self enlightenment. Some of those friends I intend to dedicate myself to our friendship with as much or more commitment as during the CCL grind. Intention and belief allows you to achieve anything, even if it takes time. Remember this, as it applies to everything in this life. Make your own reality, live how you wish to live and write your own truly unforgettable story full of immense detail, personal struggles and growth, love and the friends you met along the way.",
 		// #2
@@ -1568,9 +1573,9 @@
 			${updateLogEntry('remove', 'Removal of something')}
 			${updateLogEntry('fix', 'Patch of a problem')}
 			${updateLogEntry('other', 'Other')}
-		Prominent tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in the local system time in <b>year-month day 24hour:minute</b> format.
+		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~73 hours, 10 minutes.
+		Estimated total active development time across all versions: ~74 hours, 10 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1581,6 +1586,7 @@
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0</u></b>
 		<ul>
+			${updateLogEntry('add', "Menu Calculator: Added the 'Global Settings' section and placed the toggle settings (Input method, Roman numerals, Input explnations, Computing, Auto calculate, Time output format) within.")}
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the following top-of-section note: <code>These settings are not required to be defined if not calculating progression requirements.</code>")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded CCL #1's user-written description with a new 'Closing remarks' description section. Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #18's user-written description, including the addition of 28 images.")}
@@ -1589,14 +1595,14 @@
 			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (currently only <a href='https://www.roblox.com/badges/3410723896492162'>Friday Night</a> badge).")}
 			${updateLogEntry('add', "Double-clicking an image will now open its source file in a new tab.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's and #33's notes.")}
-			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of a part of the second paragraph in the top-of-section notes: <code>Open images in a new tab to view the full image.</code> > <code>Double click an image to open its source file and view the full image.</code>")}
-			${updateLogEntry('edit', "In the Update Log, reworded 'Major tool versions' to 'Prominent tool versions' and changed 'All timestamps in the Update Log are noted in UTC.' to 'All timestamps in the Update Log are noted in the local system time in <b>year-month day 24hour:minute</b> format.'")}
+			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of a part of the second paragraph of the top-of-section notes: <code>Open images in a new tab to view the full image.</code> > <code>Double click an image to open its source file and view the full image.</code>")}
+			${updateLogEntry('edit', "Rewording of the first paragraph of the Update Log's top-of-section notes: <code>Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.</code> > <code>Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.</code>")}
 			${updateLogEntry('edit', "Update Log version release timestamps are now noted in the local system time in year-month-day 24hour:minute format and a UTC offset identifier.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch), with larger versions 'resetting' previous versions back to 0 and no letter. Starting in this version (updated from x.2.1 > x.3.0), all Update Log versions are now 1.x.x higher, as the first released version should've been 1.0.0 instead of 0.0.1.")}
-			${updateLogEntry('other', "Estimated active development time: ~9 hours, 10 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~9 hours, 30 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['0.2.1']} Version 0.2.1</b>
