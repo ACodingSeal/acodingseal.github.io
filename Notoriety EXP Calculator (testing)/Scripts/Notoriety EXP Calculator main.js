@@ -1890,7 +1890,7 @@
 		}
 		// console.log(currentDateObj.getTime());
 		string = "<p></p>Challenges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(localTZ);
-		string += "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable'>"
+		string += "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable' style='margin:auto;width:100%'>"
 		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Daily' class='NotorietyEXPCalculator_TableStyling'>";
 		timeOutput.amount = timeReset_DailyChallenges.since;
 		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
