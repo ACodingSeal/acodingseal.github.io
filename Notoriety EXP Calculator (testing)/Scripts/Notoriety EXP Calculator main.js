@@ -1570,7 +1570,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const versionDateStrings = {
-			"1.3.0": '[' + 'Testing' + ']',
+			"1.3.0": '[' + formatDate(new Date(1747222800000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
 			"0.2.1": '[' + formatDate(new Date(1746837120000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
 			"0.2.0": '[' + formatDate(new Date(1746615180000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
 			"0.1.1h": '[' + formatDate(new Date(1746270720000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
