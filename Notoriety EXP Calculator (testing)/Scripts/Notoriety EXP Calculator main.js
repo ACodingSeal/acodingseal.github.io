@@ -1598,7 +1598,7 @@
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's and #33's notes.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of a part of the second paragraph of the top-of-section notes: <code>Open images in a new tab to view the full image.</code> > <code>Double click an image to open its source file and view the full image.</code>")}
 			${updateLogEntry('edit', "Rewording of the first paragraph of the Update Log's top-of-section notes: <code>Major tool versions are <u>underlined</u>. All timestamps in the Update Log are noted in UTC.</code> > <code>Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.</code>")}
-			${updateLogEntry('edit', "Update Log version release timestamps are now noted in the local system time in year-month-day 24hour:minute format and a UTC offset identifier.")}
+			${updateLogEntry('edit', "Update Log version release timestamps are now noted in the local system time in <b>year-month-day 24hour:minute</b> format and a UTC offset identifier.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
