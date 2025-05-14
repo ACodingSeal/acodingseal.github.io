@@ -755,11 +755,11 @@
 		+ "</ul>",
 		undefined, // contacted (2025-04-12) and acknowledged
 		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
-		undefined, // contacted (unknown date) and acknowledged, did not provide description
+		undefined, // contacted (2025-04-12) and acknowledged, did not provide description (forgetful or cannot be bothered?)
 		undefined, // not contacted
 		undefined, // contacted (2025-04-12), no response
-		undefined, // not contacted
-		undefined, // contacted (2025-05-03), refused to provide description (also unsure what to write)
+		undefined, // not contacted (likely blocked)
+		undefined, // contacted (2025-05-03), refused to provide description and unsure what to write
 		// #10
 		"i knew about notoriety for a very long time, and i did try it out for a bit, but ended up stopping (couldn't tell you why, i have basically no memory of it other than when i started playing again, i was level 8 and had like 50k in cash)"
 		+ "<p></p>i played payday 2 on and off for years (on console, wasn't much of a pc gamer at the time). eventually moved onto other games. never played payday: the heist or anything, but i did enjoy payday 2"
@@ -788,7 +788,7 @@
 		+ "<p></p><a href='https://www.youtube.com/watch?v=a536IwGzJtg'>The video where I became infamy CCL</a>"
 		+ "",
 		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
-		undefined, // contacted (2025-04-18), refused to provide description (refusal deleted)
+		undefined, // contacted (2025-04-18), refused to provide description (refusal deleted + blocked)
 		undefined, // not contacted
 		undefined, // not contacted
 		undefined, // not contacted
@@ -908,10 +908,10 @@
 		undefined, // not contacted
 		// #25
 		/*
-		Harry = Inherited (preference 255,255,255)
-		Alisa = 0,153,255
-		Isaac = 0,204,0
-		Katelyn = 255,153,0
+		Harry = Inherited (preference white: 255,255,255)
+		Alisa = blue: 0,153,255
+		Isaac = green: 0,204,0
+		Katelyn = orange: 255,153,0
 		*/
 		"<h1>The Dreamers Collective’s Journey to infamy CCL</h1>"
 		+ "<p></p><b>Part 1: The 25th CCL badge has 4 owners.</b>"
@@ -1576,7 +1576,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~75 hours, 15 minutes.
+		Estimated total active development time across all versions: ~75 hours, 20 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1604,7 +1604,7 @@
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch), with larger versions 'resetting' previous versions back to 0 and no letter. Starting in this version (updated from x.2.1 > x.3.0), all Update Log versions are now 1.x.x higher, as the first released version should've been 1.0.0 instead of 0.0.1.")}
-			${updateLogEntry('other', "Estimated active development time: ~10 hours, 35 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~10 hours, 40 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['0.2.1']} Version 0.2.1</b>
