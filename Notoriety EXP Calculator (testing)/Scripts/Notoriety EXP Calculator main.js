@@ -1576,7 +1576,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~75 hours, 12 minutes.
+		Estimated total active development time across all versions: ~75 hours, 14 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1585,15 +1585,15 @@
 		</p>
 		<hr/>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0</u></b>
+		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0 - Additional Additions!</u></b>
 		<ul>
 			${updateLogEntry('add', "Menu Calculator: Added the 'Global Settings' section and placed the toggle settings (Input method, Roman numerals, Input explnations, Computing, Auto calculate, Time output format) within.")}
 			${updateLogEntry('add', "Menu Calculator > Section Progression Settings: Added the following top-of-section note: <code>These settings are not required to be defined if not calculating progression requirements.</code>")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Expanded CCL #1's user-written description with a new 'Closing remarks' description section. Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #18's user-written description, including the addition of 28 images.")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33's user-written description.")}
-			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #34.")}
-			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (that includes the badges <a href='https://www.roblox.com/badges/3410723896492162'>Friday Night</a> and any in October (<a href='https://www.roblox.com/badges/2124440620'>Happy Halloween!</a>, <a href='https://www.roblox.com/badges/2124630220'>Trick or Treater</a>, <a href='https://www.roblox.com/badges/2124630221'>Something Good To Eat</a>, <a href='https://www.roblox.com/badges/2124630227'>Treat Yourself</a>, <a href='https://www.roblox.com/badges/2124630228'>Competitive Spirit</a>) and December (<a href='https://www.roblox.com/badges/2124446484'>Merry Christmas!</a>)).")}
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #34 (<code>Friskern</code>).")}
+			${updateLogEntry('add', "Menu Miscellaneous: New section: 'Timers'. Appears as the second section in the menu, underneath 'Hall of CCLs'. Added 'last reset' and 'next reset' info for the new challenges table's daily and weekly challenges and a badges table (that includes the badges <a href='https://www.roblox.com/badges/3410723896492162'>Friday Night</a> and any in October (<a href='https://www.roblox.com/badges/2124440620'>Happy Halloween!</a>, <a href='https://www.roblox.com/badges/2124630220'>Trick or Treater</a>, <a href='https://www.roblox.com/badges/2124630221'>Something Good To Eat</a>, <a href='https://www.roblox.com/badges/2124630227'>Treat Yourself</a>, <a href='https://www.roblox.com/badges/2124630228'>Competitive Spirit</a>) and December (<a href='https://www.roblox.com/badges/2124446484'>Merry Christmas!</a>)). Also added a button to refresh the timers and a checkbox to auto-update the timers every 250ms.")}
 			${updateLogEntry('add', "Double-clicking an image will now open its source file in a new tab.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Modified CCL #18's and #33's notes.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of a part of the second paragraph of the top-of-section notes: <code>Open images in a new tab to view the full image.</code> > <code>Double click an image to open its source file and view the full image.</code>")}
@@ -1603,7 +1603,7 @@
 			${updateLogEntry('fix', "Menu Calculator > Section Money Settings: Fixed a bug where the 'Desired money' input would be visible with 'Computing' toggle setting set to 'EXP, Levels & Infamy'.")}
 			${updateLogEntry('fix', "Fixed a bug where the tool's formatted timestamps would not correctly display milliseconds.")}
 			${updateLogEntry('other', "Tool versions are now based on: Major.MediumtoLarge.Small(letter representing a quick patch), with larger versions 'resetting' previous versions back to 0 and no letter. Starting in this version (updated from x.2.1 > x.3.0), all Update Log versions are now 1.x.x higher, as the first released version should've been 1.0.0 instead of 0.0.1.")}
-			${updateLogEntry('other', "Estimated active development time: ~10 hours, 32 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~10 hours, 34 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['0.2.1']} Version 0.2.1</b>
