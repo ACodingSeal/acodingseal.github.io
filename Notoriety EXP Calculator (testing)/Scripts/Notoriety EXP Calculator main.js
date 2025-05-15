@@ -1652,7 +1652,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~77 hours, 27 minutes.
+		Estimated total active development time across all versions: ~77 hours, 30 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1676,7 +1676,7 @@
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed filtering and sorting the list breaking the double-click image functionality.")}
 			${updateLogEntry('other', "Any changes, if noted in the Update Log, that were suggested by someone else, now receive attribution, if consensual.")}
-			${updateLogEntry('other', "Estimated active development time: ~55 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~58 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0 - Additional Additions!</u></b>
