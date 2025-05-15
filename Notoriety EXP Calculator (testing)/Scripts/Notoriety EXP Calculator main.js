@@ -1618,7 +1618,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.0": 190,
+			"1.4.0": 215,
 			"1.3.0": 692,
 			"0.2.1": 56,
 			"0.2.0": 444,
@@ -1970,7 +1970,7 @@
 		}
 		var theLogs = '';
 		if (firstCreation == true) {
-			theLogs = `<b>Legend:</b><p>
+			elem.SectionContainer_UpdateLog.innerHTML = `<b>Legend:</b><p>
 			<ul>
 				${updateLogEntry('add', 'Addition of something')}
 				${updateLogEntry('edit', 'Edit of a feature')}
@@ -1994,14 +1994,15 @@
 			</div>
 			<div id='NotorietyEXPCalculator_SectionContainer_UpdateLog_TheList'></div>
 			`
+			elem.SectionContainer_UpdateLog_TheList = document.getElementById('NotorietyEXPCalculator_SectionContainer_UpdateLog_TheList');
 			for (var x = 0; x < Object.keys(minutesDevelopment).length; x++) {
 				theLogs += versionInfo[Object.keys(minutesDevelopment)[x]];
 			}
-			elem.SectionContainer_UpdateLog.innerHTML = theLogs;
-			elem.SectionContainer_UpdateLog_TheList = document.getElementById('NotorietyEXPCalculator_SectionContainer_UpdateLog_TheList');
+			elem.SectionContainer_UpdateLog_TheList.innerHTML = theLogs;
 			elem.Section_UpdateLog_Sort_VersionReleaseOrder = document.getElementById('NotorietyEXPCalculator_UpdateLog_Sort_VersionReleaseOrder');
 			elem.updateLogSortButton = document.getElementById('NotorietyEXPCalculator_UpdateLog_SortSubmit');
 		} else {
+			elem.SectionContainer_UpdateLog_TheList.innerHTML = '';
 			const allEntries = [];
 			for (var x = 0; x < Object.keys(minutesDevelopment).length; x++) {
 				allEntries.push(versionInfo[Object.keys(minutesDevelopment)[x]]);
