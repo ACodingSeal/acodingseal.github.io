@@ -1609,7 +1609,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~77 hours, 8 minutes.
+		Estimated total active development time across all versions: ~77 hours, 9 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1628,9 +1628,10 @@
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Rewording of the following sentences: <code>Timestamps are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code> > <code>Timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code>, <code>Challenges timestamps are noted in the local system time in <b>year-month-day 24hour:minute</b> format.</code> > <code>Challenges timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute</b> format.</code>")}
 			${updateLogEntry('edit', "In the Update Log, reworded the following sentence: <code>Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.</code> > <code>Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.</code>")}
 			${updateLogEntry('edit', "Expanded Update Log entry Version 1.3.0 - Additional Additions!, sub-entry 3, by modifying the following part: <code>Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code> > <code>Also changes under the 'Post-revamp Grinding Era', 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code>")}
+			${updateLogEntry('edit', "Expanded 'Update Log' section no longer displays a horizontal line at the end.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed filtering and sorting the list breaking the double-click image functionality.")}
-			${updateLogEntry('other', "Estimated active development time: ~36 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~37 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0 - Additional Additions!</u></b>
@@ -1865,7 +1866,6 @@
 			${updateLogEntry('add', "Added everything else. (A lot!)")}
 			${updateLogEntry('other', "Estimated active development time: ~40 hours over about 10 weeks.")}
 		</ul></div>
-		<hr/>
 		</ul>`
 		
 		elem.SectionContainer_UpdateLog.innerHTML = theLogs;
