@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.3.1 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.0 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -1618,7 +1618,7 @@
 		const localTZ = new Date().getTimezoneOffset();
 		const versionDateStrings = {
 			// "amongus": '[Testing]',
-			"1.3.1": '[Testing]',
+			"1.4.0": '[Testing]',
 			"1.3.0": '[' + formatDate(new Date(1747222800000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
 			"0.2.1": '[' + formatDate(new Date(1746837120000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
 			"0.2.0": '[' + formatDate(new Date(1746615180000), "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + ']',
@@ -1652,7 +1652,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~77 hours, 30 minutes.
+		Estimated total active development time across all versions: ~77 hours, 31 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1661,7 +1661,7 @@
 		</p>
 		<hr/>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-		<b>${versionDateStrings['1.3.1']} Version 1.3.1</b>
+		<b>${versionDateStrings['1.4.0']} Version 1.4.0</b>
 		<ul>
 			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the 'Filter: Other' filtering category with two new filters: 'Has notes' and 'Has user-written description', as well as an exclude option.<br/>(Suggested by the Dreamers Collective.)")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added a note in parentheses to the top-of-section notes list entry 4: <code><a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list</code>")}
@@ -1676,7 +1676,7 @@
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed filtering and sorting the list breaking the double-click image functionality.")}
 			${updateLogEntry('other', "Any changes, if noted in the Update Log, that were suggested by someone else, now receive attribution, if consensual.")}
-			${updateLogEntry('other', "Estimated active development time: ~58 minutes.")}
+			${updateLogEntry('other', "Estimated active development time: ~59 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0 - Additional Additions!</u></b>
