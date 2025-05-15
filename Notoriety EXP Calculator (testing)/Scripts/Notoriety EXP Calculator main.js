@@ -319,6 +319,10 @@
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Month'><option value='undefined'>month</option><option value='0'>January</option><option value='1'>February</option><option value='2'>March</option><option value='3'>April</option><option value='4'>May</option><option value='5'>June</option><option value='6'>July</option><option value='7'>August</option><option value='8'>September</option><option value='9'>October</option><option value='10'>November</option><option value='11'>December</option></select>"
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Day'>" + filterDaysOptions + "</select>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions' type='checkbox'>Exclude?</input>"
+		+ "<p></p>Filter: Other<br/>"
+		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_Notes' type='checkbox'>Has notes</input>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription' type='checkbox'>Has user-written description</input>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_ExcludeOptions' type='checkbox'>Exclude?</input>"
 		+ "<p></p>Sort: Badge obtainment timestamp order<br/>"
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Sort_ObtainmentOrder'><option value='oldestNewest'>Oldest to newest</option><option value='newestOldest'>Newest to oldest</option><option value='random'>Random</option></select>"
 		+ "<p></p><div style='width:10em;height:4em;margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Filter and sort</button></div>"
@@ -373,6 +377,9 @@
 		Section_HallofInfamyCCLs_Filter_Time_Month: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Month'),
 		Section_HallofInfamyCCLs_Filter_Time_Day: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Day'),
 		Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions'),
+		Section_HallofInfamyCCLs_Filter_Other_Notes: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_Notes'),
+		Section_HallofInfamyCCLs_Filter_Other_UserWrittenDescription: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription'),
+		Section_HallofInfamyCCLs_Filter_Other_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_ExcludeOptions'),
 		Section_HallofInfamyCCLs_Sort_ObtainmentOrder: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Sort_ObtainmentOrder'),
 		Section_HallofInfamyCCLs_FilterSort_GeneratedText: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSort_GeneratedText'),
 		
@@ -1097,12 +1104,17 @@
 		const filters = {
 			classicInfamySuits: {crimson:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson.checked, rojo:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo.checked, royalty:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty.checked, blueNavy:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions.checked},
 			time: {year:elem.Section_HallofInfamyCCLs_Filter_Time_Year.value, month:elem.Section_HallofInfamyCCLs_Filter_Time_Month.value,day:elem.Section_HallofInfamyCCLs_Filter_Time_Day.value, exclude:elem.Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions.checked},
+			other: {notes:elem.Section_HallofInfamyCCLs_Filter_Other_Notes.checked, userWrittenDescription:elem.Section_HallofInfamyCCLs_Filter_Other_UserWrittenDescription.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_Other_ExcludeOptions.checked},
 		}
 		if (filters.classicInfamySuits.crimson == false && filters.classicInfamySuits.rojo == false && filters.classicInfamySuits.royalty == false && filters.classicInfamySuits.blueNavy == false && filters.classicInfamySuits.exclude == false) {
 			filters.classicInfamySuits.unused = true;
 		}
 		if (filters.time.year == 'undefined' && filters.time.month == 'undefined' && filters.time.day == 'undefined' && filters.time.exclude == false) {
 			filters.time.unused = true;
+		}
+		
+		if (filters.other.notes == false && filters.other.userWrittenDescription == false && filters.other.exclude == false) {
+			filters.other.unused = true;
 		}
 		// console.log(filters.classicInfamySuits);
 		// console.log(filters.time);
@@ -1116,6 +1128,7 @@
 		for (var x = 0; x < grassAvoiders; x++) {
 			var filterInCurrentCCL = true;
 			var classicInfamySuitsFilter = true;
+			var otherFilter = true;
 			/*
 			console.log('TESTING');
 			console.log('TESTING');
@@ -1247,9 +1260,39 @@
 					timeFilter = true;
 				}
 			}
+			
+			if (filters.other.unused != true) {
+				if (filters.other.notes == true) {
+					if (players[x].notes != undefined) {
+						if (filters.other.exclude == false) {
+							otherFilter = true;
+						} else {
+							otherFilter = false;
+						}
+					} else {
+						if (filters.other.exclude == false) {
+							otherFilter = false;
+						}
+					}
+				}
+				if (filters.other.userWrittenDescription == true) {
+					if (players[x].ownDescription != undefined) {
+						if (filters.other.exclude == false) {
+							otherFilter = true;
+						} else {
+							otherFilter = false;
+						}
+					} else {
+						if (filters.other.exclude == false) {
+							otherFilter = false;
+						}
+					}
+				}
+			}
+			
 			// console.log(classicInfamySuitsFilter);
 			// console.log(filters.classicInfamySuits.rojo);
-			if (classicInfamySuitsFilter == true && timeFilter == true) {
+			if (classicInfamySuitsFilter == true && timeFilter == true && otherFilter == true) {
 				filterInCurrentCCL = true;
 			} else {
 				filterInCurrentCCL = false;
@@ -1609,7 +1652,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~77 hours, 9 minutes.
+		Estimated total active development time across all versions: ~77 hours, 27 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1620,6 +1663,7 @@
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['1.3.1']} Version 1.3.1</b>
 		<ul>
+			${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the 'Filter: Other' filtering category with two new filters: 'Has notes' and 'Has user-written description', as well as an exclude option.<br/>(Suggested by the Dreamers Collective.)")}
 			${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added a note in parentheses to the top-of-section notes list entry 4: <code><a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list</code>")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Changed the 'Post-suits revamp (<i>timestamp</i>) CCLs' subsection to no longer display milliseconds. It also now displays the browser's detected UTC offset.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Improved the visibility of CCL #1's user-written description's description sections.")}
@@ -1631,7 +1675,8 @@
 			${updateLogEntry('edit', "Expanded 'Update Log' section no longer displays a horizontal line at the end.")}
 			${updateLogEntry('edit', "Some source code changes.")}
 			${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed filtering and sorting the list breaking the double-click image functionality.")}
-			${updateLogEntry('other', "Estimated active development time: ~37 minutes.")}
+			${updateLogEntry('other', "Any changes, if noted in the Update Log, that were suggested by someone else, now receive attribution, if consensual.")}
+			${updateLogEntry('other', "Estimated active development time: ~55 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0 - Additional Additions!</u></b>
