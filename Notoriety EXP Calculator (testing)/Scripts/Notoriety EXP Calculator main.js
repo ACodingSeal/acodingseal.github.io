@@ -691,9 +691,9 @@
 		+ "Up until now I had been very quiet about my grind as I knew others had already made a lot more progress; I didn't want to alert the competition. They were trying to find out who was the new infamy 50 who appeared out of nowhere. It was around this time I made my explosive return to the game's Discord server, Moonstone Games, by posting my infamy 100 screenshot, ahead of the next highest player (Ali) by about 30 or 40 infamy ranks. It was around this time I joined a sub-community server called 'super cool elite grinding buddy ccl250 team cool', or the 'elite grinding server' for short, a server comprised of the most dedicated infamy grinders and the founding purpose was for a member to reach CCL. I grinded money in preparation of the introduction of the infamy money requirement cap (which made it $125mil without cheaper pass, $62.5mil with), ending up with around $3 or $4bil. Ali also reached infamy 100 by this time, and he went to 101 supposedly just to be the highest infamy in the game. He had around $10 or $15bil money at this point. I even adjusted my sleep pattern to make sure I would be wide wake when updates are typically released."
 		+ "<p></p>Unfortunately I don't have a screenshot of Moonstone Games' reaction:"
 		+ "<p></p><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0001.jpg'></div><div class='gallerytext'>First ever C!</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0002.jpg'></div><div class='gallerytext'>The very first screenshot of the classic Blue Navy suit.</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0003.jpg'></div><div class='gallerytext'>Post-C chatting with others, including CCLs #9 and #28.</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0001.jpg'></div><div class='gallerytext'>First ever C!</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0002.jpg'></div><div class='gallerytext'>The very first screenshot of the classic Blue Navy suit.</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0003.jpg'></div><div class='gallerytext'>Post-C chatting with others, including CCLs #9 and #28.</div></li>"
 		+ "</ul>"
 		+ "<hr/><p style='font-weight:bold'>The Push towards the End</p><hr/>"
 		+ "During the money grind (Shadow Raid ECM rush as usual; specifically around the vault area) one of my teammates pointed out the infamy money requirement had just been added. Within 15 minutes of the update I immediately switched to exp farming (Authority) and started grinding HARD, frequently doing 16+ hours a day, occasionally 24 hours and I even once stayed awake for 48 hours (about 95% of this time spent grinding the game). I contributed to two Authority Nightmare co-op (both 4 players) world records before the introduction of the milliseconds timer, being 1m8s while half asleep and 1m7s unintentionally (not submitted). In a single day I completed Authority 500 times in a row, and I completed it 700 times in a row before switching to a different heist due to having to grind money. I grinded money for a bit more during the exp grind, and knew how much money I would need when factoring in passive gains from exp farming. However, what I didn't factor in was the extreme costs of hosting a contract (and consequent restarts after a win) (about $96mil loss per infamy when hosting or $28mil when not). I eventually realised, so I had to grind about another $1bil."
@@ -704,12 +704,12 @@
 		+ "At infamy 240 (CCXL), being probably 50+ infamy ranks ahead of everyone else, around 2024-12-31T20:19:35Z (CCXL obtainment time), I was grinding money (Shadow Raid ECM rush, unsurprisingly) with Derp and withwillin (who became CCLs #2 and #3, respectively). While running to the van my head began spinning. We finished that run and I told my teammates I would take a break and lie down for 5 minutes, only to pass out for 10 hours. I didn't even notice how long it had been until I saw the 'You have been disconnected for being idle 20 minutes' notice on my screen and checked the time. I wasn't too happy to find out how long it's been. I realised I could still reach CCL in 2024 in the last time zone on the planet, International Date Line West (UTC-12:00), or Anywhere on Earth."
 		+ "<p></p>Shortly thereafter, I started the grind again and grinded Authority until 2025-01-01T10:04:35:5385251Z when I had officially become the first ever CCL and the first owner of the Rank 250 badge, with just under two hours remaining in 2024 in IDLW, 13 days, 22 hours, 45 minutes and 22 seconds since I started the rerelease (based on 'Jade's Finest' badge obtainment timestamp). Until CCL I had made about ~$20bil in total in my Notoriety career. I posted the screenshot in multiple servers (some of which I eventually left), including Moonstone Games and the elite grinding server, which received many reactions and congratulations, including by my former competitor Ali. I was the only CCL for more than 9.5 days until Derp became #2, followed closely by his duo withwillin. Aurora was significantly later, and just hours before the suit revamp. We became known as The Crimson Four (actually, this is a term I coined), as in the only four owners of the rarest non-developer item in the game, the Crimson suit. We eventually managed to coordinate a get-together where we all joined the same lobby and took screenshots of us wearing the Crimson suit and playing one heist: Jewelry Shop Normal, full sweep with loose loot and safes, everything destroyed, everyone murdered with their bodies in the van."
 		+ "<p></p><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 at 2025-01-01T10-04-38Z.jpg'></div><div class='gallerytext'>First ever CCL!</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 Crimson suit reward 01.jpg'></div><div class='gallerytext'>The original 250 suit reward</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 Crimson suit reward 02.jpg'></div><div class='gallerytext'>The original 250 suit reward (part 2)</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners in menu (2025-01-25T12-28-29Z).jpg'></div><div class='gallerytext'>All four OG Crimson suit owners on 2025-01-25T12:28:29Z.</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - Derpifi3d, withwillin101, Aurora_The1Cat lined up in heist (2025-01-25T12-30-00Z).jpg'></div><div class='gallerytext'>Three of the four OG Crimson suit owners lined up, as I took this screenshot. (2025-01-25T12:30:00Z)</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners end of Jewelry Shop (2025-01-25T12-36-17Z).jpg'></div><div class='gallerytext'>We're going to need a bigger van... (2025-01-25T12:36:17Z)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 at 2025-01-01T10-04-38Z.jpg'></div><div class='gallerytext'>First ever CCL!</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 Crimson suit reward 01.jpg'></div><div class='gallerytext'>The original 250 suit reward</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 Crimson suit reward 02.jpg'></div><div class='gallerytext'>The original 250 suit reward (part 2)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners in menu (2025-01-25T12-28-29Z).jpg'></div><div class='gallerytext'>All four OG Crimson suit owners on 2025-01-25T12:28:29Z.</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - Derpifi3d, withwillin101, Aurora_The1Cat lined up in heist (2025-01-25T12-30-00Z).jpg'></div><div class='gallerytext'>Three of the four OG Crimson suit owners lined up, as I took this screenshot. (2025-01-25T12:30:00Z)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/ILikeToast5/Roblox Notoriety - All four Crimson suit owners end of Jewelry Shop (2025-01-25T12-36-17Z).jpg'></div><div class='gallerytext'>We're going to need a bigger van... (2025-01-25T12:36:17Z)</div></li>"
 		+ "</ul>"
 		+ "<hr/><p style='font-weight:bold'>Closing remarks</p><hr/>"
 		+ "What a grind! I could've slept soundly each night and still been first, albeit likely not in 2024 in any time zones. I'm a little disappointed I didn't start the grind sooner and that I didn't really grind too much early on, otherwise could've got the badge in 2024 in many more, even all, time zones. Regardless, even though there were days when I didn't want to grind, I know I was extremely committed and set my mind to achieving my goal, enduring each long day after the next through the sheer will to be first (only stopping due to a physical need or ailment, never out of boredom or demotivation), and later also to achieve it before the end of the year."
@@ -725,8 +725,8 @@
 		+ "<p></p><p></p><p></p><p></p>Photos below btw"
 		+ "<p></p><b>Some old photos:</b>"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0003.jpg'></div><div class='gallerytext'>Achieved XXV</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0004.jpg'></div><div class='gallerytext'>1 Billion!!!!</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0003.jpg'></div><div class='gallerytext'>Achieved XXV</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0004.jpg'></div><div class='gallerytext'>1 Billion!!!!</div></li>"
 		+ "</ul>"
 		+ "<p></p><b>Journey to CCL & Notoriety’s Rerelease</b>"
 		+ "<br/>After playing some games with Will and being bored out of our minds due to lack of good games and content, we just finished block tales and stuff. Notoriety finally re-released! AND… we didn’t do much for the first week, Will was being bodied by homework, and I had massive (no low taper fade meme) projects due. Since both of us were busy, we didn’t play at all really for the first week."
@@ -736,22 +736,22 @@
 		+ "<p></p>But finally, on approximately Friday January 10th, 2025, 7:05 PM, I reached CCL, the suit was lowkey disappointing but it became exclusive so I’m not complaining. Andddddddd “wondering how we should make to obtain the classic suits, dont like that theyre fomo rn” anddd my day is ruined I am ending it all, Rendhy plans on making Og Crimson obtainable to the public, I am in tears of agony. Totally not exaggerated."
 		+ "<p></p><b>Photos during the Journey:</b>"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0006.jpg'></div><div class='gallerytext'>Dark Drip</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0005.jpg'></div><div class='gallerytext'>The Goobers</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0007.jpg'></div><div class='gallerytext'>Kazret, Will, Nulzza, Derp in respective order</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0001.jpg'></div><div class='gallerytext'>Obtained CCL</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0002.jpg'></div><div class='gallerytext'>Nerd gets CCL</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0006.jpg'></div><div class='gallerytext'>Dark Drip</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0005.jpg'></div><div class='gallerytext'>The Goobers</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0007.jpg'></div><div class='gallerytext'>Kazret, Will, Nulzza, Derp in respective order</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0001.jpg'></div><div class='gallerytext'>Obtained CCL</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0002.jpg'></div><div class='gallerytext'>Nerd gets CCL</div></li>"
 		+ "</ul>"
 		+ "<p></p><b>Post CCL Short Story</b>"
 		+ "<br/>“Touch grass” “Bro is allergic to soap”<br/>FU-<br/>Man… stop harassing me bro :sob: I do shower!!!<p></p>Oh, and my friend Will got CCL like I forgot, but probably 5 hours after me, making him the third CCL"
 		+ "<p></p><b>Some extra pictures:</b>"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0008.jpg'></div><div class='gallerytext'>All 4 Owners Of  OG Crimson</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0009.jpg'></div><div class='gallerytext'>Bigger Van MIGHT be necessary</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0008.jpg'></div><div class='gallerytext'>All 4 Owners Of  OG Crimson</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0009.jpg'></div><div class='gallerytext'>Bigger Van MIGHT be necessary</div></li>"
 		+ "</ul>"
 		+ "<p></p><b>Non-Notoriety Related:</b>"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0010.jpg'></div><div class='gallerytext'>The P.D.W Gang<br>(Pixel, Derp, Will)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0010.jpg'></div><div class='gallerytext'>The P.D.W Gang<br>(Pixel, Derp, Will)</div></li>"
 		+ "</ul>",
 		undefined, // contacted (2025-04-12) and acknowledged
 		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
@@ -847,34 +847,34 @@
 		+ "<br/>- Changes display name to “BloodForValentine” for 1 week before changing back to “Iron” (due to friends and people not being to recognise me in new display names)"
 		+ "<p></p><b style='color:rgba(46,46,46,var(--bg-alpha))'>Extras:</b> <span style='background:rgba(255,0,0,var(--bg-alpha));color:rgba(255,255,0,var(--bg-alpha))'>Random moments</span>"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0001.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0002.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0003.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0004.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0005.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0006.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0007.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0008.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0009.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0010.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0011.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0012.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0013.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0014.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0015.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0016.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0017.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0018.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0019.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0020.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0021.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0022.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0023.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0024.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0025.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0026.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0027.jpg'></div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0028.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0001.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0002.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0003.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0004.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0005.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0006.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0007.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0008.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0009.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0010.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0011.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0012.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0013.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0014.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0015.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0016.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0017.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0018.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0019.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0020.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0021.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0022.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0023.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0024.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0025.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0026.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0027.jpg'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/Danneilkoko/Danneilkoko 0028.jpg'></div></li>"
 		+ "</ul>"
 		+ "",
 		undefined, // not contacted
@@ -883,14 +883,14 @@
 		+ "<br/>Sincere apologies about all the yapping, but I felt it necessary given that this is one of few times I’ve had the excuse to mention all of this. It took quite some time."
 		+ "<p></p>Obligatory image gallery because I gotta include this"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0004.jpg'></div><div class='gallerytext'>Screenshot of reaching CCL, taken at the time mentioned above</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0004.jpg'></div><div class='gallerytext'>Screenshot of reaching CCL, taken at the time mentioned above</div></li>"
 		+ "</ul>"
 		+ "<br/>Below are various infamy screenshots"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0001.jpg'></div><div class='gallerytext'>Infamy C at time mentioned above (17:39:06 UTC-6 on 20 January 2025)</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0002.jpg'></div><div class='gallerytext'>Infamy CL on 2 February 2025 at 21:11:01 UTC-6</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0003.jpg'></div><div class='gallerytext'>Infamy CC on 3 March 2025 at 21:50:59 UTC-6</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0005.jpg'></div><div class='gallerytext'>Obligatory outfit photo (the mask took me 171 notorious safes which cost $1.2 billion to get)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0001.jpg'></div><div class='gallerytext'>Infamy C at time mentioned above (17:39:06 UTC-6 on 20 January 2025)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0002.jpg'></div><div class='gallerytext'>Infamy CL on 2 February 2025 at 21:11:01 UTC-6</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0003.jpg'></div><div class='gallerytext'>Infamy CC on 3 March 2025 at 21:50:59 UTC-6</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/IceColdFrigid/IceColdFrigid 0005.jpg'></div><div class='gallerytext'>Obligatory outfit photo (the mask took me 171 notorious safes which cost $1.2 billion to get)</div></li>"
 		+ "</ul>",
 		// #21
 		"I got infamy 25 in early 2021 and proceeded to not play the game for the next 4 years, as there was no real reason to play when I could not increase my level. I eventually came back when I heard they increased the infamy cap."
@@ -899,9 +899,9 @@
 		+ "<br/>I now began doing public lobby ecm rushes, bringing me infamies at a much faster rate, about 30 infamies a week. During my ecm rushes I found someone of the username ilovebaconflavor. We started doing ecm rushes together everyday after school. He was about 30 infamies ahead of me before I started staying up late into the night grinding alone once he had logged off, in hopes of surpassing his infamy and reaching CCL before him."
 		+ "<p></p>By March 19th I was tied with ilovebaconflavor at infamy 249. We were only 1 infamy away from CCL, and I did NOT want to lose the race to it. A mutual friend of mine and ilovebaconflavor informed me that he was currently in a ecm rushing lobby with ilovebaconflavor and two other friends. I knew I would surely lose the race if I had to go against a full ecm rushing lobby, so I began frantically messaging the informant, asking him to purposefully throw the games. He thankfully obliged, giving me some time to catch up. I knew I did not have time to find a public lobby to ecm rush in, or deal with them making mistakes, so I quickly recruited CCL #13 cl3rical to help me get the last infamy. We began working away at it, meanwhile, my informant was stalling the lobbies with ilovebaconflavor. Eventually, I made it to infamy CCL first, with my rival lagging behind at level 78."
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0001.png'></div><div class='gallerytext'>Messages with informant (part 1)</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0002.png'></div><div class='gallerytext'>Messages with informant (part 2)</div></li>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0003.png'></div><div class='gallerytext'>Messages with informant (part 3)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0001.png'></div><div class='gallerytext'>Messages with informant (part 1)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0002.png'></div><div class='gallerytext'>Messages with informant (part 2)</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/TexudeoSteve/TexudeoSteve 0003.png'></div><div class='gallerytext'>Messages with informant (part 3)</div></li>"
 		+ "</ul>",
 		undefined, // contacted (2025-04-15), no response
 		undefined, // contacted (2025-05-03), refused to provide description
@@ -931,7 +931,7 @@
 		+ "Harry: My earliest memories of playing Notoriety were long before my Tulpas joined me, apparently taking place during a pleasant afternoon on Jun 3rd, 2017. My first impressions weren’t great, as I was immediately overwhelmed by the clunky UI. (Seriously, look up a video on the pre-revamp Notoriety lobby.)"
 		+ "<br/>I eventually hosted a solo Jewelry Store on normal difficulty, whereby I immediately broke stealth and got scared by three things: the red detection markers, then the alarm, and finally the cops shooting at me. Yes, I was that much of a scaredy cat back then. It’s the main reason why I still remember this moment... At least I got the 50+ Kills badge!"
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/GenericDreamer/GenericDreamer 0001.png'></div><div class='gallerytext'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/GenericDreamer/GenericDreamer 0001.png'></div><div class='gallerytext'></div></li>"
 		+ "</ul>"
 		+ "<br/>The above incident caused me to abandon the game until my return at roughly 21:52 on May 10, 2019. According to my badge list, I spent 16 minutes clearing R&B Bank on an unknown difficulty, presumably in stealth. I was likely familiar with Payday’s mechanics by this point, so there wasn’t any fear to make my 2nd ever heist memorable."
 		+ "<br/>The rest of my solo journey to Infamy XXV (achieved on July 8, 2019) was... an unmemorable blur. I grinded levels by playing Blood Money on Nightmare (when bag XP was still around), and to get True Criminal, I *silently* sat for hours on random public servers. I was too socially anxious to ask people to host a gamepass heist on the correct difficulty..."
@@ -1294,7 +1294,7 @@
 			output += "<div class='ImageTextContainer'>";
 			
 			if (input.robloxAvatar != undefined) {
-				output += "<img class='NotorietyEXPCalculator_DoubleClickImg' src='././Notoriety EXP Calculator (testing)/Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
+				output += "<img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/CCL Roblox avatars/" + input.robloxAvatar + "' style='width:10em;float:left'/>";
 			}
 			
 			output += "<div class='CellText'>";
@@ -1609,7 +1609,7 @@
 			${updateLogEntry('other', 'Other')}
 		Prominent tool versions are <u>underlined</u>. Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.
 		<p></p>
-		Estimated total active development time across all versions: ~76 hours, 57 minutes.
+		Estimated total active development time across all versions: ~76 hours, 59 minutes.
 		<p></p>
 		Report any issues or suggestions about this tool to the tool creator, or <a href='https://github.com/ACodingSeal/acodingseal.github.io/issues'>open an issue</a>.
 		<p></p>
@@ -1623,7 +1623,8 @@
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Improved the visibility of CCL #1's user-written description's description sections.")}
 			${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #25's user-written description in various parts, including to the <code>Special Intermission: The <span style='color:rgba(255,0,255,var(--bg-alpha))'>NO</span>existence<span style='color:rgba(255,0,255,var(--bg-alpha))'>N</span> of a Dreamer’s <span style='color:rgba(255,0,255,var(--bg-alpha))'>Will</span></code> user-written description's description section (also renamed to <code>Special Intermission - The <span style='color:rgba(255,0,255,var(--bg-alpha))'>NO</span>existence<span style='color:rgba(255,0,255,var(--bg-alpha))'>N</span> of a Dreamer’s <span style='color:rgba(255,0,255,var(--bg-alpha))'>Will</span></code> and switched places with <code>Chapter 2: A Friendship a Day Keeps the Burnout Away</code> (renamed to <code>Chapter 2 - A Friendship a Day Keeps the Burnout Away</code>)). Also changed the description title from <code>The Dreamers Collective’s Journey to infamy CCL</code> to <code>The Dreamers Collective’s Journey to Infamy CCL</code>.")}
 			${updateLogEntry('edit', "Expanded Update Log entry Version 1.3.0 - Additional Additions!, sub-entry 3, by modifying the following part: <code>Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code> > <code>Also changes under the 'Post-revamp Grinding Era', 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code>")}
-			${updateLogEntry('other', "Estimated active development time: ~25 minutes.")}
+			${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed filtering and sorting the list breaking the double-click image functionality.")}
+			${updateLogEntry('other', "Estimated active development time: ~27 minutes.")}
 		</ul></div>
 		<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 		<b>${versionDateStrings['1.3.0']} <u>Version 1.3.0 - Additional Additions!</u></b>
@@ -2879,6 +2880,15 @@
 	}
 	computeBeepBoop();
 	
+	function addDoubleClickImages() {
+		const doubleClickImgs = document.getElementsByClassName('NotorietyEXPCalculator_DoubleClickImg');
+		for (var x = 0; x <doubleClickImgs.length; x++) {
+			doubleClickImgs[x].addEventListener('dblclick', function() {
+				window.open(this.src);
+			});
+		}
+	}
+	
 	elem.calculateButton.addEventListener('click', function() {
 		computeBeepBoop();
 		if (randomBetween(1,20) == 1) {
@@ -2889,6 +2899,7 @@
 	});
 	elem.filterSortButton.addEventListener('click', function() {
 		addHallofInfamyCCLs();
+		addDoubleClickImages();
 		if (randomBetween(1,20) == 1) {
 			elem.filterSortButton.innerHTML = "Discrimination!";
 		} else {
@@ -2896,10 +2907,5 @@
 		}
 	});
 	
-	const doubleClickImgs = document.getElementsByClassName('NotorietyEXPCalculator_DoubleClickImg');
-	for (var x = 0; x <doubleClickImgs.length; x++) {
-		doubleClickImgs[x].addEventListener('dblclick', function() {
-			window.open(this.src);
-		});
-	}
+	addDoubleClickImages();
 }());
