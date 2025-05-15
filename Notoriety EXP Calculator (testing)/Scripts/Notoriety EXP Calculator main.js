@@ -336,6 +336,7 @@
 	+ "<li>Timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format.</li>"
 	+ "<li>Challenges timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute</b> format.</li>"
 	+ "<li>All times are based on UTC offsets (<a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list), not time zones that are subject to daylight savings adjustments.</li>"
+	+ "<li>There may be an unintentional extra day included when the time is more than a month away.</li>"
 	+ "</ul><p></p><div style='width:10em;height:4em'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_SectionContainer_Timers_UpdateTimers' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Update timers</button></div>"
 	+ "<input id='NotorietyEXPCalculator_SectionContainer_Timers_AutoUpdate' type='checkbox'>Auto update? (interval 250ms)</input>"
 	+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_TheList'>It's time to add something here...</div>"
@@ -1617,7 +1618,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.0": 157,
+			"1.4.0": 190,
 			"1.3.0": 692,
 			"0.2.1": 56,
 			"0.2.0": 444,
@@ -1666,12 +1667,14 @@
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the 'Filter: Other' filtering category with two new filters: 'Has notes' and 'Has user-written description', as well as an exclude option.<br/>(Suggested by the Dreamers Collective.)")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added a note in parentheses to the top-of-section notes list entry 4: <code><a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list</code>")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added the following to the top-of-section notes list as entry 5: <code>There may be an unintentional extra day included when the time is more than a month away.</code>")}
 				${updateLogEntry('add', "The Update Log's version entries can now be sorted based on three options: 'Newest to oldest' (default), 'Oldest to newest', 'Random'. Each version entry can also have its visibility altered by clicking on the bolded release timestamp + version text. By default, only the three most recent entries are visible.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Changed the 'Post-suits revamp (<i>timestamp</i>) CCLs' subsection to no longer display milliseconds. It also now displays the browser's detected UTC offset.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Improved the visibility of CCL #1's user-written description's description sections.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #25's user-written description in various parts, including to the <code>Special Intermission: The <span style='color:rgba(255,0,255,var(--bg-alpha))'>NO</span>existence<span style='color:rgba(255,0,255,var(--bg-alpha))'>N</span> of a Dreamer’s <span style='color:rgba(255,0,255,var(--bg-alpha))'>Will</span></code> user-written description's description section (also renamed to <code>Special Intermission - The <span style='color:rgba(255,0,255,var(--bg-alpha))'>NO</span>existence<span style='color:rgba(255,0,255,var(--bg-alpha))'>N</span> of a Dreamer’s <span style='color:rgba(255,0,255,var(--bg-alpha))'>Will</span></code> and switched places with <code>Chapter 2: A Friendship a Day Keeps the Burnout Away</code> (renamed to <code>Chapter 2 - A Friendship a Day Keeps the Burnout Away</code>)). Also changed the description title from <code>The Dreamers Collective’s Journey to infamy CCL</code> to <code>The Dreamers Collective’s Journey to Infamy CCL</code>.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of the folowing sentences: <code>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code> > <code>Badge obtainment times are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code>, <code>Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to the system time.</code> > <code>Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to local time.</code>")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Rewording of the following sentences: <code>Timestamps are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code> > <code>Timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code>, <code>Challenges timestamps are noted in the local system time in <b>year-month-day 24hour:minute</b> format.</code> > <code>Challenges timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute</b> format.</code>")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Possibly made the timers computations more consistent.")}
 				${updateLogEntry('edit', "In the Update Log, reworded the following sentence: <code>Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.</code> > <code>Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.</code>")}
 				${updateLogEntry('edit', "Expanded Update Log entry Version 1.3.0 - Additional Additions!, sub-entry 3, by modifying the following part: <code>Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code> > <code>Also changes under the 'Post-revamp Grinding Era', 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code>")}
 				${updateLogEntry('edit', "Expanded 'Update Log' section no longer displays a horizontal line at the end.")}
@@ -2030,12 +2033,12 @@
 	
 	function addTimersSection() {
 		const extraDays = 1000 * 3600 * 24 * 0;
-		const extraHours = 1000 * 3600 * 0 + extraDays; // used for testing
+		const extraHours = 1000 * 3600 * 0 + extraDays;
 		const timeOutput = new Timer();
 		const currentDateObj = new Date(new Date().getTime() + extraHours);
 		timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 		// console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
-		const localTZ = currentDateObj.getTimezoneOffset();
+		var localTZ = currentDateObj.getTimezoneOffset();
 		var string = '';
 		var tzString = '';
 		// console.log(localTZ);
@@ -2084,7 +2087,6 @@
 			const whenFriday = {next:new Date(86400000 * 7), previous:new Date(86400000 * 1)};
 			whenFriday.previous.setTime(whenFriday.previous.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
 			whenFriday.next.setTime(whenFriday.next.getTime() + Math.floor(obj.getTime() / 604800000) * 604800000 - (localTZ * -1 * 60 * 1e3));
-			var objDefaultTime = obj.getTime();
 			if (obj.getDay() == 5) {
 				output.currentlyFri = true;
 				output.remainingTime = (whenFriday.previous.getTime() + 86400000 - 1) - obj.getTime();
@@ -2124,10 +2126,11 @@
 					extraYear = 1;
 				}
 				const output = {currentlyMonth:false, remainingTime: null};
-				const whenMonth = {next:new Date(new Date((obj.getFullYear() + extraYear) + '-' + whichMonthNum + '-01').getTime()), previous:new Date(new Date((obj.getFullYear() - 1) + '-' + whichMonthNum + '-01').getTime())};
-				whenMonth.previous.setTime(whenMonth.previous.getTime() - (localTZ * -1 * 60 * 1e3));
-				whenMonth.next.setTime(whenMonth.next.getTime() - (localTZ * -1 * 60 * 1e3));
-				var objDefaultTime = obj.getTime();
+				const whenMonth = {next:new Date(new Date((obj.getFullYear() + extraYear) + '-' + whichMonthNum + '-01').getTime()), previous:new Date(new Date((obj.getFullYear() + extraYear - 1) + '-' + whichMonthNum + '-01').getTime())};
+				whenMonth.previous.setTime(whenMonth.previous.getTime() + (localTZ * -1 * 60 * 1e3));
+				whenMonth.next.setTime(whenMonth.next.getTime() + (localTZ * -1 * 60 * 1e3));
+				whenMonth.previous = new Date(whenMonth.previous.getTime());
+				whenMonth.next = new Date(whenMonth.next.getTime());
 				if (obj.getMonth() == whichMonthNum - 1) {
 					output.currentlyMonth = true;
 					// monthCurrent = new Date(monthCurrent.getTime() - (localTZ * -1 * 60 * 1e3));
