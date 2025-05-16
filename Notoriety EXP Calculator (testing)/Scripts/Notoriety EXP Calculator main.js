@@ -649,21 +649,21 @@
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease.",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
-		"Highest infamy classic suit: Rojo (200)",
-		"Highest infamy classic suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest infamy classic suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest infamy classic suit: Royalty (150)",
-		"Highest infamy classic suit: Blue Navy (100)",
+		"Highest classic infamy suit: Rojo (200)",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
+		"Highest classic infamy suit: Royalty (150)",
+		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge.",
 		// 11 - 20
 		"Obtained CCL before the 'You're a Billionaire', 'True Criminal' and 'The Pied Piper' badges.",
 		"This user grinded 200 infamy ranks with random players in public matches. Obtained CCL before the 'True Criminal' badge.",
-		"Highest infamy classic suit: Blue Navy (100)",
+		"Highest classic infamy suit: Blue Navy (100)",
 		"Obtained CCL before the 'The Pied Piper' badge.",
 		undefined,
 		undefined,
 		undefined,
-		"Highest infamy classic suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge.",
+		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge.",
 		"Started playing post-rerelease.",
 		"Possibly the first solo grinder to reach CCL.",
 		// 21 - 30
@@ -672,15 +672,15 @@
 		undefined,
 		undefined,
 		"This user primarily solo grinded to CCL.",
-		"Started playing post-rerelease. Highest infamy classic suit: Blue Navy (100).",
-		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest infamy classic suit: Royalty (150)",
-		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest infamy classic suit: Blue Navy (100)",
+		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
+		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150)",
+		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		undefined,
 		// 31 - 34
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
-		"Highest infamy classic suit: Blue Navy (100)",
+		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		];
 		
@@ -1618,7 +1618,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.0": 215,
+			"1.4.0": 217,
 			"1.3.0": 692,
 			"0.2.1": 56,
 			"0.2.0": 444,
@@ -1673,6 +1673,7 @@
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Improved the visibility of CCL #1's user-written description's description sections.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Slight changes to CCL #25's user-written description in various parts, including to the <code>Special Intermission: The <span style='color:rgba(255,0,255,var(--bg-alpha))'>NO</span>existence<span style='color:rgba(255,0,255,var(--bg-alpha))'>N</span> of a Dreamer’s <span style='color:rgba(255,0,255,var(--bg-alpha))'>Will</span></code> user-written description's description section (also renamed to <code>Special Intermission - The <span style='color:rgba(255,0,255,var(--bg-alpha))'>NO</span>existence<span style='color:rgba(255,0,255,var(--bg-alpha))'>N</span> of a Dreamer’s <span style='color:rgba(255,0,255,var(--bg-alpha))'>Will</span></code> and switched places with <code>Chapter 2: A Friendship a Day Keeps the Burnout Away</code> (renamed to <code>Chapter 2 - A Friendship a Day Keeps the Burnout Away</code>)). Also changed the description title from <code>The Dreamers Collective’s Journey to infamy CCL</code> to <code>The Dreamers Collective’s Journey to Infamy CCL</code>.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Rewording of the folowing sentences: <code>Badge obtainment times are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code> > <code>Badge obtainment times are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code>, <code>Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to the system time.</code> > <code>Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to local time.</code>")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Reworded <code>Highest infamy classic suit</code> to <code>Highest classic infamy suit</code>, simultaneously adjusting the notes of CCL entries #5, #6, #7, #8, #9, #13, #18, #26, #27, #28 and #33.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Rewording of the following sentences: <code>Timestamps are noted in the local system time in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code> > <code>Timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format.</code>, <code>Challenges timestamps are noted in the local system time in <b>year-month-day 24hour:minute</b> format.</code> > <code>Challenges timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute</b> format.</code>")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Possibly made the timers computations more consistent.")}
 				${updateLogEntry('edit', "In the Update Log, reworded the following sentence: <code>Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.</code> > <code>Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.</code>")}
