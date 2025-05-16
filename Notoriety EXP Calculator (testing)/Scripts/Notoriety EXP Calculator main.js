@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.0 'Rewritten History' testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.0 " + '"' + "History: Past, Present and Future" + '"' + " testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -473,7 +473,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
-		const grassAvoiders = 34;
+		const grassAvoiders = 35;
 		var generatedEntries = 0;
 		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
@@ -525,6 +525,7 @@
 		"rebirthed6coin",
 		"DeTedtive",
 		"Friskern",
+		"lancejuly28",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -561,6 +562,7 @@
 		"VX_coin",
 		"abcd",
 		"Frisk",
+		"Lance",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -597,6 +599,7 @@
 		"rebirthed6coin - 2025-05-03T06-19Z.png",
 		"DeTedtive - 2025-05-10T00-21Z.png",
 		"Friskern - 2025-05-11T23-40Z.png",
+		"lancejuly28 - 2025-05-13T07-17Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -633,6 +636,7 @@
 		{approx:false, timestamp: "2025-05-03T08:00:36.6114285Z"},
 		{approx:false, timestamp: "2025-05-10T00:06:59.3892787Z"},
 		{approx:false, timestamp: "2025-05-11T22:39:04.0366723Z"},
+		{approx:false, timestamp: "2025-05-16T08:55:21.2740865Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -641,7 +645,7 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -682,6 +686,7 @@
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
+		undefined,
 		];
 		
 		const playersData_ownDescription = [
@@ -1000,7 +1005,7 @@
 		+ "<p></p>I was at Infamy 175 when I started my 5 infamy a day grind, where I’d create my own solo rotation strat that ensured an infamy in 30-40mins while also going net-neutral/positive with money. During this grind, I came across CCL #1, ILikeToast5 (aka TheSeal27), where he addressed me as the potential CCL #30. After that moment, I was inspired to reach that #30 spot and continued my grind. This continued until the Wi-Fi of my dorm building went out for 2 days, so on the 2nd day I had to literally walk to my school’s library to play Notoriety . Anyways after that scuffed grind, I came back to my dorm, when my internet was finally back up, however, I was behind schedule with infamies and CCL #31 Alxzor/Brago was 12 infamies ahead of me and was also in pursuit of reaching CCL before me (Brago: 231, Me: 219). So I told myself, “I can’t let this slide, I’ve got to ratio this #####.”"
 		+ "<p></p>On 04/27/2025 while at Infamy 226, fueled by a large iced coffee, a sausage egg and cheese sandwichand some Pepsi Zero’s , I started pumping out infamy after infamy after infamy. The only time I walked away from my desk was for piss breaks . Since me and Brago were in different time zones and he grinded while I was asleep, I knew for sure he had to have been in the 240’s, so I had to get CCL TODAY if I were to reach that #30 spot. Although my strategy was good for solo runs, I also had the help of some other friends both before and during this gauntlet of infamies. 11hrs later, my short term rival Brago joined the game. His infamy… 242, mine… was just a measly 246! I was 4 Infamies ahead of him and knew it was a gg’s. So I did what I do best and clutched that number #30 spot after 13hrs of non-stop grinding. After the grind, I legit couldn’t stop thinking about the Depot . Had I not grinded for that long, I would’ve lost that #30 spot. So this means I’m potentially the first CCL player to grind for it during the College Hell of APRIL ."
 		+ "<p></p>I would like to give thanks to the following people that helped me on this grind. MVP & #1 Supporter: blast (@ShopBlastsLocker). Inspiration: CCL #31 Brago (@Alxzor) & CCL #1 ILikeToast5 (aka TheSeal27). Supporters & Teammates: abcd (@DeTeditive), Facepalm2221 (@facepalm2221), MoonGrave (@Ekko_lokation), Retro (@InfinitelyRetro & ngl 2nd MVP), XYZcheeseborger (@lawsuitace), thermonuclear bullet (@Liokkgi), mung ster (@munster4best), Karlo (@hikaru123456), Tuxedoge (@Magnuslover2), bruh (@NathanJZC), ex0sphere (@ex0spher_e) & nark (@narkyii). Honorable Mention: @ameertttfssd201099.",
-		undefined, // contacted (2025-05-02), waiting
+		undefined, // contacted (2025-05-02), too busy to write description but plans to include a lot
 		// #32
 		"<p></p>Special thanks to my friends - iron (18th CCL), minh, rice and pho for supporting me along my CCL journey. They have boosted me alot since I started infamy grinding.",
 		// #33
@@ -1009,6 +1014,7 @@
 		+ "<p></p>Most of the grind, I would say, was roughly 90% solo. The rest was just fun with friends, randoms, and challenges. I never had any rotations. I just kind of picked high EXP heists (Rush Hour, Shadow Raid, Depot, Authority, etc.) and switched when it was 15-25% repeat or just got bored lol. Overall, this grind was fun and I wish anyone grinding for CCL the best of luck!"
 		+ "<p></p>(Big ol' thanks to CHIEF_TOAD, nark, Iliketoast5, Retro, and many other people for being cool n' stuff while doing this grind!)",
 		undefined, // not contacted
+		undefined, // contacted (2025-05-16), waiting
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1619,7 +1625,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.0": 242,
+			"1.4.0": 247,
 			"1.3.0": 692,
 			"0.2.1": 56,
 			"0.2.0": 444,
@@ -1664,9 +1670,10 @@
 			// "amongus": '[Testing]',
 			"1.4.0": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[Testing] <u>Version 1.4.0 - Rewritten History</u></b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[Testing] <u>Version 1.4.0 - History: Past, Present and Future</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the 'Filter: Other' filtering category with two new filters: 'Has notes' and 'Has user-written description', as well as an exclude option.<br/>(Suggested by the Dreamers Collective.)")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #35 (<code>lancejuly28</code>).")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added a note in parentheses to the top-of-section notes list entry 4: <code><a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list</code>")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added the following to the top-of-section notes list as entry 5: <code>There may be an unintentional extra day included when the time is more than a month away.</code>")}
 				${updateLogEntry('add', "The Update Log's version entries can now be sorted based on three options: 'Newest to oldest' (default), 'Oldest to newest', 'Random'. Each version entry can also have its visibility altered by clicking on the bolded release timestamp + version text. By default, only the three most recent entries are visible.")}
