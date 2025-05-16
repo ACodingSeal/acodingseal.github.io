@@ -1035,14 +1035,8 @@
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0007.jpg'></div><div class='gallerytext'>May 2nd, 2025</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0008.jpg'></div><div class='gallerytext'>May 12th, 2025</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0009.jpg'></div><div class='gallerytext'>May 16th, 2025<br>I'm free</div></li>"
-		+ "</ul>",
-		+ "<p></p>"
-		+ "<p></p>"
-		+ ""
-		+ ""
-		+ ""
-		+ ""
-		+ ""
+		+ "</ul>"
+		+ "<p></p><span style='font-size:75%'>I did all this in a Discord Text Message</span>",
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1653,7 +1647,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.0": 286,
+			"1.4.0": 288,
 			"1.3.0": 692,
 			"0.2.1": 56,
 			"0.2.0": 444,
@@ -1720,7 +1714,7 @@
 				${updateLogEntry('edit', "Expanded 'Update Log' section no longer displays a horizontal line at the end.")}
 				${updateLogEntry('edit', "The Update Log's estimated active development times, both per version and the total, are now automatically calculated and formatted. Estimated times now display 'approx.' instead of <code>~</code>.")}
 				${updateLogEntry('edit', "Renamed the following Update Log entries: <code><u>Version 0.1.0</u></code> to <code><u>Version 0.1.0 - Numbers and Computations</u></code>, <code><u>Version 0.2.0</u></code> to <code><u>Version 0.2.0 - All about the Hall</u></code>, <code><u>Version 0.0.2</u></code> to <code><u>Version 0.0.2 - Historical Additions</u></code> and <code><u>Version 0.0.1</u></code> to <code><u>Version 0.0.1 - The Beginning</u></code>.")}
-				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 11.5MB to 14MB.")}
+				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 11.5MB to 14.25MB.")}
 				${updateLogEntry('edit', "Some source code changes.")}
 				${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed filtering and sorting the list breaking the double-click image functionality.")}
 				${updateLogEntry('other', "Any suggested changes, if noted in the Update Log, now receive attribution, if consensual.")}
