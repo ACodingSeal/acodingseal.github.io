@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.0 " + '"' + "History: Past, Present and Future" + '"' + " testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.0 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -1692,7 +1692,7 @@
 			// "amongus": '[Testing]',
 			"1.4.0": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[Testing] <u>Version 1.4.0 - History: Past, Present and Future</u></b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747395300000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 1.4.0 - History: Past, Present and Future</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the 'Filter: Other' filtering category with two new filters: 'Has notes' and 'Has user-written description', as well as an exclude option.<br/>(Suggested by the Dreamers Collective.)")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the following note to the 'Filtering and Sorting' sub-section: <code>Filters act as an 'AND' logical operator, checked for each programmed CCL entry.</code>")}
