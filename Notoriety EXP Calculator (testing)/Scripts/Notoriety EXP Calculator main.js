@@ -2127,7 +2127,7 @@
 					extraYear = 1;
 				}
 				const output = {currentlyMonth:false, remainingTime: null};
-				const whenMonth = {next:new Date(new Date((obj.getFullYear() + extraYear) + '-' + whichMonthNum + '-01').getTime()), previous:new Date(new Date((obj.getFullYear() + extraYear - 1) + '-' + whichMonthNum + '-01').getTime())};
+				const whenMonth = {next:new Date(new Date((obj.getFullYear() + extraYear) + '-' + whichMonthNum + '-01').getTime()), previous:new Date(new Date((obj.getFullYear() - 1) + '-' + whichMonthNum + '-01').getTime())};
 				whenMonth.previous.setTime(whenMonth.previous.getTime() + (localTZ * -1 * 60 * 1e3));
 				whenMonth.next.setTime(whenMonth.next.getTime() + (localTZ * -1 * 60 * 1e3));
 				whenMonth.previous = new Date(whenMonth.previous.getTime());
