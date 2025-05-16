@@ -307,7 +307,7 @@
 	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs').innerHTML = "<div style='text-align:center'>"
 		+ "At the end of the day, when we're no longer around, we become stories, a relic of the past, and we generally want to be remembered. To live on in society's collective minds, to ensure our story is told and retold countless times. That is true immortality, and free will in writing our own story is the greatest gift of existence. The following people have achieved Infamy Rank 250 (CCL) in Notoriety. Through their unwavering commitment, they have become legendary heisters known far and wide throughout the Notoriety criminal underground. For such an extraordinary accomplishment, they have earned a permanent recognition in the Hall of CCLs. These are their stories."
 		+ "<p></p>Badge obtainment times are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format. 'Time elapsed since badge obtainment' is actual elapsed time, and is updated on tool load, filtering/sorting the list or changing the 'Time output format' toggle setting. Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to local time. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. All data, including Roblox avatars, must be updated manually with a tool update. Double click an image to open its source file and view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username)."
-		+ "<p></p><p style='font-weight:inherit;border-bottom:1px solid rgba(255,255,255,var(--bg-alpha));width:25%;margin:auto'>Filtering and Sorting</p>"
+		+ "<p></p><p style='font-weight:inherit;border-bottom:1px solid rgba(255,255,255,var(--bg-alpha));width:25%;margin:auto'>Filtering and Sorting</p><br/>Filters act as an 'AND' logical operator, checked for each programmed CCL entry."
 		+ "<p></p>Filter: Classic infamy suits<br/>"
 		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson' type='checkbox'>Crimson (250)</input>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo' type='checkbox'>Rojo (200)</input>"
@@ -1014,7 +1014,35 @@
 		+ "<p></p>Most of the grind, I would say, was roughly 90% solo. The rest was just fun with friends, randoms, and challenges. I never had any rotations. I just kind of picked high EXP heists (Rush Hour, Shadow Raid, Depot, Authority, etc.) and switched when it was 15-25% repeat or just got bored lol. Overall, this grind was fun and I wish anyone grinding for CCL the best of luck!"
 		+ "<p></p>(Big ol' thanks to CHIEF_TOAD, nark, Iliketoast5, Retro, and many other people for being cool n' stuff while doing this grind!)",
 		undefined, // not contacted
-		undefined, // contacted (2025-05-16), waiting
+		// #35
+		"<p style='margin-top:2.5em'></p><h1>Road to CCL</h1>"
+		+ "<hr/><p style='font-weight:bold'>Chapter I - Lance's Origin Story</p>Let's go way back to 2016, I found this game via <a href='https://www.youtube.com/watch?v=dZMmyQLHXwo'>Roblox's Heist Review</a>, it got me excited cause I used to watch Payday The Heist on a lets play series and I was excited to try the game out."
+		+ "<hr/><p style='font-weight:bold'>Chapter II - First Infamy</p>I played it very casually that I didn't infamy until March 9th, 2019. there was a two year gap between since I was dealing with school and all right until the pandemic hits."
+		+ "<hr/><p style='font-weight:bold'>Chapter III - Going from 5 to 25</p>2021 was the year where I grinded from Infamy 5 to 25 from April 13 to May 4, I was playing with a group of friends I met during my time playing RO-Bank (rip), ever since then I just continue to grind for money cause there's nothing much we can do at the time and of course... 2023..."
+		+ "<hr/><p style='font-weight:bold'>Chapter IV - The Fall, Rise and start of the journey to 250</p>The day Starbreeze decided to takedown Notoriety... I was lost for words but I won't delve any deeper. The announcement of the return of Notoriety on December 16th, 2024 and that's when my road from 25 to 250 started, it was a slow start as I don't have a clue on what to grind nor a rotation so it was a slow progress."
+		+ "<hr/><p style='font-weight:bold'>Chapter V - Going from 50 to 200</p>It took me a month after the game's launch as I reached Infamy 50, there was some setbacks I won't list for personal reasons and ever since then I never stopped. I reached Infamy 100 on March 5th, 2025 and I continue to grind, February 4th I reached 125 and 150 in 11th, it took me 15 days to go 175 as I was busy outside of Notoriety and a few breaks here and there as on May 2nd... that's when I hit 200.... so it took me a whole month to go from 100 to 200"
+		+ "<hr/><p style='font-weight:bold'>Chapter VI - The last 50 steps...</p>This was endgame, just 50 more steps till I reached 250... as I update you guys on the progress every 10 infamy in Notoriety Media.... May 7th... 210... May 11th... 220 and the next day 225.... when I reached 225... I started to recall the first time I did a road to Infamy from 1 to 25 with my friends... now I'm doing this alone... 230 in May 13th... 240 the next day... I've been getting +10 every day ever since the Nightclub revamp...and so on May 16th... I did it... 250... it took 6 months to go from 25 to 250... was it worth it...? yes... yes it was...."
+		+ "I would like to thank Coin, Trox, T0fu, May, Miyabi and Malice... she was there for me and when I was grinding from 100 to 175..."
+		+ "<p></p>Vanidy and Vel, I know we didn't do much heist together but our Ozela shenanigans will always be the highlight of my journey"
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0001.jpg'></div><div class='gallerytext'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0002.jpg'></div><div class='gallerytext'>RIP RO Bank</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0003.jpg'></div><div class='gallerytext'></div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0010.jpg'></div><div class='gallerytext'>First time meeting Vanidy/Jade</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0004.jpg'></div><div class='gallerytext'>January 3rd, 2025</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0005.jpg'></div><div class='gallerytext'>March 5th, 2025</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0006.jpg'></div><div class='gallerytext'>April 11th, 2025</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0007.jpg'></div><div class='gallerytext'>May 2nd, 2025</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0008.jpg'></div><div class='gallerytext'>May 12th, 2025</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0009.jpg'></div><div class='gallerytext'>May 16th, 2025<br>I'm free</div></li>"
+		+ "</ul>",
+		+ "<p></p>"
+		+ "<p></p>"
+		+ ""
+		+ ""
+		+ ""
+		+ ""
+		+ ""
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1625,7 +1653,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.0": 247,
+			"1.4.0": 286,
 			"1.3.0": 692,
 			"0.2.1": 56,
 			"0.2.0": 444,
@@ -1673,10 +1701,11 @@
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[Testing] <u>Version 1.4.0 - History: Past, Present and Future</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the 'Filter: Other' filtering category with two new filters: 'Has notes' and 'Has user-written description', as well as an exclude option.<br/>(Suggested by the Dreamers Collective.)")}
-				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #35 (<code>lancejuly28</code>).")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added the following note to the 'Filtering and Sorting' sub-section: <code>Filters act as an 'AND' logical operator, checked for each programmed CCL entry.</code>")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #35 (<code>lancejuly28</code>) and their user-written description, including the addition of 10 images.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added a note in parentheses to the top-of-section notes list entry 4: <code><a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list</code>")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Timers: Added the following to the top-of-section notes list as entry 5: <code>There may be an unintentional extra day included when the time is more than a month away.</code>")}
-				${updateLogEntry('add', "The Update Log's version entries can now be sorted based on three options: 'Newest to oldest' (default), 'Oldest to newest', 'Random'. Each version entry can also have its visibility altered by clicking on the bolded release timestamp + version text. By default, only the three most recent entries are visible.")}
+				${updateLogEntry('add', "The Update Log's version entries can now be sorted based on three options: 'Newest to oldest' (default), 'Oldest to newest', 'Random'. Each version entry can also have its visibility altered by clicking on the bolded release timestamp + version text. By default, only one entry at the top of the list is visible.")}
 				${updateLogEntry('add', "Added the following 'Other' sub-entry to Update Log entry Indev: <code><span style='font-style:italic;color:rgba(255,255,var(--bg-alpha))'>This version's name is definitely not a Minecraft reference!</span></code>")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Changed the 'Post-suits revamp (<i>timestamp</i>) CCLs' subsection to no longer display milliseconds. It also now displays the browser's detected UTC offset.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Improved the visibility of CCL #1's user-written description's description sections, affecting sections <code>Discovering the game + Early days</code>, <code>Post-revamp Grinding Era</code>, <code>Rerelease + Silent Grinding</code>, <code>Explosive Return</code>, <code>The Push towards the End</code>, <code>The End + The Beginning of the Hall of CCLs</code> and <code>Closing remarks</code>.")}
@@ -1689,11 +1718,12 @@
 				${updateLogEntry('edit', "In the Update Log, reworded the following sentence: <code>Update Log version timestamps are noted in the local system time in <b>year-month day 24hour:minute</b> format.</code> > <code>Update Log version timestamps are noted in the browser's detected local time zone in <b>year-month day 24hour:minute</b> format.</code>")}
 				${updateLogEntry('edit', "Expanded Update Log entry Version 1.3.0 - Additional Additions!, sub-entry 3, by modifying the following part: <code>Also changes under the 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code> > <code>Also changes under the 'Post-revamp Grinding Era', 'Rerelease + Silent Grinding' and 'Explosive Return' description sections, including the addition of 3 images.</code>")}
 				${updateLogEntry('edit', "Expanded 'Update Log' section no longer displays a horizontal line at the end.")}
-				${updateLogEntry('edit', "The Update Log's estimated active development times, both per version and the total, are now automatically calculated and formatted.")}
-				${updateLogEntry('edit', "Renamed the following Update Log entries: <code><u>Version 0.0.1</u></code> to <code><u>Version 0.0.1 - The Beginning</u></code>, <code><u>Version 0.1.0</u></code> to <code><u>Version 0.1.0 - Numbers and Computations</u></code> and <code><u>Version 0.2.0</u></code> to <code><u>Version 0.2.0 - All about the Hall</u></code>.")}
+				${updateLogEntry('edit', "The Update Log's estimated active development times, both per version and the total, are now automatically calculated and formatted. Estimated times now display 'approx.' instead of <code>~</code>.")}
+				${updateLogEntry('edit', "Renamed the following Update Log entries: <code><u>Version 0.1.0</u></code> to <code><u>Version 0.1.0 - Numbers and Computations</u></code>, <code><u>Version 0.2.0</u></code> to <code><u>Version 0.2.0 - All about the Hall</u></code>, <code><u>Version 0.0.2</u></code> to <code><u>Version 0.0.2 - Historical Additions</u></code> and <code><u>Version 0.0.1</u></code> to <code><u>Version 0.0.1 - The Beginning</u></code>.")}
+				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 11.5MB to 14MB.")}
 				${updateLogEntry('edit', "Some source code changes.")}
 				${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed filtering and sorting the list breaking the double-click image functionality.")}
-				${updateLogEntry('other', "Any changes, if noted in the Update Log, that were suggested by someone else, now receive attribution, if consensual.")}
+				${updateLogEntry('other', "Any suggested changes, if noted in the Update Log, now receive attribution, if consensual.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.0') + '.')}
 			</ul></div>
 			`,
@@ -1899,7 +1929,7 @@
 			`,
 			"0.0.2": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1744982220000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 0.0.2</u></b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1744982220000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 0.0.2 - Historical Additions</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Added input toggle for EXP formula. Currently two options: pre-shutdown (<code>1025 * x + x ^ 1.3</code>), current (<code>x * 1018.93 + x ^ 2.976664)</code>).")}
 				${updateLogEntry('add', "Section Hall of CCLs: Added 'Time elapsed since badge obtainment' to each CCL's entry.")}
@@ -2037,7 +2067,7 @@
 			entryToggleDisplayElems[x].addEventListener('click', function() {
 				entryToggleDisplay(this);
 			});
-			if (x > 2) {
+			if (x >= 1) {
 				entryToggleDisplay(entryToggleDisplayElems[x]);
 			}
 		}
