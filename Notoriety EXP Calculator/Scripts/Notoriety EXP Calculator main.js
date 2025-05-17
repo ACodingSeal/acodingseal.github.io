@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.0 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.1 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -382,7 +382,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
-		const grassAvoiders = 35;
+		const grassAvoiders = 36;
 		var generatedEntries = 0;
 		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
@@ -435,6 +435,7 @@
 		"DeTedtive",
 		"Friskern",
 		"lancejuly28",
+		"GhostrUiN420",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -472,6 +473,7 @@
 		"abcd",
 		"Frisk",
 		"Lance",
+		"Ghost",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -509,6 +511,7 @@
 		"DeTedtive - 2025-05-10T00-21Z.png",
 		"Friskern - 2025-05-11T23-40Z.png",
 		"lancejuly28 - 2025-05-13T07-17Z.png",
+		"GhostrUiN420 - 2025-05-17T04-15Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -546,6 +549,7 @@
 		{approx:false, timestamp: "2025-05-10T00:06:59.3892787Z"},
 		{approx:false, timestamp: "2025-05-11T22:39:04.0366723Z"},
 		{approx:false, timestamp: "2025-05-16T08:55:21.2740865Z"},
+		{approx:false, timestamp: "2025-05-17T11:23:31.0019313Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -554,7 +558,7 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -590,12 +594,13 @@
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		undefined,
-		// 31 - 34
+		// 31 - 36
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
+		"Started playing post-rerelease.",
 		];
 		
 		const playersData_ownDescription = [
@@ -676,7 +681,7 @@
 		+ "<br/><ul class='mod-gallery'>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/Derpifi3d/Derpifi3d 0010.jpg'></div><div class='gallerytext'>The P.D.W Gang<br>(Pixel, Derp, Will)</div></li>"
 		+ "</ul>",
-		undefined, // contacted (2025-04-12) and acknowledged
+		undefined, // contacted (2025-04-12) and acknowledged, will possibly start work on the description in early June 2025
 		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
 		undefined, // contacted (2025-04-12) and acknowledged, did not provide description (forgetful or cannot be bothered?)
 		undefined, // not contacted
@@ -946,6 +951,7 @@
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0009.jpg'></div><div class='gallerytext'>May 16th, 2025<br>I'm free</div></li>"
 		+ "</ul>"
 		+ "<p></p><span style='font-size:75%'>I did all this in a Discord Text Message</span>",
+		undefined, // contacted (2025-05-17), occupied and will write story later
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1556,6 +1562,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.1": 13,
 			"1.4.0": 288,
 			"1.3.0": 692,
 			"0.2.1": 56,
@@ -1599,6 +1606,16 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.1": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747486620000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.1</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #36 (<code>GhostrUiN420</code>).")}
+				${updateLogEntry('edit', "Some source code changes.")}
+				${updateLogEntry('fix', "The Update Log now correctly collapses all entries on recreation, except the most recent entry on initial tool load.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.1') + '.')}
+			</ul></div>
+			`,
 			"1.4.0": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747395300000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 1.4.0 - History: Past, Present and Future</u></b>
@@ -1970,9 +1987,10 @@
 			entryToggleDisplayElems[x].addEventListener('click', function() {
 				entryToggleDisplay(this);
 			});
-			if (x >= 1) {
-				entryToggleDisplay(entryToggleDisplayElems[x]);
-			}
+			entryToggleDisplay(entryToggleDisplayElems[x]);
+		}
+		if (firstCreation == true) {
+			entryToggleDisplay(entryToggleDisplayElems[0]);
 		}
 	}
 	addUpdateLog(true);
