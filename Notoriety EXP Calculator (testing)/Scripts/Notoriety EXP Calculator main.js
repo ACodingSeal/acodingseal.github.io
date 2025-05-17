@@ -1653,7 +1653,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.1": 12,
+			"1.4.1": 13,
 			"1.4.0": 288,
 			"1.3.0": 692,
 			"0.2.1": 56,
@@ -1699,11 +1699,11 @@
 			// "amongus": '[Testing]',
 			"1.4.1": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.1</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747486620000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.1</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #36 (<code>GhostrUiN420</code>).")}
 				${updateLogEntry('edit', "Some source code changes.")}
-				${updateLogEntry('fix', "The Update Log now correctly collapses all entries, except the most recent entry on initial tool load.")}
+				${updateLogEntry('fix', "The Update Log now correctly collapses all entries on recreation, except the most recent entry on initial tool load.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.1') + '.')}
 			</ul></div>
 			`,
