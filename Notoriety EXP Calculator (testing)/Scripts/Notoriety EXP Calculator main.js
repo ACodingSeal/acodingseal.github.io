@@ -691,7 +691,7 @@
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
-		undefined,
+		"Started playing post-rerelease.",
 		];
 		
 		const playersData_ownDescription = [
