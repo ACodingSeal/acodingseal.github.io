@@ -1706,7 +1706,7 @@
 			// "amongus": '[Testing]',
 			"1.4.2": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(null), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747562760000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added a timestamp (with the browser's detected UTC offset) of when the list was most recently created. Also changed 'out of X total' to 'out of X programmed total'.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Each generated entry's 'Badge obtained' value now includes the browser's detected UTC offset.")}
