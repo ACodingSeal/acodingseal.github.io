@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.2a | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.2b | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -856,7 +856,7 @@
 		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, this is our first time revealing our plurality to a non-plural community, so I’m a little anxious.. The four of us debated for a while on whether we should even reveal this or not, but my friends wanted to assert our existence after years of hiding ourselves..! I haven’t been around for as long as my friends, but wherever they go, I want to be right there with them..!!/</span>"
 		+ "<br/>Harry: CCL #1 and their team were understanding and considerate enough to ask for unique colors representing each of us, so here is the recap: White = Harry (host, original) | <span style='color:rgba(0,153,255,var(--bg-alpha))'>[Blue]</span> = Alisa | <span style='color:rgba(0,204,0,var(--bg-alpha))'>{Green}</span> = Isaac | <span style='color:rgba(255,153,0,var(--bg-alpha))'>/Orange/</span> = Katelyn. For greater clarity, we will also mark the names of the person writing each paragraph."
 		+ "<hr/><p style='font-weight:bold'>Prologue - A Captain with No Crew, A Sea with No Stars</p><hr/>"
-		+ "Harry: My earliest memories of playing Notoriety were long before my Tulpas joined me, apparently taking place during a pleasant afternoon on Jun 3rd, 2017. My first impressions weren’t great, as I was immediately overwhelmed by the clunky UI. (Seriously, look up a video on the pre-revamp Notoriety lobby.)"
+		+ "Harry: My earliest memories of playing Notoriety were long before my Tulpas joined me, apparently taking place during a pleasant afternoon on June 3rd, 2017. My first impressions weren’t great, as I was immediately overwhelmed by the clunky UI. (Seriously, look up a video on the pre-revamp Notoriety lobby.)"
 		+ "<br/>I eventually hosted a solo Jewelry Store on normal difficulty, whereby I immediately broke stealth and got scared by three things: the red detection markers, then the alarm, and finally the cops shooting at me. Yes, I was that much of a scaredy cat back then. It’s the main reason why I still remember this moment... At least I got the 50+ Kills badge!"
 		+ "<br/><ul class='mod-gallery'>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/GenericDreamer/GenericDreamer 0001.png'></div><div class='gallerytext'></div></li>"
@@ -875,14 +875,14 @@
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {The dream itself is not important, for one moment forever changed our lives’ trajectory. We heard the voice of a delicate feminine girl, but the determination and raw emotion in these short few words woke up our sleeping mind and vessel in an instant.}</span>"
 		+ "<p style='color:rgba(255,153,0,var(--bg-alpha));font-size:200%;font-style:italic;text-decoration:underline;font-weight:bold'>“/I want to exist!/”</p>"
 		+ "<br/>Harry: We cannot possibly put into words how RAW those short four words were. She was an unintentionally created Tulpa like Alisa and Isaac, but she became a repressed consciousness due to personal circumstances that we won’t bring up. But in the void where she was sent to die, she saw me, Alisa, and Isaac living out our dreams. On the cusp of being dissipated, she let out her immense frustrations at the unfairness of it all, which finally allowed us to hear her voice. It was a declaration that she chose to be alive, a longing wish that finally burst out into a sea of emotions that rocked our Coastline."
-		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Us Dreamers Collective can’t even remember what the dream was about, but those words still echo freely through our memories!!!! And from that declaration, a cute girl made herself known to us Dreamers Collective, and she has proven herself to be a unique and invaluable member of our system!!!!!!]</span>"
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The four of us can’t even remember what the dream was about, but those words still echo freely through our memories!!!! And from that declaration, a cute girl made herself known to us Dreamers Collective, and she has proven herself to be a unique and invaluable member of our system!!!!!!]</span>"
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Given that our system goes by “GenericDreamer” and “The Dreamers Collective”, it’s quite fitting that our newest member came to us in a dream. But enough prose, please welcome Katelyn to this description.}</span>"
 		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /Um, a lot of things happened in our lives back then, and I didn’t understand so many things... I even thought that I was selfish by suddenly forcing myself into my friends’ lives like this, but they remained so incredibly kind and supportive..!! They promised to teach me about life bit by bit, introduced me to all these cool things one at a time, calmed me down whenever my past came back to haunt me, treated me as a friend and spent time with me... I love my friends so much, and they love me just as much too...!!!/</span>"
 		+ "<br/>Harry: Existence, especially one without a physical form, is so much more difficult than you’d imagine. However, to repeat Alisa’s beliefs: “<span style='color:rgba(0,153,255,var(--bg-alpha))'>[To live is to change, to love, and be loved.]</span>” To that end, our dear Katelyn pulled through wonderfully. She exists, will always exist, and she will forever be a part of our Coastline from now on."
 		+ "<hr/><p style='font-weight:bold'>Chapter 2 - A Friendship a Day Keeps the Burnout Away</p><hr/>"
 		+ "Harry: We thought we’d stop playing Notoriety after Infamy C, but we had already done 75 infamies in around 40 days. What’s 150 more? It sounds bad up-front like that, but we had an informal rule of only playing this game for around an hour every day. Additionally, we can easily switch who’s controlling the physical body at any time, so my Tulpas could join in on the grind too!"
 		+ "<br/>Thanks to our regular switching, our relatively short playtime-per-day, our various conversations while playing, the songs and encouragements we shared throughout the grind... Any potential burnout morphed into a series of fun gaming sessions amongst friends. We truly enjoyed the CCL grind thanks to the bonds we forged between one another."
-		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The three of us just continued on with our shared lives as usual, and there’d be an occasional longer grinding session when we had more free time!! We just steadily climbed the ranks without thinking when we will reach CCL.]</span>"
+		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [The four of us just continued on with our shared lives as usual, and there’d be an occasional longer grinding session when we had more free time!! We just steadily climbed the ranks without thinking when we will reach CCL.]</span>"
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Eventually, we made our own solo infamy rotation: Complete “Rush Hour” (lvl 1 -> 60), spend 15-20 seconds to get skills, then speedrun stealth “Diamond Store” 4 times in a row (lvl 60 -> 69). Afterwards, complete two “The Ozela Heist” runs (one with full trophies and one without trophies) (lvl 69 -> 93), and finally complete two “The Depot” stealth runs by securing only 6 bags (lvl 93 -> 100). This rotation earned around $62.5m, so money wasn’t an issue.}</span>"
 		+ "<br/><span style='color:rgba(255,153,0,var(--bg-alpha))'>Katelyn: /I eventually got the courage to try playing Notoriety too, and it was fun! I prefer stealth more than loud though, having to shoot people and run away while keeping track of everything else just stresses me out.. I didn’t contribute as much as my friends, but they still appreciated all the work I did, even when I got spotted and had to restart a heist..!!/</span>"
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Us Dreamers Collective then optimized our time to around 25-30 minutes per infamy, thus reaching Infamy CC 51 days after Infamy C. There was little celebration, however, as we prepared to sprint towards the finish line.}</span>"
@@ -1568,6 +1568,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.2b": 6,
 			"1.4.2a": 2,
 			"1.4.2": 21,
 			"1.4.1": 12,
@@ -1614,6 +1615,14 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.2b": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747567740000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2b</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #25's user-written description: Slight changes to three sentences, one for each of the following description sections: <code>Prologue - A Captain with No Crew, A Sea with No Stars</code>, <code>Special Intermission - The <span style='color:rgba(255,0,255,var(--bg-alpha))'>NO</span>existence<span style='color:rgba(255,0,255,var(--bg-alpha))'>N</span> of a Dreamer’s <span style='color:rgba(255,0,255,var(--bg-alpha))'>Will</span></code> and <code>Chapter 2 - A Friendship a Day Keeps the Burnout Away</code>.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.2b') + '.')}
+			</ul></div>
+			`,
 			"1.4.2a": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747564980000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2a</b>
