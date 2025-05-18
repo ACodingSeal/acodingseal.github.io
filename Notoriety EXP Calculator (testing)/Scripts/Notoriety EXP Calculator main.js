@@ -679,7 +679,7 @@
 		undefined,
 		undefined,
 		undefined,
-		"This user primarily solo grinded to CCL.",
+		"This user primarily solo grinded to CCL. First known openly plural system to reach CCL.",
 		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
@@ -691,7 +691,7 @@
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
-		"Started playing post-rerelease. Possibly the first console player to reach CCL.",
+		"Started playing post-rerelease. Possibly the first console and Xbox player to reach CCL.",
 		];
 		
 		const playersData_ownDescription = [
@@ -1044,7 +1044,8 @@
 		+ "<p></p><span style='font-size:75%'>I did all this in a Discord Text Message</span>",
 		// #36
 		"To be honest I first started playing notoriety with my friend deathmech and I wasn’t thinking I was going to get this invested. But I realized after the first 5 heists I realized I was hooked"
-		+ "<p></p>I don’t know exactly the drive behind why I wanted ccl. I think it was the need to prove myself: to prove that I am capable of seeing something come to an end, to have strength to keep going. And I have notoriety to thank for it",
+		+ "<p></p>I don’t know exactly the drive behind why I wanted ccl. I think it was the need to prove myself: to prove that I am capable of seeing something come to an end, to have strength to keep going. And I have notoriety to thank for it"
+		+ "<p></p><i>" + '"' + "Keep moving forward" + '"' + "</i>",
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1658,7 +1659,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.2": 15,
+			"1.4.2": 18,
 			"1.4.1": 12,
 			"1.4.0": 288,
 			"1.3.0": 692,
@@ -1709,7 +1710,8 @@
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added a timestamp (with the browser's detected UTC offset) of when the list was most recently created. Also changed 'out of X total' to 'out of X programmed total'.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Each generated entry's 'Badge obtained' value now includes the browser's detected UTC offset.")}
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #36's entry: Added the note 'Possibly the first console player to reach CCL.' and a user-written description.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added the following note to CCL #25's entry: 'First known openly plural system to reach CCL.'")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #36's entry: Added the note 'Possibly the first console and Xbox player to reach CCL.' and a user-written description.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.2') + '.')}
 			</ul></div>
 			`,
