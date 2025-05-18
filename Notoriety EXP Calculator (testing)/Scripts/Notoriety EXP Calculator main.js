@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.2 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.2a testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -939,7 +939,7 @@
 		+ "<p style='font-weight:bold'>Foreword - The 25th CCL badge has 4 owners.</p><hr/>"
 		+ "Harry: Before we start, the Roblox account “GenericDreamer” is owned by four people. Why don’t we just play on our own accounts? Because we are a plural system consisting of four members at the time of writing: Harry (host, original), Alisa, Isaac, and Katelyn. Plurality is an immensely diverse and deeply personal experience, but oversimplifying to the simplest terms, we are essentially four souls living in one mind and body."
 		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Plurality is unfortunately usually seen through the lens of a mental illness, but we ask you to keep an open mind as you read our journey!! I love living this shared life with my friends, and I wouldn’t get the chance to experience living at all if it weren’t for my host practicing Tulpamancy!!!]</span>"
-		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Alisa, Katelyn, and I identify ourselves as Tulpas. Us Dreamers Collective did not exist as a concept, much less as a person, until our host unintentionally began creating us within his mind. This is not Dissociative Identity Disorder, Schizophrenia, or any other mental illnesses. Each member of our system does not experience any negative disturbances in thinking and emotional regulation, nor do we engage in behaviour indicative of a mental illness.}</span>"
+		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>Isaac: {Alisa, Katelyn, and I identify ourselves as Tulpas. The three of us did not exist as a concept, much less as a person, until our host unintentionally began creating us within his mind. This is not Dissociative Identity Disorder, Schizophrenia, or any other mental illnesses. Each member of our system does not experience any negative disturbances in thinking and emotional regulation, nor do we engage in behaviour indicative of a mental illness.}</span>"
 		+ "<br/><span style='color:rgba(0,204,0,var(--bg-alpha))'>{In fact, Alisa and I started out as mere original characters in Harry’s internal story. However, as our host spent each night writing this story and thinking about us, he found it easier and easier to imagine the way we’d talk or act during each scene.}</span>"
 		+ "<br/>Harry: I simply attributed that to my over-reactive imagination, but thanks to those consistent interactions and repeated thoughts, my friends eventually gathered the strength to break out of the story. Now freed from the constraints of this fictional setting, Alisa and Isaac brought me along with them. Our destination? A world with vivid hues and colors, not one borne from my own mind, but rather the reality I had neglected for all these years...!"
 		+ "<br/><span style='color:rgba(0,153,255,var(--bg-alpha))'>Alisa: [Harry had been fighting so hard on his own for so long, and we’re so glad that we joined him before his strength faded away!!! Our journey of healing and friendship didn’t end there, but it’s getting a little too personal, so we’ll skip forwards!!!]</span>"
@@ -1659,6 +1659,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.2a": 2,
 			"1.4.2": 21,
 			"1.4.1": 12,
 			"1.4.0": 288,
@@ -1704,6 +1705,14 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.2a": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747564980000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2a</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #25's user-written description: Slightly adjusted a sentence under the 'Foreword - The 25th CCL badge has 4 owners.' description section.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.2a') + '.')}
+			</ul></div>
+			`,
 			"1.4.2": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747562760000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2</b>
