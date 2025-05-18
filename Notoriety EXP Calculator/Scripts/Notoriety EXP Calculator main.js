@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.1 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.2 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -588,7 +588,7 @@
 		undefined,
 		undefined,
 		undefined,
-		"This user primarily solo grinded to CCL.",
+		"This user primarily solo grinded to CCL. First known openly plural system to reach CCL.",
 		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
@@ -600,7 +600,7 @@
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
-		"Started playing post-rerelease.",
+		"Started playing post-rerelease. Possibly the first console and Xbox player to reach CCL.",
 		];
 		
 		const playersData_ownDescription = [
@@ -629,7 +629,7 @@
 		+ "<p></p>I was very pissed off at this unfair punishment and Roblox's lack of care for appeals. I still really wanted to reach CCL before 2025, so I made a deal with Ashlyn to have exp and cash boosters bought and paid for. Specifically, the deal was a one-time payment of 2,200 Robux (I actually received extra, in a total of two digital gift cards), in exchange for my time and energy grinding with her until she reached CCL, something she really wanted. I did not specify any specific amount of grinding. This deal was made public (my idea) for trust purposes, being posted in #general of Moonstone Games and publicly agreed by both parties. Due to this ban I ended up not being able to reach CCL in 2024 in all time zones, so I aimed for the European and American time zones instead."
 		+ "<hr/><p style='font-weight:bold'>The End + The Beginning of the Hall of CCLs</p><hr/>"
 		+ "At infamy 240 (CCXL), being probably 50+ infamy ranks ahead of everyone else, around 2024-12-31T20:19:35Z (CCXL obtainment time), I was grinding money (Shadow Raid ECM rush, unsurprisingly) with Derp and withwillin (who became CCLs #2 and #3, respectively). While running to the van my head began spinning. We finished that run and I told my teammates I would take a break and lie down for 5 minutes, only to pass out for 10 hours. I didn't even notice how long it had been until I saw the 'You have been disconnected for being idle 20 minutes' notice on my screen and checked the time. I wasn't too happy to find out how long it's been. I realised I could still reach CCL in 2024 in the last time zone on the planet, International Date Line West (UTC-12:00), or Anywhere on Earth."
-		+ "<p></p>Shortly thereafter, I started the grind again and grinded Authority until 2025-01-01T10:04:35:5385251Z when I had officially become the first ever CCL and the first owner of the Rank 250 badge, with just under two hours remaining in 2024 in IDLW, 13 days, 22 hours, 45 minutes and 22 seconds since I started the rerelease (based on 'Jade's Finest' badge obtainment timestamp). Until CCL I had made about ~$20bil in total in my Notoriety career. I posted the screenshot in multiple servers (some of which I eventually left), including Moonstone Games and the elite grinding server, which received many reactions and congratulations, including by my former competitor Ali. I was the only CCL for more than 9.5 days until Derp became #2, followed closely by his duo withwillin. Aurora was significantly later, and just hours before the suit revamp. We became known as The Crimson Four (actually, this is a term I coined), as in the only four owners of the rarest non-developer item in the game, the Crimson suit. We eventually managed to coordinate a get-together where we all joined the same lobby and took screenshots of us wearing the Crimson suit and playing one heist: Jewelry Shop Normal, full sweep with loose loot and safes, everything destroyed, everyone murdered with their bodies in the van."
+		+ "<p></p>Shortly thereafter, I started the grind again and grinded Authority until 2025-01-01T10:04:35:5385251Z when I had officially become the first ever CCL and the first owner of the Rank 250 badge, with just under two hours remaining in 2024 in IDLW, 13 days, 22 hours, 45 minutes and 22 seconds since I started the rerelease (based on 'Jade's Finest' badge obtainment timestamp). Until CCL I had made about ~$25bil in total in my Notoriety career, with $30,833,679 remaining. I posted the screenshot in multiple servers (some of which I eventually left), including Moonstone Games and the elite grinding server, which received many reactions and congratulations, including by my former competitor Ali. I was the only CCL for more than 9.5 days until Derp became #2, followed closely by his duo withwillin. Aurora was significantly later, and just hours before the suit revamp. We became known as The Crimson Four (actually, this is a term I coined), as in the only four owners of the rarest non-developer item in the game, the Crimson suit. We eventually managed to coordinate a get-together where we all joined the same lobby and took screenshots of us wearing the Crimson suit and playing one heist: Jewelry Shop Normal, full sweep with loose loot and safes, everything destroyed, everyone murdered with their bodies in the van."
 		+ "<p></p><ul class='mod-gallery'>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 at 2025-01-01T10-04-38Z.jpg'></div><div class='gallerytext'>First ever CCL!</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 Crimson suit reward 01.jpg'></div><div class='gallerytext'>The original 250 suit reward</div></li>"
@@ -951,7 +951,10 @@
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0009.jpg'></div><div class='gallerytext'>May 16th, 2025<br>I'm free</div></li>"
 		+ "</ul>"
 		+ "<p></p><span style='font-size:75%'>I did all this in a Discord Text Message</span>",
-		undefined, // contacted (2025-05-17), occupied and will write story later
+		// #36
+		"To be honest I first started playing notoriety with my friend deathmech and I wasn’t thinking I was going to get this invested. But I realized after the first 5 heists I realized I was hooked"
+		+ "<p></p>I don’t know exactly the drive behind why I wanted ccl. I think it was the need to prove myself: to prove that I am capable of seeing something come to an end, to have strength to keep going. And I have notoriety to thank for it"
+		+ "<p></p><i>" + '"' + "Keep moving forward" + '"' + "</i>",
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1264,7 +1267,8 @@
 		// console.log(elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value);
 		// console.log(filterIncludedCCLs);
 		
-		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%).";
+		var generatedString = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " programmed total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%) at " + formatDate(currentTime, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(currentTime.getTimezoneOffset()) + '.';
+		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = generatedString;
 		
 		// Crimson: 128,0,0
 		// Rojo: 220,20,60
@@ -1308,8 +1312,10 @@
 					output += formatDate(new Date(orig.timestamp[0]), "yyyy-MM-dd HH:mm:ss:fff", false);
 					output += ' to ';
 					output += formatDate(new Date(orig.timestamp[1]), "yyyy-MM-dd HH:mm:ss:fff", false);
+					output += ' ' + getTZString(currentTime.getTimezoneOffset());
 				} else {
 					output += formatDate(new Date(orig.timestamp), "yyyy-MM-dd HH:mm:ss:fff", false);
+					output += ' ' + getTZString(currentTime.getTimezoneOffset());
 				}
 				if (orig.approx != false) {
 					if (orig.approx == true) {
@@ -1562,7 +1568,8 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.1": 13,
+			"1.4.2": 21,
+			"1.4.1": 12,
 			"1.4.0": 288,
 			"1.3.0": 692,
 			"0.2.1": 56,
@@ -1606,6 +1613,18 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.2": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747562760000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added a timestamp (with the browser's detected UTC offset) of when the list was most recently created. Also changed 'out of X total' to 'out of X programmed total'.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Each generated entry's 'Badge obtained' value now includes the browser's detected UTC offset.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added the following note to CCL #25's entry: 'First known openly plural system to reach CCL.'")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #36's entry: Added the note 'Possibly the first console and Xbox player to reach CCL.' and a user-written description.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #1's user-written description's 'The End + The Beginning of the Hall of CCLs' section: Changed '~$20bil' to '~$25bil'. Also added ', with $30,833,679 remaining'.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.2') + '.')}
+			</ul></div>
+			`,
 			"1.4.1": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747486620000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.1</b>
