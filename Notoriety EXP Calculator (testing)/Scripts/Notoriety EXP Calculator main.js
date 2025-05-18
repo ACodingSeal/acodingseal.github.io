@@ -199,7 +199,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.1 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.2 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -691,7 +691,7 @@
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
-		"Started playing post-rerelease.",
+		"Started playing post-rerelease. Possibly the first console player to reach CCL.",
 		];
 		
 		const playersData_ownDescription = [
@@ -1042,7 +1042,9 @@
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/lancejuly28/lancejuly28 0009.jpg'></div><div class='gallerytext'>May 16th, 2025<br>I'm free</div></li>"
 		+ "</ul>"
 		+ "<p></p><span style='font-size:75%'>I did all this in a Discord Text Message</span>",
-		undefined, // contacted (2025-05-17), occupied and will write story later
+		// #36
+		"To be honest I first started playing notoriety with my friend deathmech and I wasn’t thinking I was going to get this invested. But I realized after the first 5 heists I realized I was hooked"
+		+ "<p></p>I don’t know exactly the drive behind why I wanted ccl. I think it was the need to prove myself: to prove that I am capable of seeing something come to an end, to have strength to keep going. And I have notoriety to thank for it",
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1355,7 +1357,8 @@
 		// console.log(elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value);
 		// console.log(filterIncludedCCLs);
 		
-		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%).";
+		var generatedString = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " programmed total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%) at " + formatDate(currentTime, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(currentTime.getTimezoneOffset()) + '.';
+		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = generatedString;
 		
 		// Crimson: 128,0,0
 		// Rojo: 220,20,60
@@ -1399,8 +1402,10 @@
 					output += formatDate(new Date(orig.timestamp[0]), "yyyy-MM-dd HH:mm:ss:fff", false);
 					output += ' to ';
 					output += formatDate(new Date(orig.timestamp[1]), "yyyy-MM-dd HH:mm:ss:fff", false);
+					output += ' ' + getTZString(currentTime.getTimezoneOffset());
 				} else {
 					output += formatDate(new Date(orig.timestamp), "yyyy-MM-dd HH:mm:ss:fff", false);
+					output += ' ' + getTZString(currentTime.getTimezoneOffset());
 				}
 				if (orig.approx != false) {
 					if (orig.approx == true) {
@@ -1653,7 +1658,8 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.1": 13,
+			"1.4.2": 15,
+			"1.4.1": 12,
 			"1.4.0": 288,
 			"1.3.0": 692,
 			"0.2.1": 56,
@@ -1697,6 +1703,16 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.2": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(null), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added a timestamp (with the browser's detected UTC offset) of when the list was most recently created. Also changed 'out of X total' to 'out of X programmed total'.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Each generated entry's 'Badge obtained' value now includes the browser's detected UTC offset.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #36's entry: Added the note 'Possibly the first console player to reach CCL.' and a user-written description.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.2') + '.')}
+			</ul></div>
+			`,
 			"1.4.1": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747486620000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.1</b>
