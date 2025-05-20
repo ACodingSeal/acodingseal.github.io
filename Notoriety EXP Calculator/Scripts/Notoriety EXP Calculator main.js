@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.3 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.3a | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -1595,6 +1595,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.3a": 5,
 			"1.4.3": 40,
 			"1.4.2b": 6,
 			"1.4.2a": 2,
@@ -1643,13 +1644,21 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.3a": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747710120000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.3a</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('edit', "Added the following note to Update Log entry version 1.4.3, sub-entry 3 (description section 'The Push towards the End'): 'added a paragraph in position 2'")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.3a') + '.')}
+			</ul></div>
+			`,
 			"1.4.3": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747709460000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.3</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(null), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.3</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added CCL #7's user-written description, including the addition of 1 image.")}
 				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #1, #2, #7, #12, #23, #25, #30, #32.")}
-				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #1's user-written description: Slight changes to two description sections: <code>The Push towards the End</code> (reworded 'infamy money requirement' to 'infamy money requirement limit' and 'being about 80 infamy ranks ahead of #2' to 'being about 80 infamy ranks ahead of Ali') and <code>The End + The Beginning of the Hall of CCLs</code> (Moved a sentence from the first paragraph to the second.). Also changes to the notes: moved a sentence (" + '"' + "Very likely the only CCL without any MXP or Mutator Ranks." + '"' + ") one ahead in the paragraph, slightly adjusting it to accommodate the new Mutator Ranks + remaining MXP data.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #1's user-written description: Slight changes to two description sections: <code>The Push towards the End</code> (added a paragraph in position 2 + reworded 'infamy money requirement' to 'infamy money requirement limit' and 'being about 80 infamy ranks ahead of #2' to 'being about 80 infamy ranks ahead of Ali') and <code>The End + The Beginning of the Hall of CCLs</code> (Moved a sentence from the first paragraph to the second.). Also changes to the notes: moved a sentence (" + '"' + "Very likely the only CCL without any MXP or Mutator Ranks." + '"' + ") one ahead in the paragraph, slightly adjusting it to accommodate the new Mutator Ranks + remaining MXP data.")}
 				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.25MB to 14.5MB.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.3') + '.')}
 			</ul></div>
