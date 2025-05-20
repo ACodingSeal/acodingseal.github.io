@@ -795,7 +795,7 @@
 		+ "<hr/><p style='font-weight:bold'>Post-CCL Journey</p><hr/>"
 		+ "After gaining Infamy 250, I still wasn’t satisfied with the goal I had achieved, and the next thing that I decided to go for were mutator levels."
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Assets/Hall of CCLs UGC/bigfootbb045/bigfootbb045 0001.jpg'></div><div class='gallerytext'>the absolute monstrous amount of jewelry shop runs</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/bigfootbb045/bigfootbb045 0001.jpg'></div><div class='gallerytext'>the absolute monstrous amount of jewelry shop runs</div></li>"
 		+ "</ul>"
 		+ "I started trying AFK strats, which were very slow, and to keep up the repeat bonus, I would do Jewelry Shop runs also with mutators, and this is where I found out the most effective way of grinding them. As of me writing this on May 19th, 2025, I currently have 3443 mutator levels."
 		+ "<p style='font-weight:bold'>Timestamps</p>"
