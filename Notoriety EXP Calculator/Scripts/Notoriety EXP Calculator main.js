@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.3a | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.4 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -483,7 +483,7 @@
 		"seroly2345 - 2025-04-10T22-05Z.png",
 		"theREALdynamic 2025-04-10T22-05Z.png",
 		"bigfootbb045 - 2025-04-10T22-05Z.png",
-		"LuvlyGirlMaisy - 2025-04-10T22-05Z.png",
+		"LuvlyGirlMaisy - 2025-05-20T04-09Z.png",
 		"ARandomNoobGamer - 2025-04-10T22-06Z.png",
 		"Ryankaye01 - 2025-04-10T22-06Z.png",
 		"kogamarobloxman - 2025-04-10T22-06Z.png",
@@ -713,7 +713,14 @@
 		+ "<br/>January 13th, 2025, Infamy 150"
 		+ "<br/>January 21st, 2025, Infamy 200"
 		+ "<br/>January 29th, 2025, Infamy 250",
-		undefined, // not contacted (likely blocked)
+		"<hr/><p style='font-weight:bold'>To start...</p><hr/>"
+		+ "First off, I would like to apologise for my past actions, and to those who I have mistreated. I am a much better person now, and I believe everybody deserves a second chance. People can and will change, if they put their mind to it and truely try to become a better person."
+		+ "<hr/>"
+		+ "<p></p>I'd like to thank Cubix, TheSeal27, and Player235 for helping me achieve most of my Infamies. I would also like to thank my best friend legendpandamoniom for being there for me whenever I needed it."
+		+ "<p></p>I have always loved Notoriety, I first started when my older sister showed me the game, on December the 16th of 2018. Ever since, I have always loved the game. It's community and great developer team have created such a great experience for all to enjoy."
+		+ "<p></p>Since I started playing games, I had always been a grinder. I'd stay up for nights grinding heists with my friends, which helped me reach XXV-100, obtain the Billionare badge, and True Criminal. I'd then go ahead and obtain as many badges as possible, and play the game for fun time-to-time, even after completing all the game had to offer."
+		+ "<p></p>When the game re-released, I was so happy to see that the Infamy cap was increased to 250 (CCL). I knew I was going to be in for a great couple of weeks grinding my infamy up to become the best of the best. Before the Infamy money cap was added, through a LOT of Nightclub duo money grinding, I was the one of the first 10 user to reach Infamy 50 (L). I was then the 3rd user to reach Infamy C (100) Which was a great achievement for me, and something I am very proud of to this day. I gave up on grinding for a while when I reached infamy CL (150) and came back not too long after to finish up, then reaching Infamy CCL (250) on Feb 4, 2025, 3:25 PM."
+		+ "<p></p>I always liked the idea of helping my friends and others in the community to reach their own infamy goals, and I did my best at keeping that promise.",
 		undefined, // contacted (2025-05-03), refused to provide description and unsure what to write
 		// #10
 		"i knew about notoriety for a very long time, and i did try it out for a bit, but ended up stopping (couldn't tell you why, i have basically no memory of it other than when i started playing again, i was level 8 and had like 50k in cash)"
@@ -1595,6 +1602,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.4": 4,
 			"1.4.3a": 5,
 			"1.4.3": 40,
 			"1.4.2b": 6,
@@ -1644,6 +1652,14 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.4": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747714740000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.4</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #8's user-written description. Also updated the entry's Roblox avatar.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.4') + '.')}
+			</ul></div>
+			`,
 			"1.4.3a": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747710120000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.3a</b>
