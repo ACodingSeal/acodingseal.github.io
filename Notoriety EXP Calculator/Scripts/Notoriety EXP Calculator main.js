@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.2b | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.3 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -562,19 +562,19 @@
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Very likely the only CCL without any MXP or Mutator Ranks. Obtained CCL before the 'The Pied Piper' badge. CCL #1 is also the creator of this tool!",
-		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease.",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP until next rank (as of 2025-05-20T01:33Z). CCL #1 is also the creator of this tool!",
+		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease. Mutator Rank 1,000 (as of 2025-05-20T00:48Z).",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
 		"Highest classic infamy suit: Rojo (200)",
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,443 (as of 2025-05-20T00:51Z).",
 		"Highest classic infamy suit: Royalty (150)",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge.",
 		// 11 - 20
 		"Obtained CCL before the 'You're a Billionaire', 'True Criminal' and 'The Pied Piper' badges.",
-		"This user grinded 200 infamy ranks with random players in public matches. Obtained CCL before the 'True Criminal' badge.",
+		"This user grinded 200 infamy ranks with random players in public matches. Obtained CCL before the 'True Criminal' badge. Mutator Rank 364 (as of 2025-05-20T00:45Z).",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Obtained CCL before the 'The Pied Piper' badge.",
 		undefined,
@@ -586,17 +586,17 @@
 		// 21 - 30
 		"Obtained CCL before the 'You're a Billionaire' badge.",
 		undefined,
+		"Mutator Rank 46 + 2,662 MXP until next rank (as of 2025-05-20T00:53Z).",
 		undefined,
-		undefined,
-		"This user primarily solo grinded to CCL. First known openly plural system to reach CCL.",
+		"This user primarily solo grinded to CCL. First known openly plural system to reach CCL. Mutator Rank 273 + 4,471 MXP remaining until next rank (as of 2025-05-20T01:54Z).",
 		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
-		undefined,
+		"Mutator Rank 420 + 5,066 MXP remaining until next rank (as of 2025-05-20T01:36Z).",
 		// 31 - 36
 		"Started playing post-rerelease.",
-		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
+		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP until next rank (as of 2025-05-20T00:57Z).",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
@@ -623,13 +623,14 @@
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/ILikeToast5/ILikeToast5 Infamy C 0003.jpg'></div><div class='gallerytext'>Post-C chatting with others, including CCLs #9 and #28.</div></li>"
 		+ "</ul>"
 		+ "<hr/><p style='font-weight:bold'>The Push towards the End</p><hr/>"
-		+ "During the money grind (Shadow Raid ECM rush as usual; specifically around the vault area) one of my teammates pointed out the infamy money requirement had just been added. Within 15 minutes of the update I immediately switched to exp farming (Authority) and started grinding HARD, frequently doing 16+ hours a day, occasionally 24 hours and I even once stayed awake for 48 hours (about 95% of this time spent grinding the game). I contributed to two Authority Nightmare co-op (both 4 players) world records before the introduction of the milliseconds timer, being 1m8s while half asleep and 1m7s unintentionally (not submitted). In a single day I completed Authority 500 times in a row, and I completed it 700 times in a row before switching to a different heist due to having to grind money. I grinded money for a bit more during the exp grind, and knew how much money I would need when factoring in passive gains from exp farming. However, what I didn't factor in was the extreme costs of hosting a contract (and consequent restarts after a win) (about $96mil loss per infamy when hosting or $28mil when not). I eventually realised, so I had to grind about another $1bil."
-		+ "<p></p>At infamy 182 (CLXXXIII), level 86, being about 80 infamy ranks ahead of #2 (Ali hardly grinded at all, and was probably #3), I was grinding exp on Authority with Ashlyn, NoobLol and Fridj. Around this time was when Derp reached infamy 150. I posted the message " + '"' + "the elite grinding server has too many femboys and more are being infected every day 💀"  + '"' + " in a private match where apparently no one would be offended by the word 'femboy'. (This message was referring to the high percentage of elite grinding server members being a femboy, the server where its activity eventually almost entirely consisted of roleplayers instead of grinders. Many grinders ended up leaving.) 53 seconds later, having just bagged Gold Bars from the crate in the shed, around 20:08Z, I received my first-ever moderation on the platform in nearly 11 years, despite everything I have been able to get away with in the past. A 1-day account suspension, of which my two appeals were auto-denied. I even tried to manipulate the AI appeal bot, but failed."
+		+ "During the money grind (Shadow Raid ECM rush as usual; specifically around the vault area) one of my teammates pointed out the infamy money requirement limit had just been added. Within 15 minutes of the update I immediately switched to exp farming (Authority) and started grinding HARD, frequently doing 16+ hours a day, occasionally 24 hours and I even once stayed awake for 48 hours (about 95% of this time spent grinding the game). I contributed to two Authority Nightmare co-op (both 4 players) world records before the introduction of the milliseconds timer, being 1m8s while half asleep and 1m7s unintentionally (not submitted). In a single day I completed Authority 500 times in a row, and I completed it 700 times in a row before switching to a different heist due to having to grind money. I grinded money for a bit more during the exp grind, and knew how much money I would need when factoring in passive gains from exp farming. However, what I didn't factor in was the extreme costs of hosting a contract (and consequent restarts after a win) (about $96mil loss per infamy when hosting or $28mil when not). I eventually realised, so I had to grind about another $1bil."
+		+ "<p></p>I did 50 infamies in a single day. Well, more like 49 in noticeably less than 24 hours. It was from C-100 at 2024-12-27 16:31 UTC to CL-1 at 2024-12-28 14:53 UTC, or 49 infamies in 22 hours and 22 minutes. I could've easily stayed for a little while longer and got to CL-100, but if I did that it wouldn't be as much of a challenge to recover when I woke up with no one currently grinding, in addition to the fact I would probably just go infamous again right away. Still basically 50 infamies in a day, probably by spamming the same heist: Authority. This started mere moments after the infamy money requirement limit was added, pretty much instantly overtaking Ali."
+		+ "<p></p>At infamy 182 (CLXXXIII), level 86, being about 80 infamy ranks ahead of Ali (Ali hardly grinded at all, and was probably #3), I was grinding exp on Authority with Ashlyn, NoobLol and Fridj. Around this time was when Derp reached infamy 150. I posted the message " + '"' + "the elite grinding server has too many femboys and more are being infected every day 💀"  + '"' + " in a private match where apparently no one would be offended by the word 'femboy'. (This message was referring to the high percentage of elite grinding server members being a femboy, the server where its activity eventually almost entirely consisted of roleplayers instead of grinders. Many grinders ended up leaving.) 53 seconds later, having just bagged Gold Bars from the crate in the shed, around 20:08Z, I received my first-ever moderation on the platform in nearly 11 years, despite everything I have been able to get away with in the past. A 1-day account suspension, of which my two appeals were auto-denied. I even tried to manipulate the AI appeal bot, but failed."
 		+ "<p></p>I got up early with minimal rest hoping that I would receive a response to my email appeal, but did not receive a response until the ban had expired, on the weekend in Roblox HQ's time no less. I believe that neither Ashlyn nor NoobLol would report me. According to the video that records the ban and the moments before it, Fridj took 10 seconds from when I posted the message (almost instantly after loading into the briefing screen) to ready up, stayed at spawn for a few moments and did not say anything for the entire heist. I am not sure how long he remained at spawn, but he did eventually contribute to the heist, starting 43s after posting the message when he was defusing a crate (according to the crew statuses at the bottom), or 18s after the heist started. Asking the user in Discord direct messages on 2025-04-13T05:38Z, a response was received 1 minute later: " + '"' + "i don't recall" + '"' + ". Forming a personality based on the limited DMs history and from own memory, it is likely the user had truly forgotten."
 		+ "<p></p>I was very pissed off at this unfair punishment and Roblox's lack of care for appeals. I still really wanted to reach CCL before 2025, so I made a deal with Ashlyn to have exp and cash boosters bought and paid for. Specifically, the deal was a one-time payment of 2,200 Robux (I actually received extra, in a total of two digital gift cards), in exchange for my time and energy grinding with her until she reached CCL, something she really wanted. I did not specify any specific amount of grinding. This deal was made public (my idea) for trust purposes, being posted in #general of Moonstone Games and publicly agreed by both parties. Due to this ban I ended up not being able to reach CCL in 2024 in all time zones, so I aimed for the European and American time zones instead."
 		+ "<hr/><p style='font-weight:bold'>The End + The Beginning of the Hall of CCLs</p><hr/>"
-		+ "At infamy 240 (CCXL), being probably 50+ infamy ranks ahead of everyone else, around 2024-12-31T20:19:35Z (CCXL obtainment time), I was grinding money (Shadow Raid ECM rush, unsurprisingly) with Derp and withwillin (who became CCLs #2 and #3, respectively). While running to the van my head began spinning. We finished that run and I told my teammates I would take a break and lie down for 5 minutes, only to pass out for 10 hours. I didn't even notice how long it had been until I saw the 'You have been disconnected for being idle 20 minutes' notice on my screen and checked the time. I wasn't too happy to find out how long it's been. I realised I could still reach CCL in 2024 in the last time zone on the planet, International Date Line West (UTC-12:00), or Anywhere on Earth."
-		+ "<p></p>Shortly thereafter, I started the grind again and grinded Authority until 2025-01-01T10:04:35:5385251Z when I had officially become the first ever CCL and the first owner of the Rank 250 badge, with just under two hours remaining in 2024 in IDLW, 13 days, 22 hours, 45 minutes and 22 seconds since I started the rerelease (based on 'Jade's Finest' badge obtainment timestamp). Until CCL I had made about ~$25bil in total in my Notoriety career, with $30,833,679 remaining. I posted the screenshot in multiple servers (some of which I eventually left), including Moonstone Games and the elite grinding server, which received many reactions and congratulations, including by my former competitor Ali. I was the only CCL for more than 9.5 days until Derp became #2, followed closely by his duo withwillin. Aurora was significantly later, and just hours before the suit revamp. We became known as The Crimson Four (actually, this is a term I coined), as in the only four owners of the rarest non-developer item in the game, the Crimson suit. We eventually managed to coordinate a get-together where we all joined the same lobby and took screenshots of us wearing the Crimson suit and playing one heist: Jewelry Shop Normal, full sweep with loose loot and safes, everything destroyed, everyone murdered with their bodies in the van."
+		+ "At infamy 240 (CCXL), being probably 50+ infamy ranks ahead of everyone else, around 2024-12-31T20:19:35Z (CCXL obtainment time), I was grinding money (Shadow Raid ECM rush, unsurprisingly) with Derp and withwillin (who became CCLs #2 and #3, respectively). While running to the van my head began spinning. We finished that run and I told my teammates I would take a break and lie down for 5 minutes, only to pass out for 10 hours. I didn't even notice how long it had been until I saw the 'You have been disconnected for being idle 20 minutes' notice on my screen and checked the time. I wasn't too happy to find out how long it's been."
+		+ "<p></p>I realised I could still reach CCL in 2024 in the last time zone on the planet, International Date Line West (UTC-12:00), or Anywhere on Earth. Shortly thereafter, I started the grind again and grinded Authority until 2025-01-01T10:04:35:5385251Z when I had officially become the first ever CCL and the first owner of the Rank 250 badge, with just under two hours remaining in 2024 in IDLW, 13 days, 22 hours, 45 minutes and 22 seconds since I started the rerelease (based on 'Jade's Finest' badge obtainment timestamp). Until CCL I had made about ~$25bil in total in my Notoriety career, with $30,833,679 remaining. I posted the screenshot in multiple servers (some of which I eventually left), including Moonstone Games and the elite grinding server, which received many reactions and congratulations, including by my former competitor Ali. I was the only CCL for more than 9.5 days until Derp became #2, followed closely by his duo withwillin. Aurora was significantly later, and just hours before the suit revamp. We became known as The Crimson Four (actually, this is a term I coined), as in the only four owners of the rarest non-developer item in the game, the Crimson suit. We eventually managed to coordinate a get-together where we all joined the same lobby and took screenshots of us wearing the Crimson suit and playing one heist: Jewelry Shop Normal, full sweep with loose loot and safes, everything destroyed, everyone murdered with their bodies in the van."
 		+ "<p></p><ul class='mod-gallery'>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 at 2025-01-01T10-04-38Z.jpg'></div><div class='gallerytext'>First ever CCL!</div></li>"
 		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/ILikeToast5/Notoriety Infamy Level 250 Crimson suit reward 01.jpg'></div><div class='gallerytext'>The original 250 suit reward</div></li>"
@@ -685,7 +686,33 @@
 		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
 		undefined, // contacted (2025-04-12) and acknowledged, did not provide description (forgetful or cannot be bothered?)
 		undefined, // not contacted
-		undefined, // contacted (2025-04-12), no response
+		// #7
+		"<hr/><p style='font-weight:bold'>Pre-DMCA Era</p><hr/>"
+		+ "<p style='font-weight:bold'>2020-2021</p>"
+		+ "During the pandemic, I was enrolled in a “Roblox Coding Class” (to this day, I recall nothing). At the end of these sessions, we would choose to leave, or choose a game to play, and one of these games was Notoriety. When I first played this game, I was really interested, getting Infamy 1, and progressing quickly. One of my first memories of Notoriety was playing Brick Bank with some friends. A while later, I get to Infamy 15, and take a long break. I come back to Notoriety, and get Infamy 25. Sometimes I would get back onto Notoriety to try and get Billionaire, but would quickly lose interest."
+		+ "<p style='font-weight:bold'>2023</p>"
+		+ "After a while, where I had barely any memory of Notoriety, I found out that it was taken down by a DMCA (I didn’t have Discord at the time), and felt that I had missed a lot."
+		+ "<hr/><p style='font-weight:bold'>CCL Journey</p><hr/>"
+		+ "<p style='font-weight:bold'>2024</p>"
+		+ "This year, I finally got Discord, and joined the Moonstone Games server, however not really interacting with the community, and just staying there for the news."
+		+ "Later in the year, I got pinged on December 12th, about Notoriety finally getting licensing from Starbreeze. I shared the information with some friends. I check the badges, and see “Rank 250”. I ask around about this new infamy cap, and I have determination to reach this long goal."
+		+ "On the re-launch date of Notoriety, December 16th, I came back to immediately grind some infamies, most of them solo to Infamy 40. I started grinding with a team, where I reached Infamy 50 on December 23."
+		+ "<p style='font-weight:bold'>2025</p>"
+		+ "On January 1st, which was new years, I had gotten infamy 100."
+		+ "12 days later, I reach infamy 150, and gained the Royalty suit right before the suit revamp."
+		+ "On the 21st, I get 200, and finally 8 days later, I reach Infamy 250."
+		+ "<hr/><p style='font-weight:bold'>Post-CCL Journey</p><hr/>"
+		+ "After gaining Infamy 250, I still wasn’t satisfied with the goal I had achieved, and the next thing that I decided to go for were mutator levels."
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator/Assets/Hall of CCLs UGC/bigfootbb045/bigfootbb045 0001.jpg'></div><div class='gallerytext'>the absolute monstrous amount of jewelry shop runs</div></li>"
+		+ "</ul>"
+		+ "I started trying AFK strats, which were very slow, and to keep up the repeat bonus, I would do Jewelry Shop runs also with mutators, and this is where I found out the most effective way of grinding them. As of me writing this on May 19th, 2025, I currently have 3443 mutator levels."
+		+ "<p style='font-weight:bold'>Timestamps</p>"
+		+ "December 23rd, 2024: Infamy 50"
+		+ "<br/>January 1st, 2025: Infamy 100"
+		+ "<br/>January 13th, 2025, Infamy 150"
+		+ "<br/>January 21st, 2025, Infamy 200"
+		+ "<br/>January 29th, 2025, Infamy 250",
 		undefined, // not contacted (likely blocked)
 		undefined, // contacted (2025-05-03), refused to provide description and unsure what to write
 		// #10
@@ -1568,6 +1595,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.3": 40,
 			"1.4.2b": 6,
 			"1.4.2a": 2,
 			"1.4.2": 21,
@@ -1615,6 +1643,17 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.3": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747709460000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.3</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added CCL #7's user-written description, including the addition of 1 image.")}
+				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #1, #2, #7, #12, #23, #25, #30, #32.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #1's user-written description: Slight changes to two description sections: <code>The Push towards the End</code> (reworded 'infamy money requirement' to 'infamy money requirement limit' and 'being about 80 infamy ranks ahead of #2' to 'being about 80 infamy ranks ahead of Ali') and <code>The End + The Beginning of the Hall of CCLs</code> (Moved a sentence from the first paragraph to the second.). Also changes to the notes: moved a sentence (" + '"' + "Very likely the only CCL without any MXP or Mutator Ranks." + '"' + ") one ahead in the paragraph, slightly adjusting it to accommodate the new Mutator Ranks + remaining MXP data.")}
+				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.25MB to 14.5MB.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.3') + '.')}
+			</ul></div>
+			`,
 			"1.4.2b": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747567740000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.2b</b>

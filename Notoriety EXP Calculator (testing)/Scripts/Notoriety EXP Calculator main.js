@@ -1686,7 +1686,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.3": 39,
+			"1.4.3": 40,
 			"1.4.2b": 6,
 			"1.4.2a": 2,
 			"1.4.2": 21,
@@ -1741,6 +1741,7 @@
 				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added CCL #7's user-written description, including the addition of 1 image.")}
 				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #1, #2, #7, #12, #23, #25, #30, #32.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #1's user-written description: Slight changes to two description sections: <code>The Push towards the End</code> (reworded 'infamy money requirement' to 'infamy money requirement limit' and 'being about 80 infamy ranks ahead of #2' to 'being about 80 infamy ranks ahead of Ali') and <code>The End + The Beginning of the Hall of CCLs</code> (Moved a sentence from the first paragraph to the second.). Also changes to the notes: moved a sentence (" + '"' + "Very likely the only CCL without any MXP or Mutator Ranks." + '"' + ") one ahead in the paragraph, slightly adjusting it to accommodate the new Mutator Ranks + remaining MXP data.")}
+				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.25MB to 14.5MB.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.3') + '.')}
 			</ul></div>
 			`,
