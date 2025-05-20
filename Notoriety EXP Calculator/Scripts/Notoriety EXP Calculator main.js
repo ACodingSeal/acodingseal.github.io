@@ -1656,7 +1656,7 @@
 			// "amongus": '[Testing]',
 			"1.4.4a": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747738560000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.4a</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747738620000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.4a</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Changes to CCL #1's user-written description: Under the 'Closing remarks' section, moved everything starting at and including the fifth sentence of the fourth paragraph into the newly created fifth paragraph.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.4a') + '.')}
