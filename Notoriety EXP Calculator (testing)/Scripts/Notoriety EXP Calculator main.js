@@ -795,15 +795,15 @@
 		+ "<hr/><p style='font-weight:bold'>Post-CCL Journey</p><hr/>"
 		+ "After gaining Infamy 250, I still wasn’t satisfied with the goal I had achieved, and the next thing that I decided to go for were mutator levels."
 		+ "<br/><ul class='mod-gallery'>"
-		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/bigfootbb045/bigfootbb045 0001.jpg'></div><div class='gallerytext'>the absolute monstrous amount of jewelry shop runs</div></li>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Assets/Hall of CCLs UGC/bigfootbb045/bigfootbb045 0001.jpg'></div><div class='gallerytext'>the absolute monstrous amount of jewelry shop runs</div></li>"
 		+ "</ul>"
 		+ "I started trying AFK strats, which were very slow, and to keep up the repeat bonus, I would do Jewelry Shop runs also with mutators, and this is where I found out the most effective way of grinding them. As of me writing this on May 19th, 2025, I currently have 3443 mutator levels."
 		+ "<p style='font-weight:bold'>Timestamps</p>"
-		+ "<ul><li>December 23rd, 2024: Infamy 50</li>"
-		+ "<li>January 1st, 2025: Infamy 100</li>"
-		+ "<li>January 13th, 2025, Infamy 150</li>"
-		+ "<li>January 21st, 2025, Infamy 200</li>"
-		+ "<li>January 29th, 2025, Infamy 250</li>",
+		+ "December 23rd, 2024: Infamy 50"
+		+ "<br/>January 1st, 2025: Infamy 100"
+		+ "<br/>January 13th, 2025, Infamy 150"
+		+ "<br/>January 21st, 2025, Infamy 200"
+		+ "<br/>January 29th, 2025, Infamy 250",
 		undefined, // not contacted (likely blocked)
 		undefined, // contacted (2025-05-03), refused to provide description and unsure what to write
 		// #10
@@ -1686,7 +1686,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.3": 37,
+			"1.4.3": 38,
 			"1.4.2b": 6,
 			"1.4.2a": 2,
 			"1.4.2": 21,
