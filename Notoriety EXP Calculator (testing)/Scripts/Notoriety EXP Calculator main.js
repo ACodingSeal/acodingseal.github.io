@@ -653,19 +653,19 @@
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Very likely the only CCL without any MXP or Mutator Ranks. Obtained CCL before the 'The Pied Piper' badge. CCL #1 is also the creator of this tool!",
-		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease.",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP until next rank (as of 2025-05-20T01:33Z). CCL #1 is also the creator of this tool!",
+		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease. Mutator Rank 1,000 (as of 2025-05-20T00:48Z).",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
 		"Highest classic infamy suit: Rojo (200)",
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,443 (as of 2025-05-20T00:51Z).",
 		"Highest classic infamy suit: Royalty (150)",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge.",
 		// 11 - 20
 		"Obtained CCL before the 'You're a Billionaire', 'True Criminal' and 'The Pied Piper' badges.",
-		"This user grinded 200 infamy ranks with random players in public matches. Obtained CCL before the 'True Criminal' badge.",
+		"This user grinded 200 infamy ranks with random players in public matches. Obtained CCL before the 'True Criminal' badge. Mutator Rank 364 (as of 2025-05-20T00:45Z).",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Obtained CCL before the 'The Pied Piper' badge.",
 		undefined,
@@ -677,17 +677,17 @@
 		// 21 - 30
 		"Obtained CCL before the 'You're a Billionaire' badge.",
 		undefined,
-		undefined,
+		"Mutator Rank 46 + 2,662 MXP until next rank (as of 2025-05-20T00:53Z).",
 		undefined,
 		"This user primarily solo grinded to CCL. First known openly plural system to reach CCL.",
 		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150)",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
-		undefined,
+		"Mutator Rank 420 + 5,066 MXP remaining until next rank (as of 2025-05-20T01:36Z).",
 		// 31 - 36
 		"Started playing post-rerelease.",
-		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge.",
+		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP until next rank (as of 2025-05-20T00:57Z).",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
@@ -777,7 +777,33 @@
 		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
 		undefined, // contacted (2025-04-12) and acknowledged, did not provide description (forgetful or cannot be bothered?)
 		undefined, // not contacted
-		undefined, // contacted (2025-04-12), no response
+		// #7
+		"<hr/><p style='font-weight:bold'>Pre-DMCA Era</p><hr/>"
+		+ "<p style='font-weight:bold'>2020-2021</p>"
+		+ "During the pandemic, I was enrolled in a “Roblox Coding Class” (to this day, I recall nothing). At the end of these sessions, we would choose to leave, or choose a game to play, and one of these games was Notoriety. When I first played this game, I was really interested, getting Infamy 1, and progressing quickly. One of my first memories of Notoriety was playing Brick Bank with some friends. A while later, I get to Infamy 15, and take a long break. I come back to Notoriety, and get Infamy 25. Sometimes I would get back onto Notoriety to try and get Billionaire, but would quickly lose interest."
+		+ "<p style='font-weight:bold'>2023</p>"
+		+ "After a while, where I had barely any memory of Notoriety, I found out that it was taken down by a DMCA (I didn’t have Discord at the time), and felt that I had missed a lot."
+		+ "<hr/><p style='font-weight:bold'>CCL Journey</p><hr/>"
+		+ "<p style='font-weight:bold'>2024</p>"
+		+ "This year, I finally got Discord, and joined the Moonstone Games server, however not really interacting with the community, and just staying there for the news."
+		+ "Later in the year, I got pinged on December 12th, about Notoriety finally getting licensing from Starbreeze. I shared the information with some friends. I check the badges, and see “Rank 250”. I ask around about this new infamy cap, and I have determination to reach this long goal."
+		+ "On the re-launch date of Notoriety, December 16th, I came back to immediately grind some infamies, most of them solo to Infamy 40. I started grinding with a team, where I reached Infamy 50 on December 23."
+		+ "<p style='font-weight:bold'>2025</p>"
+		+ "On January 1st, which was new years, I had gotten infamy 100."
+		+ "12 days later, I reach infamy 150, and gained the Royalty suit right before the suit revamp."
+		+ "On the 21st, I get 200, and finally 8 days later, I reach Infamy 250."
+		+ "<hr/><p style='font-weight:bold'>Post-CCL Journey</p><hr/>"
+		+ "After gaining Infamy 250, I still wasn’t satisfied with the goal I had achieved, and the next thing that I decided to go for were mutator levels."
+		+ "<br/><ul class='mod-gallery'>"
+		+ "<li class='gallerybox'><div class='thumb'><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Hall of CCLs UGC/bigfootbb045/bigfootbb045 0001.jpg'></div><div class='gallerytext'>the absolute monstrous amount of jewelry shop runs</div></li>"
+		+ "</ul>"
+		+ "I started trying AFK strats, which were very slow, and to keep up the repeat bonus, I would do Jewelry Shop runs also with mutators, and this is where I found out the most effective way of grinding them. As of me writing this on May 19th, 2025, I currently have 3443 mutator levels."
+		+ "<p style='font-weight:bold'>Timestamps</p>"
+		+ "<ul><li>December 23rd, 2024: Infamy 50</li>"
+		+ "<li>January 1st, 2025: Infamy 100</li>"
+		+ "<li>January 13th, 2025, Infamy 150</li>"
+		+ "<li>January 21st, 2025, Infamy 200</li>"
+		+ "<li>January 29th, 2025, Infamy 250</li>",
 		undefined, // not contacted (likely blocked)
 		undefined, // contacted (2025-05-03), refused to provide description and unsure what to write
 		// #10
@@ -1660,7 +1686,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.3": 13,
+			"1.4.3": 37,
 			"1.4.2b": 6,
 			"1.4.2a": 2,
 			"1.4.2": 21,
@@ -1712,7 +1738,9 @@
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(null), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.3</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
-				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #1's user-written description: Slight changes to two description sections: <code>The Push towards the End</code> (reworded 'infamy money requirement' to 'infamy money requirement limit' and 'being about 80 infamy ranks ahead of #2' to 'being about 80 infamy ranks ahead of Ali') and <code>The End + The Beginning of the Hall of CCLs</code> (Moved a sentence from the first paragraph to the second.).")}
+				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added CCL #7's user-written description, including the addition of 1 image.")}
+				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #1, #2, #7, #12, #23, #30, #32.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Hall of CCLs: Changes to CCL #1's user-written description: Slight changes to two description sections: <code>The Push towards the End</code> (reworded 'infamy money requirement' to 'infamy money requirement limit' and 'being about 80 infamy ranks ahead of #2' to 'being about 80 infamy ranks ahead of Ali') and <code>The End + The Beginning of the Hall of CCLs</code> (Moved a sentence from the first paragraph to the second.). Also changes to the notes: moved a sentence (" + '"' + "Very likely the only CCL without any MXP or Mutator Ranks." + '"' + ") one ahead in the paragraph, slightly adjusting it to accommodate the new Mutator Ranks + remaining MXP data.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.3') + '.')}
 			</ul></div>
 			`,
