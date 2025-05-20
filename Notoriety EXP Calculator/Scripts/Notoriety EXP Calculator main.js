@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.4 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.4a | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -643,7 +643,8 @@
 		+ "What a grind! I could've slept soundly each night and still been first, albeit likely not in 2024 in any time zones. I'm a little disappointed I didn't start the grind sooner and that I didn't really grind too much early on, otherwise could've got the badge in 2024 in many more, even all, time zones. Regardless, even though there were days when I didn't want to grind, I know I was extremely committed and set my mind to achieving my goal, enduring each long day after the next through the sheer will to be first (only stopping due to a physical need or ailment, never out of boredom or demotivation), and later also to achieve it before the end of the year."
 		+ "<p></p>The developers are planning on making unobtainable items, including the Crimson suit and monthly challenge armour patterns, obtainable again, even if it requires doing a special 'challenge'. Knowing them, it actually won't be difficult, at least not more than what the average roughly 20 hours playtime player is capable of completing. While I can understand their viewpoint (FOMO due to people missing out on items for not playing during a certain timeframe or grinding hard enough), they love to appeal to the 'vocal majority' on a great many matters, and that majority happens to be mainly new players (who have the mindset of wanting the game to be easier and to not have to put in effort for noticeable gains) since most of the older, dedicated players have stopped playing. Of course, when we've 'completed' the game (multiple times in its history, in fact!), but our commitment, loyalty and game knowledge is not to be dismissed so readily. (Some of us still occasionally play for challenge skins, any new badges, hosting gamepass heists for others or grinding Mutator Ranks.) I had the idea of publicly displaying a number based on the player's 'obtainment position' of each given formerly-unobtainable item, such as Crimson #1. However, this requires having the data, which may already be present given that the recently-introduced heists completed tracker includes completions of the removed Very Hard and Anarchy difficulties. This tool has the data for classic infamy suits, but no other OG item data (and pre-Crimson suits aren't always obtained in the same order as the user's CCL position). Chances are the developers don't care, and would rather give their player counts a quick adrenaline shot without regard for the long-term effects, or rather long-term players' dissatisfaction."
 		+ "<p></p>The intense dedication to the grind has been part of the reason for a deep reevaluation of the self, and I realise now that life is not about living an 'unchanging film on repeat'. It is about changing, learning, growing, to love and to be loved. While I did really commit to the grind knowing the sheer dedication, the badge obtainment time and being first would all contribute to being remembered, I heavily overexerted myself just to 'look good' to others. I realise now that personal satisfaction at such an achievement like CCL matters far more than how others recognise said achievement. The reality of my achievement is my own, not anyone else's. After all, when we're no longer around, we become stories, and it's the personality and uniqueness of our stories that make them memorable. Primarily for this reason is why I most likely won't endure such mindless days-long grinding sessions again."
-		+ "<p></p>Sure, the grind may have had negative physical and psychological impacts, but it was also part of the reason for consciously seeking out self enlightenment. Negative experiences make the positive ones meaningful. I've met many friends, and unfortunately many enemies, during my time in the Notoriety community and since starting my journey of self enlightenment (which was especially thanks to four friends in particular!). Some of those friends I intend to dedicate myself to our friendship with as much or more commitment as during the CCL grind. Intention and belief allows you to achieve anything, even if it takes time. Doubts are perfectly healthy to stay critical, just don't let them consume you. Remember this, as this advice applies to everything in this life. Make your own reality, live how you wish to live, write your own truly unforgettable story full of immense detail, personal struggles and growth, love and the friends you met along the way.",
+		+ "<p></p>Sure, the grind may have had negative physical and psychological impacts, but it was also part of the reason for consciously seeking out self enlightenment. Negative experiences make the positive ones meaningful. I've met many friends, and unfortunately many enemies, during my time in the Notoriety community and since starting my journey of self enlightenment (which was especially thanks to four friends in particular!). Some of those friends I intend to dedicate myself to our friendship with as much or more commitment as during the CCL grind."
+		+ "<p></p>Intention and belief allows you to achieve anything, even if it takes time. Doubts are perfectly healthy to stay critical, just don't let them consume you. Remember this, as this advice applies to everything in this life. Make your own reality, live how you wish to live, write your own truly unforgettable story full of immense detail, personal struggles and growth, love and the friends you met along the way.",
 		// #2
 		"<h1>The Beginning & The End: Derp’s Journey To CCL</h1><br/>Estimated join date: Around 2020<br/>Estimate Time Of Obtainment: Friday January 10th, 2025, 7:05 PM EST<br/>2nd Person To Reach CCL | Second Owner Of Og Crimson<p></p>"
 		+ "<hr/><p style='font-weight:bold'>Pre-CCL Release</p><hr/>"
@@ -1602,6 +1603,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.4a": 3,
 			"1.4.4": 4,
 			"1.4.3a": 5,
 			"1.4.3": 40,
@@ -1652,6 +1654,14 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.4a": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747738560000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.4a</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Changes to CCL #1's user-written description: Under the 'Closing remarks' section, moved everything starting at and including the fifth sentence of the fourth paragraph into the newly created fifth paragraph.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.4a') + '.')}
+			</ul></div>
+			`,
 			"1.4.4": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747714740000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.4</b>
@@ -2798,6 +2808,25 @@
 	}
 	
 	function computeBeepBoop() {
+		/*
+		elem.currentInfamyLevelInput.value = 40;
+		elem.goalInfamyLevelInput.value = 50;
+		elem.currentMoneyInput.value = '1e8';
+		elem.remainingEXPInput.value = '40';
+		elem.toggleComputationType_Global.click();
+		elem.toggleComputationType_Global.click();
+		// elem.runGainsInput.value = "523723|9584523|42\n237455|4771235|61";
+		elem.runGainsInput.value = "2373|42\n4882|74";
+		// elem.runGainsInput.value = "10,000,000|150\n4,523,000|84";
+		elem.goalMoneyInput.value = '1.2247e9';
+		elem.currentMutatorRankInput.value = 87;
+		elem.goalMutatorRankInput.value = 300;
+		// elem.untilRotationsInput.value = 723;
+		if (data.toggleInfiniteInfamies_Global == 0) {
+			elem.toggleInfiniteInfamies_Global.click();
+		}
+		// elem.untilRotationsInput.value = 35;
+		*/
 		updateSettingsDisplayedValues();
 		
 		var disclaimerText = '';
