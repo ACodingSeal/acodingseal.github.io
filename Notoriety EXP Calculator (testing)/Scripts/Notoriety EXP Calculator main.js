@@ -662,7 +662,7 @@
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,443 (as of 2025-05-20T00:51Z).",
 		"Highest classic infamy suit: Royalty (150)",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 806 + 1,146 MXP remaining until next rank (as of 2025-05-20T16:09Z).",
-		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge.",
+		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 159 + 1,249 MXP remaining until next rank (as of 2025-05-21T02:41Z).",
 		// 11 - 20
 		"Obtained CCL before the 'You're a Billionaire', 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 158 + 235 MXP remaining until next rank (as of 2025-05-20T13:25Z).",
 		"This user grinded 200 infamy ranks with random players in public matches. Obtained CCL before the 'True Criminal' badge. Mutator Rank 364 (as of 2025-05-20T00:45Z).",
@@ -1694,7 +1694,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.5": 10,
+			"1.4.5": 11,
 			"1.4.4b": 1,
 			"1.4.4a": 3,
 			"1.4.4": 4,
@@ -1751,7 +1751,7 @@
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(null), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.5</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
-				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #9, #11, #18, #20, #27.")}
+				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #9, #10, #11, #18, #20, #27.")}
 				${updateLogEntry('edit', "Menu Miscellaneous: Section Hall of CCLs: Added the word 'remaining' to the following CCL entries' MXP remaining note for consistency: #1, #23, #32.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.5') + '.')}
 			</ul></div>
