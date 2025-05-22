@@ -573,7 +573,7 @@
 		"Aurora_The1Cat - 2025-04-10T22-04Z.png",
 		"seroly2345 - 2025-04-10T22-05Z.png",
 		"theREALdynamic 2025-04-10T22-05Z.png",
-		"bigfootbb045 - 2025-04-10T22-05Z.png",
+		"bigfootbb045 - 2025-05-22T03-23Z.png",
 		"LuvlyGirlMaisy - 2025-05-20T04-09Z.png",
 		"ARandomNoobGamer - 2025-04-10T22-06Z.png",
 		"Ryankaye01 - 2025-04-10T22-06Z.png",
@@ -1694,7 +1694,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.5": 13,
+			"1.4.5": 14,
 			"1.4.4b": 1,
 			"1.4.4a": 3,
 			"1.4.4": 4,
@@ -1753,7 +1753,7 @@
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #9, #10, #11, #18, #20, #27.")}
 				${updateLogEntry('edit', "Menu Miscellaneous: Section Hall of CCLs: Added the word 'remaining' to the following CCL entries' MXP remaining note for consistency: #1, #23, #32.")}
-				${updateLogEntry('edit', "Menu Miscellaneous: Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank (3,443 + undefined > 3,500 + 24,670 as of 2025-05-22T03:02Z).")}
+				${updateLogEntry('edit', "Menu Miscellaneous: Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank (3,443 + undefined > 3,500 + 24,670 as of 2025-05-22T03:02Z). Also updated the entry's Roblox avatar.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.5') + '.')}
 			</ul></div>
 			`,
