@@ -1749,7 +1749,7 @@
 			// "amongus": '[Testing]',
 			"1.4.5": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(null), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.5</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747884600000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.5</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #9, #10, #11, #18, #20, #27.")}
 				${updateLogEntry('edit', "Menu Miscellaneous: Section Hall of CCLs: Added the word 'remaining' to the following CCL entries' MXP remaining note for consistency: #1, #23, #32.")}

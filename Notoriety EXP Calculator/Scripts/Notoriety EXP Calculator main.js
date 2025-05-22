@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.4b | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.5 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -482,7 +482,7 @@
 		"Aurora_The1Cat - 2025-04-10T22-04Z.png",
 		"seroly2345 - 2025-04-10T22-05Z.png",
 		"theREALdynamic 2025-04-10T22-05Z.png",
-		"bigfootbb045 - 2025-04-10T22-05Z.png",
+		"bigfootbb045 - 2025-05-22T03-23Z.png",
 		"LuvlyGirlMaisy - 2025-05-20T04-09Z.png",
 		"ARandomNoobGamer - 2025-04-10T22-06Z.png",
 		"Ryankaye01 - 2025-04-10T22-06Z.png",
@@ -562,41 +562,41 @@
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP until next rank (as of 2025-05-20T01:33Z). CCL #1 is also the creator of this tool!",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-05-20T01:33Z). CCL #1 is also the creator of this tool!",
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease. Mutator Rank 1,000 (as of 2025-05-20T00:48Z).",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
 		"Highest classic infamy suit: Rojo (200)",
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,443 (as of 2025-05-20T00:51Z).",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,500 + 24,670 MXP remaining until next rank (as of 2025-05-22T03:02Z).",
 		"Highest classic infamy suit: Royalty (150)",
-		"Highest classic infamy suit: Blue Navy (100)",
-		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge.",
+		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 806 + 1,146 MXP remaining until next rank (as of 2025-05-20T16:09Z).",
+		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 159 + 1,249 MXP remaining until next rank (as of 2025-05-21T02:41Z).",
 		// 11 - 20
-		"Obtained CCL before the 'You're a Billionaire', 'True Criminal' and 'The Pied Piper' badges.",
+		"Obtained CCL before the 'You're a Billionaire', 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 158 + 235 MXP remaining until next rank (as of 2025-05-20T13:25Z).",
 		"This user grinded 200 infamy ranks with random players in public matches. Obtained CCL before the 'True Criminal' badge. Mutator Rank 364 (as of 2025-05-20T00:45Z).",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Obtained CCL before the 'The Pied Piper' badge.",
 		undefined,
 		undefined,
 		undefined,
-		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge.",
+		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge. Mutator Rank 1,280 + 5,386 MXP remaining until next rank (as of 2025-05-20T14:40Z).",
 		"Started playing post-rerelease.",
-		"Possibly the first solo grinder to reach CCL.",
+		"Possibly the first solo grinder to reach CCL. Mutator Rank 185 + 1,502 MXP remaining until next rank (as of 2025-05-20T17:48Z).",
 		// 21 - 30
 		"Obtained CCL before the 'You're a Billionaire' badge.",
 		undefined,
-		"Mutator Rank 46 + 2,662 MXP until next rank (as of 2025-05-20T00:53Z).",
+		"Mutator Rank 46 + 2,662 MXP remaining until next rank (as of 2025-05-20T00:53Z).",
 		undefined,
 		"This user primarily solo grinded to CCL. First known openly plural system to reach CCL. Mutator Rank 273 + 4,471 MXP remaining until next rank (as of 2025-05-20T01:54Z).",
 		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
-		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150)",
+		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150). Mutator Rank 301 + 5,236 MXP remaining until next rank (as of 2025-05-20T15:54Z).",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		"Mutator Rank 420 + 5,066 MXP remaining until next rank (as of 2025-05-20T01:36Z).",
 		// 31 - 36
 		"Started playing post-rerelease.",
-		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP until next rank (as of 2025-05-20T00:57Z).",
+		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP remaining until next rank (as of 2025-05-20T00:57Z).",
 		"Highest classic infamy suit: Blue Navy (100)",
 		"Started playing post-rerelease.",
 		undefined,
@@ -1603,6 +1603,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.5": 14,
 			"1.4.4b": 1,
 			"1.4.4a": 3,
 			"1.4.4": 4,
@@ -1655,6 +1656,16 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.5": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747884600000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.5</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous: Section Hall of CCLs: Added Mutator Ranks and remaining MXP until next rank to the following CCL entries' notes, along with a 'as of' timestamp note, based on user-provided data: #9, #10, #11, #18, #20, #27.")}
+				${updateLogEntry('edit', "Menu Miscellaneous: Section Hall of CCLs: Added the word 'remaining' to the following CCL entries' MXP remaining note for consistency: #1, #23, #32.")}
+				${updateLogEntry('edit', "Menu Miscellaneous: Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank (3,443 + undefined > 3,500 + 24,670 as of 2025-05-22T03:02Z). Also updated the entry's Roblox avatar.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.5') + '.')}
+			</ul></div>
+			`,
 			"1.4.4b": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747739100000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.4b</b>
