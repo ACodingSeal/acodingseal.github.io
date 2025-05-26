@@ -1002,7 +1002,10 @@
 		"To be honest I first started playing notoriety with my friend deathmech and I wasn’t thinking I was going to get this invested. But I realized after the first 5 heists I realized I was hooked"
 		+ "<p></p>I don’t know exactly the drive behind why I wanted ccl. I think it was the need to prove myself: to prove that I am capable of seeing something come to an end, to have strength to keep going. And I have notoriety to thank for it"
 		+ "<p></p><i>" + '"' + "Keep moving forward" + '"' + "</i>",
-		undefined,
+		// #37
+		"I started playing Notoriety (Roblox Payday) in the first month of its re-release with absolutely no experience. I learned the game from scratch and improved constantly over the course of the first two months. I took a break for a month for school but came back more fiercely."
+		+ "<p></p>I created two Discord servers to build a community. The first died out because of exams, but the second is now very active, with many members about two-thirds of the way to max Infamy. I’m proud of how it’s grown."
+		+ "<p></p>Through a lot of hard work and determination, I became the 37th player to reach max Infamy. The moral of this story is that with determination and persistence, anyone can reach their goals no matter where they started.",
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1616,7 +1619,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.6b": 1,
+			"1.4.6b": 2,
 			"1.4.6a": 61,
 			"1.4.6": 5,
 			"1.4.5": 14,
@@ -1676,6 +1679,7 @@
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.6b</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #37's user-written description.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #23's Mutator Rank + MXP remaining until next rank values (46 + 2,662 > 53 + 2,081 as of 2025-05-25T18:39Z).")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.6b') + '.')}
 			</ul></div>
