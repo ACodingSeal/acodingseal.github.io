@@ -110,7 +110,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.6a testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.6b testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -592,7 +592,7 @@
 		// 21 - 30
 		"Obtained CCL before the 'You're a Billionaire' badge.",
 		undefined,
-		"Mutator Rank 46 + 2,662 MXP remaining until next rank (as of 2025-05-20T00:53Z).",
+		"Mutator Rank 53 + 2,081 MXP remaining until next rank (as of 2025-05-25T18:39Z).",
 		undefined,
 		"This user primarily solo grinded to CCL. First known openly plural system to reach CCL. Mutator Rank 273 + 4,471 MXP remaining until next rank (as of 2025-05-20T01:54Z).",
 		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
@@ -1616,6 +1616,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.6b": 1,
 			"1.4.6a": 61,
 			"1.4.6": 5,
 			"1.4.5": 14,
@@ -1671,6 +1672,14 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.6a": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.6b</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #23's Mutator Rank + MXP remaining until next rank values (46 + 2,662 > 53 + 2,081 as of 2025-05-25T18:39Z).")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.6b') + '.')}
+			</ul></div>
+			`,
 			"1.4.6a": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1747989300000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.6a</b>
