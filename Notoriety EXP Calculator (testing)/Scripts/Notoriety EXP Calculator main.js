@@ -110,7 +110,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.6b testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.7 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -586,7 +586,7 @@
 		undefined,
 		undefined,
 		undefined,
-		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge. Mutator Rank 1,280 + 5,386 MXP remaining until next rank (as of 2025-05-20T14:40Z).",
+		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge. Mutator Rank 1,412 + undefined remaining until next rank (as of 2025-05-26).",
 		"Started playing post-rerelease.",
 		"Possibly the first solo grinder to reach CCL. Mutator Rank 185 + 1,502 MXP remaining until next rank (as of 2025-05-20T17:48Z).",
 		// 21 - 30
@@ -603,7 +603,7 @@
 		// 31 - 37
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP remaining until next rank (as of 2025-05-20T00:57Z).",
-		"Highest classic infamy suit: Blue Navy (100)",
+		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 1,670 (as of 2025-05-26).",
 		"Started playing post-rerelease.",
 		undefined,
 		"Started playing post-rerelease. Possibly the first console and Xbox player to reach CCL.",
@@ -1619,7 +1619,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.6b": 2,
+			"1.4.7": 5,
 			"1.4.6a": 61,
 			"1.4.6": 5,
 			"1.4.5": 14,
@@ -1675,13 +1675,15 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
-			"1.4.6b": `
+			"1.4.7": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.6b</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.7</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33's current Mutator Rank (1,670 as of 2025-05-26) to the entry's notes.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #37's user-written description.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #18's Mutator Rank + MXP remaining until next rank values (1,280 + 5,386 > 1,412 + undefined as of 2025-05-26).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #23's Mutator Rank + MXP remaining until next rank values (46 + 2,662 > 53 + 2,081 as of 2025-05-25T18:39Z).")}
-				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.6b') + '.')}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.7') + '.')}
 			</ul></div>
 			`,
 			"1.4.6a": `
