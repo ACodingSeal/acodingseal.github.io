@@ -586,7 +586,7 @@
 		undefined,
 		undefined,
 		undefined,
-		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge. Mutator Rank 1,412 + undefined remaining until next rank (as of 2025-05-26).",
+		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge. Mutator Rank 1,412 (as of 2025-05-26).",
 		"Started playing post-rerelease.",
 		"Possibly the first solo grinder to reach CCL. Mutator Rank 185 + 1,502 MXP remaining until next rank (as of 2025-05-20T17:48Z).",
 		// 21 - 30
