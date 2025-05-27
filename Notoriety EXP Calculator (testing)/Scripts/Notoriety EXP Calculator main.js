@@ -1677,7 +1677,7 @@
 			// "amongus": '[Testing]',
 			"1.4.7": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.7</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1748387880000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.7</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #33's current Mutator Rank (1,670 as of 2025-05-26) to the entry's notes.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #37's user-written description.")}
