@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.7 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.8 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -382,7 +382,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
-		const grassAvoiders = 37;
+		const grassAvoiders = 38;
 		var generatedEntries = 0;
 		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
@@ -437,6 +437,7 @@
 		"lancejuly28",
 		"GhostrUiN420",
 		"jadineq1",
+		"00pro11",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -476,6 +477,7 @@
 		"Lance",
 		"Ghost",
 		"jadineq1",
+		"00pro11",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -515,6 +517,7 @@
 		"lancejuly28 - 2025-05-13T07-17Z.png",
 		"GhostrUiN420 - 2025-05-17T04-15Z.png",
 		"jadineq1 - 2025-05-17T04-15Z.png",
+		"00pro11 - 2025-05-13T07-17Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -554,6 +557,7 @@
 		{approx:false, timestamp: "2025-05-16T08:55:21.2740865Z"},
 		{approx:false, timestamp: "2025-05-17T11:23:31.0019313Z"},
 		{approx:false, timestamp: "2025-05-22T18:33:14.3633775Z"},
+		{approx:false, timestamp: "2025-05-28T13:17:14.5261204Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -562,7 +566,7 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -572,7 +576,7 @@
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
 		"Highest classic infamy suit: Rojo (200)",
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,500 + 24,670 MXP remaining until next rank (as of 2025-05-22T03:02Z).",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,700 + 29,619 MXP remaining until next rank (as of 2025-05-28T02:41Z).",
 		"Highest classic infamy suit: Royalty (150)",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 806 + 1,146 MXP remaining until next rank (as of 2025-05-20T16:09Z).",
 		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 159 + 1,249 MXP remaining until next rank (as of 2025-05-21T02:41Z).",
@@ -598,7 +602,7 @@
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		"Mutator Rank 420 + 5,066 MXP remaining until next rank (as of 2025-05-20T01:36Z).",
-		// 31 - 37
+		// 31 - 38
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP remaining until next rank (as of 2025-05-20T00:57Z).",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 1,670 (as of 2025-05-26).",
@@ -606,6 +610,7 @@
 		undefined,
 		"Started playing post-rerelease. Possibly the first console and Xbox player to reach CCL.",
 		"Started playing post-rerelease.",
+		undefined,
 		];
 		
 		const playersData_ownDescription = [
@@ -1004,6 +1009,7 @@
 		"I started playing Notoriety (Roblox Payday) in the first month of its re-release with absolutely no experience. I learned the game from scratch and improved constantly over the course of the first two months. I took a break for a month for school but came back more fiercely."
 		+ "<p></p>I created two Discord servers to build a community. The first died out because of exams, but the second is now very active, with many members about two-thirds of the way to max Infamy. I’m proud of how it’s grown."
 		+ "<p></p>Through a lot of hard work and determination, I became the 37th player to reach max Infamy. The moral of this story is that with determination and persistence, anyone can reach their goals no matter where they started.",
+		undefined, // contacted (2025-05-29)
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1617,6 +1623,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.8": 7,
 			"1.4.7": 5,
 			"1.4.6a": 61,
 			"1.4.6": 5,
@@ -1673,6 +1680,15 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.8": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1748489100000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.8</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #38 (<code>00pro11</code>).")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,500 + 24,670 > 3,700 + 29,619 as of 2025-05-28T02:41Z).")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.8') + '.')}
+			</ul></div>
+			`,
 			"1.4.7": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1748387880000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.7</b>
