@@ -110,7 +110,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.8 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.9 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -519,7 +519,7 @@
 		"lancejuly28 - 2025-05-13T07-17Z.png",
 		"GhostrUiN420 - 2025-05-17T04-15Z.png",
 		"jadineq1 - 2025-05-17T04-15Z.png",
-		"00pro11 - 2025-05-13T07-17Z.png",
+		"00pro11 - 2025-05-30T13-47Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -640,7 +640,7 @@
 		+ "</ul>"
 		+ "<hr/><p style='font-weight:bold'>The Push towards the End - Part I: Mind over Matter</p><hr/>"
 		+ "During the money grind (Shadow Raid ECM rush as usual; specifically around the vault area) one of my teammates pointed out the infamy money requirement limit had just been added. Within 15 minutes of the update I immediately switched to exp farming (Authority) and started grinding HARD, frequently doing 16+ hours a day, occasionally 24 hours and I even once stayed awake for 48 hours (about 95% of this time spent grinding the game). I contributed to two Authority Nightmare co-op (both 4 players) world records before the introduction of the milliseconds timer, being 1m8s while half asleep and 1m7s unintentionally (not submitted). In a single day I completed Authority 500 times in a row, and I completed it 700 times in a row before switching to a different heist due to having to grind money. I grinded money for a bit more during the exp grind, and knew how much money I would need when factoring in passive gains from exp farming. However, what I didn't factor in was the extreme costs of hosting a contract (and consequent restarts after a win) (about $96mil loss per infamy when hosting or $28mil when not). I eventually realised, so I had to grind about another $1bil."
-		+ "<p></p>I did 50 infamies in a single day. Well, more like 49 in noticeably less than 24 hours. It was from C-100 at 2024-12-27 16:31 UTC to CL-1 at 2024-12-28 14:53 UTC, or 49 infamies in 22 hours and 22 minutes. I could've easily stayed for a little while longer and got to CL-100, but if I did that it wouldn't be as much of a challenge to recover when I woke up with no one currently grinding, in addition to the fact I would probably just go infamous again right away. Still basically 50 infamies in a day by spamming the same heist: Authority. This started mere moments after the infamy money requirement limit was added, pretty much instantly overtaking Ali."
+		+ "<p></p>I did 50 infamies in a single day. Well, more like 49 in noticeably less than 24 hours. It was from C-100 at 2024-12-27 16:31 UTC to CL-1 at 2024-12-28 14:53 UTC, or 49 infamies in 22 hours and 22 minutes. I could've easily stayed for a little while longer and got to CL-100, but if I did that it wouldn't be as much of a challenge to recover when I woke up with no one currently grinding, in addition to the fact I would probably just go infamous again right away. Still basically 50 infamies in a day by spamming the same heist: Authority. This started mere moments after the infamy money requirement limit was added, pretty much instantly overtaking Ali. Oftentimes I would 'min-max' my breaks in order to get back to the grind sooner, such as by cooking food at the same time as having a shower to save about 10 to 15 minutes."
 		+ "<hr/><p style='font-weight:bold'>The Push towards the End - Part II: Determination in the face of Adversity</p><hr/>"
 		+ "At infamy 182 (CLXXXII), level 86, being about 80 infamy ranks ahead of Ali (Ali hardly grinded at all, and was probably the fourth highest infamy in the game, behind Maisy and Derp), I was grinding exp on Authority with Ashlyn, NoobLol and Fridj. Around this time was when Derp reached infamy 150. I posted the message " + '"' + "the elite grinding server has too many femboys and more are being infected every day 💀"  + '"' + " in a private match where apparently no one would be offended by the word 'femboy'. (This message was referring to the high percentage of elite grinding server members being a femboy, the server where its activity eventually almost entirely consisted of roleplayers instead of grinders. Many grinders ended up leaving.) 53 seconds later, having just bagged Gold Bars from the crate in the shed, around 20:08Z, I received my first-ever moderation on the platform in nearly 11 years, despite everything I have been able to get away with in the past. A 1-day account suspension, of which my two appeals were auto-denied. I even tried to manipulate the AI appeal bot, but failed."
 		+ "<p></p>I got up early with minimal rest hoping that I would receive a response to my email appeal, but did not receive a response until the ban had expired, on the weekend in Roblox HQ's time no less. I believe that neither Ashlyn nor NoobLol would report me. According to the video that records the ban and the moments before it, Fridj took 10 seconds from when I posted the message (almost instantly after loading into the briefing screen) to ready up, stayed at spawn for a few moments and did not say anything for the entire heist. I am not sure how long he remained at spawn, but he did eventually contribute to the heist, starting 43s after posting the message when he was defusing a crate (according to the crew statuses at the bottom), or 18s after the heist started. Asking the user in Discord direct messages on 2025-04-13T05:38Z, a response was received 1 minute later: " + '"' + "i don't recall" + '"' + ". Forming a personality based on the limited DMs history and from own memory, it is likely the user had truly forgotten."
@@ -1011,7 +1011,16 @@
 		"I started playing Notoriety (Roblox Payday) in the first month of its re-release with absolutely no experience. I learned the game from scratch and improved constantly over the course of the first two months. I took a break for a month for school but came back more fiercely."
 		+ "<p></p>I created two Discord servers to build a community. The first died out because of exams, but the second is now very active, with many members about two-thirds of the way to max Infamy. I’m proud of how it’s grown."
 		+ "<p></p>Through a lot of hard work and determination, I became the 37th player to reach max Infamy. The moral of this story is that with determination and persistence, anyone can reach their goals no matter where they started.",
-		undefined, // contacted (2025-05-29)
+		// #38
+		"i started playing this game at around 2018-2019, the starting year is a bit hazy but i barely touched it, mostly because of how laggy and unengaging it was at the time. to this day, i can still hear the police audio saying " + '"' + "i'm out, reloading" + '"' + " as i try to survive at 15fps on r&b bank on my now deleted old account."
+		+ "<p></p>then came 2020 and the spicy cold, forcing everyone to stay home. with practically unlimited hours of playing time, thanks in part to the completion of my studies, i could rack up hours on roblox and explore untouched or old games."
+		+ "<p></p>one of those games happened to be notoriety and i played it like it was a religion. everyday i'd jump on and grind my way through the game, learning the strats, making the occasional fumble but banking in dough and xp. by october 2020 i'd already reached infamy 25 and had scored many skins for my guns and even for armour, which envy many new players. not only that but having allied myself with other users, we'd smash through the speedrunning leaderboards (that was a thing back then) as well as swatting aside daily, weekly and MONTHLY (yes) challenges."
+		+ "<p></p>then came march 17th 2021. notoriety updated and one of the key changes was the addition of pagers to halted guards on nightmare. our group was dismayed and appalled by the decision. combined with the removal of leaderboards, most of us called time on the game and so did i. i already had a billion in my bank account, hundreds of diamond safes from speedrunning, very niche weapon skins (bluesteel remington 870) and armour skins. i had conquered the game and any last hope of me remaining was gone."
+		+ "<p></p>i barely touched the game between 2022-23, when i was playing notoriety it was solely just to get the badges for rush hour and ozela."
+		+ "<p></p>then came 2024. the game has been relaunched, the depot is out and better still, 225 extra levels of infamy have been added. the goal was set, get to 250 and be on top of the mountain once more. and so began 5 months of intense grinding, clearing daily challenges with xp rewards to set up a springboard for the next infamy level. despite that, i was averaging 1-2 levels on a weekday, maybe 3 on a weekend. it didn't help that other factors played havoc with my quest to 250 as fast as i could; full time work, shoddy motivation to grind on some days, my friends hosting a minecraft server, activities that kept me away from my pc and the loss of friday-sunday due to footy (carn geelong cats!)"
+		+ "<p></p>but as princess peach (probably) once said " + '"' + "if you lock the fuck in, you'll get what you want" + '"' + ". the method per each infamy level was clear as day: start with brick bank, do a few levels of ozela then mop up with rush hour before doing any challenges with xp as rewards before they expired. all that in 4 hours each weekday."
+		+ "<br/>so on the 1st of january 2025, infamy 50 was reached. three weeks later on the 22nd of january, the ton was passed."
+		+ "<p></p>and the crowning moment, the summit of the mountain: 28th may 2025, 00pro11 is bestowed the title of CCL #38",
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1625,6 +1634,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.9": 9,
 			"1.4.8": 7,
 			"1.4.7": 5,
 			"1.4.6a": 61,
@@ -1682,6 +1692,15 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.9": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1748613840000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.9</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #38's user-written description and updated the entry's Roblox avatar.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Changes to CCL #1's user-written description: Added the following sentence to the 'The Push towards the End - Part I: Mind over Matter' section, paragraph 2: " + '"' + "Oftentimes I would 'min-max' my breaks in order to get back to the grind sooner, such as by cooking food at the same time as having a shower to save about 10 to 15 minutes." + '"' + ".")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.9') + '.')}
+			</ul></div>
+			`,
 			"1.4.8": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1748489100000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.8</b>
