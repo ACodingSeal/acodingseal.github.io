@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.9 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.9a | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -576,7 +576,7 @@
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
 		"Highest classic infamy suit: Rojo (200)",
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,700 + 29,619 MXP remaining until next rank (as of 2025-05-28T02:41Z).",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 3,800 + 31,783 MXP remaining until next rank (as of 2025-05-31T02:43Z).",
 		"Highest classic infamy suit: Royalty (150)",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 806 + 1,146 MXP remaining until next rank (as of 2025-05-20T16:09Z).",
 		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 159 + 1,249 MXP remaining until next rank (as of 2025-05-21T02:41Z).",
@@ -1632,6 +1632,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.9a": 19,
 			"1.4.9": 9,
 			"1.4.8": 7,
 			"1.4.7": 5,
@@ -1690,6 +1691,15 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.9a": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1748781360000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.9a</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,700 + 29,619 > 3,800 + 31,783 as of 2025-05-31T02:43Z).")}
+				${updateLogEntry('edit', "Time outputs now calculate one month as 30 days long, instead of 30.4375 days. Possibly also a bugfix to the occasionally inconsistent menu 'Miscellaneous' > 'Timers' section's times of one month or longer.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.9a') + '.')}
+			</ul></div>
+			`,
 			"1.4.9": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1748613840000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.9</b>

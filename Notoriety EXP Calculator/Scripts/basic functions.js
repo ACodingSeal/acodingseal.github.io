@@ -258,7 +258,7 @@ function Timer(amount, interval, config, direction, max, editHTML) {
 		return (Math.max(now, earlier) - Math.min(now, earlier));
 	}
 	
-	const secondsConversion = [1, 1e3, 6e4, 3.6e6, 8.64e7, 2.6298e9, 3.15576e10];
+	const secondsConversion = [1, 1e3, 6e4, 3.6e6, 8.64e7, 2.592e9, 3.15576e10];
 	const timeAcronyms_shorter = ['ms', 's', 'm', 'h', 'd', 'mo', 'y'];
 	const timeAcronyms = ['mil', 'sec', 'min', 'hr', 'dy', 'mth', 'yr'];
 	const timeNames = ['Millisecond', 'Second', 'Minute', 'Hour', 'Day', 'Month', 'Year'];
