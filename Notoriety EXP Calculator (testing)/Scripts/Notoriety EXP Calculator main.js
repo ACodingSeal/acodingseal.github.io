@@ -756,6 +756,7 @@
 		+ "<p></p>somewhere around early january this year, i decided to go for CCL, but i didn't really want to grind it by doing the same heists over and over for max efficiency"
 		+ "<p></p>so i got to CCL by mostly playing public lobbies, helping others with badges and nightmare. mixed in some solo stealth too (mostly ozela)"
 		+ "<p></p>i hit CCL at the 16th of february 2025 just after 2:40 a.m",
+		// #11
 		"It all started back in 2018 or 2019 if i don't remember wrong, i had a friend group of 3 (with me) and back in those days i mostly played KAT with them."
 		+ "<p></p>Around later they found out about notoriety and started playing it together, inviting me aswell so i did join. If i remember right i joined in the halloween update so there was the halloween lobby and theme."
 		+ "<p></p>My first ever heist with them was ro bank on normal, and i think it was loud since we didn't even know stealth was a thing back then."
@@ -773,9 +774,12 @@
 		+ "<p></p>The grind of a game that was once my childhood took me 2 months. Was it worth it? I leave that for you to answer, but for me I'm glad I met new people along the way."
 		+ "<p></p>Most I did was playing loud with others, testing builds, making my own builds after being CCL. I would still play the game if anyone wants to play it with me, preferably loud."
 		+ "<br>My ingame user is kogamarobloxman<br>My discord: stix_real"
-		+ "<p></p><a href='https://www.youtube.com/watch?v=a536IwGzJtg'>The video where I became infamy CCL</a>"
-		+ "",
-		undefined, // contacted (2025-04-12), did not provide description (unsure what to write)
+		+ "<p></p><a href='https://www.youtube.com/watch?v=a536IwGzJtg'>The video where I became infamy CCL</a>",
+		// #12
+		"brickbankbrickbankbrickbankbrickbankbrickbank"
+		+ "<p></p>never grind to ccl using public lobbies"
+		+ "<br/>lmao"
+		+ "<br/>biggest mistake of my life 👎",
 		undefined, // contacted (2025-04-18), refused to provide description (refusal deleted + blocked)
 		undefined, // not contacted
 		undefined, // not contacted
@@ -1708,7 +1712,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 32,
+			"1.4.10": 36,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1774,7 +1778,9 @@
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.10</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
 				${updateLogEntry('add', "Added two easter eggs?")}
+				${updateLogEntry('edit', "Some slight source code changes.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
 			</ul></div>
 			`,
