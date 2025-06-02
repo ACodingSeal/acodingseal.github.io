@@ -1414,7 +1414,7 @@
 		filterIncludedCCLs.length / grassAvoiders == 0.5,
 		]
 		if (egg1Conditions[0] || egg1Conditions[1]) {
-			generatedString += "<p>Detected only CCLs #1, #12, #16, #18 and #21. Generated the following quote: <i>" + '"' + "The dreamer's greatest enemy is one's self. Cruel how we often fail to realise how far we've come." + '"' + "</i></p>";
+			generatedString += "<p>Detected only either a(CCL #25) or b(CCLs #1, #12, #16, #18 and #21). Generated the following quote: <i>" + '"' + "The dreamer's greatest enemy is one's self. Cruel how we often fail to realise how far we've come." + '"' + "</i></p>";
 		}
 		if (egg2Conditions[0]) {
 			generatedString += "<p></p><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Other/perfectly balanced.jpg' style='width:50%'></img>";
@@ -1719,7 +1719,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 67,
+			"1.4.10": 68,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
