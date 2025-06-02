@@ -1414,7 +1414,7 @@
 		filterIncludedCCLs.length / grassAvoiders == 0.5,
 		]
 		if (egg1Conditions[0] || egg1Conditions[1]) {
-			generatedString += "<p>Detected only either a(CCL #25) or b(CCLs #1, #12, #16, #18 and #21). Generated the following quotes:"
+			generatedString += "<p>(Easter Egg) Detected only either a(CCL #25) or b(CCLs #1, #12, #16, #18 and #21). Generated the following quotes:"
 			+ "<br/><i>" + '"' + "The dreamer is ambitious, and rightfully so. We have worlds to create." + '"' + "</i>"
 			+ "<br/><i>" + '"' + "Oh, how delicate the mind of the dreamer is." + '"' + "</i>"
 			+ "<br/><i>" + '"' + "The dreamer's greatest enemy is one's self. Cruel how we often fail to realise how far we've come." + '"' + "</i>"
