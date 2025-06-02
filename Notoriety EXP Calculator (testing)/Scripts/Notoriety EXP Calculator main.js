@@ -1277,9 +1277,9 @@
 						}
 					}
 				}
-				if (filters.time.hour != '' && filters.time.hour >= 0) {
+				if (filters.time.hour != '' && Number(filters.time.hour) >= 0) {
 					timeFiltersActive++;
-					filters.time.hour = Math.min(filters.time.hour, elem.Section_HallofInfamyCCLs_Filter_Time_Hour.max);
+					filters.time.hour = Math.min(Number(filters.time.hour), elem.Section_HallofInfamyCCLs_Filter_Time_Hour.max).toString();
 					if (ymdLocalTimeCCLs[x].hour.toString() == filters.time.hour) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
@@ -1292,9 +1292,9 @@
 						}
 					}
 				}
-				if (filters.time.minute != '' && filters.time.minute >= 0) {
+				if (filters.time.minute != '' && Number(filters.time.minute) >= 0) {
 					timeFiltersActive++;
-					filters.time.minute = Math.min(filters.time.minute, elem.Section_HallofInfamyCCLs_Filter_Time_Minute.max);
+					filters.time.minute = Math.min(Number(filters.time.minute), elem.Section_HallofInfamyCCLs_Filter_Time_Minute.max).toString();
 					if (ymdLocalTimeCCLs[x].minute.toString() == filters.time.minute) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
@@ -1307,9 +1307,9 @@
 						}
 					}
 				}
-				if (filters.time.second != '' && filters.time.second >= 0) {
+				if (filters.time.second != '' && Number(filters.time.second) >= 0) {
 					timeFiltersActive++;
-					filters.time.second = Math.min(filters.time.second, elem.Section_HallofInfamyCCLs_Filter_Time_Second.max);
+					filters.time.second = Math.min(Number(filters.time.second), elem.Section_HallofInfamyCCLs_Filter_Time_Second.max).toString();
 					if (ymdLocalTimeCCLs[x].second.toString() == filters.time.second) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
@@ -1322,9 +1322,9 @@
 						}
 					}
 				}
-				if (filters.time.millisecond != '' && filters.time.millisecond >= 0) {
+				if (filters.time.millisecond != '' && Number(filters.time.millisecond) >= 0) {
 					timeFiltersActive++;
-					filters.time.millisecond = Math.min(filters.time.millisecond, elem.Section_HallofInfamyCCLs_Filter_Time_Millisecond.max);
+					filters.time.millisecond = Math.min(Number(filters.time.millisecond), elem.Section_HallofInfamyCCLs_Filter_Time_Millisecond.max).toString();
 					if (ymdLocalTimeCCLs[x].millisecond.toString() == filters.time.millisecond) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
@@ -1712,7 +1712,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 36,
+			"1.4.10": 65,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
