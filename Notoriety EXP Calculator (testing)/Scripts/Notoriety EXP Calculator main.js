@@ -1406,10 +1406,17 @@
 		// console.log(filterIncludedCCLs);
 		
 		var generatedString = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " programmed total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%) at " + formatDate(currentTime, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(currentTime.getTimezoneOffset()) + ". Check <a href='https://badges.roblox.com/v1/badges/1157147255776915'>this link</a> for an updated count of the Rank 250 badges awarded.";
-		if (filterIncludedCCLs_positions.length == 5 && filterIncludedCCLs_positions.indexOf(1) != -1 && filterIncludedCCLs_positions.indexOf(12) != -1 && filterIncludedCCLs_positions.indexOf(16) != -1 && filterIncludedCCLs_positions.indexOf(18) != -1 && filterIncludedCCLs_positions.indexOf(21) != -1) {
+		const egg1Conditions = [
+		filterIncludedCCLs_positions.length == 5 && filterIncludedCCLs_positions.indexOf(1) != -1 && filterIncludedCCLs_positions.indexOf(12) != -1 && filterIncludedCCLs_positions.indexOf(16) != -1 && filterIncludedCCLs_positions.indexOf(18) != -1 && filterIncludedCCLs_positions.indexOf(21) != -1,
+		filterIncludedCCLs_positions.length == 1 && filterIncludedCCLs_positions.indexOf(25) != -1,
+		]
+		const egg2Conditions = [
+		filterIncludedCCLs.length / grassAvoiders == 0.5,
+		]
+		if (egg1Conditions[0] || egg1Conditions[1]) {
 			generatedString += "<p>Detected only CCLs #1, #12, #16, #18 and #21. Generated the following quote: <i>" + '"' + "The dreamer's greatest enemy is one's self. Cruel how we often fail to realise how far we've come." + '"' + "</i></p>";
 		}
-		if (filterIncludedCCLs.length / grassAvoiders == 0.5) {
+		if (egg2Conditions[0]) {
 			generatedString += "<p></p><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Other/perfectly balanced.jpg' style='width:50%'></img>";
 		}
 		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = generatedString;
@@ -1712,7 +1719,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 65,
+			"1.4.10": 67,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
