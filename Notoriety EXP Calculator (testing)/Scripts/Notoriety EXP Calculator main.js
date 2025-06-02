@@ -1779,7 +1779,7 @@
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
-				${updateLogEntry('add', "Added two easter eggs?")}
+				${updateLogEntry('add', "Added two easter eggs? (Total 4.)")}
 				${updateLogEntry('edit', "Some slight source code changes.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
 			</ul></div>
