@@ -110,7 +110,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.9c testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.10 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -229,6 +229,10 @@
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Year'>" + filterYearsOptions + "</select>"
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Month'><option value='undefined'>month</option><option value='0'>January</option><option value='1'>February</option><option value='2'>March</option><option value='3'>April</option><option value='4'>May</option><option value='5'>June</option><option value='6'>July</option><option value='7'>August</option><option value='8'>September</option><option value='9'>October</option><option value='10'>November</option><option value='11'>December</option></select>"
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Day'>" + filterDaysOptions + "</select>"
+		+ "<input placeholder='hour' type='number' min='0' max='23' id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Hour'></input>"
+		+ "<input placeholder='minute' type='number' min='0' max='59' id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Minute'></input>"
+		+ "<input placeholder='second' type='number' min='0' max='59' id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Second'></input>"
+		+ "<input placeholder='millisecond' type='number' min='0' max='99999999' id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Millisecond'></input>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions' type='checkbox'>Exclude?</input>"
 		+ "<p></p>Filter: Other<br/>"
 		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_Notes' type='checkbox'>Has notes</input>"
@@ -288,6 +292,10 @@
 		Section_HallofInfamyCCLs_Filter_Time_Year: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Year'),
 		Section_HallofInfamyCCLs_Filter_Time_Month: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Month'),
 		Section_HallofInfamyCCLs_Filter_Time_Day: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Day'),
+		Section_HallofInfamyCCLs_Filter_Time_Hour: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Hour'),
+		Section_HallofInfamyCCLs_Filter_Time_Minute: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Minute'),
+		Section_HallofInfamyCCLs_Filter_Time_Second: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Second'),
+		Section_HallofInfamyCCLs_Filter_Time_Millisecond: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Millisecond'),
 		Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions'),
 		Section_HallofInfamyCCLs_Filter_Other_Notes: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_Notes'),
 		Section_HallofInfamyCCLs_Filter_Other_UserWrittenDescription: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription'),
@@ -1029,7 +1037,7 @@
 		// console.log();
 		for (var x = 0; x < grassAvoiders; x++) {
 			playersData_classicInfamySuit.push(undefined);
-			ymdLocalTimeCCLs.push({year:new Date(playersData_whenCCL[x].timestamp).getFullYear(), month:new Date(playersData_whenCCL[x].timestamp).getMonth(), day:new Date(playersData_whenCCL[x].timestamp).getDate()});
+			ymdLocalTimeCCLs.push({year:new Date(playersData_whenCCL[x].timestamp).getFullYear(), month:new Date(playersData_whenCCL[x].timestamp).getMonth(), day:new Date(playersData_whenCCL[x].timestamp).getDate(), hour:new Date(playersData_whenCCL[x].timestamp).getHours(), minute:new Date(playersData_whenCCL[x].timestamp).getMinutes(), second:new Date(playersData_whenCCL[x].timestamp).getSeconds(), millisecond:new Date(playersData_whenCCL[x].timestamp).getMilliseconds()});
 		}
 		// console.log(ymdLocalTimeCCLs[8].day);
 		playersData_classicInfamySuit[0] = playersData_classicInfamySuit[1] = playersData_classicInfamySuit[2] = playersData_classicInfamySuit[3] = 'Crimson';
@@ -1117,13 +1125,13 @@
 		
 		const filters = {
 			classicInfamySuits: {crimson:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson.checked, rojo:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo.checked, royalty:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty.checked, blueNavy:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions.checked},
-			time: {year:elem.Section_HallofInfamyCCLs_Filter_Time_Year.value, month:elem.Section_HallofInfamyCCLs_Filter_Time_Month.value,day:elem.Section_HallofInfamyCCLs_Filter_Time_Day.value, exclude:elem.Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions.checked},
+			time: {year:elem.Section_HallofInfamyCCLs_Filter_Time_Year.value, month:elem.Section_HallofInfamyCCLs_Filter_Time_Month.value, day:elem.Section_HallofInfamyCCLs_Filter_Time_Day.value, hour:elem.Section_HallofInfamyCCLs_Filter_Time_Hour.value, minute:elem.Section_HallofInfamyCCLs_Filter_Time_Minute.value, second:elem.Section_HallofInfamyCCLs_Filter_Time_Second.value, millisecond:elem.Section_HallofInfamyCCLs_Filter_Time_Millisecond.value, exclude:elem.Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions.checked},
 			other: {notes:elem.Section_HallofInfamyCCLs_Filter_Other_Notes.checked, userWrittenDescription:elem.Section_HallofInfamyCCLs_Filter_Other_UserWrittenDescription.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_Other_ExcludeOptions.checked},
 		}
 		if (filters.classicInfamySuits.crimson == false && filters.classicInfamySuits.rojo == false && filters.classicInfamySuits.royalty == false && filters.classicInfamySuits.blueNavy == false && filters.classicInfamySuits.exclude == false) {
 			filters.classicInfamySuits.unused = true;
 		}
-		if (filters.time.year == 'undefined' && filters.time.month == 'undefined' && filters.time.day == 'undefined' && filters.time.exclude == false) {
+		if (filters.time.year == 'undefined' && filters.time.month == 'undefined' && filters.time.day == 'undefined' && filters.time.hour == '' && filters.time.minute == '' && filters.time.second == '' && filters.time.millisecond == '' && filters.time.exclude == false) {
 			filters.time.unused = true;
 		}
 		
@@ -1254,6 +1262,66 @@
 				if (filters.time.day != 'undefined') {
 					timeFiltersActive++;
 					if (ymdLocalTimeCCLs[x].day.toString() == filters.time.day) {
+						if (filters.time.exclude == false) {
+							timeFilters.push(true);
+						} else {
+							timeFilters.push(false);
+						}
+					} else {
+						if (filters.time.exclude == false) {
+							timeFilters.push(false);
+						}
+					}
+				}
+				if (filters.time.hour != '' && filters.time.hour >= 0) {
+					timeFiltersActive++;
+					filters.time.hour = Math.min(filters.time.hour, elem.Section_HallofInfamyCCLs_Filter_Time_Hour.max);
+					if (ymdLocalTimeCCLs[x].hour.toString() == filters.time.hour) {
+						if (filters.time.exclude == false) {
+							timeFilters.push(true);
+						} else {
+							timeFilters.push(false);
+						}
+					} else {
+						if (filters.time.exclude == false) {
+							timeFilters.push(false);
+						}
+					}
+				}
+				if (filters.time.minute != '' && filters.time.minute >= 0) {
+					timeFiltersActive++;
+					filters.time.minute = Math.min(filters.time.minute, elem.Section_HallofInfamyCCLs_Filter_Time_Minute.max);
+					if (ymdLocalTimeCCLs[x].minute.toString() == filters.time.minute) {
+						if (filters.time.exclude == false) {
+							timeFilters.push(true);
+						} else {
+							timeFilters.push(false);
+						}
+					} else {
+						if (filters.time.exclude == false) {
+							timeFilters.push(false);
+						}
+					}
+				}
+				if (filters.time.second != '' && filters.time.second >= 0) {
+					timeFiltersActive++;
+					filters.time.second = Math.min(filters.time.second, elem.Section_HallofInfamyCCLs_Filter_Time_Second.max);
+					if (ymdLocalTimeCCLs[x].second.toString() == filters.time.second) {
+						if (filters.time.exclude == false) {
+							timeFilters.push(true);
+						} else {
+							timeFilters.push(false);
+						}
+					} else {
+						if (filters.time.exclude == false) {
+							timeFilters.push(false);
+						}
+					}
+				}
+				if (filters.time.millisecond != '' && filters.time.millisecond >= 0) {
+					timeFiltersActive++;
+					filters.time.millisecond = Math.min(filters.time.millisecond, elem.Section_HallofInfamyCCLs_Filter_Time_Millisecond.max);
+					if (ymdLocalTimeCCLs[x].millisecond.toString() == filters.time.millisecond) {
 						if (filters.time.exclude == false) {
 							timeFilters.push(true);
 						} else {
@@ -1637,7 +1705,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.9c": 3,
+			"1.4.10": 24,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1698,12 +1766,13 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
-			"1.4.9c": `
+			"1.4.10": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.9c</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.10</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
 				${updateLogEntry('add', "Added one easter egg?")}
-				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.9c') + '.')}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
 			</ul></div>
 			`,
 			"1.4.9b": `
