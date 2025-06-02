@@ -1402,6 +1402,9 @@
 		// console.log(filterIncludedCCLs);
 		
 		var generatedString = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " programmed total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%) at " + formatDate(currentTime, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(currentTime.getTimezoneOffset()) + ". Check <a href='https://badges.roblox.com/v1/badges/1157147255776915'>this link</a> for an updated count of the Rank 250 badges awarded.";
+		if (filterIncludedCCLs_positions.length == 5 && filterIncludedCCLs_positions.indexOf(1) != -1 && filterIncludedCCLs_positions.indexOf(12) != -1 && filterIncludedCCLs_positions.indexOf(16) != -1 && filterIncludedCCLs_positions.indexOf(18) != -1 && filterIncludedCCLs_positions.indexOf(21) != -1) {
+			generatedString += "<p>Detected only CCLs #1, #12, #16, #18 and #21. Generated the following quote: <i>" + '"' + "The dreamer's greatest enemy is one's self. Cruel how we often fail to realise how far we've come." + '"' + "</i></p>";
+		}
 		if (filterIncludedCCLs.length / grassAvoiders == 0.5) {
 			generatedString += "<p></p><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Other/perfectly balanced.jpg' style='width:50%'></img>";
 		}
@@ -1705,7 +1708,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 24,
+			"1.4.10": 32,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1771,7 +1774,7 @@
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.10</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
-				${updateLogEntry('add', "Added one easter egg?")}
+				${updateLogEntry('add', "Added two easter eggs?")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
 			</ul></div>
 			`,
