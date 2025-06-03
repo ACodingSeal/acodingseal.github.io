@@ -1152,7 +1152,7 @@
 			filters.time.unused = true;
 		}
 		
-		if (filters.specificCCLs.specificCCLss == '' && filters.time.exclude == false) {
+		if (filters.specificCCLs.specificCCLs == '' && filters.specificCCLs.exclude == false) {
 			filters.specificCCLs.unused = true;
 		}
 		
@@ -1454,6 +1454,7 @@
 			        operatorsLogic = ['&&', '||', '(', ')'],
 			        filteringGroups = ['classicInfamySuits', 'time', 'specificCCLs', 'other'],
 			        filteringGroupsVars = [classicInfamySuitsFilterStatus, timeFilterStatus, specificCCLsFilterStatus, otherFilterStatus],
+					filteringGroupsUnusedChecks = [filters.classicInfamySuits.unused, filters.time.unused, filters.specificCCLs.unused, filters.other.unused],
 			        safeInput = [];
 			    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
 				if (keywords == null) {
@@ -1471,7 +1472,11 @@
 				}
 				for (var x = 0; x < keywords.length; x++) {
 			        if (filteringGroups.indexOf(keywords[x]) != -1) {
-			            keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
+						if (filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x])] != true) {
+							keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
+						} else {
+							keywordsInterpreted.push('false');
+						}
 			        }
 			        if (operators.indexOf(keywords[x]) != -1) {
 			            keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
@@ -1828,7 +1833,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 331,
+			"1.5.0": 345,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
