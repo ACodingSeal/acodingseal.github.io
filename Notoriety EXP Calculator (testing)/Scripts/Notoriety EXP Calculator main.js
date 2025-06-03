@@ -582,7 +582,7 @@
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-05-23T03:31Z). CCL #1 is also the creator of this tool!",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-06-0304:09Z). CCL #1 is also the creator of this tool!",
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease. Mutator Rank 1,000 (as of 2025-05-20T00:48Z).",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
@@ -1768,7 +1768,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 141,
+			"1.4.10": 143,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1836,8 +1836,10 @@
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
 				${updateLogEntry('add', "Added three easter eggs? (Total 5.)")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-0304:09Z).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,939 + 18,260 > 4,000 + 32,564 as of 2025-06-0304:02Z).")}
 				${updateLogEntry('edit', "Some slight source code changes.")}
+				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.5MB to 15MB.")}
 				${updateLogEntry('other', "Added the following tester: maisy.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
 			</ul></div>
