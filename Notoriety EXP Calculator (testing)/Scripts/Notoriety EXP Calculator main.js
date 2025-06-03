@@ -110,7 +110,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.10 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.5.0 testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -210,8 +210,8 @@
 		filterDaysOptions += "<option value='" + (x + 1) + "'>" + (x + 1) + "</option>";
 	}
 	
-	// no support beyond the year 2124
-	for (var x = 0; x < 101; x++) {
+	// no support beyond the year 3024
+	for (var x = 0; x < 1001; x++) {
 		filterYearsOptions += "<option value='" + (2024 + x) + "'>" + (2024 + x) + "</option>";
 	}
 	
@@ -238,6 +238,8 @@
 		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_Notes' type='checkbox'>Has notes</input>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription' type='checkbox'>Has user-written description</input>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_ExcludeOptions' type='checkbox'>Exclude?</input>"
+		+ "<p></p>Filtering logic<br/>"
+		+ "<textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput'></textarea><span id='NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span>"
 		+ "<p></p>Sort: Badge obtainment timestamp order<br/>"
 		+ "<select id='NotorietyEXPCalculator_HallofInfamyCCLs_Sort_ObtainmentOrder'><option value='oldestNewest'>Oldest to newest</option><option value='newestOldest'>Newest to oldest</option><option value='random'>Random</option></select>"
 		+ "<p></p><div style='width:10em;height:4em;margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Filter and sort</button></div>"
@@ -358,6 +360,8 @@
 		outputResults: document.getElementById('NotorietyEXPandInfamyCalculator_OutputResults'),
 		
 		filterSortButton: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit'),
+		filteringLogicInput: document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput'),
+		filteringLogicInput_InputExplanation: document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput_InputExplanation'),
 	}
 	
 	const sounds = {};
@@ -1144,25 +1148,13 @@
 		if (filters.other.notes == false && filters.other.userWrittenDescription == false && filters.other.exclude == false) {
 			filters.other.unused = true;
 		}
-		// console.log(filters.classicInfamySuits);
-		// console.log(filters.time);
-		const filterIncludedCCLs = [];
-		const filterIncludedCCLs_positions = [];
-		/*
-		filters.classicInfamySuits.crimson = true;
-		filters.classicInfamySuits.unused = false;
-		*/
+		const filterIncludedCCLs = [], filterIncludedCCLs_positions = [];
 		
 		for (var x = 0; x < grassAvoiders; x++) {
-			var filterInCurrentCCL = true;
-			var classicInfamySuitsFilter = true;
-			var otherFilter = true;
-			/*
-			console.log('TESTING');
-			console.log('TESTING');
-			console.log('TESTING');
-			console.log('TESTING');
-			*/
+			var filterInCurrentCCL = true,
+			classicInfamySuitsFilter = true,
+			otherFilter = true;
+			
 			if (filters.classicInfamySuits.unused != true) {
 				if (filters.classicInfamySuits.crimson == true) {
 					if (['Crimson'].indexOf(players[x].classicInfamySuit) != -1) {
@@ -1177,7 +1169,6 @@
 						}
 					}
 				}
-				// console.log(filters.classicInfamySuits.rojo);
 				if (filters.classicInfamySuits.rojo == true) {
 					if (['Rojo'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
@@ -1218,25 +1209,10 @@
 					}
 				}
 			}
-			/*
-			console.log(classicInfamySuitsFilter);
-			console.log(x);
-			console.log('TESTING OVER');
-			*/
-			
-			/*
-			filters.time.unused = false;
-			filters.time.year = '2025';
-			filters.time.month = '2';
-			filters.time.day = '1';
-			filters.time.exclude = true;
-			*/
-			// filters.time.month = '0';
-			// filters.time.unused = false;
+
 			const timeFilters = [];
-			var timeFiltersActive = 0;
+			var timeFiltersActive = 0, timeFilter = true;
 			if (filters.time.unused != true) {
-				// test
 				if (filters.time.year != 'undefined') {
 					timeFiltersActive++;
 					if (ymdLocalTimeCCLs[x].year.toString() == filters.time.year) {
@@ -1340,7 +1316,6 @@
 					}
 				}
 			}
-			var timeFilter = true;
 			if (timeFilters.length > 0) {
 				if (timeFilters.length == timeFiltersActive && timeFilters.indexOf(false) != -1) {
 					timeFilter = false;
@@ -1378,16 +1353,47 @@
 				}
 			}
 			
-			// console.log(classicInfamySuitsFilter);
-			// console.log(filters.classicInfamySuits.rojo);
-			if (classicInfamySuitsFilter == true && timeFilter == true && otherFilter == true) {
+			elem.filteringLogicInput.placeholder = "classicInfamySuits AND time AND other";
+			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once.)";
+
+			function getFilteringLogic(input) {
+				const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'other'],
+					operators = ['AND', 'OR', '(', ')'],
+			        operatorsLogic = ['&&', '||', '(', ')'],
+			        filteringGroups = ['classicInfamySuits', 'time', 'other'],
+			        filteringGroupsVars = [classicInfamySuitsFilter, timeFilter, otherFilter],
+			        safeInput = [];
+			    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
+				if (keywords == null) {
+					keywords = defaultKeywords;
+				}
+			    for (var x = 0; x < keywords.length; x++) {
+			        if (filteringGroups.indexOf(keywords[x]) != -1 || operators.indexOf(keywords[x]) != -1 || keywords[x] == '') {
+			            safeInput.push(true);
+			        } else {
+			            safeInput.push(false);
+			        }
+				}
+				if (safeInput.indexOf(false) != -1) {
+					keywords = defaultKeywords;
+				}
+				for (var x = 0; x < keywords.length; x++) {
+			        if (filteringGroups.indexOf(keywords[x]) != -1) {
+			            keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
+			        }
+			        if (operators.indexOf(keywords[x]) != -1) {
+			            keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
+			        }
+			    }
+			    keywordsInterpreted = keywordsInterpreted.join(' ');
+			    output = new Function('return ' + keywordsInterpreted)();
+			    return output;
+			}
+			if (getFilteringLogic(elem.filteringLogicInput.value)) {
 				filterInCurrentCCL = true;
 			} else {
 				filterInCurrentCCL = false;
 			}
-			// console.log(timeFilters);
-			// console.log(ymdLocalTimeCCLs[x].day);
-			// console.log(x);
 			
 			if (filterInCurrentCCL == true) {
 				filterIncludedCCLs.push(players[x]);
@@ -1395,8 +1401,6 @@
 			}
 		}
 		
-		// elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value = 'newestOldest';
-		// elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value = 'random';
 		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
 			filterIncludedCCLs.reverse();
 			filterIncludedCCLs_positions.reverse();
@@ -1404,8 +1408,6 @@
 			filterIncludedCCLs.sort(function() { return randomBetween(0, 2) - randomBetween(1.2, 2.5) });
 			filterIncludedCCLs_positions.sort(function() { return randomBetween(0, 2) - randomBetween(1.2, 2.5) });
 		}
-		// console.log(elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value);
-		// console.log(filterIncludedCCLs);
 		
 		var generatedString = "Generated " + formatInt(filterIncludedCCLs.length) + " CCL " + checkPlural(filterIncludedCCLs.length, "entry", "entries") + " out of " + formatInt(grassAvoiders) + " programmed total (" + formatInt(filterIncludedCCLs.length / grassAvoiders * 100) + "%) at " + formatDate(currentTime, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(currentTime.getTimezoneOffset()) + ". Check <a href='https://badges.roblox.com/v1/badges/1157147255776915'>this link</a> for an updated count of the Rank 250 badges awarded.";
 		const egg1Conditions = [
@@ -1450,7 +1452,6 @@
 			}
 			document.title = 'Notoriety EXP Sussifier';
 			generatedString += "<p>(Easter Egg) ඞ</p>";
-			// document.getElementById('NotorietyEXPandInfamyCalculator').getElementsByTagName('div')[0].prepend(susImg);
 			elem.Section_HallofInfamyCCLs.prepend(susImg);
 			susImgInterval = setInterval(function() {
 				if (sounds.egg3.currentTime >= 3) {
@@ -1594,55 +1595,20 @@
 			return output;
 		}
 		
-		const filterIncludedCCLs_positions_alt = filterIncludedCCLs_positions;
-		// console.log(filterIncludedCCLs_positions_alt);
+		const filterIncludedCCLs_positions_alt = filterIncludedCCLs_positions,
+		playerEntryTables = [],
+		crimsonPositions = [];
 		var crimsonIncluded = 0;
-		const crimsonPositions = [];
 		for (var x = 0; x < classicInfamySuitOwners.crimson.length; x++) {
 			crimsonPositions.push(players[x].position);
 		}
-		// console.log(crimsonPositions);
-		// console.log(classicInfamySuitOwners.crimson);
-		/*
-		if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
-			for (var x = filterIncludedCCLs_positions_alt[0].length; x > 0; x--) {
-				if (filterIncludedCCLs_positions_alt[x].indexOf(crimsonPositions[x]) != -1) {
-					crimsonIncluded++;
-				}
-			}
-		} else {
-			for (var x = 0; x < filterIncludedCCLs.length; x++) {
-				if (filterIncludedCCLs_positions_alt[x].indexOf(crimsonPositions[x]) != -1) {
-					crimsonIncluded++;
-				}
-			}
-		}
-		*/
 		for (var x = 0; x < crimsonPositions.length; x++) {
 			if (filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]) != -1) {
 				filterIncludedCCLs_positions_alt.splice(filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]), 1);
 				crimsonIncluded++
 			}
 		}
-		// console.log(filterIncludedCCLs_positions_alt);
-		// console.log(crimsonIncluded);
 		
-		/*
-		for (var x = 0; x < 4; x++) {
-			if (filterIncludedCCLs_positions_alt.indexOf(x + 1) != -1) {
-				filterIncludedCCLs_positions_alt.splice(filterIncludedCCLs_positions_alt.indexOf(x + 1), 1);
-				crimsonIncluded++;
-			}
-		}
-		*/
-		const playerEntryTables = [];
-		
-		/*
-		console.log(Math.min(...filterIncludedCCLs_positions));
-		console.log(filterIncludedCCLs_positions);
-		console.log(filterIncludedCCLs_positions_alt);
-		console.log(crimsonIncluded);
-		*/
 		function getCrimsonTable() {
 			var string_a = '';
 			if (crimsonIncluded > 0) {
@@ -1679,8 +1645,8 @@
 				string_a = '';
 				string_a += "<p><table style='margin:auto;width:100%'>";
 				string_a += "<hr/><h3 style='text-align:center'>Post-suits revamp (" + formatDate(new Date("2025-01-17T20:00Z"), "yyyy-MM-dd HH:mm:ss", false) + ' ' + getTZString(new Date().getTimezoneOffset()) + ") CCLs</h3>";
-				var maxIterations = filterIncludedCCLs.length;
-				var iterationBase = crimsonIncluded;
+				var maxIterations = filterIncludedCCLs.length,
+				iterationBase = crimsonIncluded;
 				if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'newestOldest') {
 					maxIterations = maxIterations - crimsonIncluded;
 					iterationBase = 0;
@@ -1768,7 +1734,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 143,
+			"1.5.0": 225,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1829,19 +1795,20 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
-			"1.4.10": `
+			"1.5.0": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.10</b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.5.0</b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' input. This input determines the logical operators that the filter groups (defined as 'classicInfamySuits', 'time' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
 				${updateLogEntry('add', "Added three easter eggs? (Total 5.)")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-0304:09Z).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,939 + 18,260 > 4,000 + 32,564 as of 2025-06-0304:02Z).")}
-				${updateLogEntry('edit', "Some slight source code changes.")}
+				${updateLogEntry('edit', "Some source code changes, mainly for optimisation and increasing readability.")}
 				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.5MB to 15MB.")}
 				${updateLogEntry('other', "Added the following tester: maisy.")}
-				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.5.0') + '.')}
 			</ul></div>
 			`,
 			"1.4.9b": `
