@@ -370,6 +370,34 @@
 		filteringLogicInput_InputExplanation: document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput_InputExplanation'),
 	}
 	
+	const data = {
+		currentLevel: new Decimal(1),
+		remainingEXP: new Decimal(0),
+		goalLevel: new Decimal(100),
+		currentInfamyLevel: new Decimal(0),
+		goalInfamyLevel: new Decimal(1),
+		currentMoney: new Decimal(0),
+		currentMutatorRank: new Decimal(0),
+		remainingMXP: new Decimal(0),
+		goalMutatorRank: new Decimal(1),
+		untilMXPUsage: new Decimal(0),
+		goalMoney: new Decimal(0),
+		untilRotations: new Decimal(0),
+		
+		toggleInputSliders_Global: 1,
+		toggleRomanNumerals_Global: 1,
+		toggleInputExplanations_Global: 1,
+		toggleComputationType_Global: 0,
+		toggleInfiniteInfamies_Global: 0,
+		toggleAutoCalculate_Global: 0,
+		toggleTimeOutputFormat_Global: 1,
+		
+		expFormula: 0,
+		untilOutOfMoneyCheck: 0,
+		cheaperPassCheck: 0,
+		preMoneyCapCheck: 0,
+	};
+	
 	const sounds = {};
 	
 	function getTZString(input, zuluStr) {
@@ -402,18 +430,12 @@
 		return output;
 	}
 	
-	// testing mogus
-	setTimeout(function() {
-		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson').click();
-		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions').click();
-		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput').value = '1 until 30';
-		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription').click();
-		document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput').value = 'classicInfamySuits AND specificCCLs OR other';
-		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit').click();
-	}, 1);
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
 		const grassAvoiders = 38;
+		if (elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.value == '') {
+			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.value = "1 until " + grassAvoiders;
+		}
 		var generatedEntries = 0;
 		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
@@ -1676,9 +1698,6 @@
 			}
 			
 			const timeOutput = new Timer();
-			if (data.toggleTimeOutputFormat_Global == undefined) {
-				data.toggleTimeOutputFormat_Global = 1;
-			}
 			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
 			
 			timeOutput.amount = currentTime.getTime() - new Date(input.whenCCL.timestamp).getTime();
@@ -1882,7 +1901,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 524,
+			"1.5.0": 542,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2821,34 +2840,7 @@
 		return result;
 	}
 	
-	data = {
-		currentLevel: new Decimal(1),
-		remainingEXP: new Decimal(0),
-		goalLevel: new Decimal(100),
-		currentInfamyLevel: new Decimal(0),
-		goalInfamyLevel: new Decimal(1),
-		currentMoney: new Decimal(0),
-		currentMutatorRank: new Decimal(0),
-		remainingMXP: new Decimal(0),
-		goalMutatorRank: new Decimal(1),
-		untilMXPUsage: new Decimal(0),
-		goalMoney: new Decimal(0),
-		untilRotations: new Decimal(0),
-		
-		toggleInputSliders_Global: 1,
-		toggleRomanNumerals_Global: 1,
-		toggleInputExplanations_Global: 1,
-		toggleComputationType_Global: 0,
-		toggleInfiniteInfamies_Global: 0,
-		toggleAutoCalculate_Global: 0,
-		toggleTimeOutputFormat_Global: 1,
-		
-		expFormula: 0,
-		untilOutOfMoneyCheck: 0,
-		cheaperPassCheck: 0,
-		preMoneyCapCheck: 0,
-		rotationInputTotals: function(a) {return interpretRotationInput(getRotationInput(a))},
-	};
+	data.rotationInputTotals = function(a) {return interpretRotationInput(getRotationInput(a))};
 
 	const styleSheet_Global = document.createElement('style');
 	document.head.appendChild(styleSheet_Global);
