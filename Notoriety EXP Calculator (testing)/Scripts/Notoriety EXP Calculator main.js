@@ -402,6 +402,15 @@
 		return output;
 	}
 	
+	// testing mogus
+	setTimeout(function() {
+		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson').click();
+		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions').click();
+		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput').value = '1 until 30';
+		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription').click();
+		document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput').value = 'classicInfamySuits AND specificCCLs OR other';
+		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit').click();
+	}, 1);
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
 		const grassAvoiders = 38;
@@ -1517,9 +1526,9 @@
 			
 			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.placeholder = "1 until " + grassAvoiders;
 			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)";
-			elem.filteringLogicInput.placeholder = "classicInfamySuits AND time AND specificCCLs AND other";
+			elem.filteringLogicInput.placeholder = "specificCCLs";
 			if (elem.filteringLogicInput.value == '') {
-				elem.filteringLogicInput.value = 'classicInfamySuits AND time AND specificCCLs AND other';
+				elem.filteringLogicInput.value = 'specificCCLs';
 			}
 			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)";
 			
@@ -1873,7 +1882,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 372,
+			"1.5.0": 519,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
