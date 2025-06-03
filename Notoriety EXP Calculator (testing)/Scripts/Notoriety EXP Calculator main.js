@@ -1150,11 +1150,7 @@
 			}
 			for (var x = 0; x < keywords.length; x++) {
 		        if (filteringGroups.indexOf(keywords[x]) != -1) {
-					if (filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x])] != true) {
-						keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
-					} else {
-						keywordsInterpreted.push('false');
-					}
+					keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
 		        }
 		        if (operators.indexOf(keywords[x]) != -1) {
 		            keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
@@ -1837,7 +1833,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 361,
+			"1.5.0": 365,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
