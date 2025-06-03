@@ -218,7 +218,7 @@
 	document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs').innerHTML = "<div style='text-align:center'>"
 		+ "At the end of the day, when we're no longer around, we become stories, a relic of the past, and we generally want to be remembered. To live on in society's collective minds, to ensure our story is told and retold countless times. That is true immortality, and free will in writing our own story is the greatest gift of existence. The following people have achieved Infamy Rank 250 (CCL) in Notoriety. Through their unwavering commitment, they have become legendary heisters known far and wide throughout the Notoriety criminal underground. For such an extraordinary accomplishment, they have earned a permanent recognition in the Hall of CCLs. These are their stories."
 		+ "<p></p>Badge obtainment times are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format. 'Time elapsed since badge obtainment' is actual elapsed time, and is updated on tool load, filtering/sorting the list or changing the 'Time output format' toggle setting. Entries' user-written descriptions' timestamps are usually plaintext, so they do not auto-update to local time. Entries may take some time to be added, especially depending on available data. There are currently many missing user-written descriptions. All data, including Roblox avatars, must be updated manually with a tool update. Double click an image to open its source file and view the full image. If you wish for modifications to be made to your entry, or want it to be anonymised, contact the tool creator on Discord (same username)."
-		+ "<p></p><p style='font-weight:inherit;border-bottom:1px solid rgba(255,255,255,var(--bg-alpha));width:25%;margin:auto'>Filtering and Sorting</p><br/>Filters act as an 'AND' logical operator, checked for each programmed CCL entry."
+		+ "<p></p><p style='font-weight:inherit;border-bottom:1px solid rgba(255,255,255,var(--bg-alpha));width:25%;margin:auto'>Filtering and Sorting</p><br/>Filters are checked for each programmed CCL entry. They can be combined using either AND or OR logical operators, as well as support for complicated conditions using parentheses."
 		+ "<p></p>Filter: Classic infamy suits<br/>"
 		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson' type='checkbox'>Crimson (250)</input>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo' type='checkbox'>Rojo (200)</input>"
@@ -1126,6 +1126,45 @@
 			}
 		}
 		
+		function getFilteringLogic(input) {
+			const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'specificCCLs', 'AND', 'other'],
+				operators = ['AND', 'OR', '(', ')'],
+		        operatorsLogic = ['&&', '||', '(', ')'],
+		        filteringGroups = ['classicInfamySuits', 'time', 'specificCCLs', 'other'],
+		        filteringGroupsVars = [classicInfamySuitsFilterStatus, timeFilterStatus, specificCCLsFilterStatus, otherFilterStatus],
+				filteringGroupsUnusedChecks = [filters.classicInfamySuits.unused, filters.time.unused, filters.specificCCLs.unused, filters.other.unused],
+		        safeInput = [];
+		    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
+			if (keywords == null) {
+				keywords = defaultKeywords;
+			}
+		    for (var x = 0; x < keywords.length; x++) {
+		        if (filteringGroups.indexOf(keywords[x]) != -1 || operators.indexOf(keywords[x]) != -1 || keywords[x] == '') {
+		            safeInput.push(true);
+		        } else {
+		            safeInput.push(false);
+		        }
+			}
+			if (safeInput.indexOf(false) != -1) {
+				keywords = defaultKeywords;
+			}
+			for (var x = 0; x < keywords.length; x++) {
+		        if (filteringGroups.indexOf(keywords[x]) != -1) {
+					if (filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x])] != true) {
+						keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
+					} else {
+						keywordsInterpreted.push('false');
+					}
+		        }
+		        if (operators.indexOf(keywords[x]) != -1) {
+		            keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
+		        }
+		    }
+		    keywordsInterpreted = keywordsInterpreted.join(' ');
+		    output = new Function('return ' + keywordsInterpreted)();
+		    return output;
+		}
+		
 		for (var x = 0; x < grassAvoiders; x++) {
 			if (players[x].classicInfamySuit == 'Crimson') {
 				classicInfamySuitOwners.crimson.push(players[x]);
@@ -1152,6 +1191,7 @@
 			filters.time.unused = true;
 		}
 		
+		filters.specificCCLs.specificCCLs = '1 until ' + grassAvoiders;
 		if (filters.specificCCLs.specificCCLs == '' && filters.specificCCLs.exclude == false) {
 			filters.specificCCLs.unused = true;
 		}
@@ -1444,48 +1484,12 @@
 			}
 			
 			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.placeholder = "1 until " + grassAvoiders;
-			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)";
+			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.)";
 			elem.filteringLogicInput.placeholder = "classicInfamySuits AND time AND specificCCLs AND other";
-			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once.)";
-
-			function getFilteringLogic(input) {
-				const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'specificCCLs', 'AND', 'other'],
-					operators = ['AND', 'OR', '(', ')'],
-			        operatorsLogic = ['&&', '||', '(', ')'],
-			        filteringGroups = ['classicInfamySuits', 'time', 'specificCCLs', 'other'],
-			        filteringGroupsVars = [classicInfamySuitsFilterStatus, timeFilterStatus, specificCCLsFilterStatus, otherFilterStatus],
-					filteringGroupsUnusedChecks = [filters.classicInfamySuits.unused, filters.time.unused, filters.specificCCLs.unused, filters.other.unused],
-			        safeInput = [];
-			    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
-				if (keywords == null) {
-					keywords = defaultKeywords;
-				}
-			    for (var x = 0; x < keywords.length; x++) {
-			        if (filteringGroups.indexOf(keywords[x]) != -1 || operators.indexOf(keywords[x]) != -1 || keywords[x] == '') {
-			            safeInput.push(true);
-			        } else {
-			            safeInput.push(false);
-			        }
-				}
-				if (safeInput.indexOf(false) != -1) {
-					keywords = defaultKeywords;
-				}
-				for (var x = 0; x < keywords.length; x++) {
-			        if (filteringGroups.indexOf(keywords[x]) != -1) {
-						if (filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x])] != true) {
-							keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
-						} else {
-							keywordsInterpreted.push('false');
-						}
-			        }
-			        if (operators.indexOf(keywords[x]) != -1) {
-			            keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
-			        }
-			    }
-			    keywordsInterpreted = keywordsInterpreted.join(' ');
-			    output = new Function('return ' + keywordsInterpreted)();
-			    return output;
+			if (elem.filteringLogicInput.value == '') {
+				elem.filteringLogicInput.value = 'specificCCLs';
 			}
+			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)";
 			
 			// console.log(getFilteringLogic(elem.filteringLogicInput.value));
 			if (getFilteringLogic(elem.filteringLogicInput.value)) {
@@ -1833,7 +1837,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 345,
+			"1.5.0": 361,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1898,8 +1902,8 @@
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 1.5.0 - Eternally Expanding Hall</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' textarea input under its own filtering group of the same name. This input determines the logical operators that the filter groups (defined as 'classicInfamySuits', 'time' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses. Included the following input explanation: <code>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once.)</code>. This input defaults to <code>classicInfamySuits AND time AND specificCCLs AND other</code>.")}
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)</code>. This input defaults to <code>1 through x</code>, where x is programmed CCL entries.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' textarea input under its own filtering group of the same name. This input determines the logical operators that the filter groups (defined as 'classicInfamySuits', 'time' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses. Included the following input explanation: <code>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)</code>.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.)</code>.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
 				${updateLogEntry('add', "Added three easter eggs? (Total 5.)")}
