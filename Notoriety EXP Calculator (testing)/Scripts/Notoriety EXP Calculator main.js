@@ -360,6 +360,8 @@
 		filterSortButton: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit'),
 	}
 	
+	const sounds = {};
+	
 	function getTZString(input, zuluStr) {
 		input = Number(input);
 		var output = '';
@@ -1409,10 +1411,13 @@
 		const egg1Conditions = [
 		filterIncludedCCLs_positions.length == 5 && filterIncludedCCLs_positions.indexOf(1) != -1 && filterIncludedCCLs_positions.indexOf(12) != -1 && filterIncludedCCLs_positions.indexOf(16) != -1 && filterIncludedCCLs_positions.indexOf(18) != -1 && filterIncludedCCLs_positions.indexOf(21) != -1,
 		filterIncludedCCLs_positions.length == 1 && filterIncludedCCLs_positions.indexOf(25) != -1,
-		]
+		];
 		const egg2Conditions = [
 		filterIncludedCCLs.length / grassAvoiders == 0.5,
-		]
+		];
+		const egg3Conditions = [
+		filters.time.month == '3' && filters.time.day == '1',
+		];
 		if (egg1Conditions[0] || egg1Conditions[1]) {
 			generatedString += "<p>(Easter Egg) Detected only either a(CCL #25) or b(CCLs #1, #12, #16, #18 and #21). Generated the following quotes:"
 			+ "<br/><i>" + '"' + "The dreamer is ambitious, and rightfully so. We have worlds to create." + '"' + "</i>"
@@ -1423,6 +1428,45 @@
 		}
 		if (egg2Conditions[0]) {
 			generatedString += "<p></p><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Other/perfectly balanced.jpg' style='width:50%'></img>";
+		}
+		
+		if (document.getElementById('NotorietyEXPCalculator_EasterEgg3') != null) {
+			document.getElementById('NotorietyEXPCalculator_EasterEgg3').remove();
+		}
+		const susImg = document.createElement("img");
+		susImg.setAttribute('id', 'NotorietyEXPCalculator_EasterEgg3');
+		susImg.src = './Notoriety EXP Calculator (testing)/Assets/Other/crewmate.png';
+		susImg.classList.add('stickyImg');
+		susImg.setAttribute('style', 'z-index:1;opacity:0');
+		var susImgInterval = null;
+		if (egg3Conditions[0]) {
+			if (Object.keys(sounds).indexOf('egg3') != -1) {
+				sounds.egg3.pause();
+				sounds.egg3.currentTime = 0;
+				sounds.egg3.play();
+			} else {
+				sounds.egg3 = new Audio("./Notoriety EXP Calculator (testing)/Assets/Other/impostor.mp3");
+				sounds.egg3.play();
+			}
+			document.title = 'Notoriety EXP Sussifier';
+			generatedString += "<p>(Easter Egg) ඞ</p>";
+			// document.getElementById('NotorietyEXPandInfamyCalculator').getElementsByTagName('div')[0].prepend(susImg);
+			elem.Section_HallofInfamyCCLs.prepend(susImg);
+			susImgInterval = setInterval(function() {
+				if (sounds.egg3.currentTime >= 3) {
+					susImg.setAttribute('style', 'z-index:1;opacity:0');
+					clearInterval(susImgInterval);
+					susImg.remove();
+				} else if (sounds.egg3.currentTime >= 1.5) {
+					susImg.setAttribute('style', 'z-index:1;opacity:' + (1 - ((sounds.egg3.currentTime - 1.5) / 1.5)));
+				} else {
+					susImg.setAttribute('style', 'z-index:1;opacity:calc(var(--bg-alpha) * ' + (sounds.egg3.currentTime / 1.5) + ')');
+				}
+			}, 100);
+		} else {
+			document.title = 'Notoriety EXP Calculator';
+			susImg.remove();
+			clearInterval(susImgInterval);
 		}
 		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = generatedString;
 		
@@ -1724,7 +1768,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.4.10": 71,
+			"1.4.10": 136,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1791,7 +1835,7 @@
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
-				${updateLogEntry('add', "Added two easter eggs? (Total 4.)")}
+				${updateLogEntry('add', "Added three easter eggs? (Total 5.)")}
 				${updateLogEntry('edit', "Some slight source code changes.")}
 				${updateLogEntry('other', "Added the following tester: maisy.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
