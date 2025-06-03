@@ -234,6 +234,9 @@
 		+ "<input placeholder='second' type='number' min='0' max='59' id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Second'></input>"
 		+ "<input placeholder='millisecond' type='number' min='0' max='99999999' id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Millisecond'></input>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions' type='checkbox'>Exclude?</input>"
+		+ "<p></p>Filter: Specific CCLs<br/>"
+		+ "<textarea style='width:20em;height:10em' placeholder='temporary text' id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput'></textarea><span id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation' class='NotorietyEXPandInfamyCalculator_InputExplanation' style='font-size:80%'>placeholder text</span>"
+		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_ExcludeOptions' type='checkbox'>Exclude?</input>"
 		+ "<p></p>Filter: Other<br/>"
 		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_Notes' type='checkbox'>Has notes</input>"
 		+ "<br/><input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription' type='checkbox'>Has user-written description</input>"
@@ -299,6 +302,9 @@
 		Section_HallofInfamyCCLs_Filter_Time_Second: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Second'),
 		Section_HallofInfamyCCLs_Filter_Time_Millisecond: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_Millisecond'),
 		Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Time_ExcludeOptions'),
+		Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput'),
+		Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation'),
+		Section_HallofInfamyCCLs_Filter_SpecificCCLs_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_SpecificCCLs_ExcludeOptions'),
 		Section_HallofInfamyCCLs_Filter_Other_Notes: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_Notes'),
 		Section_HallofInfamyCCLs_Filter_Other_UserWrittenDescription: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription'),
 		Section_HallofInfamyCCLs_Filter_Other_ExcludeOptions: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_ExcludeOptions'),
@@ -1136,6 +1142,7 @@
 		const filters = {
 			classicInfamySuits: {crimson:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson.checked, rojo:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Rojo.checked, royalty:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Royalty.checked, blueNavy:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_BlueNavy.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_ExcludeOptions.checked},
 			time: {year:elem.Section_HallofInfamyCCLs_Filter_Time_Year.value, month:elem.Section_HallofInfamyCCLs_Filter_Time_Month.value, day:elem.Section_HallofInfamyCCLs_Filter_Time_Day.value, hour:elem.Section_HallofInfamyCCLs_Filter_Time_Hour.value, minute:elem.Section_HallofInfamyCCLs_Filter_Time_Minute.value, second:elem.Section_HallofInfamyCCLs_Filter_Time_Second.value, millisecond:elem.Section_HallofInfamyCCLs_Filter_Time_Millisecond.value, exclude:elem.Section_HallofInfamyCCLs_Filter_Time_ExcludeOptions.checked},
+			specificCCLs: {specificCCLs:elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.value, exclude:elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_ExcludeOptions.checked},
 			other: {notes:elem.Section_HallofInfamyCCLs_Filter_Other_Notes.checked, userWrittenDescription:elem.Section_HallofInfamyCCLs_Filter_Other_UserWrittenDescription.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_Other_ExcludeOptions.checked},
 		}
 		if (filters.classicInfamySuits.crimson == false && filters.classicInfamySuits.rojo == false && filters.classicInfamySuits.royalty == false && filters.classicInfamySuits.blueNavy == false && filters.classicInfamySuits.exclude == false) {
@@ -1145,15 +1152,75 @@
 			filters.time.unused = true;
 		}
 		
+		if (filters.specificCCLs.specificCCLss == '' && filters.time.exclude == false) {
+			filters.specificCCLs.unused = true;
+		}
+		
 		if (filters.other.notes == false && filters.other.userWrittenDescription == false && filters.other.exclude == false) {
 			filters.other.unused = true;
 		}
 		const filterIncludedCCLs = [], filterIncludedCCLs_positions = [];
 		
+		function getSpecificCCLs(src) {
+			const interpretedCCLs = [];
+			
+			// console.log('src', src);
+			if (src == '') {
+				src = '1 until ' + grassAvoiders;
+			}
+		    var input = src + '\n';
+		    var inputNums = input.match(/.+?(?=\n)/g);
+		    var output = [];
+		    // console.log('inputNums:', inputNums);
+		    for (var x = 0; x < inputNums.length; x++) {
+		        // console.log('NEW X: ', inputNums[x]);
+		        if (inputNums[x].match('until') != null) {
+		            var outputTemp = {
+		                start: Math.max(0, Math.min(grassAvoiders, Math.floor(inputNums[x].match(/\d+/)[0]))),
+		                end: Math.max(0, Math.min(grassAvoiders, Math.floor(inputNums[x].replace(/\d+/, '').match(/\d+/)[0]))),
+		            };
+		            var temp = [outputTemp.start, outputTemp.end];
+		            outputTemp.start = Math.min(temp[0], temp[1]);
+		            outputTemp.end = Math.max(temp[0], temp[1]);
+		            // console.log(outputTemp);
+		            output.push(outputTemp);
+		        } else {
+		            var outputTemp = Math.max(0, Math.min(grassAvoiders, Math.floor(inputNums[x].match(/\d+/)[0])));
+		            outputTemp = {
+		                start: outputTemp,
+		                end: outputTemp
+		            };
+		            // console.log(outputTemp);
+		            output.push(outputTemp);
+		        }
+		    }
+			for (var x = 0; x < output.length; x++) {
+				if (output[x].start != output[x].end) {
+					var countDiff = Math.abs(output[x].end - output[x].start);
+					for (var i = 0; i < countDiff + 1; i++) {
+						if (interpretedCCLs.indexOf(output[x].start + i) == -1) {
+							interpretedCCLs.push(output[x].start + i);
+						}
+					}
+				} else {
+					if (interpretedCCLs.indexOf(output[x].start) == -1) {
+						interpretedCCLs.push(output[x].start);
+					}
+				}
+			}
+			output = interpretedCCLs;
+		    return output;
+		}
+		// console.log(getSpecificCCLs('3 until 7\n8\n11 until 12\n14\n22\n25 until 29'));
+		const specificCCLsFilter_SpecificCCLsList = getSpecificCCLs(elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.value);
+		// console.log(specificCCLsFilter_SpecificCCLsList);
+		
 		for (var x = 0; x < grassAvoiders; x++) {
 			var filterInCurrentCCL = true,
-			classicInfamySuitsFilter = true,
-			otherFilter = true;
+			classicInfamySuitsFilterStatus = true,
+			timeFilterStatus = true,
+			specificCCLsFilterStatus = true,
+			otherFilterStatus = true;
 			
 			if (filters.classicInfamySuits.unused != true) {
 				if (filters.classicInfamySuits.crimson == true) {
@@ -1211,7 +1278,7 @@
 			}
 
 			const timeFilters = [];
-			var timeFiltersActive = 0, timeFilter = true;
+			var timeFiltersActive = 0;
 			if (filters.time.unused != true) {
 				if (filters.time.year != 'undefined') {
 					timeFiltersActive++;
@@ -1316,52 +1383,77 @@
 					}
 				}
 			}
-			if (timeFilters.length > 0) {
-				if (timeFilters.length == timeFiltersActive && timeFilters.indexOf(false) != -1) {
-					timeFilter = false;
-				} else {
-					timeFilter = true;
+			
+			// console.log('the list: ', specificCCLsFilter_SpecificCCLsList);
+			// console.log(specificCCLsFilter_SpecificCCLsList.indexOf(players[x].position));
+			const specificCCLsFilters = [];
+			var specificCCLsFiltersActive = 0;
+			if (filters.specificCCLs.unused != true) {
+				if (specificCCLsFilter_SpecificCCLsList.length > 0) {
+					specificCCLsFiltersActive++;
+					if (specificCCLsFilter_SpecificCCLsList.indexOf(players[x].position) != -1) {
+						if (filters.specificCCLs.exclude == false) {
+							specificCCLsFilters.push(true);
+						} else {
+							specificCCLsFilters.push(false);
+						}
+					} else {
+						if (filters.specificCCLs.exclude == false) {
+							specificCCLsFilters.push(false);
+						}
+					}
 				}
 			}
+			if (specificCCLsFilters.length > 0) {
+				if (specificCCLsFilters.length == specificCCLsFiltersActive && specificCCLsFilters.indexOf(false) != -1) {
+					specificCCLsFilterStatus = false;
+				} else {
+					specificCCLsFilterStatus = true;
+				}
+			}
+			// console.log('specific status: ', specificCCLsFilters);
+			// console.log('specific status: ', specificCCLsFilterStatus);
 			
 			if (filters.other.unused != true) {
 				if (filters.other.notes == true) {
 					if (players[x].notes != undefined) {
 						if (filters.other.exclude == false) {
-							otherFilter = true;
+							otherFilterStatus = true;
 						} else {
-							otherFilter = false;
+							otherFilterStatus = false;
 						}
 					} else {
 						if (filters.other.exclude == false) {
-							otherFilter = false;
+							otherFilterStatus = false;
 						}
 					}
 				}
 				if (filters.other.userWrittenDescription == true) {
 					if (players[x].ownDescription != undefined) {
 						if (filters.other.exclude == false) {
-							otherFilter = true;
+							otherFilterStatus = true;
 						} else {
-							otherFilter = false;
+							otherFilterStatus = false;
 						}
 					} else {
 						if (filters.other.exclude == false) {
-							otherFilter = false;
+							otherFilterStatus = false;
 						}
 					}
 				}
 			}
 			
-			elem.filteringLogicInput.placeholder = "classicInfamySuits AND time AND other";
+			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.placeholder = "1 until " + grassAvoiders;
+			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)";
+			elem.filteringLogicInput.placeholder = "classicInfamySuits AND time AND specificCCLs AND other";
 			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once.)";
 
 			function getFilteringLogic(input) {
-				const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'other'],
+				const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'specificCCLs', 'AND', 'other'],
 					operators = ['AND', 'OR', '(', ')'],
 			        operatorsLogic = ['&&', '||', '(', ')'],
-			        filteringGroups = ['classicInfamySuits', 'time', 'other'],
-			        filteringGroupsVars = [classicInfamySuitsFilter, timeFilter, otherFilter],
+			        filteringGroups = ['classicInfamySuits', 'time', 'specificCCLs', 'other'],
+			        filteringGroupsVars = [classicInfamySuitsFilterStatus, timeFilterStatus, specificCCLsFilterStatus, otherFilterStatus],
 			        safeInput = [];
 			    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
 				if (keywords == null) {
@@ -1389,6 +1481,8 @@
 			    output = new Function('return ' + keywordsInterpreted)();
 			    return output;
 			}
+			
+			// console.log(getFilteringLogic(elem.filteringLogicInput.value));
 			if (getFilteringLogic(elem.filteringLogicInput.value)) {
 				filterInCurrentCCL = true;
 			} else {
@@ -1734,7 +1828,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 226,
+			"1.5.0": 331,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1799,8 +1893,9 @@
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 1.5.0 - Eternally Expanding Hall</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' input. This input determines the logical operators that the filter groups (defined as 'classicInfamySuits', 'time' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses.")}
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' textarea input under its own filtering group of the same name. This input determines the logical operators that the filter groups (defined as 'classicInfamySuits', 'time' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses. Included the following input explanation: <code>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once.)</code>. This input defaults to <code>classicInfamySuits AND time AND specificCCLs AND other</code>.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)</code>. This input defaults to <code>1 through x</code>, where x is programmed CCL entries.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
 				${updateLogEntry('add', "Added three easter eggs? (Total 5.)")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-0304:09Z).")}
