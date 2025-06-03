@@ -1126,41 +1126,6 @@
 			}
 		}
 		
-		function getFilteringLogic(input) {
-			const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'specificCCLs', 'AND', 'other'],
-				operators = ['AND', 'OR', '(', ')'],
-		        operatorsLogic = ['&&', '||', '(', ')'],
-		        filteringGroups = ['classicInfamySuits', 'time', 'specificCCLs', 'other'],
-		        filteringGroupsVars = [classicInfamySuitsFilterStatus, timeFilterStatus, specificCCLsFilterStatus, otherFilterStatus],
-				filteringGroupsUnusedChecks = [filters.classicInfamySuits.unused, filters.time.unused, filters.specificCCLs.unused, filters.other.unused],
-		        safeInput = [];
-		    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
-			if (keywords == null) {
-				keywords = defaultKeywords;
-			}
-		    for (var x = 0; x < keywords.length; x++) {
-		        if (filteringGroups.indexOf(keywords[x]) != -1 || operators.indexOf(keywords[x]) != -1 || keywords[x] == '') {
-		            safeInput.push(true);
-		        } else {
-		            safeInput.push(false);
-		        }
-			}
-			if (safeInput.indexOf(false) != -1) {
-				keywords = defaultKeywords;
-			}
-			for (var x = 0; x < keywords.length; x++) {
-		        if (filteringGroups.indexOf(keywords[x]) != -1) {
-					keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
-		        }
-		        if (operators.indexOf(keywords[x]) != -1) {
-		            keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
-		        }
-		    }
-		    keywordsInterpreted = keywordsInterpreted.join(' ');
-		    output = new Function('return ' + keywordsInterpreted)();
-		    return output;
-		}
-		
 		for (var x = 0; x < grassAvoiders; x++) {
 			if (players[x].classicInfamySuit == 'Crimson') {
 				classicInfamySuitOwners.crimson.push(players[x]);
@@ -1187,7 +1152,7 @@
 			filters.time.unused = true;
 		}
 		
-		filters.specificCCLs.specificCCLs = '1 until ' + grassAvoiders;
+		// filters.specificCCLs.specificCCLs = '1 until ' + grassAvoiders;
 		if (filters.specificCCLs.specificCCLs == '' && filters.specificCCLs.exclude == false) {
 			filters.specificCCLs.unused = true;
 		}
@@ -1196,6 +1161,64 @@
 			filters.other.unused = true;
 		}
 		const filterIncludedCCLs = [], filterIncludedCCLs_positions = [];
+		var filterInCurrentCCL = true,
+			classicInfamySuitsFilterStatus = true,
+			timeFilterStatus = true,
+			specificCCLsFilterStatus = true,
+			otherFilterStatus = true;
+		
+		function getFilteringLogic(input) {
+			const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'specificCCLs', 'AND', 'other'],
+				operators = ['AND', 'OR', '(', ')'],
+		        operatorsLogic = ['&&', '||', '(', ')'],
+		        filteringGroups = ['classicInfamySuits', 'time', 'specificCCLs', 'other'],
+		        filteringGroupsVars = [classicInfamySuitsFilterStatus, timeFilterStatus, specificCCLsFilterStatus, otherFilterStatus],
+				filteringGroupsUnusedChecks = [filters.classicInfamySuits.unused, filters.time.unused, filters.specificCCLs.unused, filters.other.unused],
+		        safeInput = [];
+		    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
+			if (keywords == null) {
+				keywords = defaultKeywords;
+			}
+		    for (var x = 0; x < keywords.length; x++) {
+		        if (filteringGroups.indexOf(keywords[x]) != -1 || operators.indexOf(keywords[x]) != -1 || keywords[x] == '') {
+		            safeInput.push(true);
+		        } else {
+		            safeInput.push(false);
+		        }
+			}
+			if (safeInput.indexOf(false) != -1) {
+				keywords = defaultKeywords;
+			}
+			console.log('KEYWORDS BASE:', keywords);
+			console.log(filteringGroupsUnusedChecks);
+			for (var x = 0; x < keywords.length; x++) {
+		        if (filteringGroups.indexOf(keywords[x]) != -1) {
+					if (filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x])] != true) {
+						// if in use then...
+						keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
+					} else {
+						keywordsInterpreted.push('false');
+					}
+					// keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
+		        }
+				if (operators.indexOf(keywords[x]) != -1) {
+					// console.log(keywords[x + 1], filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x + 1])]);
+					keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
+		        }
+				console.log('current interpretation:', keywords[x], keywordsInterpreted);
+		    }
+			// loop for splice maybe not necessary
+			for (var i = 0; i < keywordsInterpreted.length; i++) {
+				if (operatorsLogic[0].indexOf(keywordsInterpreted[0]) != -1 || operatorsLogic[1].indexOf(keywordsInterpreted[0]) != -1) {
+					keywordsInterpreted.splice(0, 1);
+				}
+			}
+			console.log('keywordsInterpreted', keywordsInterpreted);
+		    keywordsInterpreted = keywordsInterpreted.join(' ');
+		    output = new Function('return ' + keywordsInterpreted)();
+			console.log('output', output);
+		    return output;
+		}
 		
 		function getSpecificCCLs(src) {
 			const interpretedCCLs = [];
@@ -1252,65 +1275,67 @@
 		// console.log(specificCCLsFilter_SpecificCCLsList);
 		
 		for (var x = 0; x < grassAvoiders; x++) {
-			var filterInCurrentCCL = true,
-			classicInfamySuitsFilterStatus = true,
-			timeFilterStatus = true,
-			specificCCLsFilterStatus = true,
-			otherFilterStatus = true;
-			
+			classicInfamySuitsFilterStatus = true;
+			var classicInfamySuitsFiltersActive = 0;
 			if (filters.classicInfamySuits.unused != true) {
 				if (filters.classicInfamySuits.crimson == true) {
+					classicInfamySuitsFiltersActive++;
 					if (['Crimson'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							classicInfamySuitsFilter = true;
+							classicInfamySuitsFilterStatus = true;
 						} else {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false) {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					}
 				}
 				if (filters.classicInfamySuits.rojo == true) {
+					classicInfamySuitsFiltersActive++;
 					if (['Rojo'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							classicInfamySuitsFilter = true;
+							classicInfamySuitsFilterStatus = true;
 						} else {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true) {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					}
 				}
 				if (filters.classicInfamySuits.royalty == true) {
+					classicInfamySuitsFiltersActive++;
 					if (['Royalty'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							classicInfamySuitsFilter = true;
+							classicInfamySuitsFilterStatus = true;
 						} else {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true && filters.classicInfamySuits.rojo != true) {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					}
 				}
 				if (filters.classicInfamySuits.blueNavy == true) {
+					classicInfamySuitsFiltersActive++;
 					if (['Blue Navy'].indexOf(players[x].classicInfamySuit) != -1) {
 						if (filters.classicInfamySuits.exclude == false) {
-							classicInfamySuitsFilter = true;
+							classicInfamySuitsFilterStatus = true;
 						} else {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					} else {
 						if (filters.classicInfamySuits.exclude == false && filters.classicInfamySuits.crimson != true && filters.classicInfamySuits.rojo != true && filters.classicInfamySuits.royalty != true) {
-							classicInfamySuitsFilter = false;
+							classicInfamySuitsFilterStatus = false;
 						}
 					}
 				}
+				console.log('CLASSIC INFAMY SUIT', players[x].classicInfamySuit);
+				console.log(filters.classicInfamySuits.exclude);
 			}
 
 			const timeFilters = [];
@@ -1419,6 +1444,15 @@
 					}
 				}
 			}
+			if (timeFilters.length > 0) {
+				// console.log('truthy test');
+				if (timeFilters.length == timeFiltersActive && timeFilters.indexOf(false) != -1) {
+					// console.log('truthy test part ii\n', specificCCLsFilters.length, specificCCLsFiltersActive, specificCCLsFilters);
+					timeFilterStatus = false;
+				} else {
+					timeFilterStatus = true;
+				}
+			}
 			
 			// console.log('the list: ', specificCCLsFilter_SpecificCCLsList);
 			// console.log(specificCCLsFilter_SpecificCCLsList.indexOf(players[x].position));
@@ -1441,7 +1475,9 @@
 				}
 			}
 			if (specificCCLsFilters.length > 0) {
+				// console.log('truthy test');
 				if (specificCCLsFilters.length == specificCCLsFiltersActive && specificCCLsFilters.indexOf(false) != -1) {
+					// console.log('truthy test part ii\n', specificCCLsFilters.length, specificCCLsFiltersActive, specificCCLsFilters);
 					specificCCLsFilterStatus = false;
 				} else {
 					specificCCLsFilterStatus = true;
@@ -1487,8 +1523,12 @@
 			}
 			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)";
 			
-			// console.log(getFilteringLogic(elem.filteringLogicInput.value));
+			console.log(getFilteringLogic(elem.filteringLogicInput.value));
+			console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFILTERING LOGIC', getFilteringLogic(elem.filteringLogicInput.value), classicInfamySuitsFilterStatus);
 			if (getFilteringLogic(elem.filteringLogicInput.value)) {
+				if (x < 5) {
+					// console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFILTERING LOGIC', getFilteringLogic(elem.filteringLogicInput.value), classicInfamySuitsFilterStatus);
+				}
 				filterInCurrentCCL = true;
 			} else {
 				filterInCurrentCCL = false;
