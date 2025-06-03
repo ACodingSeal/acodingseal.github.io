@@ -1480,10 +1480,10 @@
 			}
 			
 			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.placeholder = "1 until " + grassAvoiders;
-			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.)";
+			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)";
 			elem.filteringLogicInput.placeholder = "classicInfamySuits AND time AND specificCCLs AND other";
 			if (elem.filteringLogicInput.value == '') {
-				elem.filteringLogicInput.value = 'specificCCLs';
+				elem.filteringLogicInput.value = 'classicInfamySuits AND time AND specificCCLs AND other';
 			}
 			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)";
 			
@@ -1833,7 +1833,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 365,
+			"1.5.0": 372,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1899,7 +1899,7 @@
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 1.5.0 - Eternally Expanding Hall</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' textarea input under its own filtering group of the same name. This input determines the logical operators that the filter groups (defined as 'classicInfamySuits', 'time' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses. Included the following input explanation: <code>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)</code>.")}
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.)</code>.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)</code>.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
 				${updateLogEntry('add', "Added three easter eggs? (Total 5.)")}
