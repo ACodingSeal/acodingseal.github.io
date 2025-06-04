@@ -1,6 +1,6 @@
 // "Notoriety EXP Calculator" by TheSeal27
 
-!function(){const r=document.getElementById("NotorietyEXPandInfamyCalculator"),d=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],u=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];var e=["O55R6DUlgRoB","DbYLlrHF0gVo","ZwfkEErSTNDC","zPVJPlHEIaal","1rmcPOeOEHUJ","bLw1FVmLh1rI","9IykgB3bABTi","g7j2JAx9RSKG","fDSTRgQRJUld","5YXLj07EdNHg","du44CHHmt4LA","Z9wD0EdymQvM","pSy8LQGgSIE4","qNF1DMhleiPa","5BWfFOWmh0lD","b9F1s9VgqQHe","BrHtzpmCTHpd","6MgQxMMIoCVN","LEDGdoFIoMn0","4mg6qQGGZjCy","UuXM7KkFJL95","cR85vlFMNjmc","uYmT1rTA1kbI","fZGUOLNmHxSK","5CHSQHWJ5oDN","unNqrtLW6X2X","iFVVSKydQ3KD","sBX0At9xRbJ4","DivSdjuLeK8l","mH3hRvFxq1oz","yBOFXRhOxEYn","oYQwd4paO7bl","ZpqZziuLJQax","0Fh5n0CFHDzB","SzB9pG68TWIJ","GSHji3VNGZUU","hbDvUiqE946k","wUQkND42PmW4","qqgUqrTkKkZB","Cz9gbSq4qHm0","iMRropPjrRRg","GH4BzFQgBsag","7r4P85Y07433","RuDuoS1GO9vr","pxJUKLSwTgAk","7bOkNmNnJl3m","0QqK4jJvHh8z","nKlkA7yU9ajB","X52SYPJAmC8J","GauEKK7XeCtX","MqVFscCx9ORS","wQ2rfWnGVSbd","LtrfmaN3WM3S","NXCDuJXhCJXM","n8sKog7ABE8L","cyKJ7IjJr8Rz","ig0o5u5QZ4Ov","nJjDq90zyzsC","hnOiDfZfLXbU","F8ruKqb3gIhB","J3RKjwxiCe5x","zzqhGEt4oJ2K","UVis4PTSBUsE","xSHclt48Mw9l","laijWr3jrA2a","35uUzDEyPmLr","WvlVPzV6RP9d","tfQ1q6vH46eO","F7DOsPCiHKB0","KDCMQTjKlMxR","ULATAfRzpoGi","N6cy1USFuNlO","rvkZuZ88hPSv","RPfP6TRoS4oW","0f5cvtiON6Y9","6rKPihluOza7","ZuqpnHJS31dU","wJr9mqlwuG5d","gs3NLg7eOVyJ","JBolLF4TJfHt","ChWoZ1QBFv1p","lhcLDNNPmFBf","ahk8NTeApv5P","Ls43HNj3echg","vBvqj5GLf2mr","VF6JE170jlgp","VoVCcvwQ2v32","2jaHhjMGaf8Y","jZ85nCDHrmXL","SlDgAg62gJ5C","NcIxlB38u4Ow","0PA8ddMPOpBL","TO1navqQhqBs","36M6wsEHGsr4","OdapaxXUA6Zq","K2GtEF9MeBKJ","rh5nCQrozdR3","fAUbSiGLE0NJ","Q84DBpnH4sCD","lfp4rENbfEtv","s0LEUgYNt9Dx","l3qyjt6FsUYL","F1j66uGR65Ew","MTtJyquLkhQL","7qPQhCVAAmcm","vFHiI6sbE7Y0","B74Iqvx7qVAX","13OXShbx18jV","MdT4HgHWUiVg","rPAPB3iSoGC7","NtV7Ez0C2ClP","6JW7IKYKjs75","aYY4cOE2hQn9","VYiEGWYlLxl6","ohhyujQeW2ka","726PNQOQfVGF","Qp6MyzHHjCRU","yUvT5n8cUjPu","bAtKxIf5qldm","6dkeA3woNVWx","AMeymPD2hCeV","IPnqZ6yW2QzI","5ABIfsrqL9do","phJG6kSA7kBO","yk7rSDq01oqY","E9KcvvOVI2Lq","4ObY1Z1KPQB7","CdyskSho6sr2","hz9tDGsUDRXR","XFjSQiHyVX3e","uWHv4LLgH60C","8MJaCplGri4l","WjswzXOYGPfJ","MrCiFacEcMrI","hMjgu7wlJhEJ","VeCvo7dvpvOr","f3cySLTxngXM","docq8fR1YFdY","duNE1e6VXwTy","fMzK4Hb5Adwg","v3X07J14cnPV","KRe6UbHNZ06y","OKNtwV30cfpH","uPEVbX2GT6bm","PqEb3HuJUNal","IXP02bRgj8UP","tWwDkxUN8qbi","iprfF8G6u3d7","YUWZgkSp9f97","f7kXQpdGnc65","GDVTJfz29pvV","fijS5Pmh2hCl","eC88ghaJrCwK","sz0WHNPDvXVa","3wuOmgLr840Z","sYZIfqgPpFFq","iDrLFV3lqoT9","SK34Ivm5BWGY","96Qtxhlk7915","BupzX7crcL2V","WvK1vCj2IpsZ","7e2gDFsaKgD0","73l03ctwZeEq","1DPWIYW45hcw","cKQrr90ha7Ke","RIdgAx4wAI5d","hkf5L5zE9lCZ","TtUzE2C8UYvB","JznzrJuXqU4I","mz0ZTrKnl5mZ","Ry5cbYWZQZ6P","hXdH0oKpodrQ","QMJkzXpbgOTW","P9PSqBUm6v8l","Cmcr96PLESRr","8kR2luTH9R1f","uLz5xD43yrP7","yba8natyu2wK","8l251u48EXdw","YmIVlImOlf2c","GgK46yqzW6mm","BGxAE6TKplaD","RKPnDcvwY5Kg","10gbrvXa7x8t","P17tepFLXOGV","l34QLc2xcZtE","44ZgYNo6fCrk","BRgpoiGY30Pn","mN7LFpI4YAqK","IjULKbtsfZL0","HEz2ZeV3I5JF","rvNMJr6yU9AK","jQtUuGPybAOc","jKqCzL6ujc0L","MBBQ7qduL2sK","ymIXJs1Ydf8t","N0jEebvLA3OR","0xznrbmr77PV","pib5fP9XZALD","ZH72kxYKUYp1","qve5NhsWlHvR","adjGGGPARPY7","nnDdOQSS74VL","96v6iKCknv4e","b00DBtJoKTNA","k5OQDULVRwmi","3LzIQH9aqbfm","Q3P4wRbbmlfm","0PWwIkpZTwwP","rMhdH7KaftEb","xw4nvq8RdqVO","Zrv3rQWZBAO7","zASxzU3jrBNQ","wOftz12voMBR","RpTafjmz1AmX","nR8Td27BkDtb","D4NdE30KHEAo","zqLTa5SVHnSG","8eeQGr2g7fFd","ESSQQb4LlQdd","om5zTtHfAkGm","RBAAFxTLcFyv","Gb55k0rwIbep","0fHybi33Xctc","Qms07zRXs7Xu","KDwgfrwhEgCs","3kwo49i7b5Zh","EgIshFJv5pWT","l1cqtAKxRgZP","00GaPjckCeYq","h7xxKq9XT3y1","GnIY925eAVV7","dqmtrMAW3BWn","WbG3qugDSE5o","moSJodDuyL7Q","Ic8QRIYnkWsi","sTwIekg1UBxQ","CYGdlvjZCfuy","MIxeUEfRNIlM","bt4unI0XsS5G","azmBmZbluwov","RSFSWzHbg2Yx","ErCBNwYXhzYV","jl7BBjRSDlxd","5CYIw1HfGCfn","qXNQaVcKTWnd","jCQeEh5dOse8","ludRA0H8FIjW","FSDaYyNPCZTC","BlegVSpuW3C0","6hsxVYEf23lB","cQfkj8M2Fl2H","vjptLaDvUCxT","iJ4wXLLHEbKh","PSfgpN4c7ld1","DpC3Ok5xkGLx","fmtGrVcqfu1d","b5eJFLHGXqnJ","3DuDc2ZX8Fex","W43qyI62yRDe","JKjj1m4ysnBa","FksQuM2Whm9W","8rSPP34WWNAa","yIKubkJVkkuy","h9CriGMXlJeY","AqwzpFTEijRM","Psxjd7hKrOGV","Xjs7cjNgrSsi","0NwHuG3l2Pb8","szOMgAtlWD6E","Duoa4f884qfJ","2qS2qDrEE8L9","n7GqgY06AAWi","sZk2FSD5NFoS","RYTFlwzFtifY","Bt4DF0wb2sxo","hMnj6aiqdeQF","w1sJfHBRole1","F6C40ENCFdNw","ytfdL1ffb8sK","9PMofA1f01hV","6jOAEkUPy0UA","Dwyw0BboDI2f","q4tnzlVjehZQ","lvILxgXP0TLB","Qs8t7mo9AUcS","PpPfhklMqtin","tR5rnH66RXQU","CrHwPPLbDye8","NxtoeA1eyxBE","JDkDS815l4gG","GsfePKv7iO58","ir2F6F20Vxp4","s6Gwdn3YOOll","pV8XzE3EyrnB","MxrL2cpjJsNS","gEdzgVat7x2P","jOmXtb5bIoK7","djNs8NmqhImx","AD8GkNlGwqY3","KfhHGO8yzkMF","QMaYI9DpFbcz","Vyduvaju9u4T","9G4BsQ5WF1mt","HRbNwxUDXySG","PFoMVulyYS5K","SX2KAlPSLidl","RqfpqNGdnAjj","7prBpha8qaIn","OS6asRo55jtH","Nix51GPO6Aei","Q4hYua1lQKf6","4kMB4Utbqdrt","jAIoaPxkWWB6","EylEdqj9CWi7","Jn3yqob21zHS","9xkYGaaVGOMM","v1xlK0KEVNwI","0lBv9wi5Bba1","VDAEIP6x2mPn","9rPAtwiCcfcq","qOBLF4y3WKBg","172Jel5DPTbJ","JdGjGpT54UYi","nxrFIZ8yGCOR","RLV10DGeTqGf","CnJWZDANFKow","SkT893N7mHhG","swaKBsOVusjA","e1vt7CGZ2F6u","bOnuUBMEAyyB","IlYMuGG5l9b2","YfeY9YcNmclQ","xjBKabVjj1ba","UhTJ6MMzugmz","FKCkq5O9OPKE","ABoBx0NYbQEB","H0VQzU1cZBoP","iaZtQ4auzWJD","tP7yszmnCRwJ","GVVtcGKzTZYP","e5d3lsyYLFUf","PZ2nAGmAJPfL","FA6VgrkYUtIt","NjgxqZjOhEsB","MvQl28yA5oYl","cymLhKOukP33","4jVKNPNF9rXG","6sDYAwBSqMhN","cqZpN7sYmsQ0","YOK9TeShDley","g0RbNdjNyO5Q","6cfNnE2Ql0W6","I9TUGE4RCLVq","Jn3AyWHtm5D4","WbuK98K2lN08","aW25QabZwZhL","53l2oosAW5Gf","5OeDTBU0PCIK","Owobyjl6F99d","4MMVOsvAPcgd","aSbWnHtWkDFK","zi8mnv4rGRfB","bTNt11iz6EXb","JU6b4HoLpiJv","Znydw8CCax3w","0tzYCRfMRRV3","UH4TgrhebhWp","uldi8N8xWFsk","tY77uuvMhFGR","xT55L9ieOQSg","US58zNXhSx0S","aVMhVgimX4pT","2bh1lXxdhptw","0kyjTU19rPUF","roH4DvZk87nD","Jo6p2iLiAvPG","OfiN2R8b3uXL","0Nx3TEk0tfYu","I8nBf1HyELBp","ztxizd0SZhWV","bCny5WTfuVCJ","KPcu9Yqag5cY","9qJnN334snKQ","N2bofwQ2v7MC","7oI0ncykOshn","A7L6WraDmbkp","SFmVcYQx5pzX","EmEd8IRdwJZ2","DYSM1VawjQ48","Q6JxQK7rJUYS","8emJT0w6Tc5e","NXtKB51wB4aX","b2RcMz3VIiwK","nvsaQMnef4pS","vkXZ0521iOMp","JXLTxDAdWseT","8kVg3wvUrztF","K3kri58kyz8X","3B72oEFct6fp","g1mOWpRno2rB","AMzPWprxzH8Q","7nCIBexsgsvx","qDkXyOVmpNTE","v40f7Gyxp6eg","x7mxZvVyGwZ4","0UGLTnUYxD1S","p8S7mvvyvzRy","IGfqzTpCFIfS","O2MO8IWAM4Yw","j18cSRPSbuV5","mlDON3vNMuVC","QY2mZgOgZUnP","VHMoR9YaodvH","XETgB6E10UFa","vt0ZqQNmOdNd","qDuYD79CSJRn","GvGi7mYhOQRe","WSX02NLlXPAH","HmkzAvMijXHI","YCk7VHoeHegz","uy4nDAWW4q5S","V6BGShZ9K6Zr","GMmXn4ztVLpZ","krD50RQR4Cii","IQTOiX6kZEuP","NPaKMUH0URZC","kbBhbRFeSeZV","fVHMDUwoScu4","9ExV6V0PbM8G","DrZ7YB6uCQ4u","N8cZaudFchLG","IpyatGKwGUOZ","W3fu0DHyT4Pi","7FZMQZ2iXypz","FdMC4L4jZPAw","7HrgarLjz7py","g9MkMa69VcbF","RQ28BYk1K5TV","WxbeEuzWbEAb","Jd38GRR4g6C6","DYZ8hCkUmJQO","BEGZmiFDlmIB","fyR5JICBEt8v","3lZESSL6XV87","E1k5iO1XsnqY","wmPrddz1GGiU","myBaPrqvN24R","QbQQoxY3nZXd","1zjFqjA8F75K","8L2JrNu58R9t","9LrUBSPkuOB0","ay3clodUhXwo","CUaMZxCywdhy","bcimQa4bqOzu","WKusmUFDrfLi","TsyzITccFGTR","46GuoehAylpb","ylCCWTZiS2FH","8dbperFI3e1y","fZbF6halp3Qc","6Gn0vlyyIL8A","EKGMn50idBKe","8ZN8YMdT0Ux8","XYBp30svcyxn","EJHxwKq2x24O","Vkwl32UpP3Ze","X77okt5JrKcn","cl4JLxmUwZ4c","8sklcCWP7RDZ","oXiAJaOxNkp1","P77yoCAX66sj","XOkB37l5wA61","bREdyKPy2fLP","cTT2ax5KfRM2","Y0XxHUsqlfMY","y4jjEtNykkhB","Z9znwB7Bcm8q","hG2AoxjDE2Wq","t8efRTf8df0g","Kkc1UXnlsb44","KLOkqoTg4Kyt","miCeHCROdmWJ","M6lKKpUuvMzy","hKNULcnNLHPu","dPp1CLByaAu3","7DVuKp83wVws","eElzSlyNviDL","LBIRL7ZuUJo3","FBdjsQMzi4N6","wN2fhiFJYGhd","WFUWfXvfZ6XZ","ODrpgVgoR1Ae","DgyGizBxgN5W","sSDXrHIn4UcR","01pj8nr4pnLj","TI5YUEtupWXu","WGwZGHO71vhq","uQ2KddVTH0YS","IrZhXJwRCUjd","rdsASoT4Vqnb","jfWEHdkMRiHj","98UoysrHn31H","0XtXZ6DkSRde","sfZrlVr11r7h","eXks0fMR6Rtk","PLzlANNZWi2k","5YRC1c7NZQEn","jjKqfowXdbsI","AELbFDNDWjKd","5bFZ5LBX7Taa","cAz2bWfDee2b","pyKbn849tbk4","dimDZWaEg6gp","8IKf5NZ8ZFf8","YfF3xDkakWh7","zdABdl2WVDio","sSg77qFZ2XYk","dK60ZOEps80W","eEnZcBjWOpg7","3SQxsNlyFHig","VmTBTjiWPf70","2PyExTXNJlHr","nIn6YlGOrnp2","yXK1kl9KdmnS","YbPePMm7YloC","T1iZwtDZweYf","eCCn1dcDDDq7","EMzIYZTk7IwW","t04z3cEi2QXn","KUDHzUypcpIk","l9C36W3WkPwr","AKsv5kazdZTz","CsA8M7GoY0M8","W5P9wsQlCqBN","srBOrBnzR9XV","QX4UE4UEFHfm","jrvBLZtLTKCC","JUj0Isil4tu6","hGQbWITXWnD7","PXu4ATANEX5b","8VuSPweUQXyS","0gWicHVzLvlu","H5cU53UXdo2q","tx6HH7C1pJ23","q0xMEy2lVyYt","05avTKVWwlj2","SPcRb3JlbWS2","Dhae46O9URBm","jCcfFYzEh1yY","C9wHTFEfMwTE","UKpUs9eYeRd9","SWp6VMSuU86Z","InufZh5QZKYn","EmYR0NuUXDjI","6IbTph6FObGK","oHDjofsl2MwZ","8qfn0UgYgP34","H0PvJEN3Qu02","tcaWtAJFkQDV","VHFOTwbYjlKb","j0BL9I2rqUcH","QRyXwEtJRH3u","b1aZjZXARUA0","bff2SMaYxlr8","3tXleK3mbVDG","DlrYW8UVkKx9","zm3zHhS4fAe9","20xjvX0nZ3mO","0AIt9Mqc1FT7","G5wo5JuhNFWe","tpbXvJMlTOxW","cmTAjb0eJCmw","if9nPYtjdC8V","mYCPF38mhIN0","aSCLXdUTOPV5","3NFeU8hccHZm","M45iuM9zFbqN","l0eJqkeHWXQe","F61mHOxnbFO1","PD7RYthqjosQ","C2mKj8xBdc7l","kzDdWWNNzbz7","pGHTKAAOOJwj","f7U6ji3wOHh0","1CX5UBBDHZe9","N3WOUatdiQSf","jBuCG4bjTcSZ","mMXKZEx0Dffj","xFFqM6V3XJQe","8vl4S38pGQKw","UwWOgg8hyI4O","r7KNbWunPViK","m5V0rXKzigx4","HNOIw1zZwElG","wdEHJpdcmyBp","KQGjyIQkcZIZ","u32M2hGb7RJs","0kIwYuK95kgB","SMq47WIDubjh","FJQfwehVdDDB","TxGdWSGEPR4j","ncksSR3QX032","MNOxAJNlq1Ra","fIG5egyOHsqU","FYkgUHBPYjqO","9bA8DidjT1sy","qZu1nZGzjgcq","bb6ehGzgI4OK","uHi44rd3fnAO","SkwkEWQkX0RT","J7iKLMyz3ChK","gcrK6wMCKCzV","ajHdxuvtWYKD","RaumwHP0ux1p","K0qrchd5roRI","yQfaqAEhPotZ","jOP2pnaJJQU3","6JTpLJFuU9wb","xZ1MRPEKa1lL","qJaRRQYjnG6S","HZi8ySn7m08n","obhKELWEfOkM","VMN0Z1w1sKl9","8vWXRawn1bVe","2CeOe8grrD9s","wyTmb16fRtKa","6J5Ffb2Ihruo","L83RlhMM6r9b","Yc60UY5noZ3d","uF4RDnLo51S6","YkXCxmlJ3nJ1","jMe9goZuhHWO","CwLDk1IZphOM","KjSN2zaI0dAJ","l8zIZM42D6EO","0rsmm5PZEbMX","98Q4WHWeObAB","7ot7X6c708Gd","qxsmrzH98xhO","BdzH7kAk3vRX","WYGwhxA0DA4A","ZngII6IBdDrQ","IBtGsLUTfvtY","2KqLWZZxXkAK","jKhMrNyo0FV8","u9oMWJa0etYR","32hpChQq7vKY","yhwYQIKMLxcF","F6gavQZdFxdv","mIv2ie0vuERO","9dZzaMUnFvnb","0vqHyek1QwWF","UQgTZbnHaQi0","AHeOPSqKxcIp","7kvz04XIOmVh","JjSjcrfeEXR8","WD7kN9e74sbh","KyUuYHcZG4WE","WlWXqgRBNQSY","rHOCPEcJyGlG","GV3bpEZAz4uu","7S7nYN3TOR7p","7NmfAmNjJNog","OwKAihoxV3Tp","l21d3yDEXgCx","fcrfsMU4WvuH","g5qJdcbb5zsW","zfHtvlnWuWGz","ht3HQb30Ygjb","WIky9sxRUkuo","0raka7mEs9yM","2QpHGpLnKMx0","dphNlwH186qa","VZMPmvfU3zOI","AE2bSXKl72i3","WvHjMHEvF2Q3","AA06XqX2I29E","XlkRJ960HvqR","24i4ZDrzZ2bi","Wdw6ok3Hi6G1","ndPx0d71271g","QVmGUoNlzkdZ","SW6rQEUqun1e","nAbsKI2wUWw0","iiG1pw05CvVE","qxNoAPZmb3RC","BBZ2erIXejgw","0H4u2uVIHC2L","YhjzdlAkhdHF","YmTW2GW0RwGi","nTmy0DyK6eBS","keO4AjO1NfeH","jEcHv7ZEK1H5","k5PP1YjzAhH2","OPkpIWuvyLv6","hCjUsM9rxBMl","Xxq19N7tEy8r","Rjz19lQze2wC","hDmIIa6vYJFM","aZMxbKMPCozU","tbakscpqJ8Iw","quZ8v0X5aw3i","So89Db8Fivoi","fhwtoA2hd4Gk","VZQOdVC7GkDH","WcSfU45CgShZ","EcpZNx3n9WrG","9GlJiEsFkm01","mKCS8dR0FUZy","w7afuONpMZCi","euT6lkGBlEaM","n9O40vpM8VlH","hTK0r8p6Eeas","jGQotc4qgnyU","BQwdxNZT2mu6","cwGjg5mlguzC","EDNA2GxjfSHu","EnSH13hWK2kj","gklwDmMrbrc5","8JXCvfyxTaR2","njsOppV9h1Cd","4d5QWxSPuKpF","OiIrL0KUgIIp","Yv1CJh3vJ31k","XwmyIhkcuyXj","xi7yhEJSQ03k","SstVoWAtgabL","KIZ8Q2vBy8bf","XhZMEqVoPMJs","HcHj7tQgZw56","bssM6ayvFSiI","dTOcQ9HPvHGv","JkCfnZRbxVnn","M4Q2v5mXTmX4","ihhLJcHrgVvs","BUAHTRu0oAkE","a1NBjUje0K0A","G8kaPoUTSr9h","lX99wQv964sl","cquxV4YG6HZN","plTfdch3YqqL","p1YVm53npAWw","4gWoNtpFL7NV","jjw5ptUc4ymv","NLJ6RgF44bJ8","Dipmf3MMJCup","5Xj3lC2RvVMV","0P7ER7i4Tgrn","F6eTIPZBMzDa","6TZFpNxSfPlE","WMkGLcsFWY4Y","VPCTeyu03zHj","tCvF0wRV32p2","zrYRPAAEbyrD","dqZEz7jMplww","B1OTCAATyokh","RnIrXSNI1TdX","yrzIfW9FZIzz","azEDlmAY1y6L","wioViVNd52Uu","8PheKfc6uAmr","Uvjw8jDnU1S6","hHpUEVqpyznl","jP4eplHYIf5A","jtBDhpUQAyA4","Y8r3VBk0haQd","dGLaN1rJyocq","efAHo9el5WNL","qTexOqvi8osL","v8eLDwGT7fyr","PtOIm3w5VH2w","uH2LmKsL1Pxp","RF2lhUNM9wu1","TfD7vPYDRT8A","6NiyqqoO4I3z","97xHRchUH6Nd","gSUC7qjApW7x","uwPwUDLy5Gs8","QodsX4Pl1BDu","4MU5gInf92A5","V2KHEdplWXes","ADHILwI3pb94","lvG2SEzzNJsX","OJE0FEVtkrOf","3ShR0wLMrKm9","Sn1XJMjWvZfN","2DwQPUZSW85t","WUjJZVF7ODX5","s3MtLJ0fucvC","M4FV72X49Yz4","qYpZyAXIvVdL","HqCMmpDPZRxb","BMElLrM0qxVN","6otGvGAQYicl","K4lRpxs6EgLJ","r3FI4rlrmQ5e","vao15Tajs3KM","83yATrAtpbe5","5COYzelZGDgs","XxrN9vIKfEv2","YHgQ4Ss5jTzm","DlYqozjtbBPe","i8SHTfQoyRzw","ViM04Mh7KzuD","kDfewicm1vZH","4UKMGx4zIYtX","G3ysdb1TaSml","3Hqn8PwCYVu8","DYZoOWF6n3g1","sbLuNt3nWYV6","YCG4YLKTRxUw","iEyoXXgZ8im7","Xr9jMhzPGabP","XtvgrbbdDzOp","PwRULYy5Pi3u","0Y08kUIVvt1z","AfKuI7vxgdmc","o7QnPuHr2uqB","yZt9ztKI3i3I","Pg7WJAqVwKns","UerXFI3LTN61","4XRt9AQbUudM","xVJ0ihyYAl2W","zMPCq9uWRVxD","6FL5SfZ9P3Vu","XuNV98WjAgJS","DAOrz4ptTW4h","9MdiYHsfq3za","chYaB4SwJrmi","5PihmUKSDS8l","UIxphUBKKteB","Y69XBdUoVDQW","4zSVWm4ENqmd","OzXJM0y9cCJe","C1Z46goYXJP3","CsUlX74KeJGA","uDEFpohJkS6k","2ID1T8lKxIVk","o9uHQEhkiQK8","PtUj9hhdj3Xu","qCiBM093wjTV","WjQCElRDuhSI","RR5FrQhXfWhm","qA2rEzO9HmZT","F3EwFKbIZnxy","p1KOHWWFmjxZ","MFtWZLSG5L1P","60zj2nguOsY1","yVA9YzknKhxo","CUW4hw1wjssL","li44q80gMrGR","Qokit1HPN2cT","AssrHGdittqj","le30INiiUdfP","BQIR8yKNeYRB","FVFTMM0KMbFA","SdHJWlxnzTnE","xjmkqeKVlwMk","RYBY1ijUgHPA","KRdicu3rxGsH","cqQB9IMGH48K","3v3A9Nr7Aw20","zoEnF8rxFAoE","nt11vLzxwujA","x11NEx74yIVa","1gbc5jUUAfEI","QUd7mrPnb5Fy","RDGPZam5r6zM","R1trU9410rg2","2GsJQ18Smn6L","Ldf7T1zU2DzA","2En2mgvleRHS","8W1HlIPRznke","hbc7fRpaOzA8","5R1EiXVaiCR3","jjj6GkR9yvil","JwjGgAoJeyCn","Gs3ywjNAlQQu","tKyZfXCCfAbh","VRTRnCmCIZ4U","M4w6gnOqS5VH","pnh8Op7soGfF","ybHXS3xxhV5l","WitVAaFiadv2","zjpn61z0vrgO","jgsaapUOsEcF","MpQUjohisymW","VEgdeHeK6WA8","w1ItMl4ATke1","6PP0MlIxYNOq","0mTWuDUe8MOu","M56VWtrVVrrO","TqZaLWf30WWs","TxEMTKkBEykP","yaW1A0Xo6lpA","VcNDfuaDoMYg","AXhubPVMJaA2","eXZJFN7UXYdZ","RDWbyVX5eSRn","rZ2AV821L59v","uQcMvvZNxByV","wYKNAtJT7TEY","Iw3oozXIOgwC","cSyWcQtDogTn","JCZ4T1pKV872","yqpmEcVdQJBV","PDIsHc2Lj2RY","b2ypZb5lskUD","MoXQihA8dEqx","1jFh17LemvPd","cZdiU1DUPrc8","fZJUYAhUJ5JN","n0khLo6hWO40","z1FG7GZSUzNz","LfxT0qZiKYs9","PErQfc9S0TPS","12aGfoCJ3Ojv","aze3FH1le8H5","NSUQMrzarLud","3slfCHXfu6Hq","VdCaEZC6CIFD","Ycvwfbe2oRvN","1xWfVKPU1f2o","yC5XA5rx5m8Y","Dg9SVxFIs4Bu","Hb3CMscg0igG","8MGVQxaCkd1B","CaMgu28s9a7Q","8dC2OyZV3Sox","TENLoDC2AC6m","XMaQRJ4D8ar0","LS79ERoSLhbd","qdmJWJO9aPYZ","43bgSj8ZJbI6","kKCi5MxwCe2q","ro9sjWyB0jYk","kMCgPjQETVKY","5tw172qvaFCp","KPXEa14Q1h9D","nPQFvXtpV2t7","4s7tKDE9XYEN","yY0C36i0P8e9","GA5WEYOabPiO","b9ZBxHENpB5a","w1IEpk1VwYBO","qX9B95uGR7wc","0VJviQ0Muv9R","3Lhvnm3KVERF","6ZE5VPwSOfoc","u7wqT7nXVJm7","8rit6kDNlaRr","L6EGTZ7DfAYS","YA7BuMKFvL1R","4kT3VImFtNeB","i1NGtYbIwPF2","35X1kzTA1EA3","8iEKDN0fJKxZ","UlaaT5ZED8ul","4Yg3xsoHTaoL","lWnWxBZSUeEs","ZSj4y4odeVB7","477BFQlVQ2uH","pXwfVRrTxEuJ","ruGs7C19aK3L","Atk6b3WNM9WM","TcaFopXE2s9Q","cdpEvgi3mtY3","XPqjK4bwA5u1","cmGQegyh8FEY","sok7Bd8SA1Lu","afjwLWtnXEYA","jR7LzgpwisZK","cl0YjhNXk7ce","GEKP9lGbSs71","uhTd6aki4O4M","JTMvhB1RSvH7","nBaYRJ1RDP8U","E6mljH7V8nqE","u4qyWOZtjpsw","3DmjSjE4Zjkv","ssBKaoYvLJvW","m7yLJiUuMpOq","Y9W0pZaQbkZh","QeMMkot076o3","bcScdBNRa0Ol","UT13tvrNG25N","b8X6RRBsY8H4","mNoOyNzclfJq","CrXmJFxiFSJJ","e2CtkZ8GFGAB","deSWNYn6W6pM","oZrqutoCZ11l","T8k71otoP1pw","6eewiBXp39nR","LQ1y3SH9Mop4","1C5eM7nCa1QV","JBilulDReZDT","iBwvQAA1Ypxu","kA3RbtOvHJHj"];randomBetween(0,e.length);const l=[75879,25220,63,93049,31775];function n(e){var t=0;if(null!=e){for(var o=[],r=e,l=0,n=0,a=0;a<e.length;a++)o.push(r.match(/./)[0]),r=r.replace(/./,""),-1==d.indexOf(o[a])&&-1==u.indexOf(o[a])||(-1!=d.indexOf(o[a])?l+=5*(1+u.indexOf(o[a].toLowerCase())):-1!=u.indexOf(o[a])&&(l+=2*(1+u.indexOf(o[a].toLowerCase())))),0<=Number(o[a])&&(n+=Number(o[a])*Math.floor(Number(o[a])**1.2+1));t=Math.floor((l+n)/8)+l*n}return t}-1!=l.indexOf(n(window.localStorage.getItem("NotorietyEXPCalculator_TesterGatekeep_CodeUsed")))?console.log("Entered correct tester access key: "+window.localStorage.getItem("NotorietyEXPCalculator_TesterGatekeep_CodeUsed")):(r.style.display="none",setTimeout(function(){r.insertAdjacentHTML("beforeend","<div id='NotorietyEXPandInfamyCalculator_TesterGatekeep'></div>"),r.style.display="",r.getElementsByTagName("div")[0].style.display="none",r.getElementsByTagName("div")[0].remove();{const o=document.createElement("p");o.innerHTML="<h1>Tester access only!</h1>Input your access code:<br><input id='NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput'></input> <button id='NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInputSubmit'>Enter</button><br>Attempts remaining: <span id='NotorietyEXPCalculator_TesterGatekeep_CodeAttemptsRemaining'></span>",document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep").appendChild(o),document.createElement("button");var e=Number(window.localStorage.getItem("NotorietyEXPCalculator_TesterGatekeep_CodeAttempts")),t=5-e;document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInputSubmit").addEventListener("click",function(){""!=document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput").value&&0<t&&(-1!=l.indexOf(n(document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput").value))?(window.localStorage.setItem("NotorietyEXPCalculator_TesterGatekeep_CodeUsed",document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput").value),e=0,location.reload()):(e++,window.localStorage.setItem("NotorietyEXPCalculator_TesterGatekeep_CodeAttempts",e)),t=0==e?5:5-e,document.getElementById("NotorietyEXPCalculator_TesterGatekeep_CodeAttemptsRemaining").innerHTML=t)}),document.getElementById("NotorietyEXPCalculator_TesterGatekeep_CodeAttemptsRemaining").innerHTML=t}},0))}();
+!function(){const r=document.getElementById("NotorietyEXPandInfamyCalculator"),u=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],m=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];var e=["O55R6DUlgRoB","DbYLlrHF0gVo","ZwfkEErSTNDC","zPVJPlHEIaal","1rmcPOeOEHUJ","bLw1FVmLh1rI","9IykgB3bABTi","g7j2JAx9RSKG","fDSTRgQRJUld","5YXLj07EdNHg","du44CHHmt4LA","Z9wD0EdymQvM","pSy8LQGgSIE4","qNF1DMhleiPa","5BWfFOWmh0lD","b9F1s9VgqQHe","BrHtzpmCTHpd","6MgQxMMIoCVN","LEDGdoFIoMn0","4mg6qQGGZjCy","UuXM7KkFJL95","cR85vlFMNjmc","uYmT1rTA1kbI","fZGUOLNmHxSK","5CHSQHWJ5oDN","unNqrtLW6X2X","iFVVSKydQ3KD","sBX0At9xRbJ4","DivSdjuLeK8l","mH3hRvFxq1oz","yBOFXRhOxEYn","oYQwd4paO7bl","ZpqZziuLJQax","0Fh5n0CFHDzB","SzB9pG68TWIJ","GSHji3VNGZUU","hbDvUiqE946k","wUQkND42PmW4","qqgUqrTkKkZB","Cz9gbSq4qHm0","iMRropPjrRRg","GH4BzFQgBsag","7r4P85Y07433","RuDuoS1GO9vr","pxJUKLSwTgAk","7bOkNmNnJl3m","0QqK4jJvHh8z","nKlkA7yU9ajB","X52SYPJAmC8J","GauEKK7XeCtX","MqVFscCx9ORS","wQ2rfWnGVSbd","LtrfmaN3WM3S","NXCDuJXhCJXM","n8sKog7ABE8L","cyKJ7IjJr8Rz","ig0o5u5QZ4Ov","nJjDq90zyzsC","hnOiDfZfLXbU","F8ruKqb3gIhB","J3RKjwxiCe5x","zzqhGEt4oJ2K","UVis4PTSBUsE","xSHclt48Mw9l","laijWr3jrA2a","35uUzDEyPmLr","WvlVPzV6RP9d","tfQ1q6vH46eO","F7DOsPCiHKB0","KDCMQTjKlMxR","ULATAfRzpoGi","N6cy1USFuNlO","rvkZuZ88hPSv","RPfP6TRoS4oW","0f5cvtiON6Y9","6rKPihluOza7","ZuqpnHJS31dU","wJr9mqlwuG5d","gs3NLg7eOVyJ","JBolLF4TJfHt","ChWoZ1QBFv1p","lhcLDNNPmFBf","ahk8NTeApv5P","Ls43HNj3echg","vBvqj5GLf2mr","VF6JE170jlgp","VoVCcvwQ2v32","2jaHhjMGaf8Y","jZ85nCDHrmXL","SlDgAg62gJ5C","NcIxlB38u4Ow","0PA8ddMPOpBL","TO1navqQhqBs","36M6wsEHGsr4","OdapaxXUA6Zq","K2GtEF9MeBKJ","rh5nCQrozdR3","fAUbSiGLE0NJ","Q84DBpnH4sCD","lfp4rENbfEtv","s0LEUgYNt9Dx","l3qyjt6FsUYL","F1j66uGR65Ew","MTtJyquLkhQL","7qPQhCVAAmcm","vFHiI6sbE7Y0","B74Iqvx7qVAX","13OXShbx18jV","MdT4HgHWUiVg","rPAPB3iSoGC7","NtV7Ez0C2ClP","6JW7IKYKjs75","aYY4cOE2hQn9","VYiEGWYlLxl6","ohhyujQeW2ka","726PNQOQfVGF","Qp6MyzHHjCRU","yUvT5n8cUjPu","bAtKxIf5qldm","6dkeA3woNVWx","AMeymPD2hCeV","IPnqZ6yW2QzI","5ABIfsrqL9do","phJG6kSA7kBO","yk7rSDq01oqY","E9KcvvOVI2Lq","4ObY1Z1KPQB7","CdyskSho6sr2","hz9tDGsUDRXR","XFjSQiHyVX3e","uWHv4LLgH60C","8MJaCplGri4l","WjswzXOYGPfJ","MrCiFacEcMrI","hMjgu7wlJhEJ","VeCvo7dvpvOr","f3cySLTxngXM","docq8fR1YFdY","duNE1e6VXwTy","fMzK4Hb5Adwg","v3X07J14cnPV","KRe6UbHNZ06y","OKNtwV30cfpH","uPEVbX2GT6bm","PqEb3HuJUNal","IXP02bRgj8UP","tWwDkxUN8qbi","iprfF8G6u3d7","YUWZgkSp9f97","f7kXQpdGnc65","GDVTJfz29pvV","fijS5Pmh2hCl","eC88ghaJrCwK","sz0WHNPDvXVa","3wuOmgLr840Z","sYZIfqgPpFFq","iDrLFV3lqoT9","SK34Ivm5BWGY","96Qtxhlk7915","BupzX7crcL2V","WvK1vCj2IpsZ","7e2gDFsaKgD0","73l03ctwZeEq","1DPWIYW45hcw","cKQrr90ha7Ke","RIdgAx4wAI5d","hkf5L5zE9lCZ","TtUzE2C8UYvB","JznzrJuXqU4I","mz0ZTrKnl5mZ","Ry5cbYWZQZ6P","hXdH0oKpodrQ","QMJkzXpbgOTW","P9PSqBUm6v8l","Cmcr96PLESRr","8kR2luTH9R1f","uLz5xD43yrP7","yba8natyu2wK","8l251u48EXdw","YmIVlImOlf2c","GgK46yqzW6mm","BGxAE6TKplaD","RKPnDcvwY5Kg","10gbrvXa7x8t","P17tepFLXOGV","l34QLc2xcZtE","44ZgYNo6fCrk","BRgpoiGY30Pn","mN7LFpI4YAqK","IjULKbtsfZL0","HEz2ZeV3I5JF","rvNMJr6yU9AK","jQtUuGPybAOc","jKqCzL6ujc0L","MBBQ7qduL2sK","ymIXJs1Ydf8t","N0jEebvLA3OR","0xznrbmr77PV","pib5fP9XZALD","ZH72kxYKUYp1","qve5NhsWlHvR","adjGGGPARPY7","nnDdOQSS74VL","96v6iKCknv4e","b00DBtJoKTNA","k5OQDULVRwmi","3LzIQH9aqbfm","Q3P4wRbbmlfm","0PWwIkpZTwwP","rMhdH7KaftEb","xw4nvq8RdqVO","Zrv3rQWZBAO7","zASxzU3jrBNQ","wOftz12voMBR","RpTafjmz1AmX","nR8Td27BkDtb","D4NdE30KHEAo","zqLTa5SVHnSG","8eeQGr2g7fFd","ESSQQb4LlQdd","om5zTtHfAkGm","RBAAFxTLcFyv","Gb55k0rwIbep","0fHybi33Xctc","Qms07zRXs7Xu","KDwgfrwhEgCs","3kwo49i7b5Zh","EgIshFJv5pWT","l1cqtAKxRgZP","00GaPjckCeYq","h7xxKq9XT3y1","GnIY925eAVV7","dqmtrMAW3BWn","WbG3qugDSE5o","moSJodDuyL7Q","Ic8QRIYnkWsi","sTwIekg1UBxQ","CYGdlvjZCfuy","MIxeUEfRNIlM","bt4unI0XsS5G","azmBmZbluwov","RSFSWzHbg2Yx","ErCBNwYXhzYV","jl7BBjRSDlxd","5CYIw1HfGCfn","qXNQaVcKTWnd","jCQeEh5dOse8","ludRA0H8FIjW","FSDaYyNPCZTC","BlegVSpuW3C0","6hsxVYEf23lB","cQfkj8M2Fl2H","vjptLaDvUCxT","iJ4wXLLHEbKh","PSfgpN4c7ld1","DpC3Ok5xkGLx","fmtGrVcqfu1d","b5eJFLHGXqnJ","3DuDc2ZX8Fex","W43qyI62yRDe","JKjj1m4ysnBa","FksQuM2Whm9W","8rSPP34WWNAa","yIKubkJVkkuy","h9CriGMXlJeY","AqwzpFTEijRM","Psxjd7hKrOGV","Xjs7cjNgrSsi","0NwHuG3l2Pb8","szOMgAtlWD6E","Duoa4f884qfJ","2qS2qDrEE8L9","n7GqgY06AAWi","sZk2FSD5NFoS","RYTFlwzFtifY","Bt4DF0wb2sxo","hMnj6aiqdeQF","w1sJfHBRole1","F6C40ENCFdNw","ytfdL1ffb8sK","9PMofA1f01hV","6jOAEkUPy0UA","Dwyw0BboDI2f","q4tnzlVjehZQ","lvILxgXP0TLB","Qs8t7mo9AUcS","PpPfhklMqtin","tR5rnH66RXQU","CrHwPPLbDye8","NxtoeA1eyxBE","JDkDS815l4gG","GsfePKv7iO58","ir2F6F20Vxp4","s6Gwdn3YOOll","pV8XzE3EyrnB","MxrL2cpjJsNS","gEdzgVat7x2P","jOmXtb5bIoK7","djNs8NmqhImx","AD8GkNlGwqY3","KfhHGO8yzkMF","QMaYI9DpFbcz","Vyduvaju9u4T","9G4BsQ5WF1mt","HRbNwxUDXySG","PFoMVulyYS5K","SX2KAlPSLidl","RqfpqNGdnAjj","7prBpha8qaIn","OS6asRo55jtH","Nix51GPO6Aei","Q4hYua1lQKf6","4kMB4Utbqdrt","jAIoaPxkWWB6","EylEdqj9CWi7","Jn3yqob21zHS","9xkYGaaVGOMM","v1xlK0KEVNwI","0lBv9wi5Bba1","VDAEIP6x2mPn","9rPAtwiCcfcq","qOBLF4y3WKBg","172Jel5DPTbJ","JdGjGpT54UYi","nxrFIZ8yGCOR","RLV10DGeTqGf","CnJWZDANFKow","SkT893N7mHhG","swaKBsOVusjA","e1vt7CGZ2F6u","bOnuUBMEAyyB","IlYMuGG5l9b2","YfeY9YcNmclQ","xjBKabVjj1ba","UhTJ6MMzugmz","FKCkq5O9OPKE","ABoBx0NYbQEB","H0VQzU1cZBoP","iaZtQ4auzWJD","tP7yszmnCRwJ","GVVtcGKzTZYP","e5d3lsyYLFUf","PZ2nAGmAJPfL","FA6VgrkYUtIt","NjgxqZjOhEsB","MvQl28yA5oYl","cymLhKOukP33","4jVKNPNF9rXG","6sDYAwBSqMhN","cqZpN7sYmsQ0","YOK9TeShDley","g0RbNdjNyO5Q","6cfNnE2Ql0W6","I9TUGE4RCLVq","Jn3AyWHtm5D4","WbuK98K2lN08","aW25QabZwZhL","53l2oosAW5Gf","5OeDTBU0PCIK","Owobyjl6F99d","4MMVOsvAPcgd","aSbWnHtWkDFK","zi8mnv4rGRfB","bTNt11iz6EXb","JU6b4HoLpiJv","Znydw8CCax3w","0tzYCRfMRRV3","UH4TgrhebhWp","uldi8N8xWFsk","tY77uuvMhFGR","xT55L9ieOQSg","US58zNXhSx0S","aVMhVgimX4pT","2bh1lXxdhptw","0kyjTU19rPUF","roH4DvZk87nD","Jo6p2iLiAvPG","OfiN2R8b3uXL","0Nx3TEk0tfYu","I8nBf1HyELBp","ztxizd0SZhWV","bCny5WTfuVCJ","KPcu9Yqag5cY","9qJnN334snKQ","N2bofwQ2v7MC","7oI0ncykOshn","A7L6WraDmbkp","SFmVcYQx5pzX","EmEd8IRdwJZ2","DYSM1VawjQ48","Q6JxQK7rJUYS","8emJT0w6Tc5e","NXtKB51wB4aX","b2RcMz3VIiwK","nvsaQMnef4pS","vkXZ0521iOMp","JXLTxDAdWseT","8kVg3wvUrztF","K3kri58kyz8X","3B72oEFct6fp","g1mOWpRno2rB","AMzPWprxzH8Q","7nCIBexsgsvx","qDkXyOVmpNTE","v40f7Gyxp6eg","x7mxZvVyGwZ4","0UGLTnUYxD1S","p8S7mvvyvzRy","IGfqzTpCFIfS","O2MO8IWAM4Yw","j18cSRPSbuV5","mlDON3vNMuVC","QY2mZgOgZUnP","VHMoR9YaodvH","XETgB6E10UFa","vt0ZqQNmOdNd","qDuYD79CSJRn","GvGi7mYhOQRe","WSX02NLlXPAH","HmkzAvMijXHI","YCk7VHoeHegz","uy4nDAWW4q5S","V6BGShZ9K6Zr","GMmXn4ztVLpZ","krD50RQR4Cii","IQTOiX6kZEuP","NPaKMUH0URZC","kbBhbRFeSeZV","fVHMDUwoScu4","9ExV6V0PbM8G","DrZ7YB6uCQ4u","N8cZaudFchLG","IpyatGKwGUOZ","W3fu0DHyT4Pi","7FZMQZ2iXypz","FdMC4L4jZPAw","7HrgarLjz7py","g9MkMa69VcbF","RQ28BYk1K5TV","WxbeEuzWbEAb","Jd38GRR4g6C6","DYZ8hCkUmJQO","BEGZmiFDlmIB","fyR5JICBEt8v","3lZESSL6XV87","E1k5iO1XsnqY","wmPrddz1GGiU","myBaPrqvN24R","QbQQoxY3nZXd","1zjFqjA8F75K","8L2JrNu58R9t","9LrUBSPkuOB0","ay3clodUhXwo","CUaMZxCywdhy","bcimQa4bqOzu","WKusmUFDrfLi","TsyzITccFGTR","46GuoehAylpb","ylCCWTZiS2FH","8dbperFI3e1y","fZbF6halp3Qc","6Gn0vlyyIL8A","EKGMn50idBKe","8ZN8YMdT0Ux8","XYBp30svcyxn","EJHxwKq2x24O","Vkwl32UpP3Ze","X77okt5JrKcn","cl4JLxmUwZ4c","8sklcCWP7RDZ","oXiAJaOxNkp1","P77yoCAX66sj","XOkB37l5wA61","bREdyKPy2fLP","cTT2ax5KfRM2","Y0XxHUsqlfMY","y4jjEtNykkhB","Z9znwB7Bcm8q","hG2AoxjDE2Wq","t8efRTf8df0g","Kkc1UXnlsb44","KLOkqoTg4Kyt","miCeHCROdmWJ","M6lKKpUuvMzy","hKNULcnNLHPu","dPp1CLByaAu3","7DVuKp83wVws","eElzSlyNviDL","LBIRL7ZuUJo3","FBdjsQMzi4N6","wN2fhiFJYGhd","WFUWfXvfZ6XZ","ODrpgVgoR1Ae","DgyGizBxgN5W","sSDXrHIn4UcR","01pj8nr4pnLj","TI5YUEtupWXu","WGwZGHO71vhq","uQ2KddVTH0YS","IrZhXJwRCUjd","rdsASoT4Vqnb","jfWEHdkMRiHj","98UoysrHn31H","0XtXZ6DkSRde","sfZrlVr11r7h","eXks0fMR6Rtk","PLzlANNZWi2k","5YRC1c7NZQEn","jjKqfowXdbsI","AELbFDNDWjKd","5bFZ5LBX7Taa","cAz2bWfDee2b","pyKbn849tbk4","dimDZWaEg6gp","8IKf5NZ8ZFf8","YfF3xDkakWh7","zdABdl2WVDio","sSg77qFZ2XYk","dK60ZOEps80W","eEnZcBjWOpg7","3SQxsNlyFHig","VmTBTjiWPf70","2PyExTXNJlHr","nIn6YlGOrnp2","yXK1kl9KdmnS","YbPePMm7YloC","T1iZwtDZweYf","eCCn1dcDDDq7","EMzIYZTk7IwW","t04z3cEi2QXn","KUDHzUypcpIk","l9C36W3WkPwr","AKsv5kazdZTz","CsA8M7GoY0M8","W5P9wsQlCqBN","srBOrBnzR9XV","QX4UE4UEFHfm","jrvBLZtLTKCC","JUj0Isil4tu6","hGQbWITXWnD7","PXu4ATANEX5b","8VuSPweUQXyS","0gWicHVzLvlu","H5cU53UXdo2q","tx6HH7C1pJ23","q0xMEy2lVyYt","05avTKVWwlj2","SPcRb3JlbWS2","Dhae46O9URBm","jCcfFYzEh1yY","C9wHTFEfMwTE","UKpUs9eYeRd9","SWp6VMSuU86Z","InufZh5QZKYn","EmYR0NuUXDjI","6IbTph6FObGK","oHDjofsl2MwZ","8qfn0UgYgP34","H0PvJEN3Qu02","tcaWtAJFkQDV","VHFOTwbYjlKb","j0BL9I2rqUcH","QRyXwEtJRH3u","b1aZjZXARUA0","bff2SMaYxlr8","3tXleK3mbVDG","DlrYW8UVkKx9","zm3zHhS4fAe9","20xjvX0nZ3mO","0AIt9Mqc1FT7","G5wo5JuhNFWe","tpbXvJMlTOxW","cmTAjb0eJCmw","if9nPYtjdC8V","mYCPF38mhIN0","aSCLXdUTOPV5","3NFeU8hccHZm","M45iuM9zFbqN","l0eJqkeHWXQe","F61mHOxnbFO1","PD7RYthqjosQ","C2mKj8xBdc7l","kzDdWWNNzbz7","pGHTKAAOOJwj","f7U6ji3wOHh0","1CX5UBBDHZe9","N3WOUatdiQSf","jBuCG4bjTcSZ","mMXKZEx0Dffj","xFFqM6V3XJQe","8vl4S38pGQKw","UwWOgg8hyI4O","r7KNbWunPViK","m5V0rXKzigx4","HNOIw1zZwElG","wdEHJpdcmyBp","KQGjyIQkcZIZ","u32M2hGb7RJs","0kIwYuK95kgB","SMq47WIDubjh","FJQfwehVdDDB","TxGdWSGEPR4j","ncksSR3QX032","MNOxAJNlq1Ra","fIG5egyOHsqU","FYkgUHBPYjqO","9bA8DidjT1sy","qZu1nZGzjgcq","bb6ehGzgI4OK","uHi44rd3fnAO","SkwkEWQkX0RT","J7iKLMyz3ChK","gcrK6wMCKCzV","ajHdxuvtWYKD","RaumwHP0ux1p","K0qrchd5roRI","yQfaqAEhPotZ","jOP2pnaJJQU3","6JTpLJFuU9wb","xZ1MRPEKa1lL","qJaRRQYjnG6S","HZi8ySn7m08n","obhKELWEfOkM","VMN0Z1w1sKl9","8vWXRawn1bVe","2CeOe8grrD9s","wyTmb16fRtKa","6J5Ffb2Ihruo","L83RlhMM6r9b","Yc60UY5noZ3d","uF4RDnLo51S6","YkXCxmlJ3nJ1","jMe9goZuhHWO","CwLDk1IZphOM","KjSN2zaI0dAJ","l8zIZM42D6EO","0rsmm5PZEbMX","98Q4WHWeObAB","7ot7X6c708Gd","qxsmrzH98xhO","BdzH7kAk3vRX","WYGwhxA0DA4A","ZngII6IBdDrQ","IBtGsLUTfvtY","2KqLWZZxXkAK","jKhMrNyo0FV8","u9oMWJa0etYR","32hpChQq7vKY","yhwYQIKMLxcF","F6gavQZdFxdv","mIv2ie0vuERO","9dZzaMUnFvnb","0vqHyek1QwWF","UQgTZbnHaQi0","AHeOPSqKxcIp","7kvz04XIOmVh","JjSjcrfeEXR8","WD7kN9e74sbh","KyUuYHcZG4WE","WlWXqgRBNQSY","rHOCPEcJyGlG","GV3bpEZAz4uu","7S7nYN3TOR7p","7NmfAmNjJNog","OwKAihoxV3Tp","l21d3yDEXgCx","fcrfsMU4WvuH","g5qJdcbb5zsW","zfHtvlnWuWGz","ht3HQb30Ygjb","WIky9sxRUkuo","0raka7mEs9yM","2QpHGpLnKMx0","dphNlwH186qa","VZMPmvfU3zOI","AE2bSXKl72i3","WvHjMHEvF2Q3","AA06XqX2I29E","XlkRJ960HvqR","24i4ZDrzZ2bi","Wdw6ok3Hi6G1","ndPx0d71271g","QVmGUoNlzkdZ","SW6rQEUqun1e","nAbsKI2wUWw0","iiG1pw05CvVE","qxNoAPZmb3RC","BBZ2erIXejgw","0H4u2uVIHC2L","YhjzdlAkhdHF","YmTW2GW0RwGi","nTmy0DyK6eBS","keO4AjO1NfeH","jEcHv7ZEK1H5","k5PP1YjzAhH2","OPkpIWuvyLv6","hCjUsM9rxBMl","Xxq19N7tEy8r","Rjz19lQze2wC","hDmIIa6vYJFM","aZMxbKMPCozU","tbakscpqJ8Iw","quZ8v0X5aw3i","So89Db8Fivoi","fhwtoA2hd4Gk","VZQOdVC7GkDH","WcSfU45CgShZ","EcpZNx3n9WrG","9GlJiEsFkm01","mKCS8dR0FUZy","w7afuONpMZCi","euT6lkGBlEaM","n9O40vpM8VlH","hTK0r8p6Eeas","jGQotc4qgnyU","BQwdxNZT2mu6","cwGjg5mlguzC","EDNA2GxjfSHu","EnSH13hWK2kj","gklwDmMrbrc5","8JXCvfyxTaR2","njsOppV9h1Cd","4d5QWxSPuKpF","OiIrL0KUgIIp","Yv1CJh3vJ31k","XwmyIhkcuyXj","xi7yhEJSQ03k","SstVoWAtgabL","KIZ8Q2vBy8bf","XhZMEqVoPMJs","HcHj7tQgZw56","bssM6ayvFSiI","dTOcQ9HPvHGv","JkCfnZRbxVnn","M4Q2v5mXTmX4","ihhLJcHrgVvs","BUAHTRu0oAkE","a1NBjUje0K0A","G8kaPoUTSr9h","lX99wQv964sl","cquxV4YG6HZN","plTfdch3YqqL","p1YVm53npAWw","4gWoNtpFL7NV","jjw5ptUc4ymv","NLJ6RgF44bJ8","Dipmf3MMJCup","5Xj3lC2RvVMV","0P7ER7i4Tgrn","F6eTIPZBMzDa","6TZFpNxSfPlE","WMkGLcsFWY4Y","VPCTeyu03zHj","tCvF0wRV32p2","zrYRPAAEbyrD","dqZEz7jMplww","B1OTCAATyokh","RnIrXSNI1TdX","yrzIfW9FZIzz","azEDlmAY1y6L","wioViVNd52Uu","8PheKfc6uAmr","Uvjw8jDnU1S6","hHpUEVqpyznl","jP4eplHYIf5A","jtBDhpUQAyA4","Y8r3VBk0haQd","dGLaN1rJyocq","efAHo9el5WNL","qTexOqvi8osL","v8eLDwGT7fyr","PtOIm3w5VH2w","uH2LmKsL1Pxp","RF2lhUNM9wu1","TfD7vPYDRT8A","6NiyqqoO4I3z","97xHRchUH6Nd","gSUC7qjApW7x","uwPwUDLy5Gs8","QodsX4Pl1BDu","4MU5gInf92A5","V2KHEdplWXes","ADHILwI3pb94","lvG2SEzzNJsX","OJE0FEVtkrOf","3ShR0wLMrKm9","Sn1XJMjWvZfN","2DwQPUZSW85t","WUjJZVF7ODX5","s3MtLJ0fucvC","M4FV72X49Yz4","qYpZyAXIvVdL","HqCMmpDPZRxb","BMElLrM0qxVN","6otGvGAQYicl","K4lRpxs6EgLJ","r3FI4rlrmQ5e","vao15Tajs3KM","83yATrAtpbe5","5COYzelZGDgs","XxrN9vIKfEv2","YHgQ4Ss5jTzm","DlYqozjtbBPe","i8SHTfQoyRzw","ViM04Mh7KzuD","kDfewicm1vZH","4UKMGx4zIYtX","G3ysdb1TaSml","3Hqn8PwCYVu8","DYZoOWF6n3g1","sbLuNt3nWYV6","YCG4YLKTRxUw","iEyoXXgZ8im7","Xr9jMhzPGabP","XtvgrbbdDzOp","PwRULYy5Pi3u","0Y08kUIVvt1z","AfKuI7vxgdmc","o7QnPuHr2uqB","yZt9ztKI3i3I","Pg7WJAqVwKns","UerXFI3LTN61","4XRt9AQbUudM","xVJ0ihyYAl2W","zMPCq9uWRVxD","6FL5SfZ9P3Vu","XuNV98WjAgJS","DAOrz4ptTW4h","9MdiYHsfq3za","chYaB4SwJrmi","5PihmUKSDS8l","UIxphUBKKteB","Y69XBdUoVDQW","4zSVWm4ENqmd","OzXJM0y9cCJe","C1Z46goYXJP3","CsUlX74KeJGA","uDEFpohJkS6k","2ID1T8lKxIVk","o9uHQEhkiQK8","PtUj9hhdj3Xu","qCiBM093wjTV","WjQCElRDuhSI","RR5FrQhXfWhm","qA2rEzO9HmZT","F3EwFKbIZnxy","p1KOHWWFmjxZ","MFtWZLSG5L1P","60zj2nguOsY1","yVA9YzknKhxo","CUW4hw1wjssL","li44q80gMrGR","Qokit1HPN2cT","AssrHGdittqj","le30INiiUdfP","BQIR8yKNeYRB","FVFTMM0KMbFA","SdHJWlxnzTnE","xjmkqeKVlwMk","RYBY1ijUgHPA","KRdicu3rxGsH","cqQB9IMGH48K","3v3A9Nr7Aw20","zoEnF8rxFAoE","nt11vLzxwujA","x11NEx74yIVa","1gbc5jUUAfEI","QUd7mrPnb5Fy","RDGPZam5r6zM","R1trU9410rg2","2GsJQ18Smn6L","Ldf7T1zU2DzA","2En2mgvleRHS","8W1HlIPRznke","hbc7fRpaOzA8","5R1EiXVaiCR3","jjj6GkR9yvil","JwjGgAoJeyCn","Gs3ywjNAlQQu","tKyZfXCCfAbh","VRTRnCmCIZ4U","M4w6gnOqS5VH","pnh8Op7soGfF","ybHXS3xxhV5l","WitVAaFiadv2","zjpn61z0vrgO","jgsaapUOsEcF","MpQUjohisymW","VEgdeHeK6WA8","w1ItMl4ATke1","6PP0MlIxYNOq","0mTWuDUe8MOu","M56VWtrVVrrO","TqZaLWf30WWs","TxEMTKkBEykP","yaW1A0Xo6lpA","VcNDfuaDoMYg","AXhubPVMJaA2","eXZJFN7UXYdZ","RDWbyVX5eSRn","rZ2AV821L59v","uQcMvvZNxByV","wYKNAtJT7TEY","Iw3oozXIOgwC","cSyWcQtDogTn","JCZ4T1pKV872","yqpmEcVdQJBV","PDIsHc2Lj2RY","b2ypZb5lskUD","MoXQihA8dEqx","1jFh17LemvPd","cZdiU1DUPrc8","fZJUYAhUJ5JN","n0khLo6hWO40","z1FG7GZSUzNz","LfxT0qZiKYs9","PErQfc9S0TPS","12aGfoCJ3Ojv","aze3FH1le8H5","NSUQMrzarLud","3slfCHXfu6Hq","VdCaEZC6CIFD","Ycvwfbe2oRvN","1xWfVKPU1f2o","yC5XA5rx5m8Y","Dg9SVxFIs4Bu","Hb3CMscg0igG","8MGVQxaCkd1B","CaMgu28s9a7Q","8dC2OyZV3Sox","TENLoDC2AC6m","XMaQRJ4D8ar0","LS79ERoSLhbd","qdmJWJO9aPYZ","43bgSj8ZJbI6","kKCi5MxwCe2q","ro9sjWyB0jYk","kMCgPjQETVKY","5tw172qvaFCp","KPXEa14Q1h9D","nPQFvXtpV2t7","4s7tKDE9XYEN","yY0C36i0P8e9","GA5WEYOabPiO","b9ZBxHENpB5a","w1IEpk1VwYBO","qX9B95uGR7wc","0VJviQ0Muv9R","3Lhvnm3KVERF","6ZE5VPwSOfoc","u7wqT7nXVJm7","8rit6kDNlaRr","L6EGTZ7DfAYS","YA7BuMKFvL1R","4kT3VImFtNeB","i1NGtYbIwPF2","35X1kzTA1EA3","8iEKDN0fJKxZ","UlaaT5ZED8ul","4Yg3xsoHTaoL","lWnWxBZSUeEs","ZSj4y4odeVB7","477BFQlVQ2uH","pXwfVRrTxEuJ","ruGs7C19aK3L","Atk6b3WNM9WM","TcaFopXE2s9Q","cdpEvgi3mtY3","XPqjK4bwA5u1","cmGQegyh8FEY","sok7Bd8SA1Lu","afjwLWtnXEYA","jR7LzgpwisZK","cl0YjhNXk7ce","GEKP9lGbSs71","uhTd6aki4O4M","JTMvhB1RSvH7","nBaYRJ1RDP8U","E6mljH7V8nqE","u4qyWOZtjpsw","3DmjSjE4Zjkv","ssBKaoYvLJvW","m7yLJiUuMpOq","Y9W0pZaQbkZh","QeMMkot076o3","bcScdBNRa0Ol","UT13tvrNG25N","b8X6RRBsY8H4","mNoOyNzclfJq","CrXmJFxiFSJJ","e2CtkZ8GFGAB","deSWNYn6W6pM","oZrqutoCZ11l","T8k71otoP1pw","6eewiBXp39nR","LQ1y3SH9Mop4","1C5eM7nCa1QV","JBilulDReZDT","iBwvQAA1Ypxu","kA3RbtOvHJHj"];randomBetween(0,e.length);const l=[75879,25220,63,93049,31775];function n(e){var t=0;if(null!=e){for(var o=[],r=e,l=0,n=0,a=e.length,d=0;d<a;d++)o.push(r.match(/./)[0]),r=r.replace(/./,""),-1==u.indexOf(o[d])&&-1==m.indexOf(o[d])||(-1!=u.indexOf(o[d])?l+=5*(1+m.indexOf(o[d].toLowerCase())):-1!=m.indexOf(o[d])&&(l+=2*(1+m.indexOf(o[d].toLowerCase())))),0<=Number(o[d])&&(n+=Number(o[d])*Math.floor(Number(o[d])**1.2+1));t=Math.floor((l+n)/8)+l*n}return t}-1!=l.indexOf(n(window.localStorage.getItem("NotorietyEXPCalculator_TesterGatekeep_CodeUsed")))?console.log("Entered correct tester access key: "+window.localStorage.getItem("NotorietyEXPCalculator_TesterGatekeep_CodeUsed")):(r.style.display="none",setTimeout(function(){r.insertAdjacentHTML("beforeend","<div id='NotorietyEXPandInfamyCalculator_TesterGatekeep'></div>"),r.style.display="",r.getElementsByTagName("div")[0].style.display="none",r.getElementsByTagName("div")[0].remove();{const o=document.createElement("p");o.innerHTML="<h1>Tester access only!</h1>Input your access code:<br><input id='NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput'></input> <button id='NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInputSubmit'>Enter</button><br>Attempts remaining: <span id='NotorietyEXPCalculator_TesterGatekeep_CodeAttemptsRemaining'></span>",document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep").appendChild(o),document.createElement("button");var e=Number(window.localStorage.getItem("NotorietyEXPCalculator_TesterGatekeep_CodeAttempts")),t=5-e;document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInputSubmit").addEventListener("click",function(){""!=document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput").value&&0<t&&(-1!=l.indexOf(n(document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput").value))?(window.localStorage.setItem("NotorietyEXPCalculator_TesterGatekeep_CodeUsed",document.getElementById("NotorietyEXPandInfamyCalculator_TesterGatekeep_CodeInput").value),e=0,location.reload()):(e++,window.localStorage.setItem("NotorietyEXPCalculator_TesterGatekeep_CodeAttempts",e)),t=0==e?5:5-e,document.getElementById("NotorietyEXPCalculator_TesterGatekeep_CodeAttemptsRemaining").innerHTML=t)}),document.getElementById("NotorietyEXPCalculator_TesterGatekeep_CodeAttemptsRemaining").innerHTML=t}},0))}();
 
 (function() {
 	function NotoExpReqTotal(settings_a, base, goal) {
@@ -49,12 +49,12 @@
 			// console.log(extraEXP_a);
 			// extra infamies:
 			var maxInfamies = new Decimal(250);
-			if (data.toggleInfiniteInfamies_Global == 1) {
+			if (data.MainSetting_Calculator_ToggleInfiniteInfamies == 1) {
 				maxInfamies = new Decimal(Infinity);
 			}
 			if (settings_a.currentInfamyLevel.lessThan(maxInfamies)) {
 				if (extraEXP_a.greaterThanOrEqualTo(reputationTotalEXP)) {
-					if (data.toggleInfiniteInfamies_Global == 0) {
+					if (data.MainSetting_Calculator_ToggleInfiniteInfamies == 0) {
 						output.extraInfamyLevels = extraEXP_a.dividedBy(reputationTotalEXP).floor().min(maxInfamies.sub(settings_a.currentInfamyLevel));
 					} else {
 						output.extraInfamyLevels = extraEXP_a.dividedBy(reputationTotalEXP).floor();
@@ -110,27 +110,26 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.5.0 " + '"' + "Eternally Expanding Hall" + '"' + " testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	// Base HTML
 	(function() {
-		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
-		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
-		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous'></div>"
-		tool_baseHTML += "</div>"
+		const tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(2.0.0 " + '"' + "The Completely Overkill Update" + '"' + " testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></p></div><br>"
+		+ "<center id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous'></div>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Settings'></div>"
+		+ "</div>";
+		
+		document.getElementById('NotorietyEXPandInfamyCalculator').innerHTML = tool_baseHTML;
 	}());
 	
-	document.getElementById('NotorietyEXPandInfamyCalculator').innerHTML = tool_baseHTML;
-	
+	// Menu: Calculator
 	(function() {
-		var tool_baseHTML_MenuContainer_Calculator = ""
+		const tool_baseHTML_MenuContainer_Calculator = ""
 		+ "<div id='NotorietyEXPandInfamyCalculator_Section_GlobalSettings'>"
-		+ "<h2>Global Settings</h2>"
-		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global' style='cursor:pointer;float:left'>Input method: <u>Sliders</u></div><br></small>"
-		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleRomanNumerals_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleRomanNumerals_Global' style='cursor:pointer;float:left'>Roman numerals: <u>ON</u></div><br></small>"
-		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputExplanations_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInputExplanations_Global' style='cursor:pointer;float:left'>Input explanations: <u>Visible</u></div><br></small>"
-		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleComputationType_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleComputationType_Global' style='cursor:pointer;float:left'>Computing: <u>EXP, Levels & Infamy</u></div><br></small>"
-		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInfiniteInfamies_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleInfiniteInfamies_Global' style='cursor:pointer;float:left'>Maximum infamies: <u>250</u></div><br></small>"
-		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleAutoCalculate_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleAutoCalculate_Global' style='cursor:pointer;float:left'>Auto calculate: <u>OFF</u></div><br></small>"
-		+ "<small class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleTimeOutputFormat_Global'><div id='NotorietyEXPandInfamyCalculator_ToggleTimeOutputFormat_Global' style='cursor:pointer;float:left'>Time output format: <u>words</u></div><br></small>"
+		+ "<h2>Menu Settings</h2>"
+		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Calculator_ToggleComputationType'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Calculator_ToggleComputationType' style='cursor:pointer'>Computing: <u>EXP, Levels & Infamy</u></p></div>"
+		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Calculator_ToggleInfiniteInfamies'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Calculator_ToggleInfiniteInfamies' style='cursor:pointer'>Maximum infamies: <u>250</u></p></div>"
+		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Calculator_ToggleAutoCalculate'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Calculator_ToggleAutoCalculate' style='cursor:pointer'>Auto calculate: <u>OFF</u></p></div>"
 		+ "</div>"
 		
 		+ "<div id='NotorietyEXPandInfamyCalculator_Section_LevelSettings'>"
@@ -180,28 +179,73 @@
 		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Calculator').innerHTML = tool_baseHTML_MenuContainer_Calculator;
 	}());
 	
+	// Menu: Miscellaneous
 	(function() {
-		var tool_baseHTML_MenuContainer_Miscellaneous = '';
+		const tool_baseHTML_MenuContainer_Miscellaneous = ''
 		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_HallofInfamyCCLs'>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<h2>Hall of CCLs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'>(toggle visibility)</span></small>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs' style='text-align:initial;display:none'>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_HallofInfamyCCLs'>"
+		+ "<h2>Hall of CCLs</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'>(toggle visibility)</span></small>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs' style='text-align:initial;display:none'>"
+		+ "</div>"
+		+ "</div>"
 		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_Timers'>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Timers</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_Timers'>(toggle visibility)</span></small>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers' style='text-align:initial;display:none'>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
-		
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_Section_UpdateLog'>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<hr/><h2>Update Log</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'>(toggle visibility)</span></small>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog' style='text-align:initial;display:none'>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
-		tool_baseHTML_MenuContainer_Miscellaneous += "</div>";
+		+ "<div id='NotorietyEXPandInfamyCalculator_Section_Timers'>"
+		+ "<hr/><h2>Timers</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_SectionContainerToggle_Timers'>(toggle visibility)</span></small>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers' style='text-align:initial;display:none'>"
+		+ "</div>"
+		+ "</div>";
 		
 		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous').innerHTML = tool_baseHTML_MenuContainer_Miscellaneous;
+	}());
+	
+	// Menu: Settings
+	(function() {
+		const tool_baseHTML_MenuContainer_Settings = ""
+		+ "<div id='NotorietyEXPandInfamyCalculator_Menu_Settings_Section_GlobalSettings'>"
+		+ "<h2>Global Settings</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainerToggle_GlobalSettings'>(toggle visibility)</span></small>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainer_GlobalSettings' style='text-align:initial;display:block'>"
+		+ "<p>These are 'common' settings which apply throughout more than one menu in the tool. Note: These aren't all the tool's settings, check the other menus for more.</p>"
+		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleInputSliders'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleInputSliders' style='cursor:pointer'>Input method: <u>Sliders</u></p></div>"
+		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleInputExplanations'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleInputExplanations' style='cursor:pointer'>Input explanations: <u>Visible</u></p></div>"
+		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleRomanNumerals'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleRomanNumerals' style='cursor:pointer'>Roman numerals: <u>ON</u></p></div>"
+		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleTimeOutputFormat'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleTimeOutputFormat' style='cursor:pointer'>Time output format: <u>words</u></p></div>"
+		+ "<p></p><i>[WIP]</i> Time output names:<br/>"
+		+ "<input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Millisecond' type='checkbox' checked='true'>Milliseconds (ms)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Second' type='checkbox' checked='true'>Seconds (s)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Minute' type='checkbox' checked='true'>Minutes (m)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Hour' type='checkbox' checked='true'>Hours (h)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Day' type='checkbox' checked='true'>Days (d)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Week' type='checkbox' checked='true'>Weeks (w)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Month' type='checkbox' checked='true'>Months (mo)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Year' type='checkbox' checked='true'>Years (y)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Decade' type='checkbox' checked='true'>Decades (de)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Century' type='checkbox' checked='true'>Centuries (c)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Millennium' type='checkbox' checked='true'>Millennia (mi)</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_NotorietyUpdateInterval' type='checkbox' checked='true'>(Easter Egg) ??? 🗿</input>"
+		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_ExcludeOptions' type='checkbox'>Exclude?</input>"
+		+ "</p>"
+		+ "<p class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_Saturation'>Saturation: <input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_Saturation' type='range' min='0' max='100' value='100' class='slider' style='width:10em'></input><br><span style='font-size:80%'><span id='NotorietyEXPandInfamyCalculator_MainSetting_Global_Saturation_InputResult'>undefined</span></span></p>"
+		+ "<p></p><div style='width:10em;height:4em;margin:auto'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_Menu_Settings_Section_GlobalSettings_UpdateGlobalSettings' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Update all Global Settings</button></div>"
+		+ "</div>"
+		+ "</div>"
+		/*
+		+ "<p></p>Filter: Classic infamy suits<br/>"
+		+ "<input id='NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson' type='checkbox'>Crimson (250)</input>"
+		*/
+		
+		+ "<div id='NotorietyEXPandInfamyCalculator_Menu_Settings_Section_Credits'>"
+		+ "<hr/><h2>Credits</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainerToggle_Credits'>(toggle visibility)</span></small>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainer_Credits' style='text-align:initial;display:none'>"
+		+ "</div>"
+		+ "</div>"
+		
+		+ "<div id='NotorietyEXPandInfamyCalculator_Menu_Settings_Section_UpdateLog'>"
+		+ "<hr/><h2>Update Log</h2><small><span style='text-decoration:underline;cursor:pointer' id='NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainerToggle_UpdateLog'>(toggle visibility)</span></small>"
+		+ "<div id='NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainer_UpdateLog' style='text-align:initial;display:none'>"
+		+ "</div>"
+		+ "</div>";
+		
+		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Settings').innerHTML = tool_baseHTML_MenuContainer_Settings;
 	}());
 	
 	var filterDaysOptions = "<option value='undefined'>day</option>";
@@ -255,29 +299,31 @@
 	+ "<li>Due to technical limitations, milliseconds may be about 1 or 2 off.</li>"
 	+ "<li>Timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute:second:millisecond</b> format.</li>"
 	+ "<li>Challenges timestamps are noted in the browser's detected local time zone in <b>year-month-day 24hour:minute</b> format.</li>"
-	+ "<li>All times are based on UTC offsets (<a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list), not time zones that are subject to daylight savings adjustments.</li>"
-	+ "<li>There may be an unintentional extra day included when the time is more than a month away.</li>"
+	+ "<li>All times are based on UTC offsets (<a href='https://en.wikipedia.org/wiki/List_of_UTC_offsets'>see here</a> for list), not time zones that are subject to daylight savings adjustments. Your detected UTC offset: <span id='NotorietyEXPCalculator_SectionContainer_Timers_DetectedUTCOffset'></span></li>"
+	+ "<li>Possibly no longer an issue after Version 1.4.9a: <s>There may be an unintentional extra day included when the time is more than a month away.</s></li>"
 	+ "</ul><p></p><div style='width:10em;height:4em'><button class='NotorietyEXPCalculatorButton' id='NotorietyEXPCalculator_SectionContainer_Timers_UpdateTimers' style='cursor:pointer;background:rgba(124,76,147,var(--bg-alpha))'>Update timers</button></div>"
 	+ "<input id='NotorietyEXPCalculator_SectionContainer_Timers_AutoUpdate' type='checkbox'>Auto update? (interval 250ms)</input>"
 	+ "<div id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_TheList'>It's time to add something here...</div>"
 	+ "";
 	
 	const elem = {
-		toggleInputSliders_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputSliders_Global'),
-		toggleRomanNumerals_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleRomanNumerals_Global'),
-		toggleInputExplanations_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInputExplanations_Global'),
-		toggleComputationType_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleComputationType_Global'),
-		toggleInfiniteInfamies_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleInfiniteInfamies_Global'),
-		toggleAutoCalculate_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleAutoCalculate_Global'),
-		toggleTimeOutputFormat_Global_Container: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_ToggleTimeOutputFormat_Global'),
+		MainSettingContainer_Calculator_ToggleComputationType: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Calculator_ToggleComputationType'),
+		MainSettingContainer_Calculator_ToggleInfiniteInfamies: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Calculator_ToggleInfiniteInfamies'),
+		MainSettingContainer_Calculator_ToggleAutoCalculate: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Calculator_ToggleAutoCalculate'),
+		MainSettingContainer_Global_ToggleInputSliders: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleInputSliders'),
+		MainSettingContainer_Global_ToggleRomanNumerals: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleRomanNumerals'),
+		MainSettingContainer_Global_ToggleInputExplanations: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleInputExplanations'),
+		MainSettingContainer_Global_ToggleTimeOutputFormat: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleTimeOutputFormat'),
+		MainSettingContainer_Global_Saturation: document.getElementById('NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_Saturation'),
 		
-		toggleInputSliders_Global: document.getElementById('NotorietyEXPandInfamyCalculator_ToggleInputSliders_Global'),
-		toggleRomanNumerals_Global: document.getElementById('NotorietyEXPandInfamyCalculator_ToggleRomanNumerals_Global'),
-		toggleInputExplanations_Global: document.getElementById('NotorietyEXPandInfamyCalculator_ToggleInputExplanations_Global'),
-		toggleComputationType_Global: document.getElementById('NotorietyEXPandInfamyCalculator_ToggleComputationType_Global'),
-		toggleInfiniteInfamies_Global: document.getElementById('NotorietyEXPandInfamyCalculator_ToggleInfiniteInfamies_Global'),
-		toggleAutoCalculate_Global: document.getElementById('NotorietyEXPandInfamyCalculator_ToggleAutoCalculate_Global'),
-		toggleTimeOutputFormat_Global: document.getElementById('NotorietyEXPandInfamyCalculator_ToggleTimeOutputFormat_Global'),
+		MainSetting_Calculator_ToggleComputationType: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Calculator_ToggleComputationType'),
+		MainSetting_Calculator_ToggleInfiniteInfamies: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Calculator_ToggleInfiniteInfamies'),
+		MainSetting_Calculator_ToggleAutoCalculate: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Calculator_ToggleAutoCalculate'),
+		MainSetting_Global_ToggleInputSliders: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleInputSliders'),
+		MainSetting_Global_ToggleRomanNumerals: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleRomanNumerals'),
+		MainSetting_Global_ToggleInputExplanations: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleInputExplanations'),
+		MainSetting_Global_ToggleTimeOutputFormat: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleTimeOutputFormat'),
+		MainSetting_Global_Saturation: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Global_Saturation'),
 		
 		Section_LevelSettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_LevelSettings'),
 		Section_MutatorRankSettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_MutatorRankSettings'),
@@ -286,7 +332,8 @@
 		Section_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_Section_InfamySettings'),
 		Section_Results: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Results'),
 		Section_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_Section_HallofInfamyCCLs'),
-		Section_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Section_UpdateLog'),
+		Section_Credits: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_Section_Credits'),
+		Section_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_Section_UpdateLog'),
 		Section_Timers: document.getElementById('NotorietyEXPandInfamyCalculator_Section_Timers'),
 		
 		Section_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_ClassicInfamySuits_Crimson'),
@@ -314,13 +361,17 @@
 		SectionContainer_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_InfamySettings'),
 		SectionContainer_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs'),
 		SectionContainer_HallofInfamyCCLs_TheList: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_HallofInfamyCCLs_TheList'),
-		SectionContainer_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_UpdateLog'),
+		SectionContainer_GlobalSettings: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainer_GlobalSettings'),
+		SectionContainer_Credits: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainer_Credits'),
+		SectionContainer_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainer_UpdateLog'),
 		SectionContainer_Timers: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers'),
 		SectionContainer_Timers_TheList: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainer_Timers_TheList'),
 		
 		SectionContainerToggle_InfamySettings: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_InfamySettings'),
 		SectionContainerToggle_HallofInfamyCCLs: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_HallofInfamyCCLs'),
-		SectionContainerToggle_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_UpdateLog'),
+		SectionContainerToggle_GlobalSettings: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainerToggle_GlobalSettings'),
+		SectionContainerToggle_Credits: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainerToggle_Credits'),
+		SectionContainerToggle_UpdateLog: document.getElementById('NotorietyEXPandInfamyCalculator_Menu_Settings_SectionContainerToggle_UpdateLog'),
 		SectionContainerToggle_Timers: document.getElementById('NotorietyEXPandInfamyCalculator_SectionContainerToggle_Timers'),
 		
 		currentLevelInput: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentLevelInput'),
@@ -356,6 +407,7 @@
 		currentInfamyLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_CurrentInfamyLevelInput_Result'),
 		goalInfamyLevelInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_GoalInfamyLevelInput_Result'),
 		untilRotationsInputResult: document.getElementById('NotorietyEXPandInfamyCalculator_UntilRotationsInput_Result'),
+		MainSetting_Global_Saturation_InputResult: document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Global_Saturation_InputResult'),
 		
 		untilOutOfMoneyCheck: document.getElementById('NotorietyEXPandInfamyCalculator_UntilPoorCheck'),
 		cheaperPassCheck: document.getElementById('NotorietyEXPandInfamyCalculator_CheaperPassCheck'),
@@ -368,6 +420,8 @@
 		filterSortButton: document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit'),
 		filteringLogicInput: document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput'),
 		filteringLogicInput_InputExplanation: document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput_InputExplanation'),
+		
+		updateGlobalSettingsButton: document.getElementById('NotorietyEXPCalculator_Menu_Settings_Section_GlobalSettings_UpdateGlobalSettings'),
 	}
 	
 	const data = {
@@ -384,13 +438,15 @@
 		goalMoney: new Decimal(0),
 		untilRotations: new Decimal(0),
 		
-		toggleInputSliders_Global: 1,
-		toggleRomanNumerals_Global: 1,
-		toggleInputExplanations_Global: 1,
-		toggleComputationType_Global: 0,
-		toggleInfiniteInfamies_Global: 0,
-		toggleAutoCalculate_Global: 0,
-		toggleTimeOutputFormat_Global: 1,
+		MainSetting_Calculator_ToggleComputationType: 0,
+		MainSetting_Calculator_ToggleInfiniteInfamies: 0,
+		MainSetting_Calculator_ToggleAutoCalculate: 0,
+		MainSetting_Global_ToggleInputSliders: 1,
+		MainSetting_Global_ToggleRomanNumerals: 1,
+		MainSetting_Global_ToggleInputExplanations: 1,
+		MainSetting_Global_ToggleTimeOutputFormat: 1,
+		MainSetting_Global_TimeOutputNames: ['ms', 's', 'm', 'h', 'd', 'w', 'mo', 'y', 'de', 'c', 'mi', 'noup'],
+		MainSetting_Global_Saturation: 100,
 		
 		expFormula: 0,
 		untilOutOfMoneyCheck: 0,
@@ -399,6 +455,14 @@
 	};
 	
 	const sounds = {};
+	
+	function getTimerConfig(input) {
+		if (input == undefined) {
+			return {outputFormat: ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.MainSetting_Global_ToggleTimeOutputFormat)], includedTimeNames:data.MainSetting_Global_TimeOutputNames};
+		} else {
+			return {outputFormat: ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(input)], includedTimeNames:data.MainSetting_Global_TimeOutputNames};
+		}
+	}
 	
 	function getTZString(input, zuluStr) {
 		input = Number(input);
@@ -429,6 +493,16 @@
 		}
 		return output;
 	}
+	
+	// testing mogus
+	/*
+	setTimeout(function() {
+		// document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription').click();
+		// document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_ExcludeOptions').click();
+		document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput').value = 'other AND specific'
+		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit').click();
+	}, 1);
+	*/
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
@@ -623,7 +697,7 @@
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-06-0304:09Z). CCL #1 is also the creator of this tool!",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-06-0304:09Z). CCL #1 and their team are also the developers of this tool!",
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease. Mutator Rank 1,000 (as of 2025-05-20T00:48Z).",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
@@ -1176,19 +1250,19 @@
 			specificCCLs: {specificCCLs:elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.value, exclude:elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_ExcludeOptions.checked},
 			other: {notes:elem.Section_HallofInfamyCCLs_Filter_Other_Notes.checked, userWrittenDescription:elem.Section_HallofInfamyCCLs_Filter_Other_UserWrittenDescription.checked, exclude:elem.Section_HallofInfamyCCLs_Filter_Other_ExcludeOptions.checked},
 		}
-		if (filters.classicInfamySuits.crimson == false && filters.classicInfamySuits.rojo == false && filters.classicInfamySuits.royalty == false && filters.classicInfamySuits.blueNavy == false && filters.classicInfamySuits.exclude == false) {
+		if (filters.classicInfamySuits.crimson == false && filters.classicInfamySuits.rojo == false && filters.classicInfamySuits.royalty == false && filters.classicInfamySuits.blueNavy == false /*&& filters.classicInfamySuits.exclude == false*/) {
 			filters.classicInfamySuits.unused = true;
 		}
-		if (filters.time.year == 'undefined' && filters.time.month == 'undefined' && filters.time.day == 'undefined' && filters.time.hour == '' && filters.time.minute == '' && filters.time.second == '' && filters.time.millisecond == '' && filters.time.exclude == false) {
+		if (filters.time.year == 'undefined' && filters.time.month == 'undefined' && filters.time.day == 'undefined' && filters.time.hour == '' && filters.time.minute == '' && filters.time.second == '' && filters.time.millisecond == '' /*&& filters.time.exclude == false*/) {
 			filters.time.unused = true;
 		}
 		
 		// filters.specificCCLs.specificCCLs = '1 until ' + grassAvoiders;
-		if (filters.specificCCLs.specificCCLs == '' && filters.specificCCLs.exclude == false) {
+		if (filters.specificCCLs.specificCCLs == '' /* && filters.specificCCLs.exclude == false*/) {
 			filters.specificCCLs.unused = true;
 		}
 		
-		if (filters.other.notes == false && filters.other.userWrittenDescription == false && filters.other.exclude == false) {
+		if (filters.other.notes == false && filters.other.userWrittenDescription == false /* && filters.other.exclude == false */) {
 			filters.other.unused = true;
 		}
 		const filterIncludedCCLs = [], filterIncludedCCLs_positions = [];
@@ -1199,18 +1273,19 @@
 			otherFilterStatus = true;
 		
 		function getFilteringLogic(input) {
-			const defaultKeywords = ['classicInfamySuits', 'AND', 'time', 'AND', 'specificCCLs', 'AND', 'other'],
+			const defaultKeywords = ['suit', 'AND', 'time', 'AND', 'specific', 'AND', 'other'],
 				operators = ['AND', 'OR', '(', ')'],
 		        operatorsLogic = ['&&', '||', '(', ')'],
-		        filteringGroups = ['classicInfamySuits', 'time', 'specificCCLs', 'other'],
+		        filteringGroups = ['suit', 'time', 'specific', 'other'],
 		        filteringGroupsVars = [classicInfamySuitsFilterStatus, timeFilterStatus, specificCCLsFilterStatus, otherFilterStatus],
 				filteringGroupsUnusedChecks = [filters.classicInfamySuits.unused, filters.time.unused, filters.specificCCLs.unused, filters.other.unused],
 		        safeInput = [];
-		    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [];
+		    var output = null, keywords = input.match(/\w+|\(|\)/g), keywordsInterpreted = [], filteringStatuses = [];
 			if (keywords == null) {
 				keywords = defaultKeywords;
 			}
-		    for (var x = 0; x < keywords.length; x++) {
+			var loopLength = keywords.length;
+		    for (var x = 0; x < loopLength; x++) {
 		        if (filteringGroups.indexOf(keywords[x]) != -1 || operators.indexOf(keywords[x]) != -1 || keywords[x] == '') {
 		            safeInput.push(true);
 		        } else {
@@ -1220,15 +1295,24 @@
 			if (safeInput.indexOf(false) != -1) {
 				keywords = defaultKeywords;
 			}
-			console.log('KEYWORDS BASE:', keywords);
-			console.log(filteringGroupsUnusedChecks);
-			for (var x = 0; x < keywords.length; x++) {
+			// console.log('KEYWORDS BASE:', keywords);
+			// console.log(filteringGroupsUnusedChecks);
+			// console.log(filters.specificCCLs.unused);
+			for (var x = 0; x < loopLength; x++) {
 		        if (filteringGroups.indexOf(keywords[x]) != -1) {
+					// console.log(filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x])]);
+					
+					// if the filter group is being used, make it checked for computations:
 					if (filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x])] != true) {
-						// if in use then...
-						keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
+						keywordsInterpreted.push('true');
+						if (filteringGroupsVars[filteringGroups.indexOf(keywords[x])] == true) {
+							filteringStatuses.push(true);
+						} else {
+							filteringStatuses.push(false);
+						}
+						// console.log(filteringStatuses);
 					} else {
-						keywordsInterpreted.push('false');
+						// keywordsInterpreted.push('false'); // disabled to prevent unused filtering groups from causing 0 generated entries
 					}
 					// keywordsInterpreted.push(filteringGroupsVars[filteringGroups.indexOf(keywords[x])]);
 		        }
@@ -1236,19 +1320,20 @@
 					// console.log(keywords[x + 1], filteringGroupsUnusedChecks[filteringGroups.indexOf(keywords[x + 1])]);
 					keywordsInterpreted.push(operatorsLogic[operators.indexOf(keywords[x])]);
 		        }
-				console.log('current interpretation:', keywords[x], keywordsInterpreted);
+				// console.log('current interpretation:', keywords[x], keywordsInterpreted);
 		    }
 			// loop for splice maybe not necessary
-			for (var i = 0; i < keywordsInterpreted.length; i++) {
+			var loopLength = keywordsInterpreted.length;
+			for (var i = 0; i < loopLength; i++) {
 				if (operatorsLogic[0].indexOf(keywordsInterpreted[0]) != -1 || operatorsLogic[1].indexOf(keywordsInterpreted[0]) != -1) {
 					keywordsInterpreted.splice(0, 1);
 				}
 			}
-			console.log('keywordsInterpreted', keywordsInterpreted);
+			// console.log('keywordsInterpreted', keywordsInterpreted);
 		    keywordsInterpreted = keywordsInterpreted.join(' ');
 		    output = new Function('return ' + keywordsInterpreted)();
-			console.log('output', output);
-		    return output;
+			// console.log('output', output);
+		    return {logic: output, interpretation: keywordsInterpreted, filteringStatuses: filteringStatuses};
 		}
 		
 		function getSpecificCCLs(src) {
@@ -1262,7 +1347,8 @@
 		    var inputNums = input.match(/.+?(?=\n)/g);
 		    var output = [];
 		    // console.log('inputNums:', inputNums);
-		    for (var x = 0; x < inputNums.length; x++) {
+			var loopLength = inputNums.length;
+		    for (var x = 0; x < loopLength; x++) {
 		        // console.log('NEW X: ', inputNums[x]);
 		        if (inputNums[x].match('until') != null) {
 		            var outputTemp = {
@@ -1284,10 +1370,12 @@
 		            output.push(outputTemp);
 		        }
 		    }
-			for (var x = 0; x < output.length; x++) {
+			var loopLength = output.length;
+			for (var x = 0; x < loopLength; x++) {
 				if (output[x].start != output[x].end) {
 					var countDiff = Math.abs(output[x].end - output[x].start);
-					for (var i = 0; i < countDiff + 1; i++) {
+					var loopLength_a = countDiff + 1;
+					for (var i = 0; i < loopLength_a; i++) {
 						if (interpretedCCLs.indexOf(output[x].start + i) == -1) {
 							interpretedCCLs.push(output[x].start + i);
 						}
@@ -1306,7 +1394,7 @@
 		// console.log(specificCCLsFilter_SpecificCCLsList);
 		
 		for (var x = 0; x < grassAvoiders; x++) {
-			classicInfamySuitsFilterStatus = true;
+			filterInCurrentCCL = classicInfamySuitsFilterStatus = timeFilterStatus = specificCCLsFilterStatus = otherFilterStatus = true;
 			var classicInfamySuitsFiltersActive = 0;
 			if (filters.classicInfamySuits.unused != true) {
 				if (filters.classicInfamySuits.crimson == true) {
@@ -1505,6 +1593,8 @@
 					}
 				}
 			}
+			// console.log(specificCCLsFilterStatus);
+			// console.log(specificCCLsFilters.length);
 			if (specificCCLsFilters.length > 0) {
 				// console.log('truthy test');
 				if (specificCCLsFilters.length == specificCCLsFiltersActive && specificCCLsFilters.indexOf(false) != -1) {
@@ -1547,24 +1637,41 @@
 			}
 			
 			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.placeholder = "1 until " + grassAvoiders;
-			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)";
-			elem.filteringLogicInput.placeholder = "specificCCLs";
+			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput_InputExplanation.innerHTML = "<br/>Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.";
+			elem.filteringLogicInput.placeholder = "specific";
 			if (elem.filteringLogicInput.value == '') {
-				elem.filteringLogicInput.value = 'specificCCLs';
+				elem.filteringLogicInput.value = 'specific';
 			}
-			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)";
+			const filteringLogicOutput_temp = getFilteringLogic(elem.filteringLogicInput.value);
+			elem.filteringLogicInput_InputExplanation.innerHTML = "<br/>Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>suit</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters, <code>specific</code> for 'Specific CCLs' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specific</code>."
+			+ "<br/>Input interpretation: <code>" + filteringLogicOutput_temp.interpretation + "</code>"
+			+ "<br/>Boolean result: <code>" + filteringLogicOutput_temp.logic + "</code>";
 			
-			console.log(getFilteringLogic(elem.filteringLogicInput.value));
-			console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFILTERING LOGIC', getFilteringLogic(elem.filteringLogicInput.value), classicInfamySuitsFilterStatus);
-			if (getFilteringLogic(elem.filteringLogicInput.value)) {
-				if (x < 5) {
-					// console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFILTERING LOGIC', getFilteringLogic(elem.filteringLogicInput.value), classicInfamySuitsFilterStatus);
+			// console.log(filteringLogicOutput_temp.logic);
+			// console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFILTERING LOGIC', filteringLogicOutput_temp.logic, classicInfamySuitsFilterStatus);
+			filterInCurrentCCL = false;
+			if (filteringLogicOutput_temp.logic == true) {
+				// if (filteringLogicOutput_temp.interpretation
+				// console.log('\n\n\n\n\ntest:', filteringLogicOutput_temp.filteringStatuses.indexOf(false) == -1);
+				if (filteringLogicOutput_temp.filteringStatuses.indexOf(false) == -1) {
+					// console.log('testing mongus', filteringLogicOutput_temp.filteringStatuses.indexOf(false) == -1);
+					filterInCurrentCCL = true;
+					// console.log(filterInCurrentCCL);
 				}
-				filterInCurrentCCL = true;
+				// keywordStatuses
+				/*
+				for (var i = 0; i < filteringLogicOutput_temp.statuses.length; i++) {
+					if (filteringLogicOutput_temp.statuses[i] == false) {
+						filterInCurrentCCL = false;
+					}
+				}
+				*/
 			} else {
 				filterInCurrentCCL = false;
 			}
+			// console.log('alpha bravo charlie delta', filterInCurrentCCL);
 			
+			// console.log(filterInCurrentCCL);
 			if (filterInCurrentCCL == true) {
 				filterIncludedCCLs.push(players[x]);
 				filterIncludedCCLs_positions.push(players[x].position);
@@ -1698,10 +1805,9 @@
 			}
 			
 			const timeOutput = new Timer();
-			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)];
 			
 			timeOutput.amount = currentTime.getTime() - new Date(input.whenCCL.timestamp).getTime();
-			output += "<br>Time elapsed since badge obtainment: " + timeOutput.formatAmount();
+			output += "<br>Time elapsed since badge obtainment: " + timeOutput.formatAmount(getTimerConfig());
 			
 			if (input.timeSincePrevious != undefined) {
 				const orig = input.timeSincePrevious;
@@ -1710,13 +1816,13 @@
 					if (typeof orig.milliseconds == 'object') {
 						output += 'between ';
 						timeOutput.amount = orig.milliseconds[0];
-						output += timeOutput.formatAmount();
+						output += timeOutput.formatAmount(getTimerConfig());
 						output += ' to ';
 						timeOutput.amount = orig.milliseconds[1];
-						output += timeOutput.formatAmount();
+						output += timeOutput.formatAmount(getTimerConfig());
 					} else {
 						timeOutput.amount = orig.milliseconds;
-						output += timeOutput.formatAmount();
+						output += timeOutput.formatAmount(getTimerConfig());
 					}
 					if (orig.approx != false) {
 						if (orig.approx == true) {
@@ -1731,15 +1837,15 @@
 						if (typeof input.whenCCL.timestamp == 'object') {
 							output += 'between ';
 							timeOutput.amount = (new Date(input.whenCCL.timestamp[0]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
-							output += timeOutput.formatAmount();
+							output += timeOutput.formatAmount(getTimerConfig());
 							// console.log(timeOutput.formatAmount());
 							output += ' to ';
 							timeOutput.amount = (new Date(input.whenCCL.timestamp[1]).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
-							output += timeOutput.formatAmount();
+							output += timeOutput.formatAmount(getTimerConfig());
 							// console.log(timeOutput.formatAmount());
 						} else {
 							timeOutput.amount = (new Date(input.whenCCL.timestamp).getTime() - new Date(playersData_whenCCL[0].timestamp).getTime()) / input.position;
-							output += timeOutput.formatAmount();
+							output += timeOutput.formatAmount(getTimerConfig());
 						}
 					}
 				}
@@ -1766,10 +1872,13 @@
 		playerEntryTables = [],
 		crimsonPositions = [];
 		var crimsonIncluded = 0;
-		for (var x = 0; x < classicInfamySuitOwners.crimson.length; x++) {
+		var loopLength = classicInfamySuitOwners.crimson.length;
+		for (var x = 0; x < loopLength; x++) {
 			crimsonPositions.push(players[x].position);
 		}
-		for (var x = 0; x < crimsonPositions.length; x++) {
+		
+		var loopLength = crimsonPositions.length;
+		for (var x = 0; x < loopLength; x++) {
 			if (filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]) != -1) {
 				filterIncludedCCLs_positions_alt.splice(filterIncludedCCLs_positions_alt.indexOf(crimsonPositions[x]), 1);
 				crimsonIncluded++
@@ -1788,7 +1897,8 @@
 						// console.log(filterIncludedCCLs[x + filterIncludedCCLs.length - 1]);
 					}
 				} else if (elem.Section_HallofInfamyCCLs_Sort_ObtainmentOrder.value == 'random') {
-					for (var x = 0; x < filterIncludedCCLs.length; x++) {
+					var loopLength = filterIncludedCCLs.length;
+					for (var x = 0; x < loopLength; x++) {
 						if (filterIncludedCCLs[x].classicInfamySuit == 'Crimson') {
 							string_a += playerHTML(filterIncludedCCLs[x], '128,0,0');
 						}
@@ -1859,7 +1969,8 @@
 			document.getElementById(id).style.display == 'none' ? document.getElementById(id).style.display = 'block' : document.getElementById(id).style.display = 'none';
 		}
 		
-		for (var x = 0; x < ownDescriptionButtons.length; x++) {
+		var loopLength = ownDescriptionButtons.length;
+		for (var x = 0; x < loopLength; x++) {
 			// console.log(ownDescriptionButtons[x]);
 			document.getElementById(ownDescriptionButtons[x]).addEventListener('click', function() {
 				makeDescButtonWork(ownDescriptionContainers[ownDescriptionButtons.indexOf(this.id)]);
@@ -1867,6 +1978,32 @@
 		}
 	}
 	addHallofInfamyCCLs();
+	
+	function addCreditsSection_MenuSettings() {
+		var output = "The Notoriety EXP Calculator wouldn't be what it is today without all these amazing contributions!"
+		output += "<div><p><span style='font-weight:bold'>Development</span><br/>"
+		+ "<ul><li><b style='color:rgba(41,134,204,var(--bg-alpha))'>TheSeal27</b>, aka <b style='color:rgba(41,134,204,var(--bg-alpha))'>Seal</b> or <b style='color:rgba(128,0,0,var(--bg-alpha))'>CCL #1</b>: Lead developer and original creator. Contributed well over 100 active development hours across Versions Indev + 0.0.1 to the present. Lots of contributions stem from this user's knowledge and experience with other projects, including unreleased ones."
+		+ "<ul><li><b>User-written notes:</b> I probably wouldn't have even created this tool if I didn't regain an interest in the game and its community after the rerelease, or if I didn't reach my goals of CCL #1 or 2024 CCL."
+		+ "<p></p>I've learnt an incredible amount while developing this tool. Not just about coding, but also about myself and what it means to exist as a conscious being. I am who I am, even after everything, and no one can undermine the value of my achievements because their true worth must always be measured from within. I will continue updating this tool for the foreseeable future, including the addition of new CCLs to the Hall of CCLs. Even if I am called such terms like 'stalker', 'creepy' and 'weird', as this is simply something I enjoy and I do not allow the external world to control my emotions and consequently my reality. It's my hope that more people will learn to incorporate this quote into this lives: <i>" + '"' + "Character is like a tree and reputation its shadow; the shadow is what we think it is and the tree is the real thing." + '"' + "</i>"
+		+ "<p></p>And lastly, in a similar vein to the end of CCL #1's user-written description in the 'Closing remarks' section: Reality is what you know with absolute conviction (not merely want or desire) it to be. Consciousness is the most powerful force in existence. Sheer intention and belief allows you to achieve anything. With all of this in mind, remember that all truths are half-truths until accepted by the mind, and beliefs will do absolutely anything to stay in existence. Regardless, I advise you, the reader, to write your own story, the story of 'you' and your unique individuality.</li></ul></li>"
+		+ "<li><b>Ashlyn</b>: Tester from Version 0.0.1 to the present. Provided the capability (Robux-bought boosters) for TheSeal27 to reach CCL in the year 2024, resulting in extra grinding motivation and eventually culminating in their post-CCL idea to create this tool.</li>"
+		+ "<li><b>Nate</b>: Tester from Version 0.0.1 to the present.</li>"
+		+ "<li><b>Player</b>: Tester from Version 0.0.1 to the present.</li>"
+		+ "<li><b>Maisy (<span style='color:rgba(106,50,159,var(--bg-alpha))'>CCL #8</span>)</b>: Tester from Version 1.5.0 to the present. Notable contributor to CCL #1's grind.</li>"
+		+ "</p></div>"
+		output += "<div><p><span style='font-weight:bold'>Assets</span><br/>"
+		+ "<ul><li>Patashu: <a href='https://github.com/Patashu/break_eternity.js'>break_eternity.js</a> large number library, used for some of the tool's numerical computations.</li>"
+		+ "<li><a href='https://stackoverflow.com/users/361684/gilly3'>gilly3</a>: <code>formatDate()</code> function, used to format date timestamps throughout the tool.</li>"
+		+ "</p></div>"
+		output += "<div><p><span style='font-weight:bold'>Other contributions</span><br/>"
+		// linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)))
+		// linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)) calc(100% / 4 * 0) calc(100% / 4 * 1), rgba(0,153,255,var(--bg-alpha)) calc(100% / 4 * 1) calc(100% / 4 * 2), rgba(0,204,0,var(--bg-alpha)) calc(100% / 4 * 2) calc(100% / 4 * 3), rgba(255,153,0,var(--bg-alpha)) calc(100% / 4 * 3) calc(100% / 4 * 4))
+		+ "<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (Harry, Alisa, Isaac, Katelyn) (CCL #25)</b>: For being such great friends of TheSeal27 and providing direct and indirect motivation to continue working on the tool, even during times of struggles.</li>"
+		+ "</p></div>"
+		
+		elem.SectionContainer_Credits.innerHTML = output;
+	}
+	addCreditsSection_MenuSettings();
 	
 	function addUpdateLog(firstCreation) {
 	    function updateLogEntry(type, string, isVersion) {
@@ -1901,7 +2038,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"1.5.0": 551,
+			"2.0.0": 1172.316666666667, // repeating decimal (x.316666666667) adds 19s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -1948,35 +2085,49 @@
 		var minutesDevelopment_Total = 0;
 		function formatMinutesDev(which, total) {
 			const timeOutput = new Timer();
-			timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 			if (total == true) {
 				timeOutput.amount = which * 1000 * 60;
 			} else {
 				timeOutput.amount = minutesDevelopment[which] * 1000 * 60;
 			}
-			return timeOutput.formatAmount();
+			return timeOutput.formatAmount(getTimerConfig());
 		}
-		for (var x = 0; x < Object.keys(minutesDevelopment).length; x++) {
+		var loopLength = Object.keys(minutesDevelopment).length;
+		for (var x = 0; x < loopLength; x++) {
 			minutesDevelopment_Total += minutesDevelopment[Object.keys(minutesDevelopment)[x]];
 		}
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
-			"1.5.0": `
+			"2.0.0": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
-			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 1.5.0 - Eternally Expanding Hall</u></b>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(undefined), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] <u>Version 2.0.0 - The Completely Overkill Update</u></b>
 			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' textarea input under its own filtering group of the same name. This input determines the logical operators that the filter groups (defined as 'classicInfamySuits', 'time' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses. Included the following input explanation: <code>(Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>classicInfamySuits</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specificCCLs</code>.)</code>.")}
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>(Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line.)</code>.")}
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
-				${updateLogEntry('add', "Menu Miscellaneous > Hall of CCLs: Added CCL #12's user-written description.")}
-				${updateLogEntry('add', "Added three easter eggs? (Total 5.)")}
-				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-0304:09Z).")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Filtering logic' textarea input under its own filtering group of the same name. This input determines the logical operators that the filter groups (defined as 'suit', 'time', 'specific' and 'other') are computed, being either AND or OR, as well as allowing for complicated conditions using parentheses. Included the following input explanation: <code>Logical operators for each filter group. Define either 'AND' or 'OR'. Complicated conditions must use parentheses ('(' and ')'). Any filter group can be defined or excluded, and they must match the exact spelling: <code>suit</code> for 'Classic infamy suits' filters, <code>time</code> for 'Time' filters, <code>specific</code> for 'Specific CCLs' filters and <code>other</code> for 'Other' filters. Not defining a filter group will simply ignore its filters. Do not define the same filter group more than once. Defaults to <code>specific</code>.<br/>Input interpretation: <code>x</code><br/>Boolean result: <code>y</code></code><br>Where 'x' is the interpretation of the input and 'y' is the logical boolean result of the condition.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.</code>.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #12's user-written description:<ul><li><pre>brickbankbrickbankbrickbankbrickbankbrickbank<p></p>never grind to ccl using public lobbies<br/>lmao<br/>biggest mistake of my life 👎</pre></li></ul>")}
+				${updateLogEntry('add', "Added the menu 'Settings':<ul><li>Added the section 'Global Settings' (position 1):<ul><li>Top-of-section notes: <code>These are 'common' settings which apply throughout more than one menu in the tool. Note: These aren't all the tool's settings, check the other menus for more.</code></li></ul></li><li>Added the section 'Credits' (position 2).</li></ul> Added a button which updates all Global Settings.")}
+				${updateLogEntry('add', "Menu Settings > Section Global Settings:<ul><li>Added a new slider input, 'Saturation', which configures the saturation of the entire tool based on a percentage ranging from 0% to 100%. Appears in position 6.</li><li>Added a new 'Time output names' input (CURRENTLY WORK IN PROGRESS), which configures included or excluded time names in formatted time outputs. This appears in position 5.</li><li>Moved four settings (Input method, Roman numerals, Input explanations, Time output format) to here from Menu Calculator > Section Global Settings (renamed to 'Menu Settings'). Also enlargened them and changed their order from <code>Input method, Roman numerals, Input explanations, Time output format</code> > <code>Input method, Input explanations, Roman numerals, Time output format</code>. They appear together starting at position 1.</li></ul>")}
+				${updateLogEntry('add', "Added the following time names to formatted time outputs and their equivalent milliseconds:<ul><li>w, wk, week, weeks, <code>604,800,000</code></li><li>de, dec, decade, decades, <code>315,576,000,000</code></li><li>c, cen, century, centuries, <code>3,155,760,000,000</code></li><li>mi, mlnm, millennium, millennia, <code>31,557,600,000,000</code></li><li>noup, noupdate, notoriety update interval, notoriety update intervals, <code>2,190,728,592,000,000</code></li></ul>")}
+				${updateLogEntry('add', "Added a highlight to the currently selected menu's button.")}
+				${updateLogEntry('add', "Added five easter eggs? (Total 7.)")}
+				${updateLogEntry('edit', "Changed the top-of-tool text:<ul><li>Previous: <code>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</code></li><li>Current: <code>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></code></li></ul>")}
+				${updateLogEntry('edit', "Menu Calculator: Renamed the section 'Global Settings' to 'Menu Settings'.")}
+				${updateLogEntry('edit', "Menu Calculator > Section Menu Settings: Enlargened the settings and moved them to the middle of the section.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-0304:09Z). Also changed the following note:<ul><li>Previous: <code>CCL #1 is also the creator of this tool!</code></li><li>Current: <code>CCL #1 and their team are also the developers of this tool!</code></li></ul>")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,939 + 18,260 > 4,000 + 32,564 as of 2025-06-0304:02Z).")}
-				${updateLogEntry('edit', "Some source code changes, mainly for optimisation and increasing readability.")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Appended the following to the top-of-section notes list entry 4: <code>Your detected UTC offset: x</code>, where x is the browser's detected UTC offset. Also changed list entry 5:<ul><li>Previous: <code>There may be an unintentional extra day included when the time is more than a month away.</code></li><li>Current: <code>Possibly no longer an issue after Version 1.4.9a: <s>There may be an unintentional extra day included when the time is more than a month away.</s></code></li></ul>")}
+				${updateLogEntry('edit', "Changed the default displayed menu from Calculator to the new Settings.")}
+				${updateLogEntry('edit', "Moved the Update Log from the Menu Miscellaneous to Menu Settings in position 3.")}
+				${updateLogEntry('edit', "Many source code changes, mainly for improving consistency, optimisation and readability.")}
 				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.5MB to 15MB.")}
+				${updateLogEntry('fix', "The menu buttons are now consistently displayed regardless of available screen space, and they no longer overflow into the menu containers.")}
 				${updateLogEntry('other', "Added the following tester: maisy.")}
-				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.5.0') + '.')}
+				${updateLogEntry('other', "Update Log version entries will now use nested list formatting, where appropriate, for improved readability.")}
+				${updateLogEntry('other', "This update was originally going to be a quick patch titled Version 1.4.9c, then changed to Version 1.4.10 due to including at least one brand new feature. Then <u>Version 1.5.0</u> with a custom version name (" + '"' + "Eternally Expanding Hall" + '"' + ") due to many extra features warranting the higher version number. And finally, <u>Version 2.0.0 - The Completely Overkill Update</u> due to being such an incredibly large update not yet seen since the initial public release or possibly <u>Version 1.3.0 - Additional Additions!</u>.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('2.0.0') + '.')}
+				${updateLogEntry('other', "<span style='font-size:50%'>Wowsers, what an update log! Also, FIVE 'Other' sub-entries?!</span>")}
 			</ul></div>
 			`,
 			"1.4.9b": `
@@ -2478,7 +2629,8 @@
 			<div id='NotorietyEXPCalculator_SectionContainer_UpdateLog_TheList'></div>
 			`
 			elem.SectionContainer_UpdateLog_TheList = document.getElementById('NotorietyEXPCalculator_SectionContainer_UpdateLog_TheList');
-			for (var x = 0; x < Object.keys(minutesDevelopment).length; x++) {
+			var loopLength = Object.keys(minutesDevelopment).length;
+			for (var x = 0; x < loopLength; x++) {
 				theLogs += versionInfo[Object.keys(minutesDevelopment)[x]];
 			}
 			elem.SectionContainer_UpdateLog_TheList.innerHTML = theLogs;
@@ -2487,7 +2639,8 @@
 		} else {
 			elem.SectionContainer_UpdateLog_TheList.innerHTML = '';
 			const allEntries = [];
-			for (var x = 0; x < Object.keys(minutesDevelopment).length; x++) {
+			var loopLength = Object.keys(minutesDevelopment).length;
+			for (var x = 0; x < loopLength; x++) {
 				allEntries.push(versionInfo[Object.keys(minutesDevelopment)[x]]);
 			}
 			switch (elem.Section_UpdateLog_Sort_VersionReleaseOrder.value) {
@@ -2504,7 +2657,8 @@
 			const entry = input.parentElement.getElementsByClassName('NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry')[0];
 			entry.style.display = entry.style.display == 'none' ? 'block' : 'none';
 		}
-		for (var x = 0; x < entryToggleDisplayElems.length; x++) {
+		var loopLength = entryToggleDisplayElems.length;
+		for (var x = 0; x < loopLength; x++) {
 			entryToggleDisplayElems[x].addEventListener('click', function() {
 				entryToggleDisplay(this);
 			});
@@ -2521,7 +2675,6 @@
 		const extraHours = 1000 * 3600 * 0 + extraDays;
 		const timeOutput = new Timer();
 		const currentDateObj = new Date(new Date().getTime() + extraHours);
-		timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 		// console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
 		var localTZ = currentDateObj.getTimezoneOffset();
 		var string = '';
@@ -2532,7 +2685,9 @@
 		const utcDateObj = new Date(currentDateObj.getTime());
 		utcDateObj.setTime(currentDateObj.getTime() - (localTZ * -1 * 60 * 1e3));
 		
-		// temp: 780 should be 720
+		elem.Section_Timers_DetectedUTCOffset = document.getElementById('NotorietyEXPCalculator_SectionContainer_Timers_DetectedUTCOffset');
+		elem.Section_Timers_DetectedUTCOffset.innerHTML = getTZString(localTZ);
+		
 		const utcOffsets = ['720', '660', '600', '570', '540', '480', '420', '360', '300', '240', '210', '180', '120', '60', '0', '-60', '-120', '-180', '-210', '-240', '-270', '-300', '-330', '-345', '-360', '-390', '-420', '-480', '-525', '-540', '-570', '-600', '-630', '-660', '-720', '-765', '-780', '-840'];
 		// tba
 		// console.log(utcOffsets.length);
@@ -2560,7 +2715,8 @@
 		const timeReset_WeeklyChallenges = {since:currentDateObj.getTime() - time_WeeklyChallenges.previous.getTime(), until:time_WeeklyChallenges.next.getTime() - currentDateObj.getTime()};
 		
 		// Friday Night
-		for (var x = 0; x < utcOffsets.length; x++) {
+		var loopLength = utcOffsets.length;
+		for (var x = 0; x < loopLength; x++) {
 			const offsetMilliseconds = Number(utcOffsets[x]) * -1 * 60 * 1000;
 			var obj = new Date(new Date().getTime() + extraHours);
 			obj.setTime(obj.getTime() + (localTZ * 60 * 1e3));
@@ -2589,7 +2745,7 @@
 		}
 		
 		// Months: October, December
-		for (var x = 0; x < utcOffsets.length; x++) {
+		for (var x = 0; x < loopLength; x++) {
 			function addMonthTimes(which) {
 				var whichMonthNum = null;
 				if (which == 'oct') {
@@ -2647,23 +2803,23 @@
 		string += "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable' style='margin:auto;width:100%'>"
 		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Daily' class='NotorietyEXPCalculator_TableStyling'>";
 		timeOutput.amount = timeReset_DailyChallenges.since;
-		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		string += "<b>Daily Challenges</b><p>Last reset: " + formatDate(time_DailyChallenges.previous, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(" + timeOutput.formatAmount(getTimerConfig()) + " ago)</small></p>";
 		timeOutput.amount = timeReset_DailyChallenges.until;
-		string += "<p>Next reset: " + formatDate(time_DailyChallenges.next, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		string += "<p>Next reset: " + formatDate(time_DailyChallenges.next, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(in " + timeOutput.formatAmount(getTimerConfig()) + ")</small></p></td>";
 		
 		
 		string += "<td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_ChallengesTable_Weekly' class='NotorietyEXPCalculator_TableStyling'>";
 		timeOutput.amount = timeReset_WeeklyChallenges.since;
-		string += "<b>Weekly Challenges</b><p>Last reset: " + formatDate(time_WeeklyChallenges.previous, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(" + timeOutput.formatAmount() + " ago)</small></p>";
+		string += "<b>Weekly Challenges</b><p>Last reset: " + formatDate(time_WeeklyChallenges.previous, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(" + timeOutput.formatAmount(getTimerConfig()) + " ago)</small></p>";
 		timeOutput.amount = timeReset_WeeklyChallenges.until;
-		string += "<p>Next reset: " + formatDate(time_WeeklyChallenges.next, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(in " + timeOutput.formatAmount() + ")</small></p></td>";
+		string += "<p>Next reset: " + formatDate(time_WeeklyChallenges.next, "yyyy-MM-dd HH:mm", false) + ' ' + getTZString(localTZ) + "<br><small>(in " + timeOutput.formatAmount(getTimerConfig()) + ")</small></p></td>";
 		string += "</table>";
 		
 		string += "<p></p>Badges last updated: " + formatDate(currentDateObj, "yyyy-MM-dd HH:mm:ss:fff", false) + ' ' + getTZString(localTZ)
 		+ "<table id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable'>"
 		+ "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable_FridayNight' class='NotorietyEXPCalculator_TableStyling'>";
 		string += "<b><a href='https://www.roblox.com/badges/3410723896492162'>Friday Night</a></b><p><ul>";
-		for (var x = 0; x < utcOffsets.length; x++) {
+		for (var x = 0; x < loopLength; x++) {
 			var string_a = '';
 			if (utcOffsets[x] == localTZ) {
 				// console.log(getTZString(utcOffsets[x]));
@@ -2674,9 +2830,9 @@
 			}
 			timeOutput.amount = time_FridayNight[x].remainingTime;
 			if (time_FridayNight[x].currentlyFri == true) {
-				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount() + "</span>"
+				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount(getTimerConfig()) + "</span>"
 			} else {
-				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount() + "</span>";
+				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount(getTimerConfig()) + "</span>";
 			}
 			string_a += "</li>";
 			string += string_a;
@@ -2685,7 +2841,7 @@
 		
 		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable_MonthRange_October' class='NotorietyEXPCalculator_TableStyling'>";
 		string += "<b>October badges: <a href='https://www.roblox.com/badges/2124440620'>Happy Halloween!</a>, <a href='https://www.roblox.com/badges/2124630220'>Trick or Treater</a>, <a href='https://www.roblox.com/badges/2124630221'>Something Good To Eat</a>, <a href='https://www.roblox.com/badges/2124630227'>Treat Yourself</a>, <a href='https://www.roblox.com/badges/2124630228'>Competitive Spirit</a></b><p><ul>";
-		for (var x = 0; x < utcOffsets.length; x++) {
+		for (var x = 0; x < loopLength; x++) {
 			var string_a = '';
 			if (utcOffsets[x] == localTZ) {
 				// console.log(getTZString(utcOffsets[x]));
@@ -2696,9 +2852,9 @@
 			}
 			timeOutput.amount = time_MonthOctober[x].remainingTime;
 			if (time_MonthOctober[x].currentlyMonth == true) {
-				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount() + "</span>"
+				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount(getTimerConfig()) + "</span>"
 			} else {
-				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount() + "</span>";
+				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount(getTimerConfig()) + "</span>";
 			}
 			string_a += "</li>";
 			string += string_a;
@@ -2707,7 +2863,7 @@
 		
 		string += "<tr/><td id='NotorietyEXPandInfamyCalculator_SectionContainer_Timers_BadgesTable_MonthRange_December' class='NotorietyEXPCalculator_TableStyling'>";
 		string += "<b>December badges: <a href='https://www.roblox.com/badges/2124446484'>Merry Christmas!</a></b><p><ul>";
-		for (var x = 0; x < utcOffsets.length; x++) {
+		for (var x = 0; x < loopLength; x++) {
 			var string_a = '';
 			if (utcOffsets[x] == localTZ) {
 				// console.log(getTZString(utcOffsets[x]));
@@ -2718,9 +2874,9 @@
 			}
 			timeOutput.amount = time_MonthDecember[x].remainingTime;
 			if (time_MonthDecember[x].currentlyMonth == true) {
-				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount() + "</span>"
+				string_a += "<span style='color:rgba(0,128,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available for " + timeOutput.formatAmount(getTimerConfig()) + "</span>"
 			} else {
-				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount() + "</span>";
+				string_a += "<span style='color:rgba(128,0,0,var(--bg-alpha))'>" + getTZString(utcOffsets[x], true) + ": Available in " + timeOutput.formatAmount(getTimerConfig()) + "</span>";
 			}
 			string_a += "</li>";
 			string += string_a;
@@ -2778,7 +2934,7 @@
 	            }
 	        } else {
 	            const x = new Run();
-				switch (data.toggleComputationType_Global) {
+				switch (data.MainSetting_Calculator_ToggleComputationType) {
 					case 0:
 						x.money = new Decimal(Number(test_a.match(/.+?(?=[|])/)[0].replace(/,/g, '')));
 						test_a = test_a.replace(/.+?(?=[|])[|]/, '');
@@ -2827,7 +2983,8 @@
 			this.excludedRuns = new Decimal(0);
 		}
 		const result = new Totals();
-		for (var x = 0; x < input.runLog.length; x++) {
+		var loopLength = input.runLog.length;
+		for (var x = 0; x < loopLength; x++) {
 			result.money = result.money.add(input.runLog[x].money);
 			result.exp = result.exp.add(input.runLog[x].exp);
 			result.mxp = result.mxp.add(input.runLog[x].mxp);
@@ -2846,7 +3003,7 @@
 	document.head.appendChild(styleSheet_Global);
 
 	function addGlobalStyling(input, deleteExisting) {
-		if (deleteExisting != false) {
+		if (deleteExisting == true) {
 			while (styleSheet_Global.sheet.rules.length > 0) {
 				styleSheet_Global.sheet.deleteRule(0);
 			}
@@ -2854,38 +3011,61 @@
 		styleSheet_Global.sheet.insertRule(input)
 	}
 	
-	const menuIDs = ['NotorietyEXPandInfamyCalculator_MenuContainer_Calculator', 'NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous'];
-	const menuButtonIDs = ['NotorietyEXPCalculatorMenuButton_Calculator', 'NotorietyEXPCalculatorMenuButton_Miscellaneous'];
+	const menuContainerIDs = ['NotorietyEXPandInfamyCalculator_MenuContainer_Calculator', 'NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous', 'NotorietyEXPandInfamyCalculator_MenuContainer_Settings'];
+	const menuButtonIDs = ['NotorietyEXPCalculatorMenuButton_Calculator', 'NotorietyEXPCalculatorMenuButton_Miscellaneous', 'NotorietyEXPCalculatorMenuButton_Settings'];
 	
 	// make menu buttons work
 	function hideAllMenus() {
 		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Calculator').style.display = 'none';
 		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous').style.display = 'none';
+		document.getElementById('NotorietyEXPandInfamyCalculator_MenuContainer_Settings').style.display = 'none';
 	}
-	
-	function switchMenuToThis(input) {
-		hideAllMenus();
-		document.getElementById(menuIDs[menuButtonIDs.indexOf(input)]).style.display = '';
-	}
-	switchMenuToThis(menuButtonIDs[0]);
 	
 	(function() {
-		const orig = document.getElementById('NotorietyEXPandInfamyCalculator_MenuButtons');
+		const orig = document.getElementById('NotorietyEXPandInfamyCalculator_MenuButtons');		
+		const menuButtonContainers = {calculator:document.createElement('div'), miscellaneous:document.createElement('div'), settings:document.createElement('div')};
+		const menuButtons = {calculator:document.createElement('button'), miscellaneous:document.createElement('button'), settings:document.createElement('button')};
+		const attribs = {calculator:{displayName:"Calculator"},miscellaneous:{displayName:"Miscellaneous"},settings:{displayName:"Settings"}};
 		
-		const menuButton_Calculator = document.createElement('button');
-		const menuButton_Miscellaneous = document.createElement('button');
-		const buttons = [menuButton_Calculator, menuButton_Miscellaneous];
-		buttons[0].innerHTML = "<span style='color:rgba(255,255,255,var(--bg-alpha));font-weight:bold'>Calculator</span>";
-		buttons[1].innerHTML = "<span style='color:rgba(255,255,255,var(--bg-alpha));font-weight:bold'>Miscellaneous</span>";
-		for (var x = 0; x < buttons.length; x++) {
-			buttons[x].setAttribute('class', 'NotorietyEXPCalculatorButton NotorietyEXPCalculatorMenuButton');
-			buttons[x].setAttribute('id', menuButtonIDs[x]);
-			orig.appendChild(buttons[x]);
-			buttons[x].addEventListener('click', function() {
+		var loopLength = Object.keys(menuButtons).length;
+		for (var x = 0; x < loopLength; x++) {
+			var currentButtonContainer = menuButtonContainers[Object.keys(menuButtonContainers)[x]];
+			var currentButton = menuButtons[Object.keys(menuButtons)[x]];
+			currentButtonContainer.setAttribute('style', "height:4em;display:inline-block");
+			currentButton.innerHTML = "<span style='color:rgba(255,255,255,var(--bg-alpha));font-weight:bold'>" + attribs[Object.keys(attribs)[x]].displayName + "</span>";
+			currentButton.setAttribute('class', 'NotorietyEXPCalculatorButton NotorietyEXPCalculatorMenuButton');
+			currentButton.setAttribute('id', menuButtonIDs[x]);
+			orig.appendChild(currentButtonContainer);
+			currentButtonContainer.appendChild(currentButton);
+			currentButton.addEventListener('click', function() {
 				switchMenuToThis(this.id);
 			});
 		}
 	}());
+	
+	function switchMenuToThis(input) {
+		hideAllMenus();
+		document.getElementById(menuContainerIDs[menuButtonIDs.indexOf(input)]).style.display = '';
+		if (document.getElementById('NotorietyEXPandInfamyCalculator_MenuButtons').getElementsByClassName('NotorietyEXPCalculatorMenuButtonActive').length > 0) {
+			// loop in case user modifies the HTML to add this class to multiple buttons
+			var loopLength = document.getElementById('NotorietyEXPandInfamyCalculator_MenuButtons').getElementsByClassName('NotorietyEXPCalculatorMenuButtonActive').length;
+			for (var i = 0; i < loopLength; i++) {
+				document.getElementById('NotorietyEXPandInfamyCalculator_MenuButtons').getElementsByClassName('NotorietyEXPCalculatorMenuButtonActive')[i].classList.remove('NotorietyEXPCalculatorMenuButtonActive');
+			}
+		}
+		document.getElementById(input).classList.add('NotorietyEXPCalculatorMenuButtonActive');
+	}
+	// Default visible menu. 0: Calculator, 1: Miscellaneous, 2: Settings
+	switchMenuToThis(menuButtonIDs[2]);
+	
+	// Testing timeout function.
+	setTimeout(function() {
+		elem.SectionContainerToggle_HallofInfamyCCLs.click();
+		// elem.SectionContainerToggle_Timers.click();
+		// elem.SectionContainerToggle_GlobalSettings.click();
+		// elem.SectionContainerToggle_Credits.click();
+		// elem.SectionContainerToggle_UpdateLog.click();
+	}, 1);
 
 	function updateSettingsDisplayedValues() {
 		data.currentLevel = new Decimal(elem.currentLevelInput.value).floor().max(new Decimal(1).min(100));
@@ -2904,19 +3084,50 @@
 		
 		data.untilRotations = new Decimal(elem.untilRotationsInput.value).floor().max(0).min(elem.untilRotationsInput.max);
 		
+		const timeOutputNames_AllOptionIDs = ['NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Millisecond', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Second', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Minute', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Hour', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Day', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Week', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Month', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Year', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Decade', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Century', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Millennium', 'NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_NotorietyUpdateInterval'];
+		const timeOutputNames_AllOptionValues = ['ms', 's', 'm', 'h', 'd', 'w', 'mo', 'y', 'de', 'c', 'mi', 'noup'];
+		const timeOutputNames_CheckedOptions = [];
+		var timeOutputNames_ExcludedOptions = [];
+		var loopLength = timeOutputNames_AllOptionIDs.length;
+		if (document.getElementById('NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_ExcludeOptions').checked == true) {
+			var outputArr = [];
+			for (var i = 0; i < loopLength; i++) {
+				var thisOption = document.getElementById(timeOutputNames_AllOptionIDs[i]);
+				if (thisOption.checked != true) {
+					outputArr.push(timeOutputNames_AllOptionValues[i]);
+				}
+			}
+			timeOutputNames_ExcludedOptions = outputArr;
+			console.log(timeOutputNames_ExcludedOptions);
+			data.MainSetting_Global_TimeOutputNames = timeOutputNames_ExcludedOptions;
+		} else {
+			for (var i = 0; i < loopLength; i++) {
+				var thisOption = document.getElementById(timeOutputNames_AllOptionIDs[i]);
+				if (thisOption.checked == true) {
+					timeOutputNames_CheckedOptions.push(timeOutputNames_AllOptionValues[i]);
+				}
+			}
+			data.MainSetting_Global_TimeOutputNames = timeOutputNames_CheckedOptions;
+		}
+		console.log(timeOutputNames_CheckedOptions);
+		
+		
+		data.MainSetting_Global_Saturation = elem.MainSetting_Global_Saturation.value;
+		
 		elem.currentLevelInputResult.innerHTML = data.currentLevel;
 		elem.remainingEXPInputResult.innerHTML = data.remainingEXP;
 		elem.goalLevelInputResult.innerHTML = data.goalLevel;
 		elem.expFormulaInputResult.innerHTML = ['Current', 'Pre-shutdown'][Number(data.expFormula)];
-		elem.currentInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.currentInfamyLevel, data.currentInfamyLevel, data.toggleRomanNumerals_Global, false);
-		elem.goalInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.goalInfamyLevel, data.goalInfamyLevel, data.toggleRomanNumerals_Global, false);
+		elem.currentInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.currentInfamyLevel, data.currentInfamyLevel, data.MainSetting_Global_ToggleRomanNumerals, false);
+		elem.goalInfamyLevelInputResult.innerHTML = toRomanWithSeparator(data.goalInfamyLevel, data.goalInfamyLevel, data.MainSetting_Global_ToggleRomanNumerals, false);
 		elem.untilRotationsInputResult.innerHTML = data.untilRotations;
+		elem.MainSetting_Global_Saturation_InputResult.innerHTML = "<br/>Value: <code>" + data.MainSetting_Global_Saturation + "%";
 		
 		(function() {
-			
 			const elems = [elem.untilOutOfMoneyCheck, elem.cheaperPassCheck, elem.preMoneyCapCheck];
 			const elems_DataRefs = ['untilOutOfMoneyCheck', 'cheaperPassCheck', 'preMoneyCapCheck'];
-			for (var x = 0; x < elems.length; x++) {
+			var loopLength = elems.length;
+			for (var x = 0; x < loopLength; x++) {
 				if (data[elems_DataRefs[x]] == 1) {
 					elems[x].classList.remove('SwitchButtonDisabled');
 					elems[x].classList.add('SwitchButtonEnabled');
@@ -2927,14 +3138,19 @@
 			}
 		}());
 		
-		if (data.toggleInputExplanations_Global == 1) {
-			addGlobalStyling(".NotorietyEXPandInfamyCalculator_InputExplanation { }", true);
+		var globalStyling = '';
+		globalStyling = ":root { filter:saturate(" + data.MainSetting_Global_Saturation + "%)}";
+		addGlobalStyling(globalStyling, true);
+		
+		if (data.MainSetting_Global_ToggleInputExplanations == 1) {
+			globalStyling = ".NotorietyEXPandInfamyCalculator_InputExplanation { }";
 		} else {
-			addGlobalStyling(".NotorietyEXPandInfamyCalculator_InputExplanation { display:none }", true);
+			globalStyling = ".NotorietyEXPandInfamyCalculator_InputExplanation { display:none }";
 		}
+		addGlobalStyling(globalStyling);
 		
 		function hideAllSections() {
-			elem.toggleInfiniteInfamies_Global_Container.style.display = 'none';
+			elem.MainSettingContainer_Calculator_ToggleInfiniteInfamies.style.display = 'none';
 			
 			elem.Section_LevelSettings.style.display = 'none';
 			elem.Section_MutatorRankSettings.style.display = 'none';
@@ -2952,9 +3168,9 @@
 		
 		var untilRotationsInput_InputExplanation_Text = '<br>';
 		untilRotationsInput_InputExplanation_Text += "Continue the rotation until this many rotations done. Requires the 'Run/rotation gains' input to be properly defined.";
-		switch (data.toggleComputationType_Global) {
+		switch (data.MainSetting_Calculator_ToggleComputationType) {
 			case 0:
-				elem.toggleInfiniteInfamies_Global_Container.style.display = '';
+				elem.MainSettingContainer_Calculator_ToggleInfiniteInfamies.style.display = '';
 				elem.Section_MoneySettings.style.display = '';
 				elem.Section_LevelSettings.style.display = '';
 				elem.Section_InfamySettings.style.display = '';
@@ -2975,8 +3191,8 @@
 			case 2:
 				elem.Section_MutatorRankSettings.style.display = '';
 				elem.untilRotationsInput_Block.style.display = '';
-				if (data.toggleInfiniteInfamies_Global == 1) {
-					elem.toggleInfiniteInfamies_Global.click();
+				if (data.MainSetting_Calculator_ToggleInfiniteInfamies == 1) {
+					elem.MainSetting_Calculator_ToggleInfiniteInfamies.click();
 				}
 				
 				elem.runGainsInput.placeholder = 'MXP|Time (seconds). Example of a rotation involving 3 runs (heists):\n\n8,500|170\n4048|155\n5725|162';
@@ -2986,7 +3202,7 @@
 		
 		runGainsInput_InputExplanation_Text += ' While commas can be included in numbers, <b>do not include suffixed numbers</b> such as 1M.';
 		
-		switch (data.toggleInputSliders_Global) {
+		switch (data.MainSetting_Global_ToggleInputSliders) {
 			case 0:
 			untilRotationsInput_InputExplanation_Text += " Limit of <code>1,000,000,000,000</code>";
 			break;
@@ -2998,7 +3214,7 @@
 		elem.runGainsInput_InputExplanation.innerHTML = runGainsInput_InputExplanation_Text;
 		elem.untilRotationsInput_InputExplanation.innerHTML = untilRotationsInput_InputExplanation_Text;
 		
-		if (data.toggleInfiniteInfamies_Global == 1) {
+		if (data.MainSetting_Calculator_ToggleInfiniteInfamies == 1) {
 			elem.currentInfamyLevelInput.max = 'Infinity';
 			elem.goalInfamyLevelInput.max = 'Infinity';
 		} else {
@@ -3026,6 +3242,14 @@
 		elem.SectionContainer_Timers.style.display = elem.SectionContainer_Timers.style.display == 'block' ? 'none' : 'block'
 	});
 	
+	elem.SectionContainerToggle_GlobalSettings.addEventListener('click', function() {
+		elem.SectionContainer_GlobalSettings.style.display = elem.SectionContainer_GlobalSettings.style.display == 'block' ? 'none' : 'block'
+	});
+	
+	elem.SectionContainerToggle_Credits.addEventListener('click', function() {
+		elem.SectionContainer_Credits.style.display = elem.SectionContainer_Credits.style.display == 'block' ? 'none' : 'block'
+	});
+	
 	elem.SectionContainerToggle_UpdateLog.addEventListener('click', function() {
 		elem.SectionContainer_UpdateLog.style.display = elem.SectionContainer_UpdateLog.style.display == 'block' ? 'none' : 'block'
 	});
@@ -3033,15 +3257,47 @@
 	// --------------------
 	// Add listeners to toggles
 	(function() {
-		elem.toggleInputSliders_Global.addEventListener('click', function() {
-			data.toggleInputSliders_Global = data.toggleInputSliders_Global == 0 ? 1 : 0
-			this.innerHTML = 'Input method: <u>' + ['Manual', 'Sliders'][Number(data.toggleInputSliders_Global)] + '</u>';
-			const sliderElems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput, elem.untilRotationsInput];
-			for (var x = 0; x < sliderElems.length; x++) {
-				sliderElems[x].type = data.toggleInputSliders_Global == 1 ? 'range' : '';
+		elem.MainSetting_Calculator_ToggleComputationType.addEventListener('click', function() {
+			elem.runGainsInput.value = '';
+			switch (data.MainSetting_Calculator_ToggleComputationType) {
+				case 0:
+					data.MainSetting_Calculator_ToggleComputationType = 1;
+					break;
+				case 1:
+					data.MainSetting_Calculator_ToggleComputationType = 2;
+					break;
+				case 2:
+					data.MainSetting_Calculator_ToggleComputationType = 0;
+			}
+			this.innerHTML = 'Computing: <u>' + ['EXP, Levels & Infamy', 'Money', 'MXP & Mutator Ranks'][Number(data.MainSetting_Calculator_ToggleComputationType)] + '</u>';
+			updateSettingsDisplayedValues();
+			computeBeepBoop();
+		});
+		
+		elem.MainSetting_Calculator_ToggleInfiniteInfamies.addEventListener('click', function() {
+			data.MainSetting_Calculator_ToggleInfiniteInfamies = data.MainSetting_Calculator_ToggleInfiniteInfamies == 0 ? 1 : 0
+			this.innerHTML = 'Maximum infamies: <u>' + ['250', 'Unlimited (Disable input sliders)'][Number(data.MainSetting_Calculator_ToggleInfiniteInfamies)] + '</u>';
+			updateSettingsDisplayedValues();
+		});
+		
+		elem.MainSetting_Calculator_ToggleAutoCalculate.addEventListener('click', function() {
+			data.MainSetting_Calculator_ToggleAutoCalculate = data.MainSetting_Calculator_ToggleAutoCalculate == 0 ? 1 : 0
+			this.innerHTML = 'Auto calculate: <u>' + ['OFF', 'ON'][Number(data.MainSetting_Calculator_ToggleAutoCalculate)] + '</u>';
+			if (data.MainSetting_Calculator_ToggleAutoCalculate == 1) {
+				computeBeepBoop();
+			}
+		});
+		
+		elem.MainSetting_Global_ToggleInputSliders.addEventListener('click', function() {
+			data.MainSetting_Global_ToggleInputSliders = data.MainSetting_Global_ToggleInputSliders == 0 ? 1 : 0
+			this.innerHTML = 'Input method: <u>' + ['Manual', 'Sliders'][Number(data.MainSetting_Global_ToggleInputSliders)] + '</u>';
+			const sliderElems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput, elem.untilRotationsInput, elem.MainSetting_Global_Saturation];
+			var loopLength = sliderElems.length;
+			for (var x = 0; x < loopLength; x++) {
+				sliderElems[x].type = data.MainSetting_Global_ToggleInputSliders == 1 ? 'range' : '';
 			}
 			
-			switch (data.toggleInputSliders_Global) {
+			switch (data.MainSetting_Global_ToggleInputSliders) {
 				case 0:
 					elem.untilRotationsInput.max = 1e12;
 				break;
@@ -3051,70 +3307,39 @@
 			updateSettingsDisplayedValues();
 		});
 		
-		elem.toggleRomanNumerals_Global.addEventListener('click', function() {
-			data.toggleRomanNumerals_Global = data.toggleRomanNumerals_Global == 0 ? 1 : 0
-			this.innerHTML = 'Roman numerals: <u>' + ['OFF', 'ON'][Number(data.toggleRomanNumerals_Global)] + '</u>';
+		elem.MainSetting_Global_ToggleInputExplanations.addEventListener('click', function() {
+			data.MainSetting_Global_ToggleInputExplanations = data.MainSetting_Global_ToggleInputExplanations == 0 ? 1 : 0
+			this.innerHTML = 'Input explanations: <u>' + ['Hidden', 'Visible'][Number(data.MainSetting_Global_ToggleInputExplanations)] + '</u>';
+			updateSettingsDisplayedValues();
+		});
+		
+		elem.MainSetting_Global_ToggleRomanNumerals.addEventListener('click', function() {
+			data.MainSetting_Global_ToggleRomanNumerals = data.MainSetting_Global_ToggleRomanNumerals == 0 ? 1 : 0
+			this.innerHTML = 'Roman numerals: <u>' + ['OFF', 'ON'][Number(data.MainSetting_Global_ToggleRomanNumerals)] + '</u>';
 			updateSettingsDisplayedValues()
-			if (data.toggleAutoCalculate_Global == 1) {
+			if (data.MainSetting_Calculator_ToggleAutoCalculate == 1) {
 				computeBeepBoop();
 			}
 		});
 		
-		elem.toggleAutoCalculate_Global.addEventListener('click', function() {
-			data.toggleAutoCalculate_Global = data.toggleAutoCalculate_Global == 0 ? 1 : 0
-			this.innerHTML = 'Auto calculate: <u>' + ['OFF', 'ON'][Number(data.toggleAutoCalculate_Global)] + '</u>';
-			if (data.toggleAutoCalculate_Global == 1) {
-				computeBeepBoop();
-			}
-		});
-		
-		elem.toggleInputExplanations_Global.addEventListener('click', function() {
-			data.toggleInputExplanations_Global = data.toggleInputExplanations_Global == 0 ? 1 : 0
-			this.innerHTML = 'Input explanations: <u>' + ['Hidden', 'Visible'][Number(data.toggleInputExplanations_Global)] + '</u>';
-			updateSettingsDisplayedValues();
-		});
-		
-		elem.toggleComputationType_Global.addEventListener('click', function() {
-			elem.runGainsInput.value = '';
-			switch (data.toggleComputationType_Global) {
+		elem.MainSetting_Global_ToggleTimeOutputFormat.addEventListener('click', function() {
+			switch (data.MainSetting_Global_ToggleTimeOutputFormat) {
 				case 0:
-					data.toggleComputationType_Global = 1;
+					data.MainSetting_Global_ToggleTimeOutputFormat = 1;
 					break;
 				case 1:
-					data.toggleComputationType_Global = 2;
+					data.MainSetting_Global_ToggleTimeOutputFormat = 2;
 					break;
 				case 2:
-					data.toggleComputationType_Global = 0;
-			}
-			this.innerHTML = 'Computing: <u>' + ['EXP, Levels & Infamy', 'Money', 'MXP & Mutator Ranks'][Number(data.toggleComputationType_Global)] + '</u>';
-			updateSettingsDisplayedValues();
-			computeBeepBoop();
-		});
-		
-		elem.toggleInfiniteInfamies_Global.addEventListener('click', function() {
-			data.toggleInfiniteInfamies_Global = data.toggleInfiniteInfamies_Global == 0 ? 1 : 0
-			this.innerHTML = 'Maximum infamies: <u>' + ['250', 'Unlimited (Disable input sliders)'][Number(data.toggleInfiniteInfamies_Global)] + '</u>';
-			updateSettingsDisplayedValues();
-		});
-		
-		elem.toggleTimeOutputFormat_Global.addEventListener('click', function() {
-			switch (data.toggleTimeOutputFormat_Global) {
-				case 0:
-					data.toggleTimeOutputFormat_Global = 1;
-					break;
-				case 1:
-					data.toggleTimeOutputFormat_Global = 2;
-					break;
-				case 2:
-					data.toggleTimeOutputFormat_Global = 3;
+					data.MainSetting_Global_ToggleTimeOutputFormat = 3;
 					break;
 				case 3:
-					data.toggleTimeOutputFormat_Global = 0;
+					data.MainSetting_Global_ToggleTimeOutputFormat = 0;
 			}
-			this.innerHTML = 'Time output format: ' + '<u>' + ['digital', 'words', 'wordsShort', 'wordsShorter'][Number(data.toggleTimeOutputFormat_Global)] + '</u>';
+			this.innerHTML = 'Time output format: ' + '<u>' + getTimerConfig().outputFormat + '</u>';
 			updateSettingsDisplayedValues();
 			addHallofInfamyCCLs();
-			if (data.toggleAutoCalculate_Global == 1) {
+			if (data.MainSetting_Calculator_ToggleAutoCalculate == 1) {
 				computeBeepBoop();
 			}
 		});
@@ -3124,14 +3349,15 @@
 	(function() {
 		const elems = [elem.untilOutOfMoneyCheck, elem.cheaperPassCheck, elem.preMoneyCapCheck];
 		const elems_DataRefs = ['untilOutOfMoneyCheck', 'cheaperPassCheck', 'preMoneyCapCheck'];
-		for (var x = 0; x < elems.length; x++) {
+		var loopLength = elems.length;
+		for (var x = 0; x < loopLength; x++) {
 			const y = elems[x];
 			y.value = data[elems_DataRefs[x]];
 			y.addEventListener('click', function() {
 				data[elems_DataRefs[elems.indexOf(y)]] = data[elems_DataRefs[elems.indexOf(y)]] == 0 ? 1 : 0
 				this.innerHTML = ['[N]', '[Y]'][Number(data[elems_DataRefs[elems.indexOf(y)]])];	
 				updateSettingsDisplayedValues();
-				if (data.toggleAutoCalculate_Global == 1) {
+				if (data.MainSetting_Calculator_ToggleAutoCalculate == 1) {
 					computeBeepBoop();
 				}
 				
@@ -3150,11 +3376,12 @@
 	
 	// settings visual display event listeners
 	(function() {
-		const elems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput, elem.untilRotationsInput];
-		for (var x = 0; x < elems.length; x++) {
+		const elems = [elem.currentLevelInput, elem.remainingEXPInput, elem.goalLevelInput, elem.expFormulaInput, elem.currentInfamyLevelInput, elem.goalInfamyLevelInput, elem.untilRotationsInput, elem.MainSetting_Global_Saturation];
+		var loopLength = elems.length;
+		for (var x = 0; x < loopLength; x++) {
 			elems[x].addEventListener('input', function() {
 				updateSettingsDisplayedValues()
-				if (data.toggleAutoCalculate_Global == 1) {
+				if (data.MainSetting_Calculator_ToggleAutoCalculate == 1) {
 					computeBeepBoop();
 				}
 			});
@@ -3164,9 +3391,10 @@
 	// settings inputs event listeners
 	(function() {
 		const elems = [elem.currentMoneyInput];
-		for (var x = 0; x < elems.length; x++) {
+		var loopLength = elems.length;
+		for (var x = 0; x < loopLength; x++) {
 			elems[x].addEventListener('input', function() {
-				if (data.toggleAutoCalculate_Global == 1) {
+				if (data.MainSetting_Calculator_ToggleAutoCalculate == 1) {
 					computeBeepBoop();
 				}
 			});
@@ -3176,9 +3404,10 @@
 	// settings textarea inputs event listeners
 	(function() {
 		const elems = [elem.runGainsInput];
-		for (var x = 0; x < elems.length; x++) {
+		var loopLength = elems.length;
+		for (var x = 0; x < loopLength; x++) {
 			elems[x].addEventListener('blur', function() {
-				if (data.toggleAutoCalculate_Global == 1) {
+				if (data.MainSetting_Calculator_ToggleAutoCalculate == 1) {
 					computeBeepBoop();
 				}
 			});
@@ -3196,8 +3425,8 @@
 		elem.goalInfamyLevelInput.value = 50;
 		elem.currentMoneyInput.value = '1e8';
 		elem.remainingEXPInput.value = '40';
-		elem.toggleComputationType_Global.click();
-		elem.toggleComputationType_Global.click();
+		elem.MainSetting_Calculator_ToggleComputationType.click();
+		elem.MainSetting_Calculator_ToggleComputationType.click();
 		// elem.runGainsInput.value = "523723|9584523|42\n237455|4771235|61";
 		elem.runGainsInput.value = "2373|42\n4882|74";
 		// elem.runGainsInput.value = "10,000,000|150\n4,523,000|84";
@@ -3205,15 +3434,15 @@
 		elem.currentMutatorRankInput.value = 87;
 		elem.goalMutatorRankInput.value = 300;
 		// elem.untilRotationsInput.value = 723;
-		if (data.toggleInfiniteInfamies_Global == 0) {
-			elem.toggleInfiniteInfamies_Global.click();
+		if (data.MainSetting_Calculator_ToggleInfiniteInfamies == 0) {
+			elem.MainSetting_Calculator_ToggleInfiniteInfamies.click();
 		}
 		// elem.untilRotationsInput.value = 35;
 		*/
 		updateSettingsDisplayedValues();
 		
 		var disclaimerText = '';
-		switch (data.toggleComputationType_Global) {
+		switch (data.MainSetting_Calculator_ToggleComputationType) {
 			case 0:
 				disclaimerText += "(Important: While more inputted runs provides greater accuracy, it will also take slightly longer to calculate, depending on available browser resources. Higher infamy ranks contribute significantly more to lag. If it appears the tool has frozen the browser, force refresh it or close the tab and try again with less runs. Additionally, the EXP result may be inaccurate by up to about <code>1</code> per level due to inconsistency regarding how the game rounds numbers. This tool assumes this value: ";
 				switch (Number(data.expFormula)) {
@@ -3248,11 +3477,10 @@
 			avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
 		}
 		const avgTimeOutput = new Timer();
-		avgTimeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 		avgTimeOutput.amount = avgTime.times(1e3);
 		var orig_MXP = null;
 		var avgMoneyGains = null;
-		switch (data.toggleComputationType_Global) {
+		switch (data.MainSetting_Calculator_ToggleComputationType) {
 			case 0:
 				var avgExpGains = rotationInputsCalculated.exp.dividedBy(rotationInputsCalculated.includedRuns);
 				var infamyRunsReq = NotoExpReqTotal({}, 1, 100).dividedBy(avgExpGains);
@@ -3263,10 +3491,10 @@
 					if (data.currentInfamyLevel.equals(0)) {
 						outputString += "At Level " + formatInt(data.currentLevel);
 					} else {
-						outputString += "At Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/)
+						outputString += "At Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.MainSetting_Global_ToggleRomanNumerals && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/)
 					}
 					const orig = NotoExpReqTotal({untilEXP:true, currentLevel:data.currentLevel, remainingEXP:data.remainingEXP, currentInfamyLevel:data.currentInfamyLevel, extraEXP:rotationInputsCalculated.exp.times(data.untilRotations)});
-					outputString += ", assuming gains of " + formatInt(rotationInputsCalculated.exp) + " EXP and playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per rotation, the following will happen:"
+					outputString += ", assuming gains of " + formatInt(rotationInputsCalculated.exp) + " EXP and playtime of " + avgTimeOutput.formatAmount(getTimerConfig()) + " (including extra time) per rotation, the following will happen:"
 					if (orig.extraInfamyLevels.equals(0)) {
 						outputString += '<br>• Reach Level ' + formatInt(orig.newLevel);
 						outputString += ' (Levels: +' + formatInt(orig.extraLevels)
@@ -3278,7 +3506,7 @@
 						}
 						outputString += ')';
 					} else {
-						outputString += '<br>• Reach Level ' + toRomanWithSeparator(orig.newInfamyLevel, orig.newLevel, data.toggleRomanNumerals_Global && orig.newInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/);
+						outputString += '<br>• Reach Level ' + toRomanWithSeparator(orig.newInfamyLevel, orig.newLevel, data.MainSetting_Global_ToggleRomanNumerals && orig.newInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/);
 						outputString += ' (Infamies: +' + formatInt(orig.extraInfamyLevels)
 						if (data.currentInfamyLevel.greaterThan(0)) {
 							outputString += ', x' + formatInt(orig.newInfamyLevel.dividedBy(data.currentInfamyLevel));
@@ -3308,13 +3536,13 @@
 								totalExpReq = totalExpReq.add(NotoExpReqTotal({}, 1, 100).times(calcPoorOutput.infsWithPassive.sub(1)));
 							}
 						}
-						outputString += "At Infamy " + toRomanWithSeparator(data.currentInfamyLevel, '', data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), false /*data.currentInfamyLevel > 0*/) + " with currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + '</span> and average gains of ' + formatInt(avgExpGains) + " EXP per run and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + '</span> per infamy (based on runs required for enough exp), the following can be achieved:';
+						outputString += "At Infamy " + toRomanWithSeparator(data.currentInfamyLevel, '', data.MainSetting_Global_ToggleRomanNumerals && data.currentInfamyLevel.greaterThan(0), false /*data.currentInfamyLevel > 0*/) + " with currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + '</span> and average gains of ' + formatInt(avgExpGains) + " EXP per run and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + '</span> per infamy (based on runs required for enough exp), the following can be achieved:';
 						outputString += '<br>• Infamies: ' + formatInt(calcPoorOutput.infs) + ' (passive: ' + formatInt(calcPoorOutput.passiveInfs) + ' | total: ' + formatInt(calcPoorOutput.infsWithPassive) + ')';
-						outputString += '<br>• Reach Infamy ' + toRomanWithSeparator(data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive), '', data.toggleRomanNumerals_Global && (data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive)).greaterThan(0), false /*data.currentInfamyLevel > 0*/) + ' for totals of <b>' + formatInt(totalExpReq) + "</b> EXP and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.totalCostWithPassive) + "</span> (leftover: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.remainingMoney) + '</span>)';
+						outputString += '<br>• Reach Infamy ' + toRomanWithSeparator(data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive), '', data.MainSetting_Global_ToggleRomanNumerals && (data.currentInfamyLevel.add(calcPoorOutput.infsWithPassive)).greaterThan(0), false /*data.currentInfamyLevel > 0*/) + ' for totals of <b>' + formatInt(totalExpReq) + "</b> EXP and <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.totalCostWithPassive) + "</span> (leftover: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(calcPoorOutput.remainingMoney) + '</span>)';
 					} else {
-						outputString += "To go from Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.toggleRomanNumerals_Global && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/) + ' to ' + toRomanWithSeparator(data.goalInfamyLevel, data.goalLevel, data.toggleRomanNumerals_Global && data.goalInfamyLevel.greaterThan(0), true /*data.goalInfamyLevel > 0*/);
+						outputString += "To go from Level " + toRomanWithSeparator(data.currentInfamyLevel, data.currentLevel, data.MainSetting_Global_ToggleRomanNumerals && data.currentInfamyLevel.greaterThan(0), true /*data.currentInfamyLevel > 0*/) + ' to ' + toRomanWithSeparator(data.goalInfamyLevel, data.goalLevel, data.MainSetting_Global_ToggleRomanNumerals && data.goalInfamyLevel.greaterThan(0), true /*data.goalInfamyLevel > 0*/);
 						if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
-							outputString += ", assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run"
+							outputString += ", assuming average gains of " + formatInt(avgExpGains) + " EXP and average playtime of " + avgTimeOutput.formatAmount(getTimerConfig()) + " (including extra time) per run"
 						}
 						outputString += ', the following are required:';
 						var currentLevel_Temp = data.currentLevel, goalLevel_Temp = data.goalLevel;
@@ -3356,10 +3584,10 @@
 				if (data.untilRotations.greaterThan(0) || rotationInputsCalculated.includedRuns.greaterThan(0)) {
 					if (data.untilRotations.greaterThan(0)) {
 						var gainsInRotations = rotationInputsCalculated.money.times(data.untilRotations);
-						outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, assuming average gains of <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + "</span> and playtime of " + avgTimeOutput.formatAmount() + " per run, gaining another <span class='NotorietyEXPCalculator_Money'>$" + formatInt(gainsInRotations) + "</span> will total:"
+						outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, assuming average gains of <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + "</span> and playtime of " + avgTimeOutput.formatAmount(getTimerConfig()) + " per run, gaining another <span class='NotorietyEXPCalculator_Money'>$" + formatInt(gainsInRotations) + "</span> will total:"
 						outputString += "<br>• Money: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney.add(gainsInRotations)) + "</span>";
 					} else {
-						outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, assuming average gains of <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + "</span> and playtime of " + avgTimeOutput.formatAmount() + " per run, to reach <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney) + "</span>, the requirements are:";
+						outputString += "With currently <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.currentMoney) + "</span>, assuming average gains of <span class='NotorietyEXPCalculator_Money'>$" + formatInt(avgMoneyGains) + "</span> and playtime of " + avgTimeOutput.formatAmount(getTimerConfig()) + " per run, to reach <span class='NotorietyEXPCalculator_Money'>$" + formatInt(data.goalMoney) + "</span>, the requirements are:";
 						outputString += "<br>• Money: <span class='NotorietyEXPCalculator_Money'>$" + formatInt(totalMoneyReq) + "</span>";
 					}
 				} else {
@@ -3385,7 +3613,7 @@
 					}
 					outputString += " the requirement is <span class='NotorietyEXPCalculator_MXP'>" + formatInt(totalMxpReq) + " MXP</span>.";
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
-						outputString += " Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+						outputString += " Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount(getTimerConfig()) + " (including extra time) per run:";
 					}
 				} else if (data.untilMXPUsage.greaterThan(0) || data.untilRotations.greaterThan(0)) {
 					if (data.untilRotations.greaterThan(0)) {
@@ -3421,28 +3649,26 @@
 					outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(orig_MXP.leftoverMXP) + "</span>";
 					if (rotationInputsCalculated.includedRuns.greaterThan(0)) {
 						if (data.untilRotations.greaterThan(0)) {
-							outputString += "<p></p>Assuming gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(rotationInputsCalculated.mxp) + " MXP</span> and playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per rotation:";
+							outputString += "<p></p>Assuming gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(rotationInputsCalculated.mxp) + " MXP</span> and playtime of " + avgTimeOutput.formatAmount(getTimerConfig()) + " (including extra time) per rotation:";
 						} else {
-							outputString += "<p></p>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount() + " (including extra time) per run:";
+							outputString += "<p></p>Assuming average gains of <span class='NotorietyEXPCalculator_MXP'>" + formatInt(avgMxpGains) + " MXP</span> and average playtime of " + avgTimeOutput.formatAmount(getTimerConfig()) + " (including extra time) per run:";
 						}
 					}
 				} else {
 					outputString += "Wait a minute, how did this happen? We're smarter than this.";
 				}
 			}
-		switch (data.toggleComputationType_Global) {
+		switch (data.MainSetting_Calculator_ToggleComputationType) {
 		case 0:
 			if (rotationInputsCalculated.includedRuns.notEquals(0)) {
 				if (data.untilRotations.greaterThan(0)) {
 					const timeOutput = new Timer();
-					timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 					timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).times(data.untilRotations).ceil());
 					outputString += '<p></p>Requirements:';
 					outputString += '<br>• <b>' + formatInt(data.untilRotations) + '</b>' + checkPlural(data.untilRotations, ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-					outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+					outputString += '<br>• <b>' + timeOutput.formatAmount(getTimerConfig()) + '</b> playtime';
 				} else {
 					const timeOutput = new Timer();
-					timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 					if (totalExpReq.dividedBy(rotationInputsCalculated.exp).equals(0) || totalExpReq.equals(0)) {
 						timeOutput.amount = new Decimal(0);
 					} else {
@@ -3455,10 +3681,10 @@
 					if (totalExpReq.notEquals(0)) {
 						if (forEXPOnlyNote == true) {
 							outputString += '<br>• For EXP only: <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-							outputString += '<br>• For EXP only: <b>' + timeOutput.formatAmount() + '</b> playtime';
+							outputString += '<br>• For EXP only: <b>' + timeOutput.formatAmount(getTimerConfig()) + '</b> playtime';
 						} else {
 							outputString += '<br>• <b>' + formatInt(rotationsReq) + '</b>' + checkPlural(totalExpReq.dividedBy(rotationInputsCalculated.exp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-							outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+							outputString += '<br>• <b>' + timeOutput.formatAmount(getTimerConfig()) + '</b> playtime';
 						}
 					}
 				}
@@ -3468,13 +3694,11 @@
 		if (rotationInputsCalculated.includedRuns.notEquals(0)) {
 			if (data.untilRotations.greaterThan(0)) {
 				const timeOutput = new Timer();
-				timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 				timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).times(data.untilRotations).ceil());
 				outputString += '<br>• <b>' + formatInt(data.untilRotations) + '</b>' + checkPlural(data.untilRotations, ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+				outputString += '<br>• <b>' + timeOutput.formatAmount(getTimerConfig()) + '</b> playtime';
 			} else {
 				const timeOutput = new Timer();
-				timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 				if (totalMoneyReq.dividedBy(rotationInputsCalculated.money).equals(0) || totalMoneyReq.equals(0)) {
 					timeOutput.amount = new Decimal(0);
 				} else {
@@ -3486,7 +3710,7 @@
 				}
 				outputString += "<br>• Leftover Money: <span class='NotorietyEXPCalculator_Money'>" + formatInt(totalMoneyReq.dividedBy(rotationInputsCalculated.money).sub(rotationsReq.floor()).times(rotationInputsCalculated.money)) + "</span>";
 				outputString += '<br>• <b>' + formatInt(rotationsReq.ceil()) + '</b>' + checkPlural(totalMoneyReq.dividedBy(rotationInputsCalculated.money).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-				outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+				outputString += '<br>• <b>' + timeOutput.formatAmount(getTimerConfig()) + '</b> playtime';
 			}
 		}
 		break;
@@ -3494,13 +3718,11 @@
 			if (rotationInputsCalculated.includedRuns.notEquals(0)) {
 				if (data.untilRotations.greaterThan(0)) {
 					const timeOutput = new Timer();
-					timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 					timeOutput.amount = new Decimal(1e3).times(rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).times(data.untilRotations).ceil());
 					outputString += '<br>• <b>' + formatInt(data.untilRotations) + '</b>' + checkPlural(data.untilRotations, ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-					outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+					outputString += '<br>• <b>' + timeOutput.formatAmount(getTimerConfig()) + '</b> playtime';
 				} else {
 					const timeOutput = new Timer();
-					timeOutput.config = ['digital', 'words', 'wordsShort', 'wordsShorter'][data.toggleTimeOutputFormat_Global];
 					if (totalMxpReq.dividedBy(rotationInputsCalculated.mxp).equals(0) || totalMxpReq.equals(0)) {
 						timeOutput.amount = new Decimal(0);
 					} else {
@@ -3514,7 +3736,7 @@
 						outputString += "<br>• Leftover <span class='NotorietyEXPCalculator_MXP'>MXP</span>: " + formatInt(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).sub(rotationsReq.floor()).times(rotationInputsCalculated.mxp)) + "</span>";
 					}
 					outputString += '<br>• <b>' + formatInt(rotationsReq.ceil()) + '</b>' + checkPlural(totalMxpReq.dividedBy(rotationInputsCalculated.mxp).ceil(), ' rotation', ' rotations') + ' of <b>' + formatInt(rotationInputsCalculated.includedRuns) + '</b>' + checkPlural(rotationInputsCalculated.includedRuns, ' run', ' runs');
-					outputString += '<br>• <b>' + timeOutput.formatAmount() + '</b> playtime';
+					outputString += '<br>• <b>' + timeOutput.formatAmount(getTimerConfig()) + '</b> playtime';
 				}
 			}
 		}
@@ -3524,7 +3746,8 @@
 	
 	function addDoubleClickImages() {
 		const doubleClickImgs = document.getElementsByClassName('NotorietyEXPCalculator_DoubleClickImg');
-		for (var x = 0; x <doubleClickImgs.length; x++) {
+		var loopLength = doubleClickImgs.length;
+		for (var x = 0; x < loopLength; x++) {
 			doubleClickImgs[x].addEventListener('dblclick', function() {
 				window.open(this.src);
 			});
@@ -3546,6 +3769,14 @@
 			elem.filterSortButton.innerHTML = "Discrimination!";
 		} else {
 			elem.filterSortButton.innerHTML = "Filter and sort";
+		}
+	});
+	elem.updateGlobalSettingsButton.addEventListener('click', function() {
+		updateSettingsDisplayedValues();
+		if (randomBetween(1,100) == 1) {
+			elem.updateGlobalSettingsButton.innerHTML = "Any flat earthers in the chat?!";
+		} else {
+			elem.updateGlobalSettingsButton.innerHTML = "Update all Global Settings";
 		}
 	});
 	elem.updateLogSortButton.addEventListener('click', function() {
