@@ -2031,7 +2031,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1418.3, // repeating decimal (x.3) adds 18s
+			"2.0.0": 1419.3, // repeating decimal (x.3) adds 18s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -3095,7 +3095,6 @@
 				}
 			}
 			timeOutputNames_ExcludedOptions = outputArr;
-			console.log(timeOutputNames_ExcludedOptions);
 			data.MainSetting_Global_TimeOutputNames = timeOutputNames_ExcludedOptions;
 		} else {
 			for (var i = 0; i < loopLength; i++) {
