@@ -313,6 +313,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 		if (config.includedTimeNames != undefined) {
 			var output = '';
 			const entries = {};
+			config.includedTimeNames.sort(function(a, b){ return timeAcronyms_shorter.indexOf(a) - timeAcronyms_shorter.indexOf(b); });
 			
 			var loopLength = timeAcronyms_shorter.length;
 			for (var x = 0; x < loopLength; x++) {
@@ -320,93 +321,37 @@ function Timer(amount, interval, direction, max, editHTML) {
 			}
 			var excludeNext = false;
 			var carryOverAmount = 0;
+			var lastAmount = 0;
+			var lastTimeName = '';
+			const outputtedTimeNames = [];
 			
 			// Check each time amount.
 			var amount_abs = Math.max(0, Math.abs(orig.amount)); // In case of negative numbers. Note: Despite adding Math.abs, a max function with 0 as a parameter was also added, with it being used instead.
 			// console.log(amount_abs);
 			
-			for (var i = loopLength - 2; i > 0; i--) {
-				// console.log(entries[timeAcronyms_shorter[i]], extraAmountToNext);
-				// console.log(amount_abs % secondsConversion[i +
-				// excludeNext = false;
+			for (var i = loopLength - 1; i > 0; i--) {
 				// console.log(timeAcronyms_shorter[i]);
-				// console.log('acronym: ', timeAcronyms_shorter[i]);
-				// console.log('carryOverAmount: ', carryOverAmount);
 				
-				var temp_01 = amount_abs / secondsConversion[i]; // simple division result
-				var temp_02 = Math.trunc(temp_01); // quantity of this current time name
-				var temp_03 = temp_01 * (secondsConversion[i] / secondsConversion[i - 1]); // next lower time name's quantity equivalent
-				var temp_04 = (temp_01 - temp_02) * (secondsConversion[i] / secondsConversion[i - 1]); // next lower time name's quantity equivalent, accounting for carry over
-				
-				var moduloThis = temp_01;
-				var lastAmount = 0;
+				var moduloThis = amount_abs / secondsConversion[i];
 				if (amount_abs >= secondsConversion[i]) {
-					// console.log('acronym + moduloThis: ', timeAcronyms_shorter[i], moduloThis);
 					if (config.includedTimeNames.indexOf(timeAcronyms_shorter[i].toLowerCase()) != -1) {
-						// if carryOverAmount can be added to this time value, then...
 						if (carryOverAmount == 0) {
 							carryOverAmount = moduloThis;
 						}
 						lastAmount = carryOverAmount;
+						lastTimeName = timeAcronyms_shorter[i];
+						outputtedTimeNames.push(timeAcronyms_shorter[i]);
 						entries[timeAcronyms_shorter[i]] += Math.trunc(carryOverAmount);
 						amount_abs -= (Math.trunc(carryOverAmount) * secondsConversion[i]);
 						carryOverAmount = 0;
-						// console.log(carryOverAmount);
-					} else {
-						/*
-						// if not adding carryOverAmount to this time value, then...
-						console.log(true);
-						carryOverAmount += (lastAmount - Math.trunc(lastAmount)) * (secondsConversion[i] / secondsConversion[i - 1]);
-						console.log(carryOverAmount);
-						
-						// carryOverAmount += temp_04;
-						// amount_abs -= Math.floor(carryOverAmount * secondsConversion[i]);
-						// carryOverAmount = Math.floor(carryOverAmount);
-						// amount_abs = amount_abs * (secondsConversion[i] / secondsConversion[i - 1]);
-						// excludeNext = true;
-						*/
 					}
 				}
 			}
-			// replaced with the above loop
-			/*
-			if (amount_abs >= secondsConversion[3]) {
-				if (config.includedTimeNames.indexOf(timeAcronyms_shorter[3].toLowerCase()) != -1) {
-					if (removeCurrentAmount == false) {
-						entries.h += Math.floor((amount_abs % secondsConversion[4]) / secondsConversion[3]);
-					}
-					removeCurrentAmount = false;
-				} else {
-					entries.m += Math.floor((amount_abs % secondsConversion[4]) / secondsConversion[3] * (secondsConversion[3] / secondsConversion[2])) - entries.m;
-					removeCurrentAmount = true;
-				}
-			}
-			if (amount_abs >= secondsConversion[2]) {
-				if (config.includedTimeNames.indexOf(timeAcronyms_shorter[2].toLowerCase()) != -1) {
-					if (removeCurrentAmount == false) {
-						entries.m += Math.floor((amount_abs % secondsConversion[3]) / secondsConversion[2]);
-					}
-					removeCurrentAmount = false;
-				} else {
-					entries.s += Math.floor((amount_abs % secondsConversion[3]) / secondsConversion[2] * (secondsConversion[2] / secondsConversion[1])) - entries.s;
-					removeCurrentAmount = true;
-				}
-			}
-			if (amount_abs >= secondsConversion[1]) {
-				if (config.includedTimeNames.indexOf(timeAcronyms_shorter[1].toLowerCase()) != -1) {
-					if (removeCurrentAmount == false) {
-						entries.s += Math.floor((amount_abs % secondsConversion[2]) / secondsConversion[1]);
-					}
-					removeCurrentAmount = false;
-				} else {
-					entries.ms += Math.floor((amount_abs % secondsConversion[2]) / secondsConversion[1] * (secondsConversion[1] / secondsConversion[0])) - entries.ms;
-					removeCurrentAmount = true;
-				}
-			}
-			*/
+			
 			// console.log(amount_abs);
 			if (config.includedTimeNames.indexOf(timeAcronyms_shorter[0].toLowerCase()) != -1) {
 				if (amount_abs >= secondsConversion[0]) {
+					outputtedTimeNames.push(timeAcronyms_shorter[0]);
 					if (amount_abs < 100) {
 						if (['digital'].indexOf(config.outputFormat) != -1) {
 							entries.ms = '0' + (amount_abs).toFixed(0);
@@ -418,8 +363,19 @@ function Timer(amount, interval, direction, max, editHTML) {
 					} else {
 						entries.ms = (amount_abs).toFixed(0);
 					}
+					amount_abs = 0;
 				} else {
 					entries.ms = 0;
+				}
+			}
+			
+			if (amount_abs > 0) {
+				if (outputtedTimeNames.length == 0) {
+					const latestEntry = config.includedTimeNames[0];
+					entries[latestEntry] += (amount_abs / secondsConversion[timeAcronyms_shorter.indexOf(latestEntry)]);
+				} else if (outputtedTimeNames.length > 0) {
+					const latestEntry = outputtedTimeNames[outputtedTimeNames.length - 1];
+					entries[latestEntry] += (amount_abs / secondsConversion[timeAcronyms_shorter.indexOf(latestEntry)]);
 				}
 			}
 			
