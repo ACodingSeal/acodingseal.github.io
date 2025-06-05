@@ -314,53 +314,113 @@ function Timer(amount, interval, direction, max, editHTML) {
 			var output = '';
 			const entries = {};
 			
+			var loopLength = timeAcronyms_shorter.length;
+			for (var x = 0; x < loopLength; x++) {
+				entries[timeAcronyms_shorter[x]] = 0;
+			}
+			var excludeNext = false;
+			var carryOverAmount = 0;
+			
 			// Check each time amount.
-			const amount_abs = Math.max(0, Math.abs(orig.amount)); // In case of negative numbers. Note: Despite adding Math.abs, a max function with 0 as a parameter was also added, with it being used instead.
-			if (config.includedTimeNames.indexOf(timeAcronyms_shorter[11].toLowerCase()) != -1) {
-				if (amount_abs >= secondsConversion[0]) {
-					if ((amount_abs % 1e3) < 100) {
-						entries.ms = '0' + (amount_abs % 1e3).toFixed(0);
-					} else if ((amount_abs % 1e3) % 10 !== 0) {
-						entries.ms = (amount_abs % 1e3).toFixed(0) + '0';
+			var amount_abs = Math.max(0, Math.abs(orig.amount)); // In case of negative numbers. Note: Despite adding Math.abs, a max function with 0 as a parameter was also added, with it being used instead.
+			// console.log(amount_abs);
+			
+			for (var i = loopLength - 2; i > 0; i--) {
+				// console.log(entries[timeAcronyms_shorter[i]], extraAmountToNext);
+				// console.log(amount_abs % secondsConversion[i +
+				// excludeNext = false;
+				// console.log(timeAcronyms_shorter[i]);
+				// console.log('acronym: ', timeAcronyms_shorter[i]);
+				// console.log('carryOverAmount: ', carryOverAmount);
+				
+				var temp_01 = amount_abs / secondsConversion[i]; // simple division result
+				var temp_02 = Math.trunc(temp_01); // quantity of this current time name
+				var temp_03 = temp_01 * (secondsConversion[i] / secondsConversion[i - 1]); // next lower time name's quantity equivalent
+				var temp_04 = (temp_01 - temp_02) * (secondsConversion[i] / secondsConversion[i - 1]); // next lower time name's quantity equivalent, accounting for carry over
+				
+				var moduloThis = temp_01;
+				var lastAmount = 0;
+				if (amount_abs >= secondsConversion[i]) {
+					// console.log('acronym + moduloThis: ', timeAcronyms_shorter[i], moduloThis);
+					if (config.includedTimeNames.indexOf(timeAcronyms_shorter[i].toLowerCase()) != -1) {
+						// if carryOverAmount can be added to this time value, then...
+						if (carryOverAmount == 0) {
+							carryOverAmount = moduloThis;
+						}
+						lastAmount = carryOverAmount;
+						entries[timeAcronyms_shorter[i]] += Math.trunc(carryOverAmount);
+						amount_abs -= (Math.trunc(carryOverAmount) * secondsConversion[i]);
+						carryOverAmount = 0;
+						// console.log(carryOverAmount);
 					} else {
-						entries.ms = (amount_abs % 1e3).toFixed(0);
+						/*
+						// if not adding carryOverAmount to this time value, then...
+						console.log(true);
+						carryOverAmount += (lastAmount - Math.trunc(lastAmount)) * (secondsConversion[i] / secondsConversion[i - 1]);
+						console.log(carryOverAmount);
+						
+						// carryOverAmount += temp_04;
+						// amount_abs -= Math.floor(carryOverAmount * secondsConversion[i]);
+						// carryOverAmount = Math.floor(carryOverAmount);
+						// amount_abs = amount_abs * (secondsConversion[i] / secondsConversion[i - 1]);
+						// excludeNext = true;
+						*/
+					}
+				}
+			}
+			// replaced with the above loop
+			/*
+			if (amount_abs >= secondsConversion[3]) {
+				if (config.includedTimeNames.indexOf(timeAcronyms_shorter[3].toLowerCase()) != -1) {
+					if (removeCurrentAmount == false) {
+						entries.h += Math.floor((amount_abs % secondsConversion[4]) / secondsConversion[3]);
+					}
+					removeCurrentAmount = false;
+				} else {
+					entries.m += Math.floor((amount_abs % secondsConversion[4]) / secondsConversion[3] * (secondsConversion[3] / secondsConversion[2])) - entries.m;
+					removeCurrentAmount = true;
+				}
+			}
+			if (amount_abs >= secondsConversion[2]) {
+				if (config.includedTimeNames.indexOf(timeAcronyms_shorter[2].toLowerCase()) != -1) {
+					if (removeCurrentAmount == false) {
+						entries.m += Math.floor((amount_abs % secondsConversion[3]) / secondsConversion[2]);
+					}
+					removeCurrentAmount = false;
+				} else {
+					entries.s += Math.floor((amount_abs % secondsConversion[3]) / secondsConversion[2] * (secondsConversion[2] / secondsConversion[1])) - entries.s;
+					removeCurrentAmount = true;
+				}
+			}
+			if (amount_abs >= secondsConversion[1]) {
+				if (config.includedTimeNames.indexOf(timeAcronyms_shorter[1].toLowerCase()) != -1) {
+					if (removeCurrentAmount == false) {
+						entries.s += Math.floor((amount_abs % secondsConversion[2]) / secondsConversion[1]);
+					}
+					removeCurrentAmount = false;
+				} else {
+					entries.ms += Math.floor((amount_abs % secondsConversion[2]) / secondsConversion[1] * (secondsConversion[1] / secondsConversion[0])) - entries.ms;
+					removeCurrentAmount = true;
+				}
+			}
+			*/
+			// console.log(amount_abs);
+			if (config.includedTimeNames.indexOf(timeAcronyms_shorter[0].toLowerCase()) != -1) {
+				if (amount_abs >= secondsConversion[0]) {
+					if (amount_abs < 100) {
+						if (['digital'].indexOf(config.outputFormat) != -1) {
+							entries.ms = '0' + (amount_abs).toFixed(0);
+						} else {
+							entries.ms = (amount_abs).toFixed(0);
+						}
+					} else if (amount_abs % 10 !== 0) {
+						entries.ms = (amount_abs).toFixed(0) + '0';
+					} else {
+						entries.ms = (amount_abs).toFixed(0);
 					}
 				} else {
 					entries.ms = 0;
 				}
-			}
-			if (amount_abs >= secondsConversion[1] && config.includedTimeNames.indexOf(timeAcronyms_shorter[1].toLowerCase()) != -1) {
-				entries.s = Math.floor((amount_abs % secondsConversion[2]) / secondsConversion[1]);
-			}
-			if (amount_abs >= secondsConversion[2] && config.includedTimeNames.indexOf(timeAcronyms_shorter[2].toLowerCase()) != -1) {
-				entries.m = Math.floor((amount_abs % secondsConversion[3]) / secondsConversion[2]);
-			}
-			if (amount_abs >= secondsConversion[3] && config.includedTimeNames.indexOf(timeAcronyms_shorter[3].toLowerCase()) != -1) {
-				entries.h = Math.floor((amount_abs % secondsConversion[4]) / secondsConversion[3]);
-			}
-			if (amount_abs >= secondsConversion[4] && config.includedTimeNames.indexOf(timeAcronyms_shorter[4].toLowerCase()) != -1) {
-				entries.d = Math.floor((amount_abs % secondsConversion[5]) / secondsConversion[4]);
-			}
-			if (amount_abs >= secondsConversion[5] && config.includedTimeNames.indexOf(timeAcronyms_shorter[5].toLowerCase()) != -1) {
-				entries.w = Math.floor((amount_abs % secondsConversion[6]) / secondsConversion[5]);
-			}
-			if (amount_abs >= secondsConversion[6] && config.includedTimeNames.indexOf(timeAcronyms_shorter[6].toLowerCase()) != -1) {
-				entries.mo = Math.floor((amount_abs % secondsConversion[7]) / secondsConversion[6]);
-			}
-			if (amount_abs >= secondsConversion[7] && config.includedTimeNames.indexOf(timeAcronyms_shorter[7].toLowerCase()) != -1) {
-				entries.y = Math.floor((amount_abs % secondsConversion[8]) / secondsConversion[7]);
-			}
-			if (amount_abs >= secondsConversion[8] && config.includedTimeNames.indexOf(timeAcronyms_shorter[8].toLowerCase()) != -1) {
-				entries.de = Math.floor((amount_abs % secondsConversion[9]) / secondsConversion[8]);
-			}
-			if (amount_abs >= secondsConversion[9] && config.includedTimeNames.indexOf(timeAcronyms_shorter[9].toLowerCase()) != -1) {
-				entries.c = Math.floor((amount_abs % secondsConversion[10]) / secondsConversion[9]);
-			}
-			if (amount_abs >= secondsConversion[10] && config.includedTimeNames.indexOf(timeAcronyms_shorter[10].toLowerCase()) != -1) {
-				entries.mi = Math.floor((amount_abs % secondsConversion[11]) / secondsConversion[10]);
-			}
-			if (amount_abs >= secondsConversion[11] && config.includedTimeNames.indexOf(timeAcronyms_shorter[11].toLowerCase()) != -1) {
-				entries.noup = Math.floor(amount_abs / secondsConversion[11]);
 			}
 			
 			function zeroPadding(input) {
@@ -394,7 +454,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 					if (amount_abs < secondsConversion[1]) {
 						output += '00:';
 					}
-					output += entries_output.reverse().join(':');
+					output += entries_output.join(':');
 				break;
 				case 'words':
 					// Example: 3 minutes, 50 seconds, 270 milliseconds
@@ -411,7 +471,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push("Less than 1 millisecond");
 						} else */
 						if (Number(entries_output[i]) != 0 && i < entries_output.length) {
-							output_array.push(entries_output[i] + ' ' + checkPluralTime(entries_output[i], reorderedTimeAcronyms[i]));
+							output_array.push(entries_output[i].toLocaleString() + ' ' + checkPluralTime(entries_output[i], reorderedTimeAcronyms[i]));
 						}
 					}
 					output_array.reverse();
@@ -434,7 +494,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push(entries_output[i] + ' ' + timeAcronyms[i]);
 						}
 					}
-					output_array.reverse();
+					// output_array.reverse();
 					output = output_array.join(', ');
 				break;
 				case 'wordsShorter':
@@ -453,7 +513,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push(entries_output[i] + timeAcronyms_shorter[i]);
 						}
 					}
-					output_array.reverse();
+					// output_array.reverse();
 					output = output_array.join('');
 			}
 			return output;

@@ -209,7 +209,7 @@
 		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleInputExplanations'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleInputExplanations' style='cursor:pointer'>Input explanations: <u>Visible</u></p></div>"
 		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleRomanNumerals'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleRomanNumerals' style='cursor:pointer'>Roman numerals: <u>ON</u></p></div>"
 		+ "<div class='unselectable undraggable' id='NotorietyEXPandInfamyCalculator_MainSettingContainer_Global_ToggleTimeOutputFormat'><p id='NotorietyEXPandInfamyCalculator_MainSetting_Global_ToggleTimeOutputFormat' style='cursor:pointer'>Time output format: <u>words</u></p></div>"
-		+ "<p></p><i>[WIP]</i> Time output names:<br/>"
+		+ "<p></p>Time output names:<br/>"
 		+ "<input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Millisecond' type='checkbox' checked='true'>Milliseconds (ms)</input>"
 		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Second' type='checkbox' checked='true'>Seconds (s)</input>"
 		+ "<br/><input id='NotorietyEXPandInfamyCalculator_MainSetting_Global_TimeOutputNames_Minute' type='checkbox' checked='true'>Minutes (m)</input>"
@@ -1329,6 +1329,9 @@
 					keywordsInterpreted.splice(0, 1);
 				}
 			}
+			if (operatorsLogic[0].indexOf(keywordsInterpreted[keywordsInterpreted.length - 1]) != -1 || operatorsLogic[1].indexOf(keywordsInterpreted[keywordsInterpreted.length - 1]) != -1) {
+				keywordsInterpreted.splice(keywordsInterpreted.length - 1, 1);
+			}
 			// console.log('keywordsInterpreted', keywordsInterpreted);
 		    keywordsInterpreted = keywordsInterpreted.join(' ');
 		    output = new Function('return ' + keywordsInterpreted)();
@@ -2038,7 +2041,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1172.316666666667, // repeating decimal (x.316666666667) adds 19s
+			"2.0.0": 1311.7833333333336666666666666667, // repeating decimal (x.7833333333336666666666666667) adds 47s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2108,7 +2111,7 @@
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #12's user-written description:<ul><li><pre>brickbankbrickbankbrickbankbrickbankbrickbank<p></p>never grind to ccl using public lobbies<br/>lmao<br/>biggest mistake of my life 👎</pre></li></ul>")}
 				${updateLogEntry('add', "Added the menu 'Settings':<ul><li>Added the section 'Global Settings' (position 1):<ul><li>Top-of-section notes: <code>These are 'common' settings which apply throughout more than one menu in the tool. Note: These aren't all the tool's settings, check the other menus for more.</code></li></ul></li><li>Added the section 'Credits' (position 2).</li></ul> Added a button which updates all Global Settings.")}
-				${updateLogEntry('add', "Menu Settings > Section Global Settings:<ul><li>Added a new slider input, 'Saturation', which configures the saturation of the entire tool based on a percentage ranging from 0% to 100%. Appears in position 6.</li><li>Added a new 'Time output names' input (CURRENTLY WORK IN PROGRESS), which configures included or excluded time names in formatted time outputs. This appears in position 5.</li><li>Moved four settings (Input method, Roman numerals, Input explanations, Time output format) to here from Menu Calculator > Section Global Settings (renamed to 'Menu Settings'). Also enlargened them and changed their order from <code>Input method, Roman numerals, Input explanations, Time output format</code> > <code>Input method, Input explanations, Roman numerals, Time output format</code>. They appear together starting at position 1.</li></ul>")}
+				${updateLogEntry('add', "Menu Settings > Section Global Settings:<ul><li>Added a new slider input, 'Saturation', which configures the saturation of the entire tool based on a percentage ranging from 0% to 100%. Appears in position 6.</li><li>Added a new 'Time output names' input, which configures included or excluded time names in formatted time outputs. This appears in position 5.</li><li>Moved four settings (Input method, Roman numerals, Input explanations, Time output format) to here from Menu Calculator > Section Global Settings (renamed to 'Menu Settings'). Also enlargened them and changed their order from <code>Input method, Roman numerals, Input explanations, Time output format</code> > <code>Input method, Input explanations, Roman numerals, Time output format</code>. They appear together starting at position 1.</li></ul>")}
 				${updateLogEntry('add', "Added the following time names to formatted time outputs and their equivalent milliseconds:<ul><li>w, wk, week, weeks, <code>604,800,000</code></li><li>de, dec, decade, decades, <code>315,576,000,000</code></li><li>c, cen, century, centuries, <code>3,155,760,000,000</code></li><li>mi, mlnm, millennium, millennia, <code>31,557,600,000,000</code></li><li>noup, noupdate, notoriety update interval, notoriety update intervals, <code>2,190,728,592,000,000</code></li></ul>")}
 				${updateLogEntry('add', "Added a highlight to the currently selected menu's button.")}
 				${updateLogEntry('add', "Added five easter eggs? (Total 7.)")}
