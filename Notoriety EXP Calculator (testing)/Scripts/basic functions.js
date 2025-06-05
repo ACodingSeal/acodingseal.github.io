@@ -471,7 +471,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push("Less than 1 millisecond");
 						} else */
 						if (Number(entries_output[i]) != 0 && i < entries_output.length) {
-							output_array.push(entries_output[i].toLocaleString() + ' ' + checkPluralTime(entries_output[i], reorderedTimeAcronyms[i]));
+							output_array.push(Number(entries_output[i]).toLocaleString() + ' ' + checkPluralTime(entries_output[i], reorderedTimeAcronyms[i]));
 						}
 					}
 					output_array.reverse();
@@ -491,7 +491,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push("Under 1msec");
 						} else */
 						if (Number(entries_output[i]) != 0 && i < entries_output.length) {
-							output_array.push(entries_output[i] + ' ' + timeAcronyms[i]);
+							output_array.push(Number(entries_output[i]).toLocaleString() + ' ' + timeAcronyms[i]);
 						}
 					}
 					// output_array.reverse();
@@ -510,7 +510,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push("<1ms");
 						} else */
 						if (Number(entries_output[i]) != 0 && i < entries_output.length) {
-							output_array.push(entries_output[i] + timeAcronyms_shorter[i]);
+							output_array.push(Number(entries_output[i]).toLocaleString() + timeAcronyms_shorter[i]);
 						}
 					}
 					// output_array.reverse();
@@ -520,5 +520,3 @@ function Timer(amount, interval, direction, max, editHTML) {
 		}
 	}
 }
-
-// var timerTest = new Timer(0, 12.175, 1e2, 'digital', 'up', 1e6, document.getElementById('toc'));
