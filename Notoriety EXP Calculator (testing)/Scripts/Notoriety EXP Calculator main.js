@@ -2001,7 +2001,7 @@
 		output += "<div><p><span style='font-weight:bold'>Other contributions</span><br/>"
 		// linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)))
 		// linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)) calc(100% / 4 * 0) calc(100% / 4 * 1), rgba(0,153,255,var(--bg-alpha)) calc(100% / 4 * 1) calc(100% / 4 * 2), rgba(0,204,0,var(--bg-alpha)) calc(100% / 4 * 2) calc(100% / 4 * 3), rgba(255,153,0,var(--bg-alpha)) calc(100% / 4 * 3) calc(100% / 4 * 4))
-		+ "<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (CCL #25)</b> (Credited: Harry, <span style='color:rgba(0,153,255,var(--bg-alpha))'>[Alisa]</span>, <span style='color:rgba(0,204,0,var(--bg-alpha))'>{Isaac}</span>, <span style='color:rgba(255,153,0,var(--bg-alpha))'>/Katelyn/</span>): For being such great friends of TheSeal27 and providing direct and indirect motivation to continue working on the tool, even during times of struggles. Helped showed the self enlightenment door to TheSeal27, resulting in their realisation that demotivation and burnout are merely concepts in the mind and that they don't have to affect oneself. Therefore indirectly contributing to all future updates starting in approximately <u>Version 0.1.0 - Numbers and Computations</u> or <u>Version 1.3.0 - Additional Additions!</u>.</li>"
+		+ "<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (CCL #25)</b> (Credited: Harry, <span style='color:rgba(0,153,255,var(--bg-alpha))'>[Alisa]</span>, <span style='color:rgba(0,204,0,var(--bg-alpha))'>{Isaac}</span>, <span style='color:rgba(255,153,0,var(--bg-alpha))'>/Katelyn/</span>): For being such great friends of TheSeal27 and providing direct and indirect motivation to continue working on the tool, even during times of struggles. Helped TheSeal27 find the door to their self enlightenment, resulting in their realisation that demotivation and burnout are merely concepts in the mind and that they don't have to affect oneself. Therefore indirectly contributing to all future updates starting in approximately <u>Version 0.1.0 - Numbers and Computations</u> or <u>Version 1.3.0 - Additional Additions!</u>.</li>"
 		+ "</p></div>"
 		
 		elem.SectionContainer_Credits.innerHTML = output;
@@ -2041,7 +2041,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1347.8333333333336666666666666667, // repeating decimal (x.8333333333336666666666666667) adds 50s
+			"2.0.0": 1348.5833333333336666666666666667, // repeating decimal (x.0833333333336666666666666667) adds 35s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
