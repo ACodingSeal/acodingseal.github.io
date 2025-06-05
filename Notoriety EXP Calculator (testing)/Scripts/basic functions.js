@@ -451,7 +451,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 					output = output_array.join(', ');
 				break;
 				case 'wordsShort':
-					// Example: 3min50sec270msec
+					// Example: 3 min, 50 sec, 270 mil
 					for (var x = 0; x < loopLength; x++) {
 						if (config.includedTimeNames.indexOf(Object.keys(entries)[x]) != -1) {
 							entries_output.push(entries[Object.keys(entries)[x]]);
