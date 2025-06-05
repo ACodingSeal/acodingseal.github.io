@@ -3106,7 +3106,6 @@
 			}
 			data.MainSetting_Global_TimeOutputNames = timeOutputNames_CheckedOptions;
 		}
-		console.log(timeOutputNames_CheckedOptions);
 		
 		
 		data.MainSetting_Global_Saturation = elem.MainSetting_Global_Saturation.value;
