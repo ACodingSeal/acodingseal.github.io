@@ -71,7 +71,7 @@
 			if (true) {
 				for (var x = 1; x < 100; x++) {
 					if (extraEXP_a.greaterThanOrEqualTo(calcEXP(1, x))) {
-						output.newLevel = new Decimal(x).add(1);
+						output.newLevel = new Decimal(x);
 						output.extraLevels = new Decimal(x).sub(1);
 						// extraEXP_a = extraEXP_a.sub(calcEXP(0 + x, 1 + x));
 					}
@@ -493,16 +493,6 @@
 		}
 		return output;
 	}
-	
-	// testing mogus
-	/*
-	setTimeout(function() {
-		// document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_UserWrittenDescription').click();
-		// document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_Filter_Other_ExcludeOptions').click();
-		document.getElementById('NotorietyEXPandInfamyCalculator_HallofInfamyCCLs_FilteringLogicInput').value = 'other AND specific'
-		document.getElementById('NotorietyEXPCalculator_HallofInfamyCCLs_FilterSortSubmit').click();
-	}, 1);
-	*/
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
@@ -2041,7 +2031,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1348.916666666667, // repeating decimal (x.916666666667) adds 55s
+			"2.0.0": 1353.916666666667, // repeating decimal (x.916666666667) adds 55s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2125,6 +2115,7 @@
 				${updateLogEntry('edit', "Moved the Update Log from the Menu Miscellaneous to Menu Settings in position 3.")}
 				${updateLogEntry('edit', "Many source code changes, mainly for improving consistency, optimisation and readability.")}
 				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.5MB to 15MB.")}
+				${updateLogEntry('fix', "Menu Calulator > Section Results: When 'Until this many rotations' input is greater than 0, fixed the +x Levels count displaying 1 level more than the actual count.")}
 				${updateLogEntry('fix', "The menu buttons are now consistently displayed regardless of available screen space, and they no longer overflow into the menu containers.")}
 				${updateLogEntry('other', "Added the following tester: maisy.")}
 				${updateLogEntry('other', "Update Log version entries will now use nested list formatting, where appropriate, for improved readability.")}
