@@ -2031,7 +2031,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1396.0833333333336666666666666667, // repeating decimal (x.0833333333336666666666666667) adds 5s
+			"2.0.0": 1397.0833333333336666666666666667, // repeating decimal (x.0833333333336666666666666667) adds 5s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2113,6 +2113,7 @@
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Appended the following to the top-of-section notes list entry 4: <code>Your detected UTC offset: x</code>, where x is the browser's detected UTC offset. Also changed list entry 5:<ul><li>Previous: <code>There may be an unintentional extra day included when the time is more than a month away.</code></li><li>Current: <code>Possibly no longer an issue after Version 1.4.9a: <s>There may be an unintentional extra day included when the time is more than a month away.</s></code></li></ul>")}
 				${updateLogEntry('edit', "Changed the default displayed menu from Calculator to the new Settings.")}
 				${updateLogEntry('edit', "Moved the Update Log from the Menu Miscellaneous to Menu Settings in position 3.")}
+				${updateLogEntry('edit', "The Update Log's 'estimated total active development time across all versions' value is now updated with the current time output configuration when the list is recreated.")}
 				${updateLogEntry('edit', "Many source code changes, mainly for improving consistency, optimisation and readability.")}
 				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.5MB to 15MB.")}
 				${updateLogEntry('fix', "Menu Calulator > Section Results: When 'Until this many rotations' input is greater than 0, fixed the +x Levels count displaying 1 level more than the actual count.")}
