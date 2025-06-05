@@ -327,6 +327,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 			
 			// Check each time amount.
 			var amount_abs = Math.max(0, Math.abs(orig.amount)); // In case of negative numbers. Note: Despite adding Math.abs, a max function with 0 as a parameter was also added, with it being used instead.
+			var amount_abs_orig = amount_abs;
 			// console.log(amount_abs);
 			
 			for (var i = loopLength - 1; i > 0; i--) {
@@ -365,7 +366,12 @@ function Timer(amount, interval, direction, max, editHTML) {
 					}
 					amount_abs = 0;
 				} else {
-					entries.ms = 0;
+					// might remove this digital config condition
+					if (['digital'].indexOf(config.outputFormat) != -1) {
+						entries.ms = '000';
+					} else {
+						entries.ms = 0;
+					}
 				}
 			}
 			
@@ -381,7 +387,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 			
 			function zeroPadding(input) {
 				var output_a = '';
-				Number(input) < 10 ? output_a = '0' + input : output_a = input;
+				Number(input) < 10 && input != '000' ? output_a = '0' + input : output_a = input;
 				return output_a;
 			}
 			function checkPluralTime(input, unit) {
@@ -399,17 +405,28 @@ function Timer(amount, interval, direction, max, editHTML) {
 				case 'digital':
 					for (var x = 0; x < loopLength; x++) {
 						if (config.includedTimeNames.indexOf(Object.keys(entries)[x]) != -1) {
-							entries_output.push(entries[Object.keys(entries)[x]]);
+							entries_output.push(zeroPadding(entries[Object.keys(entries)[x]].toLocaleString()).toLocaleString());
 							reorderedTimeAcronyms.push(Object.keys(entries)[x]);
 						}
 					}
 					// Example: 03:50:270 (minutes, seconds, milliseconds)
-					if (amount_abs < secondsConversion[2]) {
+					if (amount_abs_orig < secondsConversion[2]) {
 						output += '00:';
 					}
-					if (amount_abs < secondsConversion[1]) {
+					if (amount_abs_orig < secondsConversion[1]) {
 						output += '00:';
 					}
+					entries_output.reverse();
+					// console.log(entries_output);
+					var loopLength = entries_output.length;
+					for (var x = 0; x < loopLength; x++) {
+						if (Number(entries_output[0]) == 0) {
+							entries_output.splice(0, 1);
+						} else {
+							break;
+						}
+					}
+					// console.log(entries_output);
 					output += entries_output.join(':');
 				break;
 				case 'words':
@@ -450,7 +467,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push(Number(entries_output[i]).toLocaleString() + ' ' + timeAcronyms[i]);
 						}
 					}
-					// output_array.reverse();
+					output_array.reverse();
 					output = output_array.join(', ');
 				break;
 				case 'wordsShorter':
@@ -469,7 +486,7 @@ function Timer(amount, interval, direction, max, editHTML) {
 							output_array.push(Number(entries_output[i]).toLocaleString() + timeAcronyms_shorter[i]);
 						}
 					}
-					// output_array.reverse();
+					output_array.reverse();
 					output = output_array.join('');
 			}
 			return output;
