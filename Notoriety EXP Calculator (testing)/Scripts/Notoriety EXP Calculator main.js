@@ -713,7 +713,7 @@
 		undefined,
 		"Mutator Rank 53 + 2,081 MXP remaining until next rank (as of 2025-05-25T18:39Z).",
 		undefined,
-		"This user primarily solo grinded to CCL. First known openly plural system (at the time of public reveal) to reach CCL. Mutator Rank 273 + 4,471 MXP remaining until next rank (as of 2025-05-20T01:54Z).",
+		"This user primarily solo grinded to CCL. First known openly plural system (at the time of public reveal) to reach CCL. Mutator Rank 283 + 3,054 MXP remaining until next rank (as of 2025-06-06T04:14Z).",
 		"Started playing post-rerelease. Highest classic infamy suit: Blue Navy (100).",
 		"This user was at infamy 235 for multiple months before finally going past the finish line and reaching CCL. Without this stoppage, it was likely the user could've made the first 10 or so CCLs. Highest classic infamy suit: Royalty (150). Mutator Rank 301 + 5,236 MXP remaining until next rank (as of 2025-05-20T15:54Z).",
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
@@ -1980,7 +1980,7 @@
 		+ "<p></p>I've learnt an incredible amount while developing this tool. Not just about coding, but also about myself and what it means to exist as a conscious being. I am who I am, even after everything, and no one can undermine the value of my achievements because their true worth must always be measured from within. I will continue updating this tool for the foreseeable future, including the addition of new CCLs to the Hall of CCLs. Even if I am called such terms like 'stalker', 'creepy' and 'weird', as this is simply something I enjoy and I do not allow the external world to control my emotions and consequently my reality. It's my hope that more people will learn to incorporate this quote into this lives: <i>" + '"' + "Character is like a tree and reputation its shadow; the shadow is what we think it is and the tree is the real thing." + '"' + "</i>"
 		+ "<p></p>And lastly, in a similar vein to the end of CCL #1's user-written description in the 'Closing remarks' section: Reality is what you know with absolute conviction (not merely want or desire) it to be. Consciousness is the most powerful force in existence. Sheer intention and belief allows you to achieve anything. With all of this in mind, remember that all truths are half-truths until accepted by the mind, and beliefs will do absolutely anything to stay in existence. Regardless, I advise you, the reader, to write your own story, the story of 'you' and your unique individuality.</li></ul></li>"
 		+ "<li><b>ashlyn</b>: Tester from Version 0.0.1 to the present. Provided the capability (Robux-bought boosters) for TheSeal27 to reach CCL in the year 2024, resulting in extra grinding motivation and eventually culminating in their post-CCL idea to create this tool.</li>"
-		+ "<li><b>ඞnat_eඞ</b>: Tester from Version 0.0.1 to the present.</li>"
+		+ "<li><b>ඞ<i>nat_e</i>ඞ</b>: Tester from Version 0.0.1 to the present.</li>"
 		+ "<li><b>player</b>: Tester from Version 0.0.1 to the present.</li>"
 		+ "<li><b>maisy (<span style='color:rgba(106,50,159,var(--bg-alpha))'>CCL #8</span>)</b>: Tester from Version 1.5.0 to the present. Notable contributor to CCL #1's grind.</li>"
 		+ "</p></div>"
@@ -2031,7 +2031,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1427.3, // repeating decimal (x.3) adds 18s
+			"2.0.0": 1430.6833333333333333333333333333, // repeating decimal (x.6833333333333333333333333333) adds 41s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2100,7 +2100,7 @@
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.</code>.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #12's user-written description:<ul><li><pre>brickbankbrickbankbrickbankbrickbankbrickbank<p></p>never grind to ccl using public lobbies<br/>lmao<br/>biggest mistake of my life 👎</pre></li></ul>")}
-				${updateLogEntry('add', "Added the menu 'Settings':<ul><li>Added the section 'Global Settings' (position 1):<ul><li>Top-of-section notes: <code>These are 'common' settings which apply throughout more than one menu in the tool. Note: These aren't all the tool's settings, check the other menus for more.</code></li></ul></li><li>Added the section 'Credits' (position 2). Credited the following users, with unique descriptions for each entry: <ul><li>Development:<ul><li><b style='color:rgba(41,134,204,var(--bg-alpha))'>TheSeal27</b>, aka <b style='color:rgba(41,134,204,var(--bg-alpha))'>Seal</b> or <b style='color:rgba(128,0,0,var(--bg-alpha))'>CCL #1</b></li><li><b>ashlyn</b></li><li><b>ඞnat_eඞ</b></li><li><b>player</b></li><li><b>maisy (<span style='color:rgba(106,50,159,var(--bg-alpha))'>CCL #8</span>)</b></li></ul></li><li>Assets:<ul><li><b>Patashu</b></li><li><b><a href='https://stackoverflow.com/users/361684/gilly3'>gilly3</a></b></li></ul></li><li>Other contributions:<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (CCL #25)</b> (Credited: <span style='font-weight:bold'>Harry</span>, <span style='font-weight:bold;color:rgba(0,153,255,var(--bg-alpha))'>[Alisa]</span>, <span style='font-weight:bold;color:rgba(0,204,0,var(--bg-alpha))'>{Isaac}</span>, <span style='font-weight:bold;color:rgba(255,153,0,var(--bg-alpha))'>/Katelyn/</span>)</li></ul></li></ul></li></ul> Added a button which updates all Global Settings.")}
+				${updateLogEntry('add', "Added the menu 'Settings':<ul><li>Added the section 'Global Settings' (position 1):<ul><li>Top-of-section notes: <code>These are 'common' settings which apply throughout more than one menu in the tool. Note: These aren't all the tool's settings, check the other menus for more.</code></li><li>Includes a button which updates all Global Settings.</li></ul></li><li>Added the section 'Credits' (position 2). Credited the following users, with unique descriptions for each entry: <ul><li>Development:<ul><li><b style='color:rgba(41,134,204,var(--bg-alpha))'>TheSeal27</b>, aka <b style='color:rgba(41,134,204,var(--bg-alpha))'>Seal</b> or <b style='color:rgba(128,0,0,var(--bg-alpha))'>CCL #1</b></li><li><b>ashlyn</b></li><li><b>ඞ<i>nat_e</i>ඞ</b></li><li><b>player</b></li><li><b>maisy (<span style='color:rgba(106,50,159,var(--bg-alpha))'>CCL #8</span>)</b></li></ul></li><li>Assets:<ul><li><b>Patashu</b></li><li><b><a href='https://stackoverflow.com/users/361684/gilly3'>gilly3</a></b></li></ul></li><li>Other contributions:<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (CCL #25)</b> (Credited: <span style='font-weight:bold'>Harry</span>, <span style='font-weight:bold;color:rgba(0,153,255,var(--bg-alpha))'>[Alisa]</span>, <span style='font-weight:bold;color:rgba(0,204,0,var(--bg-alpha))'>{Isaac}</span>, <span style='font-weight:bold;color:rgba(255,153,0,var(--bg-alpha))'>/Katelyn/</span>)</li></ul></li></ul></li></ul>")}
 				${updateLogEntry('add', "Menu Settings > Section Global Settings:<ul><li>Added a new slider input, 'Saturation', which configures the saturation of the entire tool based on a percentage ranging from 0% to 100%. Appears in position 6.</li><li>Added a new 'Time output names' input, which configures included or excluded time names in formatted time outputs. This appears in position 5.</li><li>Moved four settings (Input method, Roman numerals, Input explanations, Time output format) to here from Menu Calculator > Section Global Settings (renamed to 'Menu Settings'). Also enlargened them and changed their order from <code>Input method, Roman numerals, Input explanations, Time output format</code> > <code>Input method, Input explanations, Roman numerals, Time output format</code>. They appear together starting at position 1.</li></ul>")}
 				${updateLogEntry('add', "Added the following time names to formatted time outputs and their equivalent milliseconds:<ul><li>w, wk, week, weeks, <code>604,800,000</code></li><li>de, dec, decade, decades, <code>315,576,000,000</code></li><li>c, cen, century, centuries, <code>3,155,760,000,000</code></li><li>mi, mlnm, millennium, millennia, <code>31,557,600,000,000</code></li><li>noup, noupdate, notoriety update interval, notoriety update intervals, <code>2,190,728,592,000,000</code></li></ul>")}
 				${updateLogEntry('add', "Added a highlight to the currently selected menu's button.")}
@@ -2110,6 +2110,7 @@
 				${updateLogEntry('edit', "Menu Calculator > Section Menu Settings: Enlargened the settings and moved them to the middle of the section.")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-0304:09Z). Also changed the following note:<ul><li>Previous: <code>CCL #1 is also the creator of this tool!</code></li><li>Current: <code>CCL #1 and their team are also the developers of this tool!</code></li></ul>")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,939 + 18,260 > 4,000 + 32,564 as of 2025-06-0304:02Z).")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #25's Mutator Rank + MXP remaining until next rank values (273 + 4,471 > 283 + 3,054 as of 2025-06-06T04:14Z).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Appended the following to the top-of-section notes list entry 4: <code>Your detected UTC offset: x</code>, where x is the browser's detected UTC offset. Also changed list entry 5:<ul><li>Previous: <code>There may be an unintentional extra day included when the time is more than a month away.</code></li><li>Current: <code>Possibly no longer an issue after Version 1.4.9a: <s>There may be an unintentional extra day included when the time is more than a month away.</s></code></li></ul>")}
 				${updateLogEntry('edit', "Changed the default displayed menu from Calculator to the new Settings.")}
 				${updateLogEntry('edit', "Moved the Update Log from the Menu Miscellaneous to Menu Settings in position 3.")}
@@ -3095,6 +3096,7 @@
 				}
 			}
 			timeOutputNames_ExcludedOptions = outputArr;
+			// console.log(timeOutputNames_ExcludedOptions);
 			data.MainSetting_Global_TimeOutputNames = timeOutputNames_ExcludedOptions;
 		} else {
 			for (var i = 0; i < loopLength; i++) {
@@ -3105,6 +3107,7 @@
 			}
 			data.MainSetting_Global_TimeOutputNames = timeOutputNames_CheckedOptions;
 		}
+		// console.log(timeOutputNames_CheckedOptions);
 		
 		
 		data.MainSetting_Global_Saturation = elem.MainSetting_Global_Saturation.value;
