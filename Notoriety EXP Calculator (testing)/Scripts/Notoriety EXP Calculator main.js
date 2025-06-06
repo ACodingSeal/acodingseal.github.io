@@ -2031,7 +2031,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1430.6833333333333333333333333333, // repeating decimal (x.6833333333333333333333333333) adds 41s
+			"2.0.0": 1441.9333333333333333333333333333, // repeating decimal (x.9333333333333333333333333333) adds 56s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2117,7 +2117,8 @@
 				${updateLogEntry('edit', "The Update Log's 'estimated total active development time across all versions' value is now updated with the current time output configuration when the list is recreated.")}
 				${updateLogEntry('edit', "Many source code changes, mainly for improving consistency, optimisation and readability.")}
 				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.5MB to 15MB.")}
-				${updateLogEntry('fix', "Menu Calulator > Section Results: When 'Until this many rotations' input is greater than 0, fixed the +x Levels count displaying 1 level more than the actual count.")}
+				${updateLogEntry('fix', "Menu Calculator:<ul><li>Section Level Settings: Fixed inputs 'Current level', 'Remaining EXP', 'Desired level' and 'EXP formula' not properly having an upper limit.</li><li>Section Infamy Settings: Fixed inputs 'Current infamy level' and 'Desired infamy level' not properly having an upper limit.</li></ul>")}
+				${updateLogEntry('fix', "Menu Calulator > Section Results: When 'Until this many rotations' input is greater than 0:<ul><li>Fixed the +x Levels count displaying 1 level more than the actual count.</li><li>Fixed rotations being calculated when 'Run/rotation gains' input does not have any included runs.</li></ul>")}
 				${updateLogEntry('fix', "The menu buttons are now consistently displayed regardless of available screen space, and they no longer overflow into the menu containers.")}
 				${updateLogEntry('other', "Added the following tester: maisy.")}
 				${updateLogEntry('other', "Update Log version entries will now use nested list formatting, where appropriate, for improved readability.")}
@@ -3066,12 +3067,12 @@
 	}, 1);
 
 	function updateSettingsDisplayedValues() {
-		data.currentLevel = new Decimal(elem.currentLevelInput.value).floor().max(new Decimal(1).min(100));
-		data.remainingEXP = new Decimal(elem.remainingEXPInput.value).floor().max(new Decimal(0).min(999999));
-		data.goalLevel = new Decimal(elem.goalLevelInput.value).floor().max(new Decimal(0).min(100));
-		data.expFormula = new Decimal(elem.expFormulaInput.value).floor().max(new Decimal(0).min(1));
-		data.currentInfamyLevel = new Decimal(elem.currentInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.currentInfamyLevelInput.value));
-		data.goalInfamyLevel = new Decimal(elem.goalInfamyLevelInput.value).floor().max(new Decimal(0).min(elem.goalInfamyLevelInput.value));
+		data.currentLevel = new Decimal(elem.currentLevelInput.value).floor().max(new Decimal(1)).min(100);
+		data.remainingEXP = new Decimal(elem.remainingEXPInput.value).floor().max(new Decimal(0)).min(999999);
+		data.goalLevel = new Decimal(elem.goalLevelInput.value).floor().max(new Decimal(0)).min(100);
+		data.expFormula = new Decimal(elem.expFormulaInput.value).floor().max(new Decimal(0)).min(1);
+		data.currentInfamyLevel = new Decimal(elem.currentInfamyLevelInput.value).floor().max(new Decimal(0)).min(elem.currentInfamyLevelInput.value);
+		data.goalInfamyLevel = new Decimal(elem.goalInfamyLevelInput.value).floor().max(new Decimal(0)).min(elem.goalInfamyLevelInput.value);
 		data.currentMoney = new Decimal(elem.currentMoneyInput.value).floor().max(0);
 		data.goalMoney = new Decimal(elem.goalMoneyInput.value).floor().max(0);
 		
@@ -3468,7 +3469,7 @@
 		
 		
 		var avgTime = null;
-		if (data.untilRotations.greaterThan(0)) {
+		if (data.untilRotations.greaterThan(0) && rotationInputsCalculated.includedRuns.greaterThan(0)) {
 			// avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime);
 			avgTime = rotationInputsCalculated.time.add(rotationInputsCalculated.extraTime).dividedBy(rotationInputsCalculated.includedRuns);
 		} else {
@@ -3484,7 +3485,7 @@
 				var infamyRunsReq = NotoExpReqTotal({}, 1, 100).dividedBy(avgExpGains);
 				avgMoneyGains = (rotationInputsCalculated.money.dividedBy(rotationInputsCalculated.includedRuns)).times(infamyRunsReq);
 				// console.log(data.untilRotations);
-				if (data.untilRotations.greaterThan(0)) { // testing
+				if (data.untilRotations.greaterThan(0) && rotationInputsCalculated.includedRuns.greaterThan(0)) {
 					// outputString += "(These calculations presently do not take into account remaining EXP until next level.)<p></p>";
 					if (data.currentInfamyLevel.equals(0)) {
 						outputString += "At Level " + formatInt(data.currentLevel);
