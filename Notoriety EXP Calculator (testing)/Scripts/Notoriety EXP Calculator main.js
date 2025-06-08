@@ -687,13 +687,13 @@
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-06-0304:09Z). CCL #1 and their team are also the developers of this tool!",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-06-03T04:09Z). CCL #1 and their team are also the developers of this tool!",
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease. Mutator Rank 1,000 (as of 2025-05-20T00:48Z).",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
 		"Highest classic infamy suit: Rojo (200)",
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 4,000 + 32,564 MXP remaining until next rank (as of 2025-06-0304:02Z).",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 4,000 + 32,564 MXP remaining until next rank (as of 2025-06-03T04:02Z).",
 		"Highest classic infamy suit: Royalty (150)",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 806 + 1,146 MXP remaining until next rank (as of 2025-05-20T16:09Z).",
 		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 159 + 1,249 MXP remaining until next rank (as of 2025-05-21T02:41Z).",
@@ -705,7 +705,7 @@
 		undefined,
 		undefined,
 		undefined,
-		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge. Mutator Rank 1,412 (as of 2025-05-26).",
+		"Highest classic infamy suit: Blue Navy (100). Obtained CCL before the 'True Criminal' badge. Mutator Rank 1,500 + 6,565 MXP remaining until next rank (as of 2025-06-08T08:09Z).",
 		"Started playing post-rerelease.",
 		"Possibly the first solo grinder to reach CCL. Mutator Rank 185 + 1,502 MXP remaining until next rank (as of 2025-05-20T17:48Z).",
 		// 21 - 30
@@ -2031,7 +2031,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1441.9333333333333333333333333333, // repeating decimal (x.9333333333333333333333333333) adds 56s
+			"2.0.0": 1445.1, // repeating decimal (x.1) adds 6s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2108,8 +2108,9 @@
 				${updateLogEntry('edit', "Changed the top-of-tool text:<ul><li>Previous: <code>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</code></li><li>Current: <code>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></code></li></ul>")}
 				${updateLogEntry('edit', "Menu Calculator: Renamed the section 'Global Settings' to 'Menu Settings'.")}
 				${updateLogEntry('edit', "Menu Calculator > Section Menu Settings: Enlargened the settings and moved them to the middle of the section.")}
-				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-0304:09Z). Also changed the following note:<ul><li>Previous: <code>CCL #1 is also the creator of this tool!</code></li><li>Current: <code>CCL #1 and their team are also the developers of this tool!</code></li></ul>")}
-				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,939 + 18,260 > 4,000 + 32,564 as of 2025-06-0304:02Z).")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-03T04:09Z). Also changed the following note:<ul><li>Previous: <code>CCL #1 is also the creator of this tool!</code></li><li>Current: <code>CCL #1 and their team are also the developers of this tool!</code></li></ul>")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (3,939 + 18,260 > 4,000 + 32,564 as of 2025-06-03T04:02Z).")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #18's Mutator Rank + MXP remaining until next rank values (1,412 + undefined > 1,500 + 6,565 as of 2025-06-08T08:09Z).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #25's Mutator Rank + MXP remaining until next rank values (273 + 4,471 > 283 + 3,054 as of 2025-06-06T04:14Z).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Appended the following to the top-of-section notes list entry 4: <code>Your detected UTC offset: x</code>, where x is the browser's detected UTC offset. Also changed list entry 5:<ul><li>Previous: <code>There may be an unintentional extra day included when the time is more than a month away.</code></li><li>Current: <code>Possibly no longer an issue after Version 1.4.9a: <s>There may be an unintentional extra day included when the time is more than a month away.</s></code></li></ul>")}
 				${updateLogEntry('edit', "Changed the default displayed menu from Calculator to the new Settings.")}
