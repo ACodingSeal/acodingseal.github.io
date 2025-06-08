@@ -555,6 +555,7 @@
 		"GhostrUiN420",
 		"jadineq1",
 		"00pro11",
+		"Lord_Anno",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -595,6 +596,7 @@
 		"Ghost",
 		"jadineq1",
 		"00pro11",
+		"Lord_Anno",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -635,6 +637,7 @@
 		"GhostrUiN420 - 2025-05-17T04-15Z.png",
 		"jadineq1 - 2025-05-17T04-15Z.png",
 		"00pro11 - 2025-05-30T13-47Z.png",
+		"Lord_Anno - 2025-06-08T10-29Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -675,6 +678,7 @@
 		{approx:false, timestamp: "2025-05-17T11:23:31.0019313Z"},
 		{approx:false, timestamp: "2025-05-22T18:33:14.3633775Z"},
 		{approx:false, timestamp: "2025-05-28T13:17:14.5261204Z"},
+		{approx:false, timestamp: "2025-06-08T10:08:48.9208328Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -683,7 +687,7 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -719,7 +723,7 @@
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		"Mutator Rank 420 + 5,066 MXP remaining until next rank (as of 2025-05-20T01:36Z).",
-		// 31 - 38
+		// 31 - 39
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP remaining until next rank (as of 2025-05-20T00:57Z).",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 1,670 (as of 2025-05-26).",
@@ -727,6 +731,7 @@
 		undefined,
 		"Started playing post-rerelease. Possibly the first console and Xbox player to reach CCL.",
 		"Started playing post-rerelease.",
+		undefined,
 		undefined,
 		];
 		
@@ -1140,6 +1145,8 @@
 		+ "<p></p>but as princess peach (probably) once said " + '"' + "if you lock the fuck in, you'll get what you want" + '"' + ". the method per each infamy level was clear as day: start with brick bank, do a few levels of ozela then mop up with rush hour before doing any challenges with xp as rewards before they expired. all that in 4 hours each weekday."
 		+ "<br/>so on the 1st of january 2025, infamy 50 was reached. three weeks later on the 22nd of january, the ton was passed."
 		+ "<p></p>and the crowning moment, the summit of the mountain: 28th may 2025, 00pro11 is bestowed the title of CCL #38",
+		// #39
+		undefined,
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -2031,7 +2038,8 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1445.5, // repeating decimal (x.5) adds 30s
+			"1.4.10": 3,
+			"2.0.0": 1447.5, // repeating decimal (x.5) adds 30s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2100,6 +2108,7 @@
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'Specific CCLs' filtering group with one textarea input of the same name and an 'Exclude?' checkbox. This allows filtering of specific CCLs based on text input. Included the following input explanation: <code>Specific CCLs to filter, based on their CCL # (badge obtainment position number). A 'range' is defined as either 'x' or 'x until y' (e.g. <code>5</code> or <code>8 until 11</code>). Separate each range on a new line. Defaults to <code>1 until x</code>, where x is programmed CCL entries.</code>.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Under the 'Filtering and Sorting' sub-section, added the 'hour', 'minute', 'second' and 'millisecond' filters to the Time filters. Also increased the 'year' filter's maximum value from 2124 to 3024.")}
 				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #12's user-written description:<ul><li><pre>brickbankbrickbankbrickbankbrickbankbrickbank<p></p>never grind to ccl using public lobbies<br/>lmao<br/>biggest mistake of my life 👎</pre></li></ul>")}
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #39 (<code>Lord_Anno</code>).")}
 				${updateLogEntry('add', "Added the menu 'Settings':<ul><li>Added the section 'Global Settings' (position 1):<ul><li>Top-of-section notes: <code>These are 'common' settings which apply throughout more than one menu in the tool. Note: These aren't all the tool's settings, check the other menus for more.</code></li><li>Includes a button which updates all Global Settings.</li></ul></li><li>Added the section 'Credits' (position 2). Credited the following users, with unique descriptions for each entry: <ul><li>Development:<ul><li><b style='color:rgba(41,134,204,var(--bg-alpha))'>TheSeal27</b>, aka <b style='color:rgba(41,134,204,var(--bg-alpha))'>Seal</b> or <b style='color:rgba(128,0,0,var(--bg-alpha))'>CCL #1</b></li><li><b>ashlyn</b></li><li><b>ඞ<i>nat_e</i>ඞ</b></li><li><b>player</b></li><li><b>maisy (<span style='color:rgba(106,50,159,var(--bg-alpha))'>CCL #8</span>)</b></li></ul></li><li>Assets:<ul><li><b>Patashu</b></li><li><b><a href='https://stackoverflow.com/users/361684/gilly3'>gilly3</a></b></li></ul></li><li>Other contributions:<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (CCL #25)</b> (Credited: <span style='font-weight:bold'>Harry</span>, <span style='font-weight:bold;color:rgba(0,153,255,var(--bg-alpha))'>[Alisa]</span>, <span style='font-weight:bold;color:rgba(0,204,0,var(--bg-alpha))'>{Isaac}</span>, <span style='font-weight:bold;color:rgba(255,153,0,var(--bg-alpha))'>/Katelyn/</span>)</li></ul></li></ul></li></ul>")}
 				${updateLogEntry('add', "Menu Settings > Section Global Settings:<ul><li>Added a new slider input, 'Saturation', which configures the saturation of the entire tool based on a percentage ranging from 0% to 100%. Appears in position 6.</li><li>Added a new 'Time output names' input, which configures included or excluded time names in formatted time outputs. This appears in position 5.</li><li>Moved four settings (Input method, Roman numerals, Input explanations, Time output format) to here from Menu Calculator > Section Global Settings (renamed to 'Menu Settings'). Also enlargened them and changed their order from <code>Input method, Roman numerals, Input explanations, Time output format</code> > <code>Input method, Input explanations, Roman numerals, Time output format</code>. They appear together starting at position 1.</li></ul>")}
 				${updateLogEntry('add', "Added the following time names to formatted time outputs and their equivalent milliseconds:<ul><li>w, wk, week, weeks, <code>604,800,000</code></li><li>de, dec, decade, decades, <code>315,576,000,000</code></li><li>c, cen, century, centuries, <code>3,155,760,000,000</code></li><li>mi, mlnm, millennium, millennia, <code>31,557,600,000,000</code></li><li>noup, noupdate, notoriety update interval, notoriety update intervals, <code>2,190,728,592,000,000</code></li></ul>")}
@@ -2119,13 +2128,21 @@
 				${updateLogEntry('edit', "Many source code changes, mainly for improving consistency, optimisation and readability.")}
 				${updateLogEntry('edit', "Updated the scripts-disabled version of the HTML output by changing the sentence stating approximate total size of the tool from 14.5MB to 15MB.")}
 				${updateLogEntry('fix', "Menu Calculator:<ul><li>Section Level Settings: Fixed inputs 'Current level', 'Remaining EXP', 'Desired level' and 'EXP formula' not properly having an upper limit.</li><li>Section Infamy Settings: Fixed inputs 'Current infamy level' and 'Desired infamy level' not properly having an upper limit.</li></ul>")}
-				${updateLogEntry('fix', "Menu Calulator > Section Results: When 'Until this many rotations' input is greater than 0:<ul><li>Fixed the +x Levels count displaying 1 level more than the actual count.</li><li>Fixed rotations being calculated when 'Run/rotation gains' input does not have any included runs.</li></ul>")}
+				${updateLogEntry('fix', "Menu Calculator > Section Results: When 'Until this many rotations' input is greater than 0:<ul><li>Fixed the +x Levels count displaying 1 level more than the actual count.</li><li>Fixed rotations being calculated when 'Run/rotation gains' input does not have any included runs.</li></ul>")}
 				${updateLogEntry('fix', "The menu buttons are now consistently displayed regardless of available screen space, and they no longer overflow into the menu containers.")}
 				${updateLogEntry('other', "Added the following tester: maisy.")}
 				${updateLogEntry('other', "Update Log version entries will now use nested list formatting, where appropriate, for improved readability.")}
 				${updateLogEntry('other', "This update was originally going to be a quick patch titled Version 1.4.9c, then changed to Version 1.4.10 due to including at least one brand new feature. Then <u>Version 1.5.0</u> with a custom version name (" + '"' + "Eternally Expanding Hall" + '"' + ") due to many extra features warranting the higher version number. And finally, <u>Version 2.0.0 - The Completely Overkill Update</u> due to being such an incredibly large update not yet seen since the initial public release or possibly <u>Version 1.3.0 - Additional Additions!</u>.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('2.0.0') + '.')}
 				${updateLogEntry('other', "<span style='font-size:50%'>Wowsers, what an update log! Also, FIVE 'Other' sub-entries?!</span>")}
+			</ul></div>
+			`,
+			"1.4.10": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1749379200000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.10</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #39 (<code>Lord_Anno</code>).")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10') + '.')}
 			</ul></div>
 			`,
 			"1.4.9b": `
