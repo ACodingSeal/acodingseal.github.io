@@ -359,8 +359,6 @@ function Timer(amount, interval, direction, max, editHTML) {
 						} else {
 							entries.ms = (amount_abs).toFixed(0);
 						}
-					} else if (amount_abs % 10 !== 0) {
-						entries.ms = (amount_abs).toFixed(0) + '0';
 					} else {
 						entries.ms = (amount_abs).toFixed(0);
 					}
