@@ -2038,6 +2038,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.10a": 1,
 			"1.4.10": 3,
 			"2.0.0": 1447.5, // repeating decimal (x.5) adds 30s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
@@ -2135,6 +2136,14 @@
 				${updateLogEntry('other', "This update was originally going to be a quick patch titled Version 1.4.9c, then changed to Version 1.4.10 due to including at least one brand new feature. Then <u>Version 1.5.0</u> with a custom version name (" + '"' + "Eternally Expanding Hall" + '"' + ") due to many extra features warranting the higher version number. And finally, <u>Version 2.0.0 - The Completely Overkill Update</u> due to being such an incredibly large update not yet seen since the initial public release or possibly <u>Version 1.3.0 - Additional Additions!</u>.")}
 				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('2.0.0') + '.')}
 				${updateLogEntry('other', "<span style='font-size:50%'>Wowsers, what an update log! Also, FIVE 'Other' sub-entries?!</span>")}
+			</ul></div>
+			`,
+			"1.4.10a": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1749379380000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.10a</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('fix', "Menu Miscellaneous > Section Hall of CCLs: Fixed CCL #39 not being in the list.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.10a') + '.')}
 			</ul></div>
 			`,
 			"1.4.10": `
