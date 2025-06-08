@@ -108,7 +108,7 @@
 		// console.log(new Decimal(1018).sub(NotoExpReqTotal({}, 1, 2)).abs());
 	}, 1);
 	
-	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.10a | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
+	var tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(1.4.11 | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features<br>Tool created by TheSeal27</p></div><br>";
 	(function() {
 		tool_baseHTML += "<center style='height:4em' id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		tool_baseHTML += "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
@@ -382,7 +382,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
-		const grassAvoiders = 39;
+		const grassAvoiders = 40;
 		var generatedEntries = 0;
 		var string = "";
 		function Player(username, displayName, robloxAvatar, whenCCL, timeSincePrevious, position, notes, ownDescription) {
@@ -439,6 +439,7 @@
 		"jadineq1",
 		"00pro11",
 		"Lord_Anno",
+		"TohKia69",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -480,6 +481,7 @@
 		"jadineq1",
 		"00pro11",
 		"Lord_Anno",
+		"TohKia",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -521,6 +523,7 @@
 		"jadineq1 - 2025-05-17T04-15Z.png",
 		"00pro11 - 2025-05-30T13-47Z.png",
 		"Lord_Anno - 2025-06-08T10-29Z.png",
+		"TohKia69 - 2025-06-03T04-08Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -562,6 +565,7 @@
 		{approx:false, timestamp: "2025-05-22T18:33:14.3633775Z"},
 		{approx:false, timestamp: "2025-05-28T13:17:14.5261204Z"},
 		{approx:false, timestamp: "2025-06-08T10:08:48.9208328Z"},
+		{approx:false, timestamp: "2025-06-08T17:03:46.3810031Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -570,7 +574,7 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40
 		];
 		const playersData_notes = [
 		// 1 - 10
@@ -606,7 +610,7 @@
 		"This user was most likely the first CCL to achieve it without progression gamepasses or Robux-bought boosters. Highest classic infamy suit: Blue Navy (100)",
 		"This user stayed at infamy 249 (CCXLIX) for many weeks, apparently to 'avoid the CCL treatment'.",
 		"Mutator Rank 420 + 5,066 MXP remaining until next rank (as of 2025-05-20T01:36Z).",
-		// 31 - 39
+		// 31 - 40
 		"Started playing post-rerelease.",
 		"Possibly the first CCL with the Ordem suit pattern equipped since infamy CC. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 217 + 3,945 MXP remaining until next rank (as of 2025-05-20T00:57Z).",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 1,670 (as of 2025-05-26).",
@@ -616,6 +620,7 @@
 		"Started playing post-rerelease.",
 		undefined,
 		undefined,
+		"Started playing post-rerelease. Obtained CCL before the 'Pied Piper' badge. Mutator Rank 20 (as of 2025-06-07T12:21Z).",
 		];
 		
 		const playersData_ownDescription = [
@@ -1026,6 +1031,8 @@
 		+ "<p></p>and the crowning moment, the summit of the mountain: 28th may 2025, 00pro11 is bestowed the title of CCL #38",
 		// #39
 		undefined,
+		// #40
+		undefined, // contacted (2025-06-08)
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -1639,6 +1646,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"1.4.11": 7.85,
 			"1.4.10a": 1,
 			"1.4.10": 3,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
@@ -1701,6 +1709,14 @@
 		// console.log(minutesDevelopment_Total);
 		const versionInfo = {
 			// "amongus": '[Testing]',
+			"1.4.11": `
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1749405900000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.11</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #40 (<code>TohKia69</code>).")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('1.4.11') + '.')}
+			</ul></div>
+			`,
 			"1.4.10a": `
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
 			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1749379380000), "yyyy-MM-dd HH:mm", false)} ${getTZString(localTZ)}] Version 1.4.10a</b>
