@@ -2038,7 +2038,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1455.5333333333333333333333333333, // repeating decimal (x.5333333333333333333333333333) adds 32s
+			"2.0.0": 1459.5333333333333333333333333333, // repeating decimal (x.5333333333333333333333333333) adds 32s
 			"1.4.10a": 1,
 			"1.4.10": 3,
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
