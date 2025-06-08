@@ -112,7 +112,7 @@
 	
 	// Base HTML
 	(function() {
-		const tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(2.0.0 " + '"' + "The Completely Overkill Update" + '"' + " testing | Notoriety 3.10.0)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></p></div><br>"
+		const tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:80%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(2.0.0 " + '"' + "The Completely Overkill Update" + '"' + " testing | Notoriety 3.10.1)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></p></div><br>"
 		+ "<center id='NotorietyEXPandInfamyCalculator_MenuButtons'></center><hr/>"
 		+ "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Calculator'></div>"
 		+ "<div id='NotorietyEXPandInfamyCalculator_MenuContainer_Miscellaneous'></div>"
@@ -496,7 +496,7 @@
 	
 	function addHallofInfamyCCLs() {
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
-		const grassAvoiders = 38;
+		const grassAvoiders = 39;
 		if (elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.value == '') {
 			elem.Section_HallofInfamyCCLs_Filter_SpecificCCLs_SpecificCCLsInput.value = "1 until " + grassAvoiders;
 		}
@@ -2038,9 +2038,9 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"2.0.0": 1448.5, // repeating decimal (x.5) adds 30s
 			"1.4.10a": 1,
 			"1.4.10": 3,
-			"2.0.0": 1447.5, // repeating decimal (x.5) adds 30s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
@@ -2123,6 +2123,7 @@
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #18's Mutator Rank + MXP remaining until next rank values (1,412 + undefined > 1,500 + 6,565 as of 2025-06-08T08:09Z).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #25's Mutator Rank + MXP remaining until next rank values (273 + 4,471 > 283 + 3,054 as of 2025-06-06T04:14Z).")}
 				${updateLogEntry('edit', "Menu Miscellaneous > Section Timers: Appended the following to the top-of-section notes list entry 4: <code>Your detected UTC offset: x</code>, where x is the browser's detected UTC offset. Also changed list entry 5:<ul><li>Previous: <code>There may be an unintentional extra day included when the time is more than a month away.</code></li><li>Current: <code>Possibly no longer an issue after Version 1.4.9a: <s>There may be an unintentional extra day included when the time is more than a month away.</s></code></li></ul>")}
+				${updateLogEntry('edit', "Changed the tool's Notoriety version from 3.10.0 to 3.10.1.")}
 				${updateLogEntry('edit', "Changed the default displayed menu from Calculator to the new Settings.")}
 				${updateLogEntry('edit', "Moved the Update Log from the Menu Miscellaneous to Menu Settings in position 3.")}
 				${updateLogEntry('edit', "The Update Log's 'estimated total active development time across all versions' value is now updated with the current time output configuration when the list is recreated.")}
