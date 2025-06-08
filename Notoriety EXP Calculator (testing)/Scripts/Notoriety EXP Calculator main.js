@@ -1699,7 +1699,7 @@
 			+ "</p>";
 		}
 		if (egg2Conditions[0]) {
-			generatedString += "<p></p><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Other/perfectly balanced.jpg' style='width:50%'></img>";
+			generatedString += "<p>(Easter Egg)</p><img class='NotorietyEXPCalculator_DoubleClickImg' src='./Notoriety EXP Calculator (testing)/Assets/Other/perfectly balanced.jpg' style='width:50%'></img>";
 		}
 		
 		if (document.getElementById('NotorietyEXPCalculator_EasterEgg3') != null) {
@@ -2031,7 +2031,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
-			"2.0.0": 1445.1, // repeating decimal (x.1) adds 6s
+			"2.0.0": 1445.5, // repeating decimal (x.5) adds 30s
 			"1.4.9b": 25, // possibly 10 - 15 mins extra
 			"1.4.9a": 19,
 			"1.4.9": 9,
