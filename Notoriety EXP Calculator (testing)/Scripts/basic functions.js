@@ -236,8 +236,7 @@ function notateInt(e) {
 /* To-do (current timer version):
 (1) Code optimisations.
 (2) Add support for additional amount increment, rather than one second per second.
-(3) Add maximum time names to be outputted (useful when, for instance, milliseconds become irrelevant).
-(4) Add a loop feature, including min and max amount and max iterations.
+(3) Add a loop feature, including min and max amount and max iterations.
 */
 
 // NEW TIMER (based on Date object) (Mostly complete)
