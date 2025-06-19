@@ -236,16 +236,14 @@ function notateInt(e) {
 /* To-do (current timer version):
 (1) Code optimisations.
 (2) Add support for additional amount increment, rather than one second per second.
-(3) Add maximum time names to be outputted (useful when, for instance, milliseconds become irrelevant).
-(4) Add a loop feature, including min and max amount and max iterations.
+(3) Add a loop feature, including min and max amount and max iterations.
 */
 
 // NEW TIMER (based on Date object) (Mostly complete)
-function Timer(amount, interval, config, direction, max, editHTML) {
+function Timer(amount, interval, direction, max, editHTML) {
 	const orig = this;
 	this.amount = 0;
 	this.interval = interval;
-	this.config = config;
 	this.direction = 'up';
 	this.max = max;
 	this.editHTML = editHTML;
@@ -258,11 +256,11 @@ function Timer(amount, interval, config, direction, max, editHTML) {
 		return (Math.max(now, earlier) - Math.min(now, earlier));
 	}
 	
-	const secondsConversion = [1, 1e3, 6e4, 3.6e6, 8.64e7, 2.592e9, 3.15576e10];
-	const timeAcronyms_shorter = ['ms', 's', 'm', 'h', 'd', 'mo', 'y'];
-	const timeAcronyms = ['mil', 'sec', 'min', 'hr', 'dy', 'mth', 'yr'];
-	const timeNames = ['Millisecond', 'Second', 'Minute', 'Hour', 'Day', 'Month', 'Year'];
-	const timeNamesPlural = ['Milliseconds', 'Seconds', 'Minutes', 'Hours', 'Days', 'Months', 'Years'];
+	const secondsConversion = [1, 1e3, 6e4, 3.6e6, 8.64e7, 6.048e8, 2.592e9, 31557600000, 315576000000, 3155760000000, 31557600000000, 2190728592000000];
+	const timeAcronyms_shorter = ['ms', 's', 'm', 'h', 'd', 'w', 'mo', 'y', 'de', 'c', 'mi', 'noup'];
+	const timeAcronyms = ['mil', 'sec', 'min', 'hr', 'dy', 'wk', 'mth', 'yr', 'dec', 'cen', 'mlnm', 'noupdate'];
+	const timeNames = ['Millisecond', 'Second', 'Minute', 'Hour', 'Day', 'Week', 'Month', 'Year', 'Decade', 'Century', 'Millennium', 'Notoriety Update Interval'];
+	const timeNamesPlural = ['Milliseconds', 'Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months', 'Years', 'Decades', 'Centuries', 'Millennia', 'Notoriety Update Intervals'];
 	
 	this.startTimer = function() {
 		this.stopTimer();
@@ -301,135 +299,194 @@ function Timer(amount, interval, config, direction, max, editHTML) {
 		clearInterval(increaseTime);
 	}
 	
-	this.formatAmount = function() {
-		var output = '';
-		const entries = [];
-		
-		// Check milliseconds.
-		const amount_abs = Math.max(0, Math.abs(orig.amount)); // In case of negative numbers. Note: Despite adding Math.abs, a max function with 0 as a parameter was also added, with it being used instead.
-		if (amount_abs >= secondsConversion[0]) {
-			if ((amount_abs % 1e3) < 100) {
-				entries.push('0' + (amount_abs % 1e3).toFixed(0));
-			} else if ((amount_abs % 1e3) % 10 !== 0) {
-				entries.push((amount_abs % 1e3).toFixed(0)) + '0';
-			} else {
-				entries.push((amount_abs % 1e3).toFixed(0));
+	this.formatAmount = function(config) {
+		if (config == undefined) {
+			config = {};
+		}
+		if (config.outputFormat == undefined) {
+			config.outputFormat = 'words';
+		}
+		if (config.includedTimeNames == undefined) {
+			config.includedTimeNames = ['ms', 's', 'm', 'h', 'd', 'w', 'mo', 'y', 'de', 'c', 'mi', 'noup'];
+		}
+		if (config.includedTimeNames != undefined) {
+			var output = '';
+			const entries = {};
+			config.includedTimeNames.sort(function(a, b){ return timeAcronyms_shorter.indexOf(a) - timeAcronyms_shorter.indexOf(b); });
+			
+			var loopLength = timeAcronyms_shorter.length;
+			for (var x = 0; x < loopLength; x++) {
+				entries[timeAcronyms_shorter[x]] = 0;
 			}
-		} else {
-			entries.push(0);
-		}
-		
-		// Check seconds.
-		if (amount_abs >= secondsConversion[1]) {
-			entries.push(Math.floor((amount_abs % secondsConversion[2]) / secondsConversion[1]));
-		}
-		
-		// Check minutes.
-		if (amount_abs >= secondsConversion[2]) {
-			entries.push(Math.floor((amount_abs % secondsConversion[3]) / secondsConversion[2]));
-		}
-		
-		// Check hours.
-		if (amount_abs >= secondsConversion[3]) {
-			entries.push(Math.floor((amount_abs % secondsConversion[4]) / secondsConversion[3]));
-		}
-		
-		// Check days.
-		if (amount_abs >= secondsConversion[4]) {
-			entries.push(Math.floor((amount_abs % secondsConversion[5]) / secondsConversion[4]));
-		}
-		
-		// Check months.
-		if (amount_abs >= secondsConversion[5]) {
-			entries.push(Math.floor((amount_abs % secondsConversion[6]) / secondsConversion[5]));
-		}
-		
-		// Check years.
-		if (amount_abs >= secondsConversion[6]) {
-			entries.push(Math.floor(amount_abs / secondsConversion[6]));
-		}
-		
-		function zeroPadding(input) {
-			var output_a = '';
-			Number(input) < 10 ? output_a = '0' + input : output_a = input;
-			return output_a;
-		}
-		function checkPluralTime(input, unit) {
-			var output_a = '';
-			Number(input) == 1 ? output_a = timeNames[unit].toLowerCase() : output_a = timeNamesPlural[unit].toLowerCase();
-			return output_a;
-		}
-		
-		const entries_output = [];
-		const output_array = [];
-		
-		switch (orig.config) {
-			case 'digital':
-				for (var x = 0; x < entries.length; x++) {
-					entries_output.push(zeroPadding(entries[x]));
-				}
-				// Example: 03:50:270 (minutes, seconds, milliseconds)
-				if (amount_abs < secondsConversion[2]) {
-					output += '00:';
-				}
-				if (amount_abs < secondsConversion[1]) {
-					output += '00:';
-				}
-				output += entries_output.reverse().join(':');
-			break;
-			case 'words':
-				// Example: 3 minutes, 50 seconds, 270 milliseconds
-				for (var x = 0; x < entries.length; x++) {
-					entries_output.push(Number(entries[x]));
-				}
-				for (var i = 0; i < entries_output.length; i++) {
-					// console.log(Number(entries_output[i]));
-					/*
-					if (Number(entries_output[i]) < 0 && entries_output.length <= i) {
-						output_array.push("Less than 1 millisecond");
-					} else */
-					if (Number(entries_output[i]) != 0 && i < entries_output.length) {
-						output_array.push(entries_output[i] + ' ' + checkPluralTime(entries_output[i], i));
+			var excludeNext = false;
+			var carryOverAmount = 0;
+			var lastAmount = 0;
+			var lastTimeName = '';
+			const outputtedTimeNames = [];
+			
+			// Check each time amount.
+			var amount_abs = Math.max(0, Math.abs(orig.amount)); // In case of negative numbers. Note: Despite adding Math.abs, a max function with 0 as a parameter was also added, with it being used instead.
+			var amount_abs_orig = amount_abs;
+			// console.log(amount_abs);
+			
+			for (var i = loopLength - 1; i > 0; i--) {
+				// console.log(timeAcronyms_shorter[i]);
+				
+				var moduloThis = amount_abs / secondsConversion[i];
+				if (amount_abs >= secondsConversion[i]) {
+					if (config.includedTimeNames.indexOf(timeAcronyms_shorter[i].toLowerCase()) != -1) {
+						if (carryOverAmount == 0) {
+							carryOverAmount = moduloThis;
+						}
+						lastAmount = carryOverAmount;
+						lastTimeName = timeAcronyms_shorter[i];
+						outputtedTimeNames.push(timeAcronyms_shorter[i]);
+						entries[timeAcronyms_shorter[i]] += Math.trunc(carryOverAmount);
+						amount_abs -= (Math.trunc(carryOverAmount) * secondsConversion[i]);
+						carryOverAmount = 0;
 					}
 				}
-				output_array.reverse();
-				output = output_array.join(', ');
-			break;
-			case 'wordsShort':
-				// Example: 3min50sec270msec
-				for (var x = 0; x < entries.length; x++) {
-					entries_output.push(Number(entries[x]));
-				}
-				for (var i = 0; i < entries_output.length; i++) {
-					/*
-					if (Number(entries_output[i]) == 0 && i < entries_output.length) {
-						output_array.push("Under 1msec");
-					} else */
-					if (Number(entries_output[i]) != 0 && i < entries_output.length) {
-						output_array.push(entries_output[i] + ' ' + timeAcronyms[i]);
+			}
+			
+			// console.log(amount_abs);
+			if (config.includedTimeNames.indexOf(timeAcronyms_shorter[0].toLowerCase()) != -1) {
+				if (amount_abs >= secondsConversion[0]) {
+					outputtedTimeNames.push(timeAcronyms_shorter[0]);
+					if (amount_abs < 100) {
+						if (['digital'].indexOf(config.outputFormat) != -1) {
+							entries.ms = '0' + (amount_abs).toFixed(0);
+						} else {
+							entries.ms = (amount_abs).toFixed(0);
+						}
+					} else {
+						entries.ms = (amount_abs).toFixed(0);
+					}
+					amount_abs = 0;
+				} else {
+					// might remove this digital config condition
+					if (['digital'].indexOf(config.outputFormat) != -1) {
+						entries.ms = '000';
+					} else {
+						entries.ms = 0;
 					}
 				}
-				output_array.reverse();
-				output = output_array.join(', ');
-			break;
-			case 'wordsShorter':
-				// Example: 3m50s270ms
-				for (var x = 0; x < entries.length; x++) {
-					entries_output.push(Number(entries[x]));
+			}
+			
+			if (amount_abs > 0) {
+				if (outputtedTimeNames.length == 0) {
+					const latestEntry = config.includedTimeNames[0];
+					entries[latestEntry] += (amount_abs / secondsConversion[timeAcronyms_shorter.indexOf(latestEntry)]);
+				} else if (outputtedTimeNames.length > 0) {
+					const latestEntry = outputtedTimeNames[outputtedTimeNames.length - 1];
+					entries[latestEntry] += (amount_abs / secondsConversion[timeAcronyms_shorter.indexOf(latestEntry)]);
 				}
-				for (var i = 0; i < entries_output.length; i++) {
-					/* if (Number(entries_output[i]) == 0 && i < entries_output.length) {
-						output_array.push("<1ms");
-					} else */
-					if (Number(entries_output[i]) != 0 && i < entries_output.length) {
-						output_array.push(entries_output[i] + timeAcronyms_shorter[i]);
+			}
+			
+			function zeroPadding(input) {
+				var output_a = '';
+				Number(input) < 10 && input != '000' ? output_a = '0' + input : output_a = input;
+				return output_a;
+			}
+			function checkPluralTime(input, unit) {
+				var output_a = '';
+				Number(input) == 1 ? output_a = timeNames[timeAcronyms_shorter.indexOf(unit)].toLowerCase() : output_a = timeNamesPlural[timeAcronyms_shorter.indexOf(unit)].toLowerCase();
+				return output_a;
+			}
+			
+			const entries_output = [];
+			const output_array = [];
+			const reorderedTimeAcronyms = [];
+			
+			var loopLength = Object.keys(entries).length;
+			switch (config.outputFormat) {
+				case 'digital':
+					for (var x = 0; x < loopLength; x++) {
+						if (config.includedTimeNames.indexOf(Object.keys(entries)[x]) != -1) {
+							entries_output.push(zeroPadding(entries[Object.keys(entries)[x]].toLocaleString()).toLocaleString());
+							reorderedTimeAcronyms.push(Object.keys(entries)[x]);
+						}
 					}
-				}
-				output_array.reverse();
-				output = output_array.join('');
+					// Example: 03:50:270 (minutes, seconds, milliseconds)
+					if (amount_abs_orig < secondsConversion[2]) {
+						output += '00:';
+					}
+					if (amount_abs_orig < secondsConversion[1]) {
+						output += '00:';
+					}
+					entries_output.reverse();
+					// console.log(entries_output);
+					var loopLength = entries_output.length;
+					for (var x = 0; x < loopLength; x++) {
+						if (Number(entries_output[0]) == 0) {
+							entries_output.splice(0, 1);
+						} else {
+							break;
+						}
+					}
+					// console.log(entries_output);
+					output += entries_output.join(':');
+				break;
+				case 'words':
+					// Example: 3 minutes, 50 seconds, 270 milliseconds
+					for (var x = 0; x < loopLength; x++) {
+						if (config.includedTimeNames.indexOf(Object.keys(entries)[x]) != -1) {
+							entries_output.push(entries[Object.keys(entries)[x]]);
+							reorderedTimeAcronyms.push(Object.keys(entries)[x]);
+						}
+					}
+					for (var i = 0; i < entries_output.length; i++) {
+						// console.log(Number(entries_output[i]));
+						/*
+						if (Number(entries_output[i]) < 0 && entries_output.length <= i) {
+							output_array.push("Less than 1 millisecond");
+						} else */
+						if (Number(entries_output[i]) != 0 && i < entries_output.length) {
+							output_array.push(Number(entries_output[i]).toLocaleString() + ' ' + checkPluralTime(entries_output[i], reorderedTimeAcronyms[i]));
+						}
+					}
+					output_array.reverse();
+					output = output_array.join(', ');
+				break;
+				case 'wordsShort':
+					// Example: 3 min, 50 sec, 270 mil
+					for (var x = 0; x < loopLength; x++) {
+						if (config.includedTimeNames.indexOf(Object.keys(entries)[x]) != -1) {
+							entries_output.push(entries[Object.keys(entries)[x]]);
+							reorderedTimeAcronyms.push(Object.keys(entries)[x]);
+						}
+					}
+					for (var i = 0; i < entries_output.length; i++) {
+						/*
+						if (Number(entries_output[i]) == 0 && i < entries_output.length) {
+							output_array.push("Under 1msec");
+						} else */
+						if (Number(entries_output[i]) != 0 && i < entries_output.length) {
+							output_array.push(Number(entries_output[i]).toLocaleString() + ' ' + timeAcronyms[i]);
+						}
+					}
+					output_array.reverse();
+					output = output_array.join(', ');
+				break;
+				case 'wordsShorter':
+					// Example: 3m50s270ms
+					for (var x = 0; x < loopLength; x++) {
+						if (config.includedTimeNames.indexOf(Object.keys(entries)[x]) != -1) {
+							entries_output.push(entries[Object.keys(entries)[x]]);
+							reorderedTimeAcronyms.push(Object.keys(entries)[x]);
+						}
+					}
+					for (var i = 0; i < entries_output.length; i++) {
+						/* if (Number(entries_output[i]) == 0 && i < entries_output.length) {
+							output_array.push("<1ms");
+						} else */
+						if (Number(entries_output[i]) != 0 && i < entries_output.length) {
+							output_array.push(Number(entries_output[i]).toLocaleString() + timeAcronyms_shorter[i]);
+						}
+					}
+					output_array.reverse();
+					output = output_array.join('');
+			}
+			return output;
 		}
-		return output;
 	}
 }
-
-// var timerTest = new Timer(0, 12.175, 1e2, 'digital', 'up', 1e6, document.getElementById('toc'));
