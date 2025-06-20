@@ -110,7 +110,7 @@
 	
 	// Base HTML
 	(function() {
-		const tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:95%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(2.0.0 " + '"' + "The Completely Overkill Update" + '"' + " | Notoriety 3.10.1b)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></p></div><br>"
+		const tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:95%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(2.0.1 " + '' + "" + '' + " | Notoriety 3.10.1b)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></p></div><br>"
 		+ "<center id='NotorietyEXPCalculator_MenuButtons'></center><hr/>"
 		+ "<div id='NotorietyEXPCalculator_MenuContainer_Calculator'></div>"
 		+ "<div id='NotorietyEXPCalculator_MenuContainer_Miscellaneous'></div>"
@@ -519,7 +519,7 @@
 		inputSettings.miscellaneousSettings.HallofCCLs = {};
 		inputSettings.miscellaneousSettings.HallofCCLs.toggleEntryDescriptions = data.toggleEntryDescriptions;
 		*/
-		const grassAvoiders = 43;
+		const grassAvoiders = 44;
 		elem.SectionContainer_HallofInfamyCCLs_TheList.innerHTML = 'testing amongus';
 		elem.Section_HallofInfamyCCLs_FilterSort_GeneratedText.innerHTML = '';
 		var generatedEntries = 0;
@@ -590,6 +590,7 @@
 		"Deerhaunter2021",
 		"Eviscerality",
 		"Nightmareee7",
+		"YuukaKazamiii",
 		];
 		const playersData_displayNames = [
 		"ILikeToast5",
@@ -635,6 +636,7 @@
 		"Caribouean",
 		"JodyJao",
 		"Night_Ep",
+		"HotlineGensokyo",
 		];
 		const playersData_robloxAvatars = [
 		"ILikeToast5 - 2025-04-10T22-03Z.png",
@@ -680,6 +682,7 @@
 		"Deerhaunter2021 - 2025-05-13T07-17Z.png",
 		"Eviscerality - 2025-06-13T02-23Z.png",
 		"Nightmareee7 - 2025-06-13T02-23Z.png",
+		"YuukaKazamiii - 2025-06-19T23-32Z.png",
 		];
 		const playersData_whenCCL = [
 		{approx:false, timestamp: "2025-01-01T10:04:35.5385251Z"}, // orig "2025-01-01T10:04:35Z" = early by ~538ms
@@ -725,6 +728,7 @@
 		{approx:false, timestamp: "2025-06-15T11:56:42.0648494Z"},
 		{approx:false, timestamp: "2025-06-17T07:58:48.7839366Z"},
 		{approx:false, timestamp: "2025-06-18T23:49:47.054869Z"},
+		{approx:false, timestamp: "2025-06-19T17:49:52.557885Z"},
 		];
 		const playersData_timeSincePrevious = [
 		{approx:false, milliseconds: false},
@@ -733,11 +737,11 @@
 			playersData_timeSincePrevious.push({approx:false, milliseconds: new Date(playersData_whenCCL[x + 1].timestamp).getTime() - new Date(playersData_whenCCL[x].timestamp).getTime()});
 		}
 		const playersData_positions = [
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
 		];
 		const playersData_notes = [
 		// 1 - 10
-		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-06-15T09:24Z). CCL #1 and their team are also the developers of this tool!",
+		"Achieved CCL in 2024 in IDLW (UTC-12:00) (Anywhere on Earth), less than 14 days after starting the rerelease 43 hours late, after grinding on average 15+ hours a day, grinding almost exclusively Authority and Shadow Raid, encountering many delays. Obtained CCL before the 'The Pied Piper' badge. Very likely the only CCL without any MXP or Mutator Ranks: Mutator Rank 0 + 5,000 MXP remaining until next rank (as of 2025-06-20T01:41Z). CCL #1 and their team are also the developers of this tool!",
 		"Achieved a great many infamy ranks with his duo, withwillin101, then reached CCL only hours before his duo. Would've achieved CCL much sooner if not for school and mucking about for about the first week of the rerelease. Mutator Rank 1,000 (as of 2025-05-20T00:48Z).",
 		"Achieved a great many infamy ranks with his duo, Derpifi3d, then reached CCL only hours after his duo. Obtained CCL before the 'The Pied Piper' badge.",
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
@@ -780,10 +784,11 @@
 		undefined,
 		undefined,
 		"Started playing post-rerelease. Obtained CCL before the 'Pied Piper' badge. Mutator Rank 20 (as of 2025-06-07T12:21Z).",
-		// 41 - 43
+		// 41 - 44
 		"Highest classic infamy suit: Blue Navy (100).",
 		undefined,
 		undefined,
+		"Obtained CCL before the 'True Criminal' badge.",
 		];
 		
 		const playersData_ownDescription = [
@@ -1246,8 +1251,10 @@
 		// #41
 		undefined, // contacted (2025-06-15), estimated description received around mid to late June 2025
 		// #42
-		undefined, // contacted (~2025-06-18), willin to create description, attempting to establish means of easily sharing it without Roblox's chat filter
+		undefined, // contacted (~2025-06-18), willing to create description, attempting to establish means of easily sharing it without Roblox's chat filter
 		// #43
+		undefined, // not contacted
+		// #44
 		undefined, // not contacted
 		];
 		
@@ -2190,7 +2197,7 @@
 		output += "<div><p><span style='font-weight:bold'>Other contributions</span><br/>"
 		// linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)))
 		// linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)) calc(100% / 4 * 0) calc(100% / 4 * 1), rgba(0,153,255,var(--bg-alpha)) calc(100% / 4 * 1) calc(100% / 4 * 2), rgba(0,204,0,var(--bg-alpha)) calc(100% / 4 * 2) calc(100% / 4 * 3), rgba(255,153,0,var(--bg-alpha)) calc(100% / 4 * 3) calc(100% / 4 * 4))
-		+ "<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (CCL #25)</b> (Credited: <span style='font-weight:bold'>Harry</span>, <span style='font-weight:bold;color:rgba(0,153,255,var(--bg-alpha))'>[Alisa]</span>, <span style='font-weight:bold;color:rgba(0,204,0,var(--bg-alpha))'>{Isaac}</span>, <span style='font-weight:bold;color:rgba(255,153,0,var(--bg-alpha))'>/Katelyn/</span>): For being such great friends of TheSeal27 and providing direct and indirect motivation to continue working on the tool, even during times of struggles. Helped TheSeal27 find the door to their self enlightenment, resulting in their realisation that demotivation and burnout are merely concepts in the mind and that they don't have to affect oneself. Therefore indirectly contributing to all future updates starting in approximately <u>Version 0.1.0 - Numbers and Computations</u> or <u>Version 1.3.0 - Additional Additions!</u>.</li>"
+		+ "<ul><li><b style='background:linear-gradient(to right, rgba(255,255,255,var(--bg-alpha)), rgba(0,153,255,var(--bg-alpha)), rgba(0,204,0,var(--bg-alpha)), rgba(255,153,0,var(--bg-alpha)));-webkit-background-clip:text;-webkit-text-fill-color:transparent'>Dreamers Collective (CCL #25)</b> (Credited: <span style='font-weight:bold'>| Harry |</span>, <span style='font-weight:bold;color:rgba(0,153,255,var(--bg-alpha))'>[ Alisa ]</span>, <span style='font-weight:bold;color:rgba(0,204,0,var(--bg-alpha))'>{ Isaac }</span>, <span style='font-weight:bold;color:rgba(255,153,0,var(--bg-alpha))'>/ Katelyn /</span>): For providing TheSeal27 with direct and indirect motivation to continue working on the tool, even during times of struggles. Helped TheSeal27 find the door to their self enlightenment, resulting in their realisation that demotivation and burnout are merely concepts in the mind and that they don't have to affect oneself. Therefore indirectly contributing to all future demotivated updates starting in approximately <u>Version 0.1.0 - Numbers and Computations</u> or <u>Version 1.3.0 - Additional Additions!</u>.</li>"
 		+ "</p></div>"
 		
 		elem.SectionContainer_Credits.innerHTML = output;
@@ -2252,6 +2259,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"2.0.1": 8.5166666666666666666666666666667, // repeating decimal (x.5166666666666666666666666666667) adds 31s)
 			"2.0.0": 2111.5166666666666666666666666666, // repeating decimal (x.5166666666666666666666666666) adds 31s
 			"1.4.12a": 0.75,
 			"1.4.12": 2.9166666666666666666666666666667,
@@ -2322,6 +2330,19 @@
 		}
 		// console.log(minutesDevelopment_Total);
 		const versionsData = [
+		new UpdateLogVersionEntry('2.0.1',
+			`
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1750384800000), data.MainSetting_Global_DateFormat, false)} ${getTZString(localTZ)}] Version 2.0.1</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('add', "Menu Miscellaneous > Section Hall of CCLs: Added CCL #44 (<code>YuukaKazamiii</code>).")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #1's Mutator Rank + MXP remaining until next rank values (0 + 5,000 > 0 + 5,000 as of 2025-06-20T01:41Z).")}
+				${updateLogEntry('edit', "Menu Settings > Section Credits: Under the 'Other contributions' category, adjusted the credit of entry 1: <code>Dreamers Collective (CCL #25) (Credited: Harry, [Alisa], {Isaac}, /Katelyn/)</code> > <code>Dreamers Collective (CCL #25) (Credited: | Harry |, [ Alisa ], { Isaac }, / Katelyn /)</code>. Also adjusted the credits reason.")}
+				${updateLogEntry('edit', "Some slight source code changes.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('2.0.1') + '.')}
+			</ul></div>
+			`
+			,'small'),
 		new UpdateLogVersionEntry('2.0.0',
 			`
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
