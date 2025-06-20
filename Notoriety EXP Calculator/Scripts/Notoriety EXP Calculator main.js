@@ -110,7 +110,7 @@
 	
 	// Base HTML
 	(function() {
-		const tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:95%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(2.0.1 " + '' + "" + '' + " | Notoriety 3.10.1b)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></p></div><br>"
+		const tool_baseHTML = "<div style='background:linear-gradient(rgba(44,0,66, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(69,0,102, var(--bg-alpha)), rgba(57,0,85, var(--bg-alpha)), rgba(44,0,66, var(--bg-alpha)));text-align:center;width:95%;margin:auto;padding:1em'><div class='StandardText' style='font-size:100%'><span style='font-size:200%'>Notoriety EXP Calculator<br><span style='font-size:70%'>(2.0.1a " + '' + "" + '' + " | Notoriety 3.10.1b)</span></span><p>A tool for the Roblox game <a href='https://www.roblox.com/games/21532277'>Notoriety</a>'s EXP, Infamy and MXP features.<br>Includes many features and the Hall of CCLs.<br><i>Tool created by TheSeal27</i></p></div><br>"
 		+ "<center id='NotorietyEXPCalculator_MenuButtons'></center><hr/>"
 		+ "<div id='NotorietyEXPCalculator_MenuContainer_Calculator'></div>"
 		+ "<div id='NotorietyEXPCalculator_MenuContainer_Miscellaneous'></div>"
@@ -747,7 +747,7 @@
 		"Achieved CCL mere hours before the suits revamp, becoming the fourth and final owner of the Crimson (now Classic Crimson) suit pattern. Obtained CCL before the 'The Pied Piper' and 'You're a Billionaire' badges.",
 		"Highest classic infamy suit: Rojo (200)",
 		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges.",
-		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 4,000 + 32,564 MXP remaining until next rank (as of 2025-06-03T04:02Z).",
+		"Highest classic infamy suit: Royalty (150). Obtained CCL before the 'True Criminal' and 'The Pied Piper' badges. Mutator Rank 4,200 + 7,420 MXP remaining until next rank (as of 2025-06-20T04:41Z).",
 		"Highest classic infamy suit: Royalty (150)",
 		"Highest classic infamy suit: Blue Navy (100). Mutator Rank 806 + 1,146 MXP remaining until next rank (as of 2025-05-20T16:09Z).",
 		"Started playing post-rerelease. Obtained CCL before the 'You're a Billionaire' badge. Mutator Rank 159 + 1,249 MXP remaining until next rank (as of 2025-05-21T02:41Z).",
@@ -1255,7 +1255,7 @@
 		// #43
 		undefined, // not contacted
 		// #44
-		undefined, // not contacted
+		undefined, // contacted (2025-06-20), refused to provide description
 		];
 		
 		const playersData_classicInfamySuit = [];
@@ -2182,9 +2182,9 @@
 		var output = "The Notoriety EXP Calculator wouldn't be what it is today without all these amazing contributions!"
 		output += "<div><p><span style='font-weight:bold'>Development</span><br/>"
 		+ "<ul><li><b style='color:rgba(41,134,204,var(--bg-alpha))'>TheSeal27</b>, aka <b style='color:rgba(41,134,204,var(--bg-alpha))'>Seal</b> or <b style='color:rgba(128,0,0,var(--bg-alpha))'>CCL #1</b>: Lead developer and original creator. Contributed well over 100 active development hours across Versions Indev + 0.0.1 to the present. Lots of contributions stem from this user's knowledge and experience with other projects, including unreleased ones."
-		+ "<ul><li><b>User-written notes:</b> I probably wouldn't have even created this tool if I didn't regain an interest in the game and its community after the rerelease, or if I didn't reach my goals of CCL #1 or 2024 CCL."
-		+ "<p></p>I've learnt an incredible amount while developing this tool. Not just about coding, but also about myself and what it means to exist as a conscious being. I am who I am, even after everything, and no one can undermine the value of my achievements because their true worth must always be measured from within. I will continue updating this tool for the foreseeable future, including the addition of new CCLs to the Hall of CCLs. Even if I am called such terms like 'stalker', 'creepy' and 'weird', as this is simply something I enjoy and I do not allow the external world to control my emotions and consequently my reality. It's my hope that more people will learn to incorporate this quote into this lives: <i>" + '"' + "Character is like a tree and reputation its shadow; the shadow is what we think it is and the tree is the real thing." + '"' + "</i>"
-		+ "<p></p>And lastly, in a similar vein to the end of CCL #1's user-written description in the 'Closing remarks' section: Reality is what you know with absolute conviction (not merely want or desire) it to be. Consciousness is the most powerful force in existence. Sheer intention and belief allows you to achieve anything. With all of this in mind, remember that all truths are half-truths until accepted by the mind, and beliefs will do absolutely anything to stay in existence. Regardless, I advise you, the reader, to write your own story, the story of 'you' and your unique individuality.</li></ul></li>"
+		+ "<ul><li><b>User-written notes:</b> I probably wouldn't have even created this tool if i didn't regain an interest in the game and its community after the rerelease, or if i didn't reach my goals of CCL #1 or 2024 CCL."
+		+ "<p></p>I've learnt an incredible amount while developing this tool. Not just about coding, but also about myself and what it means to exist as a conscious being. I am who i am, even after everything, and no one can undermine the value of my achievements because their true worth must always be measured from within. I will continue updating this tool for the foreseeable future, including the addition of new CCLs to the Hall of CCLs. Even if i am called such terms like 'stalker', 'creepy' and 'weird', as this is simply something i enjoy and i do not allow the external world to control my emotions and consequently my reality. It's my hope that more people will learn to incorporate this quote into their lives: <i>" + '"' + "Character is like a tree and reputation its shadow; the shadow is what we think it is and the tree is the real thing." + '"' + "</i>"
+		+ "<p></p>And lastly, in a similar vein to the end of CCL #1's user-written description in the 'Closing remarks' section: Reality is what you know with absolute conviction (not merely want or desire) it to be. Consciousness is the most powerful force in existence. Sheer intention and belief allows you to achieve anything. With all of this in mind, remember that all truths are half-truths until accepted by the mind, and beliefs will do absolutely anything to stay in existence. Regardless, i advise you, the reader, to write your own story, the story of 'you' and your unique individuality.</li></ul></li>"
 		+ "<li><b>ashlyn</b>: Tester from Version 0.0.1 to the present. Provided the capability (Robux-bought boosters) for TheSeal27 to reach CCL in the year 2024, resulting in extra grinding motivation and eventually culminating in their post-CCL idea to create this tool.</li>"
 		+ "<li><b>ඞ<i>nat_e</i>ඞ</b>: Tester from Version 0.0.1 to the present.</li>"
 		+ "<li><b>player</b>: Tester from Version 0.0.1 to the present.</li>"
@@ -2210,7 +2210,7 @@
 		+ "<li>Invalid Global Settings browser local storage JSON string (such as via modifying it directly) will cause the tool to return an error. If this happens, clear your browser's local storage or use the following console command: <code>window.localStorage.setItem(" + '"' + "NotorietyEXPCalculator_GlobalSettings" + '"' + ", null);</code></li>"
 		+ "</ul></p></div>"
 		output += "<div><p><span style='font-weight:bold'>Medium</span><br/><ul>"
-		+ "<li>There will most likely be performance issues when calculating too Infamy Ranks or Mutator Ranks. This is mainly an issue past <code>1,000,000</code>, give or take a zero.</li>"
+		+ "<li>There will most likely be performance issues when calculating too many Infamy Ranks or Mutator Ranks. This is mainly an issue past <code>1,000,000</code>, give or take a zero.</li>"
 		+ "<li>Menu Miscellaneous > Section Timers: The 250ms auto update interval may cause lag on slower browsers.</li>"
 		+ "<li>Menu Miscellaneous > Section Hall of CCLs: Sorting the list by 'Random' does not consistently return the same order as the 'interpreted and boolean logic of each entry' collapsible list. May possibly not be fixed, as it is random after all.</li>"
 		+ "</ul></p></div>"
@@ -2259,6 +2259,7 @@
 	    }
 		const localTZ = new Date().getTimezoneOffset();
 		const minutesDevelopment = {
+			"2.0.1a": 8.05, // total is highly approximate, may be off by about 30-60s
 			"2.0.1": 8.5166666666666666666666666666667, // repeating decimal (x.5166666666666666666666666666667) adds 31s)
 			"2.0.0": 2111.5166666666666666666666666666, // repeating decimal (x.5166666666666666666666666666) adds 31s
 			"1.4.12a": 0.75,
@@ -2330,6 +2331,18 @@
 		}
 		// console.log(minutesDevelopment_Total);
 		const versionsData = [
+		new UpdateLogVersionEntry('2.0.1a',
+			`
+			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
+			<b class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay'>[${formatDate(new Date(1750416360000), data.MainSetting_Global_DateFormat, false)} ${getTZString(localTZ)}] Version 2.0.1a</b>
+			<ul class='NotorietyEXPCalculator_UpdateLogVersionEntry_ToggleDisplay_Entry'>
+				${updateLogEntry('edit', "Menu Settings > Section Known Bugs: Adjusted part of 'Medium' category list entry 1:<ul><li>Previous: <code>There will most likely be performance issues when calculating too Infamy Ranks or Mutator Ranks.</code></li><li>Current: <code>There will most likely be performance issues when calculating too many Infamy Ranks or Mutator Ranks.</code></li></ul>")}
+				${updateLogEntry('edit', "Menu Miscellaneous > Section Hall of CCLs: Updated CCL #7's Mutator Rank + MXP remaining until next rank values (4,000 + 32,564 > 4,200 + 7,420 as of 2025-06-20T04:41Z).")}
+				${updateLogEntry('edit', "Menu Settings > Section Credits: Under the 'Development' category, adjusted entry 1: slight changes to credit reason, including a grammatical correction and replaced 7 non-sentence-starting instances of the singular pronoun 'I' to 'i'.")}
+				${updateLogEntry('other', "Estimated active development time: approx. " + formatMinutesDev('2.0.1a') + '.')}
+			</ul></div>
+			`
+			,'patch'),
 		new UpdateLogVersionEntry('2.0.1',
 			`
 			<div class='NotorietyEXPCalculator_UpdateLogVersionEntry'>
